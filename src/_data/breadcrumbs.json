@@ -1,0 +1,24 @@
+{
+ "pages": [
+  {
+   "text": "Contact",
+   "url": "/contact.html"
+  },
+  {
+   "text": "Conditions of use",
+   "url": "/use.html"
+  },
+  {
+   "text": "Privacy policy",
+   "url": "/privacy.html"
+  },
+  {
+   "text": "Accessibility",
+   "url": "/accessibility.html"
+  },
+  {
+   "text": "Search results",
+   "url": "/serp.html"
+  }
+ ]
+}

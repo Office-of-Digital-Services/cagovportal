@@ -1,0 +1,22 @@
+<!-- Site navigation structural component -->
+<nav
+  id="navigation"
+  class="main-navigation dropdown"
+  aria-label="Main navigation">
+  <ul id="nav_list" class="top-level-nav">
+    <li class="nav-item">
+      <a
+        class="first-level-link {{- ' active' if landing === 'Home' }}"
+        href="/"
+        >Home</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="first-level-link {{- ' active' if landing === 'Contact' }}"
+        href="/contact.html"
+        >Contact us</a
+      >
+    </li>
+  </ul>
+</nav>
