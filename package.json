@@ -1,7 +1,7 @@
 {
-  "name": "cagov-template-v6",
+  "name": "www.ca.gov",
   "version": "6.3.0",
-  "description": "CA State Web Template",
+  "description": "www.ca.gov",
   "scripts": {
     "watch:js": "rollup --config rollup.config.js --watch",
     "watch:eleventy": "npx @11ty/eleventy --serve",
