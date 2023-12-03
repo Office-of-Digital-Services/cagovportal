@@ -1,0 +1,20 @@
+---
+layout: page.njk
+title: Agency
+landing: Agency
+pagination:
+    data: agencies.Results
+    size: 1
+    alias: agency
+permalink: "agency/{{ agency.AgencyName | slugify }}/"
+---
+
+<div class="row p-b-lg">
+  <div class="col-md-10 mx-auto">
+    <h2 class="mt-lg-0">Agency - {{ agency.FriendlyName }}</h1>
+
+    <pre>
+{{ agency | dump(2) }}
+    </pre>
+  </div>
+</div>

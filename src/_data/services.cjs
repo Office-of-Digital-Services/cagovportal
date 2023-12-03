@@ -18,7 +18,7 @@ module.exports = async function () {
         agencyTypeIds: [null],
         agencyTagIds: [null],
         page: "0",
-        pageSize: 999,
+        pageSize: 10,
         sortDirection: "Ascending"
       })
     },

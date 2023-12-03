@@ -1,0 +1,16 @@
+---
+title: Agencies
+landing: Agency
+layout: page.njk
+---
+
+<div class="row p-b-lg">
+  <div class="col-md-10 mx-auto">
+    <h1 class="mt-lg-0">Agencies</h1>
+    {%- for agency in agencies.Results -%}
+    <a href="/agency/{{ agency.AgencyName | slugify }}"
+      >{{agency.FriendlyName}}</a
+    ><br />
+    {%- endfor %}
+  </div>
+</div>
