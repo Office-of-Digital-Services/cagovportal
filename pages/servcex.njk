@@ -5,16 +5,23 @@ landing: Service
 pagination:
     data: services.Results
     size: 1
-    alias: service
-permalink: "service/{{ service.ServiceName | slugify }}/"
+    alias: item
+permalink: "service/{{ item.ServiceName | slugify }}/"
 ---
 
 <div class="row p-b-lg">
   <div class="col-md-10 mx-auto">
-    <h2 class="mt-lg-0">Service - {{ service.ServiceName }}</h1>
+    <h2 class="mt-lg-0">Service - {{ item.ServiceName }}</h2>
 
+    {% if item.ImageUrl %}
+    <img
+      src="https://stateentityprofile.ca.gov/Uploads/{{item.ImageUrl}}"
+      style="aspect-ratio: 4 / 3; width:50%" />
+
+    <br />
+    {% endif %}
     <pre>
-{{ service | dump(2) }}
+{{ item | dump(2) }}
     </pre>
   </div>
 </div>
