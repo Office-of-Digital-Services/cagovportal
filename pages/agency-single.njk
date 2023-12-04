@@ -1,0 +1,27 @@
+---
+layout: page.njk
+title: Agency
+landing: Agency
+pagination:
+    data: agencies.Results
+    size: 1
+    alias: item
+permalink: "agency/{{ item.AgencyName | slugify }}/"
+---
+
+<div class="row p-b-lg">
+  <div class="col-md-10 mx-auto">
+    <h2 class="mt-lg-0">Agency - {{ item.FriendlyName }}</h2>
+
+    {% if item.LogoUrl %}
+    <img
+      src="https://stateentityprofile.ca.gov/Uploads/{{item.LogoUrl}}"
+      style="width:50%" />
+
+    <br />
+    {% endif %}
+    <pre>
+{{ item | dump(2) }}
+    </pre>
+  </div>
+</div>
