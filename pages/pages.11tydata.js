@@ -1,5 +1,6 @@
 module.exports = {
   eleventyComputed: {
-    description: data => "State of California"
+    description: data => data.description || "default description",
+    title: data => data.title || "default title"
   }
 };
