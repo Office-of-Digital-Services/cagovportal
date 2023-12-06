@@ -1,6 +1,5 @@
 ---
 layout: page.njk
-title: Service
 landing: Service
 pagination:
     data: state_entity_services.Results
@@ -9,6 +8,7 @@ pagination:
 permalink: "service/{{ item.ServiceName | slugify }}/"
 eleventyComputed: 
   description: Service details for "{{ item.ServiceName }}"
+  title: Service details - {{ item.ServiceName }}
 ---
 
 <div class="row p-b-lg">
