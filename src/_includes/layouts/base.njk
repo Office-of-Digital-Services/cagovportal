@@ -19,11 +19,11 @@
     <meta name="title" content="{{ title }}" />
 
     <!-- Canonical link, improves SEO -->
-    <link href="{% canonical %}" rel="canonical" />
+    <link href="{{ canonical }}" rel="canonical" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{% canonical %}" />
+    <meta property="og:url" content="{{ canonical }}" />
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:description" content="{{ description }}" />
     <meta
@@ -31,7 +31,7 @@
       content="https://california.azureedge.net/cdt/statetemplate/global/images/social_media_preview_image.png" />
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="{% canonical %}" />
+    <meta property="twitter:url" content="{{ canonical }}" />
     <meta property="twitter:title" content="{{ title }}" />
     <meta property="twitter:description" content="{{ description }}" />
     <meta

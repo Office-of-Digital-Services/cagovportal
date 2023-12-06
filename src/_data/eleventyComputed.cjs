@@ -1,17 +1,30 @@
 //@ts-check
 
-// The default front-matter used for every page
+const domain = "https://www.ca.gov";
 
+// The default front-matter used for every page
 module.exports = {
-  /** @param {globaldata} _data} */
-  description: _data => _data.description || "default description",
-  /** @param {globaldata} _data} */
-  title: _data => _data.title || "default title",
+  description: (/** @type {globaldata} */ _data) =>
+    _data.description || "default description",
+  title: (/** @type {globaldata} */ _data) => _data.title || "default title",
+  canonical: (/** @type {globaldata} */ _data) => domain + _data.page.url,
 
   // uncomment to have a var to see all the available data
   everything: (/** @type {globaldata} */ _data) =>
     JSON.stringify(_data, null, 2)
 };
+
+/**
+ * @typedef {Object} page
+ * @property {string} date
+ * @property {string} inputPath
+ * @property {string} fileSlug
+ * @property {string} filePathStem
+ * @property {string} outputFileExtension
+ * @property {string} templateSyntax
+ * @property {string} url
+ * @property {string} outputPath
+ */
 
 /**
  * @typedef {Object} globaldata
@@ -20,6 +33,6 @@ module.exports = {
  * @property {string} layout
  * @property {{}} eleventy
  * @property {{}} pkg
- * @property {{}} page
+ * @property {page} page
  * @property {{}} collections
  */

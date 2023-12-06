@@ -1,8 +1,6 @@
 //@ts-check
 const defaultConfig = require("@11ty/eleventy/src/defaultConfig");
 
-const domain = "https://www.ca.gov";
-
 module.exports = function (
   /** @type {import("@11ty/eleventy").UserConfig} **/ eleventyConfig
 ) {
@@ -14,10 +12,6 @@ module.exports = function (
     "src/css": "css",
     "src/root": "/",
     "node_modules/@cagovweb/state-template/dist": "state-template"
-  });
-
-  eleventyConfig.addShortcode("canonical", function () {
-    return domain + this.ctx.page.url;
   });
 
   //Start with default config, easier to configure 11ty later
