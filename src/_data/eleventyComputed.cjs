@@ -7,11 +7,10 @@ module.exports = {
   description: (/** @type {globaldata} */ _data) =>
     _data.description || "default description",
   title: (/** @type {globaldata} */ _data) => _data.title || "default title",
-  canonical: (/** @type {globaldata} */ _data) => domain + _data.page.url,
+  canonical: (/** @type {globaldata} */ _data) => domain + _data.page.url
 
   // uncomment to have a var to see all the available data
-  everything: (/** @type {globaldata} */ _data) =>
-    JSON.stringify(_data, null, 2)
+  // ,everything: (/** @type {globaldata} */ _data) => JSON.stringify(_data, null, 2)
 };
 
 /**
