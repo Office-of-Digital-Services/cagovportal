@@ -7,11 +7,11 @@ pagination:
     addAllPagesToCollections : true
 permalink: "agency/{{ item.AgencyName | slugify }}/"
 eleventyComputed: 
-  description: Agency details for "{{ item.AgencyName }}"
-  title: "{{ item.AgencyName }}"
+  description: Agency details for "{{ item.FriendlyName }}"
+  title: "{{ item.FriendlyName }}"
   eleventyNavigation:
     key: "{{ item.AgencyName | slugify }}"
-    title:  "{{ item.AgencyName }}"
+    title:  "{{ item.FriendlyName }}"
     parent: Agencies
 ---
 
