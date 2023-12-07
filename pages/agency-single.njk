@@ -10,7 +10,7 @@ eleventyComputed:
   description: Agency details for "{{ item.AgencyName }}"
   title: "{{ item.AgencyName }}"
   eleventyNavigation:
-    key: {{ item.AgencyName | slugify }}
+    key: "{{ item.AgencyName | slugify }}"
     title:  "{{ item.AgencyName }}"
     parent: Agencies
 ---

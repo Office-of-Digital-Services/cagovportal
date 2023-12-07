@@ -10,7 +10,7 @@ eleventyComputed:
   description: Service details for "{{ item.ServiceName }}"
   title: "{{ item.ServiceName }}"
   eleventyNavigation:
-    key: {{ item.ServiceName | slugify }}
+    key: "{{ item.ServiceName | slugify }}"
     title:  "{{ item.ServiceName }}"
     parent: Services
 ---
