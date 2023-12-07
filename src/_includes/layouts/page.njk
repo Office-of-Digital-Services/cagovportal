@@ -6,18 +6,6 @@
       {# Breadcrumbs (rendering data from /src/_data/breadcrumbs.json and
       /src/_data/helpers.js -#} {%- include "../breadcrumbs.njk" -%} {{ content
       | safe }}
-
-      <pre>
-  {% set navPages = collections.all | eleventyNavigation %}
-{{ navPages | dump(2) | safe }}
-  </pre
-      >
-
-      <pre>
- 
-{{ everything   }}
-  </pre
-      >
     </main>
   </div>
 </div>
