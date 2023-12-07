@@ -1,12 +1,18 @@
 ---
-layout: page.njk
-title: Agency
 landing: Agency
 pagination:
-    data: agencies.Results
+    data: state_entity_agencies.Results
     size: 1
     alias: item
+    addAllPagesToCollections : true
 permalink: "agency/{{ item.AgencyName | slugify }}/"
+eleventyComputed: 
+  description: Agency details for "{{ item.FriendlyName }}"
+  title: "{{ item.FriendlyName }}"
+  eleventyNavigation:
+    key: "{{ item.AgencyName | slugify }}"
+    title:  "{{ item.FriendlyName }}"
+    parent: Agencies
 ---
 
 <div class="row p-b-lg">

@@ -1,13 +1,16 @@
 ---
-title: Services
 landing: Service
-layout: page.njk
+description: Search for a service
+title: Services
+eleventyNavigation:
+  key: Services
+  parent: Home
 ---
 
 <div class="row p-b-lg">
   <div class="col-md-10 mx-auto">
     <h1 class="mt-lg-0">Agencies</h1>
-    {%- for service in services.Results -%}
+    {%- for service in state_entity_services.Results -%}
     <a href="/service/{{ service.ServiceName | slugify }}"
       >{{service.ServiceName}}</a
     ><br />
