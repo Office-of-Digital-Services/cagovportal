@@ -29,3 +29,5 @@
     {%- endfor %}
   </ol>
 </nav>
+
+{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}

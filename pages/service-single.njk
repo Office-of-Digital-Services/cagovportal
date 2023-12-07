@@ -4,10 +4,15 @@ pagination:
     data: state_entity_services.Results
     size: 1
     alias: item
+    addAllPagesToCollections : true
 permalink: "service/{{ item.ServiceName | slugify }}/"
 eleventyComputed: 
   description: Service details for "{{ item.ServiceName }}"
-  title: Service details - {{ item.ServiceName }}
+  title: "{{ item.ServiceName }}"
+  eleventyNavigation:
+    key: {{ item.ServiceName | slugify }}
+    title:  "{{ item.ServiceName }}"
+    parent: Services
 ---
 
 <div class="row p-b-lg">
