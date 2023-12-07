@@ -1,31 +1,35 @@
-//@ts-check
+//Returns a smaller json just for the agency search
 
-const EleventyFetch = require("@11ty/eleventy-fetch");
+const state_entity_agencies = require("../src/_data/state_entity_agencies.cjs");
 
-module.exports = async function () {
-  let url = "https://api.stateentityprofile.ca.gov/api/Agencies/Query";
+module.exports = async () => {
+  const agencies = (await state_entity_agencies()).Results;
 
-  /* This returns a promise */
-  return EleventyFetch(url, {
-    fetchOptions: {
-      method: "POST",
-      headers: new Headers({
-        "Content-Type": "application/json"
-      }),
-      body: JSON.stringify({
-        lang: "en",
-        name: "",
-        agencyTypeIds: [null],
-        agencyTagIds: [null],
-        page: "0",
-        pageSize: 40,
-        sortDirection: "Ascending"
-      })
-    },
-    verbose: true,
-    duration: "1d", // save for 1 day
-    type: "json" // we’ll parse JSON for you
-  });
+  /**
+   * @param {{}} rowData
+   * @param {string[]} fields
+   */
+  const copyRow = (rowData, ...fields) => {
+    const newRow = {};
+    fields.forEach(s => {
+      if (rowData[s]) newRow[s] = rowData[s];
+    });
+
+    return newRow;
+  };
+
+  const searchData = agencies.map(a =>
+    copyRow(
+      a,
+      "AgencyName",
+      "FriendlyName",
+      "Acronym",
+      "AgencyTags",
+      "Keywords"
+    )
+  );
+
+  return { searchData };
 };
 
 /*
