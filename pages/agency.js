@@ -12,8 +12,6 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#result_list")
   );
 
-  // Callback function to execute when mutations are observed
-  /** @type {MutationCallback} */
   const callback = () => {
     const count = result_list.querySelectorAll(
       'agency-row:not([style*="display: none"])'
@@ -21,12 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
     result_count.innerText = count.toString();
   };
 
-  // Create an observer instance linked to the callback function
-  // Start observing the target node for configured mutations
-  new MutationObserver(callback).observe(result_list, {
-    subtree: true,
-    attributeFilter: ["aria-hidden"]
-  });
+  search.addEventListener("input", () => setTimeout(callback));
 
   customElements.define(
     "agency-row",
@@ -56,4 +49,6 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     }
   );
+
+  callback();
 });
