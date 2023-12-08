@@ -17,14 +17,12 @@ window.addEventListener("DOMContentLoaded", () => {
           .toLowerCase();
 
         this.checkme = (/** @type {Event} */ event) => {
-          const target = /** @type {HTMLInputElement} */ (event.target);
-          const value = target.value.trim().toLowerCase();
+          const value = /** @type {HTMLInputElement} */ (event.target).value
+            .trim()
+            .toLowerCase();
 
-          if (!value || this.words.includes(value)) {
-            this.style.display = "";
-          } else {
-            this.style.display = "none";
-          }
+          this.style.display =
+            !value || this.words.includes(value) ? "" : "none";
         };
       }
 
