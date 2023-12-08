@@ -14,9 +14,15 @@ eleventyNavigation:
 <div class="row p-b-lg">
   <div class="col-md-10 mx-auto">
     <h1 class="mt-lg-0">Agencies</h1>
+    <label>
+      Search Agencies
+      <input type="search" id="agency_search" />
+    </label>
+    <br />
 
     {%- for agency in state_entity_agencies.Results -%}
-    <agency-row>
+    <agency-row
+      keywords="{{agency.AgencyName}} {{agency.FriendlyName}} {{agency.Acronym}} {{agency.AgencyTags}} {{agency.Keywords}}">
       <template>
         <a href="/agency/{{ agency.AgencyName | slugify }}">
           {{agency.FriendlyName}} </a
