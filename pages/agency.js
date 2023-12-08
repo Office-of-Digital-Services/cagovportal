@@ -6,12 +6,10 @@ window.addEventListener("DOMContentLoaded", () => {
     class extends HTMLElement {
       constructor() {
         super();
-        let template = document.createElement("template");
-        template.innerHTML = "<slot></slot><br />";
-        let templateContent = template.content;
+        let template = this.querySelector("template");
 
-        const shadowRoot = this.attachShadow({ mode: "open" });
-        shadowRoot.appendChild(templateContent.cloneNode(true));
+        const shadowRoot = this.attachShadow({ mode: "closed" });
+        shadowRoot.appendChild(template.content.cloneNode(true));
       }
     }
   );
