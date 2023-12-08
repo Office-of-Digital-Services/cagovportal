@@ -18,7 +18,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const count = result_list.querySelectorAll(
       'agency-row:not([style*="display: none"])'
     ).length;
-    console.log(count);
     result_count.innerText = count.toString();
   };
 
