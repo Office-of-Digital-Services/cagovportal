@@ -6,13 +6,33 @@ eleventyNavigation:
   parent: Home
 ---
 
+{%- set js -%} {%- include "./agency.js" -%} {%- endset -%}
+<script>
+  {{- js | jsmin | safe -}}
+</script>
+
 <div class="row p-b-lg">
   <div class="col-md-10 mx-auto">
     <h1 class="mt-lg-0">Agencies</h1>
-    {%- for agency in state_entity_agencies.Results -%}
-    <a href="/agency/{{ agency.AgencyName | slugify }}"
-      >{{agency.FriendlyName}}</a
-    ><br />
-    {%- endfor %}
+
+    <label>
+      Search Agencies
+      <input type="search" id="agency_search" />
+    </label>
+
+    <h2 aria-live="polite"><span id="result_count"></span> agencies</h2>
+
+    <ul id="result_list">
+      {%- for agency in state_entity_agencies.Results -%}
+      <agency-row
+        keywords="{{agency.AgencyName}} {{agency.FriendlyName}} {{agency.Acronym}} {{agency.AgencyTags}} {{agency.Keywords}}">
+        <li>
+          <a href="/agency/{{ agency.AgencyName | slugify }}">
+            {{agency.FriendlyName}}
+          </a>
+        </li>
+      </agency-row>
+      {%- endfor %}
+    </ul>
   </div>
 </div>
