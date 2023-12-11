@@ -24,31 +24,27 @@ window.addEventListener("DOMContentLoaded", () => {
   customElements.define(
     "agency-row",
     class extends HTMLElement {
-      constructor() {
-        super();
-
+      connectedCallback() {
         /** @type {string} */
-        this.words = /** @type {string} */ (this.attributes["keywords"].value)
+        const words = /** @type {string} */ (this.attributes["keywords"].value)
           .trim()
           .toLowerCase();
 
-        this.checkme = (/** @type {Event} */ event) => {
+        const checkme = (/** @type {Event} */ event) => {
           const value = /** @type {HTMLInputElement} */ (event.target).value
             //.trim() not trimming on purpose
             .toLowerCase();
 
-          const bShow = !value || this.words.includes(value);
+          const bShow = !value || words.includes(value);
 
           this.style.display = bShow ? "" : "none";
           this.ariaHidden = (!bShow).toString();
         };
-      }
 
-      connectedCallback() {
-        search.addEventListener("input", this.checkme);
+        search.addEventListener("input", checkme);
       }
     }
   );
 
-  callback();
+  setTimeout(callback);
 });
