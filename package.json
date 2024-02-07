@@ -10,6 +10,10 @@
     "start": "run-p watch:*",
     "build": "run-p build:*"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Office-of-Digital-Services/cagovportal.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
