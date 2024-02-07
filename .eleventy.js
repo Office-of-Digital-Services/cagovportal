@@ -41,6 +41,17 @@ module.exports = function (
     }
   );
 
+  eleventyConfig.addFilter(
+    "pluck",
+    /**
+     * @param {[]} arr
+     * @param {string} attr
+     * @param {*} value
+     * @returns
+     */
+    (arr, attr, value) => arr.filter(item => item[attr] === value)
+  );
+
   //Start with default config, easier to configure 11ty later
   const config = defaultConfig(eleventyConfig);
 
