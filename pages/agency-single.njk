@@ -30,7 +30,7 @@ eleventyComputed:
     <h2 class="mt-lg-0">Services</h2>
     {%- for service in state_entity_services.Results |
     pluck('AgencyId',item.AgencyId) -%}
-    <a href="/service/{{ service.ServiceName | slugify }}"
+    <a href="/service/{{ service.ServiceName | slugify }}/"
       >{{service.ServiceName}}</a
     ><br />
     {%- endfor %}
