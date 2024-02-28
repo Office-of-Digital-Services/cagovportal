@@ -39,6 +39,7 @@
     "jsdoc/require-returns-type": "off",
     "jsdoc/require-property-description": "off",
     "jsdoc/require-param-description": "off",
-    "jsdoc/require-returns-description": "off"
+    "jsdoc/require-returns-description": "off",
+    "jsdoc/no-undefined-types": "off"
   }
 }
