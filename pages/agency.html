@@ -6,21 +6,17 @@ eleventyNavigation:
   parent: Home
 ---
 
-{%- set js -%} {%- include "./agency.js" -%} {%- endset -%}
-<script>
-  {{- js | jsmin | safe -}}
-</script>
+{% same_page_script page %}
 
 <div class="row p-b-lg">
   <div class="col-lg-4 col-xl-3 pb-lg-5">
     <!-- Side navigation -->
-    <details>
-      <summary>Dropdown 1</summary>
-      <ul class="list-navigation">
+    <nav class="side-navigation sticky-6">
+      <ul>
         <li><a href="">Link 1</a></li>
         <li><a href="">Link 2</a></li>
       </ul>
-    </details>
+    </nav>
   </div>
 
   <div class="col-lg-8 col-xl-9 mx-auto p-b-lg">
