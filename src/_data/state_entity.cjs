@@ -48,6 +48,10 @@ module.exports = async function () {
       description: x.Description,
       url: x.WebsiteURL,
       logo: `https://stateentityprofile.ca.gov/Uploads/${x.LogoUrl}`,
+      jurisdiction: {
+        "@type": "AdministrativeArea",
+        name: "State of California"
+      },
       areaServed: {
         "@type": "State",
         name: "California"
@@ -81,22 +85,7 @@ module.exports = async function () {
           contactType: "Service Contact"
         }
       },
-      provider: {
-        "@type": "GovernmentOrganization",
-        name: agencyData.AgencyFullName,
-        telephone: agencyData.ContactPhone,
-        url: agencyData.WebsiteURL,
-        email: agencyData.ContactEmail,
-        logo: `https://stateentityprofile.ca.gov/Uploads/${agencyData.LogoUrl}`,
-        areaServed: {
-          "@type": "State",
-          name: "California"
-        }
-      },
-      jurisdiction: {
-        "@type": "AdministrativeArea",
-        name: "State of California"
-      }
+      provider: agencyData["structuredData"]
     };
   });
 
