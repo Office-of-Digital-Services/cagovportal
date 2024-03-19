@@ -33,7 +33,8 @@ eleventyComputed:
     {
       "@context": "https://schema.org",
       "@type": "GovernmentOrganization",
-      "name": item.FriendlyName,
+      "name": item.FriendlyName + " (" + item.Acronym + ")",
+      "description": item.Description,
       "telephone": item.ContactPhone,
       "url": item.WebsiteURL,
       "email": item.ContactEmail,
