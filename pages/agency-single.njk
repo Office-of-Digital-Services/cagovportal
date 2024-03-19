@@ -7,17 +7,19 @@ pagination:
     addAllPagesToCollections : true
 permalink: "agency/{{ item.AgencyName | slugify }}/"
 eleventyComputed: 
-  description: Agency details for "{{ item.FriendlyName }}"
-  title: "{{ item.FriendlyName }}"
+  description: Agency details for "{{ item.FriendlyName }} ({{ item.Acronym }})"
+  title: "{{ item.FriendlyName }} ({{ item.Acronym }})"
   eleventyNavigation:
     key: "{{ item.AgencyName | slugify }}"
-    title:  "{{ item.FriendlyName }}"
+    title:  "{{ item.FriendlyName }} ({{ item.Acronym }})"
     parent: Agencies
 ---
 
 <div class="row p-b-lg">
   <div class="col-md-10 mx-auto">
-    <h2 class="mt-lg-0">Agency - {{ item.FriendlyName }}</h2>
+    <h2 class="mt-lg-0">
+      Agency - {{ item.FriendlyName }} ({{ item.Acronym }})
+    </h2>
 
     {% if item.LogoUrl %}
     <img

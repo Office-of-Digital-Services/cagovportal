@@ -35,7 +35,7 @@ eleventyNavigation:
         keywords="{{agency.AgencyName}} {{agency.FriendlyName}} {{agency.Acronym}} {{agency.AgencyTags}} {{agency.Keywords}}">
         <li>
           <a href="/agency/{{ agency.AgencyName | slugify }}/">
-            {{agency.FriendlyName}}
+            {{agency.FriendlyName}} ({{agency.Acronym}})
           </a>
         </li>
       </agency-row>
