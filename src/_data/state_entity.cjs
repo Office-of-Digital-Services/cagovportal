@@ -68,7 +68,9 @@ module.exports = async function () {
   });
 
   results.services.forEach(item => {
-    const agencyData = results.agencies.find(x => x.AgencyId === item.AgencyId);
+    const provider = results.agencies.find(
+      x => x.AgencyId === item.AgencyId
+    )?.structuredData;
 
     item["structuredData"] = {
       "@context": "https://schema.org",
@@ -85,7 +87,7 @@ module.exports = async function () {
           contactType: "Service Contact"
         }
       },
-      provider: agencyData["structuredData"]
+      provider
     };
   });
 
