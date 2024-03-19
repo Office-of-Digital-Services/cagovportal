@@ -3,29 +3,23 @@
 const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function () {
-  let url = "https://api.stateentityprofile.ca.gov/api/Agencies/Query";
+  let url =
+    "https://api.stateentityprofile.ca.gov/api/Agencies/Get?page=0&pageSize=0&lang=en";
 
   /* This returns a promise */
-  return EleventyFetch(url, {
-    fetchOptions: {
-      method: "POST",
-      headers: new Headers({
-        "Content-Type": "application/json"
-      }),
-      body: JSON.stringify({
-        lang: "en",
-        name: "",
-        agencyTypeIds: [null],
-        agencyTagIds: [null],
-        page: "0",
-        pageSize: 999,
-        sortDirection: "Ascending"
-      })
-    },
-    verbose: true,
-    duration: "1d", // save for 1 day
-    type: "json" // we’ll parse JSON for you
-  });
+  return (
+    await EleventyFetch(url, {
+      fetchOptions: {
+        method: "POST",
+        headers: new Headers({
+          "Content-Type": "application/json"
+        })
+      },
+      verbose: true,
+      duration: "1d", // save for 1 day
+      type: "json" // we’ll parse JSON for you
+    })
+  ).Data;
 };
 
 /*

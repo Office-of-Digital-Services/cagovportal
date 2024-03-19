@@ -1,7 +1,7 @@
 ---
 landing: Agency
 pagination:
-    data: state_entity_agencies.Results
+    data: state_entity_agencies
     size: 1
     alias: item
     addAllPagesToCollections : true
@@ -28,8 +28,8 @@ eleventyComputed:
     {% endif %}
 
     <h2 class="mt-lg-0">Services</h2>
-    {%- for service in state_entity_services.Results |
-    pluck('AgencyId',item.AgencyId) -%}
+    {%- for service in state_entity_services | pluck('AgencyId',item.AgencyId)
+    -%}
     <a href="/service/{{ service.ServiceName | slugify }}/"
       >{{service.ServiceName}}</a
     ><br />
