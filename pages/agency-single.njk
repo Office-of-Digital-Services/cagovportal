@@ -7,44 +7,19 @@ pagination:
     addAllPagesToCollections : true
 permalink: "agency/{{ item.AgencyName | slugify }}/"
 eleventyComputed: 
-  description: Agency details for "{{ item.FriendlyName }} ({{ item.Acronym }})"
-  title: "{{ item.FriendlyName }} ({{ item.Acronym }})"
+  description: Agency details for "{{ item.AgencyFullName }}"
+  title: "{{ item.AgencyFullName }}"
   keywords: "{{ item.Keywords}}"
   eleventyNavigation:
     key: "{{ item.AgencyName | slugify }}"
-    title:  "{{ item.FriendlyName }} ({{ item.Acronym }})"
+    title:  "{{ item.AgencyFullName }}"
     parent: Agencies
 ---
 
 <!-- Begin Structured Data -->
 <script type="application/ld+json">
-  {% set sameAs = [] %}
-  {% if item.Facebook %}
-    {% set _ = sameAs.push("https://www.facebook.com/" + item.Facebook) %}
-  {% endif %}
-  {% if item.TwitterAccount %}
-    {% set _ = sameAs.push("https://www.twitter.com/" + item.TwitterAccount) %}
-  {% endif %}
-  {% if item.YouTube %}
-    {% set _ = sameAs.push("https://www.youtube.com/" + item.YouTube) %}
-  {% endif %}
-
   {{
-    {
-      "@context": "https://schema.org",
-      "@type": "GovernmentOrganization",
-      "name": item.FriendlyName + " (" + item.Acronym + ")",
-      "description": item.Description,
-      "telephone": item.ContactPhone,
-      "url": item.WebsiteURL,
-      "email": item.ContactEmail,
-      "logo": "https://stateentityprofile.ca.gov/Uploads/" + item.LogoUrl,
-      "areaServed": {
-        "@type": "State",
-        "name": "California"
-      },
-      "sameAs": sameAs
-    } | dump | safe
+    item.structuredData | dump | safe
   }}
 </script>
 <!-- End Structured Data -->
@@ -56,9 +31,7 @@ eleventyComputed:
     </h2>
 
     {% if item.LogoUrl %}
-    <img
-      src="https://stateentityprofile.ca.gov/Uploads/{{item.LogoUrl}}"
-      style="width:50%" />
+    <img src="{{item.structuredData.logo}}" style="width:50%" />
 
     <br />
     {% endif %}

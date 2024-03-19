@@ -3,11 +3,11 @@
 const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function () {
-  let url =
+  const url =
     "https://api.stateentityprofile.ca.gov/api/Agencies/Get?page=0&pageSize=0&lang=en";
 
-  /* This returns a promise */
-  return (
+  /** @type {*[]} */
+  const data = (
     await EleventyFetch(url, {
       fetchOptions: {
         method: "POST"
@@ -17,6 +17,44 @@ module.exports = async function () {
       type: "json" // we’ll parse JSON for you
     })
   ).Data;
+
+  data.forEach(x => {
+    x["AgencyFullName"] = `${x["FriendlyName"]} (${x["Acronym"]})`;
+
+    const socialLinks = [];
+    if (x.Facebook) {
+      socialLinks.push(`https://www.facebook.com/${x.Facebook}`);
+    }
+    if (x.TwitterAccount) {
+      socialLinks.push(`https://www.twitter.com/${x.TwitterAccount}`);
+    }
+    if (x.YouTube) {
+      socialLinks.push(`https://www.youtube.com/${x.YouTube}`);
+    }
+
+    x["structuredData"] = {
+      "@context": "https://schema.org",
+      "@type": "GovernmentOrganization",
+      name: x.AgencyFullName,
+      description: x.Description,
+      url: x.WebsiteURL,
+      logo: `https://stateentityprofile.ca.gov/Uploads/${x.LogoUrl}`,
+      areaServed: {
+        "@type": "State",
+        name: "California"
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: x.ContactPhone,
+        url: x.ContactURL,
+        email: x.ContactEmail
+      },
+      sameAs: socialLinks
+    };
+  });
+
+  return data;
 };
 
 /*
