@@ -3,22 +3,31 @@
 const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function () {
-  const url =
-    "https://api.stateentityprofile.ca.gov/api/Agencies/Get?page=0&pageSize=0&lang=en";
+  const urls = [
+    "https://api.stateentityprofile.ca.gov/api/Agencies/Get?page=0&pageSize=0&lang=en",
 
-  /** @type {*[]} */
-  const data = (
-    await EleventyFetch(url, {
-      fetchOptions: {
-        method: "POST"
-      },
-      verbose: true,
-      duration: "1d", // save for 1 day
-      type: "json" // we’ll parse JSON for you
-    })
-  ).Data;
+    "https://api.stateentityprofile.ca.gov/api/Services/Get?page=0&pageSize=0&lang=en"
+  ];
 
-  data.forEach(x => {
+  const returns = await Promise.all(
+    urls.map(u =>
+      EleventyFetch(u, {
+        fetchOptions: {
+          method: "POST"
+        },
+        verbose: true,
+        duration: "1d", // save for 1 day
+        type: "json" // we’ll parse JSON for you
+      })
+    )
+  );
+
+  const results = {
+    agencies: /** @type {*[]} */ (returns[0].Data),
+    services: /** @type {*[]} */ (returns[1].Data)
+  };
+
+  results.agencies.forEach(x => {
     x["AgencyFullName"] = `${x["FriendlyName"]} (${x["Acronym"]})`;
 
     const socialLinks = [];
@@ -54,7 +63,7 @@ module.exports = async function () {
     };
   });
 
-  return data;
+  return results;
 };
 
 /*

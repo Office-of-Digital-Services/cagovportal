@@ -1,7 +1,7 @@
 ---
 landing: Service
 pagination:
-    data: state_entity_services
+    data: state_entity.services
     size: 1
     alias: item
     addAllPagesToCollections : true
@@ -16,7 +16,7 @@ eleventyComputed:
     parent: Services
 ---
 
-{% set agencyData = (state_entity_agencies | pluck('AgencyId',item.AgencyId))[0]
+{% set agencyData = (state_entity.agencies | pluck('AgencyId',item.AgencyId))[0]
 -%}
 
 <!-- Begin Structured Data -->
