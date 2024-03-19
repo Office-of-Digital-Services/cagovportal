@@ -9,11 +9,39 @@ permalink: "agency/{{ item.AgencyName | slugify }}/"
 eleventyComputed: 
   description: Agency details for "{{ item.FriendlyName }} ({{ item.Acronym }})"
   title: "{{ item.FriendlyName }} ({{ item.Acronym }})"
+  keywords: "{{ item.Keywords}}"
   eleventyNavigation:
     key: "{{ item.AgencyName | slugify }}"
     title:  "{{ item.FriendlyName }} ({{ item.Acronym }})"
     parent: Agencies
 ---
+
+<!-- Begin Structured Data -->
+<script type="application/ld+json">
+  {% set sameAs = [] %}
+  {% if item.Facebook %}
+    {% set _ = sameAs.push("https://www.facebook.com/" + item.Facebook) %}
+  {% endif %}
+  {% if item.TwitterAccount %}
+    {% set _ = sameAs.push("https://www.twitter.com/" + item.TwitterAccount) %}
+  {% endif %}
+  {% if item.YouTube %}
+    {% set _ = sameAs.push("https://www.youtube.com/" + item.YouTube) %}
+  {% endif %}
+
+  {{
+    {
+      "@context": "https://schema.org",
+      "@type": "GovernmentOrganization",
+      "name": item.FriendlyName,
+      "telephone": item.ContactPhone,
+      "url": item.WebsiteURL,
+      "email": item.ContactEmail,
+      "sameAs": sameAs
+    } | dump | safe
+  }}
+</script>
+<!-- End Structured Data -->
 
 <div class="row p-b-lg">
   <div class="col-md-10 mx-auto">
