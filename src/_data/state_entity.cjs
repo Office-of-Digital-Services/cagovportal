@@ -63,6 +63,43 @@ module.exports = async function () {
     };
   });
 
+  results.services.forEach(item => {
+    const agencyData = results.agencies.find(x => x.AgencyId === item.AgencyId);
+
+    item["structuredData"] = {
+      "@context": "https://schema.org",
+      "@type": "GovernmentService",
+      name: item.ServiceName,
+      description: item.Description,
+      serviceType: item.ServiceType,
+      url: item.ServiceUrl,
+      availableChannel: {
+        "@type": "ServiceChannel",
+        servicePhone: {
+          "@type": "ContactPoint",
+          telephone: item.ContactPhone,
+          contactType: "Service Contact"
+        }
+      },
+      provider: {
+        "@type": "GovernmentOrganization",
+        name: agencyData.AgencyFullName,
+        telephone: agencyData.ContactPhone,
+        url: agencyData.WebsiteURL,
+        email: agencyData.ContactEmail,
+        logo: `https://stateentityprofile.ca.gov/Uploads/${agencyData.LogoUrl}`,
+        areaServed: {
+          "@type": "State",
+          name: "California"
+        }
+      },
+      jurisdiction: {
+        "@type": "AdministrativeArea",
+        name: "State of California"
+      }
+    };
+  });
+
   return results;
 };
 

@@ -30,7 +30,7 @@ eleventyNavigation:
     <h2 aria-live="polite"><span id="result_count"></span> agencies</h2>
 
     <ul id="result_list">
-      {%- for agency in state_entity_agencies -%}
+      {%- for agency in state_entity.agencies -%}
       <agency-row
         keywords="{{agency.AgencyName}} {{agency.FriendlyName}} {{agency.Acronym}} {{agency.AgencyTags}} {{agency.Keywords}}">
         <li>

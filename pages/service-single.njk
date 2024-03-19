@@ -13,46 +13,12 @@ eleventyComputed:
   eleventyNavigation:
     key: "{{ item.ServiceName | slugify }}"
     title:  "{{ item.ServiceName }}"
-    parent: Services
+    parent: "{{ item.AgencyName | slugify }}"
 ---
-
-{% set agencyData = (state_entity.agencies | pluck('AgencyId',item.AgencyId))[0]
--%}
 
 <!-- Begin Structured Data -->
 <script type="application/ld+json">
-  {{ {
-    "@context": "https://schema.org",
-    "@type": "GovernmentService",
-    "name": item.ServiceName,
-    "description": item.Description,
-    "serviceType": item.ServiceType,
-    "url": item.ServiceUrl,
-    "availableChannel": {
-      "@type": "ServiceChannel",
-      "servicePhone": {
-        "@type": "ContactPoint",
-        "telephone": item.ContactPhone,
-        "contactType": "Service Contact"
-      }
-    },
-    "provider": {
-      "@type": "GovernmentOrganization",
-      "name": agencyData.AgencyFullName,
-      "telephone": agencyData.ContactPhone,
-      "url": agencyData.WebsiteURL,
-      "email": agencyData.ContactEmail,
-      "logo": "https://stateentityprofile.ca.gov/Uploads/" + agencyData.LogoUrl,
-      "areaServed": {
-        "@type": "State",
-        "name": "California"
-      }
-    },
-    "jurisdiction": {
-      "@type": "AdministrativeArea",
-      "name": "State of California"
-    }
-  }  | dump | safe }}
+  {{ item.structuredData  | dump | safe }}
 </script>
 <!-- End Structured Data -->
 
@@ -98,10 +64,6 @@ eleventyComputed:
     <hr />
     <pre>
 {{ item | dump(2) }}
-    </pre>
-
-    <pre>
-{{ agencyData | dump(2) | safe }}
     </pre>
   </div>
 </div>
