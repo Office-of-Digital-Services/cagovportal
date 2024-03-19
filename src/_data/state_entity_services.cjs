@@ -10,10 +10,7 @@ module.exports = async function () {
   return (
     await EleventyFetch(url, {
       fetchOptions: {
-        method: "POST",
-        headers: new Headers({
-          "Content-Type": "application/json"
-        })
+        method: "POST"
       },
       verbose: true,
       duration: "1d", // save for 1 day
