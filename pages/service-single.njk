@@ -8,12 +8,16 @@ pagination:
 permalink: "service/{{ item.ServiceName | slugify }}/"
 eleventyComputed: 
   description: Service details for "{{ item.ServiceName }}"
+  keywords: "{{ item.Keywords }}"
   title: "{{ item.ServiceName }}"
   eleventyNavigation:
     key: "{{ item.ServiceName | slugify }}"
     title:  "{{ item.ServiceName }}"
     parent: Services
 ---
+
+{% set agencyData = (state_entity_agencies | pluck('AgencyId',item.AgencyId))[0]
+-%}
 
 <!-- Begin Structured Data -->
 <script type="application/ld+json">
@@ -24,10 +28,20 @@ eleventyComputed:
     "description": item.Description,
     "serviceType": item.ServiceType,
     "url": item.ServiceUrl,
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "servicePhone": {
+        "@type": "ContactPoint",
+        "telephone": item.ContactPhone,
+        "contactType": "Service Contact"
+      }
+    },
     "provider": {
       "@type": "GovernmentOrganization",
       "name": item.FriendlyName,
-      "telephone": item.ContactPhone
+      "telephone": agencyData.ContactPhone,
+      "url": agencyData.WebsiteURL,
+      "email": agencyData.ContactEmail
     },
     "jurisdiction": {
       "@type": "AdministrativeArea",
@@ -79,6 +93,10 @@ eleventyComputed:
     <hr />
     <pre>
 {{ item | dump(2) }}
+    </pre>
+
+    <pre>
+{{ agencyData | dump(2) | safe }}
     </pre>
   </div>
 </div>
