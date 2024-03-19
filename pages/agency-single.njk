@@ -37,6 +37,11 @@ eleventyComputed:
       "telephone": item.ContactPhone,
       "url": item.WebsiteURL,
       "email": item.ContactEmail,
+      "image": "https://stateentityprofile.ca.gov/Uploads/" + item.LogoUrl,
+      "areaServed": {
+        "@type": "State",
+        "name": "California"
+      },
       "sameAs": sameAs
     } | dump | safe
   }}
