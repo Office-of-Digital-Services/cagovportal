@@ -6,13 +6,20 @@ eleventyNavigation:
   parent: Home
 ---
 
-{%- set js -%} {%- include "./agency.js" -%} {%- endset -%}
-<script>
-  {{- js | jsmin | safe -}}
-</script>
+{% same_page_script page %}
 
 <div class="row p-b-lg">
-  <div class="col-md-10 mx-auto">
+  <div class="col-lg-4 col-xl-3 pb-lg-5">
+    <!-- Side navigation -->
+    <nav class="side-navigation sticky-6">
+      <ul>
+        <li><a href="">Link 1</a></li>
+        <li><a href="">Link 2</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="col-lg-8 col-xl-9 mx-auto p-b-lg">
     <h1 class="mt-lg-0">Agencies</h1>
 
     <label>
@@ -23,12 +30,12 @@ eleventyNavigation:
     <h2 aria-live="polite"><span id="result_count"></span> agencies</h2>
 
     <ul id="result_list">
-      {%- for agency in state_entity_agencies.Results -%}
+      {%- for agency in state_entity_agencies -%}
       <agency-row
         keywords="{{agency.AgencyName}} {{agency.FriendlyName}} {{agency.Acronym}} {{agency.AgencyTags}} {{agency.Keywords}}">
         <li>
           <a href="/agency/{{ agency.AgencyName | slugify }}/">
-            {{agency.FriendlyName}}
+            {{agency.FriendlyName}} ({{agency.Acronym}})
           </a>
         </li>
       </agency-row>

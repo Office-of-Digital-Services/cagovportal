@@ -1,13 +1,14 @@
 ---
 landing: Service
 pagination:
-    data: state_entity_services.Results
+    data: state_entity_services
     size: 1
     alias: item
     addAllPagesToCollections : true
 permalink: "service/{{ item.ServiceName | slugify }}/"
 eleventyComputed: 
   description: Service details for "{{ item.ServiceName }}"
+  keywords: "{{ item.Keywords }}"
   title: "{{ item.ServiceName }}"
   eleventyNavigation:
     key: "{{ item.ServiceName | slugify }}"
@@ -15,16 +16,44 @@ eleventyComputed:
     parent: Services
 ---
 
+{% set agencyData = (state_entity_agencies | pluck('AgencyId',item.AgencyId))[0]
+-%}
+
+<!-- Begin Structured Data -->
+<script type="application/ld+json">
+  {{ {
+    "@context": "https://schema.org",
+    "@type": "GovernmentService",
+    "name": item.ServiceName,
+    "description": item.Description,
+    "serviceType": item.ServiceType,
+    "url": item.ServiceUrl,
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "servicePhone": {
+        "@type": "ContactPoint",
+        "telephone": item.ContactPhone,
+        "contactType": "Service Contact"
+      }
+    },
+    "provider": {
+      "@type": "GovernmentOrganization",
+      "name": item.FriendlyName,
+      "telephone": agencyData.ContactPhone,
+      "url": agencyData.WebsiteURL,
+      "email": agencyData.ContactEmail
+    },
+    "jurisdiction": {
+      "@type": "AdministrativeArea",
+      "name": "State of California"
+    }
+  }  | dump | safe }}
+</script>
+<!-- End Structured Data -->
+
 <div class="row p-b-lg">
   <div class="col-md-10 mx-auto">
     <h2 class="mt-lg-0">Service - {{ item.ServiceName }}</h2>
-    <h3 class="mt-lg-0">
-      Agency -
-      <a href="/agency/{{ item.AgencyName | slugify }}/"
-        >{{ item.FriendlyName }}</a
-      >
-    </h3>
-
     {% if item.ImageUrl %}
     <img
       src="https://stateentityprofile.ca.gov/Uploads/{{item.ImageUrl}}"
@@ -32,9 +61,42 @@ eleventyComputed:
 
     <br />
     {% endif %}
+    <p>{{item.Description}}</p>
+    <h3 class="mt-lg-0">Agency</h3>
+
+    <p>
+      <a href="/agency/{{ item.AgencyName | slugify }}/"
+        >{{ item.FriendlyName }} ({{ item.Acronym }})</a
+      >
+    </p>
+
+    <h3 class="mt-lg-0">Service Type</h3>
+    <ul>
+      {%- for tag in item.ServiceType.split("|") -%}
+      <li>{{ tag }}</li>
+      {%- endfor %}
+    </ul>
+
+    <h3 class="mt-lg-0">Keywords</h3>
+    <p>{{item.Keywords}}</p>
+
+    <h3 class="mt-lg-0">Contact Info</h3>
+    <p>Phone <a href="tel:{{item.ContactPhone}}">{{item.ContactPhone}}</a></p>
+    <p>URL <a href="{{item.ContactUrl}}">{{item.ContactUrl}}</a></p>
+
+    <h3 class="mt-lg-0">Agency Tags</h3>
+    <ul>
+      {%- for tag in item.AgencyTags.split("|") -%}
+      <li>{{ tag }}</li>
+      {%- endfor %}
+    </ul>
     <hr />
     <pre>
 {{ item | dump(2) }}
+    </pre>
+
+    <pre>
+{{ agencyData | dump(2) | safe }}
     </pre>
   </div>
 </div>

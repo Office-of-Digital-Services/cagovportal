@@ -5,9 +5,11 @@
     <meta charset="utf-8" />
     <meta name="Author" content="State of California" />
     <meta name="Description" content="{{ description }}" />
-    <meta name="Keywords" content="California, government" />
+    <meta name="Keywords" content="California, government, {{ keywords }}" />
     {%- if noindex %}
     <meta name="robots" content="noindex" />
+    {% else %}
+    <meta name="robots" content="index, follow" />
     {%- endif %}
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="HandheldFriendly" content="True" />
@@ -22,6 +24,8 @@
     <link href="{{ canonical }}" rel="canonical" />
 
     <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="California State Portal" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ canonical }}" />
     <meta property="og:title" content="{{ title }}" />

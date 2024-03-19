@@ -14,7 +14,7 @@ module.exports = {
 };
 
 /**
- * @typedef {Object} page
+ * @typedef {object} page
  * @property {string} date
  * @property {string} inputPath
  * @property {string} fileSlug
@@ -26,7 +26,7 @@ module.exports = {
  */
 
 /**
- * @typedef {Object} globaldata
+ * @typedef {object} globaldata
  * @property {string} description
  * @property {string} title
  * @property {string} key
