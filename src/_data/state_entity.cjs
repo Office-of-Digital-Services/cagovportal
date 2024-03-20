@@ -48,10 +48,7 @@ module.exports = async function () {
       description: x.Description,
       url: x.WebsiteURL,
       logo: `https://stateentityprofile.ca.gov/Uploads/${x.LogoUrl}`,
-      jurisdiction: {
-        "@type": "AdministrativeArea",
-        name: "State of California"
-      },
+
       areaServed: {
         "@type": "State",
         name: "California"
@@ -79,6 +76,10 @@ module.exports = async function () {
       description: item.Description,
       serviceType: item.ServiceType,
       url: item.ServiceUrl,
+      jurisdiction: {
+        "@type": "AdministrativeArea",
+        name: "State of California"
+      },
       availableChannel: {
         "@type": "ServiceChannel",
         servicePhone: {
