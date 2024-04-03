@@ -92,6 +92,20 @@ module.exports = async function () {
     };
   });
 
+  if (process.env.ELEVENTY_ENV === "dev") {
+    //trim the results for dev mode
+    console.log("'dev' mode.  Rendering less agencies.");
+
+    const keepAgencyIds = [139, 163, 172, 178, 216, 220, 239, 256, 268, 306];
+
+    results.agencies = results.agencies.filter(x =>
+      keepAgencyIds.includes(x.AgencyId)
+    );
+    results.services = results.services.filter(x =>
+      keepAgencyIds.includes(x.AgencyId)
+    );
+  }
+
   return results;
 };
 
