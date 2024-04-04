@@ -48,6 +48,9 @@ module.exports = function (
     (arr, attr, value) => arr.filter(item => item[attr] === value)
   );
 
+  // so you can look at {% if ELEVENTY_ENV !== 'dev' %}
+  eleventyConfig.addGlobalData("ELEVENTY_ENV", process.env.ELEVENTY_ENV);
+
   //Start with default config, easier to configure 11ty later
   const config = defaultConfig(eleventyConfig);
 

@@ -4,7 +4,7 @@
   "description": "www.ca.gov",
   "scripts": {
     "watch:js": "rollup --config rollup.config.js --watch",
-    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "watch:eleventy": "ELEVENTY_ENV=dev npx @11ty/eleventy --serve",
     "build:js": "rollup --config rollup.config.js",
     "build:eleventy": "npx @11ty/eleventy",
     "start": "run-p watch:*",
