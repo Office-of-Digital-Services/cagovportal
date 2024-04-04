@@ -5,7 +5,7 @@ pagination:
     size: 1
     alias: item
     addAllPagesToCollections : true
-permalink: "service/{{ item.ServiceName | slugify }}/"
+permalink: "agency/{{ item.AgencyId }}/service/{{ item.ServiceId }}/"
 eleventyComputed: 
   description: Service details for "{{ item.ServiceName }}"
   keywords: "{{ item.Keywords }}"
@@ -36,7 +36,7 @@ eleventyComputed:
     <h3 class="mt-lg-0">Agency</h3>
 
     <p>
-      <a href="/agency/{{ item.AgencyName | slugify }}/"
+      <a href="/agency/{{ item.AgencyId }}/"
         >{{ item.FriendlyName }} ({{ item.Acronym }})</a
       >
     </p>

@@ -5,7 +5,7 @@ pagination:
     size: 1
     alias: item
     addAllPagesToCollections : true
-permalink: "agency/{{ item.AgencyName | slugify }}/"
+permalink: "agency/{{ item.AgencyId }}/"
 eleventyComputed: 
   description: Agency details for "{{ item.AgencyFullName }}"
   title: "{{ item.AgencyFullName }}"
@@ -39,7 +39,7 @@ eleventyComputed:
     <h2 class="mt-lg-0">Services</h2>
     {%- for service in state_entity.services | pluck('AgencyId',item.AgencyId)
     -%}
-    <a href="/service/{{ service.ServiceName | slugify }}/"
+    <a href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
       >{{service.ServiceName}}</a
     ><br />
     {%- endfor %}
