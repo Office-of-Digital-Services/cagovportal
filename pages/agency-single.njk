@@ -11,7 +11,7 @@ eleventyComputed:
   title: "{{ item.AgencyFullName }}"
   keywords: "{{ item.Keywords}}"
   eleventyNavigation:
-    key: "{{ item.AgencyName | slugify }}"
+    key: "Agency{{ item.AgencyId }}"
     title:  "{{ item.AgencyFullName }}"
     parent: Agencies
 ---

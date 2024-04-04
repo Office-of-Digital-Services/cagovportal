@@ -11,9 +11,9 @@ eleventyComputed:
   keywords: "{{ item.Keywords }}"
   title: "{{ item.ServiceName }}"
   eleventyNavigation:
-    key: "{{ item.ServiceName | slugify }}"
+    key: "Service{{ item.ServiceId }}"
     title:  "{{ item.ServiceName }}"
-    parent: "{{ item.AgencyName | slugify }}"
+    parent: "Agency{{ item.AgencyId }}"
 ---
 
 <!-- Begin Structured Data -->
