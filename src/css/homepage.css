@@ -1,1 +1,47 @@
 /* THIS IS CUSTOM CSS */
+/* -- Utility header -- */
+.utility-header {
+  background-color: #f5f9fa;
+}
+/* -- Site header * -- */
+.branding .header-organization-banner a .logo-assets .logo-text .logo-dept {
+  font-size: 2.5rem;
+  top: -10px;
+}
+/* -- Banner * -- */
+.header-banner {
+  overflow: hidden;
+  background-image: url("/images/background.svg");
+  background-color: #395567;
+  background-position: center !important;
+  background-size: cover !important;
+  display: block;
+  position: relative;
+}
+.header-banner .lead {
+  font-size: 1.45rem;
+}
+@media (max-width: 575px) {
+  .header-primary-banner p {
+    font-size: 1.9375rem;
+    line-height: 2.675rem;
+    padding-top: 2rem;
+  }
+  .header-banner .row,
+  .header-banner img {
+    width: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .header-banner .row {
+    flex-direction: column;
+  }
+  .header-banner img {
+    width: 100%;
+  }
+}
+
+.color-primary {
+  color: var(--color-p2, #046b99) !important;
+}

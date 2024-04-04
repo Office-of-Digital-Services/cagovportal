@@ -1,5 +1,5 @@
 ---
-title: CA.gov portal
+title: California State
 landing: Home
 layout: landing.njk
 customcss: /css/homepage.css
@@ -7,27 +7,35 @@ eleventyNavigation:
   key: Home
 ---
 
-<div class="section-default">
-  <div class="container p-a-md">
+<div class="header-banner hidden-print">
+  <div class="container">
     <div class="row">
-      <div class="col-md-6 col-lg-4 p-y-md order-2 order-md-1">
-        <h1 class="h3 m-t">Welcome to California</h1>
-        <p>Find and use government services and information.</p>
-        <a href="/agency/" class="btn btn-primary m-t-md m-b"
-          >Finding state agencies</a
-        >
-        <a href="/service/" class="btn btn-primary m-b-lg"
-          >Finding state services</a
-        >
+      <div class="col-lg-6 my-auto py-5">
+        <h1 class="color-white font-size-40 mt-0">Welcome to California</h1>
+        <div class="color-white lead m-b-lg font-weight-300">
+          Find and use government services and information
+        </div>
+        <form class="pos-rel" action="service/">
+          <span class="sr-only" id="ServiceSearch">Search for a service</span>
+          <div class="d-flex">
+            <input
+              type="search"
+              placeholder="Search for a service"
+              aria-labelledby="ServiceSearch"
+              class="height-50 rounded-4 border-0 flex-grow-1 p-l" />
+            <button
+              type="submit"
+              class="border-0 rounded-4 bg-white bg-gray-50-hover right-sm pos-rel width-50">
+              <span
+                class="ca-gov-icon-search font-size-25"
+                aria-hidden="true"></span>
+              <span class="sr-only">Submit</span>
+            </button>
+          </div>
+        </form>
       </div>
-      <div
-        class="col-lg-8 col-md-6 p-0 text-right order-1 order-md-2 d-flex justify-content-center">
-        <a
-          href="#"
-          class="feature-img"
-          style="background: url('/images/main-banner.jpg')"
-          aria-label="Feature card example image">
-        </a>
+      <div class="col-lg-6 m-0 p-0 my-auto">
+        <img class="img-fluid" src="/images/banner-image.png" alt="" />
       </div>
     </div>
   </div>
