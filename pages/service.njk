@@ -10,10 +10,23 @@ eleventyNavigation:
 <div class="row p-b-lg">
   <div class="col-md-10 mx-auto">
     <h1 class="mt-lg-0">Services</h1>
-    {%- for service in state_entity.services -%}
-    <a href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
-      >{{service.ServiceName}}</a
-    ><br />
-    {%- endfor %}
+
+    <label>
+      Search Agencies
+      <input type="search" placeholder="search for services" />
+    </label>
+
+    <cagovhome-filterlist data-inputquery="label > input[type=search]">
+      <ul>
+        {%- for service in state_entity.services -%}
+        <li>
+          <a
+            href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
+            >{{service.ServiceName}}</a
+          >
+        </li>
+        {%- endfor %}
+      </ul>
+    </cagovhome-filterlist>
   </div>
 </div>

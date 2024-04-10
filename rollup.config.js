@@ -2,7 +2,7 @@ import { terser } from "rollup-plugin-terser";
 
 export default [
   {
-    input: "src/js/custom.js",
+    input: "src/js/index.mjs",
     output: [
       {
         file: "_site/js/custom.js",
@@ -11,7 +11,7 @@ export default [
       {
         file: "_site/js/custom.min.js",
         format: "esm",
-        plugins: [terser()]
+        plugins: [terser({ module: false })]
       }
     ],
     onwarn: function (warning) {
