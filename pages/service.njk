@@ -12,11 +12,15 @@ eleventyNavigation:
     <h1 class="mt-lg-0">Services</h1>
 
     <label>
-      Search Agencies
+      Search Services
       <input type="search" placeholder="search for services" />
     </label>
 
-    <cagovhome-filterlist data-inputquery="label > input[type=search]">
+    <h2 aria-live="polite"><span></span> services</h2>
+
+    <cagovhome-filterlist
+      data-inputquery="label > input[type=search]"
+      data-countquery="h2[aria-live=polite] > span">
       <ul>
         {%- for service in state_entity.services -%}
         <li>

@@ -29,6 +29,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
         const inputBox = /** @type {HTMLInputElement} */ (inputBoxList[0]);
 
+        const count = document.querySelector(this.dataset.countquery);
+
         const checkme = () => {
           console.log("chec");
           const value = inputBox.value
@@ -37,12 +39,17 @@ window.addEventListener("DOMContentLoaded", () => {
 
           const LIs = ul.getElementsByTagName("li");
 
+          let nCount = 0;
+
           [...LIs].forEach(li => {
             const bShow = !value || li.innerText.includes(value);
 
             li.style.display = bShow ? "" : "none";
             li.ariaHidden = (!bShow).toString();
+            if (bShow) nCount++;
           });
+
+          if (count) count.innerHTML = nCount.toLocaleString();
         };
 
         inputBox.addEventListener("input", checkme);
