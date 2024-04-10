@@ -61,3 +61,32 @@
 .m-t-minus-30 {
   margin-top: -2rem;
 }
+
+/* Feedback */
+cagov-feedback .feedback-form {
+  padding: 0 !important;
+}
+cagov-feedback .feedback-form,
+cagov-feedback .feedback-form-label,
+cagov-feedback .feedback-form-thanks {
+  background: transparent !important;
+  color: var(--gray-900) !important;
+}
+
+cagov-feedback .feedback-form-label {
+  width: 100% !important;
+  margin-top: 0 !important;
+  font-size: 1.7rem !important;
+}
+
+cagov-feedback .feedback-form-button {
+  border: 1px solid var(--gray-200) !important;
+  border-radius: 5px !important;
+}
+
+cagov-feedback .feedback-form-button:hover,
+cagov-feedback .feedback-form-button:focus {
+  box-shadow: none !important;
+  text-decoration: none !important;
+  background: var(--gray-75) !important;
+}
