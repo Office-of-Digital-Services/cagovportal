@@ -62,7 +62,7 @@ eleventyComputed:
     <h3 class="mt-lg-0">Agency Tags</h3>
     <ul>
       {%- for tag in item.AgencyTags.split("|") -%}
-      <li><a href="/service/?q={{tag | trim}}+">{{ tag | trim }}</a>&nbsp;</li>
+      <li><a href="/agency/?q={{tag | trim}}+">{{ tag | trim }}</a>&nbsp;</li>
       {%- endfor %}
     </ul>
     <hr />
