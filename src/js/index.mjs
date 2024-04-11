@@ -9,30 +9,24 @@ window.addEventListener("DOMContentLoaded", () => {
     "cagovhome-filterlist",
     class extends HTMLElement {
       connectedCallback() {
-        console.log("connected");
-
         const ul = this.querySelector("ul");
         if (!ul) {
           throw new Error("missing first level UL");
         }
 
-        const inputquery = this.dataset.inputquery;
-        if (!inputquery) {
-          throw new Error(`missing query -> ${inputquery}`);
+        const inputBox = /** @type {HTMLInputElement} */ (
+          document.getElementById(this.dataset.inputid)
+        );
+
+        if (!inputBox) {
+          throw new Error("Missing data-inputid");
         }
 
-        const inputBoxList = document.querySelectorAll(inputquery);
+        inputBox.value = new URLSearchParams(window.location.search).get("q");
 
-        if (!inputBoxList || inputBoxList.length > 1) {
-          throw new Error(`bad query -> ${inputquery}`);
-        }
-
-        const inputBox = /** @type {HTMLInputElement} */ (inputBoxList[0]);
-
-        const count = document.querySelector(this.dataset.countquery);
+        const count = document.getElementById(this.dataset.countid);
 
         const checkme = () => {
-          console.log("chec");
           const value = inputBox.value
             //.trim() not trimming on purpose
             .toLowerCase();
@@ -42,7 +36,12 @@ window.addEventListener("DOMContentLoaded", () => {
           let nCount = 0;
 
           [...LIs].forEach(li => {
-            const bShow = !value || li.innerText.includes(value);
+            const bShow =
+              !value ||
+              li.dataset.keywords
+                .replace(/\W/g, " ")
+                .toLowerCase()
+                .includes(value);
 
             li.style.display = bShow ? "" : "none";
             li.ariaHidden = (!bShow).toString();
@@ -53,6 +52,7 @@ window.addEventListener("DOMContentLoaded", () => {
         };
 
         inputBox.addEventListener("input", checkme);
+        checkme();
       }
     }
   );

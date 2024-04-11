@@ -13,17 +13,18 @@ eleventyNavigation:
 
     <label>
       Search Services
-      <input type="search" placeholder="search for services" />
+      <input type="search" id="searchbox" placeholder="search for services" />
     </label>
 
-    <h2 aria-live="polite"><span></span> services</h2>
+    <h2 aria-live="polite"><span id="searchcount">...</span> services found</h2>
 
-    <cagovhome-filterlist
-      data-inputquery="label > input[type=search]"
-      data-countquery="h2[aria-live=polite] > span">
+    <cagovhome-filterlist data-inputid="searchbox" data-countid="searchcount">
       <ul>
         {%- for service in state_entity.services -%}
-        <li>
+        <li
+          data-keywords="{{service.ServiceName}} {{service.ServiceType}} {{service.AgencyTags}}
+            {{service.Description}} {{service.RelatedSearchTerms}}
+            {{service.AgencyName}} {{service.Keywords}}">
           <a
             href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
             >{{service.ServiceName}}</a
