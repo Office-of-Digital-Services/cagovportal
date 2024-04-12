@@ -4,6 +4,8 @@
 <link rel="stylesheet" href="{{ customcss }}" />
 {% endif -%}
 <script src="/state-template/js/cagov.core.min.js"></script>
+<script src="/js/custom.js" type="module"></script>
+
 {%- if customjs -%} {% for link in customjs %}
 <script src="{{ link }}"></script>
 {%- endfor -%} {%- endif %}
