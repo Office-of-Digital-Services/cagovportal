@@ -29,19 +29,24 @@ eleventyNavigation:
     <h2 aria-live="polite"><span id="searchcount">...</span> services found</h2>
 
     <cagovhome-filterlist data-inputid="searchbox" data-countid="searchcount">
-      <ul>
+      <span>
         {%- for service in state_entity.services -%}
-        <li
+        <span
           data-keywords="{{service.ServiceName}} {{service.ServiceType}} {{service.AgencyTags}}
             {{service.Description}} {{service.RelatedSearchTerms}}
             {{service.AgencyName}} {{service.Keywords}}">
-          <a
-            href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
-            >{{service.ServiceName}}</a
-          >
-        </li>
+          <hr class="m-y-md" />
+          <h3 class="lead font-weight-700">
+            <a
+              href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
+              >{{service.ServiceName}}</a
+            >
+          </h3>
+          <p>{{service.Description}}</p>
+        </span>
+
         {%- endfor %}
-      </ul>
+      </span>
     </cagovhome-filterlist>
   </div>
 </div>
