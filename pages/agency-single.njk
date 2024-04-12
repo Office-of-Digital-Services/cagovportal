@@ -39,6 +39,16 @@ eleventyComputed:
     <h3>Description</h3>
     <p>{{item.Description}}</p>
 
+    <h3 class="mt-lg-0">Agency Tags</h3>
+    <ul>
+      {%- for tag in item.AgencyTags.split("|") -%}
+      <li>
+        <a href="/service/?q={{tag | trim | urlencode}}+">{{ tag | trim }}</a
+        >&nbsp;
+      </li>
+      {%- endfor %}
+    </ul>
+
     <h3>Web site</h3>
     <p><a href="{{item.WebsiteURL}}">{{item.WebsiteURL}}</a></p>
 

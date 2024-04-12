@@ -28,6 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         const checkme = () => {
           const value = inputBox.value
+            .replace(/\W/g, " ")
             //.trim() not trimming on purpose
             .toLowerCase();
 
