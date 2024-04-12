@@ -15,11 +15,12 @@ eleventyNavigation:
         <div class="color-white lead m-b-lg font-weight-300">
           Find and use government services and information
         </div>
-        <form class="pos-rel" action="service/">
+        <form class="pos-rel" action="/service/">
           <span class="sr-only" id="ServiceSearch">Search for a service</span>
           <div class="d-flex">
             <input
               type="search"
+              name="q"
               placeholder="Search for a service"
               aria-labelledby="ServiceSearch"
               class="height-50 rounded-4 border-0 flex-grow-1 p-l" />
@@ -46,12 +47,26 @@ eleventyNavigation:
     <h2 class="h3 mt-0">Popular services</h2>
 
     <div class="d-flex gap-3">
-      <a class="btn btn-outline-light btn-hover" href="/">Food stamps</a>
-      <a class="btn btn-outline-light btn-hover" href="/">Traffic tickets</a>
-      <a class="btn btn-outline-light btn-hover" href="/">Business licenses</a>
-      <a class="btn btn-outline-light btn-hover" href="/">Birth certificates</a>
-      <a class="btn btn-outline-light btn-hover" href="/">Inmate locator</a>
-      <a class="btn btn-outline-light btn-hover" href="/">Lottery numbers</a>
+      <a class="btn btn-outline-light btn-hover" href="/agency/178/service/60/"
+        >Food stamps</a
+      >
+      <a class="btn btn-outline-light btn-hover" href="/agency/193/service/15/"
+        >Traffic tickets</a
+      >
+      <a class="btn btn-outline-light btn-hover" href="/agency/287/service/25/"
+        >Business licenses</a
+      >
+      <a class="btn btn-outline-light btn-hover" href="/agency/176/service/52/"
+        >Birth certificates</a
+      >
+      <a
+        class="btn btn-outline-light btn-hover"
+        href="/agency/171/service/1188/"
+        >Inmate locator</a
+      >
+      <a class="btn btn-outline-light btn-hover" href="/agency/155/service/42/"
+        >Lottery numbers</a
+      >
     </div>
   </div>
 </div>
@@ -60,24 +75,32 @@ eleventyNavigation:
   <h2>Popular topics</h2>
   <div class="row">
     <div class="col-md-4 mb-4">
-      <a href="javascript:;" class="link-grid">Personal records</a>
+      <a href="/service/?q=personal+records" class="link-grid"
+        >Personal records</a
+      >
     </div>
     <div class="col-md-4 mb-4">
-      <a href="javascript:;" class="link-grid">Businesses</a>
+      <a href="/service/?q=businesses" class="link-grid">Businesses</a>
     </div>
     <div class="col-md-4 mb-4">
-      <a href="javascript:;" class="link-grid">DMV/Auto</a>
+      <a href="/service/?q=dmv%2Fauto" class="link-grid">DMV/Auto</a>
     </div>
   </div>
   <div class="row">
     <div class="col-md-4 mb-4">
-      <a href="javascript:;" class="link-grid">Jobs and unemployment</a>
+      <a href="/service/?q=Jobs+and+unemployment" class="link-grid"
+        >Jobs and unemployment</a
+      >
     </div>
     <div class="col-md-4 mb-4">
-      <a href="javascript:;" class="link-grid">Social services</a>
+      <a href="/service/?q=social+services" class="link-grid"
+        >Social services</a
+      >
     </div>
     <div class="col-md-4 mb-4">
-      <a href="javascript:;" class="link-grid">Housing and real estate</a>
+      <a href="/service/?q=housing+and+real+estate" class="link-grid"
+        >Housing and real estate</a
+      >
     </div>
   </div>
 </div>

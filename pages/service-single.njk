@@ -44,15 +44,19 @@ eleventyComputed:
     <h3 class="mt-lg-0">Service Type</h3>
     <ul>
       {%- for tag in item.ServiceType.split("|") -%}
-      <li><a href="/service/?q={{tag | trim}}+">{{ tag | trim }}</a>&nbsp;</li>
+      <li>
+        <a href="/service/?q={{tag | trim | urlencode}}+">{{ tag | trim }}</a
+        >&nbsp;
+      </li>
       {%- endfor %}
     </ul>
 
     <h3 class="mt-lg-0">Keywords</h3>
     <p>
       {%- for keyword in item.Keywords.split(",") -%}
-      <a href="/service/?q={{keyword | trim}}+">{{ keyword | trim }}</a>&nbsp;
-      {%- endfor %}
+      <a href="/service/?q={{keyword | trim | urlencode}}+"
+        >{{ keyword | trim }}</a
+      >&nbsp; {%- endfor %}
     </p>
 
     <h3 class="mt-lg-0">Contact Info</h3>
@@ -62,7 +66,10 @@ eleventyComputed:
     <h3 class="mt-lg-0">Agency Tags</h3>
     <ul>
       {%- for tag in item.AgencyTags.split("|") -%}
-      <li><a href="/agency/?q={{tag | trim}}+">{{ tag | trim }}</a>&nbsp;</li>
+      <li>
+        <a href="/service/?q={{tag | trim | urlencode}}+">{{ tag | trim }}</a
+        >&nbsp;
+      </li>
       {%- endfor %}
     </ul>
 
