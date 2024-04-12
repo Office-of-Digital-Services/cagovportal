@@ -36,16 +36,92 @@ eleventyComputed:
     <br />
     {% endif %}
 
-    <h2 class="mt-lg-0">Services</h2>
-    {%- for service in state_entity.services | pluck('AgencyId',item.AgencyId)
-    -%}
-    <a href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
-      >{{service.ServiceName}}</a
-    ><br />
-    {%- endfor %}
+    <h3>Description</h3>
+    <p>{{item.Description}}</p>
+
+    <h3>Web site</h3>
+    <p><a href="{{item.WebsiteURL}}">{{item.WebsiteURL}}</a></p>
+
+    <div class="socialsharer-container">
+      {% if item.Facebook %}
+      <a
+        class="ca-gov-icon-facebook"
+        title="Facebook Link"
+        href="https://www.facebook.com/{{ item.Facebook }}"></a>
+      {% endif %} {% if item.TwitterAccount %}
+      <a
+        class="ca-gov-icon-share-twitter"
+        title="Twitter Link"
+        href="https://twitter.com/{{ item.TwitterAccount }}"></a>
+
+      {% endif %} {% if item.YouTube %}
+      <a
+        class="ca-gov-icon-share-youtube"
+        title="Youtube Link"
+        href="https://www.youtube.com/{{ item.YouTube }}"></a>
+      {% endif %}
+    </div>
+    <br />
+
+    {% if item.NewsFeed %}
+    <a href="{{item.NewsFeed}}" type="application/rss+xml" title="RSS">
+      Subscribe to RSS feed
+    </a>
+    {% endif %} {% if item.ContactEmail %}
+    <h3>Contact Email</h3>
+    <p><a href="mailto:{{item.ContactEmail}}">{{item.ContactEmail}}</a></p>
+    {% endif %}
+
+    <h3>Contact Phone</h3>
+    <p><a href="tel:{{item.ContactPhone}}">{{item.ContactPhone}}</a></p>
+
+    {% if item.PhoneHours %}
+    <h3>Phone Hours</h3>
+    <p>{{item.PhoneHours}}</p>
+    {% endif %} {% if item.FaxNumber %}
+    <h3>Fax Number</h3>
+    <p><a href="tel:{{item.FaxNumber}}">{{item.FaxNumber}}</a></p>
+    {% endif %} {% if item.ServiceCategory %}
+    <h3>Service Category</h3>
+    <p>{{item.ServiceCategory}}</p>
+    {% endif %} {% if item.HearingImpairedPhone %}
+    <h3>Hearing Impaired Phone</h3>
+    <p>
+      <a href="tel:{{item.HearingImpairedPhone}}"
+        >{{item.HearingImpairedPhone}}</a
+      >
+    </p>
+    {% endif %} {% if item.LivechatLink %}
+    <h3>Live Chat Link</h3>
+    <p><a href="{{item.LivechatLink}}">{{item.LivechatLink}}</a></p>
+    {% endif %}
+
     <hr />
-    <pre>
+    <h3 class="mt-lg-0">
+      {{( state_entity.services | pluck('AgencyId',item.AgencyId)).length}}
+      Services
+    </h3>
+    <ul>
+      {%- for service in state_entity.services | pluck('AgencyId',item.AgencyId)
+      -%}
+      <li>
+        <a
+          href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
+          >{{service.ServiceName}}</a
+        >
+      </li>
+      {%- endfor %}
+    </ul>
+    <cagov-accordion>
+      <details>
+        <summary>Developer Information</summary>
+        <div class="accordion-body">
+          <pre>
 {{ item | dump(2) }}
-    </pre>
+    </pre
+          >
+        </div>
+      </details>
+    </cagov-accordion>
   </div>
 </div>

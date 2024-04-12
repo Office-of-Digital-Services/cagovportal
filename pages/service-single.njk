@@ -65,9 +65,17 @@ eleventyComputed:
       <li><a href="/agency/?q={{tag | trim}}+">{{ tag | trim }}</a>&nbsp;</li>
       {%- endfor %}
     </ul>
-    <hr />
-    <pre>
+
+    <cagov-accordion>
+      <details>
+        <summary>Developer Information</summary>
+        <div class="accordion-body">
+          <pre>
 {{ item | dump(2) }}
-    </pre>
+    </pre
+          >
+        </div>
+      </details>
+    </cagov-accordion>
   </div>
 </div>
