@@ -2,46 +2,69 @@
 landing: Service
 description: Search for a service
 title: Services
+layout: landing.njk
 eleventyNavigation:
   key: Services
   parent: Home
 ---
 
-<div class="row p-b-lg">
-  <div class="col-lg-4 col-xl-3 pb-lg-5">
-    <!-- Side navigation -->
-    <nav class="side-navigation sticky-6">
-      <ul>
-        <li><a href="">Link 1</a></li>
-        <li><a href="">Link 2</a></li>
-      </ul>
+<div class="section-primary">
+  <div class="container p-y-md">
+    <nav aria-label="You are here" class="breadcrumbs">
+      <ol>
+        <li>
+          <a href="/index.html" title="Home page">Home</a>
+        </li>
+        <li>Services</li>
+      </ol>
     </nav>
+    <h1 class="m-t-0">Services</h1>
   </div>
+</div>
 
-  <div class="col-lg-8 col-xl-9 mx-auto p-b-lg">
-    <h1 class="mt-lg-0">Services</h1>
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-lg-8 col-xl-9 mx-auto">
+      <p class="lead">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        pretium dapibus diam, a finibus metus congue a.
+      </p>
+      <form>
+        <label class="h3" for="searchbox">Search all services</label>
+        <div class="d-flex">
+          <input
+            type="search"
+            id="searchbox"
+            placeholder="Search for a service"
+            class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-l" />
+          <button
+            class="bg-gray-600 bg-gray-700-hover rounded-end brd-0 width-60">
+            <span class="sr-only">Submit</span>
+            <span
+              class="ca-gov-icon-search font-size-25 color-white"
+              aria-hidden="true"></span>
+          </button>
+        </div>
+      </form>
+      <h2 aria-live="polite">
+        <span id="searchcount">...</span> services found
+      </h2>
 
-    <label>
-      Search Services
-      <input type="search" id="searchbox" placeholder="search for services" />
-    </label>
-
-    <h2 aria-live="polite"><span id="searchcount">...</span> services found</h2>
-
-    <cagovhome-filterlist data-inputid="searchbox" data-countid="searchcount">
-      <ul>
-        {%- for service in state_entity.services -%}
-        <li
-          data-keywords="{{service.ServiceName}} {{service.ServiceType}} {{service.AgencyTags}}
+      <cagovhome-filterlist data-inputid="searchbox" data-countid="searchcount">
+        <ul>
+          {%- for service in state_entity.services -%}
+          <li
+            data-keywords="{{service.ServiceName}} {{service.ServiceType}} {{service.AgencyTags}}
             {{service.Description}} {{service.RelatedSearchTerms}}
             {{service.AgencyName}} {{service.Keywords}}">
-          <a
-            href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
-            >{{service.ServiceName}}</a
-          >
-        </li>
-        {%- endfor %}
-      </ul>
-    </cagovhome-filterlist>
+            <a
+              href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
+              >{{service.ServiceName}}</a
+            >
+          </li>
+          {%- endfor %}
+        </ul>
+      </cagovhome-filterlist>
+    </div>
   </div>
 </div>
