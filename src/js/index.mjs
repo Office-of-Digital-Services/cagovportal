@@ -3,6 +3,11 @@
 //Custom JS for this website goes here
 
 window.addEventListener("DOMContentLoaded", () => {
+  // @ts-ignore
+  // eslint-disable-next-line no-undef
+  console.log(ca_gov_client_filter_data);
+  console.log("yo3");
+
   customElements.define(
     "cagovhome-filterlist",
     class extends HTMLElement {
@@ -12,17 +17,27 @@ window.addEventListener("DOMContentLoaded", () => {
           throw new Error("missing first level UL");
         }
 
-        const inputBox = /** @type {HTMLInputElement} */ (
-          document.getElementById(this.dataset.inputid)
-        );
+        const inputid = this.dataset.inputid;
 
-        if (!inputBox) {
+        if (!inputid) {
           throw new Error("Missing data-inputid");
         }
 
-        inputBox.value = new URLSearchParams(window.location.search).get("q");
+        const inputBox = /** @type {HTMLInputElement} */ (
+          document.getElementById(inputid)
+        );
 
-        const count = document.getElementById(this.dataset.countid);
+        if (!inputBox) {
+          throw new Error(`can't find${inputid}`);
+        }
+
+        const q = new URLSearchParams(window.location.search).get("q");
+
+        if (q) inputBox.value = q;
+
+        const countid = this.dataset.countid;
+
+        const count = countid ? document.getElementById(countid) : undefined;
 
         const checkme = () => {
           const value = inputBox.value
@@ -37,7 +52,7 @@ window.addEventListener("DOMContentLoaded", () => {
           [...LIs].forEach(li => {
             const bShow =
               !value ||
-              li.dataset.keywords
+              (li.dataset.keywords || "")
                 .replace(/\W/g, " ")
                 .toLowerCase()
                 .includes(value);

@@ -18,6 +18,8 @@ module.exports = function (
     "node_modules/@cagovweb/state-template/dist": "state-template"
   });
 
+  eleventyConfig.addWatchTarget("./src/js/");
+
   eleventyConfig.addFilter(
     "pluck",
     /**
