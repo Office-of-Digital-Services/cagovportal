@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: "js/custom.min.js"
+---
+
+{% set js %} {%- include "../../src/js/index.mjs" -%} {% endset %} {{ js | jsmin
+| safe }}

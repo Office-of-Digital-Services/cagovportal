@@ -1,7 +1,5 @@
 //@ts-check
 
-//@ts-check
-
 //Custom JS for this website goes here
 
 window.addEventListener("DOMContentLoaded", () => {
