@@ -12,9 +12,9 @@ window.addEventListener("DOMContentLoaded", () => {
     "cagovhome-filterlist",
     class extends HTMLElement {
       connectedCallback() {
-        const ul = this.querySelector("ul");
+        const ul = /** @type {HTMLElement} */ (this.firstElementChild);
         if (!ul) {
-          throw new Error("missing first level UL");
+          throw new Error("missing first level parent");
         }
 
         const inputid = this.dataset.inputid;
@@ -45,7 +45,7 @@ window.addEventListener("DOMContentLoaded", () => {
             //.trim() not trimming on purpose
             .toLowerCase();
 
-          const LIs = ul.getElementsByTagName("li");
+          const LIs = /** @type {HTMLElement[]} */ ([...ul.children]);
 
           let nCount = 0;
 
