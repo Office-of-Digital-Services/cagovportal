@@ -31,16 +31,16 @@ module.exports = function (
     (arr, attr, value) => arr.filter(item => item[attr] === value)
   );
 
-  eleventyConfig.addNunjucksAsyncFilter("jsmin", async (code, callback) => {
-    try {
+  eleventyConfig.addNunjucksAsyncFilter(
+    "jsmin",
+    async (
+      /** @type {string} */ code,
+      /** @type {(arg0: null, arg1: string) => void} */ callback
+    ) => {
       const minified = await minify(code);
       callback(null, minified.code);
-    } catch (err) {
-      console.error("Terser error:", err);
-      // Fail gracefully by returning the original code
-      callback(null, code);
     }
-  });
+  );
 
   // so you can look at {% if ELEVENTY_ENV !== 'dev' %}
   eleventyConfig.addGlobalData("ELEVENTY_ENV", process.env.ELEVENTY_ENV);

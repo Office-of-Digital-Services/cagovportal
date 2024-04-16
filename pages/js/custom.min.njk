@@ -3,6 +3,6 @@ layout: null
 permalink: "js/custom.min.js"
 ---
 
-{% set js %} {%- include "../../src/js/index.mjs" -%} {% endset %} {{ js | jsmin
-| safe }} var ca_gov_client_filter_data = {{state_entity_client_filter | jsmin |
-dump | safe }} ;
+{% set js %} {%- include "../../src/js/index.mjs" -%} var
+ca_gov_client_filter_data = {{state_entity_client_filter | dump | safe }} ; {%
+endset %} {{ js | jsmin | safe }}
