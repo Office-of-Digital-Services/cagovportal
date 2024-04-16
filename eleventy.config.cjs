@@ -48,13 +48,6 @@ module.exports = function (
     (arr, attr, value) => arr.filter(item => item[attr] === value)
   );
 
-  eleventyConfig.addNunjucksFilter('truncate', function(str, maxLength) {
-    if (str.length > maxLength) {
-        return str.slice(0, maxLength - 1) + ' \u0028...\u0029';
-    }
-    return str;
-  });
-
   // so you can look at {% if ELEVENTY_ENV !== 'dev' %}
   eleventyConfig.addGlobalData("ELEVENTY_ENV", process.env.ELEVENTY_ENV);
 
