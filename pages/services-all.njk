@@ -83,7 +83,7 @@ eleventyNavigation:
               class="link-before no-underline lead bold">{{service.ServiceName}}</a
             >
             <p class="font-size-14 bold m-t-sm">by {{service.FriendlyName}}</p>
-            <p class="service-description">{{service.Description | truncate(300) }}</p>
+            <p class="service-description">{{service.Description}}</p>
             <hr class="m-y-md" />
           </article>
           {%- endfor %}

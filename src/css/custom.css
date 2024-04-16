@@ -90,3 +90,12 @@ cagov-feedback .feedback-form-button:focus {
   text-decoration: none !important;
   background: var(--gray-75) !important;
 }
+
+/* Elipsis overflow */
+
+.service-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
