@@ -27,7 +27,11 @@ eleventyNavigation:
 
     <h2 aria-live="polite"><span id="searchcount">...</span> agencies found</h2>
 
-    <cagovhome-filterlist data-inputid="searchbox" data-countid="searchcount">
+    <cagovhome-filterlist
+      data-inputid="searchbox"
+      data-countid="searchcount"
+      data-filterdata="javascript:ca_gov_client_filter_data.agency"
+      data-filterkey="AgencyId">
       <span>
         {%- for agency in state_entity.agencies -%}
         <span
