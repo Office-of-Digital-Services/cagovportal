@@ -28,18 +28,21 @@ eleventyNavigation:
     <h2 aria-live="polite"><span id="searchcount">...</span> agencies found</h2>
 
     <cagovhome-filterlist data-inputid="searchbox" data-countid="searchcount">
-      <ul>
+      <span>
         {%- for agency in state_entity.agencies -%}
-
-        <li
+        <span
           data-keywords="{{agency.AgencyName}} {{agency.FriendlyName}} {{agency.Acronym}} {{agency.AgencyTags}} {{agency.Keywords}}">
-          <a href="/agency/{{ agency.AgencyId }}/">
-            {{agency.FriendlyName}} ({{agency.Acronym}})
-          </a>
-        </li>
+          <hr class="m-y-md" />
+          <h3 class="lead font-weight-700">
+            <a href="/agency/{{ agency.AgencyId }}/">
+              {{agency.FriendlyName}} ({{agency.Acronym}})</a
+            >
+          </h3>
+          <p>{{agency.Description}}</p>
+        </span>
 
         {%- endfor %}
-      </ul>
+      </span>
     </cagovhome-filterlist>
   </div>
 </div>
