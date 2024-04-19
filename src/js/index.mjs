@@ -7,11 +7,6 @@ window.addEventListener("DOMContentLoaded", () => {
     "cagovhome-filterlist",
     class extends HTMLElement {
       connectedCallback() {
-        const ul = /** @type {HTMLElement} */ (this.firstElementChild);
-        if (!ul) {
-          throw new Error("missing first level parent");
-        }
-
         const inputid = this.dataset.inputid;
 
         if (!inputid) {
@@ -47,20 +42,28 @@ window.addEventListener("DOMContentLoaded", () => {
         /** @type {*[]} */
         const dataset = JSON.parse(datasetstring);
 
+        const elementRows = /** @type {HTMLElement[]} */ ([...this.children]);
+
         const checkme = () => {
           const value = inputBox.value
             .replace(/\W/g, " ")
             //.trim() not trimming on purpose
             .toLowerCase();
 
-          const LIs = /** @type {HTMLElement[]} */ ([...ul.children]);
-
           let nCount = 0;
 
-          [...LIs].forEach(li => {
-            const key = li.dataset.key;
+          elementRows.forEach(rowElement => {
+            const key = rowElement.dataset.key;
+
+            if (!key) {
+              throw new Error(`no data-key specified`);
+            }
 
             const datarow = dataset.find(x => x[keyProperty] == key);
+
+            if (!datarow) {
+              throw new Error(`key not found in list - ${keyProperty}:${key}`);
+            }
 
             const alldata = Object.values(datarow).join(" ");
 
@@ -68,8 +71,8 @@ window.addEventListener("DOMContentLoaded", () => {
               !value ||
               (alldata || "").replace(/\W/g, " ").toLowerCase().includes(value);
 
-            li.style.display = bShow ? "" : "none";
-            li.ariaHidden = (!bShow).toString();
+            rowElement.style.display = bShow ? "" : "none";
+            rowElement.ariaHidden = (!bShow).toString();
             if (bShow) nCount++;
           });
 
