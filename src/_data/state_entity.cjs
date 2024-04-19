@@ -5,7 +5,6 @@ const EleventyFetch = require("@11ty/eleventy-fetch");
 module.exports = async function () {
   const urls = [
     "https://api.stateentityprofile.ca.gov/api/Agencies/Get?page=0&pageSize=0&lang=en",
-
     "https://api.stateentityprofile.ca.gov/api/Services/Get?page=0&pageSize=0&lang=en",
     "https://api.stateentityprofile.ca.gov/GetFaqsByServiceIds?lang=en"
   ];
