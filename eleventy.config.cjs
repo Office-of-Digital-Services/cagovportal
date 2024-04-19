@@ -42,6 +42,12 @@ module.exports = function (
     }
   );
 
+  //Converts a JSON object into a JavaScript String (Quotes included)
+  eleventyConfig.addFilter(
+    "toJavascriptString",
+    (/** @type {any} */ value) => JSON.stringify(JSON.stringify(value)) //.slice(1, -1)
+  );
+
   // so you can look at {% if ELEVENTY_ENV !== 'dev' %}
   eleventyConfig.addGlobalData("ELEVENTY_ENV", process.env.ELEVENTY_ENV);
 

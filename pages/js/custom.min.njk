@@ -3,6 +3,8 @@ layout: null
 permalink: "js/custom.min.js"
 ---
 
-{% set js %} {%- include "../../src/js/index.mjs" -%} var
-ca_gov_client_filter_data = {{state_entity_client_filter | dump | safe }} ; {%
-endset %} {{ js | jsmin | safe }}
+{%- set js -%} {%- include "../../src/js/index.mjs" -%}
+sessionStorage.setItem("agency",{{- state_entity_client_filter.agency |
+toJavascriptString | safe -}}) ; sessionStorage.setItem("service",{{-
+state_entity_client_filter.service | toJavascriptString | safe -}}) ;{%- endset
+-%} {{- js | jsmin | safe -}}

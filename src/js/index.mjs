@@ -3,11 +3,6 @@
 //Custom JS for this website goes here
 
 window.addEventListener("DOMContentLoaded", () => {
-  // @ts-ignore
-  // eslint-disable-next-line no-undef
-  console.log(ca_gov_client_filter_data);
-  console.log("yo3");
-
   customElements.define(
     "cagovhome-filterlist",
     class extends HTMLElement {
@@ -37,7 +32,22 @@ window.addEventListener("DOMContentLoaded", () => {
 
         const countid = this.dataset.countid;
 
-        const count = countid ? document.getElementById(countid) : undefined;
+        const countElement = countid
+          ? document.getElementById(countid)
+          : undefined;
+
+        const keyProperty = this.dataset.filterkey;
+
+        const sessionStorageKey = this.dataset.filterstoragekey;
+
+        const datasetstring = sessionStorage[sessionStorageKey];
+
+        if (!datasetstring) {
+          throw new Error(`can't find${sessionStorageKey} in sessionStorage`);
+        }
+
+        /** @type {*[]} */
+        const dataset = JSON.parse(datasetstring);
 
         const checkme = () => {
           const value = inputBox.value
@@ -50,19 +60,22 @@ window.addEventListener("DOMContentLoaded", () => {
           let nCount = 0;
 
           [...LIs].forEach(li => {
+            const key = li.dataset.key;
+
+            const datarow = dataset.find(x => x[keyProperty] == key);
+
+            const alldata = Object.values(datarow).join(" ");
+
             const bShow =
               !value ||
-              (li.dataset.keywords || "")
-                .replace(/\W/g, " ")
-                .toLowerCase()
-                .includes(value);
+              (alldata || "").replace(/\W/g, " ").toLowerCase().includes(value);
 
             li.style.display = bShow ? "" : "none";
             li.ariaHidden = (!bShow).toString();
             if (bShow) nCount++;
           });
 
-          if (count) count.innerHTML = nCount.toLocaleString();
+          if (countElement) countElement.innerHTML = nCount.toLocaleString();
         };
 
         inputBox.addEventListener("input", checkme);

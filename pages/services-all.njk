@@ -52,13 +52,14 @@ eleventyNavigation:
         <span id="searchcount">...</span> services found
       </h2>
 
-      <cagovhome-filterlist data-inputid="searchbox" data-countid="searchcount">
+      <cagovhome-filterlist
+        data-inputid="searchbox"
+        data-countid="searchcount"
+        data-filterstoragekey="service"
+        data-filterkey="ServiceId">
         <ul>
           {%- for service in state_entity.services -%}
-          <li
-            data-keywords="{{service.ServiceName}} {{service.ServiceType}} {{service.AgencyTags}}
-            {{service.Description}} {{service.RelatedSearchTerms}}
-            {{service.AgencyName}} {{service.Keywords}}">
+          <li data-key="{{service.ServiceId}}">
             <a
               href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
               >{{service.ServiceName}}</a

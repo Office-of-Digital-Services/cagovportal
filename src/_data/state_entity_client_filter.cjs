@@ -17,7 +17,12 @@ module.exports = (async () => {
       AgencyId: x.AgencyId,
       ServiceId: x.ServiceId,
       Description: x.Description,
-      Keywords: x.Keywords
+      Keywords: x.Keywords,
+      ServiceName: x.ServiceName,
+      ServiceType: x.ServiceType,
+      AgencyTags: x.AgencyTags,
+      AgencyName: x.AgencyName,
+      RelatedSearchTerms: x.RelatedSearchTerms
     }))
   };
 })();

@@ -3,5 +3,7 @@ layout: null
 permalink: "js/custom.js"
 ---
 
-{%- include "../../src/js/index.mjs" -%} var ca_gov_client_filter_data =
-{{state_entity_client_filter | dump(2) | safe }} ;
+{%- include "../../src/js/index.mjs" -%} sessionStorage.setItem("agency",{{-
+state_entity_client_filter.agency | toJavascriptString | safe }});
+sessionStorage.setItem("service",{{- state_entity_client_filter.service |
+toJavascriptString | safe }});
