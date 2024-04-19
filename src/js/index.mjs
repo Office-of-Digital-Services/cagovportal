@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
         );
 
         if (!inputBox) {
-          throw new Error(`can't find${inputid}`);
+          throw new Error(`can't find searchbox with id ${inputid}`);
         }
 
         const q = new URLSearchParams(window.location.search).get("q");
@@ -36,7 +36,7 @@ window.addEventListener("DOMContentLoaded", () => {
         const datasetstring = sessionStorage[sessionStorageKey];
 
         if (!datasetstring) {
-          throw new Error(`can't find${sessionStorageKey} in sessionStorage`);
+          throw new Error(`can't find ${sessionStorageKey} in sessionStorage`);
         }
 
         /** @type {*[]} */
