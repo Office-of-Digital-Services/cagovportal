@@ -3,8 +3,9 @@ layout: null
 permalink: "js/custom.min.js"
 ---
 
-{%- set js -%} {%- include "../../src/js/index.mjs" -%}
-sessionStorage.setItem("agency",{{- state_entity_client_filter.agency |
-toJavascriptString | safe -}}) ; sessionStorage.setItem("service",{{-
-state_entity_client_filter.service | toJavascriptString | safe -}}) ;{%- endset
--%} {{- js | jsmin | safe -}}
+{%- set js -%} {%- include "../../src/js/index.mjs" -%} (function () {let
+a={{-state_entity_client_filter.agency | dump | safe -}};let
+s={{-state_entity_client_filter.service | dump | safe -}};
+sessionStorage.setItem("agency",JSON.stringify(a));
+sessionStorage.setItem("service",JSON.stringify(s));})(); {%- endset -%} {{- js
+| jsmin | safe -}}

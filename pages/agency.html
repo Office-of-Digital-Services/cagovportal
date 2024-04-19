@@ -30,12 +30,11 @@ eleventyNavigation:
     <cagovhome-filterlist
       data-inputid="searchbox"
       data-countid="searchcount"
-      data-filterdata="javascript:ca_gov_client_filter_data.agency"
+      data-filterstoragekey="agency"
       data-filterkey="AgencyId">
       <span>
         {%- for agency in state_entity.agencies -%}
-        <span
-          data-keywords="{{agency.AgencyName}} {{agency.FriendlyName}} {{agency.Acronym}} {{agency.AgencyTags}} {{agency.Keywords}}">
+        <span data-key="{{agency.AgencyId}}">
           <hr class="m-y-md" />
           <h3 class="lead font-weight-700">
             <a href="/agency/{{ agency.AgencyId }}/">
