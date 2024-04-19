@@ -92,6 +92,52 @@ module.exports = async function () {
     };
   });
 
+  const QaUrls = [
+    {
+      url: "https://api.stateentityprofile.ca.gov/GetFaqsByAgencyProfileIds?lang=en",
+      body: results.agencies.map(x => x.AgencyId)
+    },
+    {
+      url: "https://api.stateentityprofile.ca.gov/GetFaqsByServiceIds?lang=en",
+      body: results.services.map(x => x.ServiceId)
+    }
+  ];
+
+  const QaReturns = await Promise.all(
+    QaUrls.map(u =>
+      EleventyFetch(u.url, {
+        fetchOptions: {
+          method: "POST",
+          body: JSON.stringify(u.body),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        },
+        verbose: true,
+        duration: "1d", // save for 1 day
+        type: "json" // we’ll parse JSON for you
+      })
+    )
+  );
+
+  const QAresults = {
+    agencies: /** @type {{AgencyServiceId:number}[]} */ (QaReturns[0]),
+    services: /** @type {{AgencyServiceId:number}[]} */ (QaReturns[1])
+  };
+
+  results.services.forEach(s => {
+    const found = QAresults.services.find(
+      x => x.AgencyServiceId === s.ServiceId
+    );
+
+    if (found) {
+      s.QA = s.QA || [];
+      s.QA.push(found);
+    }
+  });
+
+  //AgencyServiceId
+
   return results;
 };
 
