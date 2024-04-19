@@ -1,7 +1,5 @@
 //@ts-check
 
-//@ts-check
-
 //Custom JS for this website goes here
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -9,22 +7,42 @@ window.addEventListener("DOMContentLoaded", () => {
     "cagovhome-filterlist",
     class extends HTMLElement {
       connectedCallback() {
-        const ul = /** @type {HTMLElement} */ (this.firstElementChild);
-        if (!ul) {
-          throw new Error("missing first level parent");
-        }
+        const inputid = this.dataset.inputid;
 
-        const inputBox = /** @type {HTMLInputElement} */ (
-          document.getElementById(this.dataset.inputid)
-        );
-
-        if (!inputBox) {
+        if (!inputid) {
           throw new Error("Missing data-inputid");
         }
 
-        inputBox.value = new URLSearchParams(window.location.search).get("q");
+        const inputBox = /** @type {HTMLInputElement} */ (
+          document.getElementById(inputid)
+        );
 
-        const count = document.getElementById(this.dataset.countid);
+        if (!inputBox) {
+          throw new Error(`can't find searchbox with id ${inputid}`);
+        }
+
+        const q = new URLSearchParams(window.location.search).get("q");
+
+        if (q) inputBox.value = q;
+
+        const countquery = this.dataset.countquery;
+
+        const countElements = document.querySelectorAll(countquery);
+
+        const keyProperty = this.dataset.filterkey;
+
+        const sessionStorageKey = this.dataset.filterstoragekey;
+
+        const datasetstring = sessionStorage[sessionStorageKey];
+
+        if (!datasetstring) {
+          throw new Error(`can't find ${sessionStorageKey} in sessionStorage`);
+        }
+
+        /** @type {*[]} */
+        const dataset = JSON.parse(datasetstring);
+
+        const elementRows = /** @type {HTMLElement[]} */ ([...this.children]);
 
         const checkme = () => {
           const value = inputBox.value
@@ -32,24 +50,35 @@ window.addEventListener("DOMContentLoaded", () => {
             //.trim() not trimming on purpose
             .toLowerCase();
 
-          const LIs = /** @type {HTMLElement[]} */ ([...ul.children]);
-
           let nCount = 0;
 
-          [...LIs].forEach(li => {
+          elementRows.forEach(rowElement => {
+            const key = rowElement.dataset.key;
+
+            if (!key) {
+              throw new Error(`no data-key specified`);
+            }
+
+            const datarow = dataset.find(x => x[keyProperty] == key);
+
+            if (!datarow) {
+              throw new Error(`key not found in list - ${keyProperty}:${key}`);
+            }
+
+            const alldata = Object.values(datarow).join(" ");
+
             const bShow =
               !value ||
-              li.dataset.keywords
-                .replace(/\W/g, " ")
-                .toLowerCase()
-                .includes(value);
+              (alldata || "").replace(/\W/g, " ").toLowerCase().includes(value);
 
-            li.style.display = bShow ? "" : "none";
-            li.ariaHidden = (!bShow).toString();
+            rowElement.style.display = bShow ? "" : "none";
+            rowElement.ariaHidden = (!bShow).toString();
             if (bShow) nCount++;
           });
 
-          if (count) count.innerHTML = nCount.toLocaleString();
+          countElements.forEach(x => {
+            x.innerHTML = nCount.toLocaleString();
+          });
         };
 
         inputBox.addEventListener("input", checkme);

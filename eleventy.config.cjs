@@ -2,7 +2,6 @@
 const defaultConfig = require("@11ty/eleventy/src/defaultConfig");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { minify } = require("terser");
-const fs = require("node:fs");
 
 module.exports = function (
   /** @type {import("@11ty/eleventy").UserConfig} **/ eleventyConfig
@@ -19,23 +18,7 @@ module.exports = function (
     "node_modules/@cagovweb/state-template/dist": "state-template"
   });
 
-  eleventyConfig.addShortcode(
-    "same_page_script",
-    /**
-     * @param {{ inputPath: string; }} page
-     * @example
-     * {% same_page_script page %}
-     */
-    async page => {
-      const filepath = `${page.inputPath}.js`;
-      //console.log(filepath);
-      if (fs.existsSync(filepath)) {
-        const minified = await minify(fs.readFileSync(filepath, "utf8"));
-
-        return `<script>${minified.code}</script>\n`;
-      }
-    }
-  );
+  eleventyConfig.addWatchTarget("./src/js/");
 
   eleventyConfig.addFilter(
     "pluck",
@@ -46,6 +29,17 @@ module.exports = function (
      * @returns
      */
     (arr, attr, value) => arr.filter(item => item[attr] === value)
+  );
+
+  eleventyConfig.addNunjucksAsyncFilter(
+    "jsmin",
+    async (
+      /** @type {string} */ code,
+      /** @type {(arg0: null, arg1: string) => void} */ callback
+    ) => {
+      const minified = await minify(code);
+      callback(null, minified.code);
+    }
   );
 
   // so you can look at {% if ELEVENTY_ENV !== 'dev' %}
