@@ -6,7 +6,8 @@ module.exports = async function () {
   const urls = [
     "https://api.stateentityprofile.ca.gov/api/Agencies/Get?page=0&pageSize=0&lang=en",
 
-    "https://api.stateentityprofile.ca.gov/api/Services/Get?page=0&pageSize=0&lang=en"
+    "https://api.stateentityprofile.ca.gov/api/Services/Get?page=0&pageSize=0&lang=en",
+    "https://api.stateentityprofile.ca.gov/GetFaqsByServiceIds?lang=en"
   ];
 
   const returns = await Promise.all(
@@ -24,7 +25,8 @@ module.exports = async function () {
 
   const results = {
     agencies: /** @type {*[]} */ (returns[0].Data),
-    services: /** @type {*[]} */ (returns[1].Data)
+    services: /** @type {*[]} */ (returns[1].Data),
+    qa: /** @type {*[]} */ (returns[2])
   };
 
   results.agencies.forEach(x => {
@@ -69,6 +71,12 @@ module.exports = async function () {
       x => x.AgencyId === item.AgencyId
     )?.structuredData;
 
+    const found = results.qa.filter(x => x.AgencyServiceId === item.ServiceId);
+
+    if (found) {
+      item.QA = found;
+    }
+
     item["structuredData"] = {
       "@context": "https://schema.org",
       "@type": "GovernmentService",
@@ -91,38 +99,6 @@ module.exports = async function () {
       provider
     };
   });
-
-  const QaReturns = await Promise.all(
-    results.services.map(u =>
-      EleventyFetch(
-        `https://api.stateentityprofile.ca.gov/GetFaqsByServiceIds?lang=en&${u.ServiceId}`,
-        {
-          fetchOptions: {
-            method: "POST",
-            body: JSON.stringify([Number(u.ServiceId)]),
-            headers: {
-              "Content-Type": "application/json"
-            }
-          },
-          verbose: true,
-          duration: "1d", // save for 1 day
-          type: "json" // we’ll parse JSON for you
-        }
-      )
-    )
-  );
-
-  const allQAs = [].concat(...QaReturns);
-
-  results.services.forEach(s => {
-    const found = allQAs.filter(x => x.AgencyServiceId === s.ServiceId);
-
-    if (found) {
-      s.QA = found;
-    }
-  });
-
-  //AgencyServiceId
 
   return results;
 };
