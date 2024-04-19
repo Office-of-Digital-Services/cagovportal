@@ -30,11 +30,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
         if (q) inputBox.value = q;
 
-        const countid = this.dataset.countid;
+        const countquery = this.dataset.countquery;
 
-        const countElement = countid
-          ? document.getElementById(countid)
-          : undefined;
+        const countElements = document.querySelectorAll(countquery);
 
         const keyProperty = this.dataset.filterkey;
 
@@ -75,7 +73,9 @@ window.addEventListener("DOMContentLoaded", () => {
             if (bShow) nCount++;
           });
 
-          if (countElement) countElement.innerHTML = nCount.toLocaleString();
+          countElements.forEach(x => {
+            x.innerHTML = nCount.toLocaleString();
+          });
         };
 
         inputBox.addEventListener("input", checkme);

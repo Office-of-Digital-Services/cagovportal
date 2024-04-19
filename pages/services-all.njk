@@ -50,9 +50,7 @@ eleventyNavigation:
     </div>
     <div class="col-lg-9">
       <p class="lead m-t">
-        <span class="items-count" id="searchcount"
-          >{{ state_entity.services | length }}</span
-        >
+        <span class="items-count">...</span>
         services
       </p>
       <form class="m-b-md">
@@ -88,7 +86,7 @@ eleventyNavigation:
 
       <cagovhome-filterlist
         data-inputid="searchbox"
-        data-countid="searchcount"
+        data-countquery="#searchcount, span.items-count"
         data-filterstoragekey="service"
         data-filterkey="ServiceId">
         <span>

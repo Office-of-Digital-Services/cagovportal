@@ -31,22 +31,25 @@ eleventyNavigation:
 <div class="container p-y-lg">
   <div class="row">
     <div class="col-lg-3 pb-lg-5" role="complementary">
-    <!-- Side navigation -->
-    <nav aria-labelledby="navigation-list" class="side-navigation sticky-6" id="side-navigation">
-      <ul class="list-navigation">
-        <li>
-          <a href="/services/" id="navigation-list" class="active landing">
-            All services
-            <span class="sr-only">landing page</span>
-          </a>
-        </li>
-        <li><a href="/services/services-list.html">Services list</a></li>
-        <li><a href="/topics/">Topics</a></li>
-      </ul>
-    </nav>
-  </div>
+      <!-- Side navigation -->
+      <nav
+        aria-labelledby="navigation-list"
+        class="side-navigation sticky-6"
+        id="side-navigation">
+        <ul class="list-navigation">
+          <li>
+            <a href="/services/" id="navigation-list" class="active landing">
+              All services
+              <span class="sr-only">landing page</span>
+            </a>
+          </li>
+          <li><a href="/services/services-list.html">Services list</a></li>
+          <li><a href="/topics/">Topics</a></li>
+        </ul>
+      </nav>
+    </div>
     <div class="col-lg-9">
-      <p class="lead m-t"><span class="items-count">{{ state_entity.services | length }}</span> services</p>
+      <p class="lead m-t"><span class="items-count">...</span> services</p>
       <form class="m-b-md">
         <label class="sr-only" for="searchbox">Search all services</label>
         <div class="d-flex">
@@ -65,34 +68,51 @@ eleventyNavigation:
         </div>
       </form>
       <h2 aria-live="polite" class="sr-only">
-        <span id="searchcount">{{ state_entity.services | length }}</span> services found
+        <span id="searchcount">...</span>
+        services found
       </h2>
 
-      <p class="bold">Sort by <button class="bg-transparent border-0 color-primary color-primary-hover bold az-sort">A-Z<span class="ca-gov-icon-caret-down font-size-25 pos-rel bottom-minus-3" aria-hidden="true"></span></button></p>
+      <p class="bold">
+        Sort by
+        <button
+          class="bg-transparent border-0 color-primary color-primary-hover bold az-sort">
+          A-Z<span
+            class="ca-gov-icon-caret-down font-size-25 pos-rel bottom-minus-3"
+            aria-hidden="true"></span>
+        </button>
+      </p>
 
-      <cagovhome-filterlist data-inputid="searchbox" data-countid="searchcount">
-       
+      <cagovhome-filterlist
+        data-inputid="searchbox"
+        data-countquery="#searchcount, span.items-count"
+        data-filterstoragekey="service"
+        data-filterkey="ServiceId">
+        <span>
           {%- for service in state_entity.services -%}
-          <article
-            data-keywords="{{service.ServiceName}} {{service.ServiceType}} {{service.AgencyTags}}
-            {{service.Description}} {{service.RelatedSearchTerms}}
-            {{service.AgencyName}} {{service.Keywords}}" class="pos-rel">
-            <h2
-              class="lead bold m-t-0 m-b">{{service.ServiceName}}</h2
-            >
+          <article data-key="{{service.ServiceId}}" class="pos-rel">
+            <h2 class="lead bold m-t-0 m-b">{{service.ServiceName}}</h2>
             <p class="font-size-14 bold m-t-sm">by {{service.FriendlyName}}</p>
             <p class="service-description">{{service.Description}}</p>
-            
-            <a class="btn btn-outline-primary btn-lg m-r-sm" href="{{ service.ServiceUrl }}">Launch <span class="sr-only">{{service.ServiceName}}</span> service</a>
-            <a class="btn btn-outline-primary btn-lg" href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/">More details <span class="sr-only">about {{service.ServiceName}} service</span></a>
+
+            <a
+              class="btn btn-outline-primary btn-lg m-r-sm"
+              href="{{ service.ServiceUrl }}"
+              >Launch
+              <span class="sr-only">{{service.ServiceName}}</span> service</a
+            >
+            <a
+              class="btn btn-outline-primary btn-lg"
+              href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
+              >More details
+              <span class="sr-only"
+                >about {{service.ServiceName}} service</span
+              ></a
+            >
             <hr class="m-y-md" />
           </article>
           {%- endfor %}
-
-        
-      
+        </span>
       </cagovhome-filterlist>
-
     </div>
   </div>
 </div>
