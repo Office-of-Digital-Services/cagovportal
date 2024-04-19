@@ -91,13 +91,23 @@ eleventyNavigation:
         data-filterkey="ServiceId">
         {%- for service in state_entity.services -%}
         <article data-key="{{service.ServiceId}}" class="pos-rel">
-          <a
-            href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
-            class="link-before no-underline lead bold"
-            >{{service.ServiceName}}</a
-          >
+          <h2 class="lead bold m-t-0 m-b">{{service.ServiceName}}</h2>
           <p class="font-size-14 bold m-t-sm">by {{service.FriendlyName}}</p>
           <p class="service-description">{{service.Description}}</p>
+          <a
+            class="btn btn-outline-primary btn-lg m-r-sm"
+            href="{{ service.ServiceUrl }}"
+            >Launch
+            <span class="sr-only">{{service.ServiceName}}</span> service</a
+          >
+          <a
+            class="btn btn-outline-primary btn-lg"
+            href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
+            >More details
+            <span class="sr-only"
+              >about {{service.ServiceName}} service</span
+            ></a
+          >
           <hr class="m-y-md" />
         </article>
         {%- endfor %}

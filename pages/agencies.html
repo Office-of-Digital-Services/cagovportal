@@ -1,0 +1,59 @@
+---
+title: Agencies
+landing: Agency
+permalink: agencies/index.html
+layout: landing.njk
+eleventyNavigation:
+  key: Agencies
+  parent: Home
+---
+
+<div
+  class="section-primary"
+  style="background-image: url('/images/departments-lineart.svg'); background-repeat:no-repeat; background-position:right; background-size:auto;">
+  <div class="container p-y-md">
+    <nav aria-label="You are here" class="breadcrumbs">
+      <ol>
+        <li>
+          <a href="/index.html" title="Home page">Home</a>
+        </li>
+        <li>Departments</li>
+      </ol>
+    </nav>
+    <h1 class="m-t-0">Departments</h1>
+  </div>
+</div>
+
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-lg-9 mx-auto">
+      <label>
+        Search Agencies
+        <input type="search" id="searchbox" placeholder="search for agencies" />
+      </label>
+
+      <h2 aria-live="polite">
+        <span id="searchcount">...</span> agencies found
+      </h2>
+
+      <cagovhome-filterlist
+        data-inputid="searchbox"
+        data-countquery="#searchcount"
+        data-filterstoragekey="agency"
+        data-filterkey="AgencyId">
+        {%- for agency in state_entity.agencies -%}
+        <span data-key="{{agency.AgencyId}}">
+          <hr class="m-y-md" />
+          <h3 class="lead font-weight-700">
+            <a href="/agency/{{ agency.AgencyId }}/">
+              {{agency.FriendlyName}} ({{agency.Acronym}})</a
+            >
+          </h3>
+          <p>{{agency.Description}}</p>
+        </span>
+
+        {%- endfor %}
+      </cagovhome-filterlist>
+    </div>
+  </div>
+</div>
