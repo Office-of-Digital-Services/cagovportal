@@ -1,11 +1,11 @@
 ---
-landing: Agency
+landing: Agencies
 pagination:
     data: state_entity.agencies
     size: 1
     alias: item
     addAllPagesToCollections : true
-permalink: "agency/{{ item.AgencyId }}/"
+permalink: "department/{{ item.AgencyId }}/"
 eleventyComputed: 
   description: Agency details for "{{ item.AgencyFullName }}"
   title: "{{ item.AgencyFullName }}"
@@ -116,7 +116,7 @@ eleventyComputed:
       -%}
       <li>
         <a
-          href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
+          href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
           >{{service.ServiceName}}</a
         >
       </li>

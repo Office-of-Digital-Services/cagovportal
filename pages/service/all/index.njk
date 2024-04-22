@@ -2,7 +2,7 @@
 landing: Services
 description: Search for a service
 title: All services
-permalink: /services/all-services.html
+permalink: /service/all/index.html
 layout: landing.njk
 eleventyNavigation:
   key: Services
@@ -102,7 +102,7 @@ eleventyNavigation:
           >
           <a
             class="btn btn-outline-primary btn-lg"
-            href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
+            href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
             >More details
             <span class="sr-only"
               >about {{service.ServiceName}} service</span
