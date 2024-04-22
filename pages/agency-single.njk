@@ -122,6 +122,19 @@ eleventyComputed:
       </li>
       {%- endfor %}
     </ul>
+
+    <h3 class="mt-lg-9">Questions</h3>
+    {%- for service in state_entity.services | pluck('AgencyId',item.AgencyId)
+    -%} {%- for qa in service.QA | pluck('Featured',true) -%}
+    <cagov-accordion>
+      <details>
+        <summary>{{qa.Question}}</summary>
+        <div class="accordion-body">{{ qa.Answer | safe }}</div>
+      </details>
+    </cagov-accordion>
+    {%- endfor %} {%- endfor %}
+
+    <h3 class="mt-lg-0">Developer Information</h3>
     <cagov-accordion>
       <details>
         <summary>Developer Information</summary>

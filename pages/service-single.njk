@@ -73,6 +73,18 @@ eleventyComputed:
       {%- endfor %}
     </ul>
 
+    <h3 class="mt-lg-9">Questions</h3>
+
+    {%- for qa in item.QA -%}
+    <cagov-accordion>
+      <details>
+        <summary>{{qa.Question}}</summary>
+        <div class="accordion-body">{{ qa.Answer | safe }}</div>
+      </details>
+    </cagov-accordion>
+    {%- endfor %}
+
+    <h3 class="mt-lg-9">Developer Information</h3>
     <cagov-accordion>
       <details>
         <summary>Developer Information</summary>

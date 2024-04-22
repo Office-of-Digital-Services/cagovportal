@@ -5,8 +5,8 @@ const EleventyFetch = require("@11ty/eleventy-fetch");
 module.exports = async function () {
   const urls = [
     "https://api.stateentityprofile.ca.gov/api/Agencies/Get?page=0&pageSize=0&lang=en",
-
-    "https://api.stateentityprofile.ca.gov/api/Services/Get?page=0&pageSize=0&lang=en"
+    "https://api.stateentityprofile.ca.gov/api/Services/Get?page=0&pageSize=0&lang=en",
+    "https://api.stateentityprofile.ca.gov/GetFaqsByServiceIds?lang=en"
   ];
 
   const returns = await Promise.all(
@@ -24,7 +24,8 @@ module.exports = async function () {
 
   const results = {
     agencies: /** @type {*[]} */ (returns[0].Data),
-    services: /** @type {*[]} */ (returns[1].Data)
+    services: /** @type {*[]} */ (returns[1].Data),
+    qa: /** @type {*[]} */ (returns[2])
   };
 
   results.agencies.forEach(x => {
@@ -68,6 +69,12 @@ module.exports = async function () {
     const provider = results.agencies.find(
       x => x.AgencyId === item.AgencyId
     )?.structuredData;
+
+    const found = results.qa.filter(x => x.AgencyServiceId === item.ServiceId);
+
+    if (found) {
+      item.QA = found;
+    }
 
     item["structuredData"] = {
       "@context": "https://schema.org",
