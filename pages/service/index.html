@@ -85,175 +85,20 @@ eleventyNavigation:
       <h2>Topics</h2>
 
       <div class="row">
+        {%- for tag in agencyTags | pluck("featured", true) |
+        sortBy("featureOrder") -%}
         <div class="col-md-4 mb-4">
           <article
             class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
             <a
-              href="/"
+              href="/service/all/?q={{-tag.name-}}"
               class="h5 m-b color-p2 link-before text-left no-underline d-block"
-              >Personal records</a
+              >{{-tag.name-}}</a
             >
-            <p class="m-b text-left">
-              Curabitur vitae lacus neque. Curabitur faucibus venenatis libero
-              ut.
-            </p>
+            <p class="m-b text-left">{{-tag.description-}}</p>
           </article>
         </div>
-        <div class="col-md-4 mb-4">
-          <article
-            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
-            <a
-              href="/"
-              class="h5 m-b color-p2 link-before text-left no-underline d-block"
-              >Businesses</a
-            >
-            <p class="m-b text-left">
-              Usce efficitur ultricies erat, commodo auctor mi tempus.
-            </p>
-          </article>
-        </div>
-        <div class="col-md-4 mb-4">
-          <article
-            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
-            <a
-              href="/"
-              class="h5 m-b color-p2 link-before text-left no-underline d-block"
-              >DMV/Auto</a
-            >
-            <p class="m-b text-left">
-              Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.
-            </p>
-          </article>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <article
-            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
-            <a
-              href="/"
-              class="h5 m-b color-p2 link-before text-left no-underline d-block"
-              >Jobs and unemployment</a
-            >
-            <p class="m-b text-left">
-              Curabitur vitae lacus neque. Curabitur faucibus venenatis libero
-              ut.
-            </p>
-          </article>
-        </div>
-        <div class="col-md-4 mb-4">
-          <article
-            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
-            <a
-              href="/"
-              class="h5 m-b color-p2 link-before text-left no-underline d-block"
-              >Assistance and social programs</a
-            >
-            <p class="m-b text-left">
-              Usce efficitur ultricies erat, commodo auctor mi tempus.
-            </p>
-          </article>
-        </div>
-        <div class="col-md-4 mb-4">
-          <article
-            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
-            <a
-              href="/"
-              class="h5 m-b color-p2 link-before text-left no-underline d-block"
-              >Housing and real estate</a
-            >
-            <p class="m-b text-left">
-              Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.
-            </p>
-          </article>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <article
-            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
-            <a
-              href="/"
-              class="h5 m-b color-p2 link-before text-left no-underline d-block"
-              >Safety and emergencies</a
-            >
-            <p class="m-b text-left">
-              Curabitur vitae lacus neque. Curabitur faucibus venenatis libero
-              ut.
-            </p>
-          </article>
-        </div>
-        <div class="col-md-4 mb-4">
-          <article
-            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
-            <a
-              href="/"
-              class="h5 m-b color-p2 link-before text-left no-underline d-block"
-              >State laws and records</a
-            >
-            <p class="m-b text-left">
-              Usce efficitur ultricies erat, commodo auctor mi tempus.
-            </p>
-          </article>
-        </div>
-        <div class="col-md-4 mb-4">
-          <article
-            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
-            <a
-              href="/"
-              class="h5 m-b color-p2 link-before text-left no-underline d-block"
-              >Taxes</a
-            >
-            <p class="m-b text-left">
-              Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.
-            </p>
-          </article>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <article
-            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
-            <a
-              href="/"
-              class="h5 m-b color-p2 link-before text-left no-underline d-block"
-              >Health and wellness</a
-            >
-            <p class="m-b text-left">
-              Curabitur vitae lacus neque. Curabitur faucibus venenatis libero
-              ut.
-            </p>
-          </article>
-        </div>
-        <div class="col-md-4 mb-4">
-          <article
-            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
-            <a
-              href="/"
-              class="h5 m-b color-p2 link-before text-left no-underline d-block"
-              >Travel and recreation</a
-            >
-            <p class="m-b text-left">
-              Usce efficitur ultricies erat, commodo auctor mi tempus.
-            </p>
-          </article>
-        </div>
-        <div class="col-md-4 mb-4">
-          <article
-            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
-            <a
-              href="/"
-              class="h5 m-b color-p2 link-before text-left no-underline d-block"
-              >Education</a
-            >
-            <p class="m-b text-left">
-              Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.
-            </p>
-          </article>
-        </div>
+        {%- endfor %}
       </div>
     </div>
   </div>
