@@ -3,7 +3,6 @@ landing: Services
 description: Services landing page
 title: Services
 layout: landing.njk
-permalink: service/index.html
 eleventyNavigation:
   key: Services
   parent: Home
@@ -13,14 +12,7 @@ eleventyNavigation:
   class="section-primary"
   style="background-image: url('/images/services-lineart.svg'); background-repeat:no-repeat; background-position:right; background-size:auto;">
   <div class="container p-y-md">
-    <nav aria-label="You are here" class="breadcrumbs">
-      <ol>
-        <li>
-          <a href="/" title="Home page">Home</a>
-        </li>
-        <li>Services</li>
-      </ol>
-    </nav>
+    {%- include "breadcrumbs.njk" -%}
     <h1 class="m-t-0">Services</h1>
   </div>
 </div>

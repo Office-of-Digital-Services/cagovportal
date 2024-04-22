@@ -13,7 +13,7 @@ eleventyComputed:
   eleventyNavigation:
     key: "Service{{ item.ServiceId }}"
     title:  "{{ item.ServiceName }}"
-    parent: "Agency{{ item.AgencyId }}"
+    parent: "Department{{ item.AgencyId }}"
 ---
 
 <!-- Begin Structured Data -->
@@ -45,7 +45,8 @@ eleventyComputed:
     <ul>
       {%- for tag in item.ServiceType.split("|") -%}
       <li>
-        <a href="/service/?q={{tag | trim | urlencode}}+">{{ tag | trim }}</a
+        <a href="/service/all/?q={{tag | trim | urlencode}}+"
+          >{{ tag | trim }}</a
         >&nbsp;
       </li>
       {%- endfor %}
@@ -54,7 +55,7 @@ eleventyComputed:
     <h3 class="mt-lg-0">Keywords</h3>
     <p>
       {%- for keyword in item.Keywords.split(",") -%}
-      <a href="/service/?q={{keyword | trim | urlencode}}+"
+      <a href="/service/all/?q={{keyword | trim | urlencode}}+"
         >{{ keyword | trim }}</a
       >&nbsp; {%- endfor %}
     </p>
@@ -67,7 +68,8 @@ eleventyComputed:
     <ul>
       {%- for tag in item.AgencyTags.split("|") -%}
       <li>
-        <a href="/service/?q={{tag | trim | urlencode}}+">{{ tag | trim }}</a
+        <a href="/service/all/?q={{tag | trim | urlencode}}+"
+          >{{ tag | trim }}</a
         >&nbsp;
       </li>
       {%- endfor %}
