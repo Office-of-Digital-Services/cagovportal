@@ -37,7 +37,7 @@
     <meta property="twitter:title" content="{{ title }}" />
     <meta property="twitter:description" content="{{ description }}" />
     <meta property="twitter:image" content="{{ socialimage }}" />
-    {% include "../head-js-css.njk" %}
+    {% include "head-js-css.html" %}
   </head>
   <body class="primary">
     <header role="banner" id="header" class="global-header fixed">
@@ -45,18 +45,18 @@
         <a href="#main-content">Skip to Main Content</a>
       </div>
       {% if alert -%} {%- include alert -%} {%- endif -%} {%- include
-      "../utility-header.njk" -%} {%- include "../site-header.njk" -%} {%-
-      include "../mobile-controls.njk" -%}
+      "../utility-header.html" -%} {%- include "../site-header.html" -%} {%-
+      include "../mobile-controls.html" -%}
       <div class="navigation-search full-width-nav container">
         <div id="head-search" class="search-container featured-search">
-          {%- include "../search.njk" -%}
+          {%- include "../search.html" -%}
         </div>
         {# navigation types #} {%- if navigation -%} {%- include navigation -%}
-        {%- else -%} {%- include "../navigation.njk" -%} {%- endif -%}
+        {%- else -%} {%- include "../navigation.html" -%} {%- endif -%}
       </div>
     </header>
     {% block content -%} {{ content | safe }} {%- endblock -%} {%- include
-    "../feedback.njk" -%} {%- include "../site-footer.njk" -%} {%- include
-    "../global-footer.njk" -%}
+    "../feedback.html" -%} {%- include "../site-footer.html" -%} {%- include
+    "../global-footer.html" -%}
   </body>
 </html>

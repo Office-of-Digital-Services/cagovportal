@@ -2,27 +2,17 @@
 landing: Services
 description: Search for a service
 title: All services
-layout: landing.njk
+layout: landing
 eleventyNavigation:
-  key: AllServices
-  parent: Home
+  key: All Services
+  parent: Services
 ---
 
 <div
   class="section-understated"
   style="background-image: url('/images/services-lineart.svg'); background-repeat:no-repeat; background-position:right;">
   <div class="container p-y-md">
-    <nav aria-label="You are here" class="breadcrumbs">
-      <ol>
-        <li>
-          <a href="/index.html" title="Home page">Home</a>
-        </li>
-        <li>
-          <a href="/services/" title="Services landing page">Services</a>
-        </li>
-        <li>All services</li>
-      </ol>
-    </nav>
+    {%- include "breadcrumbs.html" -%}
     <h1 class="m-t-0">All services</h1>
   </div>
 </div>
