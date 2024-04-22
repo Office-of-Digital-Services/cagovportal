@@ -1,5 +1,5 @@
 ---
-landing: Agencies
+landing: Departments
 pagination:
     data: state_entity.agencies
     size: 1
@@ -7,7 +7,7 @@ pagination:
     addAllPagesToCollections : true
 permalink: "department/{{ item.AgencyId }}/"
 eleventyComputed: 
-  description: Agency details for "{{ item.AgencyFullName }}"
+  description: Department details for "{{ item.AgencyFullName }}"
   title: "{{ item.AgencyFullName }}"
   keywords: "{{ item.Keywords}}"
   eleventyNavigation:
@@ -27,7 +27,7 @@ eleventyComputed:
 <div class="row p-b-lg">
   <div class="col-md-10 mx-auto">
     <h2 class="mt-lg-0">
-      Agency - {{ item.FriendlyName }} ({{ item.Acronym }})
+      Department - {{ item.FriendlyName }} ({{ item.Acronym }})
     </h2>
 
     {% if item.LogoUrl %}
