@@ -3,7 +3,6 @@ landing: Services
 description: Services landing page
 title: Services
 layout: landing.njk
-permalink: services/index.html
 eleventyNavigation:
   key: Services
   parent: Home
@@ -13,14 +12,7 @@ eleventyNavigation:
   class="section-primary"
   style="background-image: url('/images/services-lineart.svg'); background-repeat:no-repeat; background-position:right; background-size:auto;">
   <div class="container p-y-md">
-    <nav aria-label="You are here" class="breadcrumbs">
-      <ol>
-        <li>
-          <a href="/index.html" title="Home page">Home</a>
-        </li>
-        <li>Services</li>
-      </ol>
-    </nav>
+    {%- include "breadcrumbs.njk" -%}
     <h1 class="m-t-0">Services</h1>
   </div>
 </div>
@@ -32,11 +24,12 @@ eleventyNavigation:
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
         pretium dapibus diam, a finibus metus congue a.
       </p>
-      <form action="/services/all-services.html">
+      <form action="/service/all/">
         <label class="h3" for="searchbox">Search all services</label>
         <div class="d-flex">
           <input
             type="search"
+            name="q"
             id="searchbox"
             placeholder="Search for a service"
             class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-l" />
@@ -52,40 +45,40 @@ eleventyNavigation:
       <h2>Popular services</h2>
       <div class="row">
         <div class="col-md-4 mb-4">
-          <a href="/agency/178/service/60/" class="link-grid">Food stamps</a>
+          <a href="/department/178/service/60/" class="link-grid"
+            >Food stamps</a
+          >
         </div>
         <div class="col-md-4 mb-4">
-          <a href="/agency/193/service/15/" class="link-grid"
+          <a href="/department/193/service/15/" class="link-grid"
             >Traffic tickets</a
           >
         </div>
         <div class="col-md-4 mb-4">
-          <a href="/agency/287/service/25/" class="link-grid"
+          <a href="/department/287/service/25/" class="link-grid"
             >Business licenses</a
           >
         </div>
       </div>
       <div class="row">
         <div class="col-md-4 mb-4">
-          <a href="/agency/176/service/52/" class="link-grid"
+          <a href="/department/176/service/52/" class="link-grid"
             >Birth certificates</a
           >
         </div>
         <div class="col-md-4 mb-4">
-          <a href="/agency/171/service/1188/" class="link-grid"
+          <a href="/department/171/service/1188/" class="link-grid"
             >Inmate locator</a
           >
         </div>
         <div class="col-md-4 mb-4">
-          <a href="/agency/155/service/42/" class="link-grid"
+          <a href="/department/155/service/42/" class="link-grid"
             >Lottery numbers</a
           >
         </div>
       </div>
 
-      <a
-        href="/services/all-services.html"
-        class="btn btn-primary btn-lg btn-hover m-t"
+      <a href="/service/all/" class="btn btn-primary btn-lg btn-hover m-t"
         >View all services</a
       >
 

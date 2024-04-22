@@ -1,19 +1,19 @@
 ---
-landing: Agency
+landing: Departments
 pagination:
     data: state_entity.agencies
     size: 1
     alias: item
     addAllPagesToCollections : true
-permalink: "agency/{{ item.AgencyId }}/"
+permalink: "department/{{ item.AgencyId }}/"
 eleventyComputed: 
-  description: Agency details for "{{ item.AgencyFullName }}"
+  description: Department details for "{{ item.AgencyFullName }}"
   title: "{{ item.AgencyFullName }}"
   keywords: "{{ item.Keywords}}"
   eleventyNavigation:
-    key: "Agency{{ item.AgencyId }}"
+    key: "Department{{ item.AgencyId }}"
     title:  "{{ item.AgencyFullName }}"
-    parent: Agencies
+    parent: Departments
 ---
 
 <!-- Begin Structured Data -->
@@ -27,7 +27,7 @@ eleventyComputed:
 <div class="row p-b-lg">
   <div class="col-md-10 mx-auto">
     <h2 class="mt-lg-0">
-      Agency - {{ item.FriendlyName }} ({{ item.Acronym }})
+      Department - {{ item.FriendlyName }} ({{ item.Acronym }})
     </h2>
 
     {% if item.LogoUrl %}
@@ -116,7 +116,7 @@ eleventyComputed:
       -%}
       <li>
         <a
-          href="/agency/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
+          href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
           >{{service.ServiceName}}</a
         >
       </li>
