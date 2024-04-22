@@ -3,6 +3,12 @@
 const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function () {
+  const cleanup = (/** @type {string} */ s) =>
+    s.replace(
+      /Assistance and social\W\Wprograms/g,
+      "Assistance and social programs"
+    );
+
   const urls = [
     "https://api.stateentityprofile.ca.gov/api/Agencies/Get?page=0&pageSize=0&lang=en",
     "https://api.stateentityprofile.ca.gov/api/Services/Get?page=0&pageSize=0&lang=en",
@@ -30,6 +36,9 @@ module.exports = async function () {
 
   results.agencies.forEach(x => {
     x["AgencyFullName"] = `${x["FriendlyName"]} (${x["Acronym"]})`;
+
+    //Fix annoying typos
+    x["AgencyTags"] = cleanup(x["AgencyTags"]);
 
     const socialLinks = [];
     if (x.Facebook) {
@@ -66,6 +75,9 @@ module.exports = async function () {
   });
 
   results.services.forEach(item => {
+    //Fix annoying typos
+    item["AgencyTags"] = cleanup(item["AgencyTags"]);
+
     const provider = results.agencies.find(
       x => x.AgencyId === item.AgencyId
     )?.structuredData;

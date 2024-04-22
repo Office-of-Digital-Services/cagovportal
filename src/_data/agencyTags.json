@@ -1,182 +1,74 @@
 [
   {
-    "name": "Assistance and social  programs",
+    "topicId": 1,
+    "name": "Assistance and social programs",
     "description": "Usce efficitur ultricies erat, commodo auctor mi tempus.",
-    "featured": true,
     "featureOrder": 5
   },
   {
-    "name": "Business",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
+    "topicId": 2,
     "name": "Businesses",
     "description": "Usce efficitur ultricies erat, commodo auctor mi tempus.",
-    "featured": true,
     "featureOrder": 2
   },
   {
-    "name": "Citizenship",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Civil Duty",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "DACA",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
+    "topicId": 3,
     "name": "DMV/Auto",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featured": true,
     "featureOrder": 3
   },
   {
-    "name": "Doing Business",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
+    "topicId": 4,
     "name": "Education",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featured": true,
     "featureOrder": 12
   },
   {
-    "name": "Employment",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Environment",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Family",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Government",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Health",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
+    "topicId": 5,
     "name": "Health and wellness",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featured": true,
     "featureOrder": 10
   },
   {
+    "topicId": 6,
     "name": "Housing and real estate",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featured": true,
     "featureOrder": 6
   },
   {
-    "name": "Immigration",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Job Skills",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Jobs",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
+    "topicId": 7,
     "name": "Jobs and unemployment",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featured": true,
     "featureOrder": 4
   },
   {
-    "name": "Learn English",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Learning",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Legal Help",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Living",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
+    "topicId": 8,
     "name": "Personal records",
     "description": "Curabitur vitae lacus neque. Curabitur faucibus venenatis libero ut.",
-    "featured": true,
     "featureOrder": 1
   },
   {
-    "name": "Privacy",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Professional licensing and permits",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Property",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Public Benefits",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Public Safety",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Recreation",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
+    "topicId": 9,
     "name": "Safety and emergencies",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featured": true,
     "featureOrder": 7
   },
   {
+    "topicId": 10,
     "name": "State laws and information",
     "description": "Usce efficitur ultricies erat, commodo auctor mi tempus.",
-    "featured": true,
     "featureOrder": 8
   },
   {
+    "topicId": 11,
     "name": "Taxes",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featured": true,
     "featureOrder": 9
   },
   {
-    "name": "Training",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Transportation",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
+    "topicId": 12,
     "name": "Travel and recreation",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featured": true,
     "featureOrder": 11
-  },
-  {
-    "name": "Visiting",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
-  },
-  {
-    "name": "Working",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex."
   }
 ]
