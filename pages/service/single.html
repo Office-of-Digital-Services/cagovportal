@@ -75,6 +75,12 @@ eleventyComputed:
       {%- endfor %}
     </ul>
 
+    <!-- Begin Structured Data for QAPage -->
+    <script type="application/ld+json">
+      {{ item.structuredData_FAQPage  | dump | safe }}
+    </script>
+    <!-- End Structured Data -->
+
     <h3 class="mt-lg-9">Questions</h3>
 
     {%- for qa in item.QA -%}
