@@ -9,13 +9,65 @@
     "topicId": 2,
     "name": "Businesses",
     "description": "Usce efficitur ultricies erat, commodo auctor mi tempus.",
-    "featureOrder": 2
+    "featureOrder": 2,
+    "popularServices": [
+      {
+        "DepartmentId": 287,
+        "ServiceId": 25,
+        "ServiceName": "Apply for business license",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 287,
+        "ServiceId": 26,
+        "ServiceName": "Apply for seller’s permit",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 174,
+        "ServiceId": 29,
+        "ServiceName": "Get a fishing or hunting license",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 299,
+        "ServiceId": 12,
+        "ServiceName": "Look up a contractor license",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      }
+    ]
   },
   {
     "topicId": 3,
     "name": "DMV/Auto",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featureOrder": 3
+    "featureOrder": 3,
+    "popularServices": [
+      {
+        "DepartmentId": 193,
+        "ServiceId": 15,
+        "ServiceName": "Pay traffic ticket",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 137,
+        "ServiceId": 6,
+        "ServiceName": "Find a smog station",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 220,
+        "ServiceId": 44,
+        "ServiceName": "Renew drivers license",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 175,
+        "ServiceId": 1171,
+        "ServiceName": "Get low cost auto insurance",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      }
+    ]
   },
   {
     "topicId": 4,
@@ -48,26 +100,26 @@
     "featureOrder": 1,
     "popularServices": [
       {
-        "ServiceId": 52,
         "DepartmentId": 176,
+        "ServiceId": 52,
         "ServiceName": "Apply for birth certificate",
         "Description": "An authorized, certified California birth certificate can typically be used for travel, passport, proof of citizenship, social security, driver's license, and more."
       },
       {
-        "ServiceId": 1188,
         "DepartmentId": 171,
+        "ServiceId": 1188,
         "ServiceName": "Inmate locator and records",
         "Description": "Search results include current location, admission date, parole dates, outcomes for incarcerated persons currently in custody, and more."
       },
       {
-        "ServiceId": 47,
         "DepartmentId": 220,
+        "ServiceId": 47,
         "ServiceName": "DMV address change",
         "Description": "A certified copy of a death certificate can typically be used to obtain death benefits, claim insurance proceeds, notify social security and other legal purposes."
       },
       {
-        "ServiceId": 1177,
         "DepartmentId": 176,
+        "ServiceId": 1177,
         "ServiceName": "Get digital vaccine records",
         "Description": "If you want to share your proof of vaccination digitally, you can get an electronic version of the record card you were given at time of vaccination."
       }
