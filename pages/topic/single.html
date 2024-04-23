@@ -1,7 +1,7 @@
 ---
 landing: Services
 pagination:
-    data: agencyTags
+    data: topics
     size: 1
     alias: item
     addAllPagesToCollections : true
@@ -39,7 +39,7 @@ eleventyComputed:
 
     <h3 class="mt-lg-0">All Topics</h3>
     <ul>
-      {%- for topic in agencyTags | sortBy("featureOrder") -%}
+      {%- for topic in topics | sortBy("featureOrder") -%}
       <li>
         <a href="/topic/{{- topic.topicId -}}/">{{-topic.name-}}</a>
       </li>
