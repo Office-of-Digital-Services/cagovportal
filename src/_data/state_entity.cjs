@@ -82,12 +82,6 @@ module.exports = async function () {
       x => x.AgencyId === item.AgencyId
     )?.structuredData;
 
-    const found = results.qa.filter(x => x.AgencyServiceId === item.ServiceId);
-
-    if (found) {
-      item.QA = found;
-    }
-
     item["structuredData"] = {
       "@context": "https://schema.org",
       "@type": "GovernmentService",
@@ -109,6 +103,29 @@ module.exports = async function () {
       },
       provider
     };
+
+    const QaResult = results.qa.filter(
+      x => x.AgencyServiceId === item.ServiceId
+    );
+
+    if (QaResult) {
+      item.QA = QaResult;
+      item["structuredData_FAQPage"] = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: QaResult.map(x => ({
+          "@type": "Question",
+          name: x.Question,
+          answerCount: 1,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: x.Answer,
+            dateCreated: x.DateTimeStamp
+          }
+        })),
+        provider
+      };
+    }
   });
 
   return results;
