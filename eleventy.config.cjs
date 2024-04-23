@@ -20,7 +20,7 @@ module.exports = function (
 
   eleventyConfig.addWatchTarget("./src/js/");
 
-  // {%- for tag in agencyTags | pluck("featured", true) | sortBy("featureOrder") -%}
+  // {%- for tag in topics | pluck("featured", true) | sortBy("featureOrder") -%}
   eleventyConfig.addFilter(
     "pluck",
     /**
@@ -42,7 +42,7 @@ module.exports = function (
       arr.filter(item => /** @type {string} */ (item[attr]).includes(value))
   );
 
-  // {%- for tag in agencyTags | pluck("featured", true) | sortBy("featureOrder") -%}
+  // {%- for tag in topics | pluck("featured", true) | sortBy("featureOrder") -%}
   eleventyConfig.addFilter(
     "sortBy",
     /**

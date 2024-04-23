@@ -1,7 +1,7 @@
 ---
 landing: Services
 pagination:
-    data: agencyTags
+    data: topics
     size: 1
     alias: item
     addAllPagesToCollections : true
@@ -19,6 +19,24 @@ eleventyComputed:
   <div class="col-md-10 mx-auto">
     <h2 class="mt-lg-0">Topic - {{ item.name }}</h2>
     <p>{{item.description}}</p>
+
+    <h2 class="mt-lg-0">Popular related services</h2>
+
+    <div class="row">
+      {%- for pop in item.popularServices -%}
+      <div class="col-md-6 mb-4">
+        <article
+          class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
+          <a
+            href="/department/{{-pop.DepartmentId-}}/service/{{-pop.ServiceId-}}/"
+            class="h5 m-b color-p2 link-before text-left no-underline d-block"
+            >{{-pop.ServiceName-}}</a
+          >
+          <p class="m-b text-left">{{-pop.Description-}}</p>
+        </article>
+      </div>
+      {%- endfor %}
+    </div>
 
     <hr />
     <h3 class="mt-lg-0">
@@ -39,7 +57,7 @@ eleventyComputed:
 
     <h3 class="mt-lg-0">All Topics</h3>
     <ul>
-      {%- for topic in agencyTags | sortBy("featureOrder") -%}
+      {%- for topic in topics | sortBy("featureOrder") -%}
       <li>
         <a href="/topic/{{- topic.topicId -}}/">{{-topic.name-}}</a>
       </li>

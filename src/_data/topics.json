@@ -45,7 +45,33 @@
     "topicId": 8,
     "name": "Personal records",
     "description": "Curabitur vitae lacus neque. Curabitur faucibus venenatis libero ut.",
-    "featureOrder": 1
+    "featureOrder": 1,
+    "popularServices": [
+      {
+        "ServiceId": 52,
+        "DepartmentId": 176,
+        "ServiceName": "Apply for birth certificate",
+        "Description": "An authorized, certified California birth certificate can typically be used for travel, passport, proof of citizenship, social security, driver's license, and more."
+      },
+      {
+        "ServiceId": 1188,
+        "DepartmentId": 171,
+        "ServiceName": "Inmate locator and records",
+        "Description": "Search results include current location, admission date, parole dates, outcomes for incarcerated persons currently in custody, and more."
+      },
+      {
+        "ServiceId": 47,
+        "DepartmentId": 220,
+        "ServiceName": "DMV address change",
+        "Description": "A certified copy of a death certificate can typically be used to obtain death benefits, claim insurance proceeds, notify social security and other legal purposes."
+      },
+      {
+        "ServiceId": 1177,
+        "DepartmentId": 176,
+        "ServiceName": "Get digital vaccine records",
+        "Description": "If you want to share your proof of vaccination digitally, you can get an electronic version of the record card you were given at time of vaccination."
+      }
+    ]
   },
   {
     "topicId": 9,
