@@ -31,13 +31,24 @@ module.exports = function (
     (arr, attr, value) => arr.filter(item => item[attr] === value)
   );
 
+  eleventyConfig.addFilter(
+    "pluckContains",
+    /**
+     * @param {[]} arr
+     * @param {string} attr
+     * @param {*} value
+     */
+    (arr, attr, value) =>
+      arr.filter(item => /** @type {string} */ (item[attr]).includes(value))
+  );
+
   // {%- for tag in agencyTags | pluck("featured", true) | sortBy("featureOrder") -%}
   eleventyConfig.addFilter(
     "sortBy",
     /**
      * @param {[]} arr
      * @param {string} prop
-     */ (arr, prop) => arr.sort((a, b) => (a[prop] > b[prop] ? 1 : -1))
+     */ (arr, prop) => [...arr].sort((a, b) => (a[prop] > b[prop] ? 1 : -1))
   );
 
   eleventyConfig.addNunjucksAsyncFilter(

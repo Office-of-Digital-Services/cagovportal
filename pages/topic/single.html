@@ -1,0 +1,62 @@
+---
+landing: Services
+pagination:
+    data: agencyTags
+    size: 1
+    alias: item
+    addAllPagesToCollections : true
+permalink: "topic/{{ item.topicId }}/"
+eleventyComputed: 
+  description: Topic details for "{{ item.name }}"
+  title: "{{ item.name }}"
+  eleventyNavigation:
+    key: "Topic{{ item.topicId }}"
+    title:  "{{ item.name }}"
+    parent: "Services"
+---
+
+<div class="row p-b-lg">
+  <div class="col-md-10 mx-auto">
+    <h2 class="mt-lg-0">Topic - {{ item.name }}</h2>
+    <p>{{item.description}}</p>
+
+    <hr />
+    <h3 class="mt-lg-0">
+      {{( state_entity.services |
+      pluckContains('AgencyTags',item.name)).length}} Services
+    </h3>
+    <ul>
+      {%- for service in state_entity.services |
+      pluckContains('AgencyTags',item.name) -%}
+      <li>
+        <a
+          href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
+          >{{service.ServiceName}}</a
+        >
+      </li>
+      {%- endfor %}
+    </ul>
+
+    <h3 class="mt-lg-0">All Topics</h3>
+    <ul>
+      {%- for topic in agencyTags | sortBy("featureOrder") -%}
+      <li>
+        <a href="/topic/{{- topic.topicId -}}/">{{-topic.name-}}</a>
+      </li>
+      {%- endfor %}
+    </ul>
+
+    <h3 class="mt-lg-9">Developer Information</h3>
+    <cagov-accordion>
+      <details>
+        <summary>Developer Information</summary>
+        <div class="accordion-body">
+          <pre>
+{{ item | dump(2) }}
+    </pre
+          >
+        </div>
+      </details>
+    </cagov-accordion>
+  </div>
+</div>
