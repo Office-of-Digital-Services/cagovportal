@@ -3,43 +3,225 @@
     "topicId": 1,
     "name": "Assistance and social programs",
     "description": "Usce efficitur ultricies erat, commodo auctor mi tempus.",
-    "featureOrder": 5
+    "featureOrder": 5,
+    "popularServices": [
+      {
+        "DepartmentId": 178,
+        "ServiceId": 60,
+        "ServiceName": "Apply for food stamps",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 217,
+        "ServiceId": 37,
+        "ServiceName": "Apply for Medi-Cal",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 198,
+        "ServiceId": 63,
+        "ServiceName": "Apply for a Cal Grant",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 101,
+        "ServiceId": 1182,
+        "ServiceName": "Get a CalABLE Visa Prepaid Card",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      }
+    ]
   },
   {
     "topicId": 2,
     "name": "Businesses",
     "description": "Usce efficitur ultricies erat, commodo auctor mi tempus.",
-    "featureOrder": 2
+    "featureOrder": 2,
+    "popularServices": [
+      {
+        "DepartmentId": 287,
+        "ServiceId": 25,
+        "ServiceName": "Apply for business license",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 287,
+        "ServiceId": 26,
+        "ServiceName": "Apply for seller’s permit",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 174,
+        "ServiceId": 29,
+        "ServiceName": "Get a fishing or hunting license",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 299,
+        "ServiceId": 12,
+        "ServiceName": "Look up a contractor license",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      }
+    ]
   },
   {
     "topicId": 3,
     "name": "DMV/Auto",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featureOrder": 3
+    "featureOrder": 3,
+    "popularServices": [
+      {
+        "DepartmentId": 193,
+        "ServiceId": 15,
+        "ServiceName": "Pay traffic ticket",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 137,
+        "ServiceId": 6,
+        "ServiceName": "Find a smog station",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 220,
+        "ServiceId": 44,
+        "ServiceName": "Renew drivers license",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 175,
+        "ServiceId": 1171,
+        "ServiceName": "Get low cost auto insurance",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      }
+    ]
   },
   {
     "topicId": 4,
     "name": "Education",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featureOrder": 12
+    "featureOrder": 12,
+    "popularServices": [
+      {
+        "DepartmentId": 172,
+        "ServiceId": 84,
+        "ServiceName": "Get a high school diploma",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 198,
+        "ServiceId": 63,
+        "ServiceName": "Apply for a Cal Grant",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 172,
+        "ServiceId": 83,
+        "ServiceName": "Find an ESL/English class",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 256,
+        "ServiceId": 1138,
+        "ServiceName": "Apply for financial assistance in healthcare education",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      }
+    ]
   },
   {
     "topicId": 5,
     "name": "Health and wellness",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featureOrder": 10
+    "featureOrder": 10,
+    "popularServices": [
+      {
+        "DepartmentId": 217,
+        "ServiceId": 37,
+        "ServiceName": "Apply for Medi-Cal",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 176,
+        "ServiceId": 1177,
+        "ServiceName": "Get a digital vaccine record",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 240,
+        "ServiceId": 74,
+        "ServiceName": "Apply for medical insurance",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 178,
+        "ServiceId": 60,
+        "ServiceName": "Apply for food stamps",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      }
+    ]
   },
   {
     "topicId": 6,
     "name": "Housing and real estate",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featureOrder": 6
+    "featureOrder": 6,
+    "popularServices": [
+      {
+        "DepartmentId": 268,
+        "ServiceId": 13,
+        "ServiceName": "Search for unclaimed property",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 299,
+        "ServiceId": 12,
+        "ServiceName": "Look up a contractor license",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 40,
+        "ServiceId": 1131,
+        "ServiceName": "Verify a real estate license",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 139,
+        "ServiceId": 1175,
+        "ServiceName": "COVID-19 rent relief",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      }
+    ]
   },
   {
     "topicId": 7,
     "name": "Jobs and unemployment",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featureOrder": 4
+    "featureOrder": 4,
+    "popularServices": [
+      {
+        "DepartmentId": 89,
+        "ServiceId": 39,
+        "ServiceName": "Find a California state job",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 229,
+        "ServiceId": 20,
+        "ServiceName": "File for unemployment",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 229,
+        "ServiceId": 22,
+        "ServiceName": "Find a job",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 229,
+        "ServiceId": 18,
+        "ServiceName": "File for disability",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      }
+    ]
   },
   {
     "topicId": 8,
@@ -48,26 +230,26 @@
     "featureOrder": 1,
     "popularServices": [
       {
-        "ServiceId": 52,
         "DepartmentId": 176,
+        "ServiceId": 52,
         "ServiceName": "Apply for birth certificate",
         "Description": "An authorized, certified California birth certificate can typically be used for travel, passport, proof of citizenship, social security, driver's license, and more."
       },
       {
-        "ServiceId": 1188,
         "DepartmentId": 171,
+        "ServiceId": 1188,
         "ServiceName": "Inmate locator and records",
         "Description": "Search results include current location, admission date, parole dates, outcomes for incarcerated persons currently in custody, and more."
       },
       {
-        "ServiceId": 47,
         "DepartmentId": 220,
+        "ServiceId": 47,
         "ServiceName": "DMV address change",
         "Description": "A certified copy of a death certificate can typically be used to obtain death benefits, claim insurance proceeds, notify social security and other legal purposes."
       },
       {
-        "ServiceId": 1177,
         "DepartmentId": 176,
+        "ServiceId": 1177,
         "ServiceName": "Get digital vaccine records",
         "Description": "If you want to share your proof of vaccination digitally, you can get an electronic version of the record card you were given at time of vaccination."
       }
@@ -77,24 +259,128 @@
     "topicId": 9,
     "name": "Safety and emergencies",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featureOrder": 7
+    "featureOrder": 7,
+    "popularServices": [
+      {
+        "DepartmentId": 223,
+        "ServiceId": 1132,
+        "ServiceName": "Search for registered sex offenders",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 171,
+        "ServiceId": 1188,
+        "ServiceName": "Inmate locator and records",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 238,
+        "ServiceId": 1122,
+        "ServiceName": "Get disaster relief assistance",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 162,
+        "ServiceId": 1169,
+        "ServiceName": "Compensation for crime-related expenses",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      }
+    ]
   },
   {
     "topicId": 10,
     "name": "State laws and information",
     "description": "Usce efficitur ultricies erat, commodo auctor mi tempus.",
-    "featureOrder": 8
+    "featureOrder": 8,
+    "popularServices": [
+      {
+        "DepartmentId": 155,
+        "ServiceId": 42,
+        "ServiceName": "Look up winning lottery numbers",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 275,
+        "ServiceId": 58,
+        "ServiceName": "Look up my representatives",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 244,
+        "ServiceId": 41,
+        "ServiceName": "Look up a bill or law",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 172,
+        "ServiceId": 17,
+        "ServiceName": "Find your local school",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      }
+    ]
   },
   {
     "topicId": 11,
     "name": "Taxes",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featureOrder": 9
+    "featureOrder": 9,
+    "popularServices": [
+      {
+        "DepartmentId": 236,
+        "ServiceId": 33,
+        "ServiceName": "Check your tax refund status",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 236,
+        "ServiceId": 1168,
+        "ServiceName": "File taxes for free with CalFile",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 287,
+        "ServiceId": 24,
+        "ServiceName": "Look up tax rates",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 178,
+        "ServiceId": 1183,
+        "ServiceName": "Learn about the Earned Income Tax Credit",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      }
+    ]
   },
   {
     "topicId": 12,
     "name": "Travel and recreation",
     "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featureOrder": 11
+    "featureOrder": 11,
+    "popularServices": [
+      {
+        "DepartmentId": 174,
+        "ServiceId": 29,
+        "ServiceName": "Get a fishing or hunting license",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 185,
+        "ServiceId": 1144,
+        "ServiceName": "Get a horse racing license",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 283,
+        "ServiceId": 75,
+        "ServiceName": "Request a free California visitor's guide",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      },
+      {
+        "DepartmentId": 259,
+        "ServiceId": 49,
+        "ServiceName": "Find a state park",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+      }
+    ]
   }
 ]
