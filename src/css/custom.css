@@ -93,7 +93,8 @@ cagov-feedback .feedback-form-button:focus {
 
 /* Elipsis overflow */
 
-.service-description {
+.service-description,
+.department-description {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -102,4 +103,14 @@ cagov-feedback .feedback-form-button:focus {
 
 .webkit-appearance-none {
   -webkit-appearance: none !important;
+}
+
+.dep-image-wrapper {
+  max-width: 96px;
+  min-width: 96px;
+  margin-right: 1rem;
+}
+
+.reset-x-icon::-webkit-search-cancel-button {
+  display: unset !important;
 }
