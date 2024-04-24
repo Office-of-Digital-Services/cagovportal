@@ -42,7 +42,15 @@ window.addEventListener("DOMContentLoaded", () => {
         /** @type {*[]} */
         const dataset = JSON.parse(datasetstring);
 
-        const elementRows = /** @type {HTMLElement[]} */ ([...this.children]);
+        const parentElement = this.querySelector("[data-key]")?.parentElement;
+
+        if (!parentElement) {
+          throw new Error(`can't find any elements with "data-key"`);
+        }
+
+        const elementRows = /** @type {HTMLElement[]} */ ([
+          ...parentElement.children
+        ]);
 
         const checkme = () => {
           const value = inputBox.value
