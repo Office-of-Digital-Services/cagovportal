@@ -42,24 +42,25 @@ eleventyNavigation:
         <span class="items-count">...</span>
         services
       </p>
-      <form class="m-b-md">
-        <label class="sr-only" for="searchbox">Search all services</label>
-        <div class="d-flex">
-          <input
-            type="search"
-            id="searchbox"
-            name="q"
-            placeholder="Search for a service"
-            class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-l" />
-          <button
-            class="bg-gray-600 bg-gray-700-hover rounded-end brd-0 width-60">
-            <span class="sr-only">Submit</span>
-            <span
-              class="ca-gov-icon-search font-size-25 color-white"
-              aria-hidden="true"></span>
-          </button>
-        </div>
-      </form>
+      <label class="sr-only" for="searchbox">Search all services</label>
+      <div class="d-flex">
+        <style>
+          /*
+          Bringing back the little "X" buttons
+          */
+          ::-webkit-search-cancel-button {
+            display: unset !important;
+          }
+        </style>
+
+        <input
+          type="search"
+          id="searchbox"
+          name="q"
+          placeholder="Search for a service"
+          class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-l" />
+      </div>
+
       <h2 aria-live="polite" class="sr-only">
         <span id="searchcount">...</span> services found
       </h2>
