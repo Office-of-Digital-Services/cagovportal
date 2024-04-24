@@ -21,6 +21,14 @@ eleventyNavigation:
     <div class="col-lg-9 mx-auto">
       <label>
         Search Departments
+        <style>
+          /*
+          Bringing back the little "X" buttons
+          */
+          ::-webkit-search-cancel-button {
+            display: unset !important;
+          }
+        </style>
         <input
           type="search"
           id="searchbox"
