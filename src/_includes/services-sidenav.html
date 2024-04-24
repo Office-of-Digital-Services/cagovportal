@@ -1,0 +1,35 @@
+{#<!-- prettier-ignore -->#}{%- 
+set links = [
+  { href: "/service/all/", text: "All services" },
+  { href: "/service/list/", text: "Services list" },
+  { href: "/topic/8/", text: "Topics" }
+]
+-%}
+
+<div class="col-lg-3 pb-lg-5" role="complementary">
+  <!-- Side navigation -->
+  <nav
+    aria-labelledby="navigation-list"
+    class="side-navigation sticky-6"
+    id="side-navigation">
+    <ul class="list-navigation">
+      {%- for link in links %}
+      <li>
+        <a
+          href="{{-link.href-}}"
+          {%-if
+          link.href
+          in
+          page.url%}
+          active
+          class="active landing"
+          aria-current="page"
+          tabindex="-1"
+          {%-endif-%}>
+          {{-link.text-}}
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </nav>
+</div>

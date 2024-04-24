@@ -1,10 +1,10 @@
 ---
 landing: Services
-description: Search for a service
-title: All services
+description: List all services
+title: Services list
 layout: landing
 eleventyNavigation:
-  key: All Services
+  key: Services list
   parent: Services
 ---
 
@@ -48,43 +48,21 @@ eleventyNavigation:
         <span id="searchcount">...</span> services found
       </h2>
 
-      <p class="bold">
-        Sort by
-        <button
-          class="bg-transparent border-0 color-primary color-primary-hover bold az-sort">
-          A-Z<span
-            class="ca-gov-icon-caret-down font-size-25 pos-rel bottom-minus-3"
-            aria-hidden="true"></span>
-        </button>
-      </p>
-
       <cagovhome-filterlist
         data-inputid="searchbox"
         data-countquery="#searchcount, span.items-count"
         data-filterstoragekey="service"
         data-filterkey="ServiceId">
-        {%- for service in state_entity.services -%}
-        <article data-key="{{service.ServiceId}}" class="pos-rel">
-          <h2 class="lead bold m-t-0 m-b">{{service.ServiceName}}</h2>
-          <p class="font-size-14 bold m-t-sm">by {{service.FriendlyName}}</p>
-          <p class="service-description">{{service.Description}}</p>
-          <a
-            class="btn btn-outline-primary btn-lg m-r-sm"
-            href="{{ service.ServiceUrl }}"
-            >Launch
-            <span class="sr-only">{{service.ServiceName}}</span> service</a
-          >
-          <a
-            class="btn btn-outline-primary btn-lg"
-            href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
-            >More details
-            <span class="sr-only"
-              >about {{service.ServiceName}} service</span
-            ></a
-          >
-          <hr class="m-y-md" />
-        </article>
-        {%- endfor %}
+        <ul>
+          {%- for service in state_entity.services -%}
+          <li data-key="{{service.ServiceId}}">
+            <a
+              href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/">
+              {{-service.ServiceName-}}
+            </a>
+          </li>
+          {%- endfor %}
+        </ul>
       </cagovhome-filterlist>
     </div>
   </div>
