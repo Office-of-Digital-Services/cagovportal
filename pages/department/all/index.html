@@ -3,6 +3,7 @@ landing: Departments
 description: Search for a department
 title: All departments
 layout: landing
+dynamic_sidenavid: department
 eleventyNavigation:
   key: All Departments
   parent: Departments
@@ -19,93 +20,76 @@ eleventyNavigation:
 
 <div class="container p-y-lg">
   <div class="row">
-    <div class="col-lg-3 pb-lg-5" role="complementary">
-      <!-- Side navigation -->
-      <nav
-        aria-labelledby="navigation-list"
-        class="side-navigation sticky-6"
-        id="side-navigation">
-        <ul class="list-navigation">
-          <li>
-            <a
-              href="/department/all/"
-              id="navigation-list"
-              class="active landing">
-              All departments
-              <span class="sr-only">landing page</span>
-            </a>
-          </li>
-          <li><a href="/department/list/">Departments list</a></li>
-        </ul>
-      </nav>
-    </div>
+    <div class="row">
+      {%-include "dynamic-sidenav.html"-%}
 
-    <div class="col-lg-9">
-      <p class="lead m-t">
-        <span class="items-count">...</span>
-        departments
-      </p>
-      <label class="sr-only" for="searchbox">Search all departments</label>
-      <div class="d-flex m-b-lg">
-        <input
-          type="search"
-          id="searchbox"
-          name="q"
-          placeholder="Search for a department"
-          class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-x reset-x-icon" />
+      <div class="col-lg-9">
+        <p class="lead m-t">
+          <span class="items-count">...</span>
+          departments
+        </p>
+        <label class="sr-only" for="searchbox">Search all departments</label>
+        <div class="d-flex m-b-lg">
+          <input
+            type="search"
+            id="searchbox"
+            name="q"
+            placeholder="Search for a department"
+            class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-x reset-x-icon" />
+        </div>
+
+        <h2 aria-live="polite" class="sr-only">
+          <span id="searchcount">...</span> departments found
+        </h2>
+
+        <cagovhome-filterlist
+          data-inputid="searchbox"
+          data-countquery="#searchcount, .items-count"
+          data-filterstoragekey="agency"
+          data-filterkey="AgencyId">
+          {%- for agency in state_entity.agencies -%}
+          <span data-key="{{agency.AgencyId}}">
+            <div class="d-flex">
+              <div class="dep-image-wrapper">
+                <img
+                  src="{{agency.structuredData.logo}}"
+                  class="img-fluid"
+                  alt="{{agency.FriendlyName}} logo" />
+              </div>
+
+              <div class="flex-grow-1">
+                <h3 class="lead bold m-t-0 m-b">
+                  {{service.ServiceName}} {{agency.FriendlyName}}
+                  ({{agency.Acronym}})
+                </h3>
+                <p class="department-description">{{agency.Description}}</p>
+
+                <a
+                  class="btn btn-outline-primary btn-lg m-r-sm"
+                  href="{{ agency.WebsiteURL }}"
+                  ><span class="sr-only">{{agency.FriendlyName}} </span
+                  >Department website
+                </a>
+                <a
+                  href="/department/{{ agency.AgencyId }}/"
+                  class="btn btn-outline-primary btn-lg m-r-sm"
+                  >More details
+                  <span class="sr-only">about {{agency.FriendlyName}}</span></a
+                >
+                <a
+                  href="{{ agency.ContactURL }}/"
+                  class="btn btn-outline-primary btn-lg"
+                  >Contact
+                  <span class="sr-only"> {{agency.FriendlyName}}</span></a
+                >
+              </div>
+            </div>
+          </span>
+          <hr class="m-y-md" />
+
+          {%- endfor %}
+        </cagovhome-filterlist>
       </div>
-
-      <h2 aria-live="polite" class="sr-only">
-        <span id="searchcount">...</span> departments found
-      </h2>
-
-      <cagovhome-filterlist
-        data-inputid="searchbox"
-        data-countquery="#searchcount, .items-count"
-        data-filterstoragekey="agency"
-        data-filterkey="AgencyId">
-        {%- for agency in state_entity.agencies -%}
-        <span data-key="{{agency.AgencyId}}">
-          <div class="d-flex">
-            <div class="dep-image-wrapper">
-              <img
-                src="{{agency.structuredData.logo}}"
-                class="img-fluid"
-                alt="{{agency.FriendlyName}} logo" />
-            </div>
-
-            <div class="flex-grow-1">
-              <h3 class="lead bold m-t-0 m-b">
-                {{service.ServiceName}} {{agency.FriendlyName}}
-                ({{agency.Acronym}})
-              </h3>
-              <p class="department-description">{{agency.Description}}</p>
-
-              <a
-                class="btn btn-outline-primary btn-lg m-r-sm"
-                href="{{ agency.WebsiteURL }}"
-                ><span class="sr-only">{{agency.FriendlyName}} </span>Department
-                website
-              </a>
-              <a
-                href="/department/{{ agency.AgencyId }}/"
-                class="btn btn-outline-primary btn-lg m-r-sm"
-                >More details
-                <span class="sr-only">about {{agency.FriendlyName}}</span></a
-              >
-              <a
-                href="{{ agency.ContactURL }}/"
-                class="btn btn-outline-primary btn-lg"
-                >Contact
-                <span class="sr-only"> {{agency.FriendlyName}}</span></a
-              >
-            </div>
-          </div>
-        </span>
-        <hr class="m-y-md" />
-
-        {%- endfor %}
-      </cagovhome-filterlist>
     </div>
   </div>
 </div>

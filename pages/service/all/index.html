@@ -3,6 +3,7 @@ landing: Services
 description: Search for a service
 title: All services
 layout: landing
+dynamic_sidenavid: service
 eleventyNavigation:
   key: All Services
   parent: Services
@@ -19,8 +20,7 @@ eleventyNavigation:
 
 <div class="container p-y-lg">
   <div class="row">
-    {%-set sidenav = dynamic_sidenav.service-%} {%-include
-    "dynamic-sidenav.html"-%}
+    {%-include "dynamic-sidenav.html"-%}
     <div class="col-lg-9">
       <p class="lead m-t">
         <span class="items-count">...</span>

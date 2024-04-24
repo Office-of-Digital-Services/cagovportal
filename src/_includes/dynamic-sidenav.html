@@ -1,10 +1,13 @@
 {#-
 <!--
   usage...
+---
+dynamic_sidenavid: service
+---
 
-      {%-set sidenav = services_sidenav-%} {%-include "dynamic-sidenav.html"-%}
+{%-include "dynamic-sidenav.html"-%}
 -->
--#}
+-#} {%-set sidenav = dynamic_sidenav[dynamic_sidenavid]-%}
 <div class="col-lg-3 pb-lg-5" role="complementary">
   <!-- Side navigation -->
   <nav
@@ -25,7 +28,7 @@
           aria-current="page"
           tabindex="-1"
           {%-endif-%}>
-          {{-link.text-}}
+          {{-link.text | safe-}}
         </a>
       </li>
       {%- endfor %}
