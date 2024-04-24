@@ -1,4 +1,10 @@
-
+{#<!-- prettier-ignore -->#}{%- 
+set links = [
+  { href: "/service/all/", text: "All services" },
+  { href: "/service/list/", text: "Services list" },
+  { href: "/topic/8/", text: "Topics" }
+]
+-%}
 
 <div class="col-lg-3 pb-lg-5" role="complementary">
   <!-- Side navigation -->
@@ -7,32 +13,23 @@
     class="side-navigation sticky-6"
     id="side-navigation">
     <ul class="list-navigation">
+      {%- for link in links %}
       <li>
         <a
-          href="/service/all/"
-
-          {% if '/service/all/' in page.url %}active
+          href="{{-link.href-}}"
+          {%-if
+          link.href
+          in
+          page.url%}
+          active
           class="active landing"
           aria-current="page"
           tabindex="-1"
-        
-          {% endif %}
-          >
-          All services
-          <span class="sr-only">landing page</span>
+          {%-endif-%}>
+          {{-link.text-}}
         </a>
       </li>
-      <li><a href="/service/list/"
-        
-                  {% if '/service/list/' in page.url %}active
-          class="active landing"
-          aria-current="page"
-          tabindex="-1"
-        
-          {% endif %}
-        
-        >Services list</a></li>
-      <li><a href="/topic/8/">Topics</a></li>
+      {%- endfor %}
     </ul>
   </nav>
 </div>
