@@ -19,24 +19,7 @@ eleventyNavigation:
 
 <div class="container p-y-lg">
   <div class="row">
-    <div class="col-lg-3 pb-lg-5" role="complementary">
-      <!-- Side navigation -->
-      <nav
-        aria-labelledby="navigation-list"
-        class="side-navigation sticky-6"
-        id="side-navigation">
-        <ul class="list-navigation">
-          <li>
-            <a href="/service/all/" id="navigation-list" class="active landing">
-              All services
-              <span class="sr-only">landing page</span>
-            </a>
-          </li>
-          <li><a href="/service/list/">Services list</a></li>
-          <li><a href="/topics/">Topics</a></li>
-        </ul>
-      </nav>
-    </div>
+    {%- include "services-sidenav.html" -%}
     <div class="col-lg-9">
       <p class="lead m-t">
         <span class="items-count">...</span>
