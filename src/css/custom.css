@@ -104,3 +104,8 @@ cagov-feedback .feedback-form-button:focus {
 a[aria-current="page"] {
   pointer-events: none;
 }
+
+/* ios search button white font fix */
+.webkit-appearance-none {
+  -webkit-appearance: none !important;
+}
