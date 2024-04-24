@@ -19,7 +19,8 @@ eleventyNavigation:
 
 <div class="container p-y-lg">
   <div class="row">
-    {%- include "services-sidenav.html" -%}
+    {%-set sidenav = dynamic_sidenav.service-%} {%-include
+    "dynamic-sidenav.html"-%}
     <div class="col-lg-9">
       <p class="lead m-t">
         <span class="items-count">...</span>

@@ -1,0 +1,7 @@
+{
+  "service": [
+    { "href": "/service/all/", "text": "All services" },
+    { "href": "/service/list/", "text": "Services list" },
+    { "href": "/topic/8/", "text": "Topics" }
+  ]
+}
