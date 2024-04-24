@@ -52,7 +52,7 @@ eleventyNavigation:
             <div class="d-flex">
               <div class="dep-image-wrapper">
                 <img
-                  src="{{agency.structuredData.logo}}"
+                  src="{{agency.structuredData.logo if agency.structuredData.logo else 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='}}"
                   class="img-fluid"
                   alt="{{agency.FriendlyName}} logo" />
               </div>
