@@ -8,7 +8,7 @@ pagination:
 permalink: "department/{{ item.AgencyId }}/"
 eleventyComputed: 
   description: Department details for "{{ item.AgencyFullName }}"
-  title: "{{ item.AgencyFullName }}"
+  title: "{{ item.FriendlyName }} ({{ item.Acronym }})"
   keywords: "{{ item.Keywords}}"
   eleventyNavigation:
     key: "Department{{ item.AgencyId }}"
@@ -26,9 +26,7 @@ eleventyComputed:
 
 <div class="row p-b-lg">
   <div class="col-md-10 mx-auto">
-    <h2 class="mt-lg-0">
-      Department - {{ item.FriendlyName }} ({{ item.Acronym }})
-    </h2>
+    <h2 class="mt-lg-0">{{-title-}}</h2>
 
     {% if item.LogoUrl %}
     <img src="{{item.structuredData.logo}}" style="width:50%" />

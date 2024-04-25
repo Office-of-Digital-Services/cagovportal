@@ -3,6 +3,7 @@ landing: Services
 description: Search for a service
 title: All services
 layout: landing
+dynamic_sidenavid: service
 eleventyNavigation:
   key: All Services
   parent: Services
@@ -13,13 +14,15 @@ eleventyNavigation:
   style="background-image: url('/images/services-lineart.svg'); background-repeat:no-repeat; background-position:right;">
   <div class="container p-y-md">
     {%- include "breadcrumbs.html" -%}
-    <h1 class="m-t-0">All services</h1>
+    <h1 class="m-t-0">{{title}}</h1>
   </div>
 </div>
 
 <div class="container p-y-lg">
   <div class="row">
-    {%- include "services-sidenav.html" -%}
+    <div class="col-lg-3 pb-lg-5 side-navigation sticky-6" role="complementary">
+      {%-include "dynamic-sidenav.html"-%} {%-include "side-filters.html"-%}
+    </div>
     <div class="col-lg-9">
       <p class="lead m-t">
         <span class="items-count">...</span>

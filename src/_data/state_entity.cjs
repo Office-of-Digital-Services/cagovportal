@@ -57,7 +57,9 @@ module.exports = async function () {
       name: x.AgencyFullName,
       description: x.Description,
       url: x.WebsiteURL,
-      logo: `https://stateentityprofile.ca.gov/Uploads/${x.LogoUrl}`,
+      logo: x.LogoUrl
+        ? `https://stateentityprofile.ca.gov/Uploads/${x.LogoUrl}`
+        : undefined,
 
       areaServed: {
         "@type": "State",
