@@ -8,7 +8,6 @@ window.addEventListener("DOMContentLoaded", () => {
     class extends HTMLElement {
       connectedCallback() {
         const inputid = this.dataset.inputid;
-
         if (!inputid) {
           throw new Error("Missing data-inputid");
         }
@@ -16,18 +15,17 @@ window.addEventListener("DOMContentLoaded", () => {
         const inputBox = /** @type {HTMLInputElement} */ (
           document.getElementById(inputid)
         );
-
         if (!inputBox) {
           throw new Error(`can't find searchbox with id ${inputid}`);
         }
 
+        // default the search box to the "q" querystring
         const q = new URLSearchParams(window.location.search).get("q");
-
         if (q) inputBox.value = q;
 
-        const countquery = this.dataset.countquery;
-
-        const countElements = document.querySelectorAll(countquery);
+        const countElements = document.querySelectorAll(
+          this.dataset.countquery
+        );
 
         const keyProperty = this.dataset.filterkey;
 
@@ -42,13 +40,17 @@ window.addEventListener("DOMContentLoaded", () => {
         /** @type {*[]} */
         const dataset = JSON.parse(datasetstring);
 
-        const elementRows = /** @type {NodeListOf<HTMLElement>} */ (
-          this.querySelectorAll("[data-key]")
-        );
+        const elementRows = [
+          .../** @type {NodeListOf<HTMLElement>} */ (
+            this.querySelectorAll("[data-key]")
+          )
+        ];
 
         if (!elementRows.length) {
           throw new Error(`can't find any elements with "data-key"`);
         }
+
+        const keyValues = [...new Set(elementRows.map(x => x.dataset.key))];
 
         const checkme = () => {
           const value = inputBox.value
@@ -56,34 +58,37 @@ window.addEventListener("DOMContentLoaded", () => {
             //.trim() not trimming on purpose
             .toLowerCase();
 
-          let nCount = 0;
-
-          elementRows.forEach(rowElement => {
-            const key = rowElement.dataset.key;
-
-            if (!key) {
-              throw new Error(`no data-key specified`);
-            }
-
+          //filter the data for the keys that match the search value
+          const keyMatches = keyValues.filter(key => {
+            // grab a row from the dataset that matches the key
             const datarow = dataset.find(x => x[keyProperty] == key);
 
             if (!datarow) {
-              throw new Error(`key not found in list - ${keyProperty}:${key}`);
+              throw new Error(
+                `key not found in data storage - ${keyProperty}:${key}`
+              );
             }
 
+            // join all the dataset values for this row together for general search
             const alldata = Object.values(datarow).join(" ");
 
-            const bShow =
+            return (
               !value ||
-              (alldata || "").replace(/\W/g, " ").toLowerCase().includes(value);
+              (alldata || "").replace(/\W/g, " ").toLowerCase().includes(value)
+            );
+          });
+
+          // Show/hide rows that match the key matches
+          elementRows.forEach(rowElement => {
+            const bShow = keyMatches.includes(rowElement.dataset.key);
 
             rowElement.style.display = bShow ? null : "none";
             rowElement.ariaHidden = bShow ? null : "true";
-            if (bShow) nCount++;
           });
 
+          // Apply test to count displays
           countElements.forEach(x => {
-            x.innerHTML = nCount.toLocaleString();
+            x.innerHTML = keyMatches.length.toLocaleString();
           });
         };
 
