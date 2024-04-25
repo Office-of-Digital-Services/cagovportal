@@ -8,30 +8,26 @@ dynamic_sidenavid: service
 {%-include "dynamic-sidenav.html"-%}
 -->
 -#} {%-set sidenav = dynamic_sidenav[dynamic_sidenavid]-%}
-<div class="col-lg-3 pb-lg-5" role="complementary">
-  <!-- Side navigation -->
-  <nav
-    aria-labelledby="navigation-list"
-    class="side-navigation sticky-6"
-    id="side-navigation">
-    <ul class="list-navigation">
-      {%- for link in sidenav %}
-      <li>
-        <a
-          href="{{-link.href-}}"
-          {%-if
-          link.href
-          in
-          page.url%}
-          active
-          class="active landing"
-          aria-current="page"
-          tabindex="-1"
-          {%-endif-%}>
-          {{-link.text | safe-}}
-        </a>
-      </li>
-      {%- endfor %}
-    </ul>
-  </nav>
-</div>
+
+<!-- Side navigation -->
+<nav aria-labelledby="navigation-list" id="side-navigation">
+  <ul class="list-navigation">
+    {%- for link in sidenav %}
+    <li>
+      <a
+        href="{{-link.href-}}"
+        {%-if
+        link.href
+        in
+        page.url%}
+        active
+        class="active landing"
+        aria-current="page"
+        tabindex="-1"
+        {%-endif-%}>
+        {{-link.text | safe-}}
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</nav>

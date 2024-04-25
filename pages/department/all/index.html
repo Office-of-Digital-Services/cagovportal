@@ -21,8 +21,11 @@ eleventyNavigation:
 <div class="container p-y-lg">
   <div class="row">
     <div class="row">
-      {%-include "dynamic-sidenav.html"-%}
-
+      <div
+        class="col-lg-3 pb-lg-5 side-navigation sticky-6"
+        role="complementary">
+        {%-include "dynamic-sidenav.html"-%} {%-include "side-filters.html"-%}
+      </div>
       <div class="col-lg-9">
         <p class="lead m-t">
           <span class="items-count">...</span>
