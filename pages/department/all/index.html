@@ -46,12 +46,13 @@ eleventyNavigation:
         </h2>
 
         <cagovhome-filterlist
-          data-inputid="searchbox"
-          data-countquery="#searchcount, .items-count"
-          data-filterstoragekey="agency"
-          data-filterkey="AgencyId">
+          data-search-input-id="searchbox"
+          data-result-count-query="#searchcount, .items-count"
+          data-filter-storage-key="agency"
+          data-row-filter-key="AgencyId"
+          data-filter-trigger-selector='input[name="AgencyTags"]'>
           {%- for agency in state_entity.agencies -%}
-          <span data-key="{{agency.AgencyId}}">
+          <span data-row-key="{{agency.AgencyId}}">
             <div class="d-flex">
               <div class="dep-image-wrapper">
                 <img
@@ -88,7 +89,7 @@ eleventyNavigation:
               </div>
             </div>
           </span>
-          <hr class="m-y-md" data-key="{{agency.AgencyId}}" />
+          <hr class="m-y-md" data-row-key="{{agency.AgencyId}}" />
 
           {%- endfor %}
         </cagovhome-filterlist>

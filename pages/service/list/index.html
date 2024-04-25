@@ -52,13 +52,14 @@ eleventyNavigation:
       </h2>
 
       <cagovhome-filterlist
-        data-inputid="searchbox"
-        data-countquery="#searchcount, span.items-count"
-        data-filterstoragekey="service"
-        data-filterkey="ServiceId">
+        data-search-input-id="searchbox"
+        data-result-count-query="#searchcount, span.items-count"
+        data-filter-storage-key="service"
+        data-row-filter-key="ServiceId"
+        data-filter-trigger-selector='input[name="AgencyTags"]'>
         <ul>
           {%- for service in state_entity.services -%}
-          <li data-key="{{service.ServiceId}}">
+          <li data-row-key="{{service.ServiceId}}">
             <a
               href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/">
               {{-service.ServiceName-}}
