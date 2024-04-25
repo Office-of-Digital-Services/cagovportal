@@ -77,8 +77,8 @@ window.addEventListener("DOMContentLoaded", () => {
               !value ||
               (alldata || "").replace(/\W/g, " ").toLowerCase().includes(value);
 
-            rowElement.style.display = bShow ? "" : "none";
-            rowElement.ariaHidden = (!bShow).toString();
+            rowElement.style.display = bShow ? null : "none";
+            rowElement.ariaHidden = bShow ? null : "true";
             if (bShow) nCount++;
           });
 
