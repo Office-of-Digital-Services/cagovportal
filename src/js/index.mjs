@@ -7,9 +7,10 @@ window.addEventListener("DOMContentLoaded", () => {
     "cagovhome-filterlist",
     class extends HTMLElement {
       connectedCallback() {
-        const inputid = this.dataset.inputid;
+        console.log(this.dataset);
+        const inputid = this.dataset.searchInputId;
         if (!inputid) {
-          throw new Error("Missing data-inputid");
+          throw new Error("Missing data-search-input-id");
         }
 
         const inputBox = /** @type {HTMLInputElement} */ (
@@ -24,12 +25,12 @@ window.addEventListener("DOMContentLoaded", () => {
         if (q) inputBox.value = q;
 
         const countElements = document.querySelectorAll(
-          this.dataset.countquery
+          this.dataset.resultCountQuery
         );
 
-        const keyProperty = this.dataset.filterkey;
+        const keyProperty = this.dataset.rowFilterKey;
 
-        const sessionStorageKey = this.dataset.filterstoragekey;
+        const sessionStorageKey = this.dataset.filterStorageKey;
 
         const datasetstring = sessionStorage[sessionStorageKey];
 
@@ -42,15 +43,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
         const elementRows = [
           .../** @type {NodeListOf<HTMLElement>} */ (
-            this.querySelectorAll("[data-key]")
+            this.querySelectorAll("[data-row-key]")
           )
         ];
 
         if (!elementRows.length) {
-          throw new Error(`can't find any elements with "data-key"`);
+          throw new Error(`can't find any elements with "data-row-key"`);
         }
 
-        const keyValues = [...new Set(elementRows.map(x => x.dataset.key))];
+        const keyValues = [...new Set(elementRows.map(x => x.dataset.rowKey))];
 
         const checkme = () => {
           const value = inputBox.value
@@ -85,7 +86,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
           // Show/hide rows that match the key matches
           elementRows.forEach(rowElement => {
-            const bShow = keyMatches.includes(rowElement.dataset.key);
+            const bShow = keyMatches.includes(rowElement.dataset.rowKey);
 
             rowElement.style.display = bShow ? null : "none";
             rowElement.ariaHidden = bShow ? null : "true";
