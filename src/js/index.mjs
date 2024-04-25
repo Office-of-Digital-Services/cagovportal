@@ -78,17 +78,17 @@ window.addEventListener("DOMContentLoaded", () => {
             );
           });
 
+          // Apply test to count displays
+          countElements.forEach(x => {
+            x.innerHTML = keyMatches.length.toLocaleString();
+          });
+
           // Show/hide rows that match the key matches
           elementRows.forEach(rowElement => {
             const bShow = keyMatches.includes(rowElement.dataset.key);
 
             rowElement.style.display = bShow ? null : "none";
             rowElement.ariaHidden = bShow ? null : "true";
-          });
-
-          // Apply test to count displays
-          countElements.forEach(x => {
-            x.innerHTML = keyMatches.length.toLocaleString();
           });
         };
 
