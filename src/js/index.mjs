@@ -1,6 +1,40 @@
 //@ts-check
 
-//Custom JS for this website goes here
+/*
+Custom HTML Element Attributes for Filtering Results
+
+When working with our custom HTML element for filtering search results, it's essential to understand the purpose and usage of each attribute. These attributes enhance accessibility, SEO, and user experience. Let's dive into the details:
+
+1. **`data-search-input-id`**
+   - Description: Represents the ID of the single textbox where users can enter search text.
+   - Purpose: Allows users to input search queries.
+   - Example Usage: `<cagovhome-filterlist data-search-input-id="searchbox">...</cagovhome-filterlist>`
+
+2. **`data-result-count-query`**
+   - Description: Specifies the CSS selector for elements that will display the current search result count.
+   - Purpose: Dynamically updates the result count based on user input.
+   - Example Usage: `<cagovhome-filterlist data-result-count-query="#searchcount">...</cagovhome-filterlist>`
+
+3. **`data-filter-storage-key`**
+   - Description: Holds the "sessionStorage" key where JSON data for filtering is stored.
+   - Purpose: Retains filter settings across sessions.
+   - Example Usage: `<cagovhome-filterlist data-filter-storage-key="service">...</cagovhome-filterlist>`
+
+4. **`data-row-filter-key`**
+   - Description: Specifies the single column key value in the data that identifies rows to be filtered.
+   - Purpose: Determines which rows match the filter criteria.
+   - Example Usage: `<p data-row-filter-key="ServiceId">...</p>`
+
+5. **`data-filter-trigger-selector`**
+   - Description: Represents the CSS selector for checkboxes, radio buttons, and other controls triggering further filtering.
+   - Purpose: Captures user interactions that affect filtering.
+   - Example Usage: `<cagovhome-filterlist data-filter-trigger-selector='input[name="topic"]'>...</cagovhome-filterlist>`
+
+6. **`data-row-key`**
+   - Description: Used within each "row" to match the value of `data-row-filter-key`.
+   - Purpose: Determines whether a row should be displayed based on the filter criteria.
+   - Example Usage: `<p data-row-key="1">...</p>`
+ */
 
 window.addEventListener("DOMContentLoaded", () => {
   customElements.define(
