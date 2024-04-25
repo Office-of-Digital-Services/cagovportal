@@ -55,7 +55,8 @@ eleventyNavigation:
         data-search-input-id="searchbox"
         data-result-count-query="#searchcount, span.items-count"
         data-filter-storage-key="service"
-        data-row-filter-key="ServiceId">
+        data-row-filter-key="ServiceId"
+        data-filter-trigger-selector='input[name="AgencyTags"]'>
         <ul>
           {%- for service in state_entity.services -%}
           <li data-row-key="{{service.ServiceId}}">
