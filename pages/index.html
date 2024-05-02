@@ -243,27 +243,17 @@ eleventyNavigation:
       <div class="brd-solid-1 brd-gray-200 rounded-4 p-a">
         <!-- News list  -->
         <h2 class="m-t">In the spotlight</h2>
+
+        {%- set counter = 0 -%} {%- for story in
+        getTopStories.rss.channel[0].item -%} {%- if counter < 3 and
+        story.category == "Press Releases" -%}
         <hr class="m-y-md" />
         <h3 class="lead font-weight-700">
-          <a href="javascript:;" aria-disabled="true"> More housing, faster </a>
+          <a href="{{ story.link }}" aria-disabled="true">{{ story.title }}</a>
         </h3>
-        <p>March 7, 2024</p>
-        <hr class="m-y-md" />
-        <h3 class="lead font-weight-700">
-          <a href="javascript:;" aria-disabled="true">
-            Millions of Californians get average of $146 credits on their April
-            utility bills thanks to state’s climate program
-          </a>
-        </h3>
-        <p>February 29, 2024</p>
-        <hr class="m-y-md" />
-        <h3 class="lead font-weight-700">
-          <a href="javascript:;" aria-disabled="true">
-            Star Wars’ The Mandalorian & Grogu to be filmed in California
-            through the state’s film and TV tax credit program
-          </a>
-        </h3>
-        <p>February 26, 2024</p>
+        <p>{{ story.pubDate | customDate }}</p>
+        {%- set counter = counter + 1 -%} {%- endif -%} {%- endfor %}
+
         <hr class="m-y-md" />
         <!-- End News list  -->
 
@@ -309,12 +299,6 @@ eleventyNavigation:
   </div>
 </div>
 
-<ul>
-  {%- for story in getTopStories.rss.channel[0].item -%}
-  <li>
-    <h2>{{ story.title }}</h2>
-    <p>{{ story.pubDate}}</p>
-    <p>{{ story.description | safe }}</p>
-  </li>
-  {%- endfor %}
-</ul>
+<pre>
+{{ getTopStories | dump(2) }}
+</pre>
