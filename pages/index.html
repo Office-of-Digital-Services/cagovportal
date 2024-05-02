@@ -310,7 +310,12 @@ eleventyNavigation:
 </div>
 
 <ul>
-  {%- for story in getTopStories.item -%}
-  <li>{{ story.title }}</li>
+  {%- for story in getTopStories.rss.channel[0].item -%}
+  <li>
+    <h2>{{ story.title }}</h2>
+    <a href="{{ story.link }}">more</a>
+    <p>{{ story.pubDate}}</p>
+    <p>{{ story.description }}</p>
+  </li>
   {%- endfor %}
 </ul>
