@@ -308,3 +308,9 @@ eleventyNavigation:
     </div>
   </div>
 </div>
+
+<ul>
+  {%- for story in getTopStories.item -%}
+  <li>{{ story.title }}</li>
+  {%- endfor %}
+</ul>
