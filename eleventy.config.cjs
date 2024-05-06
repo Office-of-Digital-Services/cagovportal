@@ -65,6 +65,13 @@ module.exports = function (
   // so you can look at {% if ELEVENTY_ENV !== 'dev' %}
   eleventyConfig.addGlobalData("ELEVENTY_ENV", process.env.ELEVENTY_ENV);
 
+  // Custom filter to format dates
+  eleventyConfig.addFilter("customDate", dateString => {
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    const parsedDate = new Date(dateString);
+    return parsedDate.toLocaleDateString(undefined, options);
+  });
+
   //Start with default config, easier to configure 11ty later
   const config = defaultConfig(eleventyConfig);
 

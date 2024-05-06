@@ -23,6 +23,7 @@
     "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@cagovweb/state-template": "^6.3.1",
-    "terser": "^5.30.3"
+    "terser": "^5.30.3",
+    "xml2js": "^0.6.2"
   }
 }
