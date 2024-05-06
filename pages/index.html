@@ -241,12 +241,12 @@ eleventyNavigation:
   <div class="row">
     <div class="col-md-8 m-b-md">
       <div class="brd-solid-1 brd-gray-200 rounded-4 p-a">
-        <!-- News list  -->
+        <!-- News list -->
         <h2 class="m-t">In the spotlight</h2>
 
         {%- set counter = 0 -%} {%- for story in
-        getTopStories.rss.channel[0].item -%} {%- if counter < 3 and
-        story.category == "Press Releases" -%}
+        getTopStories.rss.channel[0].item -%} {%- if counter < 3 and ("Press
+        Releases" in story.category or "Top Story" in story.category) -%}
         <hr class="m-y-md" />
         <h3 class="lead font-weight-700">
           <a href="{{ story.link }}" aria-disabled="true">{{ story.title }}</a>
@@ -298,3 +298,8 @@ eleventyNavigation:
     </div>
   </div>
 </div>
+
+<pre>
+  {{ getTopStories | dump(2) }}
+  </pre
+>
