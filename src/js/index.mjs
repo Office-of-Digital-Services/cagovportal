@@ -57,13 +57,19 @@ window.addEventListener("DOMContentLoaded", () => {
         const q = new URLSearchParams(window.location.search).get("q");
         if (q) inputBox.value = q;
 
-        const countElements = document.querySelectorAll(
-          this.dataset.resultCountQuery
-        );
+        const resultCountQuery = this.dataset.resultCountQuery;
+        const countElements = [
+          ...(resultCountQuery
+            ? document.querySelectorAll(resultCountQuery)
+            : [])
+        ];
 
         const keyProperty = this.dataset.rowFilterKey;
+        if (!keyProperty) throw new Error("missing data-row-filter-key");
 
         const sessionStorageKey = this.dataset.filterStorageKey;
+        if (!sessionStorageKey)
+          throw new Error("missing data-filter-storage-key");
 
         const datasetstring = sessionStorage[sessionStorageKey];
 
@@ -83,9 +89,11 @@ window.addEventListener("DOMContentLoaded", () => {
         }
 
         const filterTriggerSelector = this.dataset.filterTriggerSelector;
-        const triggerElements = /** @type {HTMLInputElement[]} */ ([
-          ...document.querySelectorAll(filterTriggerSelector)
-        ]);
+        const triggerElements = filterTriggerSelector
+          ? /** @type {HTMLInputElement[]} */ ([
+              ...document.querySelectorAll(filterTriggerSelector)
+            ])
+          : [];
 
         if (filterTriggerSelector && !triggerElements.length) {
           throw new Error(
@@ -156,7 +164,7 @@ window.addEventListener("DOMContentLoaded", () => {
           elementRows.forEach(rowElement => {
             const bShow = keyMatches.includes(rowElement.dataset.rowKey);
 
-            rowElement.style.display = bShow ? null : "none";
+            rowElement.style.display = bShow ? "" : "none";
             rowElement.ariaHidden = bShow ? null : "true";
           });
         };
