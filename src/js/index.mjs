@@ -113,8 +113,12 @@ window.addEventListener("DOMContentLoaded", () => {
             //.trim() not trimming on purpose
             .toLowerCase();
 
+          const anyTriggersChecked = triggerElements.some(x => x.checked);
+
           //filter the data for the keys that match the search value
           const keyMatches = keyValues.filter(key => {
+            if (!anyTriggersChecked && !value) return true; //return all if no filters selected
+
             // grab a row from the dataset that matches the key
             const datarow = storageData.find(x => x[keyProperty] == key);
 
@@ -128,14 +132,14 @@ window.addEventListener("DOMContentLoaded", () => {
             const alldata = Object.values(datarow).join(" ");
 
             const textBoxMatches =
-              !value ||
+              value &&
               (alldata || "").replace(/\W/g, " ").toLowerCase().includes(value);
 
-            const filtterTriggersMatch = triggerElements.every(
-              x => !x.checked || datarow[x.name].includes(x.value)
+            const filterTriggersMatch = triggerElements.some(
+              x => x.checked && datarow[x.name].includes(x.value)
             );
 
-            return textBoxMatches && filtterTriggersMatch;
+            return textBoxMatches || filterTriggersMatch;
           });
 
           // Apply test to count displays
