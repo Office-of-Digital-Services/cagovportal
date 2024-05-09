@@ -1,3 +1,4 @@
+//@ts-check
 const parseString = require("xml2js").parseString;
 const EleventyFetch = require("@11ty/eleventy-fetch");
 
