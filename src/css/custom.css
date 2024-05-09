@@ -101,6 +101,13 @@ cagov-feedback .feedback-form-button:focus {
   overflow: hidden;
 }
 
+@media (min-width: 992px) {
+  .service-description,
+  .department-description {
+    -webkit-line-clamp: 2;
+  }
+}
+
 /* disables clicks when aria-cuurent="page" */
 a[aria-current="page"] {
   pointer-events: none;
