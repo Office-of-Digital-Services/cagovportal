@@ -8,7 +8,7 @@ async function getTopStories() {
   const url = `https://www.gov.ca.gov/feed/`;
   const response = await EleventyFetch(url, {
     duration: "1d",
-    type: "text"
+    type: "xml"
   });
   const articles = response;
 
