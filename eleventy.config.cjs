@@ -68,14 +68,12 @@ module.exports = function (
   // Custom filter to format dates
   eleventyConfig.addFilter(
     "customDate",
-    (/** @type {string | number | Date} */ dateString) => {
-      const parsedDate = new Date(dateString);
-      return parsedDate.toLocaleDateString(undefined, {
+    (/** @type {string | number | Date} */ dateString) =>
+      new Date(dateString).toLocaleDateString(undefined, {
         year: "numeric",
         month: "long",
         day: "numeric"
-      });
-    }
+      })
   );
 
   //Start with default config, easier to configure 11ty later
