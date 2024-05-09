@@ -6,27 +6,31 @@ const EleventyFetch = require("@11ty/eleventy-fetch");
  */
 async function getTopStories() {
   const url = `https://www.gov.ca.gov/feed/`;
-  const response = await EleventyFetch(url, {
-    duration: "1d",
-    type: "xml"
-  });
-  const articles = response;
 
-  const articlesString =
-    typeof articles === "string" ? articles : articles.toString();
+  try {
+    const response = await EleventyFetch(url, {
+      duration: "1d",
+      type: "xml"
+    });
 
-  // parse XML
-  let jsonObj;
-  parseString(articlesString, (err, result) => {
-    if (err) {
-      console.error("Error parsing XML:", err);
-    } else {
-      // Process the parsed result (stored in 'result')
-      jsonObj = result;
-    }
-  });
+    const articlesString = response.toString();
 
-  return jsonObj;
+    // parse XML
+    let jsonObj;
+    parseString(articlesString, (err, result) => {
+      if (err) {
+        console.error("Error parsing XML:", err);
+      } else {
+        // Process the parsed result (stored in 'result')
+        jsonObj = result;
+      }
+    });
+
+    return jsonObj;
+  } catch (e) {
+    console.error("Error grabbing news feed", e);
+    return null;
+  }
 }
 
 module.exports = getTopStories;
