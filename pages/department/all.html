@@ -14,7 +14,7 @@ eleventyNavigation:
   style="background-image: url('/images/departments-lineart.svg'); background-repeat:no-repeat; background-position:right;">
   <div class="container p-y-md">
     {%- include "breadcrumbs.html" -%}
-    <h1 class="m-t-0">{{title}}</h1>
+    <h1 class="m-t-0 color-p2">{{title}}</h1>
   </div>
 </div>
 
@@ -58,6 +58,7 @@ eleventyNavigation:
                 <img
                   src="{{agency.structuredData.logo if agency.structuredData.logo else 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='}}"
                   class="img-fluid"
+                  style="aspect-ratio: 1 / 1; object-fit: contain;"
                   loading="lazy"
                   alt="{{agency.FriendlyName}} logo" />
               </div>

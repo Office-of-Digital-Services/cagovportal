@@ -120,3 +120,21 @@ a[aria-current="page"] {
 .reset-x-icon::-webkit-search-cancel-button {
   display: unset !important;
 }
+
+/* form check */
+.form-check-input {
+  border-color: var(--gray-700);
+}
+.form-check-label {
+  font-weight: 400;
+}
+
+/* Hide scrollbars from overflow auto */
+.overflow-auto::-webkit-scrollbar {
+  display: none;
+}
+
+.overflow-auto {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
