@@ -53,10 +53,12 @@ module.exports = function (
 
   eleventyConfig.addNunjucksAsyncFilter(
     "jsmin",
-    async (
-      /** @type {string} */ code,
-      /** @type {(arg0: null, arg1: string) => void} */ callback
-    ) => {
+    /**
+     *
+     * @param {string} code
+     * @param {(arg0: null, arg1: string) => void} callback
+     */
+    async (code, callback) => {
       const minified = await minify(code);
       callback(null, minified.code);
     }
@@ -68,7 +70,10 @@ module.exports = function (
   // Custom filter to format dates
   eleventyConfig.addFilter(
     "customDate",
-    (/** @type {string | number | Date} */ dateString) =>
+    /**
+     * @param {string | number | Date} dateString
+     */
+    dateString =>
       new Date(dateString).toLocaleDateString(undefined, {
         year: "numeric",
         month: "long",
