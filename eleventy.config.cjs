@@ -60,7 +60,7 @@ module.exports = function (
      */
     async (code, callback) => {
       const minified = await minify(code);
-      callback(null, minified.code);
+      callback(null, minified.code || "");
     }
   );
 
