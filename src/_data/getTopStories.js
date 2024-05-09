@@ -13,11 +13,9 @@ async function getTopStories() {
       type: "xml"
     });
 
-    const articlesString = response.toString();
-
     // parse XML
     let jsonObj;
-    parseString(articlesString, (err, result) => {
+    parseString(response.toString(), (err, result) => {
       if (err) {
         console.error("Error parsing XML:", err);
       } else {
