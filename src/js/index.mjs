@@ -113,34 +113,38 @@ window.addEventListener("DOMContentLoaded", () => {
             //.trim() not trimming on purpose
             .toLowerCase();
 
-          const anyTriggersChecked = triggerElements.some(x => x.checked);
+          const checkedTriggers = triggerElements.filter(x => x.checked);
 
           //filter the data for the keys that match the search value
-          const keyMatches = keyValues.filter(key => {
-            if (!anyTriggersChecked && !value) return true; //return all if no filters selected
+          const keyMatches =
+            !checkedTriggers.length && !value // Show everything if nothing is filter by
+              ? keyValues
+              : keyValues.filter(key => {
+                  // grab a row from the dataset that matches the key
+                  const datarow = storageData.find(x => x[keyProperty] == key);
 
-            // grab a row from the dataset that matches the key
-            const datarow = storageData.find(x => x[keyProperty] == key);
+                  if (!datarow) {
+                    throw new Error(
+                      `data-row-key not found in data storage - ${keyProperty}:${key}`
+                    );
+                  }
 
-            if (!datarow) {
-              throw new Error(
-                `data-row-key not found in data storage - ${keyProperty}:${key}`
-              );
-            }
+                  // join all the dataset values for this row together for general search
+                  const alldata = Object.values(datarow).join(" ");
 
-            // join all the dataset values for this row together for general search
-            const alldata = Object.values(datarow).join(" ");
+                  const textBoxMatches = //true if they typed something and it's in any of the data
+                    value &&
+                    (alldata || "")
+                      .replace(/\W/g, " ")
+                      .toLowerCase()
+                      .includes(value);
 
-            const textBoxMatches =
-              value &&
-              (alldata || "").replace(/\W/g, " ").toLowerCase().includes(value);
+                  const filterTriggersMatch = checkedTriggers.some(x =>
+                    datarow[x.name].includes(x.value)
+                  );
 
-            const filterTriggersMatch = triggerElements.some(
-              x => x.checked && datarow[x.name].includes(x.value)
-            );
-
-            return textBoxMatches || filterTriggersMatch;
-          });
+                  return textBoxMatches || filterTriggersMatch;
+                });
 
           // Apply test to count displays
           countElements.forEach(x => {
