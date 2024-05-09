@@ -69,10 +69,12 @@ module.exports = function (
   eleventyConfig.addFilter(
     "customDate",
     (/** @type {string | number | Date} */ dateString) => {
-      /** @type {Intl.DateTimeFormatOptions} */
-      const options = { year: "numeric", month: "long", day: "numeric" };
       const parsedDate = new Date(dateString);
-      return parsedDate.toLocaleDateString(undefined, options);
+      return parsedDate.toLocaleDateString(undefined, {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      });
     }
   );
 
