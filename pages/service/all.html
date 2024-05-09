@@ -29,7 +29,7 @@ eleventyNavigation:
         services
       </p>
       <label class="sr-only" for="searchbox">Search all services</label>
-      <div class="d-flex">
+      <div class="d-flex m-b-lg">
         <style>
           /*
           Bringing back the little "X" buttons
@@ -51,16 +51,6 @@ eleventyNavigation:
         <span id="searchcount">...</span> services found
       </h2>
 
-      <p class="bold">
-        Sort by
-        <button
-          class="bg-transparent border-0 color-primary color-primary-hover bold az-sort">
-          A-Z<span
-            class="ca-gov-icon-caret-down font-size-25 pos-rel bottom-minus-3"
-            aria-hidden="true"></span>
-        </button>
-      </p>
-
       <cagovhome-filterlist
         data-search-input-id="searchbox"
         data-result-count-query="#searchcount, span.items-count"
@@ -69,15 +59,11 @@ eleventyNavigation:
         data-filter-trigger-selector='input[name="AgencyTags"]'>
         {%- for service in state_entity.services -%}
         <article data-row-key="{{service.ServiceId}}" class="pos-rel">
-          <h2 class="lead bold m-t-0 m-b">{{service.ServiceName}}</h2>
+          <h2 class="lead bold m-t-0 m-b">
+            <a href="{{ service.ServiceUrl }}">{{service.ServiceName}}</a>
+          </h2>
           <p class="font-size-14 bold m-t-sm">by {{service.FriendlyName}}</p>
           <p class="service-description">{{service.Description}}</p>
-          <a
-            class="btn btn-outline-primary btn-lg m-r-sm"
-            href="{{ service.ServiceUrl }}"
-            >Launch
-            <span class="sr-only">{{service.ServiceName}}</span> service</a
-          >
           <a
             class="btn btn-outline-primary btn-lg"
             href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
