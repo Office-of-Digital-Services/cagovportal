@@ -113,30 +113,39 @@ window.addEventListener("DOMContentLoaded", () => {
             //.trim() not trimming on purpose
             .toLowerCase();
 
+          const checkedTriggers = triggerElements.filter(x => x.checked);
+
           //filter the data for the keys that match the search value
-          const keyMatches = keyValues.filter(key => {
-            // grab a row from the dataset that matches the key
-            const datarow = storageData.find(x => x[keyProperty] == key);
+          const keyMatches =
+            !checkedTriggers.length && !value // Show everything if nothing is filter by
+              ? keyValues
+              : keyValues.filter(key => {
+                  // grab a row from the dataset that matches the key
+                  const datarow = storageData.find(x => x[keyProperty] == key);
 
-            if (!datarow) {
-              throw new Error(
-                `data-row-key not found in data storage - ${keyProperty}:${key}`
-              );
-            }
+                  if (!datarow)
+                    throw new Error(
+                      `data-row-key not found in data storage - ${keyProperty}:${key}`
+                    );
 
-            // join all the dataset values for this row together for general search
-            const alldata = Object.values(datarow).join(" ");
+                  // join all the dataset values for this row together for general search
+                  const alldata = Object.values(datarow).join(" ");
 
-            const textBoxMatches =
-              !value ||
-              (alldata || "").replace(/\W/g, " ").toLowerCase().includes(value);
+                  const textBoxMatches = //true if nothing typed or it matches data
+                    !value ||
+                    (alldata || "")
+                      .replace(/\W/g, " ")
+                      .toLowerCase()
+                      .includes(value);
 
-            const filtterTriggersMatch = triggerElements.every(
-              x => !x.checked || datarow[x.name].includes(x.value)
-            );
+                  const filterTriggersMatch = //true if nothing checked or ANY checks match data
+                    !checkedTriggers.length ||
+                    checkedTriggers.some(x =>
+                      datarow[x.name].includes(x.value)
+                    );
 
-            return textBoxMatches && filtterTriggersMatch;
-          });
+                  return textBoxMatches && filterTriggersMatch; //Textbox and checks need to match up
+                });
 
           // Apply test to count displays
           countElements.forEach(x => {
