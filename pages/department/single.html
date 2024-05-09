@@ -60,29 +60,30 @@ eleventyComputed:
         </li>
         {% endif %}
       </ul>
-      <a class="btn btn-default btn-lg m-r-sm" href="{{item.WebsiteURL}}"
+      <a class="btn btn-outline-primary btn-lg m-r-sm" href="{{item.WebsiteURL}}"
         >Department website</a
       >
-      <a href="{{item.ContactURL}}/" class="btn btn-default btn-lg"
+      <a href="{{item.ContactURL}}/" class="btn btn-outline-primary btn-lg"
         >More contact info</a
       >
       <hr class="m-t-md" />
 
       <h2 class="m-t-md">Description</h2>
-      <p>{{item.Description}}</p>
+      <p class="m-b-lg">{{item.Description}}</p>
 
-      <h2>Services</h2>
+
+      
       {%- for service in state_entity.services | pluck('AgencyId',item.AgencyId)
       -%}
-      <p class="lead">
-        <a
-          href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
+      <p class="lead bold">
+        <a href="{{ service.ServiceUrl }}"
           >{{service.ServiceName}}</a
         >
         <p class="service-description">{{service.Description}}</p>
           <a
-            class="btn btn-default btn-lg m-r-sm"
-            href="{{ service.ServiceUrl }}"
+            class="btn btn-outline-primary btn-lg m-r-sm"
+            href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
+            
             >More details
             <span class="sr-only">about {{service.ServiceName}} service</span></a
           >
