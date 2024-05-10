@@ -60,7 +60,9 @@ eleventyComputed:
         </li>
         {% endif %}
       </ul>
-      <a class="btn btn-outline-primary btn-lg m-r-sm" href="{{item.WebsiteURL}}"
+      <a
+        class="btn btn-outline-primary btn-lg m-r-sm"
+        href="{{item.WebsiteURL}}"
         >Department website</a
       >
       <a href="{{item.ContactURL}}/" class="btn btn-outline-primary btn-lg"
@@ -71,28 +73,25 @@ eleventyComputed:
       <h2 class="m-t-md">Description</h2>
       <p class="m-b-lg">{{item.Description}}</p>
 
-      {%- if state_entity.services | pluck('AgencyId',item.AgencyId) | length -%}
-      <h2>Services</h2>
-      {% endif %}
-      {%- for service in state_entity.services | pluck('AgencyId',item.AgencyId)
+      {%- if state_entity.services | pluck('AgencyId',item.AgencyId) | length
       -%}
+      <h2>Services</h2>
+      {% endif %} {%- for service in state_entity.services |
+      pluck('AgencyId',item.AgencyId) -%}
       <p class="lead bold">
-        <a href="{{ service.ServiceUrl }}"
-          >{{service.ServiceName}}</a
-        >
-        <p class="service-description">{{service.Description}}</p>
-          <a
-            class="btn btn-outline-primary btn-lg m-r-sm"
-            href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
-            
-            >More details
-            <span class="sr-only">about {{service.ServiceName}} service</span></a
-          >
+        <a href="{{ service.ServiceUrl }}">{{service.ServiceName}}</a>
       </p>
-      <hr class="m-b-lg">
+      <p class="service-description">{{service.Description}}</p>
+      <a
+        class="btn btn-outline-primary btn-lg m-r-sm"
+        href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
+        >More details
+        <span class="sr-only">about {{service.ServiceName}} service</span></a
+      >
+
+      <hr class="m-b-lg" />
 
       {%- endfor %}
-
     </div>
   </div>
 </div>
