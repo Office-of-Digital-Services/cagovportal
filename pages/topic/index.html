@@ -1,0 +1,52 @@
+---
+landing: Services
+description: List all topics
+title: Topics list
+layout: landing
+dynamic_sidenavid: topic
+eleventyNavigation:
+  key: Topics list
+  parent: Services
+---
+
+<div
+  class="section-understated"
+  style="background-image: url('/images/services-lineart.svg'); background-repeat:no-repeat; background-position:right;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0">{{title}}</h1>
+  </div>
+</div>
+
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-lg-3 pb-lg-5 side-navigation sticky-6" role="complementary">
+      {%-include "dynamic-sidenav.html"-%}
+    </div>
+    <div class="col-lg-9">
+      <p>
+        Each state service falls into one or more themed topics. You can browse
+        the full list or check out individual topic pages for more information.
+      </p>
+
+      {%- for topic in topics | sortBy("featureOrder") -%}
+      <h2>
+        <a href="/topic/{{- topic.topicId -}}/">{{-topic.name-}}</a>
+      </h2>
+
+      <ul>
+        {%- for service in state_entity.services |
+        pluck('AgencyTags',topic.name,"includes") -%}
+        <li data-row-key="{{service.ServiceId}}">
+          <a
+            href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/">
+            {{-service.ServiceName-}}
+          </a>
+        </li>
+        {%- endfor %}
+      </ul>
+
+      {%- endfor %}
+    </div>
+  </div>
+</div>
