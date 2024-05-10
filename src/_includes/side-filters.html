@@ -1,10 +1,7 @@
-<h2 class="m-b">Topics</h3>
-<hr class="m-b-md">
+<h2 class="m-b">Topics</h2>
+<hr class="m-b-md" />
 
-
-{% set topicData = state_entity[side_filter_data] %}
-{%- for topic in topics -%}
-
+{%- for topic in topics %}
 <div class="form-check m-b-sm">
   <input
     class="form-check-input"
@@ -12,9 +9,13 @@
     value="{{topic.name}}"
     name="AgencyTags"
     id="chkTopic{{-topic.topicId-}}" />
-  <label class="form-check-label" for="chkTopic{{-topic.topicId-}}"
-    >{{topic.name}} <em>({{(topicData | pluck("AgencyTags",topic.name,"includes")).length }})</em> </label
-  >
+  <label class="form-check-label" for="chkTopic{{-topic.topicId-}}">
+    {{topic.name}}
+    <span>
+      ({{(state_entity[side_filter_data] |
+      pluck("AgencyTags",topic.name,"includes")).length }})
+    </span>
+  </label>
 </div>
 
 {%- endfor %}
