@@ -71,8 +71,9 @@ eleventyComputed:
       <h2 class="m-t-md">Description</h2>
       <p class="m-b-lg">{{item.Description}}</p>
 
-
-      
+      {%- if state_entity.services | pluck('AgencyId',item.AgencyId) | length -%}
+      <h2>Services</h2>
+      {% endif %}
       {%- for service in state_entity.services | pluck('AgencyId',item.AgencyId)
       -%}
       <p class="lead bold">
