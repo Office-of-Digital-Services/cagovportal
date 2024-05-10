@@ -9,6 +9,22 @@ module.exports = async function () {
       "Assistance and social programs"
     );
 
+  /**
+   * Recursively trims strings in the object
+   * @param {{[x: string]: string | object}} obj
+   */
+  const trimObjectProperties = obj => {
+    if (obj && typeof obj === "object") {
+      Object.keys(obj).forEach(key => {
+        if (typeof obj[key] === "object") {
+          trimObjectProperties(obj[key]);
+        } else if (typeof obj[key] === "string") {
+          obj[key] = obj[key].trim();
+        }
+      });
+    }
+  };
+
   const urls = [
     "https://api.stateentityprofile.ca.gov/api/Agencies/Get?page=0&pageSize=0&lang=en",
     "https://api.stateentityprofile.ca.gov/api/Services/Get?page=0&pageSize=0&lang=en",
@@ -34,31 +50,33 @@ module.exports = async function () {
     qa: /** @type {*[]} */ (returns[2])
   };
 
-  results.agencies.forEach(x => {
-    x["AgencyFullName"] = `${x["FriendlyName"]} (${x["Acronym"]})`;
+  results.agencies.forEach(item => {
+    trimObjectProperties(item);
+
+    item["AgencyFullName"] = `${item["FriendlyName"]} (${item["Acronym"]})`;
 
     //Fix annoying typos
-    x["AgencyTags"] = cleanup(x["AgencyTags"]);
+    item["AgencyTags"] = cleanup(item["AgencyTags"]);
 
     const socialLinks = [];
-    if (x.Facebook) {
-      socialLinks.push(`https://www.facebook.com/${x.Facebook}`);
+    if (item.Facebook) {
+      socialLinks.push(`https://www.facebook.com/${item.Facebook}`);
     }
-    if (x.TwitterAccount) {
-      socialLinks.push(`https://www.twitter.com/${x.TwitterAccount}`);
+    if (item.TwitterAccount) {
+      socialLinks.push(`https://www.twitter.com/${item.TwitterAccount}`);
     }
-    if (x.YouTube) {
-      socialLinks.push(`https://www.youtube.com/${x.YouTube}`);
+    if (item.YouTube) {
+      socialLinks.push(`https://www.youtube.com/${item.YouTube}`);
     }
 
-    x["structuredData"] = {
+    item["structuredData"] = {
       "@context": "https://schema.org",
       "@type": "GovernmentOrganization",
-      name: x.AgencyFullName,
-      description: x.Description,
-      url: x.WebsiteURL,
-      logo: x.LogoUrl
-        ? `https://stateentityprofile.ca.gov/Uploads/${x.LogoUrl}`
+      name: item.AgencyFullName,
+      description: item.Description,
+      url: item.WebsiteURL,
+      logo: item.LogoUrl
+        ? `https://stateentityprofile.ca.gov/Uploads/${item.LogoUrl}`
         : undefined,
 
       areaServed: {
@@ -68,15 +86,17 @@ module.exports = async function () {
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer service",
-        telephone: x.ContactPhone,
-        url: x.ContactURL,
-        email: x.ContactEmail
+        telephone: item.ContactPhone,
+        url: item.ContactURL,
+        email: item.ContactEmail
       },
       sameAs: socialLinks
     };
   });
 
   results.services.forEach(item => {
+    trimObjectProperties(item);
+
     //Fix annoying typos
     item["AgencyTags"] = cleanup(item["AgencyTags"]);
 
