@@ -85,14 +85,17 @@ eleventyComputed:
         {{- ", " if not loop.last -}} {%- endfor %}
       </p>
 
+      {%- set related_services = state_entity.services |
+      pluck("AgencyId",item.AgencyId) | pluckNOT("ServiceId",item.ServiceId) |
+      sortBy("ServiceName") -%} {%- if related_services.length %}
+
       <h3>Related services</h3>
       <p class="keywords">
-        {%- for related in state_entity.services |
-        pluck("AgencyId",item.AgencyId) | sortBy("ServiceName") -%}{%- if
-        related.ServiceId !== item.ServiceId %}
+        {%- for related in related_services %}
         <a href="../{{related.ServiceId}}/">{{-related.ServiceName-}}</a>
-        {{- ", " if not loop.last -}}{%- endif %}{%- endfor %}
+        {{- ", " if not loop.last -}}{%- endfor %}
       </p>
+      {%- endif %}
 
       <h3>Keywords</h3>
       <p class="keywords">

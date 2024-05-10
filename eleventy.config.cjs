@@ -32,6 +32,16 @@ module.exports = function (
   );
 
   eleventyConfig.addFilter(
+    "pluckNOT",
+    /**
+     * @param {[]} arr
+     * @param {string} attr
+     * @param {*} value
+     */
+    (arr, attr, value) => arr.filter(item => item[attr] !== value)
+  );
+
+  eleventyConfig.addFilter(
     "pluckContains",
     /**
      * @param {[]} arr
