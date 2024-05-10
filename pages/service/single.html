@@ -82,8 +82,7 @@ eleventyComputed:
         <a href="/service/all/?q={{tag | trim | urlencode}}+">
           {{- tag | trim -}}
         </a>
-        <span class="m-r-sm">,</span>
-        {%- endfor %}
+        {{- ", " if not loop.last -}} {%- endfor %}
       </p>
 
       <h3>Related services</h3>
@@ -101,7 +100,7 @@ eleventyComputed:
         <a href="/service/all/?q={{keyword | trim | urlencode}}+">
           {{- keyword | trim -}}
         </a>
-        <span class="m-r-sm">,</span> {%- endfor %}
+        {{- ", " if not loop.last -}} {%- endfor %}
       </p>
 
       <!-- Begin Structured Data for QAPage -->
