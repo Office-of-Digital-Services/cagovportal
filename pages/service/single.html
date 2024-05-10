@@ -75,6 +75,16 @@ eleventyComputed:
         <a href="tel:{{item.ContactPhone}}">{{item.ContactPhone}}</a>
       </p>
 
+      {%- for qa in item.QA -%} {%- if loop.first %}
+      <h3>Frequently Asked Questions</h3>
+      {%- endif %}
+      <cagov-accordion>
+        <details>
+          <summary>{{qa.Question}}</summary>
+          <div class="accordion-body">{{ qa.Answer | safe }}</div>
+        </details>
+      </cagov-accordion>
+      {%- endfor %}
       <hr class="m-t-md" />
       <h3 class="m-t-md">Topics</h3>
       <p class="keywords">
