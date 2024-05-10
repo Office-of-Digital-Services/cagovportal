@@ -62,36 +62,34 @@ eleventyComputed:
       </ul>
       <a
         class="btn btn-outline-primary btn-lg m-r-sm"
-        href="{{item.WebsiteURL}}"
-        >Department website</a
-      >
-      <a href="{{item.ContactURL}}/" class="btn btn-outline-primary btn-lg"
-        >More contact info</a
-      >
+        href="{{item.WebsiteURL}}">
+        Department website
+      </a>
+      <a href="{{item.ContactURL}}/" class="btn btn-outline-primary btn-lg">
+        More contact info
+      </a>
       <hr class="m-t-md" />
 
       <h2 class="m-t-md">Description</h2>
       <p class="m-b-lg">{{item.Description}}</p>
 
-      {%- if state_entity.services | pluck('AgencyId',item.AgencyId) | length
-      -%}
+      {% for service in state_entity.services | pluck('AgencyId',item.AgencyId)
+      -%} {%- if loop.first -%}
       <h2>Services</h2>
-      {% endif %} {%- for service in state_entity.services |
-      pluck('AgencyId',item.AgencyId) -%}
+      {% endif %}
       <p class="lead bold">
         <a href="{{ service.ServiceUrl }}">{{service.ServiceName}}</a>
       </p>
       <p class="service-description">{{service.Description}}</p>
       <a
         class="btn btn-outline-primary btn-lg m-r-sm"
-        href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
-        >More details
-        <span class="sr-only">about {{service.ServiceName}} service</span></a
-      >
+        href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/">
+        More details
+        <span class="sr-only">about {{service.ServiceName}} service</span>
+      </a>
 
       <hr class="m-b-lg" />
-
-      {%- endfor %}
+      {% endfor %}
     </div>
   </div>
 </div>
