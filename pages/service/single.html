@@ -86,8 +86,8 @@ eleventyComputed:
       </p>
 
       {%- set related_services = state_entity.services |
-      pluck("AgencyId",item.AgencyId) | pluckNOT("ServiceId",item.ServiceId) |
-      sortBy("ServiceName") -%} {%- if related_services.length %}
+      pluck("AgencyId",item.AgencyId) | pluck("ServiceId",item.ServiceId,"not")
+      | sortBy("ServiceName") -%} {%- if related_services.length %}
 
       <h3>Related services</h3>
       <p class="keywords">

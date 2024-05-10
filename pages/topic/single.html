@@ -41,11 +41,11 @@ eleventyComputed:
     <hr />
     <h3 class="mt-lg-0">
       {{( state_entity.services |
-      pluckContains('AgencyTags',item.name)).length}} Services
+      pluck('AgencyTags',item.name,"includes")).length}} Services
     </h3>
     <ul>
       {%- for service in state_entity.services |
-      pluckContains('AgencyTags',item.name) -%}
+      pluck('AgencyTags',item.name,"includes") -%}
       <li>
         <a
           href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
