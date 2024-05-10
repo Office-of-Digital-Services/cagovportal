@@ -91,17 +91,15 @@ eleventyComputed:
       {%- if not loop.last -%}
       <hr class="m-b-lg" />
       {%- endif -%} {% endfor %} {%- for service in state_entity.services |
-      pluck('AgencyId',item.AgencyId) -%} {%- for qa in service.QA |
-      pluck('Featured',true) -%} {%- if loop.first %}
+      pluck('AgencyId',item.AgencyId) -%} {%- if loop.first %}
       <hr class="m-b-lg" />
       <h3 class="mt-lg-9">Frequently Asked Questions</h3>
-      {%- endif %}
+      {% endif %}{%- for qa in service.QA | pluck('Featured',true) -%}
       <cagov-accordion>
         <details>
           <summary>{{qa.Question}}</summary>
           <div class="accordion-body">
             {{ qa.Answer | safe }}
-
             <p>
               <a
                 class="btn btn-outline-primary btn-lg m-r-sm"
@@ -115,7 +113,7 @@ eleventyComputed:
           </div>
         </details>
       </cagov-accordion>
-      {%- endfor %} {%- endfor %}
+      {% endfor %} {%- endfor %}
     </div>
   </div>
 </div>
