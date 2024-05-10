@@ -1,5 +1,8 @@
 <h2 class="m-b">Topics</h3>
 <hr class="m-b-md">
+
+
+{% set topicData = state_entity[side_filter_data] %}
 {%- for topic in topics -%}
 
 <div class="form-check m-b-sm">
@@ -10,7 +13,7 @@
     name="AgencyTags"
     id="chkTopic{{-topic.topicId-}}" />
   <label class="form-check-label" for="chkTopic{{-topic.topicId-}}"
-    >{{topic.name}}</label
+    >{{topic.name}} <em>({{(topicData | pluck("AgencyTags",topic.name,"includes")).length }})</em> </label
   >
 </div>
 
