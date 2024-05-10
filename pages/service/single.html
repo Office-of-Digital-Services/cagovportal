@@ -78,21 +78,30 @@ eleventyComputed:
       <hr class="m-t-md" />
       <h3 class="m-t-md">Topics</h3>
       <p class="keywords">
-        {%- for tag in item.AgencyTags.split("|") -%}
-        <a href="/service/all/?q={{tag | trim | urlencode}}+"
-          >{{ tag | trim }}</a
-        ><span class="m-r-sm">,</span>
+        {%- for tag in item.AgencyTags.split("|") %}
+        <a href="/service/all/?q={{tag | trim | urlencode}}+">
+          {{- tag | trim -}}
+        </a>
+        <span class="m-r-sm">,</span>
         {%- endfor %}
       </p>
 
       <h3>Related services</h3>
+      <p class="keywords">
+        {%- for related in state_entity.services |
+        pluck("AgencyId",item.AgencyId) | sortBy("ServiceName") -%}{%- if
+        related.ServiceId !== item.ServiceId %}
+        <a href="../{{related.ServiceId}}/">{{-related.ServiceName-}}</a>
+        {{- ", " if not loop.last -}}{%- endif %}{%- endfor %}
+      </p>
 
       <h3>Keywords</h3>
       <p class="keywords">
-        {%- for keyword in item.Keywords.split(",") -%}
-        <a href="/service/all/?q={{keyword | trim | urlencode}}+"
-          >{{ keyword | trim }}</a
-        ><span class="m-r-sm">,</span> {%- endfor %}
+        {%- for keyword in item.Keywords.split(",") %}
+        <a href="/service/all/?q={{keyword | trim | urlencode}}+">
+          {{- keyword | trim -}}
+        </a>
+        <span class="m-r-sm">,</span> {%- endfor %}
       </p>
 
       <!-- Begin Structured Data for QAPage -->
@@ -100,6 +109,10 @@ eleventyComputed:
         {{ item.structuredData_FAQPage  | dump | safe }}
       </script>
       <!-- End Structured Data -->
+
+      <pre>
+        {{ state_entity.services | pluck("AgencyId",item.AgencyId) | dump(2) | safe}}
+      </pre>
     </div>
   </div>
 </div>
