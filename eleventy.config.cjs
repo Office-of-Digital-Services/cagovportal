@@ -24,22 +24,28 @@ module.exports = function (
   eleventyConfig.addFilter(
     "pluck",
     /**
-     * @param {[]} arr
+     * @param {*[]} arr
      * @param {string} attr
      * @param {*} value
+     * @param {"includes" | "not"} [operator]
+     * @example
+     * {%- for tag in topics | pluck("featured", true) | sortBy("featureOrder") -%}
+     * {%- for tag in pluck("ServiceId",item.ServiceId,"not") -%}
      */
-    (arr, attr, value) => arr.filter(item => item[attr] === value)
-  );
+    (arr, attr, value, operator) =>
+      arr.filter(item => {
+        /** @type {string} */
+        let itemval = item[attr];
 
-  eleventyConfig.addFilter(
-    "pluckContains",
-    /**
-     * @param {[]} arr
-     * @param {string} attr
-     * @param {*} value
-     */
-    (arr, attr, value) =>
-      arr.filter(item => /** @type {string} */ (item[attr]).includes(value))
+        switch (operator) {
+          case "includes":
+            return itemval.includes(value);
+          case "not":
+            return itemval !== value;
+          default:
+            return itemval === value;
+        }
+      })
   );
 
   // {%- for tag in topics | pluck("featured", true) | sortBy("featureOrder") -%}

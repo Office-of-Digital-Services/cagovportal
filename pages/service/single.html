@@ -78,21 +78,32 @@ eleventyComputed:
       <hr class="m-t-md" />
       <h3 class="m-t-md">Topics</h3>
       <p class="keywords">
-        {%- for tag in item.AgencyTags.split("|") -%}
-        <a href="/service/all/?q={{tag | trim | urlencode}}+"
-          >{{ tag | trim }}</a
-        ><span class="m-r-sm">,</span>
-        {%- endfor %}
+        {%- for tag in item.AgencyTags.split("|") %}
+        <a href="/service/all/?q={{tag | trim | urlencode}}+">
+          {{- tag | trim -}}
+        </a>
+        {{- ", " if not loop.last -}} {%- endfor %}
       </p>
 
+      {%- set related_services = state_entity.services |
+      pluck("AgencyId",item.AgencyId) | pluck("ServiceId",item.ServiceId,"not")
+      | sortBy("ServiceName") -%} {%- if related_services.length %}
+
       <h3>Related services</h3>
+      <p class="keywords">
+        {%- for related in related_services %}
+        <a href="../{{related.ServiceId}}/">{{-related.ServiceName-}}</a>
+        {{- ", " if not loop.last -}}{%- endfor %}
+      </p>
+      {%- endif %}
 
       <h3>Keywords</h3>
       <p class="keywords">
-        {%- for keyword in item.Keywords.split(",") -%}
-        <a href="/service/all/?q={{keyword | trim | urlencode}}+"
-          >{{ keyword | trim }}</a
-        ><span class="m-r-sm">,</span> {%- endfor %}
+        {%- for keyword in item.Keywords.split(",") %}
+        <a href="/service/all/?q={{keyword | trim | urlencode}}+">
+          {{- keyword | trim -}}
+        </a>
+        {{- ", " if not loop.last -}} {%- endfor %}
       </p>
 
       <!-- Begin Structured Data for QAPage -->
