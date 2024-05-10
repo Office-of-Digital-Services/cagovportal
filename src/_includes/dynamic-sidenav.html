@@ -7,9 +7,9 @@ dynamic_sidenavid: service
 
 {%-include "dynamic-sidenav.html"-%}
 -->
--#} {%- if dynamic_sidenavid==="topic" -%} {%-set sidenav =
-dynamic_sidenav[dynamic_sidenavid].concat(topics)-%} {%- else -%} {%-set sidenav
-= dynamic_sidenav[dynamic_sidenavid]-%} {%- endif -%}
+-#} {%-set sidenav = dynamic_sidenav[dynamic_sidenavid]-%} {%- if
+dynamic_sidenavid==="topic" -%} {%-set sidenav = sidenav.concat(topics)-%} {%-
+endif -%}
 
 <!-- Side navigation -->
 <nav aria-labelledby="navigation-list" id="side-navigation">
