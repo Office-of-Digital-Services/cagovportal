@@ -145,3 +145,14 @@ a[aria-current="page"] {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* Service images */
+.service-img {
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1 / 1;
+}
+
+.keywords span.m-r-sm:last-child {
+  display: none;
+}
