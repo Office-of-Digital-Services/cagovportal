@@ -3,7 +3,8 @@ landing: Services
 description: List all topics
 title: Topics
 layout: landing
-dynamic_sidenavid: topic
+side_filter_data: services
+dynamic_sidenavid: service
 eleventyNavigation:
   key: Topics
   parent: Services
@@ -21,7 +22,7 @@ eleventyNavigation:
 <div class="container p-y-lg">
   <div class="row">
     <div class="col-lg-3 pb-lg-5 side-navigation sticky-6" role="complementary">
-      {%-include "dynamic-sidenav.html"-%}
+      {%-include "dynamic-sidenav.html"-%} {%-include "side-filters.html"-%}
     </div>
     <div class="col-lg-9">
       <p>
