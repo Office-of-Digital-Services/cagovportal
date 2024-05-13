@@ -18,7 +18,36 @@ eleventyComputed:
 
 <div class="row p-b-lg">
   <div class="col-lg-3 pb-lg-5 side-navigation sticky-6" role="complementary">
-    {%-include "dynamic-sidenav.html"-%}
+    <!-- Side navigation -->
+    <nav aria-labelledby="navigation-list" id="side-navigation">
+      <ul class="list-navigation">
+        <li>
+          <a href="/topic/" class="landing back" id="color-themes-list">
+            Topics
+          </a>
+
+          <ul>
+            {%- for link in topics | sortBy("featureOrder") %} {%- set href =
+            "/topic/"+link.topicId+"/" -%} {%- set active = href === page.url
+            -%}
+            <li>
+              <a
+                href="{{-href-}}"
+                {%-if
+                active%}
+                active
+                class="active landing"
+                aria-current="page"
+                tabindex="-1"
+                {%-endif-%}>
+                {{-link.text | default(link.name) | safe-}}
+              </a>
+            </li>
+            {%- endfor %}
+          </ul>
+        </li>
+      </ul>
+    </nav>
   </div>
   <div class="col-md-9 mx-auto">
     <h2 class="mt-lg-0">{{title}}</h2>
