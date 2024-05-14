@@ -11,9 +11,9 @@ eleventyNavigation:
 ---
 
 <style>
-  cagovhome-filterlist > div.row:not(:has(li:not([aria-hidden="true"]))) {
+  /* Hiding the header if the row has hidden results */
+  cagovhome-filterlist > div.row:not(:has([data-row-key]:not([aria-hidden="true"]))) {
       display: none;
-
   }
 </style>
 
@@ -51,7 +51,7 @@ eleventyNavigation:
             <ul>
               {%- for service in state_entity.services |
               pluck('AgencyTags',topic.name,"includes") -%}
-              <li data-row-key="{{service.ServiceId}}" data-foo="1">
+              <li data-row-key="{{service.ServiceId}}">
                 <a
                   href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/">
                   {{-service.ServiceName-}}
