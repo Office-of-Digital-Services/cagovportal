@@ -11,12 +11,9 @@ eleventyNavigation:
 ---
 
 <style>
-  cagovhome-filterlist > div.row {
-    display: none;
+  cagovhome-filterlist > div.row:not(:has(li:not([aria-hidden="true"]))) {
+      display: none;
 
-    &:has(li:not([aria-hidden="true"])) {
-      display: unset;
-    }
   }
 </style>
 
