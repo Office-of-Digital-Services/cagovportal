@@ -60,10 +60,10 @@ eleventyNavigation:
         data-filter-trigger-selector='input[name="AgencyTags"]'>
         {%- for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' -%}
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-1">
             <h3 class="m-t-0">{{ letter }}</h3>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-11">
             <ul>
               {%- for service in state_entity.services | pluck("ServiceName",
               letter, "startswith") -%}
