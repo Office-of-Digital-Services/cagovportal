@@ -156,3 +156,9 @@ a[aria-current="page"] {
 .keywords span.m-r-sm:last-child {
   display: none;
 }
+
+/* Hiding the header if the row has hidden results */
+cagovhome-filterlist
+  > div.row:not(:has([data-row-key]:not([aria-hidden="true"]))) {
+  display: none;
+}

@@ -58,16 +58,27 @@ eleventyNavigation:
         data-filter-storage-key="service"
         data-row-filter-key="ServiceId"
         data-filter-trigger-selector='input[name="AgencyTags"]'>
-        <ul>
-          {%- for service in state_entity.services -%}
-          <li data-row-key="{{service.ServiceId}}">
-            <a
-              href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/">
-              {{-service.ServiceName-}}
-            </a>
-          </li>
-          {%- endfor %}
-        </ul>
+        {%- for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' -%}
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="m-t-0">{{ letter }}</h3>
+          </div>
+          <div class="col-lg-6">
+            <ul>
+              {%- for service in state_entity.services | pluck("ServiceName",
+              letter, "startswith") -%}
+              <li data-row-key="{{service.ServiceId}}">
+                <a
+                  href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/">
+                  {{-service.ServiceName-}}
+                </a>
+              </li>
+              {%- endfor %}
+            </ul>
+          </div>
+          <hr />
+        </div>
+        {%- endfor %}
       </cagovhome-filterlist>
     </div>
   </div>
