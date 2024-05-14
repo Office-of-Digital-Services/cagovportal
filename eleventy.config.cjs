@@ -37,11 +37,13 @@ module.exports = function (
         /** @type {string} */
         let itemval = item[attr];
 
-        switch (operator) {
+        switch (operator?.toLowerCase()) {
           case "includes":
             return itemval.includes(value);
           case "not":
             return itemval !== value;
+          case "startswith":
+            return itemval.startsWith(value);
           default:
             return itemval === value;
         }
