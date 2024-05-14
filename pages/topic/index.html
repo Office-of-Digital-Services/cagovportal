@@ -1,13 +1,21 @@
 ---
 landing: Services
 description: List all topics
-title: Topics list
+title: Topics
 layout: landing
-dynamic_sidenavid: topic
+side_filter_data: services
+dynamic_sidenavid: service
 eleventyNavigation:
-  key: Topics list
+  key: Topics
   parent: Services
 ---
+
+<style>
+  /* Hiding the header if the row has hidden results */
+  cagovhome-filterlist > div.row:not(:has([data-row-key]:not([aria-hidden="true"]))) {
+      display: none;
+  }
+</style>
 
 <div
   class="section-understated"
@@ -21,32 +29,40 @@ eleventyNavigation:
 <div class="container p-y-lg">
   <div class="row">
     <div class="col-lg-3 pb-lg-5 side-navigation sticky-6" role="complementary">
-      {%-include "dynamic-sidenav.html"-%}
+      {%-include "dynamic-sidenav.html"-%} {%-include "side-filters.html"-%}
     </div>
     <div class="col-lg-9">
       <p>
         Each state service falls into one or more themed topics. You can browse
         the full list or check out individual topic pages for more information.
       </p>
-
-      {%- for topic in topics | sortBy("featureOrder") -%}
-      <h2>
-        <a href="/topic/{{- topic.topicId -}}/">{{-topic.name-}}</a>
-      </h2>
-
-      <ul>
-        {%- for service in state_entity.services |
-        pluck('AgencyTags',topic.name,"includes") -%}
-        <li data-row-key="{{service.ServiceId}}">
-          <a
-            href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/">
-            {{-service.ServiceName-}}
-          </a>
-        </li>
+      <cagovhome-filterlist
+        data-filter-storage-key="service"
+        data-row-filter-key="ServiceId"
+        data-filter-trigger-selector='input[name="AgencyTags"]'>
+        {%- for topic in topics | sortBy("featureOrder") -%}
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="m-t-0">
+              <a href="/topic/{{- topic.topicId -}}/">{{-topic.name-}}</a>
+            </h3>
+          </div>
+          <div class="col-lg-6">
+            <ul>
+              {%- for service in state_entity.services |
+              pluck('AgencyTags',topic.name,"includes") -%}
+              <li data-row-key="{{service.ServiceId}}">
+                <a
+                  href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/">
+                  {{-service.ServiceName-}}
+                </a>
+              </li>
+              {%- endfor %}
+            </ul>
+          </div>
+        </div>
         {%- endfor %}
-      </ul>
-
-      {%- endfor %}
+      </cagovhome-filterlist>
     </div>
   </div>
 </div>

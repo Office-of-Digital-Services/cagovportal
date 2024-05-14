@@ -13,13 +13,5 @@
       "text": "All departments<span class=\"sr-only\">landing page</span>"
     },
     { "href": "/department/list/", "text": "Departments list" }
-  ],
-  "topic": [
-    {
-      "href": "/service/all/",
-      "text": "All service<span class=\"sr-only\">landing page</span>"
-    },
-    { "href": "/service/list/", "text": "Services list" },
-    { "href": "/topic/", "text": "Topics" }
   ]
 }

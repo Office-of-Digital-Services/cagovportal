@@ -42,20 +42,20 @@ window.addEventListener("DOMContentLoaded", () => {
     class extends HTMLElement {
       connectedCallback() {
         const inputid = this.dataset.searchInputId;
-        if (!inputid) {
-          throw new Error("Missing data-search-input-id");
-        }
 
-        const inputBox = /** @type {HTMLInputElement} */ (
-          document.getElementById(inputid)
-        );
-        if (!inputBox) {
+        const inputBox = inputid
+          ? /** @type {HTMLInputElement} */ (document.getElementById(inputid))
+          : undefined;
+
+        if (inputid && !inputBox) {
           throw new Error(`can't find searchbox with id ${inputid}`);
         }
 
         // default the search box to the "q" querystring
-        const q = new URLSearchParams(window.location.search).get("q");
-        if (q) inputBox.value = q;
+        if (inputBox) {
+          const q = new URLSearchParams(window.location.search).get("q");
+          if (q) inputBox.value = q;
+        }
 
         const resultCountQuery = this.dataset.resultCountQuery;
         const countElements = [
@@ -116,7 +116,7 @@ window.addEventListener("DOMContentLoaded", () => {
         const keyValues = [...new Set(elementRows.map(x => x.dataset.rowKey))];
 
         const checkme = () => {
-          const value = inputBox.value
+          const value = inputBox?.value
             .replace(/\W/g, " ")
             //.trim() not trimming on purpose
             .toLowerCase();
@@ -168,8 +168,7 @@ window.addEventListener("DOMContentLoaded", () => {
             rowElement.ariaHidden = bShow ? null : "true";
           });
         };
-
-        inputBox.addEventListener("input", checkme);
+        if (inputBox) inputBox.addEventListener("input", checkme);
 
         //connect the triggers
         triggerElements.forEach(x => x.addEventListener("change", checkme));

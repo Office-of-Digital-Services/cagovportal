@@ -7,16 +7,13 @@ dynamic_sidenavid: service
 
 {%-include "dynamic-sidenav.html"-%}
 -->
--#} {%-set sidenav = dynamic_sidenav[dynamic_sidenavid]-%} {%- if
-dynamic_sidenavid==="topic" -%} {%-set sidenav = sidenav.concat(topics)-%} {%-
-endif -%}
+-#} {%-set sidenav = dynamic_sidenav[dynamic_sidenavid]-%}
 
 <!-- Side navigation -->
 <nav aria-labelledby="navigation-list" id="side-navigation">
   <ul class="list-navigation">
-    {%- for link in sidenav %} {%- set href = link.href |
-    default("/topic/"+link.topicId+"/") -%} {%- set active = href === page.url
-    -%}
+    {%- for link in sidenav %} {%- set href = link.href -%} {%- set active =
+    href === page.url -%}
     <li>
       <a
         href="{{-href-}}"
@@ -27,7 +24,7 @@ endif -%}
         aria-current="page"
         tabindex="-1"
         {%-endif-%}>
-        {{-link.text | default(link.name) | safe-}}
+        {{-link.text | safe-}}
       </a>
     </li>
     {%- endfor %}
