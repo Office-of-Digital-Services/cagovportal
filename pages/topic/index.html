@@ -22,40 +22,30 @@ eleventyNavigation:
 <div class="container p-y-lg">
   <div class="row">
     <div class="col-lg-3 pb-lg-5 side-navigation sticky-6" role="complementary">
-      {%-include "dynamic-sidenav.html"-%} {%-include "side-filters.html"-%}
+      {%-include "dynamic-sidenav.html"-%}
     </div>
     <div class="col-lg-9">
       <p>
         Each state service falls into one or more themed topics. You can browse
         the full list or check out individual topic pages for more information.
       </p>
-      <cagovhome-filterlist
-        data-filter-storage-key="service"
-        data-row-filter-key="ServiceId"
-        data-filter-trigger-selector='input[name="AgencyTags"]'>
-        {%- for topic in topics | sortBy("featureOrder") -%}
-        <div class="row">
-          <div class="col-lg-6">
-            <h3 class="m-t-0">
-              <a href="/topic/{{- topic.topicId -}}/">{{-topic.name-}}</a>
-            </h3>
-          </div>
-          <div class="col-lg-6">
-            <ul>
-              {%- for service in state_entity.services |
-              pluck('AgencyTags',topic.name,"includes") -%}
-              <li data-row-key="{{service.ServiceId}}">
-                <a
-                  href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/">
-                  {{-service.ServiceName-}}
-                </a>
-              </li>
-              {%- endfor %}
-            </ul>
-          </div>
+      <h2>Topics</h2>
+
+      <div class="row">
+        {%- for tag in topics | sortBy("featureOrder") -%}
+        <div class="col-md-4 mb-4">
+          <article
+            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
+            <a
+              href="/topic/{{-tag.topicId-}}/"
+              class="h5 m-b color-p2 link-before text-left no-underline d-block"
+              >{{-tag.name-}}</a
+            >
+            <p class="m-b text-left">{{-tag.description-}}</p>
+          </article>
         </div>
         {%- endfor %}
-      </cagovhome-filterlist>
+      </div>
     </div>
   </div>
 </div>
