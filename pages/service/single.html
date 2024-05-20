@@ -89,6 +89,18 @@ eleventyComputed:
       </cagov-accordion>
       {%- endfor %}
       <hr class="m-t-md" />
+
+      {%- set related_services = state_entity.services |
+      pluck("AgencyId",item.AgencyId) | pluck("ServiceId",item.ServiceId,"not")
+      | sortBy("ServiceName") -%} {%- if related_services.length %}
+      <h3>Related services</h3>
+      <p class="keywords">
+        {%- for related in related_services %}
+        <a href="../{{related.ServiceId}}/">{{-related.ServiceName-}}</a>
+        {{- ", " if not loop.last -}}{%- endfor %}
+      </p>
+      {%- endif %}
+
       <h3 class="m-t-md">Topics</h3>
       <p class="keywords">
         {%- for tag in item.AgencyTags.split("|") %}
@@ -97,18 +109,6 @@ eleventyComputed:
         </a>
         {{- ", " if not loop.last -}} {%- endfor %}
       </p>
-
-      {%- set related_services = state_entity.services |
-      pluck("AgencyId",item.AgencyId) | pluck("ServiceId",item.ServiceId,"not")
-      | sortBy("ServiceName") -%} {%- if related_services.length %}
-
-      <h3>Related services</h3>
-      <p class="keywords">
-        {%- for related in related_services %}
-        <a href="../{{related.ServiceId}}/">{{-related.ServiceName-}}</a>
-        {{- ", " if not loop.last -}}{%- endfor %}
-      </p>
-      {%- endif %}
 
       <h3>Keywords</h3>
       <p class="keywords">
