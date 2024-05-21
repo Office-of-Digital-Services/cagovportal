@@ -41,25 +41,25 @@
         "DepartmentId": 287,
         "ServiceId": 25,
         "ServiceName": "Apply for business license",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Apply for Business License, Permit, or Account."
       },
       {
         "DepartmentId": 287,
         "ServiceId": 26,
         "ServiceName": "Apply for seller’s permit",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "A seller's permit is required if you are engaged in business in California, intend to sell or lease tangible personal property that would ordinarily be subject to sales tax if sold at retail (this includes wholesalers, manufactures and retailers), or will make sales for a temporary period, normally lasting no longer than 90 days at one or more locations."
       },
       {
         "DepartmentId": 174,
         "ServiceId": 29,
         "ServiceName": "Get a fishing or hunting license",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Buy a fishing or hunting license in person or online. Online customers must be at least 18 years of age and provide a Visa or MasterCard to make a purchase."
       },
       {
-        "DepartmentId": 299,
-        "ServiceId": 12,
-        "ServiceName": "Look up a contractor license",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "DepartmentId": 268,
+        "ServiceId": 13,
+        "ServiceName": "Search for Unclaimed Property",
+        "Description": "This search page will allow you to locate Unclaimed Property that already has been sent to the State for safekeeping, as well as property that is about to be sent to the State by a business as required by law."
       }
     ]
   },
@@ -166,28 +166,28 @@
     "featureOrder": 6,
     "popularServices": [
       {
-        "DepartmentId": 268,
-        "ServiceId": 13,
-        "ServiceName": "Search for unclaimed property",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
-      },
-      {
         "DepartmentId": 299,
         "ServiceId": 12,
         "ServiceName": "Look up a contractor license",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Look up a contractor license or Home Improvement Salesperson (HIS) registration to verify information, including complaint disclosure."
       },
       {
         "DepartmentId": 40,
         "ServiceId": 1131,
         "ServiceName": "Verify a real estate license",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Check the status of a real estate licensee using a name, address, or license ID."
+      },
+      {
+        "DepartmentId": 180,
+        "ServiceId": 1136,
+        "ServiceName": "Calculate your earthquake insurance premium",
+        "Description": "Use the CEA Premium Calculator for a free CEA California residential earthquake insurance premium estimate. To purchase a CEA policy, you must contact a participating residential insurer."
       },
       {
         "DepartmentId": 139,
         "ServiceId": 1175,
         "ServiceName": "COVID-19 rent relief",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Whether it’s a health-related event or a significant financial hardship, COVID-19 has affected us all. As our state continues to recover, we are committed to keeping families housed and recognize that California renters and landlords have enough to worry about. We want to make sure that past due rent isn’t one of them."
       }
     ]
   },
@@ -236,22 +236,22 @@
         "Description": "An authorized, certified California birth certificate can typically be used for travel, passport, proof of citizenship, social security, driver's license, and more."
       },
       {
-        "DepartmentId": 171,
-        "ServiceId": 1188,
-        "ServiceName": "Inmate locator and records",
-        "Description": "Search results include current location, admission date, parole dates, outcomes for incarcerated persons currently in custody, and more."
-      },
-      {
         "DepartmentId": 220,
         "ServiceId": 47,
         "ServiceName": "DMV address change",
-        "Description": "A certified copy of a death certificate can typically be used to obtain death benefits, claim insurance proceeds, notify social security and other legal purposes."
+        "Description": "You can change your residence or mailing address for your California Driver License, Identification Card, vehicle, or vessel."
       },
       {
         "DepartmentId": 176,
         "ServiceId": 1177,
         "ServiceName": "Get digital vaccine records",
         "Description": "If you want to share your proof of vaccination digitally, you can get an electronic version of the record card you were given at time of vaccination."
+      },
+      {
+        "DepartmentId": 176,
+        "ServiceId": 53,
+        "ServiceName": "Apply for Death Certificate",
+        "Description": "A certified copy of a death certificate can typically be used to obtain death benefits, claim insurance proceeds, notify social security and other legal purposes."
       }
     ]
   },
@@ -297,25 +297,25 @@
         "DepartmentId": 155,
         "ServiceId": 42,
         "ServiceName": "Look up winning lottery numbers",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Look Up Winning Lottery Numbers on the CA Lottery website. See if you're a winner!"
+      },
+      {
+        "DepartmentId": 268,
+        "ServiceId": 13,
+        "ServiceName": "Search for Unclaimed Property",
+        "Description": "This search page will allow you to locate Unclaimed Property that already has been sent to the State for safekeeping, as well as property that is about to be sent to the State by a business as required by law."
       },
       {
         "DepartmentId": 275,
         "ServiceId": 58,
         "ServiceName": "Look up my representatives",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Use this online service to find your State Senate, State Assembly or United States Congressional Representative, as well as information on how you can contact them."
       },
       {
         "DepartmentId": 244,
         "ServiceId": 41,
         "ServiceName": "Look up a bill or law",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
-      },
-      {
-        "DepartmentId": 172,
-        "ServiceId": 17,
-        "ServiceName": "Find your local school",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Search California Legislative Information and access California Law and Bill information including Legislative Publications."
       }
     ]
   },
