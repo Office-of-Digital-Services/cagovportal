@@ -72,20 +72,53 @@ eleventyComputed:
     </div>
 
     <hr />
-    <h3 class="mt-lg-0">
-      {{( state_entity.services |
-      pluck('AgencyTags',item.name,"includes")).length}} Services
-    </h3>
-    <ul>
+
+    <h2 aria-live="polite" class="sr-only">
+      <span id="searchcount">...</span> services found
+    </h2>
+    <p class="lead m-t">
+      <span class="items-count">...</span>
+      services
+    </p>
+    <div class="d-flex m-b-lg">
+      <input
+        type="search"
+        id="searchbox"
+        autofocus
+        placeholder="Search for a service"
+        class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-l" />
+    </div>
+
+    <input
+      type="hidden"
+      id="defaultFilter"
+      name="AgencyTags"
+      value="{{item.name}}" />
+    <!-- This is the filter that will be applied to the search results -->
+
+    <cagovhome-filterlist
+      data-search-input-id="searchbox"
+      data-result-count-query="#searchcount, span.items-count"
+      data-filter-storage-key="service"
+      data-row-filter-key="ServiceId"
+      data-filter-trigger-selector="input#defaultFilter">
       {%- for service in state_entity.services |
       pluck('AgencyTags',item.name,"includes") -%}
-      <li>
+      <article data-row-key="{{service.ServiceId}}" class="pos-rel">
+        <h2 class="lead bold m-t-0 m-b">
+          <a href="{{ service.ServiceUrl }}">{{service.ServiceName}}</a>
+        </h2>
+        <p class="font-size-14 bold m-t-sm">by {{service.FriendlyName}}</p>
+        <p class="service-description">{{service.Description}}</p>
         <a
+          class="btn btn-outline-primary btn-lg"
           href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
-          >{{service.ServiceName}}</a
+          >More details
+          <span class="sr-only">about {{service.ServiceName}} service</span></a
         >
-      </li>
+        <hr class="m-y-md" />
+      </article>
       {%- endfor %}
-    </ul>
+    </cagovhome-filterlist>
   </div>
 </div>

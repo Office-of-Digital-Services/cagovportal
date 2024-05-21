@@ -162,3 +162,8 @@ cagovhome-filterlist
   > div.row:not(:has([data-row-key]:not([aria-hidden="true"]))) {
   display: none;
 }
+
+/* Bringing back the little "X" buttons on form fields */
+::-webkit-search-cancel-button {
+  display: unset !important;
+}

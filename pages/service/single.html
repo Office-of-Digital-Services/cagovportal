@@ -29,6 +29,9 @@ eleventyComputed:
       <div class="col-lg-7">
         {%- include "breadcrumbs.html" -%}
         <h1 class="m-t-0">{{title}}</h1>
+        <p>
+          <a href="../../">{{item.FriendlyName}}</a>
+        </p>
       </div>
       <div class="col-lg-5">
         {% if item.ImageUrl %}
@@ -86,34 +89,35 @@ eleventyComputed:
       </cagov-accordion>
       {%- endfor %}
       <hr class="m-t-md" />
-      <h3 class="m-t-md">Topics</h3>
-      <p class="keywords">
-        {%- for tag in item.AgencyTags.split("|") %}
-        <a href="/service/all/?q={{tag | trim | urlencode}}+">
-          {{- tag | trim -}}
-        </a>
-        {{- ", " if not loop.last -}} {%- endfor %}
-      </p>
 
       {%- set related_services = state_entity.services |
       pluck("AgencyId",item.AgencyId) | pluck("ServiceId",item.ServiceId,"not")
       | sortBy("ServiceName") -%} {%- if related_services.length %}
-
       <h3>Related services</h3>
       <p class="keywords">
         {%- for related in related_services %}
-        <a href="../{{related.ServiceId}}/">{{-related.ServiceName-}}</a>
-        {{- ", " if not loop.last -}}{%- endfor %}
+        <a href="../{{related.ServiceId}}/">{{-related.ServiceName-}}</a
+        ><span class="m-r-sm">, </span>{%- endfor %}
       </p>
       {%- endif %}
 
+      <h3 class="m-t-md">Topics</h3>
+      <p class="keywords">
+        {%- for topic in topics | sortBy("featureOrder") %} {%- if
+        item.AgencyTags.includes(topic.name) %}
+        <a href="/topic/{{topic.topicId}}/"> {{- topic.name | trim -}} </a
+        ><span class="m-r-sm">, </span>
+
+        {%- endif -%} {%- endfor %}
+      </p>
+
       <h3>Keywords</h3>
       <p class="keywords">
-        {%- for keyword in item.Keywords.split(",") %}
+        {%- for keyword in item.Keywords.split(",") %} {%- if
+        keyword.trim().length > 0 %}
         <a href="/service/all/?q={{keyword | trim | urlencode}}+">
-          {{- keyword | trim -}}
-        </a>
-        {{- ", " if not loop.last -}} {%- endfor %}
+          {{- keyword | trim -}} </a
+        ><span class="m-r-sm">,</span> {% endif -%} {%- endfor %}
       </p>
 
       <!-- Begin Structured Data for QAPage -->
