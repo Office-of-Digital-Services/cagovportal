@@ -58,11 +58,11 @@ window.addEventListener("DOMContentLoaded", () => {
         }
 
         const resultCountQuery = this.dataset.resultCountQuery;
-        const countElements = [
-          ...(resultCountQuery
-            ? document.querySelectorAll(resultCountQuery)
-            : [])
-        ];
+        const countElements = /** @type {HTMLElement[]} */ (
+          resultCountQuery
+            ? [...document.querySelectorAll(resultCountQuery)]
+            : []
+        );
 
         const keyProperty = this.dataset.rowFilterKey;
         if (!keyProperty) throw new Error("missing data-row-filter-key");
@@ -89,11 +89,11 @@ window.addEventListener("DOMContentLoaded", () => {
         }
 
         const filterTriggerSelector = this.dataset.filterTriggerSelector;
-        const triggerElements = filterTriggerSelector
-          ? /** @type {HTMLInputElement[]} */ ([
-              ...document.querySelectorAll(filterTriggerSelector)
-            ])
-          : [];
+        const triggerElements = /** @type {HTMLInputElement[]} */ (
+          filterTriggerSelector
+            ? [...document.querySelectorAll(filterTriggerSelector)]
+            : []
+        );
 
         if (filterTriggerSelector && !triggerElements.length) {
           throw new Error(
@@ -157,7 +157,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
           // Apply test to count displays
           countElements.forEach(x => {
-            x.innerHTML = keyMatches.length.toLocaleString();
+            x.innerHTML = x.innerHTML.replace(
+              /(?:\d+[\d,.]*\d)|\d/, //Number may have commas or decimals (inside only), or just a single digit
+              keyMatches.length.toLocaleString()
+            ); //replace the first number found with the count
           });
 
           // Show/hide rows that match the key matches

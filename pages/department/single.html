@@ -83,14 +83,14 @@ endfor %} {%- endfor -%}
       <h2>Services</h2>
       {% endif %}
       <p class="lead bold">
-        <a href="{{ service.ServiceUrl }}">{{service.ServiceName}}</a>
+        <a href="./service/{{ service.ServiceId }}/">{{service.ServiceName}}</a>
       </p>
       <p class="service-description">{{service.Description}}</p>
       <a
         class="btn btn-outline-primary btn-lg m-r-sm"
-        href="./service/{{ service.ServiceId }}/">
-        More details
-        <span class="sr-only">about {{service.ServiceName}} service</span>
+        href="{{ service.ServiceUrl }}"
+        aria-label="Launch “{{ service.ServiceName }}” service">
+        Launch service
       </a>
 
       {%- if not loop.last -%}
