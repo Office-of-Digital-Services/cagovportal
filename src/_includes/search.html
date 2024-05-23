@@ -1,6 +1,7 @@
+{%-if not hide_search %}
 <!-- Search structural component -->
 <div class="container">
-  <form id="Search" class="pos-rel" action="/serp.html">
+  <form id="Search" class="pos-rel" action="/search/">
     <span class="sr-only" id="SearchInput">Custom Google Search</span>
     <input
       type="search"
@@ -21,3 +22,4 @@
     </div>
   </form>
 </div>
+{% endif -%}
