@@ -60,25 +60,12 @@ eleventyNavigation:
 
             <div class="flex-grow-1">
               <h3 class="lead bold m-t-0 m-b">
-                <a href="{{ agency.WebsiteURL }}"
+                <a href="/department/{{ agency.AgencyId }}/"
                   >{{service.ServiceName}} {{agency.FriendlyName}}
                   ({{agency.Acronym}})</a
                 >
               </h3>
               <p class="department-description">{{agency.Description}}</p>
-
-              <a
-                href="/department/{{ agency.AgencyId }}/"
-                class="btn btn-outline-primary btn-lg m-r-sm"
-                >More details
-                <span class="sr-only">about {{agency.FriendlyName}}</span></a
-              >
-              <a
-                href="{{ agency.ContactURL }}/"
-                class="btn btn-outline-primary btn-lg"
-                >Contact
-                <span class="sr-only"> {{agency.FriendlyName}}</span></a
-              >
             </div>
           </div>
         </span>
