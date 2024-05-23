@@ -167,3 +167,11 @@ cagovhome-filterlist
 ::-webkit-search-cancel-button {
   display: unset !important;
 }
+
+/* Fixing sticky class in mobile */
+@media (max-width: 991px) {
+  .sticky-6 {
+    position: relative !important;
+    top: 0 !important;
+  }
+}

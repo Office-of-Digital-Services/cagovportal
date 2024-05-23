@@ -181,3 +181,22 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   );
 });
+
+// Mobile topic filter accordion
+window.addEventListener("load", () => {
+  const mobileCntls = document.querySelector(".global-header .mobile-controls");
+  const accrdionSidenav = document.querySelector(
+    "cagov-accordion.sidenav details"
+  );
+
+  const getAccrdionSidenavClosed = () => {
+    accrdionSidenav?.removeAttribute("open");
+    accrdionSidenav?.setAttribute("height", "56px");
+  };
+
+  if (!mobileCntls) return;
+  let mobileControlsDisplay = window.getComputedStyle(mobileCntls).display;
+  if (mobileControlsDisplay == "block") {
+    getAccrdionSidenavClosed();
+  }
+});
