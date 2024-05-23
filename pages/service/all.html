@@ -25,10 +25,7 @@ eleventyNavigation:
       {%-include "dynamic-sidenav.html"-%} {%-include "side-filters.html"-%}
     </div>
     <div class="col-lg-9">
-      <p class="lead m-t">
-        <span class="items-count">...</span>
-        services
-      </p>
+      <p class="lead m-t items-count">0 services</p>
       <label class="sr-only" for="searchbox">Search all services</label>
       <div class="d-flex m-b-lg">
         <input
@@ -39,13 +36,11 @@ eleventyNavigation:
           class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-l" />
       </div>
 
-      <h2 aria-live="polite" class="sr-only">
-        <span id="searchcount">...</span> services found
-      </h2>
+      <h2 aria-live="polite" class="sr-only tems-count">0 services found</h2>
 
       <cagovhome-filterlist
         data-search-input-id="searchbox"
-        data-result-count-query="#searchcount, span.items-count"
+        data-result-count-query=".items-count"
         data-filter-storage-key="service"
         data-row-filter-key="ServiceId"
         data-filter-trigger-selector='input[name="AgencyTags"]'>
