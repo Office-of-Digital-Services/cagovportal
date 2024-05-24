@@ -1,21 +1,32 @@
-<h2 class="m-b">Topics</h2>
-<hr class="m-b-md" />
-
-{%- for topic in topics %}
-<div class="form-check m-b-sm">
-  <input
-    class="form-check-input"
-    type="checkbox"
-    value="{{topic.name}}"
-    name="AgencyTags"
-    id="chkTopic{{-topic.topicId-}}" />
-  <label class="form-check-label" for="chkTopic{{-topic.topicId-}}">
-    {{topic.name}}
-    <span>
-      ({{(state_entity[side_filter_data] |
-      pluck("AgencyTags",topic.name,"includes")).length }})
-    </span>
-  </label>
-</div>
-
-{%- endfor %}
+<cagov-accordion class="sidenav">
+  <details open>
+    <summary class="d-block d-lg-none brd-solid-1 brd-gray-200">
+      <span
+        class="ca-gov-icon-filter-solid color-p2 font-size-20"
+        aria-hidden="true"></span
+      >Topics filter
+    </summary>
+    <div class="accordion-body">
+      <h2 class="m-b d-none d-lg-block">Topics</h2>
+      <hr class="m-b-md d-none d-lg-block" />
+      <div class="m-t-md d-lg-none d-block"></div>
+      {%- for topic in topics %}
+      <div class="form-check m-b-sm">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value="{{topic.name}}"
+          name="AgencyTags"
+          id="chkTopic{{-topic.topicId-}}" />
+        <label class="form-check-label" for="chkTopic{{-topic.topicId-}}">
+          {{topic.name}}
+          <span>
+            ({{(state_entity[side_filter_data] |
+            pluck("AgencyTags",topic.name,"includes")).length }})
+          </span>
+        </label>
+      </div>
+      {%- endfor %}
+    </div>
+  </details>
+</cagov-accordion>
