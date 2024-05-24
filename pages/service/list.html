@@ -25,17 +25,7 @@ eleventyNavigation:
       <div class="side-navigation" role="complementary">
         {%-include "dynamic-sidenav.html"-%}
       </div>
-      <cagov-accordion class="sidenav">
-        <details open>
-          <summary class="d-block d-lg-none brd-solid-1 brd-gray-200">
-            <span
-              class="ca-gov-icon-filter-solid color-p2 font-size-20"
-              aria-hidden="true"></span
-            >Topics filter
-          </summary>
-          <div class="accordion-body">{%-include "side-filters.html"-%}</div>
-        </details>
-      </cagov-accordion>
+      {%-include "side-filters.html"-%}
     </div>
     <div class="col-lg-9">
       <p class="lead m-t items-count" aria-live="polite">
