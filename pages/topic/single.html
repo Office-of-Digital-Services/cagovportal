@@ -1,6 +1,7 @@
 ---
 landing: Services
 dynamic_sidenavid: topic
+layout: landing
 pagination:
     data: topics
     size: 1
@@ -16,107 +17,123 @@ eleventyComputed:
     parent: Topics
 ---
 
-<div class="row p-b-lg">
-  <div class="col-lg-3 pb-lg-5 side-navigation sticky-6" role="complementary">
-    <!-- Side navigation -->
-    <nav aria-labelledby="navigation-list" id="side-navigation">
-      <ul class="list-navigation">
-        <li>
-          <a href="/topic/" class="landing back" id="color-themes-list">
-            Topics
-          </a>
-
-          <ul>
-            {%- for link in topics | sortBy("featureOrder") %} {%- set href =
-            "/topic/"+link.topicId+"/" -%} {%- set active = href === page.url
-            -%}
-            <li>
-              <a
-                href="{{-href-}}"
-                {%-if
-                active%}
-                active
-                class="active landing"
-                aria-current="page"
-                tabindex="-1"
-                {%-endif-%}>
-                {{-link.text | default(link.name) | safe-}}
-              </a>
-            </li>
-            {%- endfor %}
-          </ul>
-        </li>
-      </ul>
-    </nav>
+<div
+  class="section-understated"
+  style="background-image: url('/images/personal-records-lineart.svg'); background-repeat:no-repeat; background-position:right;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0 color-p2">{{title}}</h1>
   </div>
-  <div class="col-md-9 mx-auto">
-    <h2 class="mt-lg-0">{{title}}</h2>
-    <p>{{item.description}}</p>
+</div>
 
-    <h2 class="mt-lg-0">Popular related services</h2>
+<div class="container p-y-lg">
+  <div class="row p-b-lg">
+    <div class="col-lg-3 pb-lg-5 side-navigation sticky-6" role="complementary">
+      <!-- Side navigation -->
+      <nav aria-labelledby="navigation-list" id="side-navigation">
+        <ul class="list-navigation">
+          <li>
+            <a href="/topic/" class="landing back" id="color-themes-list">
+              Topics
+            </a>
 
-    <div class="row">
-      {%- for pop in item.popularServices -%}
-      <div class="col-md-6 mb-4">
-        <article
-          class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
+            <ul>
+              {%- for link in topics | sortBy("featureOrder") %} {%- set href =
+              "/topic/"+link.topicId+"/" -%} {%- set active = href === page.url
+              -%}
+              <li>
+                <a
+                  href="{{-href-}}"
+                  {%-if
+                  active%}
+                  active
+                  class="active landing"
+                  aria-current="page"
+                  tabindex="-1"
+                  {%-endif-%}>
+                  {{-link.text | default(link.name) | safe-}}
+                </a>
+              </li>
+              {%- endfor %}
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-md-9 mx-auto">
+      <p class="m-t-md lead">{{item.description}}</p>
+
+      <h2>Popular related services</h2>
+
+      <div class="row">
+        {%- for pop in item.popularServices -%}
+        <div class="col-md-6 mt-4 mb-4 p-t-lg">
           <a
             href="/department/{{-pop.DepartmentId-}}/service/{{-pop.ServiceId-}}/"
-            class="h5 m-b color-p2 link-before text-left no-underline d-block"
-            >{{-pop.ServiceName-}}</a
-          >
-          <p class="m-b text-left">{{-pop.Description-}}</p>
-        </article>
+            class="no-underline">
+            <article
+              class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
+              <img
+                src="/images/highlight-1.png"
+                class="img-fluid pos-rel p-a m-t-minus-70" />
+              <p
+                class="h4 m-b color-p2 color-primary-hover link-before text-left no-underline d-block">
+                {{-pop.ServiceName-}}
+              </p>
+              <p class="m-b text-left gray-900">{{-pop.Description-}}</p>
+            </article>
+          </a>
+        </div>
+        {%- endfor %}
       </div>
-      {%- endfor %}
-    </div>
 
-    <hr />
+      <hr />
 
-    <h2 aria-live="polite" class="sr-only items-count">0 services found</h2>
-    <p class="lead m-t items-count">0 services</p>
-    <div class="d-flex m-b-lg">
+      <h2 aria-live="polite" class="sr-only items-count">0 services found</h2>
+      <p class="lead m-t items-count">0 services</p>
+      <div class="d-flex m-b-lg">
+        <input
+          type="search"
+          id="searchbox"
+          autofocus
+          placeholder="Filter services"
+          class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-l" />
+      </div>
+
       <input
-        type="search"
-        id="searchbox"
-        autofocus
-        placeholder="Filter services"
-        class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-l" />
-    </div>
+        type="hidden"
+        id="defaultFilter"
+        name="AgencyTags"
+        value="{{item.name}}" />
+      <!-- This is the filter that will be applied to the search results -->
 
-    <input
-      type="hidden"
-      id="defaultFilter"
-      name="AgencyTags"
-      value="{{item.name}}" />
-    <!-- This is the filter that will be applied to the search results -->
-
-    <cagovhome-filterlist
-      data-search-input-id="searchbox"
-      data-result-count-query=".items-count"
-      data-filter-storage-key="service"
-      data-row-filter-key="ServiceId"
-      data-filter-trigger-selector="input#defaultFilter">
-      {%- for service in state_entity.services |
-      pluck('AgencyTags',item.name,"includes") -%}
-      <article data-row-key="{{service.ServiceId}}" class="pos-rel">
-        <h2 class="lead bold m-t-0 m-b">
+      <cagovhome-filterlist
+        data-search-input-id="searchbox"
+        data-result-count-query=".items-count"
+        data-filter-storage-key="service"
+        data-row-filter-key="ServiceId"
+        data-filter-trigger-selector="input#defaultFilter">
+        {%- for service in state_entity.services |
+        pluck('AgencyTags',item.name,"includes") -%}
+        <article data-row-key="{{service.ServiceId}}" class="pos-rel">
+          <h2 class="lead bold m-t-0 m-b">
+            <a
+              href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
+              >{{service.ServiceName}}</a
+            >
+          </h2>
+          <p class="font-size-14 bold m-t-sm">by {{service.FriendlyName}}</p>
+          <p class="service-description">{{service.Description}}</p>
           <a
-            href="/department/{{ service.AgencyId }}/service/{{ service.ServiceId }}/"
-            >{{service.ServiceName}}</a
+            class="btn btn-outline-primary btn-lg"
+            href="{{ service.ServiceUrl }}"
+            aria-label="Launch “{{service.ServiceName}}” service"
+            >Launch service</a
           >
-        </h2>
-        <p class="font-size-14 bold m-t-sm">by {{service.FriendlyName}}</p>
-        <p class="service-description">{{service.Description}}</p>
-        <a
-          class="btn btn-outline-primary btn-lg"
-          href="{{ service.ServiceUrl }}"
-          aria-label="Launch “{{service.ServiceName}}” service"
-          >Launch service</a
-        >
-        <hr class="m-y-md" />
-      </article>
-      {%- endfor %}
-    </cagovhome-filterlist>
+          <hr class="m-y-md" />
+        </article>
+        {%- endfor %}
+      </cagovhome-filterlist>
+    </div>
   </div>
 </div>
