@@ -39,7 +39,8 @@ eleventyNavigation:
     </div>
     <div class="section">
       <div class="container">
-        <gcse:searchresults-only></gcse:searchresults-only>
+        <gcse:searchresults-only
+          defaultToRefinement="this_site_first"></gcse:searchresults-only>
         <!-- <script src='//www.google.com/jsapi' type='text/javascript'></script> -->
 
         {{ content | safe }}
@@ -51,7 +52,7 @@ eleventyNavigation:
 <script>
   window.addEventListener("load", () => {
   // Search ID
-  const cx = 'b04a87646ac3e4c2c'; // Update this value with your search engine unique ID. Submit a request to the CDT Service Desk if you don't already know your unique search engine ID.
+  const cx = '001779225245372747843:mdsmtl_vi1a'; // Update this value with your search engine unique ID. Submit a request to the CDT Service Desk if you don't already know your unique search engine ID.
   const gcse = document.createElement('script');
   gcse.type = 'text/javascript';
   gcse.async = true;
