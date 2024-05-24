@@ -4,9 +4,48 @@
   background-color: #f5f9fa;
 }
 /* -- Site header * -- */
+.branding .header-organization-banner {
+  display: flex;
+}
 .branding .header-organization-banner a .logo-assets .logo-text .logo-dept {
   font-size: 2.5rem;
+  height: 2.5rem;
   top: -10px;
+}
+.branding .header-organization-banner a .logo-assets .logo-text .logo-state {
+  font-size: 1.45rem;
+}
+.branding .header-organization-banner a .logo-assets .logo-img {
+  max-height: 90px;
+  height: 90px;
+}
+
+@media (max-width: 575px) {
+  .branding .header-organization-banner {
+    margin-right: 15%;
+  }
+
+  .branding .header-organization-banner a .logo-assets .logo-text .logo-dept {
+    font-size: 2rem;
+    height: 2.2rem;
+    top: -10px;
+  }
+  .branding .header-organization-banner a .logo-assets .logo-text .logo-state {
+    font-size: 1rem;
+  }
+  .branding .header-organization-banner a .logo-assets .logo-img {
+    max-height: 70px;
+  }
+}
+/* -- Search * -- */
+@media (min-width: 992px) {
+  .full-width-nav .featured-search {
+    top: -75px !important;
+  }
+}
+/* -- Mobile controls * -- */
+.main-nav-icons {
+  top: -5rem;
 }
 /* -- Banner * -- */
 .header-banner {
@@ -60,6 +99,10 @@
 
 .m-t-minus-30 {
   margin-top: -2rem;
+}
+
+.m-t-minus-70 {
+  margin-top: -4.375rem;
 }
 
 /* Feedback */
