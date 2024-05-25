@@ -19,7 +19,7 @@ eleventyComputed:
 
 <div
   class="section-understated"
-  style="background-image: url('/images/personal-records-lineart.svg'); background-repeat:no-repeat; background-position:right;">
+  style="background-image: url('{{item.topicImg}}'); background-repeat:no-repeat; background-position:right;">
   <div class="container p-y-md">
     {%- include "breadcrumbs.html" -%}
     <h1 class="m-t-0 color-p2">{{title}}</h1>
@@ -74,8 +74,9 @@ eleventyComputed:
             <article
               class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
               <img
-                src="/images/highlight-1.png"
-                class="img-fluid pos-rel p-a m-t-minus-70" />
+                src="{{pop.umgURL}}"
+                class="img-fluid pos-rel p-a m-t-minus-70"
+                alt="{{pop.imgAlt}}" />
               <p
                 class="h4 m-b color-p2 color-primary-hover link-before text-left no-underline d-block">
                 {{-pop.ServiceName-}}

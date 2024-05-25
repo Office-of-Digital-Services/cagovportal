@@ -1,385 +1,493 @@
 [
   {
     "topicId": 1,
-    "name": "Assistance and social programs",
-    "description": "Usce efficitur ultricies erat, commodo auctor mi tempus.",
+    "name": "Personal records",
+    "description": "Your birth certificate, ID card, and other personal records confirm who you are. They help you get the services you need.",
     "featureOrder": 5,
+    "topicImg": "/images/topic1-lineart.svg",
     "popularServices": [
       {
-        "DepartmentId": 178,
-        "ServiceId": 60,
-        "ServiceName": "Apply for food stamps",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "DepartmentId": 176,
+        "ServiceId": 52,
+        "ServiceName": "Apply for a birth certificate",
+        "Description": "Get a birth certificate for proof of citizenship, social security, passport, and more.",
+        "umgURL": "/images/topic1-1.png",
+        "imgAlt": "birth certificate"
       },
       {
-        "DepartmentId": 217,
-        "ServiceId": 37,
-        "ServiceName": "Apply for Medi-Cal",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "DepartmentId": 220,
+        "ServiceId": 47,
+        "ServiceName": "DMV address change",
+        "Description": "Change your address for your driver’s license, identification card, vehicle, or vessel.",
+        "umgURL": "/images/topic1-2.png",
+        "imgAlt": "post box next to a house"
       },
       {
-        "DepartmentId": 198,
-        "ServiceId": 63,
-        "ServiceName": "Apply for a Cal Grant",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "DepartmentId": 176,
+        "ServiceId": 1177,
+        "ServiceName": "Get digital vaccine records",
+        "Description": "Show proof of your vaccinations with digital vaccine records.",
+        "umgURL": "/images/topic1-3.png",
+        "imgAlt": "Mobile phone with a digital vaccine record barcode on the screen"
       },
       {
-        "DepartmentId": 101,
-        "ServiceId": 1182,
-        "ServiceName": "Get a CalABLE Visa Prepaid Card",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "DepartmentId": 176,
+        "ServiceId": 52,
+        "ServiceName": "Apply for a death certificate",
+        "Description": "Get an official death certificate copy for benefits, insurance claims, and legal needs.",
+        "umgURL": "/images/topic1-4.png",
+        "imgAlt": "Flowers on a grave site with a headstone in the background"
       }
     ]
   },
   {
     "topicId": 2,
     "name": "Businesses",
-    "description": "Usce efficitur ultricies erat, commodo auctor mi tempus.",
+    "description": "California offers support for your business through licensing, permitting, verificati on, and more.",
     "featureOrder": 2,
+    "topicImg": "/images/topic2-lineart.svg",
     "popularServices": [
       {
         "DepartmentId": 287,
         "ServiceId": 25,
-        "ServiceName": "Apply for business license",
-        "Description": "Apply for Business License, Permit, or Account."
+        "ServiceName": "Apply for a business license",
+        "Description": "Register online for a California business license, permit, or account.",
+        "umgURL": "/images/topic2-1.png",
+        "imgAlt": "Woman looking on a laptop screen"
       },
       {
         "DepartmentId": 287,
         "ServiceId": 26,
         "ServiceName": "Apply for seller’s permit",
-        "Description": "A seller's permit is required if you are engaged in business in California, intend to sell or lease tangible personal property that would ordinarily be subject to sales tax if sold at retail (this includes wholesalers, manufactures and retailers), or will make sales for a temporary period, normally lasting no longer than 90 days at one or more locations."
+        "Description": "Register online for a seller's permit, required for sales subject to sales tax.",
+        "umgURL": "/images/topic2-2.png",
+        "imgAlt": "man and woman doing seller's permit paperwork"
       },
       {
         "DepartmentId": 174,
         "ServiceId": 29,
         "ServiceName": "Get a fishing or hunting license",
-        "Description": "Buy a fishing or hunting license in person or online. Online customers must be at least 18 years of age and provide a Visa or MasterCard to make a purchase."
+        "Description": "Get information for how you can buy a fishing or hunting license in person or online.",
+        "umgURL": "/images/topic2-3.png",
+        "imgAlt": "Fishing boat on a lake hauling fish inside the net"
       },
       {
         "DepartmentId": 268,
         "ServiceId": 13,
         "ServiceName": "Search for Unclaimed Property",
-        "Description": "This search page will allow you to locate Unclaimed Property that already has been sent to the State for safekeeping, as well as property that is about to be sent to the State by a business as required by law."
+        "Description": "Locate unclaimed property that  has been sent to the state for safekeeping.",
+        "umgURL": "/images/topic2-4.png",
+        "imgAlt": "Man holding a check with some money amount on it"
       }
     ]
   },
   {
     "topicId": 3,
     "name": "DMV/Auto",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
+    "description": "Get your California driver’s license, registration, and insurance up-to-date. Resolve traffic tickets, and keep your vehicle in shape with smog and repair services.",
     "featureOrder": 3,
+    "topicImg": "/images/topic3-lineart.svg",
     "popularServices": [
       {
         "DepartmentId": 193,
         "ServiceId": 15,
         "ServiceName": "Pay traffic ticket",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Find the appropriate county traffic court to pay or challenge your ticket.",
+        "umgURL": "/images/topic3-1.png",
+        "imgAlt": "Traffic ticket on the windshield of a car"
       },
       {
         "DepartmentId": 137,
         "ServiceId": 6,
         "ServiceName": "Find a smog station",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Search for a smog station by location and service type, including STAR inspections.",
+        "umgURL": "/images/topic3-2.png",
+        "imgAlt": "Machanic and customer doing handshake in front of a car"
       },
       {
         "DepartmentId": 220,
         "ServiceId": 44,
         "ServiceName": "Renew drivers license",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Skip the line and renew your driver’s license or identification card online. Your address must be up-to-date to renew.",
+        "umgURL": "/images/topic3-3.png",
+        "imgAlt": "Young woman getting her driver's license from a DMV officer"
       },
       {
         "DepartmentId": 175,
         "ServiceId": 1171,
         "ServiceName": "Get low cost auto insurance",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Get auto insurance at low cost, affordable rates. To qualify, you must be income-eligible with a good driving record.",
+        "umgURL": "/images/topic3-4.png",
+        "imgAlt": "Auto keys with a car keychain"
       }
     ]
   },
   {
     "topicId": 4,
-    "name": "Education",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
+    "name": "Jobs and unemployment",
+    "description": "Browse job boards and employment resources, including job training. Get financial support while you are unemployed.",
     "featureOrder": 12,
+    "topicImg": "/images/topic4-lineart.svg",
     "popularServices": [
       {
-        "DepartmentId": 172,
-        "ServiceId": 84,
-        "ServiceName": "Get a high school diploma",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "DepartmentId": 89,
+        "ServiceId": 39,
+        "ServiceName": "Find a California state job",
+        "Description": "Learn more about jobs with the State, look at job openings and apply for jobs with the state of California.",
+        "umgURL": "/images/topic4-1.png",
+        "imgAlt": "CalCareers logo"
       },
       {
-        "DepartmentId": 198,
-        "ServiceId": 63,
-        "ServiceName": "Apply for a Cal Grant",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "DepartmentId": 229,
+        "ServiceId": 20,
+        "ServiceName": "File for unemployment",
+        "Description": "File and manage unemployment claims on a fast, convenient, and secure platform.",
+        "umgURL": "/images/topic4-2.png",
+        "imgAlt": "person filing for unemployment benefits on a computer"
       },
       {
-        "DepartmentId": 172,
-        "ServiceId": 83,
-        "ServiceName": "Find an ESL/English class",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "DepartmentId": 229,
+        "ServiceId": 22,
+        "ServiceName": "Find a job",
+        "Description": "Find job openings and information about applying for jobs in California.",
+        "umgURL": "/images/topic4-3.png",
+        "imgAlt": "Young man getting interview for a job"
       },
       {
-        "DepartmentId": 256,
-        "ServiceId": 1138,
-        "ServiceName": "Apply for financial assistance in healthcare education",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "DepartmentId": 229,
+        "ServiceId": 18,
+        "ServiceName": "File for disability",
+        "Description": "Apply for short-term benefits, available to eligible workers who need time off work.",
+        "umgURL": "/images/topic4-4.png",
+        "imgAlt": "Woman applying for disability benefits on a computer"
       }
     ]
   },
   {
     "topicId": 5,
-    "name": "Health and wellness",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
+    "name": "Assistance and social programs",
+    "description": "Get help covering food, medical, vehicle, and education costs. Apply for income assistance when unemployed or on disability.",
     "featureOrder": 10,
+    "topicImg": "/images/topic5-lineart.svg",
     "popularServices": [
-      {
-        "DepartmentId": 217,
-        "ServiceId": 37,
-        "ServiceName": "Apply for Medi-Cal",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
-      },
-      {
-        "DepartmentId": 176,
-        "ServiceId": 1177,
-        "ServiceName": "Get a digital vaccine record",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
-      },
-      {
-        "DepartmentId": 240,
-        "ServiceId": 74,
-        "ServiceName": "Apply for medical insurance",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
-      },
       {
         "DepartmentId": 178,
         "ServiceId": 60,
         "ServiceName": "Apply for food stamps",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Add to your food budget and get help putting healthy food on the table with the CalFresh Program.",
+        "umgURL": "/images/topic5-1.png",
+        "imgAlt": "Father and son shopping for groceries in a supermarket"
+      },
+      {
+        "DepartmentId": 217,
+        "ServiceId": 37,
+        "ServiceName": "Apply for Medi-Cal",
+        "Description": "Get free or low-cost medical care. Medi-Cal provides health coverage for qualified individuals.",
+        "umgURL": "/images/topic5-2.png",
+        "imgAlt": "Mother with child seeing a lady doctor in a hospital"
+      },
+      {
+        "DepartmentId": 229,
+        "ServiceId": 20,
+        "ServiceName": "File for unemployment",
+        "Description": "File and manage unemployment claims on a fast, convenient, and secure platform.",
+        "umgURL": "/images/topic5-3.png",
+        "imgAlt": "A person applying for unemployment benefits on a computer"
+      },
+      {
+        "DepartmentId": 101,
+        "ServiceId": 1182,
+        "ServiceName": "Get a CalABLE Visa prepaid card",
+        "Description": "Pay for disability-related expenses tax free with a CalABLE card.",
+        "umgURL": "/images/topic5-4.png",
+        "imgAlt": "CalABLE Visa prepaid card"
       }
     ]
   },
   {
     "topicId": 6,
     "name": "Housing and real estate",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
+    "description": "Manage your home with contractors, real estate agents, appraisers and insurance estimates. Maintain your real estate business with licensing.",
     "featureOrder": 6,
+    "topicImg": "/images/topic6-lineart.svg",
     "popularServices": [
       {
         "DepartmentId": 299,
         "ServiceId": 12,
         "ServiceName": "Look up a contractor license",
-        "Description": "Look up a contractor license or Home Improvement Salesperson (HIS) registration to verify information, including complaint disclosure."
+        "Description": "Look up a contractor license to verify information, including complaint disclosure.",
+        "umgURL": "/images/topic6-1.png",
+        "imgAlt": "Blueprints on the table and three construction workers discussing the plan on the background"
       },
       {
         "DepartmentId": 40,
         "ServiceId": 1131,
         "ServiceName": "Verify a real estate license",
-        "Description": "Check the status of a real estate licensee using a name, address, or license ID."
+        "Description": "Check the status of a real estate licensee using a name, address, or license ID.",
+        "umgURL": "/images/topic6-2.png",
+        "imgAlt": "Realor lady holding open house sign in front of a house"
       },
       {
         "DepartmentId": 180,
         "ServiceId": 1136,
         "ServiceName": "Calculate your earthquake insurance premium",
-        "Description": "Use the CEA Premium Calculator for a free CEA California residential earthquake insurance premium estimate. To purchase a CEA policy, you must contact a participating residential insurer."
+        "Description": "Get an earthquake insurance premium estimate for your residence.",
+        "umgURL": "/images/topic6-3.png",
+        "imgAlt": "Two story house"
       },
       {
         "DepartmentId": 139,
         "ServiceId": 1175,
         "ServiceName": "COVID-19 rent relief",
-        "Description": "Whether it’s a health-related event or a significant financial hardship, COVID-19 has affected us all. As our state continues to recover, we are committed to keeping families housed and recognize that California renters and landlords have enough to worry about. We want to make sure that past due rent isn’t one of them."
+        "Description": "Check the status of your submitted COVID-19 rent relief application.",
+        "umgURL": "/images/topic6-4.png",
+        "imgAlt": "Family of four standing in front of a house"
       }
     ]
   },
   {
     "topicId": 7,
-    "name": "Jobs and unemployment",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featureOrder": 4,
-    "popularServices": [
-      {
-        "DepartmentId": 89,
-        "ServiceId": 39,
-        "ServiceName": "Find a California state job",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
-      },
-      {
-        "DepartmentId": 229,
-        "ServiceId": 20,
-        "ServiceName": "File for unemployment",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
-      },
-      {
-        "DepartmentId": 229,
-        "ServiceId": 22,
-        "ServiceName": "Find a job",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
-      },
-      {
-        "DepartmentId": 229,
-        "ServiceId": 18,
-        "ServiceName": "File for disability",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
-      }
-    ]
-  },
-  {
-    "topicId": 8,
-    "name": "Personal records",
-    "description": "Curabitur vitae lacus neque. Curabitur faucibus venenatis libero ut.",
-    "featureOrder": 1,
-    "popularServices": [
-      {
-        "DepartmentId": 176,
-        "ServiceId": 52,
-        "ServiceName": "Apply for birth certificate",
-        "Description": "An authorized, certified California birth certificate can typically be used for travel, passport, proof of citizenship, social security, driver's license, and more."
-      },
-      {
-        "DepartmentId": 220,
-        "ServiceId": 47,
-        "ServiceName": "DMV address change",
-        "Description": "You can change your residence or mailing address for your California Driver License, Identification Card, vehicle, or vessel."
-      },
-      {
-        "DepartmentId": 176,
-        "ServiceId": 1177,
-        "ServiceName": "Get digital vaccine records",
-        "Description": "If you want to share your proof of vaccination digitally, you can get an electronic version of the record card you were given at time of vaccination."
-      },
-      {
-        "DepartmentId": 176,
-        "ServiceId": 53,
-        "ServiceName": "Apply for Death Certificate",
-        "Description": "A certified copy of a death certificate can typically be used to obtain death benefits, claim insurance proceeds, notify social security and other legal purposes."
-      }
-    ]
-  },
-  {
-    "topicId": 9,
     "name": "Safety and emergencies",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featureOrder": 7,
+    "description": "Look up public safety information and receive support if you are a victim of a crime or disaster.",
+    "featureOrder": 4,
+    "topicImg": "/images/topic7-lineart.svg",
     "popularServices": [
       {
         "DepartmentId": 223,
         "ServiceId": 1132,
         "ServiceName": "Search for registered sex offenders",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Check the database to get information about registered sex offenders by location.",
+        "umgURL": "/images/topic7-1.png",
+        "imgAlt": "Person searching for registered sex offenders on a computer"
       },
       {
         "DepartmentId": 171,
-        "ServiceId": 1188,
+        "ServiceId": 71,
         "ServiceName": "Inmate locator and records",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Search for information about inmates in custody, including location and admission date.",
+        "umgURL": "/images/topic7-2.png",
+        "imgAlt": "Open map with a location pin on top of the computer"
       },
       {
         "DepartmentId": 238,
         "ServiceId": 1122,
         "ServiceName": "Get disaster relief assistance",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Access disaster relief services and tips on ensuring your health and safety.",
+        "umgURL": "/images/topic7-3.png",
+        "imgAlt": "Disaster relief worker helping a woman"
       },
       {
         "DepartmentId": 162,
         "ServiceId": 1169,
-        "ServiceName": "Compensation for crime-related expenses",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "ServiceName": "Apply for compensation for crime-related expenses",
+        "Description": "Are you a victim of crime? CalVCB can help with bills and expenses that result from crime. ",
+        "umgURL": "/images/topic7-4.png",
+        "imgAlt": "Person applying for compensation for crime-related expenses on a mobile phone"
       }
     ]
   },
   {
-    "topicId": 10,
-    "name": "State laws and information",
-    "description": "Usce efficitur ultricies erat, commodo auctor mi tempus.",
-    "featureOrder": 8,
+    "topicId": 8,
+    "name": "State info and laws",
+    "description": "Look up state representatives and laws. Access other state data, like lottery numbers, local schools, and voter registration.",
+    "featureOrder": 1,
+    "topicImg": "/images/topic8-lineart.svg",
     "popularServices": [
       {
         "DepartmentId": 155,
         "ServiceId": 42,
         "ServiceName": "Look up winning lottery numbers",
-        "Description": "Look Up Winning Lottery Numbers on the CA Lottery website. See if you're a winner!"
+        "Description": "Look up winning lottery numbers on the CA Lottery website. See if you're a winner!",
+        "umgURL": "/images/topic8-1.png",
+        "imgAlt": "CA lotto logo"
       },
       {
         "DepartmentId": 268,
         "ServiceId": 13,
-        "ServiceName": "Search for Unclaimed Property",
-        "Description": "This search page will allow you to locate Unclaimed Property that already has been sent to the State for safekeeping, as well as property that is about to be sent to the State by a business as required by law."
+        "ServiceName": "Search for unclaimed property",
+        "Description": "Locate unclaimed property that has been sent to the state for safekeeping.",
+        "umgURL": "/images/topic8-2.png",
+        "imgAlt": "Person holding a check with some money amount on it"
       },
       {
         "DepartmentId": 275,
         "ServiceId": 58,
         "ServiceName": "Look up my representatives",
-        "Description": "Use this online service to find your State Senate, State Assembly or United States Congressional Representative, as well as information on how you can contact them."
+        "Description": "Find your State Senate, State Assembly, or US Representative and how you can contact them.",
+        "umgURL": "/images/topic8-3.png",
+        "imgAlt": "US and California flags in front of the Capitol building"
       },
       {
         "DepartmentId": 244,
         "ServiceId": 41,
         "ServiceName": "Look up a bill or law",
-        "Description": "Search California Legislative Information and access California Law and Bill information including Legislative Publications."
+        "Description": "Access California law and bill information, including legislative publications.",
+        "umgURL": "/images/topic8-4.png",
+        "imgAlt": "Legal hammer and scales of justice in the background"
       }
     ]
   },
   {
-    "topicId": 11,
+    "topicId": 9,
     "name": "Taxes",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featureOrder": 9,
+    "description": "Learn about taxes in California and how to file for free, check your refund, and earn tax credits.",
+    "featureOrder": 7,
+    "topicImg": "/images/topic9-lineart.svg",
     "popularServices": [
       {
         "DepartmentId": 236,
         "ServiceId": 33,
         "ServiceName": "Check your tax refund status",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "You may be able to get a tax refund if you’ve paid too much tax. Use this service to check your refund status.",
+        "umgURL": "/images/topic9-1.png",
+        "imgAlt": "Man in glasses looking at a mobile phone screen"
       },
       {
         "DepartmentId": 236,
         "ServiceId": 1168,
         "ServiceName": "File taxes for free with CalFile",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Use CalFile to e-file your state tax return. Get real-time confirmation and the fastest refund possible. And best of all, it’s free.",
+        "umgURL": "/images/topic9-2.png",
+        "imgAlt": "Elderly couple filing taxes on a mobile phone"
       },
       {
         "DepartmentId": 287,
         "ServiceId": 24,
         "ServiceName": "Look up tax rates",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Enter an address to find the sales and use tax rate for that location.",
+        "umgURL": "/images/topic9-3.png",
+        "imgAlt": "Person with calulator and pen in front of a computer screen"
       },
       {
-        "DepartmentId": 178,
-        "ServiceId": 1183,
+        "DepartmentId": 236,
+        "ServiceId": 1167,
         "ServiceName": "Learn about the Earned Income Tax Credit",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "The CalEITC is a state tax credit for working Californians. If you qualify, you may see a reduced tax bill or a bigger refund.",
+        "umgURL": "/images/topic9-4.png",
+        "imgAlt": "EITC logo"
       }
     ]
   },
   {
-    "topicId": 12,
+    "topicId": 10,
+    "name": "Health and wellness",
+    "description": "Get health and wellness support for you and your family. Find resources for medical care, nutrition, and senior services.",
+    "featureOrder": 8,
+    "topicImg": "/images/topic10-lineart.svg",
+    "popularServices": [
+      {
+        "DepartmentId": 217,
+        "ServiceId": 37,
+        "ServiceName": "Apply for Medi-Cal",
+        "Description": "Get free or low-cost medical care. Medi-Cal provides health coverage for qualified individuals.",
+        "umgURL": "/images/topic10-1.png",
+        "imgAlt": "Lady doctor high-fiving a patient boy in a hospital who sits next to his mom"
+      },
+      {
+        "DepartmentId": 176,
+        "ServiceId": 1177,
+        "ServiceName": "Get digital vaccine records",
+        "Description": "Show proof of your vaccinations with digital vaccine records.",
+        "umgURL": "/images/topic10-2.png",
+        "imgAlt": "person looking at mobile phone screen with digital vaccine record barcode"
+      },
+      {
+        "DepartmentId": 240,
+        "ServiceId": 74,
+        "ServiceName": "Apply for medical insurance",
+        "Description": "Apply for Medical Insurance via Covered California.",
+        "umgURL": "/images/topic10-3.png",
+        "imgAlt": "Doctor with pen and clipboard doing paperwork"
+      },
+      {
+        "DepartmentId": 178,
+        "ServiceId": 60,
+        "ServiceName": "Apply for food stamps",
+        "Description": "Add to your food budget and get help putting healthy food on the table with the CalFresh Program.",
+        "umgURL": "/images/topic10-4.png",
+        "imgAlt": "Father and son shopping for groceries in a supermarket"
+      }
+    ]
+  },
+  {
+    "topicId": 11,
     "name": "Travel and recreation",
-    "description": "Ut luctus vulputate nulla in ullamcorper. Maecenas dictum ante ex.",
-    "featureOrder": 11,
+    "description": "Discover California's top destinations like state parks, campsites, and museums. Plan trips, reserve campsites, and get licenses for activities.",
+    "featureOrder": 9,
+    "topicImg": "/images/topic11-lineart.svg",
     "popularServices": [
       {
         "DepartmentId": 174,
         "ServiceId": 29,
         "ServiceName": "Get a fishing or hunting license",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Get information for how you can buy a fishing or hunting license in person or online.",
+        "umgURL": "/images/topic11-1.png",
+        "imgAlt": "Park ranger checking size of the fish caught by a young fisherman"
       },
       {
         "DepartmentId": 185,
         "ServiceId": 1144,
         "ServiceName": "Get a horse racing license",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Get a license for horse owners, trainers, jockeys, grooms, agents, and officials.",
+        "umgURL": "/images/topic11-2.png",
+        "imgAlt": "Horses racing on a track"
       },
       {
         "DepartmentId": 283,
         "ServiceId": 75,
-        "ServiceName": "Request a free California visitor's guide",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "ServiceName": "Request a free California visitor’s guide",
+        "Description": "Explore the Golden State with trip itineraries for every region of California.",
+        "umgURL": "/images/topic11-3.png",
+        "imgAlt": "Visiting guide covers"
       },
       {
         "DepartmentId": 259,
         "ServiceId": 49,
         "ServiceName": "Find a state park",
-        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium dapibus diam, a finibus metus congue a."
+        "Description": "Visit California’s state parks, a diverse collection of natural and cultural resources.",
+        "umgURL": "/images/topic11-4.png",
+        "imgAlt": "California state park shoreline"
+      }
+    ]
+  },
+  {
+    "topicId": 12,
+    "name": "Education",
+    "description": "Find educational opportunities and financial support for your degree or vocational training.",
+    "featureOrder": 11,
+    "topicImg": "/images/topic12-lineart.svg",
+    "popularServices": [
+      {
+        "DepartmentId": 172,
+        "ServiceId": 84,
+        "ServiceName": "Get a high school diploma",
+        "Description": "Find GED program classes, which help adults who did not graduate from high school get a diploma.",
+        "umgURL": "/images/topic12-1.png",
+        "imgAlt": "Young woman in graduation cap and gown holding a diploma"
+      },
+      {
+        "DepartmentId": 198,
+        "ServiceId": 63,
+        "ServiceName": "Apply for a Cal Grant",
+        "Description": "Cal Grants provide aid to California undergraduates and vocational students.",
+        "umgURL": "/images/topic12-2.png",
+        "imgAlt": "Graduation cap on top of a stack of money bills"
+      },
+      {
+        "DepartmentId": 172,
+        "ServiceId": 83,
+        "ServiceName": "Find an ESL/English class",
+        "Description": "Find a class to learn English near you with this Directory of Adult Education Programs.",
+        "umgURL": "/images/topic12-3.png",
+        "imgAlt": "Man in the college classroom learning English"
+      },
+      {
+        "DepartmentId": 256,
+        "ServiceId": 1138,
+        "ServiceName": "Apply for financial assistance in healthcare education",
+        "Description": "Access scholarships and grants for students, graduates, and institutions in the healthcare industry.",
+        "umgURL": "/images/topic12-4.png",
+        "imgAlt": "Smiling young medical female student in a lab coat holding books and notepads"
       }
     ]
   }
