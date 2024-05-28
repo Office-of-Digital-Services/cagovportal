@@ -38,7 +38,7 @@ eleventyNavigation:
       <div class="col-lg-6 m-0 p-0 my-auto">
         <!-- <img class="img-fluid" src="/images/main-banner-img.png" alt="California West Coast landscape with line art mountains in the background" /> -->
         <img
-          class="img-fluid"
+          class="img-fluid d-none d-lg-block"
           src="/images/banner-image.png"
           alt="California West Coast landscape with line art mountains in the background" />
       </div>
@@ -256,8 +256,7 @@ eleventyNavigation:
         <h2 class="m-t">In the spotlight</h2>
 
         {%- set counter = 0 -%} {%- for story in
-        getTopStories.rss.channel[0].item -%} {%- if counter < 3 and ("Press
-        Releases" in story.category or "Top Story" in story.category) -%}
+        getTopStories.rss.channel[0].item -%} {%- if counter < 3 and ("Press Releases" in story.category or "Public Safety" in story.category) -%}
         <hr class="m-y-md" />
         <h3 class="lead font-weight-700">
           <a href="{{ story.link }}" aria-disabled="true">{{ story.title }}</a>
