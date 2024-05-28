@@ -88,6 +88,12 @@
   background-size: cover;
 }
 
+@media (max-width: 991px) {
+.lineart {
+  background-image: none !important;
+}
+}
+
 /* GLOBAL */
 .color-primary {
   color: var(--color-p2, #046b99) !important;
@@ -186,8 +192,8 @@ a[aria-current="page"] {
 
 .overflow-auto {
   -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
+  scrollbar-width: none; 
+} 
 
 /* Service images */
 .service-img {
