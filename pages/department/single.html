@@ -8,12 +8,12 @@ pagination:
     addAllPagesToCollections : true
 permalink: "department/{{ item.AgencyId }}/"
 eleventyComputed: 
-  description: Department details for "{{ item.AgencyFullName }}"
-  title: "{{ item.FriendlyName }} ({{ item.Acronym }})"
-  keywords: "{{ item.Keywords}}"
+  description: Department details for "{{ item.AgencyFullName | safe }}"
+  title: "{{ item.FriendlyName | safe }} ({{ item.Acronym | safe }})"
+  keywords: "{{ item.Keywords | safe }}"
   eleventyNavigation:
     key: "Department{{ item.AgencyId }}"
-    title:  "{{ item.AgencyFullName }}"
+    title:  "{{ item.AgencyFullName | safe }}"
     parent: Departments
 ---
 
