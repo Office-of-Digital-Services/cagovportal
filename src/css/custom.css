@@ -89,9 +89,9 @@
 }
 
 @media (max-width: 991px) {
-.lineart {
-  background-image: none !important;
-}
+  .lineart {
+    background-image: none !important;
+  }
 }
 
 /* GLOBAL */
@@ -109,6 +109,10 @@
 
 .m-t-minus-70 {
   margin-top: -4.375rem;
+}
+
+.no-external-link-icon span.external-link-icon {
+  display: none !important;
 }
 
 /* Feedback */
@@ -192,8 +196,8 @@ a[aria-current="page"] {
 
 .overflow-auto {
   -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; 
-} 
+  scrollbar-width: none;
+}
 
 /* Service images */
 .service-img {
@@ -213,7 +217,7 @@ cagovhome-filterlist
 }
 
 /* Bringing back the little "X" buttons on form fields */
-::-webkit-search-cancel-button {
+::-webkit-search-cancel-button(:not(.webkit-appearance-none)) {
   display: unset !important;
 }
 
