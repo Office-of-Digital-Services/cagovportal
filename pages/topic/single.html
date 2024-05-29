@@ -9,11 +9,12 @@ pagination:
     addAllPagesToCollections : true
 permalink: "topic/{{ item.topicId }}/"
 eleventyComputed: 
-  description: Topic details for "{{ item.name | safe }}"
+  description: "{{ item.metaDescription | safe }}"
   title: "{{ item.name | safe }}"
   eleventyNavigation:
     key: "Topic{{ item.topicId }}"
     title:  "{{ item.name | safe }}"
+    metatitle:  "{{ item.name | safe }} | Ca.gov"
     parent: Topics
 ---
 
