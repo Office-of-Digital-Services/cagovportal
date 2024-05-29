@@ -1,0 +1,334 @@
+---
+landing: About
+description: Learn about the California state government, places to visit, and recent milestones
+title: About California
+layout: landing
+eleventyNavigation:
+  key: About
+  parent: Home
+---
+
+<div
+  class="section-primary lineart"
+  style="background-image: url('/images/about-lineart.svg'); background-repeat:no-repeat; background-position:right; background-size:auto;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0">{{title}}</h1>
+  </div>
+</div>
+
+<!--Branches-->
+<div class="container p-b-lg">
+  <h2>California government</h2>
+  <h3 class="m-b-lg">Branches of government</h3>
+  <div class="row p-t-lg">
+    <div class="col-md-4 mt-5 mb-5 mb-md-4 mt-md-0">
+      <article
+        class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 d-flex flex-column">
+        <img
+          src="/images/about-branch-1.png"
+          class="img-fluid pos-rel p-a m-t-minus-70 width-90pct relative-centered-x"
+          alt="US and California flags in front of Capitol building" />
+        <h4 class="m-b m-t-md text-left">Executive</h4>
+        <p class="m-b text-left">
+          The Governor leads California's executive branch, which includes
+          elected officials and administrators.
+        </p>
+        <p class="text-center mt-auto m-b-md">
+          <a
+            href="https://www.gov.ca.gov/"
+            class="btn btn-primary btn-hover w-100"
+            >Visit the Governor’s website</a
+          >
+        </p>
+      </article>
+    </div>
+    <div class="col-md-4 mt-5 mb-5 mb-md-4 mt-md-0">
+      <article
+        class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 d-flex flex-column">
+        <img
+          src="/images/about-branch-2.png"
+          class="img-fluid pos-rel p-a m-t-minus-70 width-90pct relative-centered-x"
+          alt="Microphone in on a speacker's desk legistation session auditorium" />
+        <h4 class="m-b m-t-md text-left">Legislative</h4>
+        <p class="m-b text-left">
+          The California Legislature votes on state laws and drafts legislation.
+        </p>
+        <p class="text-center mt-auto m-b-md">
+          <a
+            href="https://leginfo.legislature.ca.gov/"
+            class="btn btn-primary btn-hover w-100"
+            >Visit the Legislature’s website</a
+          >
+        </p>
+      </article>
+    </div>
+    <div class="col-md-4 mt-5 mb-5 mb-md-4 mt-md-0">
+      <article
+        class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 d-flex flex-column">
+        <img
+          src="/images/about-branch-3.png"
+          class="img-fluid pos-rel p-a m-t-minus-70 width-90pct relative-centered-x"
+          alt="US flag on the pole in front of the court house building" />
+        <h4 class="m-b m-t-md text-left">Judicial</h4>
+        <p class="m-b text-left">
+          The judicial branch interprets and applies laws at state and local
+          levels.
+        </p>
+        <p class="text-center mt-auto m-b-md">
+          <a
+            href="https://www.courts.ca.gov/"
+            class="btn btn-primary btn-hover w-100"
+            >Visit the CA Courts website</a
+          >
+        </p>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!--Programs-->
+<div class="section-understated">
+  <div class="container p-y-lg">
+    <h2 class="h3 mt-0">Featured initiatives and programs</h2>
+
+    <div class="d-flex gap-3 flex-column flex-md-row">
+      <a
+        class="btn btn-outline-primary bg-s1 text-nowrap"
+        href="https://ebudget.ca.gov/"
+        >California budget</a
+      >
+      <a
+        class="btn btn-outline-primary bg-s1 text-nowrap"
+        href="https://www.sos.ca.gov/elections"
+        ><span>Elections and voting</span></a
+      >
+      <a
+        class="btn btn-outline-primary bg-s1 text-nowrap"
+        href="https://www.sos.ca.gov/elections/who-are-my-representatives"
+        >Look up my representatives</a
+      >
+      <a
+        class="btn btn-outline-primary bg-s1 text-nowrap"
+        href="https://leginfo.legislature.ca.gov/"
+        >Look up a bill or law</a
+      >
+      <a
+        class="btn btn-outline-primary bg-s1 text-nowrap"
+        href="https://selfhelp.courts.ca.gov/"
+        >Common legal issues</a
+      >
+    </div>
+  </div>
+</div>
+
+<!--Symbols-->
+<div class="container p-b-lg">
+  <h2>State information</h2>
+  <div class="row m-b-lg">
+    <div class="col-md-4">
+      <article
+        class="bg-white pos-rel h-100 brd-solid-1 brd-gray-200 d-flex flex-column">
+        <img
+          src="/images/about-flag.png"
+          class="img-fluid"
+          alt="California state flag" />
+        <h4 class="m-b m-t-md text-center">State flag</h4>
+      </article>
+    </div>
+    <div class="col-md-4">
+      <article
+        class="bg-white pos-rel h-100 brd-solid-1 brd-gray-200 d-flex flex-column">
+        <img
+          src="/images/about-seal.png"
+          class="img-fluid"
+          alt="California state seal" />
+        <h4 class="m-b m-t-md text-center">State seal</h4>
+      </article>
+    </div>
+    <div class="col-md-4">
+      <article
+        class="bg-white pos-rel h-100 brd-solid-1 brd-gray-200 d-flex flex-column">
+        <img
+          src="/images/about-colors.png"
+          class="img-fluid"
+          alt="California state colors" />
+        <h4 class="m-b m-t-md text-center">State colors</h4>
+      </article>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <article
+        class="bg-white pos-rel h-100 brd-solid-1 brd-gray-200 d-flex flex-column">
+        <img
+          src="/images/about-animal.png"
+          class="img-fluid"
+          alt="California state animal" />
+        <h4 class="m-b m-t-md text-center">State animal</h4>
+        <p class="text-center m-b-md">California grizzly bear</p>
+      </article>
+    </div>
+    <div class="col-md-4">
+      <article
+        class="bg-white pos-rel h-100 brd-solid-1 brd-gray-200 d-flex flex-column">
+        <img
+          src="/images/about-flower.png"
+          class="img-fluid"
+          alt="California state flower" />
+        <h4 class="m-b m-t-md text-center">State flower</h4>
+        <p class="text-center m-b-md">California poppy</p>
+      </article>
+    </div>
+    <div class="col-md-4">
+      <article
+        class="bg-white pos-rel h-100 brd-solid-1 brd-gray-200 d-flex flex-column">
+        <img
+          src="/images/about-tree.png"
+          class="img-fluid"
+          alt="California state tree" />
+        <h4 class="m-b m-t-md text-center">State tree</h4>
+        <p class="text-center m-b-md">California redwood</p>
+      </article>
+    </div>
+  </div>
+  <div class="pt-4 p-b-lg">
+    <a
+      href="https://www.library.ca.gov/california-history/state-symbols/"
+      class="btn btn-primary btn-lg transform-scale-1_05--hover transition-0_3 p-x-md"
+      >View all state symbols</a
+    >
+  </div>
+</div>
+
+<!--Numbers-->
+<div class="section-primary topo-lines">
+  <div class="container pt-1 p-b-md">
+    <h2 class="h2">California milestones</h2>
+    <div class="row">
+      <div class="col-md-3 mb-4">
+        <article
+          class="bg-primary text-center p-x-md p-a-md pos-rel h-100 rounded-4">
+          <p class="text-3-5rem m-b-0">
+            <span
+              class="scroll-counter"
+              data-counter-time="1000"
+              style="visibility: visible;"
+              >1.5</span
+            >m
+          </p>
+          <p>zero emission vehicles in the state (by 2025)</p>
+        </article>
+      </div>
+      <div class="col-md-3 mb-4">
+        <article
+          class="bg-primary text-center p-x-md p-a-md pos-rel h-100 rounded-4">
+          <p class="text-3-5rem m-b-0">
+            <span
+              class="scroll-counter"
+              data-counter-time="1500"
+              style="visibility: visible;"
+              >33</span
+            >%
+          </p>
+          <p>renewable energy portfolio standard by December 2020</p>
+        </article>
+      </div>
+      <div class="col-md-3 mb-4">
+        <article
+          class="bg-primary text-center p-x-md p-a-md pos-rel h-100 rounded-4">
+          <p class="text-3-5rem m-b-0">
+            <span
+              class="scroll-counter"
+              data-counter-time="2000"
+              style="visibility: visible;"
+              >230</span
+            >+
+          </p>
+          <p>state government agencies serving you</p>
+        </article>
+      </div>
+      <div class="col-md-3 mb-4">
+        <article
+          class="bg-primary text-center p-x-md p-a-md pos-rel h-100 rounded-4">
+          <p class="text-3-5rem m-b-0">
+            $<span
+              class="scroll-counter"
+              data-counter-time="2300"
+              style="visibility: visible;"
+              >60</span
+            >b+
+          </p>
+          <p>generated to support our communities</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Visitiong California-->
+<div class="container p-b-lg">
+  <h2 class="m-b-lg">Visiting California</h2>
+  <div class="row p-t-lg">
+    <div class="col-md-4 mt-5 mb-5 mb-md-4 mt-md-0">
+      <a
+        href="https://www.visitcalifornia.com/places-to-visit/"
+        class="no-underline no-external-link-icon">
+        <article
+          class="bg-white bg-gray-50-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3">
+          <img
+            src="/images/highlight-1.png"
+            class="img-fluid pos-rel p-a m-t-minus-70" />
+          <p
+            class="h4 m-b color-p2 color-primary-hover link-before text-left no-underline d-block">
+            Places to visit
+          </p>
+          <p class="m-b text-left gray-900">
+            Discover hundreds of places to visit and learn about California’s
+            diverse regions and lively cities.
+          </p>
+        </article>
+      </a>
+    </div>
+    <div class="col-md-4 mt-5 mb-5 mb-md-4 mt-md-0">
+      <a
+        href="https://www.parks.ca.gov/Find-a-Park"
+        class="no-underline no-external-link-icon">
+        <article
+          class="bg-white bg-gray-50-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3">
+          <img
+            src="/images/highlight-2.png"
+            class="img-fluid pos-rel p-a m-t-minus-70" />
+          <p
+            class="h4 m-b color-p2 color-primary-hover link-before text-left no-underline d-block">
+            State parks
+          </p>
+          <p class="m-b text-left gray-900">
+            Visit California’s state parks, which include the finest and most
+            diverse collection of natural, cultural, and recreational resources.
+          </p>
+        </article>
+      </a>
+    </div>
+    <div class="col-md-4 mt-5 mb-5 mb-md-4 mt-md-0">
+      <a
+        href="https://www.reservecalifornia.com/Web/"
+        class="no-underline no-external-link-icon">
+        <article
+          class="bg-white bg-gray-50-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3">
+          <img
+            src="/images/highlight-3.png"
+            class="img-fluid pos-rel p-a m-t-minus-70" />
+          <p
+            class="h4 m-b color-p2 color-primary-hover link-before text-left no-underline d-block">
+            Camping reservations
+          </p>
+          <p class="m-b text-left gray-900">
+            Book your next camping adventure up to six months in advance,
+            choosing among 15,000 campsites and 279 park units.
+          </p>
+        </article>
+      </a>
+    </div>
+  </div>
+</div>

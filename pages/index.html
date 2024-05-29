@@ -122,7 +122,9 @@ eleventyNavigation:
   <h2 class="m-b-lg">California highlights</h2>
   <div class="row p-t-lg">
     <div class="col-md-4 mt-5 mb-5 mb-md-4 mt-md-0">
-      <a href="/" class="no-underline">
+      <a
+        href="https://www.visitcalifornia.com/places-to-visit/"
+        class="no-underline no-external-link-icon">
         <article
           class="bg-white bg-gray-50-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3">
           <img
@@ -140,7 +142,9 @@ eleventyNavigation:
       </a>
     </div>
     <div class="col-md-4 mt-5 mb-5 mb-md-4 mt-md-0">
-      <a href="/" class="no-underline">
+      <a
+        href="https://www.parks.ca.gov/Find-a-Park"
+        class="no-underline no-external-link-icon">
         <article
           class="bg-white bg-gray-50-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3">
           <img
@@ -158,7 +162,9 @@ eleventyNavigation:
       </a>
     </div>
     <div class="col-md-4 mt-5 mb-5 mb-md-4 mt-md-0">
-      <a href="/" class="no-underline">
+      <a
+        href="https://www.reservecalifornia.com/Web/"
+        class="no-underline no-external-link-icon">
         <article
           class="bg-white bg-gray-50-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3">
           <img
@@ -179,7 +185,7 @@ eleventyNavigation:
 
   <div class="pt-4 p-b-lg">
     <a
-      href="/"
+      href="/about/"
       class="btn btn-primary btn-lg transform-scale-1_05--hover transition-0_3 p-x-md"
       >Learn more about California</a
     >
@@ -256,7 +262,8 @@ eleventyNavigation:
         <h2 class="m-t">In the spotlight</h2>
 
         {%- set counter = 0 -%} {%- for story in
-        getTopStories.rss.channel[0].item -%} {%- if counter < 3 and ("Press Releases" in story.category or "Public Safety" in story.category) -%}
+        getTopStories.rss.channel[0].item -%} {%- if counter < 3 and ("Press
+        Releases" in story.category or "Public Safety" in story.category) -%}
         <hr class="m-y-md" />
         <h3 class="lead font-weight-700">
           <a href="{{ story.link }}" aria-disabled="true">{{ story.title }}</a>
