@@ -2,8 +2,8 @@
 landing: Home
 description: Search for services or departments
 title: Search
+layout: landing
 noindex: True
-layout: page
 hide_search: true
 eleventyNavigation:
   key: Search
@@ -22,45 +22,49 @@ eleventyNavigation:
   }
 </style>
 
-<div id="main-content" class="main-content">
-  <main class="main-primary" id="main">
-    <!--Search result section-->
-    <div class="section section-default">
-      <div class="container search-results-header">
-        <!--Uncomment if you prefer to use original google search box. Be advised that original custom search box is not meeting WCAG accessibility standards. -->
-        <!--<gcse:searchbox-only resultsUrl="/serp.html" enableAutoComplete="true"></gcse:searchbox-only>-->
-
-        <form id="Search" class="d-flex" action="?">
-          <span class="sr-only" id="SearchInput">Custom Google Search</span>
-          <input
-            type="search"
-            id="q"
-            name="q"
-            aria-labelledby="SearchInput"
-            placeholder="Search this website"
-            class="search-textfield height-40"
-            style="width:95%" />
-          <button
-            type="submit"
-            class="gsc-search-button width-60 height-40 color-white border-0 bg-gray-600 bg-gray-800-hover">
-            <span class="ca-gov-icon-search" aria-hidden="true"></span>
-            <span class="sr-only">Submit</span>
-          </button>
-        </form>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <gcse:searchresults-only
-          defaultToRefinement="this_site_first"></gcse:searchresults-only>
-        <!-- <script src='//www.google.com/jsapi' type='text/javascript'></script> -->
-
-        {{ content | safe }}
-      </div>
-    </div>
-  </main>
+<div
+  class="section-primary lineart"
+  style="background-image: url('/images/search-lineart.svg'); background-repeat:no-repeat; background-position:right;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0">{{title}}</h1>
+  </div>
 </div>
 
+<div class="container p-y-lg">
+  <!--Search result section-->
+  <div class="section section-default">
+    <div class="search-results-header">
+      <!--Uncomment if you prefer to use original google search box. Be advised that original custom search box is not meeting WCAG accessibility standards. -->
+      <!--<gcse:searchbox-only resultsUrl="/serp.html" enableAutoComplete="true"></gcse:searchbox-only>-->
+
+      <form id="Search" class="d-flex" action="?">
+        <span class="sr-only" id="SearchInput">Custom Google Search</span>
+        <input
+          type="search"
+          id="q"
+          name="q"
+          aria-labelledby="SearchInput"
+          placeholder="Search this website"
+          class="search-textfield height-40"
+          style="width:95%" />
+        <button
+          type="submit"
+          class="gsc-search-button width-60 height-40 color-white border-0 bg-gray-600 bg-gray-800-hover">
+          <span class="ca-gov-icon-search" aria-hidden="true"></span>
+          <span class="sr-only">Submit</span>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="section">
+    <gcse:searchresults-only
+      defaultToRefinement="this_site_first"></gcse:searchresults-only>
+    <!-- <script src='//www.google.com/jsapi' type='text/javascript'></script> -->
+
+    {{ content | safe }}
+  </div>
+</div>
 <script>
   window.addEventListener("load", () => {
   // Search ID
