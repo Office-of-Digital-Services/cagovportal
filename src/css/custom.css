@@ -228,3 +228,44 @@ cagovhome-filterlist
     top: 0 !important;
   }
 }
+
+/* Search results */
+.gs-result div.gs-title {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.gs-result div.gsc-url-top {
+  padding-bottom: 0.5rem;
+}
+
+.gs-result a.gs-title {
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  text-decoration: none;
+}
+
+.gs-result a.gs-title b {
+  font-size: 1.35rem !important;
+}
+
+.gs-result a.gs-title:hover,
+.gs-result a.gs-title:focus,
+.gs-result a.gs-title b:hover {
+  color: var(--color-p2-darker) !important;
+  text-decoration: underline;
+}
+
+.gs-result div.gs-visibleUrl {
+  font-weight: 700 !important;
+}
+
+.gsc-result {
+  border-bottom: 1px solid var(--gray-200) !important;
+  padding-bottom: 1rem !important;
+}
+.gsc-control-cse,
+.gsc-control-cse .gsc-table-result {
+  font-size: 1.125rem !important;
+  line-height: 1.5 !important;
+}
