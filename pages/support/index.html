@@ -17,3 +17,161 @@ eleventyNavigation:
     <h1 class="m-t-0">{{title}}</h1>
   </div>
 </div>
+
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-lg-9 mx-auto">
+      <p class="lead">
+        Get help with essential California services. Get answers to your
+        questions about state services with our FAQs and contact resources.
+      </p>
+      <h2>California assistance programs</h2>
+
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <article
+            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
+            <a
+              href="https://calfresh.dss.ca.gov/food/"
+              class="h5 m-b color-p2 link-before text-left no-underline d-block"
+              >Food</a
+            >
+            <p class="m-b text-left">
+              Add to your food budget and get help putting healthy food on the
+              table with the CalFresh Program.
+            </p>
+          </article>
+        </div>
+        <div class="col-md-6 mb-4">
+          <article
+            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
+            <a
+              href="https://www.cdph.ca.gov/Programs/CFH/DWICSN/Pages/Program-Landing1.aspx"
+              class="h5 m-b color-p2 link-before text-left no-underline d-block"
+              >Family nutrition</a
+            >
+            <p class="m-b text-left">
+              The WIC program helps parents and young children with nutrition
+              and breastfeeding support.
+            </p>
+          </article>
+        </div>
+        <div class="col-md-6 mb-4">
+          <article
+            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
+            <a
+              href="https://www.cdss.ca.gov/calworks"
+              class="h5 m-b color-p2 link-before text-left no-underline d-block"
+              >Cash aid</a
+            >
+            <p class="m-b text-left">
+              Get cash each month to help pay for housing, food and other
+              expenses with CalWORKS.
+            </p>
+          </article>
+        </div>
+        <div class="col-md-6 mb-4">
+          <article
+            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
+            <a
+              href="https://www.cdss.ca.gov/inforesources/cdss-programs/housing-programs"
+              class="h5 m-b color-p2 link-before text-left no-underline d-block"
+              >Shelter</a
+            >
+            <p class="m-b text-left">
+              Get free or low-cost housing through the Housing and Homelessness
+              Division.
+            </p>
+          </article>
+        </div>
+        <div class="col-md-6 mb-4">
+          <article
+            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
+            <a
+              href="https://www.dhcs.ca.gov/Pages/myMedi-Cal.aspx"
+              class="h5 m-b color-p2 link-before text-left no-underline d-block"
+              >Health</a
+            >
+            <p class="m-b text-left">
+              Sign up for Medi-Cal, offering free or low-cost health care for
+              you and your family.
+            </p>
+          </article>
+        </div>
+        <div class="col-md-6 mb-4">
+          <article
+            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
+            <a
+              href="https://www.californialifeline.com/en"
+              class="h5 m-b color-p2 link-before text-left no-underline d-block"
+              >Phone</a
+            >
+            <p class="m-b text-left">
+              Find discounted phone and cell phone services for your household
+              with California Lifeline.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <!--FAQ-->
+      <h2>Frequently asked questions</h2>
+      <p>
+        Enter your question or keywords in the search below. You will find
+        related state services and information from department FAQs.
+      </p>
+
+      <form action="/search/" role="search">
+        <label class="h3 sr-only" for="searchbox">Search all services</label>
+        <div class="d-flex m-y-lg">
+          <input
+            type="search"
+            name="q"
+            id="searchbox"
+            placeholder="Search FAQs"
+            class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-l" />
+          <button
+            class="bg-gray-600 bg-gray-700-hover rounded-end brd-0 width-60">
+            <span class="sr-only">Submit</span>
+            <span
+              class="ca-gov-icon-search font-size-25 color-white"
+              aria-hidden="true"></span>
+          </button>
+        </div>
+      </form>
+
+      <div class="faq-results m-y-lg p-y-md"></div>
+      <!--general assistance-->
+      <article
+        class="bg-white m-y-lg p-x-md p-b-lg brd-solid-1 brd-gray-200 rounded">
+        <h2 class="h3">General assistance</h2>
+        <p class="small italic">
+          <em
+            >Available 8 a.m. to 5 p.m., Monday through Friday, excluding
+            <a
+              href="https://www.calhr.ca.gov/employees/Pages/state-holidays.aspx"
+              >state holidays</a
+            ></em
+          >
+        </p>
+        <h3 class="h4">Get help with state services and programs:</h3>
+        <ul>
+          <li>
+            Email
+            <a href="mailto:stateinfo@state.ca.gov">stateinfo@state.ca.gov</a>
+          </li>
+          <li>Call 800-807-6755</li>
+        </ul>
+        <h3 class="h4">Get help on questions related to COVID-19:</h3>
+        <ul>
+          <li>
+            Contact
+            <a href="https://www.cdph.ca.gov/Pages/contact_us.aspx"
+              >California Department of Public Health</a
+            >
+          </li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</div>
