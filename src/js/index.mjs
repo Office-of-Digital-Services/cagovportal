@@ -184,14 +184,25 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Mobile topic filter accordion
 window.addEventListener("load", () => {
+  const isDesktopWidth = () => window.innerWidth > 991; //Maximum px for mobile width
   const mobileCntls = document.querySelector(".global-header .mobile-controls");
   const accrdionSidenav = document.querySelector(
     "cagov-accordion.sidenav details"
   );
+  if (!accrdionSidenav) return;
+  const accordionBody = document.querySelector(
+    "cagov-accordion.sidenav details .accordion-body"
+  );
+  const currentHeight = accordionBody?.clientHeight;
 
   const getAccrdionSidenavClosed = () => {
     accrdionSidenav?.removeAttribute("open");
     accrdionSidenav?.setAttribute("height", "56px");
+  };
+
+  const getAccrdionSidenavOpen = () => {
+    accrdionSidenav?.setAttribute("open", "true");
+    accrdionSidenav?.setAttribute("height", `${currentHeight}px`);
   };
 
   if (!mobileCntls) return;
@@ -199,4 +210,19 @@ window.addEventListener("load", () => {
   if (mobileControlsDisplay == "block") {
     getAccrdionSidenavClosed();
   }
+
+  // On resize
+  const mobileCheck = () => {
+    // desktop
+    if (isDesktopWidth()) {
+      getAccrdionSidenavOpen();
+    }
+    // mobile
+    else {
+      getAccrdionSidenavClosed();
+    }
+  };
+
+  // on resize function (hide mobile nav)
+  window.addEventListener("resize", mobileCheck);
 });
