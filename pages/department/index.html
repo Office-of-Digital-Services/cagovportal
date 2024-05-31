@@ -4,6 +4,7 @@ metatitle: Departments | Ca.gov
 landing: Departments
 layout: landing
 description: Find California state departments by browsing popular options or searching the directory
+dynamic_sidenavid: department
 hide_search: true
 eleventyNavigation:
   key: Departments
@@ -21,7 +22,12 @@ eleventyNavigation:
 
 <div class="container p-y-lg">
   <div class="row">
-    <div class="col-lg-9 mx-auto">
+    <div class="col-lg-3 pb-lg-5 sticky-6 h-100 p-b-md">
+      <div class="side-navigation" role="complementary">
+        {%-include "dynamic-sidenav.html"-%}
+      </div>
+    </div>
+    <div class="col-lg-9">
       <p>
         Find California state departments by browsing popular options or
         searching the directory.
