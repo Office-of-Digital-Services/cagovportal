@@ -12,15 +12,58 @@ eleventyNavigation:
 ---
 
 <style>
-  .gsc-webResult.gsc-result:has(.gs-label.gs-labelActive)  {
-    padding:0;
-    display:list-item;
-    margin-left:5em;
+    .gsc-expansionArea {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 1.5rem;
 
-    .gsc-url-top, .gsc-table-result {
-      display: none;
+    }
+
+      .gsc-webResult.gsc-result:has(.gs-label.gs-labelActive)  {
+        padding:0;
+        padding-left:1rem;
+        padding-right:2.25rem;
+        border: 1px solid var(--gray-300);
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        position: relative;
+        flex: 0 48%;
+
+        .gsc-url-top, .gsc-table-result {
+          display: none;
+        }
+      }
+
+  @media (max-width: 991px) {
+    .gsc-webResult.gsc-result:has(.gs-label.gs-labelActive) {
+      width: 100%;
+      flex: 0 0 100%;
     }
   }
+
+      .gsc-webResult.gsc-result:has(.gs-label.gs-labelActive):hover, .gsc-webResult.gsc-result:has(.gs-label.gs-labelActive):focus {
+        background-color: var(--gray-50);
+        text-decoration: none !important;
+      }
+
+      .gsc-webResult.gsc-result:not(:has(.gs-label.gs-labelActive)) {
+        width: 100%;
+        flex: 0 0 100%;
+      }
+
+      .gsc-webResult.gsc-result:has(.gs-label.gs-labelActive)::after  {
+        font-family: CaGov;
+        content: "5";
+        position: absolute;
+        top: .8rem;
+        right: .7rem;
+        font-size: 1.6rem;
+        visibility: visible !important;
+        }
+
+      .gsc-adBlockNoHeight {
+           clear: both;
+        }
 </style>
 
 <div
@@ -34,36 +77,39 @@ eleventyNavigation:
 
 <div class="container p-y-lg">
   <!--Search result section-->
-  <div class="section section-default">
-    <div class="search-results-header">
-      <!--Uncomment if you prefer to use original google search box. Be advised that original custom search box is not meeting WCAG accessibility standards. -->
-      <!--<gcse:searchbox-only resultsUrl="/serp.html" enableAutoComplete="true"></gcse:searchbox-only>-->
+  <div class="row">
+    <div class="col-lg-9 mx-auto">
+      <div class="search-results-header">
+        <!--Uncomment if you prefer to use original google search box. Be advised that original custom search box is not meeting WCAG accessibility standards. -->
+        <!--<gcse:searchbox-only resultsUrl="/serp.html" enableAutoComplete="true"></gcse:searchbox-only>-->
 
-      <form id="Search" class="d-flex" action="?">
-        <span class="sr-only" id="SearchInput">Custom Google Search</span>
-        <input
-          type="search"
-          id="q"
-          name="q"
-          aria-labelledby="SearchInput"
-          placeholder="Search this website"
-          class="search-textfield height-40"
-          style="width:95%" />
-        <button
-          type="submit"
-          class="gsc-search-button width-60 height-40 color-white border-0 bg-gray-600 bg-gray-800-hover">
-          <span class="ca-gov-icon-search" aria-hidden="true"></span>
-          <span class="sr-only">Submit</span>
-        </button>
-      </form>
+        <form id="Search" class="d-flex" action="?">
+          <span class="sr-only" id="SearchInput">Custom Google Search</span>
+          <input
+            type="search"
+            id="q"
+            name="q"
+            aria-labelledby="SearchInput"
+            placeholder="Search this website"
+            class="search-textfield height-40"
+            style="width:95%" />
+          <button
+            type="submit"
+            class="gsc-search-button width-60 height-40 color-white border-0 bg-gray-600 bg-gray-800-hover">
+            <span class="ca-gov-icon-search" aria-hidden="true"></span>
+            <span class="sr-only">Submit</span>
+          </button>
+        </form>
+      </div>
+
+      <div class="section">
+        <gcse:searchresults-only
+          defaultToRefinement="this_site_first"></gcse:searchresults-only>
+        <!-- <script src='//www.google.com/jsapi' type='text/javascript'></script> -->
+
+        {{ content | safe }}
+      </div>
     </div>
-  </div>
-  <div class="section">
-    <gcse:searchresults-only
-      defaultToRefinement="this_site_first"></gcse:searchresults-only>
-    <!-- <script src='//www.google.com/jsapi' type='text/javascript'></script> -->
-
-    {{ content | safe }}
   </div>
 </div>
 <script>
