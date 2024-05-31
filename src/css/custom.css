@@ -51,7 +51,7 @@
 .header-banner {
   overflow: hidden;
   background-image: url("/images/background.svg");
-  background-color: #395567;
+  background-color: var(--color-p2, #046b99);
   background-position: center !important;
   background-size: cover !important;
   display: block;
