@@ -22,58 +22,53 @@ eleventyNavigation:
 
 <div class="container p-y-lg">
   <div class="row">
-    <div class="row">
-      <div class="col-lg-3 pb-lg-5 sticky-6 h-100 p-b-md">
-        <div class="side-navigation" role="complementary">
-          {%-include "dynamic-sidenav.html"-%}
-        </div>
-        {%-include "side-filters.html"-%}
+    <div class="col-lg-3 pb-lg-5 sticky-6 h-100 p-b-md">
+      {%-include "dynamic-sidenav.html"-%} {%-include "side-filters.html"-%}
+    </div>
+    <div class="col-lg-9">
+      <p class="lead m-t items-count">0 departments</p>
+      <label class="sr-only" for="searchbox">Filter departments</label>
+      <div class="d-flex m-b-lg">
+        <input
+          type="search"
+          id="searchbox"
+          name="q"
+          placeholder="Filter departments"
+          class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-x reset-x-icon" />
       </div>
-      <div class="col-lg-9">
-        <p class="lead m-t items-count">0 departments</p>
-        <label class="sr-only" for="searchbox">Filter departments</label>
-        <div class="d-flex m-b-lg">
-          <input
-            type="search"
-            id="searchbox"
-            name="q"
-            placeholder="Filter departments"
-            class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-x reset-x-icon" />
-        </div>
 
-        <h2 aria-live="polite" class="sr-only items-count">
-          0 departments found
-        </h2>
+      <h2 aria-live="polite" class="sr-only items-count">
+        0 departments found
+      </h2>
 
-        <cagovhome-filterlist
-          data-search-input-id="searchbox"
-          data-result-count-query=".items-count"
-          data-filter-storage-key="agency"
-          data-row-filter-key="AgencyId"
-          data-filter-trigger-selector='input[name="AgencyTags"]'>
-          {%- for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' -%}
-          <div class="row">
-            <div class="col-lg-1">
-              <h3 class="m-t-0">{{ letter }}</h3>
-            </div>
-            <div class="col-lg-11">
-              <ul>
-                {%- for agency in state_entity.agencies | pluck("AgencyName",
-                letter, "startswith") -%}
-                <li data-row-key="{{agency.AgencyId}}">
-                  <a href="/department/{{ agency.AgencyId }}/"
-                    >{{-agency.AgencyName-}}</a
-                  >
-                </li>
-                {%- endfor %}
-              </ul>
-            </div>
-            <hr />
+      <cagovhome-filterlist
+        data-search-input-id="searchbox"
+        data-result-count-query=".items-count"
+        data-filter-storage-key="agency"
+        data-row-filter-key="AgencyId"
+        data-filter-trigger-selector='input[name="AgencyTags"]'>
+        {%- for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' -%}
+        <div class="row">
+          <div class="col-lg-1">
+            <h3 class="m-t-0">{{ letter }}</h3>
           </div>
+          <div class="col-lg-11">
+            <ul>
+              {%- for agency in state_entity.agencies | pluck("AgencyName",
+              letter, "startswith") -%}
+              <li data-row-key="{{agency.AgencyId}}">
+                <a href="/department/{{ agency.AgencyId }}/"
+                  >{{-agency.AgencyName-}}</a
+                >
+              </li>
+              {%- endfor %}
+            </ul>
+          </div>
+          <hr />
+        </div>
 
-          {%- endfor %}
-        </cagovhome-filterlist>
-      </div>
+        {%- endfor %}
+      </cagovhome-filterlist>
     </div>
   </div>
 </div>
