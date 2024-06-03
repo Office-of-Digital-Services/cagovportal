@@ -268,7 +268,8 @@ eleventyNavigation:
 
         {%- set counter = 0 -%} {%- for story in
         getTopStories.rss.channel[0].item -%} {%- if counter < 3 and (category1
-        in story.category or category2 or category3 in story.category) -%}
+        in story.category or category2 in story.category or category3 in
+        story.category) -%}
         <hr class="m-y-md" />
         <h3 class="lead font-weight-700">
           <a href="{{ story.link }}" aria-disabled="true">{{ story.title }}</a>
