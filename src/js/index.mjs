@@ -181,3 +181,17 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   );
 });
+
+/* -----------------------------------------
+   MULTYSELECT -- multyselect
+----------------------------------------- */
+
+//@ts-check
+(() => {
+  const multiSelect = document.querySelector(".dropdown-menu");
+  if (multiSelect) {
+    multiSelect.addEventListener("click", event => {
+      event.stopPropagation();
+    });
+  }
+})();
