@@ -10,7 +10,7 @@ dynamic_sidenavid: service
 -#} {%-set sidenav = dynamic_sidenav[dynamic_sidenavid]-%}
 
 <!-- Side navigation -->
-<nav aria-labelledby="navigation-list" id="side-navigation">
+<nav aria-labelledby="navigation-list" class="side-navigation">
   <ul class="list-navigation">
     {%- for link in sidenav %} {%- set href = link.href -%} {%- set active =
     href === page.url -%}
