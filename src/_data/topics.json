@@ -269,7 +269,7 @@
       },
       {
         "DepartmentId": 171,
-        "ServiceId": 71,
+        "ServiceId": 1188,
         "ServiceName": "Inmate locator and records",
         "Description": "Search for information about inmates in custody, including location and admission date.",
         "umgURL": "/images/topic7-2.png",
