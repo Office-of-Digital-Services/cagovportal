@@ -1,0 +1,15 @@
+{%- set counter = 0 -%} {%- for story in getTopStories.rss.channel[0].item -%}
+{%- if counter < 3 and ("Top Story" in story.category or "Press Releases" in story.category or "Public Safety" in story.category) -%}
+<hr class="m-y-md" />
+<h3 class="lead font-weight-700">
+  <a href="{{ story.link }}" aria-disabled="true">{{ story.title }}</a>
+</h3>
+<p>{{ story.pubDate | customDate }}</p>
+{%- set counter = counter + 1 -%} {%- endif -%} {%- endfor %}
+
+<hr class="m-y-md" />
+<!-- End News list  -->
+
+<p class="m-b-md">
+  <a href="https://www.gov.ca.gov/newsroom/">View all news</a>
+</p>
