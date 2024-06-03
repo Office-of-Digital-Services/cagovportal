@@ -13,8 +13,7 @@ eleventyComputed:
   keywords: "{{ item.Keywords | safe }}"
   eleventyNavigation:
     key: "Department{{ item.AgencyId }}"
-    title:  "{{ item.AgencyFullName | safe }}"
-    metatitle:  "{{ item.AgencyFullName | safe }} | Ca.gov"
+    title:  "{{ title }}"
     parent: Departments
 ---
 
