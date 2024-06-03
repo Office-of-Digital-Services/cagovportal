@@ -1,15 +1,7 @@
 <cagov-accordion class="sidenav">
-  <details open>
-    <summary class="d-block d-lg-none brd-solid-1 brd-gray-200">
-      <span
-        class="ca-gov-icon-filter-solid color-p2 font-size-20"
-        aria-hidden="true"></span
-      >Topics filter
-    </summary>
+  <details>
+    <summary class="brd-solid-1 brd-gray-200">Topics Filter</summary>
     <div class="accordion-body">
-      <h2 class="m-b d-none d-lg-block">Topics</h2>
-      <hr class="m-b-md d-none d-lg-block" />
-      <div class="m-t-md d-lg-none d-block"></div>
       {%- for topic in topics %}
       <div class="form-check m-b-sm">
         <input

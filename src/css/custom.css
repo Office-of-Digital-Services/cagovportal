@@ -269,3 +269,17 @@ cagovhome-filterlist
   font-size: 1.125rem !important;
   line-height: 1.5 !important;
 }
+
+/* Used for sidenav to allow for last added item to be moved to top */
+div.swap-order {
+  display: flex;
+  flex-flow: column;
+
+  > :nth-child(1) {
+    order: 2;
+  }
+
+  > :nth-child(2) {
+    order: 1;
+  }
+}
