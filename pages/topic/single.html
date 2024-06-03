@@ -13,8 +13,7 @@ eleventyComputed:
   title: "{{ item.name | safe }}"
   eleventyNavigation:
     key: "Topic{{ item.topicId }}"
-    title:  "{{ item.name | safe }}"
-    metatitle:  "{{ item.name | safe }} | Ca.gov"
+    title:  "{{ title }}"
     parent: Topics
 ---
 
