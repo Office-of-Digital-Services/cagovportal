@@ -189,16 +189,6 @@ a[aria-current="page"] {
   font-weight: 400;
 }
 
-/* Hide scrollbars from overflow auto */
-.overflow-auto::-webkit-scrollbar {
-  display: none;
-}
-
-.overflow-auto {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none;
-}
-
 /* Service images */
 .service-img {
   object-fit: cover;
