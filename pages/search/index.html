@@ -129,5 +129,21 @@ eleventyNavigation:
   document
     .querySelector('input[name=q]')
     .value = new URLSearchParams(window.location.search).get("q");
-    });
+
+  // Customize the results
+  document.addEventListener("searchComplete", () => {
+    // Get the results from the GSC event
+
+    /** @type {*[]} */
+    const results = Object.values(window["google"].search.cse)[1].arguments[0]
+      .results;
+
+    //console.log(results);
+
+    //change the results
+    results
+      .filter(x => x.visibleUrl === "www.ca.gov")
+      .forEach(x => (x.title = x.title.replace(" | www.ca.gov", "")));
+  });
+  });
 </script>
