@@ -50,9 +50,7 @@ eleventyComputed:
 <div class="container p-y-md">
   <div class="row p-y-lg">
     <div class="col-md-9">
-      <a
-        class="btn btn-outline-primary btn-lg m-r-md m-b"
-        href="{{ item.ServiceUrl }}"
+      <a class="btn btn-primary btn-lg m-r-md m-b" href="{{ item.ServiceUrl }}"
         >Launch service</a
       >
 
@@ -96,21 +94,21 @@ eleventyComputed:
       <h3>Related services</h3>
       <p class="keywords">
         {%- for related in related_services %}
-        <a href="../{{related.ServiceId}}/">{{-related.ServiceName-}}</a
-        ><span class="m-r-sm">, </span>{%- endfor %}
+        <a
+          href="../{{related.ServiceId}}/"
+          class="btn btn-default btn-sm me-2 my-2"
+          >{{-related.ServiceName-}}</a
+        >{%- endfor %}
       </p>
-      {%- endif %}
-
+      {%- endif %} {%- if item.AgencyTags.includes(topic.name) %}
       <h3 class="m-t-md">Topics</h3>
       <p class="keywords">
-        {%- for topic in topics | sortBy("featureOrder") %} {%- if
-        item.AgencyTags.includes(topic.name) %}
+        {%- for topic in topics | sortBy("featureOrder") %}
         <a href="/topic/{{topic.topicId}}/"> {{- topic.name | trim -}} </a
         ><span class="m-r-sm">, </span>
-
-        {%- endif -%} {%- endfor %}
+        {%- endfor %}
       </p>
-
+      {%- endif -%}
       <h3>Keywords</h3>
       <p class="keywords">
         {%- for keyword in item.Keywords.split(",") %} {%- if
