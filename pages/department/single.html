@@ -41,11 +41,11 @@ endfor %} {%- endfor -%}
 
 <div class="container p-y-lg">
   <div class="row">
-    <div class="col-lg-3 pb-lg-5 side-navigation sticky-6" role="complementary">
+    <div class="col-lg-3 pb-lg-5">
       {% if item.LogoUrl %}
       <img
         src="{{item.structuredData.logo}}"
-        class="img-fluid"
+        class="img-fluid sticky-6"
         style="aspect-ratio: 1 / 1; object-fit: contain;"
         alt="{{agency.FriendlyName}} logo" />
       {% endif %}
@@ -65,9 +65,7 @@ endfor %} {%- endfor -%}
         </li>
         {% endif %}
       </ul>
-      <a
-        class="btn btn-outline-primary btn-lg m-r-sm"
-        href="{{item.WebsiteURL}}">
+      <a class="btn btn-primary btn-lg m-r" href="{{item.WebsiteURL}}">
         Department website
       </a>
       <a href="{{item.ContactURL}}/" class="btn btn-outline-primary btn-lg">
@@ -76,10 +74,11 @@ endfor %} {%- endfor -%}
       <hr class="m-t-md" />
 
       <h2 class="m-t-md">Description</h2>
-      <p class="m-b-lg">{{item.Description}}</p>
+      <p class="m-b">{{item.Description}}</p>
 
       {% for service in state_entity.services | pluck('AgencyId',item.AgencyId)
       -%} {%- if loop.first -%}
+      <hr class="m-b-md" />
       <h2>Services</h2>
       {% endif %}
       <p class="lead bold">
@@ -94,7 +93,7 @@ endfor %} {%- endfor -%}
       </a>
 
       {%- if not loop.last -%}
-      <hr class="m-b-lg" />
+      <hr class="m-b-lg m-t-md" />
       {%- endif -%} {% endfor %} {%- for x in QAs -%} {%- if loop.first %}
       <hr class="m-b-lg" />
       <h3 class="mt-lg-9">Frequently Asked Questions</h3>
