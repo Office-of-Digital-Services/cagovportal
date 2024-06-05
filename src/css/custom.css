@@ -6,18 +6,33 @@
 /* -- Site header * -- */
 .branding .header-organization-banner {
   display: flex;
+  margin-right: 0;
 }
 .branding .header-organization-banner a .logo-assets .logo-text .logo-dept {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   height: 2.5rem;
-  top: -10px;
 }
 .branding .header-organization-banner a .logo-assets .logo-text .logo-state {
-  font-size: 1.45rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  position: relative;
+  top: -5px;
 }
 .branding .header-organization-banner a .logo-assets .logo-img {
   max-height: 90px;
   height: 90px;
+}
+
+@media (max-width: 991px) {
+  .branding .header-organization-banner a .logo-assets .logo-text .logo-dept {
+    font-size: 1.8rem;
+    height: 2.2rem;
+  }
+  .branding .header-organization-banner a .logo-assets .logo-text .logo-state {
+    font-size: 1.3rem;
+    position: relative;
+    top: -2px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -26,17 +41,19 @@
   }
 
   .branding .header-organization-banner a .logo-assets .logo-text .logo-dept {
-    font-size: 2rem;
+    font-size: 1.6rem;
     height: 2.2rem;
-    top: -10px;
   }
   .branding .header-organization-banner a .logo-assets .logo-text .logo-state {
     font-size: 1rem;
+    position: relative;
+    top: -2px;
   }
   .branding .header-organization-banner a .logo-assets .logo-img {
     max-height: 70px;
   }
 }
+
 /* -- Search * -- */
 @media (min-width: 992px) {
   .full-width-nav .featured-search {
