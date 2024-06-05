@@ -195,21 +195,3 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 })();
-
-(() => {
-  document.addEventListener("searchComplete", () => {
-    // Get the results from the GSC event
-
-    /** @type {*[]} */
-    const results = Object.values(window["google"].search.cse)[1].arguments[0]
-      .results;
-
-    //console.log(results);
-
-    //alert the results
-
-    results
-      .filter(x => x.visibleUrl === "www.ca.gov")
-      .forEach(x => (x.title = x.title.replace(" | www.ca.gov", "")));
-  });
-})();
