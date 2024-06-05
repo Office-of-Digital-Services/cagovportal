@@ -114,23 +114,24 @@ eleventyNavigation:
 </div>
 <script>
   window.addEventListener("load", () => {
-  // Search ID
-  const cx = '001779225245372747843:mdsmtl_vi1a'; // Update this value with your search engine unique ID. Submit a request to the CDT Service Desk if you don't already know your unique search engine ID.
-  const gcse = document.createElement('script');
-  gcse.type = 'text/javascript';
-  gcse.async = true;
-  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-  const s = document.getElementsByTagName('script');
-  s[s.length - 1]
-    .parentNode
-    .insertBefore(gcse, s[s.length - 1]);
+    // Search ID
+    const cx = '001779225245372747843:mdsmtl_vi1a'; // Update this value with your search engine unique ID. Submit a request to the CDT Service Desk if you don't already know your unique search engine ID.
+    const gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    const s = document.getElementsByTagName('script');
+    s[s.length - 1]
+      .parentNode
+      .insertBefore(gcse, s[s.length - 1]);
 
-  // extracting search query from the url parameter and applying it to the searchbox
-  document
-    .querySelector('input[name=q]')
-    .value = new URLSearchParams(window.location.search).get("q");
+    // extracting search query from the url parameter and applying it to the searchbox
+    document
+      .querySelector('input[name=q]')
+      .value = new URLSearchParams(window.location.search).get("q");
+  });
 
-  // Customize the results
+    // Customize the results
   document.addEventListener("searchComplete", () => {
     // Get the results from the GSC event
 
@@ -143,7 +144,11 @@ eleventyNavigation:
     //change the results
     results
       .filter(x => x.visibleUrl === "www.ca.gov")
-      .forEach(x => (x.title = x.title.replace(" | www.ca.gov", "")));
-  });
+      .forEach(x => {
+        x.title = x.title
+          .replace(" | www.ca.gov", "")
+          .replace(" Agency Details", "")
+          .replace(" Service Details", "")
+      });
   });
 </script>
