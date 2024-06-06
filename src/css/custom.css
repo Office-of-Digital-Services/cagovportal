@@ -263,6 +263,18 @@ cagovhome-filterlist
   text-decoration: underline;
 }
 
+.gsc-webResult.gsc-result:not(:has(.gs-label.gs-labelActive)) {
+  position: relative;
+}
+.gs-result a.gs-title::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 .gs-result div.gs-visibleUrl {
   font-weight: 700 !important;
 }
@@ -275,6 +287,68 @@ cagovhome-filterlist
 .gsc-control-cse .gsc-table-result {
   font-size: 1.125rem !important;
   line-height: 1.5 !important;
+}
+
+.gsc-above-wrapper-area {
+  border-bottom: none !important;
+}
+
+.gsc-result-info {
+  display: none;
+}
+
+.gsc-expansionArea {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+}
+
+.gsc-webResult.gsc-result:has(.gs-label.gs-labelActive) {
+  padding: 0;
+  padding-left: 1rem;
+  padding-right: 2.25rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  position: relative;
+  flex: 0 48%;
+
+  .gsc-url-top,
+  .gsc-table-result {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .gsc-webResult.gsc-result:has(.gs-label.gs-labelActive) {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+.gsc-webResult.gsc-result:has(.gs-label.gs-labelActive):hover,
+.gsc-webResult.gsc-result:has(.gs-label.gs-labelActive):focus {
+  background-color: var(--gray-50);
+  text-decoration: none !important;
+}
+
+.gsc-webResult.gsc-result:not(:has(.gs-label.gs-labelActive)) {
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+.gsc-webResult.gsc-result:has(.gs-label.gs-labelActive)::after {
+  font-family: CaGov;
+  content: "5";
+  position: absolute;
+  top: 0.8rem;
+  right: 0.7rem;
+  font-size: 1.6rem;
+  visibility: visible !important;
+}
+
+.gsc-adBlockNoHeight {
+  clear: both;
 }
 
 /* Used for sidenav to allow for last added item to be moved to top */
