@@ -49,6 +49,15 @@
       include "../mobile-controls.html" -%}
       <div class="navigation-search full-width-nav container">
         <div id="head-search" class="search-container featured-search">
+          <div class="d-block d-lg-none">
+            <a href="/" class="drawer-logo-link">
+              <img
+                src="/images/ca-gov-logo-mobile.svg"
+                alt="CA.gov official website logo"
+                class="drawer-logo"
+                style="aspect-ratio: 232 / 60;" />
+            </a>
+          </div>
           {%- include "../search.html" -%}
         </div>
         {# navigation types #} {%- if navigation -%} {%- include navigation -%}

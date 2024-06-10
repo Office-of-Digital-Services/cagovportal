@@ -64,6 +64,15 @@
 .main-nav-icons {
   top: -5rem;
 }
+.nav-drawer {
+  padding-bottom: 0;
+}
+.drawer-logo-link {
+  outline-offset: -3px;
+}
+.drawer-logo {
+  max-width: 232px;
+}
 /* -- Banner * -- */
 .header-banner {
   overflow: hidden;
