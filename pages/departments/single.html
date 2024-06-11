@@ -6,7 +6,7 @@ pagination:
     size: 1
     alias: item
     addAllPagesToCollections : true
-permalink: "department/{{ item.AgencyId }}/"
+permalink: "departments/{{ item.AgencyId }}/"
 eleventyComputed: 
   description: Department details for "{{ item.AgencyFullName | safe }}"
   title: "{{ item.FriendlyName | safe }} ({{ item.Acronym | safe }})"
