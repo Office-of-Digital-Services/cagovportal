@@ -113,7 +113,7 @@ eleventyComputed:
       <p class="keywords">
         {%- for keyword in item.Keywords.split(",") %} {%- if
         keyword.trim().length > 0 %}
-        <a href="/service/all/?q={{keyword | trim | urlencode}}+">
+        <a href="/services/all/?q={{keyword | trim | urlencode}}+">
           {{- keyword | trim -}} </a
         ><span class="m-r-sm">,</span> {% endif -%} {%- endfor %}
       </p>

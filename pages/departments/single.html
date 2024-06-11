@@ -82,7 +82,9 @@ endfor %} {%- endfor -%}
       <h2>Services</h2>
       {% endif %}
       <p class="lead bold">
-        <a href="./service/{{ service.ServiceId }}/">{{service.ServiceName}}</a>
+        <a href="./services/{{ service.ServiceId }}/"
+          >{{service.ServiceName}}</a
+        >
       </p>
       <p class="service-description">{{service.Description}}</p>
       <a
@@ -111,7 +113,7 @@ endfor %} {%- endfor -%}
             <p>
               <a
                 class="btn btn-outline-primary btn-lg m-r-sm"
-                href="./service/{{ x.service.ServiceId }}/">
+                href="./services/{{ x.service.ServiceId }}/">
                 More details
                 <span class="sr-only"
                   >about {{x.service.ServiceName}} service</span
