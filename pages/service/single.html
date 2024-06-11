@@ -104,7 +104,7 @@ eleventyComputed:
       <h3 class="m-t-md">Topics</h3>
       <p class="keywords">
         {%- for topic in topics | sortBy("featureOrder") %}
-        <a href="/topic/{{topic.topicId}}/"> {{- topic.name | trim -}} </a
+        <a href="/topic/{{topic.permalink}}/"> {{- topic.name | trim -}} </a
         ><span class="m-r-sm">, </span>
         {%- endfor %}
       </p>
