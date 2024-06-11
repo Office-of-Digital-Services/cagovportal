@@ -1,6 +1,6 @@
 ---
 landing: Services
-description: Browse California state services sorted by topic
+description: Browse California state services sorted by topic.
 title: Topics
 metatitle: Topics | Ca.gov
 layout: landing
@@ -27,8 +27,8 @@ eleventyNavigation:
     </div>
     <div class="col-lg-9">
       <p>
-        Each state service falls into one or more themed topics. You can browse
-        the full list or check out individual topic pages for more information.
+        Each state service falls into one or more topics. You can browse
+        individual topic pages to find all services in that topic.
       </p>
       <h2>Topics</h2>
 
@@ -42,7 +42,7 @@ eleventyNavigation:
               class="h5 m-b color-p2 link-before text-left no-underline d-block"
               >{{-tag.name-}}</a
             >
-            <p class="m-b text-left">{{-tag.description-}}</p>
+            <p class="m-b text-left">{{-tag.cardDescription-}}</p>
           </article>
         </div>
         {%- endfor %}
