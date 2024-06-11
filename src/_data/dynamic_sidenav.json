@@ -13,13 +13,13 @@
   ],
   "department": [
     {
-      "href": "/department/",
+      "href": "/departments/",
       "text": "Departments <span class=\"sr-only\">landing page</span>"
     },
     {
-      "href": "/department/all/",
+      "href": "/departments/all/",
       "text": "All departments"
     },
-    { "href": "/department/list/", "text": "Departments list" }
+    { "href": "/departments/list/", "text": "Departments list" }
   ]
 }

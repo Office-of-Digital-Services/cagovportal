@@ -57,7 +57,7 @@ eleventyNavigation:
               {%- for agency in state_entity.agencies | pluck("AgencyName",
               letter, "startswith") -%}
               <li data-row-key="{{agency.AgencyId}}">
-                <a href="/department/{{ agency.AgencyId }}/"
+                <a href="/departments/{{ agency.AgencyId }}/"
                   >{{-agency.AgencyName-}}</a
                 >
               </li>
