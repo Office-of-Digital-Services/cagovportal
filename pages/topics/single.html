@@ -7,7 +7,7 @@ pagination:
     size: 1
     alias: item
     addAllPagesToCollections : true
-permalink: "topics/{{ item.topicId }}/"
+permalink: "topics/{{ item.permalink }}/"
 eleventyComputed: 
   description: "{{ item.metaDescription | safe }}"
   title: "{{ item.name | safe }}"
@@ -39,7 +39,8 @@ eleventyComputed:
             </a>
           </li>
           {%- for link in topics | sortBy("featureOrder") %} {%- set href =
-          "/topics/"+link.topicId+"/" -%} {%- set active = href === page.url -%}
+          "/topics/"+link.permalink+"/" -%} {%- set active = href === page.url
+          -%}
           <li>
             <a
               href="{{-href-}}"
