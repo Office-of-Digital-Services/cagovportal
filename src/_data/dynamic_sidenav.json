@@ -9,7 +9,7 @@
       "text": "All services"
     },
     { "href": "/service/list/", "text": "Services list" },
-    { "href": "/topic/", "text": "Topics" }
+    { "href": "/topics/", "text": "Topics" }
   ],
   "department": [
     {
