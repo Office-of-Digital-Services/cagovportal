@@ -1,13 +1,10 @@
 //@ts-check
 
-const domain = "https://www.ca.gov";
-
 // The default front-matter used for every page
 module.exports = {
   description: (/** @type {globaldata} */ _data) =>
     _data.description || "default description",
-  title: (/** @type {globaldata} */ _data) => _data.title || "default title",
-  canonical: (/** @type {globaldata} */ _data) => domain + _data.page.url
+  title: (/** @type {globaldata} */ _data) => _data.title || "default title"
 
   // uncomment to have a var to see all the available data
   //, everything: (/** @type {globaldata} */ _data) => JSON.stringify(_data, null, 2)

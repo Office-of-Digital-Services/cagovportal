@@ -3,6 +3,9 @@ const defaultConfig = require("@11ty/eleventy/src/defaultConfig");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { minify } = require("terser");
 
+// canonical domain
+const domain = "https://www.ca.gov";
+
 module.exports = function (
   /** @type {import("@11ty/eleventy").UserConfig} **/ eleventyConfig
 ) {
@@ -19,6 +22,12 @@ module.exports = function (
   });
 
   eleventyConfig.addWatchTarget("./src/js/");
+
+  // canonical shortcode
+  eleventyConfig.addShortcode("canonical", function () {
+    return domain + this.ctx.page.url;
+  });
+  eleventyConfig.addShortcode("domain", () => domain);
 
   // {%- for tag in topics | pluck("featured", true) | sortBy("featureOrder") -%}
   eleventyConfig.addFilter(
