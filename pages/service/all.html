@@ -61,6 +61,15 @@ eleventyNavigation:
             aria-label="Launch “{{ service.ServiceName }}” service">
             Launch service</a
           >
+
+          {%-set topicResults = []%}{%for topic in
+          topics|sortBy("featureOrder")%}{%if topic.name in
+          service.AgencyTags%}{%set
+          _=topicResults.push(topic.name)%}{%endif%}{%endfor%}{%if
+          topicResults.length%}
+          <p class="font-size-14 m-t-md">Topics: {{topicResults.join(", ")}}</p>
+          {%-endif%}
+
           <hr class="m-y-md" />
         </article>
         {%- endfor %}

@@ -91,8 +91,13 @@ endfor %} {%- endfor -%}
         aria-label="Launch “{{ service.ServiceName }}” service">
         Launch service
       </a>
-
-      {%- if not loop.last -%}
+      {%-set topicResults = []%}{%for topic in
+      topics|sortBy("featureOrder")%}{%if topic.name in
+      service.AgencyTags%}{%set
+      _=topicResults.push(topic.name)%}{%endif%}{%endfor%}{%if
+      topicResults.length%}
+      <p class="font-size-14 m-t-md">Topics: {{topicResults.join(", ")}}</p>
+      {%-endif%} {%- if not loop.last -%}
       <hr class="m-b-lg m-t-md" />
       {%- endif -%} {% endfor %} {%- for x in QAs -%} {%- if loop.first %}
       <hr class="m-b-lg" />
