@@ -176,6 +176,13 @@ window.addEventListener("DOMContentLoaded", () => {
         //connect the triggers
         triggerElements.forEach(x => x.addEventListener("change", checkme));
 
+        //add reset button support if forms are present
+        const triggerForms = new Set(triggerElements.map(x => x.form));
+
+        triggerForms.forEach(x => {
+          x?.addEventListener("reset", () => setTimeout(checkme));
+        });
+
         checkme();
       }
     }
