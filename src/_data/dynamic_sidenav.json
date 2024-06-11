@@ -1,25 +1,25 @@
 {
   "service": [
     {
-      "href": "/service/",
+      "href": "/services/",
       "text": "Service <span class=\"sr-only\">landing page</span>"
     },
     {
-      "href": "/service/all/",
+      "href": "/services/all/",
       "text": "All services"
     },
-    { "href": "/service/list/", "text": "Services list" },
-    { "href": "/topic/", "text": "Topics" }
+    { "href": "/services/list/", "text": "Services list" },
+    { "href": "/topics/", "text": "Topics" }
   ],
   "department": [
     {
-      "href": "/department/",
+      "href": "/departments/",
       "text": "Departments <span class=\"sr-only\">landing page</span>"
     },
     {
-      "href": "/department/all/",
+      "href": "/departments/all/",
       "text": "All departments"
     },
-    { "href": "/department/list/", "text": "Departments list" }
+    { "href": "/departments/list/", "text": "Departments list" }
   ]
 }

@@ -1,0 +1,79 @@
+---
+title: All departments
+metatitle: All departments | Ca.gov
+landing: Departments
+layout: landing
+description: Find California state departments by browsing popular options or searching the directory
+dynamic_sidenavid: department
+side_filter_data: agencies
+eleventyNavigation:
+  key: All Departments
+  parent: Departments
+---
+
+<div
+  class="section-understated lineart"
+  style="background-image: url('/images/departments-lineart.svg'); background-repeat:no-repeat; background-position:right;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0 color-p2">{{title}}</h1>
+  </div>
+</div>
+
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-lg-3 pb-lg-5 sticky-6 h-100 p-b-md swap-order">
+      {%-include "side-filters.html"-%} {%-include "dynamic-sidenav.html"-%}
+    </div>
+    <div class="col-lg-9">
+      <p class="lead m-t items-count">0 departments</p>
+      <label class="sr-only" for="searchbox">Filter departments</label>
+      <div class="d-flex m-b-lg">
+        <input
+          type="search"
+          id="searchbox"
+          name="q"
+          placeholder="Filter departments"
+          class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-x reset-x-icon" />
+      </div>
+
+      <h2 aria-live="polite" class="sr-only items-count">
+        0 departments found
+      </h2>
+
+      <cagovhome-filterlist
+        data-search-input-id="searchbox"
+        data-result-count-query=".items-count"
+        data-filter-storage-key="agency"
+        data-row-filter-key="AgencyId"
+        data-filter-trigger-selector='input[name="AgencyTags"]'>
+        {%- for agency in state_entity.agencies -%}
+        <span data-row-key="{{agency.AgencyId}}">
+          <div class="d-flex">
+            <div class="dep-image-wrapper">
+              <img
+                src="{{agency.structuredData.logo if agency.structuredData.logo else 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='}}"
+                class="img-fluid"
+                style="aspect-ratio: 1 / 1; object-fit: contain;"
+                loading="lazy"
+                alt="{{agency.FriendlyName}} logo" />
+            </div>
+
+            <div class="flex-grow-1">
+              <h3 class="lead bold m-t-0 m-b">
+                <a href="/departments/{{ agency.AgencyId }}/"
+                  >{{service.ServiceName}} {{agency.FriendlyName}}
+                  ({{agency.Acronym}})</a
+                >
+              </h3>
+              <p class="department-description">{{agency.Description}}</p>
+            </div>
+          </div>
+        </span>
+        <hr class="m-y-md" data-row-key="{{agency.AgencyId}}" />
+
+        {%- endfor %}
+      </cagovhome-filterlist>
+    </div>
+  </div>
+</div>

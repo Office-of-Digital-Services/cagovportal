@@ -6,7 +6,7 @@ pagination:
     size: 1
     alias: item
     addAllPagesToCollections : true
-permalink: "department/{{ item.AgencyId }}/service/{{ item.ServiceId }}/"
+permalink: "departments/{{ item.AgencyId }}/services/{{ item.ServiceId }}/"
 eleventyComputed: 
   description: Service details for "{{ item.ServiceName | safe }}"
   keywords: "{{ item.Keywords | safe }}"
@@ -104,7 +104,7 @@ eleventyComputed:
       <h3 class="m-t-md">Topics</h3>
       <p class="keywords">
         {%- for topic in topics | sortBy("featureOrder") %}
-        <a href="/topic/{{topic.topicId}}/"> {{- topic.name | trim -}} </a
+        <a href="/topics/{{topic.topicId}}/"> {{- topic.name | trim -}} </a
         ><span class="m-r-sm">, </span>
         {%- endfor %}
       </p>
@@ -113,7 +113,7 @@ eleventyComputed:
       <p class="keywords">
         {%- for keyword in item.Keywords.split(",") %} {%- if
         keyword.trim().length > 0 %}
-        <a href="/service/all/?q={{keyword | trim | urlencode}}+">
+        <a href="/services/all/?q={{keyword | trim | urlencode}}+">
           {{- keyword | trim -}} </a
         ><span class="m-r-sm">,</span> {% endif -%} {%- endfor %}
       </p>
