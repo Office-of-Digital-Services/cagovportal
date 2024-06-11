@@ -46,8 +46,8 @@
   {
     "topicId": 2,
     "name": "Businesses",
-    "description": "California offers support for your business through licensing, permitting, verificati on, and more.",
-    "metaDescription": "Browse California state services that support businesses.",
+    "description": "California offers services for your business through licensing, permitting, verification, and more.",
+    "metaDescription": "Browse California state services related to businesses.",
     "cardDescription": "Grow your business through licensing, permitting, and other resources.",
     "featureOrder": 2,
     "slug": "businesses",
@@ -65,7 +65,7 @@
         "DepartmentId": 287,
         "ServiceId": 26,
         "ServiceName": "Apply for seller’s permit",
-        "Description": "Register online for a seller's permit, required for sales subject to sales tax.",
+        "Description": "Obtain a seller's permit online, required for sales subject to sales tax.",
         "umgURL": "/images/topic2-2.png",
         "imgAlt": "A white man wearing an apron stands with a white woman behind a counter at a cafe. They hold pens while they look at a clipboard with paperwork."
       },
@@ -73,7 +73,7 @@
         "DepartmentId": 174,
         "ServiceId": 29,
         "ServiceName": "Get a fishing or hunting license",
-        "Description": "Get information for how you can buy a fishing or hunting license in person or online.",
+        "Description": "Find out how you can buy a fishing or hunting license in person or online. ",
         "umgURL": "/images/topic2-3.png",
         "imgAlt": "A commercial fishing boat is on a lake surrounded by green hills, hauling a load of fish inside a net."
       },
@@ -81,7 +81,7 @@
         "DepartmentId": 268,
         "ServiceId": 13,
         "ServiceName": "Search for Unclaimed Property",
-        "Description": "Locate unclaimed property that  has been sent to the state for safekeeping.",
+        "Description": "Locate unclaimed property that has been sent to the state. Typically the property is money. It is not real estate.",
         "umgURL": "/images/topic2-4.png",
         "imgAlt": "A light-skinned hand holds a signed blue and white check for $10,247.40."
       }
@@ -178,7 +178,7 @@
   {
     "topicId": 5,
     "name": "Assistance and social programs",
-    "description": "Get help covering food, medical, vehicle, and education costs. Apply for income assistance when unemployed or on disability.",
+    "description": "Find services that help improve the well-being of individuals, families, and communities in California. Benefits support ",
     "metaDescription": "Browse California state services that provide social and financial help.",
     "cardDescription": "Get help covering food and medical costs, and access other discounted benefits.",
     "featureOrder": 5,
