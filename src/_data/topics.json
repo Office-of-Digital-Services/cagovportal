@@ -3,7 +3,8 @@
     "topicId": 1,
     "name": "Personal records",
     "description": "Your birth certificate, ID card, and other personal records confirm who you are. They help you get the services you need.",
-    "metaDescription": "Browse California state services related to personal records",
+    "metaDescription": "Browse California state services related to personal records.",
+    "cardDescription": "Update your personal records, which make it easier to access services.",
     "featureOrder": 1,
     "topicImg": "/images/topic1-lineart.svg",
     "popularServices": [
@@ -45,7 +46,8 @@
     "topicId": 2,
     "name": "Businesses",
     "description": "California offers support for your business through licensing, permitting, verificati on, and more.",
-    "metaDescription": "Browse California state services that support businesses",
+    "metaDescription": "Browse California state services that support businesses.",
+    "cardDescription": "Grow your business through licensing, permitting, and other resources.",
     "featureOrder": 2,
     "topicImg": "/images/topic2-lineart.svg",
     "popularServices": [
@@ -87,7 +89,8 @@
     "topicId": 3,
     "name": "DMV/Auto",
     "description": "Get your California driver’s license, registration, and insurance up-to-date. Resolve traffic tickets, and keep your vehicle in shape with smog and repair services.",
-    "metaDescription": "Browse California state services related to vehicles and the DMV",
+    "metaDescription": "Browse California state services related to vehicles and the DMV.",
+    "cardDescription": "Update your driver’s license, registration, and insurance, and resolve traffic tickets.",
     "featureOrder": 3,
     "topicImg": "/images/topic3-lineart.svg",
     "popularServices": [
@@ -129,7 +132,8 @@
     "topicId": 4,
     "name": "Jobs and unemployment",
     "description": "Browse job boards and employment resources, including job training. Get financial support while you are unemployed.",
-    "metaDescription": "Browse California state services related to employment",
+    "metaDescription": "Browse California state services related to employment.",
+    "cardDescription": "Find a job, enroll in job training, and get support while you are unemployed.",
     "featureOrder": 4,
     "topicImg": "/images/topic4-lineart.svg",
     "popularServices": [
@@ -171,7 +175,8 @@
     "topicId": 5,
     "name": "Assistance and social programs",
     "description": "Get help covering food, medical, vehicle, and education costs. Apply for income assistance when unemployed or on disability.",
-    "metaDescription": "Browse California state services that provide social and financial help",
+    "metaDescription": "Browse California state services that provide social and financial help.",
+    "cardDescription": "Get help covering food and medical costs, and access other discounted benefits.",
     "featureOrder": 5,
     "topicImg": "/images/topic5-lineart.svg",
     "popularServices": [
@@ -214,6 +219,7 @@
     "name": "Housing and real estate",
     "description": "Manage your home with contractors, real estate agents, appraisers and insurance estimates. Maintain your real estate business with licensing.",
     "metaDescription": "Browse California state services related to housing and real estate.",
+    "cardDescription": "Manage your home and real estate for individuals or businesses.",
     "featureOrder": 6,
     "topicImg": "/images/topic6-lineart.svg",
     "popularServices": [
@@ -255,7 +261,8 @@
     "topicId": 7,
     "name": "Safety and emergencies",
     "description": "Look up public safety information and receive support if you are a victim of a crime or disaster.",
-    "metaDescription": "Browse California state services related to public safety and disaster assistance",
+    "metaDescription": "Browse California state services related to public safety and disaster assistance.",
+    "cardDescription": "Learn about disasters, public safety, and get emergency assistance.",
     "featureOrder": 7,
     "topicImg": "/images/topic7-lineart.svg",
     "popularServices": [
@@ -297,7 +304,8 @@
     "topicId": 8,
     "name": "State info and laws",
     "description": "Look up state representatives and laws. Access other state data, like lottery numbers, local schools, and voter registration.",
-    "metaDescription": "Browse California state services related to state information, records, and laws",
+    "metaDescription": "Browse California state services related to state information, records, and laws.",
+    "cardDescription": "Look up state information, including representatives, voting, schools, and lotto numbers.",
     "featureOrder": 8,
     "topicImg": "/images/topic8-lineart.svg",
     "popularServices": [
@@ -339,7 +347,8 @@
     "topicId": 9,
     "name": "Taxes",
     "description": "Learn about taxes in California and how to file for free, check your refund, and earn tax credits.",
-    "metaDescription": "Browse California state services related to taxes, refunds, and credits",
+    "metaDescription": "Browse California state services related to taxes, refunds, and credits.",
+    "cardDescription": "Learn how to file your taxes for free, check your refund, and earn tax credits.",
     "featureOrder": 9,
     "topicImg": "/images/topic9-lineart.svg",
     "popularServices": [
@@ -381,7 +390,8 @@
     "topicId": 10,
     "name": "Health and wellness",
     "description": "Get health and wellness support for you and your family. Find resources for medical care, nutrition, and senior services.",
-    "metaDescription": "Browse California state services that support you and your family’s health",
+    "metaDescription": "Browse California state services that support you and your family’s health.",
+    "cardDescription": "Find support for your family's health needs, including senior and medical care.",
     "featureOrder": 10,
     "topicImg": "/images/topic10-lineart.svg",
     "popularServices": [
@@ -423,7 +433,8 @@
     "topicId": 11,
     "name": "Travel and recreation",
     "description": "Discover California's top destinations like state parks, campsites, and museums. Plan trips, reserve campsites, and get licenses for activities.",
-    "metaDescription": "Browse California state services related to travel and recreation within the state",
+    "metaDescription": "Browse California state services related to travel and recreation within the state.",
+    "cardDescription": "Explore California's attractions and plan outdoor activities.",
     "featureOrder": 11,
     "topicImg": "/images/topic11-lineart.svg",
     "popularServices": [
@@ -465,7 +476,8 @@
     "topicId": 12,
     "name": "Education",
     "description": "Find educational opportunities and financial support for your degree or vocational training.",
-    "metaDescription": "Browse California state services related to education and professional development",
+    "metaDescription": "Browse California state services related to education and professional development.",
+    "cardDescription": "Find educational opportunities and get financial aid.",
     "featureOrder": 12,
     "topicImg": "/images/topic12-lineart.svg",
     "popularServices": [
