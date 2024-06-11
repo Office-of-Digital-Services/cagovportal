@@ -6,7 +6,7 @@
     "metaDescription": "Browse California state services related to personal records.",
     "cardDescription": "Update your personal records, which make it easier to access services.",
     "featureOrder": 1,
-    "permalink": "personal-records",
+    "slug": "personal-records",
     "topicImg": "/images/topic1-lineart.svg",
     "popularServices": [
       {
@@ -50,7 +50,7 @@
     "metaDescription": "Browse California state services that support businesses.",
     "cardDescription": "Grow your business through licensing, permitting, and other resources.",
     "featureOrder": 2,
-    "permalink": "businesses",
+    "slug": "businesses",
     "topicImg": "/images/topic2-lineart.svg",
     "popularServices": [
       {
@@ -94,7 +94,7 @@
     "metaDescription": "Browse California state services related to vehicles and the DMV.",
     "cardDescription": "Update your driver’s license, registration, and insurance, and resolve traffic tickets.",
     "featureOrder": 3,
-    "permalink": "dmv-auto",
+    "slug": "dmv-auto",
     "topicImg": "/images/topic3-lineart.svg",
     "popularServices": [
       {
@@ -138,7 +138,7 @@
     "metaDescription": "Browse California state services related to employment.",
     "cardDescription": "Find a job, enroll in job training, and get support while you are unemployed.",
     "featureOrder": 4,
-    "permalink": "jobs",
+    "slug": "jobs",
     "topicImg": "/images/topic4-lineart.svg",
     "popularServices": [
       {
@@ -182,7 +182,7 @@
     "metaDescription": "Browse California state services that provide social and financial help.",
     "cardDescription": "Get help covering food and medical costs, and access other discounted benefits.",
     "featureOrder": 5,
-    "permalink": "assistance",
+    "slug": "assistance",
     "topicImg": "/images/topic5-lineart.svg",
     "popularServices": [
       {
@@ -226,7 +226,7 @@
     "metaDescription": "Browse California state services related to housing and real estate.",
     "cardDescription": "Manage your home and real estate for individuals or businesses.",
     "featureOrder": 6,
-    "permalink": "housing",
+    "slug": "housing",
     "topicImg": "/images/topic6-lineart.svg",
     "popularServices": [
       {
@@ -270,7 +270,7 @@
     "metaDescription": "Browse California state services related to public safety and disaster assistance.",
     "cardDescription": "Learn about disasters, public safety, and get emergency assistance.",
     "featureOrder": 7,
-    "permalink": "safety",
+    "slug": "safety",
     "topicImg": "/images/topic7-lineart.svg",
     "popularServices": [
       {
@@ -314,7 +314,7 @@
     "metaDescription": "Browse California state services related to state information, records, and laws.",
     "cardDescription": "Look up state information, including representatives, voting, schools, and lotto numbers.",
     "featureOrder": 8,
-    "permalink": "laws-records",
+    "slug": "laws-records",
     "topicImg": "/images/topic8-lineart.svg",
     "popularServices": [
       {
@@ -358,7 +358,7 @@
     "metaDescription": "Browse California state services related to taxes, refunds, and credits.",
     "cardDescription": "Learn how to file your taxes for free, check your refund, and earn tax credits.",
     "featureOrder": 9,
-    "permalink": "taxes",
+    "slug": "taxes",
     "topicImg": "/images/topic9-lineart.svg",
     "popularServices": [
       {
@@ -402,7 +402,7 @@
     "metaDescription": "Browse California state services that support you and your family’s health.",
     "cardDescription": "Find support for your family's health needs, including senior and medical care.",
     "featureOrder": 10,
-    "permalink": "health",
+    "slug": "health",
     "topicImg": "/images/topic10-lineart.svg",
     "popularServices": [
       {
@@ -446,7 +446,7 @@
     "metaDescription": "Browse California state services related to travel and recreation within the state.",
     "cardDescription": "Explore California's attractions and plan outdoor activities.",
     "featureOrder": 11,
-    "permalink": "recreation",
+    "slug": "recreation",
     "topicImg": "/images/topic11-lineart.svg",
     "popularServices": [
       {
@@ -490,7 +490,7 @@
     "metaDescription": "Browse California state services related to education and professional development.",
     "cardDescription": "Find educational opportunities and get financial aid.",
     "featureOrder": 12,
-    "permalink": "education",
+    "slug": "education",
     "topicImg": "/images/topic12-lineart.svg",
     "popularServices": [
       {
