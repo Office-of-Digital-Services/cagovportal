@@ -2,6 +2,7 @@
 const defaultConfig = require("@11ty/eleventy/src/defaultConfig");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { minify } = require("terser");
+const MarkdownIt = require("markdown-it");
 
 // canonical domain
 const domain = "https://www.ca.gov";
@@ -80,6 +81,18 @@ module.exports = function (
       callback(null, minified.code || "");
     }
   );
+
+  // a special filter for converting md text to HTML
+  eleventyConfig.addFilter("md", (/** @type {string} */ contents) => {
+    const md = MarkdownIt({
+      html: false,
+      linkify: true,
+      typographer: true,
+      breaks: true
+    });
+
+    return md.renderInline(contents);
+  });
 
   // so you can look at {% if ELEVENTY_ENV !== 'dev' %}
   eleventyConfig.addGlobalData("ELEVENTY_ENV", process.env.ELEVENTY_ENV);
