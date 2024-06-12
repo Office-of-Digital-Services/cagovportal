@@ -2,7 +2,7 @@
   "service": [
     {
       "href": "/services/",
-      "text": "Service <span class=\"sr-only\">landing page</span>"
+      "text": "Services <span class=\"sr-only\">landing page</span>"
     },
     {
       "href": "/services/all/",

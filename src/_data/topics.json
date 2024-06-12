@@ -6,6 +6,7 @@
     "metaDescription": "Browse California state services related to personal records.",
     "cardDescription": "Update your personal records, which make it easier to access services.",
     "featureOrder": 1,
+    "slug": "personal-records",
     "topicImg": "/images/topic1-lineart.svg",
     "popularServices": [
       {
@@ -45,10 +46,11 @@
   {
     "topicId": 2,
     "name": "Businesses",
-    "description": "California offers support for your business through licensing, permitting, verificati on, and more.",
-    "metaDescription": "Browse California state services that support businesses.",
+    "description": "California offers services for your business through licensing, permitting, verification, and more.",
+    "metaDescription": "Browse California state services related to businesses.",
     "cardDescription": "Grow your business through licensing, permitting, and other resources.",
     "featureOrder": 2,
+    "slug": "businesses",
     "topicImg": "/images/topic2-lineart.svg",
     "popularServices": [
       {
@@ -63,7 +65,7 @@
         "DepartmentId": 287,
         "ServiceId": 26,
         "ServiceName": "Apply for seller’s permit",
-        "Description": "Register online for a seller's permit, required for sales subject to sales tax.",
+        "Description": "Obtain a seller's permit online, required for sales subject to sales tax.",
         "umgURL": "/images/topic2-2.png",
         "imgAlt": "A white man wearing an apron stands with a white woman behind a counter at a cafe. They hold pens while they look at a clipboard with paperwork."
       },
@@ -71,7 +73,7 @@
         "DepartmentId": 174,
         "ServiceId": 29,
         "ServiceName": "Get a fishing or hunting license",
-        "Description": "Get information for how you can buy a fishing or hunting license in person or online.",
+        "Description": "Find out how you can buy a fishing or hunting license in person or online. ",
         "umgURL": "/images/topic2-3.png",
         "imgAlt": "A commercial fishing boat is on a lake surrounded by green hills, hauling a load of fish inside a net."
       },
@@ -79,7 +81,7 @@
         "DepartmentId": 268,
         "ServiceId": 13,
         "ServiceName": "Search for Unclaimed Property",
-        "Description": "Locate unclaimed property that  has been sent to the state for safekeeping.",
+        "Description": "Locate unclaimed property that has been sent to the state. Typically the property is money. It is not real estate.",
         "umgURL": "/images/topic2-4.png",
         "imgAlt": "A light-skinned hand holds a signed blue and white check for $10,247.40."
       }
@@ -88,10 +90,11 @@
   {
     "topicId": 3,
     "name": "DMV/Auto",
-    "description": "Get your California driver’s license, registration, and insurance up-to-date. Resolve traffic tickets, and keep your vehicle in shape with smog and repair services.",
+    "description": "Get or renew your California driver’s license, vehicle registration, and more. Learn about and obtain auto insurance. Resolve traffic tickets and keep your vehicle in shape with smog and repair services.",
     "metaDescription": "Browse California state services related to vehicles and the DMV.",
     "cardDescription": "Update your driver’s license, registration, and insurance, and resolve traffic tickets.",
     "featureOrder": 3,
+    "slug": "dmv-auto",
     "topicImg": "/images/topic3-lineart.svg",
     "popularServices": [
       {
@@ -131,10 +134,11 @@
   {
     "topicId": 4,
     "name": "Jobs and unemployment",
-    "description": "Browse job boards and employment resources, including job training. Get financial support while you are unemployed.",
+    "description": "Review job openings, trainings, and resources. Get financial support while you are unemployed.",
     "metaDescription": "Browse California state services related to employment.",
     "cardDescription": "Find a job, enroll in job training, and get support while you are unemployed.",
     "featureOrder": 4,
+    "slug": "jobs",
     "topicImg": "/images/topic4-lineart.svg",
     "popularServices": [
       {
@@ -149,7 +153,7 @@
         "DepartmentId": 229,
         "ServiceId": 20,
         "ServiceName": "File for unemployment",
-        "Description": "File and manage unemployment claims on a fast, convenient, and secure platform.",
+        "Description": "File and manage unemployment claims to receive financial support while you are looking for a job.",
         "umgURL": "/images/topic4-2.png",
         "imgAlt": "The hands of a man with tan skin and a checkered button-down shirt work on a laptop."
       },
@@ -174,10 +178,11 @@
   {
     "topicId": 5,
     "name": "Assistance and social programs",
-    "description": "Get help covering food, medical, vehicle, and education costs. Apply for income assistance when unemployed or on disability.",
+    "description": "Benefits support obtaining food, health coverage, vehicle and education costs, and income assistance when unemployed or on disability. ",
     "metaDescription": "Browse California state services that provide social and financial help.",
     "cardDescription": "Get help covering food and medical costs, and access other discounted benefits.",
     "featureOrder": 5,
+    "slug": "assistance",
     "topicImg": "/images/topic5-lineart.svg",
     "popularServices": [
       {
@@ -200,7 +205,7 @@
         "DepartmentId": 229,
         "ServiceId": 20,
         "ServiceName": "File for unemployment",
-        "Description": "File and manage unemployment claims on a fast, convenient, and secure platform.",
+        "Description": "File and manage unemployment claims to receive financial support while you are looking for a job.",
         "umgURL": "/images/topic5-3.png",
         "imgAlt": "The hands of a man with tan skin and a checkered button-down shirt work on a laptop."
       },
@@ -208,7 +213,7 @@
         "DepartmentId": 101,
         "ServiceId": 1182,
         "ServiceName": "Get a CalABLE Visa prepaid card",
-        "Description": "Pay for disability-related expenses tax free with a CalABLE card.",
+        "Description": "Pay for disability-related expenses (tax free) with a CalABLE card.",
         "umgURL": "/images/topic5-4.png",
         "imgAlt": "A blue CalABLE prepared card"
       }
@@ -217,10 +222,11 @@
   {
     "topicId": 6,
     "name": "Housing and real estate",
-    "description": "Manage your home with contractors, real estate agents, appraisers and insurance estimates. Maintain your real estate business with licensing.",
+    "description": "Make informed decisions about your home. Find the status of contractors, real estate agents, and appraisers. Maintain your real estate business license. Find help to pay rent or get home insurance estimates.",
     "metaDescription": "Browse California state services related to housing and real estate.",
     "cardDescription": "Manage your home and real estate for individuals or businesses.",
     "featureOrder": 6,
+    "slug": "housing",
     "topicImg": "/images/topic6-lineart.svg",
     "popularServices": [
       {
@@ -264,6 +270,7 @@
     "metaDescription": "Browse California state services related to public safety and disaster assistance.",
     "cardDescription": "Learn about disasters, public safety, and get emergency assistance.",
     "featureOrder": 7,
+    "slug": "safety",
     "topicImg": "/images/topic7-lineart.svg",
     "popularServices": [
       {
@@ -307,6 +314,7 @@
     "metaDescription": "Browse California state services related to state information, records, and laws.",
     "cardDescription": "Look up state information, including representatives, voting, schools, and lotto numbers.",
     "featureOrder": 8,
+    "slug": "laws-records",
     "topicImg": "/images/topic8-lineart.svg",
     "popularServices": [
       {
@@ -321,7 +329,7 @@
         "DepartmentId": 268,
         "ServiceId": 13,
         "ServiceName": "Search for unclaimed property",
-        "Description": "Locate unclaimed property that has been sent to the state for safekeeping.",
+        "Description": "Locate unclaimed property that has been sent to the state. Typically the property is money. It is not real estate.",
         "umgURL": "/images/topic8-2.png",
         "imgAlt": "A light-skinned hand holds a signed blue and white check for $10,247.40."
       },
@@ -350,6 +358,7 @@
     "metaDescription": "Browse California state services related to taxes, refunds, and credits.",
     "cardDescription": "Learn how to file your taxes for free, check your refund, and earn tax credits.",
     "featureOrder": 9,
+    "slug": "taxes",
     "topicImg": "/images/topic9-lineart.svg",
     "popularServices": [
       {
@@ -393,6 +402,7 @@
     "metaDescription": "Browse California state services that support you and your family’s health.",
     "cardDescription": "Find support for your family's health needs, including senior and medical care.",
     "featureOrder": 10,
+    "slug": "health",
     "topicImg": "/images/topic10-lineart.svg",
     "popularServices": [
       {
@@ -436,24 +446,9 @@
     "metaDescription": "Browse California state services related to travel and recreation within the state.",
     "cardDescription": "Explore California's attractions and plan outdoor activities.",
     "featureOrder": 11,
+    "slug": "recreation",
     "topicImg": "/images/topic11-lineart.svg",
     "popularServices": [
-      {
-        "DepartmentId": 174,
-        "ServiceId": 29,
-        "ServiceName": "Get a fishing or hunting license",
-        "Description": "Get information for how you can buy a fishing or hunting license in person or online.",
-        "umgURL": "/images/topic11-1.png",
-        "imgAlt": "A father and son with dark brown skin stand in front of a lake. They're wearing khaki ball caps, shirt, and pants. The son holds a fishing pole while they both look at a fish he caught."
-      },
-      {
-        "DepartmentId": 185,
-        "ServiceId": 1144,
-        "ServiceName": "Get a horse racing license",
-        "Description": "Get a license for horse owners, trainers, jockeys, grooms, agents, and officials.",
-        "umgURL": "/images/topic11-2.png",
-        "imgAlt": "A group of horses with riders on them. The riders are wearing assorted colors of racing clothes and helmets."
-      },
       {
         "DepartmentId": 283,
         "ServiceId": 75,
@@ -469,16 +464,33 @@
         "Description": "Visit California’s state parks, a diverse collection of natural and cultural resources.",
         "umgURL": "/images/topic11-4.png",
         "imgAlt": "Waves flow out from Julia Pfeiffer Beach in the daytime. The beach is an enclave surrounded by rock formations."
+      },
+      {
+        "DepartmentId": 174,
+        "ServiceId": 29,
+        "ServiceName": "Get a fishing or hunting license",
+        "Description": "Get information for how you can buy a fishing or hunting license in person or online.",
+        "umgURL": "/images/topic11-1.png",
+        "imgAlt": "A father and son with dark brown skin stand in front of a lake. They're wearing khaki ball caps, shirt, and pants. The son holds a fishing pole while they both look at a fish he caught."
+      },
+      {
+        "DepartmentId": 185,
+        "ServiceId": 1144,
+        "ServiceName": "Get a horse racing license",
+        "Description": "Get a license for horse owners, trainers, jockeys, grooms, agents, and officials.",
+        "umgURL": "/images/topic11-2.png",
+        "imgAlt": "A group of horses with riders on them. The riders are wearing assorted colors of racing clothes and helmets."
       }
     ]
   },
   {
     "topicId": 12,
     "name": "Education",
-    "description": "Find educational opportunities and financial support for your degree or vocational training.",
+    "description": "Find educational opportunities for people of all ages. Apply for financial help for your degree, vocational training, and more.",
     "metaDescription": "Browse California state services related to education and professional development.",
     "cardDescription": "Find educational opportunities and get financial aid.",
     "featureOrder": 12,
+    "slug": "education",
     "topicImg": "/images/topic12-lineart.svg",
     "popularServices": [
       {
