@@ -4,6 +4,7 @@
   "description": "www.ca.gov",
   "scripts": {
     "start": "ELEVENTY_ENV=dev npx @11ty/eleventy --serve",
+    "start-full": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy"
   },
   "repository": {
