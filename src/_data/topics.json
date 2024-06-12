@@ -3,7 +3,7 @@
     "topicId": 1,
     "name": "Personal records",
     "description": "Your birth certificate, ID card, and other personal records confirm who you are. They help you get the services you need.",
-    "metaDescription": "Browse California state services related to personal records.",
+    "metaDescription": "Browse California state services related to personal records. This includes birth certificates, vaccine records, and more.",
     "cardDescription": "Update your personal records, which make it easier to access services.",
     "featureOrder": 1,
     "slug": "personal-records",
@@ -178,7 +178,7 @@
   {
     "topicId": 5,
     "name": "Assistance and social programs",
-    "description": "Benefits support obtaining food, health coverage, vehicle and education costs, and income assistance when unemployed or on disability. ",
+    "description": "Benefits support obtaining food, health coverage, vehicle and education costs, and income assistance when unemployed or on disability.",
     "metaDescription": "Browse California state services that provide social and financial help.",
     "cardDescription": "Get help covering food and medical costs, and access other discounted benefits.",
     "featureOrder": 5,
