@@ -91,7 +91,7 @@ module.exports = function (
       breaks: true
     });
 
-    return md.renderInline(contents);
+    return md.render(contents);
   });
 
   // so you can look at {% if ELEVENTY_ENV !== 'dev' %}
