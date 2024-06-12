@@ -67,9 +67,19 @@ eleventyNavigation:
                 >
               </h3>
               <p class="department-description">{{agency.Description}}</p>
+              {%-set topicResults = []%}{%for topic in
+              topics|sortBy("featureOrder")%}{%if topic.name in
+              agency.AgencyTags%}{%set
+              _=topicResults.push(topic.name)%}{%endif%}{%endfor%}{%if
+              topicResults.length%}
+              <p class="font-size-14 m-t-md">
+                Topics: {{topicResults.join(", ")}}
+              </p>
+              {%-endif%}
             </div>
           </div>
         </span>
+
         <hr class="m-y-md" data-row-key="{{agency.AgencyId}}" />
 
         {%- endfor %}
