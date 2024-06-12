@@ -58,7 +58,7 @@ eleventyComputed:
       </nav>
     </div>
     <div class="col-md-9 mx-auto">
-      <p class="m-t-md lead">{{item.description}}</p>
+      <div class="p-t-md lead">{{item.description | md | safe-}}</div>
 
       <h2>Popular related services</h2>
 
