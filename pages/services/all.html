@@ -62,12 +62,15 @@ eleventyNavigation:
             Launch service</a
           >
 
-          {%-set topicResults = []%}{%for topic in
+          {%-set topicResults=[]%}{%for topic in
           topics|sortBy("featureOrder")%}{%if topic.name in
-          service.AgencyTags%}{%set
-          _=topicResults.push(topic.name)%}{%endif%}{%endfor%}{%if
-          topicResults.length%}
-          <p class="font-size-14 m-t-md">Topics: {{topicResults.join(", ")}}</p>
+          service.AgencyTags%}{%set _=topicResults.push('<a
+            href="/topics/'+topic.slug+'/"
+            >'+topic.name+'</a
+          >')%}{%endif%}{%endfor%}{%if topicResults.length%}
+          <p class="font-size-14 m-t-md">
+            Topics: {{topicResults.join(", ") | safe}}
+          </p>
           {%-endif%}
 
           <hr class="m-y-md" />
