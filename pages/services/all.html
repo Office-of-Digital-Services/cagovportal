@@ -62,14 +62,14 @@ eleventyNavigation:
             Launch service</a
           >
 
-          {%-set topicResults = []%}{%for topic in
-          topics|sortBy("featureOrder")%}{%if topic.name in
-          service.AgencyTags%}{%set
-          _=topicResults.push(topic.name)%}{%endif%}{%endfor%}{%if
-          topicResults.length%}
-          <p class="font-size-14 m-t-md">Topics: {{topicResults.join(", ")}}</p>
-          {%-endif%}
-
+          <div class="keywords font-size-14 p-t-md">
+            <span>Topic:</span>
+            {% for topic in topics|sortBy("featureOrder") %} {% if topic.name in
+            service.AgencyTags %}
+            <a href="/topics/{{ topic.slug }}/">{{- topic.name -}}</a
+            ><span>,</span>
+            {% endif %} {% endfor %}
+          </div>
           <hr class="m-y-md" />
         </article>
         {%- endfor %}

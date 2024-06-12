@@ -222,7 +222,8 @@ a[aria-current="page"] {
   aspect-ratio: 1 / 1;
 }
 
-.keywords span.m-r-sm:last-child {
+.keywords span.m-r-sm:last-child,
+.keywords span:last-child {
   display: none;
 }
 
