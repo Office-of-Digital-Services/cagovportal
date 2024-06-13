@@ -2,6 +2,7 @@
 landing: Services
 dynamic_sidenavid: topic
 layout: landing
+breadcrumbparent: Topics
 pagination:
     data: topics
     size: 1
@@ -11,10 +12,6 @@ permalink: "topics/{{ item.slug }}/"
 eleventyComputed: 
   description: "{{ item.metaDescription | safe }}"
   title: "{{ item.name | safe }}"
-  eleventyNavigation:
-    key: "Topic{{ item.topicId }}"
-    title:  "{{ title }}"
-    parent: Topics
 ---
 
 <div

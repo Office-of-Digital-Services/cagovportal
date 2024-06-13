@@ -1,6 +1,7 @@
 ---
 landing: Departments
 layout: landing
+breadcrumbparent: Departments
 pagination:
     data: state_entity.agencies
     size: 1
@@ -11,10 +12,6 @@ eleventyComputed:
   description: Department details for "{{ item.AgencyFullName | safe }}"
   title: "{{ item.FriendlyName | safe }} ({{ item.Acronym | safe }})"
   keywords: "{{ item.Keywords | safe }}"
-  eleventyNavigation:
-    key: "Department{{ item.AgencyId }}"
-    title:  "{{ title }}"
-    parent: Departments
 ---
 
 {%-set QAs = [] -%} {%- for service in state_entity.services |
