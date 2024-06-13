@@ -154,13 +154,15 @@ cagov-feedback .feedback-form-thanks {
 
 cagov-feedback .feedback-form-label {
   width: 100% !important;
-  margin-top: 0 !important;
+  margin-top: 0.5rem !important;
   font-size: 1.7rem !important;
 }
 
 cagov-feedback .feedback-form-button {
-  border: 1px solid var(--gray-200) !important;
+  border: 1px solid var(--color-p2) !important;
   border-radius: 5px !important;
+  margin-right: 1rem !important;
+  color: var(--color-p2) !important;
 }
 
 cagov-feedback .feedback-form-button:hover,
@@ -168,6 +170,7 @@ cagov-feedback .feedback-form-button:focus {
   box-shadow: none !important;
   text-decoration: none !important;
   background: var(--gray-75) !important;
+  color: var(--color-p2-darker) !important;
 }
 
 /* Elipsis overflow */
