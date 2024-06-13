@@ -12,10 +12,6 @@ eleventyComputed:
   description: Department details for "{{ item.AgencyFullName | safe }}"
   title: "{{ item.FriendlyName | safe }} ({{ item.Acronym | safe }})"
   keywords: "{{ item.Keywords | safe }}"
-  eleventyNavigation:
-    key: "Department{{ item.AgencyId }}"
-    title:  "{{ title }}"
-    parent: Departments
 ---
 
 {%-set QAs = [] -%} {%- for service in state_entity.services |

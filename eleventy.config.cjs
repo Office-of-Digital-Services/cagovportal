@@ -1,6 +1,5 @@
 //@ts-check
 const defaultConfig = require("@11ty/eleventy/src/defaultConfig");
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { minify } = require("terser");
 const MarkdownIt = require("markdown-it");
 
@@ -10,8 +9,6 @@ const domain = "https://www.ca.gov";
 module.exports = function (
   /** @type {import("@11ty/eleventy").UserConfig} **/ eleventyConfig
 ) {
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
-
   // Copy `src/css/` to `_site/css`, `src/images/` to `_site/images`
   // Copy all static files that should appear in the website root
   // Copy state tempate code files from NPM
@@ -93,9 +90,6 @@ module.exports = function (
 
     return md.render(contents);
   });
-
-  // so you can look at {% if ELEVENTY_ENV !== 'dev' %}
-  eleventyConfig.addGlobalData("ELEVENTY_ENV", process.env.ELEVENTY_ENV);
 
   // Custom filter to format dates
   eleventyConfig.addFilter(

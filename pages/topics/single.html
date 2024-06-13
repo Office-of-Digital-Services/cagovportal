@@ -12,10 +12,6 @@ permalink: "topics/{{ item.slug }}/"
 eleventyComputed: 
   description: "{{ item.metaDescription | safe }}"
   title: "{{ item.name | safe }}"
-  eleventyNavigation:
-    key: "Topic{{ item.topicId }}"
-    title:  "{{ title }}"
-    parent: Topics
 ---
 
 <div
