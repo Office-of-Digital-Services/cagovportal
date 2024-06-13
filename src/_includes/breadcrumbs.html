@@ -1,12 +1,14 @@
 <!-- Breadcrumbs component -->
+{%- if parent !== "" -%}
 <nav aria-label="You are here" class="breadcrumbs">
-  {% if ELEVENTY_ENV !== 'dev' %} {{ collections.all |
-  eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) |
-  eleventyNavigationToHtml({listElement:"ol",activeKey:eleventyNavigation.key,activeAnchorClass:"active"})
-  | safe }} {% else %}
+  {% set node = breadcrumbs | pluck("key",parent) %}
   <ol>
-    <li><a href="/">Home</a></li>
-    <li>(Nav disabled in dev)</li>
+    {% for link in node[0].links %}
+
+    <li><a href="{{link.href}}">{{link.title}}</a></li>
+
+    {% endfor %}
+    <li><a href="{{page.url}}" aria-current="location">{{title}}</a></li>
   </ol>
-  {% endif %}
 </nav>
+{%- endif -%}
