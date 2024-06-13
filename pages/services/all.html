@@ -57,9 +57,9 @@ eleventyNavigation:
           <p class="service-description">{{service.Description}}</p>
           <a
             class="btn btn-outline-primary btn-lg"
-            href="{{ service.ServiceUrl }}"
-            aria-label="Launch “{{ service.ServiceName }}” service">
-            Launch service</a
+            href="{{ service.ServiceUrl }}">
+            Launch
+            <span class="sr-only">"{{service.ServiceName}}"</span> service</a
           >
 
           {%-set topicResults=[]%}{%for topic in
