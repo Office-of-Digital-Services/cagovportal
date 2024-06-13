@@ -64,7 +64,7 @@ eleventyComputed:
           <a
             href="/departments/{{-pop.DepartmentId-}}/services/{{-pop.ServiceId-}}/"
             class="no-underline no-external-link-icon d-inline-block h-100">
-            <article
+            <div
               class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
               <img
                 src="{{pop.umgURL}}"
@@ -75,7 +75,7 @@ eleventyComputed:
                 {{-pop.ServiceName-}}
               </p>
               <p class="m-b text-left gray-900">{{-pop.Description-}}</p>
-            </article>
+            </div>
           </a>
         </div>
         {%- endfor %}
@@ -108,7 +108,7 @@ eleventyComputed:
         data-filter-trigger-selector="input#defaultFilter">
         {%- for service in state_entity.services |
         pluck('AgencyTags',item.name,"includes") -%}
-        <article data-row-key="{{service.ServiceId}}" class="pos-rel">
+        <div data-row-key="{{service.ServiceId}}" class="pos-rel">
           <h2 class="lead bold m-t-0 m-b">
             <a
               href="/departments/{{ service.AgencyId }}/services/{{ service.ServiceId }}/"
@@ -124,7 +124,7 @@ eleventyComputed:
             <span class="sr-only">"{{service.ServiceName}}"</span> service</a
           >
           <hr class="m-y-md" />
-        </article>
+        </div>
         {%- endfor %}
       </cagovhome-filterlist>
     </div>
