@@ -38,6 +38,7 @@ module.exports = function (
      * @example
      * {%- for tag in topics | pluck("featured", true) | sortBy("featureOrder") -%}
      * {%- for tag in pluck("ServiceId",item.ServiceId,"not") -%}
+     * {% set node = breadcrumbs | pluck("key",parent) | first %}
      */
     (arr, attr, value, operator) =>
       arr.filter(item => {
