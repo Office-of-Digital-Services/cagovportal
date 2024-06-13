@@ -5,7 +5,7 @@
     "description": "Your birth certificate, ID card, and other personal records confirm who you are. They help you get the services you need.",
     "metaDescription": "Browse California state services related to personal records. This includes birth certificates, vaccine records, and more.",
     "cardDescription": "Update your personal records, which make it easier to access services.",
-    "featureOrder": 1,
+    "featureOrder": 8,
     "slug": "personal-records",
     "topicImg": "/images/topic1-lineart.svg",
     "popularServices": [
@@ -137,7 +137,7 @@
     "description": "Review job openings, trainings, and resources. Get financial support while you are unemployed.",
     "metaDescription": "Browse California state services related to employment.",
     "cardDescription": "Find a job, enroll in job training, and get support while you are unemployed.",
-    "featureOrder": 4,
+    "featureOrder": 7,
     "slug": "jobs",
     "topicImg": "/images/topic4-lineart.svg",
     "popularServices": [
@@ -181,7 +181,7 @@
     "description": "Find services that help improve the well-being of individuals, families, and communities in California. Benefits support\n- obtaining food\n- health coverage\n- vehicle and education costs\n- income assistance when unemployed or on disability",
     "metaDescription": "Browse California state services that provide social and financial help.",
     "cardDescription": "Get help covering food and medical costs, and access other discounted benefits.",
-    "featureOrder": 5,
+    "featureOrder": 1,
     "slug": "assistance",
     "topicImg": "/images/topic5-lineart.svg",
     "popularServices": [
@@ -269,7 +269,7 @@
     "description": "Look up public safety information and receive support if you are a victim of a crime or disaster.",
     "metaDescription": "Browse California state services related to public safety and disaster assistance.",
     "cardDescription": "Learn about disasters, public safety, and get emergency assistance.",
-    "featureOrder": 7,
+    "featureOrder": 9,
     "slug": "safety",
     "topicImg": "/images/topic7-lineart.svg",
     "popularServices": [
@@ -313,7 +313,7 @@
     "description": "Look up state representatives and laws. Access other state data, like lottery numbers, local schools, and voter registration.",
     "metaDescription": "Browse California state services related to state information, records, and laws.",
     "cardDescription": "Look up state information, including representatives, voting, schools, and lotto numbers.",
-    "featureOrder": 8,
+    "featureOrder": 10,
     "slug": "laws-records",
     "topicImg": "/images/topic8-lineart.svg",
     "popularServices": [
@@ -357,7 +357,7 @@
     "description": "Learn about taxes in California and how to file for free, check your refund, and earn tax credits.",
     "metaDescription": "Browse California state services related to taxes, refunds, and credits.",
     "cardDescription": "Learn how to file your taxes for free, check your refund, and earn tax credits.",
-    "featureOrder": 9,
+    "featureOrder": 11,
     "slug": "taxes",
     "topicImg": "/images/topic9-lineart.svg",
     "popularServices": [
@@ -401,7 +401,7 @@
     "description": "Get health and wellness support for you and your family. Find resources for medical care, nutrition, and senior services.",
     "metaDescription": "Browse California state services that support you and your family’s health.",
     "cardDescription": "Find support for your family's health needs, including senior and medical care.",
-    "featureOrder": 10,
+    "featureOrder": 5,
     "slug": "health",
     "topicImg": "/images/topic10-lineart.svg",
     "popularServices": [
@@ -411,7 +411,7 @@
         "ServiceName": "Apply for Medi-Cal",
         "Description": "Get free or low-cost medical care. Medi-Cal provides health coverage for qualified individuals.",
         "umgURL": "/images/topic10-1.png",
-        "imgAlt": "A young Black boy sits in his mother’s lap at the doctor’s office, giving a young white female doctor a high five."
+        "imgAlt": "A tan middle-aged doctor uses a stethoscope to listen to a baby's lungs. The baby is sitting on his mother's lap and they both have dark brown hair."
       },
       {
         "DepartmentId": 176,
@@ -445,7 +445,7 @@
     "description": "Discover California's top destinations like state parks, campsites, and museums. Plan trips, reserve campsites, and get licenses for activities.",
     "metaDescription": "Browse California state services related to travel and recreation within the state.",
     "cardDescription": "Explore California's attractions and plan outdoor activities.",
-    "featureOrder": 11,
+    "featureOrder": 12,
     "slug": "recreation",
     "topicImg": "/images/topic11-lineart.svg",
     "popularServices": [
@@ -489,7 +489,7 @@
     "description": "Find educational opportunities for people of all ages. Apply for financial help for your degree, vocational training, and more.",
     "metaDescription": "Browse California state services related to education and professional development.",
     "cardDescription": "Find educational opportunities and get financial aid.",
-    "featureOrder": 12,
+    "featureOrder": 4,
     "slug": "education",
     "topicImg": "/images/topic12-lineart.svg",
     "popularServices": [

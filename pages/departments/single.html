@@ -89,9 +89,8 @@ endfor %} {%- endfor -%}
       <p class="service-description">{{service.Description}}</p>
       <a
         class="btn btn-outline-primary btn-lg m-r-sm"
-        href="{{ service.ServiceUrl }}"
-        aria-label="Launch “{{ service.ServiceName }}” service">
-        Launch service
+        href="{{ service.ServiceUrl }}">
+        Launch <span class="sr-only">"{{service.ServiceName}}"</span> service
       </a>
       {%- if not loop.last -%}
       <hr class="m-b-lg m-t-md" />
