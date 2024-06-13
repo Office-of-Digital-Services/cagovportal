@@ -89,7 +89,7 @@ dynamic_sidenavid: service
       <div class="row">
         {%- for tag in topics | sortBy("featureOrder") -%}
         <div class="col-md-4 mb-4">
-          <article
+          <div
             class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
             <a
               href="/topics/{{-tag.slug-}}/"
@@ -97,7 +97,7 @@ dynamic_sidenavid: service
               >{{-tag.name-}}</a
             >
             <p class="m-b text-left">{{-tag.cardDescription-}}</p>
-          </article>
+          </div>
         </div>
         {%- endfor %}
       </div>

@@ -43,7 +43,7 @@ side_filter_data: services
         data-row-filter-key="ServiceId"
         data-filter-trigger-selector='input[name="AgencyTags"]'>
         {%- for service in state_entity.services -%}
-        <article data-row-key="{{service.ServiceId}}" class="pos-rel">
+        <div data-row-key="{{service.ServiceId}}" class="pos-rel">
           <h2 class="lead bold m-t-0 m-b">
             <a
               href="/departments/{{ service.AgencyId }}/services/{{ service.ServiceId }}/"
@@ -71,7 +71,7 @@ side_filter_data: services
           {%-endif%}
 
           <hr class="m-y-md" />
-        </article>
+        </div>
         {%- endfor %}
       </cagovhome-filterlist>
     </div>

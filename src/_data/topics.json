@@ -314,7 +314,7 @@
     "metaDescription": "Browse California state services related to state information, records, and laws.",
     "cardDescription": "Look up state information, including representatives, voting, schools, and lotto numbers.",
     "featureOrder": 10,
-    "slug": "laws-records",
+    "slug": "laws-info",
     "topicImg": "/images/topic8-lineart.svg",
     "popularServices": [
       {
@@ -425,7 +425,7 @@
         "DepartmentId": 240,
         "ServiceId": 74,
         "ServiceName": "Apply for medical insurance",
-        "Description": "Apply for Medical Insurance via Covered California.",
+        "Description": "Apply for medical insurance via Covered California.",
         "umgURL": "/images/topic10-3.png",
         "imgAlt": "A light-skinned doctor is filling out paperwork on a clipboard with a pen while using a laptop."
       },
