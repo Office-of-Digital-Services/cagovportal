@@ -66,13 +66,18 @@ endfor %} {%- endfor -%}
         </li>
         {% endif %}
       </ul>
-      <a class="btn btn-primary btn-lg m-r" href="{{item.WebsiteURL}}">
-        Department website
-      </a>
-      <a href="{{item.ContactURL}}/" class="btn btn-outline-primary btn-lg">
-        More contact info
-      </a>
-      <hr class="m-t-md" />
+      <div class="p-y-md">
+        <a class="btn btn-primary btn-lg m-r-md m-b" href="{{item.WebsiteURL}}">
+          Department website
+        </a>
+        <a
+          href="{{item.ContactURL}}/"
+          class="btn btn-outline-primary btn-lg m-b">
+          More contact info
+        </a>
+      </div>
+
+      <hr />
 
       <h2 class="m-t-md">Description</h2>
       <p class="m-b">{{item.Description}}</p>
