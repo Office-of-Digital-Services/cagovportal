@@ -76,7 +76,7 @@ module.exports = async function () {
       description: item.Description,
       url: item.WebsiteURL,
       logo: item.LogoUrl
-        ? `https://stateentityprofile.ca.gov/Uploads/${item.LogoUrl}`
+        ? `https://stateentityprofile.ca.gov/Uploads/${encodeURIComponent(item.LogoUrl)}`
         : undefined,
 
       areaServed: {
