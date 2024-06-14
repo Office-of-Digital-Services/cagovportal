@@ -42,7 +42,7 @@ side_filter_data: agencies
         data-row-filter-key="AgencyId"
         data-filter-trigger-selector='input[name="AgencyTags"]'>
         {%- for agency in state_entity.agencies -%}
-        <span data-row-key="{{agency.AgencyId}}">
+        <div data-row-key="{{agency.AgencyId}}" class="pos-rel">
           <div class="d-flex">
             <div class="dep-image-wrapper">
               <img
@@ -73,7 +73,7 @@ side_filter_data: agencies
               {%-endif%}
             </div>
           </div>
-        </span>
+        </div>
 
         <hr class="m-y-md" data-row-key="{{agency.AgencyId}}" />
 
