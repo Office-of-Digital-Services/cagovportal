@@ -53,17 +53,16 @@ function flattenData() {
    * @param {breadcrumbnode} node
    * @param {breadcrumblink[]} [links]
    */
-  function flattenHelper(node, links = undefined) {
+  function flattenHelper(node, links) {
     /** @type {flatbreadcrumb} */
     const flatbreadcrumb = {
       key: node.key,
-      links: []
+      links: [{ title: node.key, href: node.href }]
     };
 
     if (links) {
-      flatbreadcrumb.links.push(...links);
+      flatbreadcrumb.links.unshift(...links);
     }
-    flatbreadcrumb.links.push({ title: node.key, href: node.href });
 
     result.push(flatbreadcrumb);
 
