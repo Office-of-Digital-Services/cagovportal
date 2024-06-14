@@ -53,29 +53,21 @@ function flattenData() {
    * @param {breadcrumbnode} node
    * @param {breadcrumblink[]} [links]
    */
-  function flattenHelper(node, links) {
+  function flattenRecursive(node, links = []) {
     /** @type {flatbreadcrumb} */
     const flatbreadcrumb = {
       key: node.key,
-      links: [{ title: node.key, href: node.href }]
+      links: [...links, { title: node.key, href: node.href }]
     };
-
-    if (links) {
-      flatbreadcrumb.links.unshift(...links);
-    }
 
     result.push(flatbreadcrumb);
 
-    if (node.children) {
-      for (const child of node.children) {
-        flattenHelper(child, flatbreadcrumb.links);
-      }
-    }
+    node.children?.forEach(child =>
+      flattenRecursive(child, flatbreadcrumb.links)
+    );
   }
 
-  for (const item of data) {
-    flattenHelper(item);
-  }
+  data.forEach(x => flattenRecursive(x));
 
   return result;
 }
