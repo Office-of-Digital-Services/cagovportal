@@ -6,6 +6,6 @@
     {%- for link in node.links %}
     <li><a href="{{link.href}}">{{link.title}}</a></li>
     {%- endfor %}
-    <li><a href="{{page.url}}" aria-current="location">{{title}}</a></li>
+    <li class="active">{{title}}</li>
   </ol>
 </nav>
