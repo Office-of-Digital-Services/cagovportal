@@ -1,54 +1,56 @@
-[
+const data = [
   {
-    "key": "Home",
-    "links": [
+    key: "Home",
+    links: [
       {
-        "title": "Home",
-        "href": "/"
+        title: "Home",
+        href: "/"
       }
     ]
   },
   {
-    "key": "Services",
-    "links": [
+    key: "Services",
+    links: [
       {
-        "title": "Home",
-        "href": "/"
+        title: "Home",
+        href: "/"
       },
       {
-        "title": "Services",
-        "href": "/services/"
+        title: "Services",
+        href: "/services/"
       }
     ]
   },
   {
-    "key": "Departments",
-    "links": [
+    key: "Departments",
+    links: [
       {
-        "title": "Home",
-        "href": "/"
+        title: "Home",
+        href: "/"
       },
       {
-        "title": "Departments",
-        "href": "/departments/"
+        title: "Departments",
+        href: "/departments/"
       }
     ]
   },
   {
-    "key": "Topics",
-    "links": [
+    key: "Topics",
+    links: [
       {
-        "title": "Home",
-        "href": "/"
+        title: "Home",
+        href: "/"
       },
       {
-        "title": "Services",
-        "href": "/services/"
+        title: "Services",
+        href: "/services/"
       },
       {
-        "title": "Topics",
-        "href": "/topics/"
+        title: "Topics",
+        href: "/topics/"
       }
     ]
   }
-]
+];
+
+module.exports = data;
