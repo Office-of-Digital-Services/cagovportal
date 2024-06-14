@@ -23,7 +23,9 @@ side_filter_data: agencies
       {%-include "side-filters.html"-%} {%-include "dynamic-sidenav.html"-%}
     </div>
     <div class="col-lg-9">
-      <p class="lead m-t items-count">0 departments</p>
+      <p class="lead m-t items-count" aria-live="polite">
+        0 departments <span class="sr-only">found</span>
+      </p>
       <label class="sr-only" for="searchbox">Filter departments</label>
       <div class="d-flex m-b-lg">
         <input
@@ -33,10 +35,6 @@ side_filter_data: agencies
           placeholder="Filter departments"
           class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-x reset-x-icon" />
       </div>
-
-      <h2 aria-live="polite" class="sr-only items-count">
-        0 departments found
-      </h2>
 
       <cagovhome-filterlist
         data-search-input-id="searchbox"
