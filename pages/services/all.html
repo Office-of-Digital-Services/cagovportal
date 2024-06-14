@@ -18,22 +18,24 @@ side_filter_data: services
 
 <div class="container p-y-lg">
   <div class="row">
-    <div class="col-lg-3 pb-lg-5 sticky-6 h-100 p-b-md swap-order">
-      {%-include "side-filters.html"-%} {%-include "dynamic-sidenav.html"-%}
+    <div class="col-lg-3 pb-lg-5 sticky-6 h-100 p-b-md">
+      {%-include "dynamic-sidenav.html"-%}
     </div>
     <div class="col-lg-9">
       <p class="lead m-t items-count" aria-live="polite">
         0 services <span class="sr-only">found</span>
       </p>
-      <label class="sr-only" for="searchbox">Filter services</label>
-      <div class="d-flex m-b-lg">
+      <label class="sr-only" for="searchbox">Search for a service</label>
+      <div class="d-flex m-b">
         <input
           type="search"
           id="searchbox"
           autofocus
-          placeholder="Filter services"
+          placeholder="Search for a service"
           class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-l" />
       </div>
+
+      <div class="p-b-lg">{%-include "side-filters.html"-%}</div>
 
       <cagovhome-filterlist
         data-search-input-id="searchbox"
