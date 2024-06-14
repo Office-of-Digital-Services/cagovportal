@@ -144,6 +144,17 @@
   display: none !important;
 }
 
+h2,
+.h2 {
+  scroll-margin-top: 95px;
+}
+@media (min-width: 992px) {
+  h2,
+  .h2 {
+    scroll-margin-top: 180px;
+  }
+}
+
 /* Feedback */
 cagov-feedback .feedback-form {
   padding: 0 !important;
