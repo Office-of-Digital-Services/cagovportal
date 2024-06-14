@@ -117,7 +117,7 @@
   background-size: cover;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .lineart {
     background-image: none !important;
   }
