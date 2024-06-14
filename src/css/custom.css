@@ -390,11 +390,3 @@ div.swap-order {
     order: 1;
   }
 }
-
-/* topic filters */
-@media (min-width: 992px) {
-  .topic-filters {
-    overflow-y: auto;
-    height: 300px;
-  }
-}
