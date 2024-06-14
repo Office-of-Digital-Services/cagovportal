@@ -5,6 +5,7 @@ const MarkdownIt = require("markdown-it");
 
 // canonical domain
 const domain = "https://www.ca.gov";
+const metatitlepostfix = " | CA.gov";
 
 module.exports = function (
   /** @type {import("@11ty/eleventy").UserConfig} **/ eleventyConfig
@@ -22,8 +23,14 @@ module.exports = function (
   eleventyConfig.addWatchTarget("./src/js/");
 
   // canonical shortcode
+  // Usage <link href="{% canonical %}" rel="canonical" />
   eleventyConfig.addShortcode("canonical", function () {
     return domain + this.ctx.page.url;
+  });
+
+  // Usage <title>{% metatitle %}</title>
+  eleventyConfig.addShortcode("metatitle", function () {
+    return this.ctx.title + metatitlepostfix;
   });
   eleventyConfig.addShortcode("domain", () => domain);
 
