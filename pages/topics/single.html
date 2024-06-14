@@ -63,7 +63,8 @@ eleventyComputed:
         <div class="col-md-6 mt-4 mb-4 p-t-lg">
           <a
             href="/departments/{{-pop.DepartmentId-}}/services/{{-pop.ServiceId-}}/"
-            class="no-underline no-external-link-icon d-inline-block h-100">
+            class="no-underline no-external-link-icon d-inline-block h-100"
+            aria-labelledby="{{-pop.ServiceId-}}">
             <div
               class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
               <img
@@ -71,7 +72,8 @@ eleventyComputed:
                 class="img-fluid pos-rel p-a m-t-minus-70 width-75pct"
                 alt="{{pop.imgAlt}}" />
               <h3
-                class="h4 m-b color-p2 color-primary-hover link-before text-left no-underline d-block">
+                class="h4 m-b color-p2 color-primary-hover link-before text-left no-underline d-block"
+                id="{{-pop.ServiceId-}}">
                 {{-pop.ServiceName-}}
               </h3>
               <p class="m-b text-left gray-900">{{-pop.Description-}}</p>
