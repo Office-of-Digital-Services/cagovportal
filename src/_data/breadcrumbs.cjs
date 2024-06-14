@@ -1,5 +1,6 @@
 //@ts-check
 
+/** @type {breadcrumbnode[]} */
 const data = [
   {
     key: "Home",
@@ -42,9 +43,6 @@ const data = [
  * @property {string} href
  */
 
-/**
- *
- */
 function flattenData() {
   /** @type {flatbreadcrumb[]} */
   const result = [];
