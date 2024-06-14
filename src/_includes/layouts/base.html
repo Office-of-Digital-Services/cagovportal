@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>{{ metatitle | default(title) }}</title>
+    <title>{% metatitle %}</title>
     <meta charset="utf-8" />
     <meta name="Author" content="State of California" />
     <meta name="Description" content="{{ description }}" />
@@ -18,7 +18,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
     <!-- Primary Meta Tags -->
-    <meta name="title" content="{{ title }}" />
+    <meta name="title" content="{% metatitle %}" />
 
     <!-- Canonical link, improves SEO -->
     <link href="{% canonical %}" rel="canonical" />
@@ -28,13 +28,13 @@
     <meta property="og:site_name" content="California State Portal" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{% canonical %}" />
-    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:title" content="{% metatitle %}" />
     <meta property="og:description" content="{{ description }}" />
     <meta property="og:image" content="{{ socialimage }}" />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="{% canonical %}" />
-    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:title" content="{% metatitle %}" />
     <meta name="twitter:description" content="{{ description }}" />
     <meta name="twitter:image" content="{{ socialimage }}" />
     {% include "head-js-css.html" %}
