@@ -1,3 +1,91 @@
+//@ts-check
+
+const data = [
+  {
+    key: "Home",
+    href: "/",
+    children: [
+      {
+        key: "Services",
+        href: "/services/",
+        children: [
+          {
+            key: "Topics",
+            href: "/topics/"
+          }
+        ]
+      },
+      {
+        key: "Departments",
+        href: "/departments/"
+      }
+    ]
+  }
+];
+
+/**
+ * @typedef {object} breadcrumbnode
+ * @property {string} key
+ * @property {string} href
+ * @property {breadcrumbnode[]} [children]
+ */
+
+/**
+ * @typedef {object} flatbreadcrumb
+ * @property {string} key
+ * @property {breadcrumblink[]} links
+ */
+
+/**
+ * @typedef {object} breadcrumblink
+ * @property {string} title
+ * @property {string} href
+ */
+
+/**
+ *
+ */
+function flattenData() {
+  /** @type {flatbreadcrumb[]} */
+  const result = [];
+
+  /**
+   * @param {breadcrumbnode} node
+   * @param {breadcrumblink[]} [links]
+   */
+  function flattenHelper(node, links = undefined) {
+    /** @type {flatbreadcrumb} */
+    const flatbreadcrumb = {
+      key: node.key,
+      links: []
+    };
+
+    if (links) {
+      flatbreadcrumb.links.push(...links);
+    }
+    flatbreadcrumb.links.push({ title: node.key, href: node.href });
+
+    result.push(flatbreadcrumb);
+
+    if (node.children) {
+      for (const child of node.children) {
+        flattenHelper(child, flatbreadcrumb.links);
+      }
+    }
+  }
+
+  for (const item of data) {
+    flattenHelper(item);
+  }
+
+  return result;
+}
+
+module.exports = flattenData();
+
+/*
+Final data looks like this
+
 const data = [
   {
     key: "Home",
@@ -52,5 +140,4 @@ const data = [
     ]
   }
 ];
-
-module.exports = data;
+*/
