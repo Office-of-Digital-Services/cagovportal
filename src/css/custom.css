@@ -33,6 +33,9 @@
     position: relative;
     top: -2px;
   }
+  .branding .header-organization-banner a .logo-assets .logo-img {
+    max-height: 60px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -50,7 +53,7 @@
     top: -2px;
   }
   .branding .header-organization-banner a .logo-assets .logo-img {
-    max-height: 70px;
+    max-height: 55px;
   }
 }
 

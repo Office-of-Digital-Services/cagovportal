@@ -64,7 +64,7 @@
       {
         "DepartmentId": 287,
         "ServiceId": 26,
-        "ServiceName": "Apply for seller’s permit",
+        "ServiceName": "Apply for a seller’s permit",
         "Description": "Obtain a seller's permit online, required for sales subject to sales tax.",
         "umgURL": "/images/topic2-2.png",
         "imgAlt": "A white man wearing an apron stands with a white woman behind a counter at a cafe. They hold pens while they look at a clipboard with paperwork."
@@ -116,7 +116,7 @@
       {
         "DepartmentId": 220,
         "ServiceId": 44,
-        "ServiceName": "Renew drivers license",
+        "ServiceName": "Renew driver's license",
         "Description": "Skip the line and renew your driver’s license or identification card online. Your address must be up-to-date to renew.",
         "umgURL": "/images/topic3-3.png",
         "imgAlt": "A young, smiling Black woman in business attire holds up her driver’s license to a DMV worker in front of a computer."
