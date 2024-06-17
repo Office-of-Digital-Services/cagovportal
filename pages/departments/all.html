@@ -66,9 +66,10 @@ side_filter_data: agencies
               topics|sortBy("featureOrder")%}{%if topic.name in
               agency.AgencyTags%}{%set _=topicResults.push('<a
                 href="/topics/'+topic.slug+'/"
+                class="py-1"
                 >'+topic.name+'</a
               >')%}{%endif%}{%endfor%}{%if topicResults.length%}
-              <p class="font-size-14 m-t-md">
+              <p class="font-size-14 m-t-md ">
                 Topics: {{topicResults.join(", ") | safe}}
               </p>
               {%-endif%}

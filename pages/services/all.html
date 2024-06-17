@@ -64,6 +64,7 @@ side_filter_data: services
           topics|sortBy("featureOrder")%}{%if topic.name in
           service.AgencyTags%}{%set _=topicResults.push('<a
             href="/topics/'+topic.slug+'/"
+            class="py-1"
             >'+topic.name+'</a
           >')%}{%endif%}{%endfor%}{%if topicResults.length%}
           <p class="font-size-14 m-t-md">
