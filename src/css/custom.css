@@ -384,16 +384,6 @@ cagovhome-filterlist
   clear: both;
 }
 
-/* Used for sidenav to allow for last added item to be moved to top */
-div.swap-order {
-  display: flex;
-  flex-flow: column;
-
-  > :nth-child(1) {
-    order: 2;
-  }
-
-  > :nth-child(2) {
-    order: 1;
-  }
+.gsc-positioningWrapper {
+  display: none !important;
 }
