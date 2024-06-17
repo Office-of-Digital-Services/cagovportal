@@ -387,3 +387,22 @@ cagovhome-filterlist
 .gsc-positioningWrapper {
   display: none !important;
 }
+
+/* topic filter */
+.topic-filters fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+}
+
+.topic-filters fieldset .form-check {
+  position: relative;
+  flex: 0 48%;
+}
+
+@media (max-width: 991px) {
+  .topic-filters fieldset .form-check {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+}

@@ -3,23 +3,25 @@
     <summary class="brd-solid-1 brd-gray-200">Topics Filter</summary>
     <div class="accordion-body topic-filters brd-solid-1 brd-gray-200 p-a">
       <form>
-        {%- for topic in topics | sortBy("featureOrder") %}
-        <div class="form-check m-b-sm">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            value="{{topic.name}}"
-            name="AgencyTags"
-            id="chkTopic{{-topic.topicId-}}" />
-          <label class="form-check-label" for="chkTopic{{-topic.topicId-}}">
-            {{topic.name}}
-            <span>
-              ({{(state_entity[side_filter_data] |
-              pluck("AgencyTags",topic.name,"includes")).length }})
-            </span>
-          </label>
-        </div>
-        {%- endfor %}
+        <fieldset>
+          {%- for topic in topics | sortBy("featureOrder") %}
+          <div class="form-check m-b-sm">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="{{topic.name}}"
+              name="AgencyTags"
+              id="chkTopic{{-topic.topicId-}}" />
+            <label class="form-check-label" for="chkTopic{{-topic.topicId-}}">
+              {{topic.name}}
+              <span>
+                ({{(state_entity[side_filter_data] |
+                pluck("AgencyTags",topic.name,"includes")).length }})
+              </span>
+            </label>
+          </div>
+          {%- endfor %}
+        </fieldset>
         <hr />
         <button
           type="reset"
