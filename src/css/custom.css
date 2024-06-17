@@ -62,6 +62,13 @@
   .full-width-nav .featured-search {
     top: -75px !important;
   }
+  /* -- safari 13.1 fix * -- */
+  #head-search .container {
+    display: flex;
+  }
+  #head-search .container #Search {
+    margin-left: auto;
+  }
 }
 /* -- Mobile controls * -- */
 .main-nav-icons {
