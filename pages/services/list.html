@@ -22,9 +22,9 @@ dynamic_sidenavid: service
       {%-include "dynamic-sidenav.html"-%}
     </div>
     <div class="col-lg-9">
-      <p class="lead m-t items-count" aria-live="polite">
+      <h2 class="lead m-t items-count font-weight-500" aria-live="polite">
         0 services <span class="sr-only">found</span>
-      </p>
+      </h2>
       <label class="sr-only" for="searchbox">Search for a service</label>
       <div class="d-flex m-b">
         <input
@@ -33,6 +33,13 @@ dynamic_sidenavid: service
           autofocus
           placeholder="Search for a service"
           class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-l" />
+        <button
+          class="bg-gray-600 bg-gray-700-hover rounded-end brd-0 width-60">
+          <span class="sr-only">Submit</span>
+          <span
+            class="ca-gov-icon-search font-size-25 color-white"
+            aria-hidden="true"></span>
+        </button>
       </div>
 
       <div class="p-b-lg">{%-include "side-filters.html"-%}</div>
