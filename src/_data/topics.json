@@ -23,7 +23,7 @@
         "ServiceName": "DMV address change",
         "Description": "Change your address for your driver’s license, identification card, vehicle, or vessel.",
         "umgURL": "/images/topic1-2.png",
-        "imgAlt": "Multiple mailboxes line a suburban street. A white mailbox with a red handle and the number 2204 is in focus."
+        "imgAlt": "Multiple mailboxes line a suburban street. A white mailbox with a red handle is in focus."
       },
       {
         "DepartmentId": 176,
@@ -31,7 +31,7 @@
         "ServiceName": "Get digital vaccine records",
         "Description": "Show proof of your vaccinations with digital vaccine records.",
         "umgURL": "/images/topic1-3.png",
-        "imgAlt": "A light-skinned hand holds a face mask and a mobile phone. The phone displays a digital Covid-19 vaccine record on the screen."
+        "imgAlt": "A light-skinned hand holds a face mask and a mobile phone showing a digital Covid-19 vaccine record."
       },
       {
         "DepartmentId": 176,
@@ -67,7 +67,7 @@
         "ServiceName": "Apply for a seller’s permit",
         "Description": "Obtain a seller's permit online, required for sales subject to sales tax.",
         "umgURL": "/images/topic2-2.png",
-        "imgAlt": "A white man wearing an apron stands with a white woman behind a counter at a cafe. They hold pens while they look at a clipboard with paperwork."
+        "imgAlt": "A white man and woman stand behind a counter at a cafe and look at a clipboard with paperwork. "
       },
       {
         "DepartmentId": 174,
@@ -75,7 +75,7 @@
         "ServiceName": "Get a fishing or hunting license",
         "Description": "Find out how you can buy a fishing or hunting license in person or online. ",
         "umgURL": "/images/topic2-3.png",
-        "imgAlt": "A commercial fishing boat is on a lake surrounded by green hills, hauling a load of fish inside a net."
+        "imgAlt": "A commercial fishing boat is on a lake hauling a load of fish inside a net."
       },
       {
         "DepartmentId": 268,
@@ -111,7 +111,7 @@
         "ServiceName": "Find a smog station",
         "Description": "Search for a smog station by location and service type, including STAR inspections.",
         "umgURL": "/images/topic3-2.png",
-        "imgAlt": "A young medium-skin-toned man wearing protective glasses on his head shakes the hand of a middle-aged Black man holding the keys to his car. They stand in front of an auto repair shop."
+        "imgAlt": "A young man working at an auto repair shop shakes a customer’s hand."
       },
       {
         "DepartmentId": 220,
@@ -119,7 +119,7 @@
         "ServiceName": "Renew driver's license",
         "Description": "Skip the line and renew your driver’s license or identification card online. Your address must be up-to-date to renew.",
         "umgURL": "/images/topic3-3.png",
-        "imgAlt": "A young, smiling Black woman in business attire holds up her driver’s license to a DMV worker in front of a computer."
+        "imgAlt": "A young Black woman in business attire smiles and holds up her driver’s license to a DMV worker."
       },
       {
         "DepartmentId": 175,
@@ -127,7 +127,7 @@
         "ServiceName": "Get low cost auto insurance",
         "Description": "Get auto insurance at low cost, affordable rates. To qualify, you must be income-eligible with a good driving record.",
         "umgURL": "/images/topic3-4.png",
-        "imgAlt": " A car key is attached to a car-shaped silver keychain and rests on top of a clipboard with paperwork."
+        "imgAlt": "A car key is attached to a car-shaped silver keychain and rests on top of a clipboard."
       }
     ]
   },
@@ -163,7 +163,7 @@
         "ServiceName": "Find a job",
         "Description": "Find job openings and information about applying for jobs in California.",
         "umgURL": "/images/topic4-3.png",
-        "imgAlt": "A young medium-skin toned Asian man dressed in a suit jacket sits at a desk and smiles as a woman sits across from him and looks at his resume."
+        "imgAlt": "A young Asian man sits at a desk and smiles as a woman sits across from him and looks at his resume."
       },
       {
         "DepartmentId": 229,
@@ -171,7 +171,7 @@
         "ServiceName": "File for disability",
         "Description": "Apply for short-term benefits, available to eligible workers who need time off work.",
         "umgURL": "/images/topic4-4.png",
-        "imgAlt": "A smiling young pregnant Black woman with medium skin tone and a large belly works on laptop while sitting on a couch in a living room."
+        "imgAlt": "A young pregnant Black woman smiles and works on laptop while sitting on a couch in a living room."
       }
     ]
   },
@@ -191,7 +191,7 @@
         "ServiceName": "Apply for food stamps",
         "Description": "Add to your food budget and get help putting healthy food on the table with the CalFresh Program.",
         "umgURL": "/images/topic5-1.png",
-        "imgAlt": "A middle-aged Asian man pushes a shopping cart in a grocery store as his young son sits in the cart and grabs an apple."
+        "imgAlt": "An Asian man is in a grocery store with his young son, who sits in a shopping cart."
       },
       {
         "DepartmentId": 217,
@@ -199,7 +199,7 @@
         "ServiceName": "Apply for Medi-Cal",
         "Description": "Get free or low-cost medical care. Medi-Cal provides health coverage for qualified individuals.",
         "umgURL": "/images/topic5-2.png",
-        "imgAlt": "A tan middle-aged doctor uses a stethoscope to listen to a baby's lungs. The baby is sitting on his mother's lap and they both have dark brown hair."
+        "imgAlt": "A tan middle-aged doctor uses a stethoscope on a baby as the baby sits on his mother’s lap."
       },
       {
         "DepartmentId": 229,
@@ -235,7 +235,7 @@
         "ServiceName": "Look up a contractor license",
         "Description": "Look up a contractor license to verify information, including complaint disclosure.",
         "umgURL": "/images/topic6-1.png",
-        "imgAlt": "At a construction site, a laptop is on a table with blueprints, and three construction workers stand in the background."
+        "imgAlt": "A laptop is on a table with blueprints at a construction site."
       },
       {
         "DepartmentId": 40,
@@ -243,7 +243,7 @@
         "ServiceName": "Verify a real estate license",
         "Description": "Check the status of a real estate licensee using a name, address, or license ID.",
         "umgURL": "/images/topic6-2.png",
-        "imgAlt": "A smiling, middle-aged, tan-skinned, female real estate agent holds a sign that says Open House in front of a residential home."
+        "imgAlt": "A tan middle-aged female real estate agent holds a sign that says Open House in front of a house."
       },
       {
         "DepartmentId": 180,
@@ -279,7 +279,7 @@
         "ServiceName": "Get disaster relief assistance",
         "Description": "Access disaster relief services and tips on ensuring your health and safety.",
         "umgURL": "/images/topic7-3.png",
-        "imgAlt": "A tan-skinned female volunteer with a yellow safety vest holds a tablet and speaks with a person at a shelter."
+        "imgAlt": "A tan female volunteer with a yellow safety vest holds a tablet and speaks to a person at a shelter."
       },
       {
         "DepartmentId": 162,
@@ -339,7 +339,7 @@
         "ServiceName": "Look up my representatives",
         "Description": "Find your State Senate, State Assembly, or US Representative and how you can contact them.",
         "umgURL": "/images/topic8-3.png",
-        "imgAlt": "The American flag and the State of California flag are raised. Behind them is the dome of the State Capitol building in Sacramento."
+        "imgAlt": "The American flag and State of California flag are raised in front of the Sacramento State Capitol."
       },
       {
         "DepartmentId": 244,
@@ -391,7 +391,7 @@
         "ServiceName": "Learn about the Earned Income Tax Credit",
         "Description": "The CalEITC is a state tax credit for working Californians. If you qualify, you may see a reduced tax bill or a bigger refund.",
         "umgURL": "/images/topic9-4.png",
-        "imgAlt": "A young Black girl with long curly hair holds hands with her father while smiling at her mother in a grassy field."
+        "imgAlt": "A young Black girl with curly hair smiles at her mom and holds hands with her father in a field."
       }
     ]
   },
@@ -411,7 +411,7 @@
         "ServiceName": "Apply for Medi-Cal",
         "Description": "Get free or low-cost medical care. Medi-Cal provides health coverage for qualified individuals.",
         "umgURL": "/images/topic10-1.png",
-        "imgAlt": "A tan middle-aged doctor uses a stethoscope to listen to a baby's lungs. The baby is sitting on his mother's lap and they both have dark brown hair."
+        "imgAlt": "A tan middle-aged doctor uses a stethoscope on a baby as the baby sits on his mother’s lap."
       },
       {
         "DepartmentId": 176,
@@ -419,7 +419,7 @@
         "ServiceName": "Get digital vaccine records",
         "Description": "Show proof of your vaccinations with digital vaccine records.",
         "umgURL": "/images/topic10-2.png",
-        "imgAlt": "A light-skinned hand holds a face mask and a mobile phone. The phone displays a digital Covid-19 vaccine record on the screen."
+        "imgAlt": "A light-skinned hand holds a face mask and a mobile phone showing a digital Covid-19 vaccine record."
       },
       {
         "DepartmentId": 240,
@@ -435,7 +435,7 @@
         "ServiceName": "Apply for food stamps",
         "Description": "Add to your food budget and get help putting healthy food on the table with the CalFresh Program.",
         "umgURL": "/images/topic10-4.png",
-        "imgAlt": "A middle-aged Asian man pushes a shopping cart in a grocery store as his young son sits in the cart and grabs an apple."
+        "imgAlt": "An Asian man is in a grocery store with his young son who sits in a shopping cart."
       }
     ]
   },
@@ -463,7 +463,7 @@
         "ServiceName": "Find a state park",
         "Description": "Visit California’s state parks, a diverse collection of natural and cultural resources.",
         "umgURL": "/images/topic11-4.png",
-        "imgAlt": "Waves flow out from Julia Pfeiffer Beach in the daytime. The beach is an enclave surrounded by rock formations."
+        "imgAlt": "Waves flow out from an enclave surrounded by rock formations at Julia Pfeiffer Beach in the daytime."
       },
       {
         "DepartmentId": 174,
@@ -471,7 +471,7 @@
         "ServiceName": "Get a fishing or hunting license",
         "Description": "Get information for how you can buy a fishing or hunting license in person or online.",
         "umgURL": "/images/topic11-1.png",
-        "imgAlt": "A father and son with dark brown skin stand in front of a lake. They're wearing khaki ball caps, shirt, and pants. The son holds a fishing pole while they both look at a fish he caught."
+        "imgAlt": "A father and son with brown skin stand in front of a lake as the son shows off a fish he caught."
       },
       {
         "DepartmentId": 185,
@@ -479,7 +479,7 @@
         "ServiceName": "Get a horse racing license",
         "Description": "Get a license for horse owners, trainers, jockeys, grooms, agents, and officials.",
         "umgURL": "/images/topic11-2.png",
-        "imgAlt": "A group of horses with riders on them. The riders are wearing assorted colors of racing clothes and helmets."
+        "imgAlt": "A group of riders race on horses, wearing assorted colors of racing clothes and helmets."
       }
     ]
   },
@@ -515,7 +515,7 @@
         "ServiceName": "Find an ESL/English class",
         "Description": "Find a class to learn English near you with this Directory of Adult Education Programs.",
         "umgURL": "/images/topic12-3.png",
-        "imgAlt": "Medium skintone man with salt and pepper hair and facial hair sits at a desk in a classroom while holding a pen."
+        "imgAlt": "A medium skin toned man with salt and pepper hair sits at a desk in a classroom while holding a pen."
       },
       {
         "DepartmentId": 256,
@@ -523,7 +523,7 @@
         "ServiceName": "Apply for financial assistance in healthcare education",
         "Description": "Access scholarships and grants for students, graduates, and institutions in the healthcare industry.",
         "umgURL": "/images/topic12-4.png",
-        "imgAlt": "A young tan-skinned black scientist with curly hair wears a white lab coat and glasses while holding test books and smiles at the camera."
+        "imgAlt": "A young tan-skinned female scientist in a white lab coat holds books while smiling at the camera."
       }
     ]
   }
