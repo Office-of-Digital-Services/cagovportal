@@ -1,11 +1,11 @@
 <cagov-accordion>
   <details>
-    <summary class="brd-solid-1 brd-gray-200">Topics Filter</summary>
+    <summary class="brd-solid-1 brd-gray-200">Filter by topic</summary>
     <div class="accordion-body topic-filters brd-solid-1 brd-gray-200 p-a">
       <form>
         <fieldset>
-          <legend class="m-y">
-            Select the topic to filter related department:
+          <legend class="m-y font-size-16">
+            Select the topic to help you find what you need:
           </legend>
           {%- for topic in topics | sortBy("featureOrder") %}
           <div class="form-check m-b-sm">
