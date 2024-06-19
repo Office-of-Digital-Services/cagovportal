@@ -4,6 +4,9 @@
     <div class="accordion-body topic-filters brd-solid-1 brd-gray-200 p-a">
       <form>
         <fieldset>
+          <legend class="m-y">
+            Select the topic to filter related department:
+          </legend>
           {%- for topic in topics | sortBy("featureOrder") %}
           <div class="form-check m-b-sm">
             <input
