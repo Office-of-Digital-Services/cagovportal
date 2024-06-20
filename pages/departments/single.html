@@ -108,17 +108,7 @@ endfor %} {%- endfor -%}
         <details>
           <summary>{{x.qa.Question}}</summary>
           <div class="accordion-body">
-            {{ x.qa.Answer | safe }}
-            <p>
-              <a
-                class="btn btn-outline-primary btn-lg m-r-sm"
-                href="./services/{{ x.service.ServiceId }}/">
-                More details
-                <span class="sr-only"
-                  >about {{x.service.ServiceName}} service</span
-                >
-              </a>
-            </p>
+            <p>{{ x.qa.Answer | safe }}</p>
           </div>
         </details>
       </cagov-accordion>
