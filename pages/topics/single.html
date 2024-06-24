@@ -57,30 +57,35 @@ eleventyComputed:
     <div class="col-md-9 mx-auto">
       <div class="p-t-md lead">{{item.description | md | safe-}}</div>
 
-      <h2>Popular related services</h2>
+      <h2 class="m-b-0">Popular related services</h2>
 
-      <div class="row">
+      <div class="row m-b-lg">
         {%- for pop in item.popularServices -%}
-        <div class="col-md-6 mt-4 mb-4 p-t-lg">
-          <a
-            href="/departments/{{-pop.DepartmentId-}}/services/{{-pop.ServiceId-}}/"
-            class="no-underline no-external-link-icon d-inline-block h-100"
-            aria-labelledby="service{{-pop.ServiceId-}}">
-            <div
-              class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
+
+        <div class="col-md-6 m-t-md">
+          <article
+            class="pos-rel h-100 d-flex flex-column transform-scale-1_05--hover transition-0_3">
+            <figure
+              class="pos-rel border-0 pb-5 mb-5 pb-xl-5 mb-xl-4 pb-lg-5 mb-lg-4 pb-md-4 mb-md-4">
               <img
                 src="{{pop.umgURL}}"
-                class="img-fluid pos-rel p-a m-t-minus-70 width-75pct"
+                class="img-fluid p-a pos-abs absolute-centered-x width-75pct"
                 alt="{{pop.imgAlt}}" />
-              <h3
-                class="h4 m-b color-p2 color-primary-hover link-before text-left no-underline d-block"
-                id="service{{-pop.ServiceId-}}">
-                {{-pop.ServiceName-}}
+            </figure>
+            <div
+              class="bg-white bg-gray-50-hover text-center p-t-xxl p-x-md p-b-md  brd-solid-1 brd-gray-200 rounded-10 h-100">
+              <h3 class="h4 m-b text-left">
+                <a
+                  href="/departments/{{-pop.DepartmentId-}}/services/{{-pop.ServiceId-}}/"
+                  class="link-before no-underline">
+                  {{-pop.ServiceName-}}</a
+                >
               </h3>
               <p class="m-b text-left gray-900">{{-pop.Description-}}</p>
             </div>
-          </a>
+          </article>
         </div>
+
         {%- endfor %}
       </div>
 
