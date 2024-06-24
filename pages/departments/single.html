@@ -96,8 +96,8 @@ endfor %} {%- endfor -%}
       <a
         class="btn btn-outline-primary btn-lg m-r-sm"
         href="{{ service.ServiceUrl }}">
-        Launch <span class="sr-only">"{{service.ServiceName}}"</span> service
-      </a>
+        Launch service<span class="sr-only">: {{service.ServiceName}}</span></a
+      >
       {%- if not loop.last -%}
       <hr class="m-b-lg m-t-md" />
       {%- endif -%} {% endfor %} {%- for x in QAs -%} {%- if loop.first %}

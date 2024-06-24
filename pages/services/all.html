@@ -59,8 +59,8 @@ side_filter_data: services
           <a
             class="btn btn-outline-primary btn-lg"
             href="{{ service.ServiceUrl }}">
-            Launch
-            <span class="sr-only">"{{service.ServiceName}}"</span> service</a
+            Launch service
+            <span class="sr-only">: {{service.ServiceName}}</span></a
           >
 
           {%-set topicResults=[]%}{%for topic in
