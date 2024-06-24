@@ -135,6 +135,10 @@
   color: var(--color-p2, #046b99) !important;
 }
 
+.color-p2-darker {
+  color: var(--color-p2-darker, #214a68) !important;
+}
+
 .bg-p2-darkest {
   background-color: var(--color-p2-darkest) !important;
 }
