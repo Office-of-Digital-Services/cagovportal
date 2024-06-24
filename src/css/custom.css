@@ -162,6 +162,10 @@ h2,
   }
 }
 
+.p-t-xxl {
+  padding-top: 59%;
+}
+
 /* Feedback */
 cagov-feedback .feedback-form {
   padding: 0 !important;
