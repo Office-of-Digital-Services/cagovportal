@@ -72,17 +72,19 @@ hide_search: true
     // Create a MutationObserver
     new MutationObserver(mutationsList => {
       for (const mutation of mutationsList) {
-        mutation.addedNodes
-          .forEach(titleDiv => {
-            if (titleDiv.querySelector && titleDiv.querySelector(".gs-result:has(.gs-label.gs-labelActive")) {
-              const atag = titleDiv.querySelector("a");
-             console.log(atag.innerHTML);
-              atag.innerHTML = atag.innerHTML
-                .replace(" | www.ca.gov", "")
-                .replace(" Agency Details", "")
-                .replace(" Service Details", "");
-            }
-          });
+        mutation.addedNodes.forEach(titleDiv => {
+          if (
+            titleDiv.querySelector &&
+            titleDiv.querySelector(".gs-result:has(.gs-label.gs-labelActive")
+          ) {
+            const atag = titleDiv.querySelector("a");
+
+            atag.innerHTML = atag.innerHTML
+              .replace(" | www.ca.gov", "")
+              .replace(" Agency Details", "")
+              .replace(" Service Details", "");
+          }
+        });
       }
     }).observe(document.querySelector(".gcse-parent"), {
       childList: true,
