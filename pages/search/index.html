@@ -69,26 +69,29 @@ hide_search: true
       window.location.search
     ).get("q");
 
-    // Create a MutationObserver
-    new MutationObserver(mutationsList => {
-      for (const mutation of mutationsList) {
-        mutation.addedNodes.forEach(titleDiv => {
-          if (
-            titleDiv.querySelector &&
-            titleDiv.querySelector(".gs-result:has(.gs-label.gs-labelActive")
-          ) {
+    const gcseparent = document.querySelector(".gcse-parent");
+    if (gcseparent)
+      // Create a MutationObserver
+      new MutationObserver(mutationsList =>
+        mutationsList.forEach(mutation =>
+          /** @type {HTMLElement[]} */ (
+            [...mutation.addedNodes].filter(
+              node =>
+                node instanceof HTMLElement &&
+                node.querySelector(".gs-result:has(.gs-label.gs-labelActive")
+            )
+          ).forEach(titleDiv => {
             const atag = titleDiv.querySelector("a");
-
-            atag.innerHTML = atag.innerHTML
-              .replace(" | www.ca.gov", "")
-              .replace(" Agency Details", "")
-              .replace(" Service Details", "");
-          }
-        });
-      }
-    }).observe(document.querySelector(".gcse-parent"), {
-      childList: true,
-      subtree: true
-    });
+            if (atag)
+              atag.innerHTML = atag.innerHTML
+                .replace(" | www.ca.gov", "")
+                .replace(" Agency Details", "")
+                .replace(" Service Details", "");
+          })
+        )
+      ).observe(gcseparent, {
+        childList: true,
+        subtree: true
+      });
   });
 </script>
