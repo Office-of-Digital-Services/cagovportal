@@ -72,13 +72,11 @@ hide_search: true
     // Create a MutationObserver
     new MutationObserver(mutationsList => {
       for (const mutation of mutationsList) {
-        [...mutation.addedNodes]
-          .filter(node => node.classList && node.classList.contains("gsc-result"))
+        mutation.addedNodes
           .forEach(titleDiv => {
-            const atag = titleDiv.querySelector("a");
-
-            if (atag.innerHTML.includes("www.ca.gov")) {
-              console.log(atag.innerHTML);
+            if (titleDiv.querySelector && titleDiv.querySelector(".gs-result:has(.gs-label.gs-labelActive")) {
+              const atag = titleDiv.querySelector("a");
+             console.log(atag.innerHTML);
               atag.innerHTML = atag.innerHTML
                 .replace(" | www.ca.gov", "")
                 .replace(" Agency Details", "")
