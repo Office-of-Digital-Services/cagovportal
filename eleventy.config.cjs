@@ -2,6 +2,7 @@
 const defaultConfig = require("@11ty/eleventy/src/defaultConfig");
 const { minify } = require("terser");
 const MarkdownIt = require("markdown-it");
+const CleanCSS = require("clean-css");
 
 // canonical domain
 const domain = "https://www.ca.gov";
@@ -84,6 +85,20 @@ module.exports = function (
     async (code, callback) => {
       const minified = await minify(code);
       callback(null, minified.code || "");
+    }
+  );
+
+  eleventyConfig.addNunjucksAsyncFilter(
+    "cssmin",
+    /**
+     *
+     * @param {string} code
+     * @param {(arg0: null, arg1: string) => void} callback
+     */
+    async (code, callback) => {
+      const options = {};
+      const minified = new CleanCSS(options).minify(code);
+      callback(null, minified.styles);
     }
   );
 

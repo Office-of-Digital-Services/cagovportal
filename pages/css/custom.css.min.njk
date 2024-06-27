@@ -1,0 +1,9 @@
+---
+layout: null
+permalink: "css/custom.min.css"
+---
+
+{%- set css -%}
+{%- include "../../src/css/custom.css" -%}
+{%- endset -%}
+{{- css | cssmin | safe -}}
