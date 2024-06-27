@@ -43,7 +43,7 @@ hide_search: true
         </form>
       </div>
 
-      <div class="section">
+      <div class="section gcse-parent">
         <gcse:searchresults-only
           defaultToRefinement="this_site_first"></gcse:searchresults-only>
         <!-- <script src='//www.google.com/jsapi' type='text/javascript'></script> -->
@@ -56,40 +56,42 @@ hide_search: true
 <script>
   window.addEventListener("load", () => {
     // Search ID
-    const cx = '001779225245372747843:mdsmtl_vi1a'; // Update this value with your search engine unique ID. Submit a request to the CDT Service Desk if you don't already know your unique search engine ID.
-    const gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
+    const cx = "001779225245372747843:mdsmtl_vi1a"; // Update this value with your search engine unique ID. Submit a request to the CDT Service Desk if you don't already know your unique search engine ID.
+    const gcse = document.createElement("script");
+    gcse.type = "text/javascript";
     gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    const s = document.getElementsByTagName('script');
-    s[s.length - 1]
-      .parentNode
-      .insertBefore(gcse, s[s.length - 1]);
+    gcse.src = "https://cse.google.com/cse.js?cx=" + cx;
+    const s = document.getElementsByTagName("script");
+    s[s.length - 1].parentNode.insertBefore(gcse, s[s.length - 1]);
 
     // extracting search query from the url parameter and applying it to the searchbox
-    document
-      .querySelector('input[name=q]')
-      .value = new URLSearchParams(window.location.search).get("q");
-  });
+    document.querySelector("input[name=q]").value = new URLSearchParams(
+      window.location.search
+    ).get("q");
 
-    // Customize the results
-  document.addEventListener("searchComplete", () => {
-    // Get the results from the GSC event
-
-    /** @type {*[]} */
-    const results = Object.values(window["google"].search.cse)[1].arguments[0]
-      .results;
-
-    //console.log(results);
-
-    //change the results
-    results
-      .filter(x => x.visibleUrl === "www.ca.gov")
-      .forEach(x => {
-        x.title = x.title
-          .replace(" | www.ca.gov", "")
-          .replace(" Agency Details", "")
-          .replace(" Service Details", "")
+    const gcseparent = document.querySelector(".gcse-parent");
+    if (gcseparent)
+      // Create a MutationObserver
+      new MutationObserver(mutationsList =>
+        mutationsList.forEach(mutation =>
+          /** @type {HTMLElement[]} */ (
+            [...mutation.addedNodes].filter(
+              node =>
+                node instanceof HTMLElement &&
+                node.querySelector(".gs-result:has(.gs-label.gs-labelActive")
+            )
+          ).forEach(titleDiv => {
+            const atag = titleDiv.querySelector("a");
+            if (atag)
+              atag.innerHTML = atag.innerHTML
+                .replace(" | www.ca.gov", "")
+                .replace(" Agency Details", "")
+                .replace(" Service Details", "");
+          })
+        )
+      ).observe(gcseparent, {
+        childList: true,
+        subtree: true
       });
   });
 </script>
