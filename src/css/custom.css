@@ -354,8 +354,8 @@ cagovhome-filterlist
   position: relative;
   flex: 0 48%;
 
-  .gsc-url-top,
-  .gsc-table-result {
+  & .gsc-url-top,
+  & .gsc-table-result {
     display: none;
   }
 }
@@ -417,4 +417,10 @@ cagovhome-filterlist
 
 img.square {
   aspect-ratio: 1;
+}
+
+.test {
+  & > div {
+    font-size: large;
+  }
 }
