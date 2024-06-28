@@ -6,69 +6,73 @@
 }
 
 /* -- Site header * -- */
-div.branding > div.header-organization-banner {
+header > div.section-default > div.branding > div.header-organization-banner {
   display: flex;
   margin-right: 0;
 
   > a > div.logo-assets {
+    > img.logo-img {
+      max-height: 90px;
+      height: 90px;
+    }
+
     > div.logo-text {
+      > span.logo-state {
+        font-size: 1.4rem;
+        font-weight: 700;
+        position: relative;
+        top: -5px;
+      }
+
       > span.logo-dept {
         font-size: 2.4rem;
         height: 2.5rem;
       }
     }
 
-    > img.logo-img {
-      max-height: 90px;
-      height: 90px;
-    }
-
-    > span.logo-state {
-      font-size: 1.4rem;
-      font-weight: 700;
-      position: relative;
-      top: -5px;
-    }
-  }
-}
-
-@media (max-width: 991px) {
-  div.branding > div.header-organization-banner > a > div.logo-assets {
-    > div.logo-text {
-      > span.logo-dept {
-        font-size: 1.8rem;
-        height: 2.2rem;
+    @media (width <= 991px) {
+      > img.logo-img {
+        max-height: 60px;
       }
 
-      > span.logo-state {
-        font-size: 1.3rem;
-        position: relative;
-        top: -2px;
+      > div.logo-text {
+        > span.logo-state {
+          font-size: 1.3rem;
+          position: relative;
+          top: -2px;
+        }
+
+        > span.logo-dept {
+          font-size: 1.8rem;
+          height: 2.2rem;
+        }
       }
     }
+  }
 
-    > img.logo-img {
-      max-height: 60px;
+  @media (width <= 575px) {
+    & {
+      margin-right: 15%;
     }
-  }
-}
 
-@media (max-width: 575px) {
-  .branding .header-organization-banner {
-    margin-right: 15%;
-  }
+    > a > div.logo-assets {
+      > div.logo-text {
+        > span.logo-dept {
+          font-size: 1.6rem;
+          height: 2.2rem;
+        }
 
-  .branding .header-organization-banner a .logo-assets .logo-text .logo-dept {
-    font-size: 1.6rem;
-    height: 2.2rem;
-  }
-  .branding .header-organization-banner a .logo-assets .logo-text .logo-state {
-    font-size: 1rem;
-    position: relative;
-    top: -2px;
-  }
-  .branding .header-organization-banner a .logo-assets .logo-img {
-    max-height: 55px;
+        > span.logo-state {
+          font-size: 1rem;
+          position: relative;
+          top: -2px;
+        }
+      }
+
+      > img.logo-img {
+        max-height: 55px;
+      }
+    }
   }
 }
 
