@@ -77,16 +77,19 @@ header > div.section-default > div.branding > div.header-organization-banner {
 }
 
 /* -- Search * -- */
-@media (min-width: 992px) {
-  .full-width-nav .featured-search {
+@media (width >= 992px) {
+  header > div.full-width-nav > div.featured-search {
     top: -75px !important;
-  }
-  /* -- safari 13.1 fix * -- */
-  #head-search .container {
-    display: flex;
-  }
-  #head-search .container #Search {
-    margin-left: auto;
+
+    > div.container {
+      /* -- safari 13.1 fix * -- */
+      display: flex;
+
+      /* stylelint-disable-next-line selector-id-pattern */
+      > form#Search {
+        margin-left: auto;
+      }
+    }
   }
 }
 /* -- Mobile controls * -- */
