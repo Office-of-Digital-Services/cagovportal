@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* THIS IS CUSTOM CSS */
 
 /* -- Utility header -- */
@@ -315,90 +316,91 @@ cagovhome-filterlist
 }
 
 /* Search results */
-div.gsc-result {
-  > div.gs-result {
-    > div.gsc-thumbnail-inside > div.gs-title {
-      padding-top: 1rem;
-      padding-bottom: 0.5rem;
+div.gsc-webResult {
+  font-size: 1.125rem !important;
+  line-height: 1.5 !important;
 
-      > a.gs-title {
-        font-size: 1.35rem !important;
-        font-weight: 700 !important;
-        text-decoration: none;
+  > div.gsc-expansionArea {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
 
-        b {
-          font-size: 1.35rem !important;
+    > div.gsc-result {
+      border-bottom: 1px solid var(--gray-200) !important;
+      padding-bottom: 1rem !important;
+      position: relative;
+
+      > div.gs-result {
+        > div.gsc-thumbnail-inside > div.gs-title {
+          padding-top: 1rem;
+          padding-bottom: 0.5rem;
+
+          > a.gs-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            text-decoration: none;
+
+            > b {
+              font-size: 1.35rem;
+            }
+
+            &:hover,
+            &:focus,
+            b:hover {
+              color: var(--color-p2-darker) !important;
+              text-decoration: underline;
+            }
+
+            &::before {
+              position: absolute;
+              content: "";
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+            }
+          }
         }
 
-        &:hover,
-        &:focus,
-        b:hover {
-          color: var(--color-p2-darker) !important;
-          text-decoration: underline;
+        > div.gsc-url-top {
+          padding-bottom: 0.5rem;
+
+          > div.gs-visibleUrl-short {
+            font-weight: 700;
+          }
         }
 
-        &::before {
-          position: absolute;
-          content: "";
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
+        > div.gsc-table-result {
+          font-size: 1.125rem;
+          line-height: 1.5;
         }
       }
-    }
 
-    > div.gsc-url-top {
-      padding-bottom: 0.5rem;
+      &:has(a.gs-labelActive) {
+        padding: 0;
+        padding-left: 1rem;
+        padding-right: 2.25rem;
+        border: 1px solid var(--gray-300);
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        flex: 0 48%;
 
-      /* stylelint-disable-next-line selector-class-pattern */
-      > div.gs-visibleUrl-short {
-        font-weight: 700;
+        > div.gs-result {
+          > div.gsc-url-top,
+          > div.gsc-table-result {
+            display: none;
+          }
+        }
       }
     }
   }
 }
 
-.gsc-webResult.gsc-result:not(:has(.gs-label.gs-labelActive)) {
-  position: relative;
-}
-
-.gsc-result {
-  border-bottom: 1px solid var(--gray-200) !important;
-  padding-bottom: 1rem !important;
-}
-.gsc-control-cse,
-.gsc-control-cse .gsc-table-result {
-  font-size: 1.125rem !important;
-  line-height: 1.5 !important;
-}
-
 .gsc-above-wrapper-area {
   border-bottom: none !important;
-}
 
-.gsc-result-info {
-  display: none;
-}
-
-.gsc-expansionArea {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 1.5rem;
-}
-
-.gsc-webResult.gsc-result:has(.gs-label.gs-labelActive) {
-  padding: 0;
-  padding-left: 1rem;
-  padding-right: 2.25rem;
-  border: 1px solid var(--gray-300);
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  position: relative;
-  flex: 0 48%;
-
-  & .gsc-url-top,
-  & .gsc-table-result {
+  /* result counts */
+  > table {
     display: none;
   }
 }
