@@ -1,5 +1,6 @@
 /* stylelint-disable font-family-no-missing-generic-family-keyword */
 /* stylelint-disable selector-class-pattern */
+
 /* THIS IS CUSTOM CSS */
 
 /* -- Utility header -- */
@@ -251,7 +252,7 @@ cagov-feedback .feedback-form-button:focus {
   overflow: hidden;
 }
 
-@media (min-width: 992px) {
+@media (width >= 992px) {
   .service-description,
   .department-description {
     -webkit-line-clamp: 2;
@@ -282,6 +283,7 @@ a[aria-current="page"] {
 .form-check-input {
   border-color: var(--gray-700);
 }
+
 .form-check-label {
   font-weight: 400;
 }
@@ -309,7 +311,7 @@ cagovhome-filterlist
 }
 
 /* Fixing sticky class in mobile */
-@media (max-width: 991px) {
+@media (width <= 991px) {
   .sticky-6 {
     position: relative !important;
     top: 0 !important;
