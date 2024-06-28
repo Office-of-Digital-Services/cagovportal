@@ -92,19 +92,34 @@ header > div.section-default > div.branding > div.header-organization-banner {
     }
   }
 }
+
 /* -- Mobile controls * -- */
-.main-nav-icons {
-  top: -5rem;
+header {
+  > div.mobile-controls {
+    > div.main-nav-icons {
+      top: -5rem;
+    }
+  }
+
+  > div.navigation-search {
+    > div.nav-drawer {
+      padding-bottom: 0;
+    }
+
+    > div#head-seach {
+      > div.d-block {
+        > a.drawer-logo-link {
+          outline-offset: -3px;
+
+          > img.drawer-logo {
+            max-width: 232px;
+          }
+        }
+      }
+    }
+  }
 }
-.nav-drawer {
-  padding-bottom: 0;
-}
-.drawer-logo-link {
-  outline-offset: -3px;
-}
-.drawer-logo {
-  max-width: 232px;
-}
+
 /* -- Banner * -- */
 .header-banner {
   overflow: hidden;
