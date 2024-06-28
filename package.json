@@ -16,7 +16,10 @@
   "devDependencies": {
     "eslint": "8.56.0",
     "eslint-plugin-jsdoc": "^48.2.0",
-    "prettier": "^3.3.2"
+    "prettier": "^3.3.2",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^35.0.0",
+    "stylelint-use-nesting": "^5.1.1"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
