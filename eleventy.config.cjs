@@ -23,6 +23,8 @@ module.exports = function (
 
   eleventyConfig.addWatchTarget("./src/js/");
 
+  eleventyConfig.addWatchTarget("./src/css/");
+
   // canonical shortcode
   // Usage <link href="{% canonical %}" rel="canonical" />
   eleventyConfig.addShortcode("canonical", function () {
@@ -96,6 +98,7 @@ module.exports = function (
      * @param {(arg0: null, arg1: string) => void} callback
      */
     async (code, callback) => {
+      /** @type {import("clean-css").OptionsOutput} */
       const options = {};
       const minified = new CleanCSS(options).minify(code);
       callback(null, minified.styles);
