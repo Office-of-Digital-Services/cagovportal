@@ -41,7 +41,6 @@ header > div.section-default > div.branding > div.header-organization-banner {
       > div.logo-text {
         > span.logo-state {
           font-size: 1.3rem;
-          position: relative;
           top: -2px;
         }
 
@@ -82,7 +81,7 @@ header > div.section-default > div.branding > div.header-organization-banner {
 /* -- Search * -- */
 @media (width >= 992px) {
   header > div.full-width-nav > div.featured-search {
-    top: -75px !important;
+    top: -75px !important; /* override state template */
 
     > div.container {
       /* -- safari 13.1 fix * -- */
