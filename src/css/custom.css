@@ -315,46 +315,52 @@ cagovhome-filterlist
 }
 
 /* Search results */
-.gs-result div.gs-title {
-  padding-top: 1rem;
-  padding-bottom: 0.5rem;
-}
+div.gsc-result {
+  > div.gs-result {
+    > div.gsc-thumbnail-inside > div.gs-title {
+      padding-top: 1rem;
+      padding-bottom: 0.5rem;
 
-.gs-result div.gsc-url-top {
-  padding-bottom: 0.5rem;
-}
+      > a.gs-title {
+        font-size: 1.35rem !important;
+        font-weight: 700 !important;
+        text-decoration: none;
 
-.gs-result a.gs-title {
-  font-size: 1.35rem !important;
-  font-weight: 700 !important;
-  text-decoration: none;
-}
+        b {
+          font-size: 1.35rem !important;
+        }
 
-.gs-result a.gs-title b {
-  font-size: 1.35rem !important;
-}
+        &:hover,
+        &:focus,
+        b:hover {
+          color: var(--color-p2-darker) !important;
+          text-decoration: underline;
+        }
 
-.gs-result a.gs-title:hover,
-.gs-result a.gs-title:focus,
-.gs-result a.gs-title b:hover {
-  color: var(--color-p2-darker) !important;
-  text-decoration: underline;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
+    > div.gsc-url-top {
+      padding-bottom: 0.5rem;
+
+      /* stylelint-disable-next-line selector-class-pattern */
+      > div.gs-visibleUrl-short {
+        font-weight: 700;
+      }
+    }
+  }
 }
 
 .gsc-webResult.gsc-result:not(:has(.gs-label.gs-labelActive)) {
   position: relative;
-}
-.gs-result a.gs-title::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.gs-result div.gs-visibleUrl {
-  font-weight: 700 !important;
 }
 
 .gsc-result {
