@@ -414,3 +414,7 @@ cagovhome-filterlist
     flex: 0 0 100%;
   }
 }
+
+img.square {
+  aspect-ratio: 1;
+}
