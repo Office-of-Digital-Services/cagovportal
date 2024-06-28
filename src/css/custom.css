@@ -1,3 +1,4 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
 /* stylelint-disable selector-class-pattern */
 /* THIS IS CUSTOM CSS */
 
@@ -376,6 +377,11 @@ div.gsc-webResult {
         }
       }
 
+      &:not(:has(a.gs-labelActive)) {
+        width: 100%;
+        flex: 0 0 100%;
+      }
+
       &:has(a.gs-labelActive) {
         padding: 0;
         padding-left: 1rem;
@@ -384,6 +390,29 @@ div.gsc-webResult {
         border-radius: 8px;
         margin-bottom: 1rem;
         flex: 0 48%;
+
+        @media (width <= 991px) {
+          & {
+            width: 100%;
+            flex: 0 0 100%;
+          }
+        }
+
+        &:hover,
+        &:focus {
+          background-color: var(--gray-50);
+          text-decoration: none !important; /* What is this for? */
+        }
+
+        &::after {
+          font-family: CaGov;
+          content: "5";
+          position: absolute;
+          top: 0.8rem;
+          right: 0.7rem;
+          font-size: 1.6rem;
+          visibility: visible;
+        }
 
         > div.gs-result {
           > div.gsc-url-top,
@@ -396,49 +425,24 @@ div.gsc-webResult {
   }
 }
 
-.gsc-above-wrapper-area {
-  border-bottom: none !important;
-
-  /* result counts */
-  > table {
+div.gsc-results-wrapper-visible {
+  > div.gsc-positioningWrapper {
+    /* Hide Tabs */
     display: none;
   }
-}
 
-@media (max-width: 991px) {
-  .gsc-webResult.gsc-result:has(.gs-label.gs-labelActive) {
-    width: 100%;
-    flex: 0 0 100%;
+  > div.gsc-above-wrapper-area {
+    border-bottom: none;
+
+    /* result counts */
+    > table {
+      display: none;
+    }
   }
-}
 
-.gsc-webResult.gsc-result:has(.gs-label.gs-labelActive):hover,
-.gsc-webResult.gsc-result:has(.gs-label.gs-labelActive):focus {
-  background-color: var(--gray-50);
-  text-decoration: none !important;
-}
-
-.gsc-webResult.gsc-result:not(:has(.gs-label.gs-labelActive)) {
-  width: 100%;
-  flex: 0 0 100%;
-}
-
-.gsc-webResult.gsc-result:has(.gs-label.gs-labelActive)::after {
-  font-family: CaGov;
-  content: "5";
-  position: absolute;
-  top: 0.8rem;
-  right: 0.7rem;
-  font-size: 1.6rem;
-  visibility: visible !important;
-}
-
-.gsc-adBlockNoHeight {
-  clear: both;
-}
-
-.gsc-positioningWrapper {
-  display: none !important;
+  > div.gsc-adBlockNoHeight {
+    clear: both;
+  }
 }
 
 /* topic filter */
