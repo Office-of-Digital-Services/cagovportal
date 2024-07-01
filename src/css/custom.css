@@ -198,7 +198,8 @@ cagov-feedback > section > div.feedback-form {
 
   &,
   > div > label.feedback-form-label,
-  > div > h2.feedback-form-label {
+  > div > h2.feedback-form-label,
+  > div.feedback-form-thanks {
     background: transparent;
     color: var(--gray-900);
   }
