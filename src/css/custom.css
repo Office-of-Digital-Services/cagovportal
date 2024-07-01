@@ -53,9 +53,7 @@ header > div.section-default > div.branding > div.header-organization-banner {
   }
 
   @media (width <= 575px) {
-    & {
-      margin-right: 15%;
-    }
+    margin-right: 15%;
 
     > a > div.logo-assets {
       > div.logo-text {
@@ -148,9 +146,7 @@ div.topo-lines {
 
 div.lineart {
   @media (width <= 1200px) {
-    & {
-      background-image: none !important;
-    }
+    background-image: none !important;
   }
 }
 
@@ -180,9 +176,7 @@ h2,
   scroll-margin-top: 95px;
 
   @media (width >= 992px) {
-    & {
-      scroll-margin-top: 180px;
-    }
+    scroll-margin-top: 180px;
   }
 }
 
@@ -229,23 +223,6 @@ cagov-feedback > section > div.feedback-form {
   }
 }
 
-/* Elipsis overflow */
-
-.service-description,
-.department-description {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-@media (width >= 992px) {
-  .service-description,
-  .department-description {
-    -webkit-line-clamp: 2;
-  }
-}
-
 /* disables clicks when aria-cuurent="page" */
 a[aria-current="page"] {
   pointer-events: none;
@@ -286,10 +263,24 @@ a[aria-current="page"] {
   display: none;
 }
 
-/* Hiding the header if the row has hidden results */
-cagovhome-filterlist
+/* Elipsis overflow */
+cagovhome-filterlist {
+  /* Hiding the header if the row has hidden results */
   > div.row:not(:has([data-row-key]:not([aria-hidden="true"]))) {
-  display: none;
+    display: none;
+  }
+
+  p.service-description,
+  p.department-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @media (width >= 992px) {
+      -webkit-line-clamp: 2;
+    }
+  }
 }
 
 /* Bringing back the little "X" buttons on form fields */
@@ -406,10 +397,8 @@ div.gsc-control-cse
           flex: 0 48%;
 
           @media (width <= 991px) {
-            & {
-              width: 100%;
-              flex: 0 0 100%;
-            }
+            width: 100%;
+            flex: 0 0 100%;
           }
 
           &:hover,
@@ -451,10 +440,8 @@ details > div.topic-filters > form > fieldset {
     flex: 0 48%;
 
     @media (width <= 991px) {
-      & {
-        width: 100%;
-        flex: 0 0 100%;
-      }
+      width: 100%;
+      flex: 0 0 100%;
     }
   }
 }
