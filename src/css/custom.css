@@ -123,7 +123,7 @@ header {
 }
 
 /* -- Banner * -- */
-.header-banner {
+main#main > div.header-banner {
   overflow: hidden;
   background-image: url("/images/background.svg");
   background-color: var(--color-p2, #046b99);
@@ -131,41 +131,26 @@ header {
   background-size: cover !important;
   display: block;
   position: relative;
-}
-.header-banner .lead {
-  font-size: 1.45rem;
-}
-@media (max-width: 575px) {
-  .header-primary-banner p {
-    font-size: 1.9375rem;
-    line-height: 2.675rem;
-    padding-top: 2rem;
-  }
-  .header-banner .row,
-  .header-banner img {
-    width: auto;
-  }
-}
 
-@media (max-width: 991px) {
-  .header-banner .row {
-    flex-direction: column;
-  }
-  .header-banner img {
-    width: 100%;
+  @media (width <= 991px) {
+    > div.row {
+      flex-direction: column; /* What is this doing? */
+    }
   }
 }
 
 /* content */
-.topo-lines {
+div.topo-lines {
   background-image: url(/images/background-lines.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-@media (max-width: 1200px) {
-  .lineart {
-    background-image: none !important;
+div.lineart {
+  @media (width <= 1200px) {
+    & {
+      background-image: none !important;
+    }
   }
 }
 
@@ -190,18 +175,14 @@ header {
   margin-top: -4.375rem;
 }
 
-.no-external-link-icon span.external-link-icon {
-  display: none !important;
-}
-
 h2,
 .h2 {
   scroll-margin-top: 95px;
-}
-@media (min-width: 992px) {
-  h2,
-  .h2 {
-    scroll-margin-top: 180px;
+
+  @media (width >= 992px) {
+    & {
+      scroll-margin-top: 180px;
+    }
   }
 }
 
