@@ -141,7 +141,7 @@ main#main > div.header-banner {
 
 /* content */
 div.topo-lines {
-  background-image: url(/images/background-lines.svg);
+  background-image: url("/images/background-lines.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -191,21 +191,20 @@ h2,
 }
 
 /* Feedback */
-cagov-feedback > section {
-  div.feedback-form {
-    padding: 0;
-  }
+cagov-feedback > section > div.feedback-form {
+  padding: 0;
+  background: transparent;
+  color: var(--gray-900);
 
-  div.feedback-form,
-  label.feedback-form-label,
-  h2.feedback-form-label,
-  div.feedback-form-thanks {
+  &,
+  > div > label.feedback-form-label,
+  > div > h2.feedback-form-label {
     background: transparent;
     color: var(--gray-900);
   }
 
-  label.feedback-form-label,
-  h2.feedback-form-label {
+  > div > label.feedback-form-label,
+  > div > h2.feedback-form-label {
     width: 100%;
     margin-top: 0.5rem;
     font-size: 1.7rem;
