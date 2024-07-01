@@ -228,18 +228,25 @@ a[aria-current="page"] {
   pointer-events: none;
 }
 
-/* ios search button white font fix */
-.webkit-appearance-none {
-  -webkit-appearance: none !important;
-}
-
 .dep-image-wrapper {
   max-width: 96px;
   min-width: 96px;
   margin-right: 1rem;
 }
 
+/* TODO: Decided if we want X cancel buttons and clean this up */
+
 .reset-x-icon::-webkit-search-cancel-button {
+  display: unset !important;
+}
+
+/* ios search button white font fix */
+.webkit-appearance-none {
+  -webkit-appearance: none !important;
+}
+
+/* Bringing back the little "X" buttons on form fields */
+::-webkit-search-cancel-button(:not(.webkit-appearance-none)) {
   display: unset !important;
 }
 
@@ -281,11 +288,6 @@ cagovhome-filterlist {
       -webkit-line-clamp: 2;
     }
   }
-}
-
-/* Bringing back the little "X" buttons on form fields */
-::-webkit-search-cancel-button(:not(.webkit-appearance-none)) {
-  display: unset !important;
 }
 
 /* Fixing sticky class in mobile */
