@@ -203,30 +203,28 @@ cagov-feedback > section > div.feedback-form {
     color: var(--gray-900);
   }
 
-  > div.feedback-form-add > label,
-  > div.feedback-form-question > h2 {
-    &.feedback-form-label {
-      width: 100%;
-      margin-top: 0.5rem;
-      font-size: 1.7rem;
-    }
+  > div.feedback-form-add > label.feedback-form-label,
+  > div.feedback-form-question > h2.feedback-form-label {
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 1.7rem;
   }
 
-  > div.feedback-form-question,
-  > div.feedback-form-add > div.feedback-form-add-grid {
+  > div.feedback-form-question > button.feedback-form-button,
+  > div.feedback-form-add
+    > div.feedback-form-add-grid
     > button.feedback-form-button {
-      border: 1px solid var(--color-p2);
-      border-radius: 5px;
-      margin-right: 1rem;
-      color: var(--color-p2);
+    border: 1px solid var(--color-p2);
+    border-radius: 5px;
+    margin-right: 1rem;
+    color: var(--color-p2);
 
-      &:hover,
-      &:focus {
-        box-shadow: none;
-        text-decoration: none;
-        background: var(--gray-75);
-        color: var(--color-p2-darker);
-      }
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      text-decoration: none;
+      background: var(--gray-75);
+      color: var(--color-p2-darker);
     }
   }
 }
