@@ -24,7 +24,6 @@
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-fetch": "^4.0.0",
-    "@cagovweb/state-template": "^6.3.2",
     "clean-css": "^5.3.3",
     "markdown-it": "^14.1.0",
     "terser": "^5.30.3",

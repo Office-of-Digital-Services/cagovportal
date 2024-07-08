@@ -17,8 +17,7 @@ module.exports = function (
   eleventyConfig.addPassthroughCopy({
     "src/images": "images",
     "src/css": "css",
-    "src/root": "/",
-    "node_modules/@cagovweb/state-template/dist": "state-template"
+    "src/root": "/"
   });
 
   eleventyConfig.addWatchTarget("./src/js/");
