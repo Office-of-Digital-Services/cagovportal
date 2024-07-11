@@ -11,6 +11,7 @@
     "number-max-precision": 5,
     "csstools/use-nesting": "always",
     "selector-max-universal": 0,
+    "selector-combinator-allowed-list": [">"],
     "selector-nested-pattern": [
       "^(?!&\\s*>)(&|>)\\s*",
       {
