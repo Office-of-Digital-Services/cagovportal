@@ -101,39 +101,48 @@ header {
       }
     }
   }
-}
 
-/* -- Search * -- */
-@media (width >= 992px) {
-  header > div.full-width-nav > div.featured-search {
-    top: -75px !important; /* override state template */
+  /* -- Search * -- */
+  @media (width >= 992px) {
+    > div.full-width-nav > div.featured-search {
+      top: -75px !important; /* override state template */
 
-    > div.container {
-      /* -- safari 13.1 fix * -- */
-      display: flex;
+      > div.container {
+        /* -- safari 13.1 fix * -- */
+        display: flex;
 
-      /* stylelint-disable-next-line selector-id-pattern */
-      > form#Search {
-        margin-left: auto;
+        /* stylelint-disable-next-line selector-id-pattern */
+        > form#Search {
+          margin-left: auto;
+        }
       }
     }
   }
 }
 
-/* -- Banner * -- */
-main#main > div.header-banner {
-  overflow: hidden;
-  background-image: url("/images/background.svg");
-  background-color: var(--color-p2, #046b99);
-  background-position: center !important;
-  background-size: cover !important;
-  display: block;
-  position: relative;
+main {
+  /* -- Banner * -- */
+  > div.header-banner {
+    overflow: hidden;
+    background-image: url("/images/background.svg");
+    background-color: var(--color-p2, #046b99);
+    background-position: center !important;
+    background-size: cover !important;
+    display: block;
+    position: relative;
 
-  @media (width <= 991px) {
-    > div.row {
-      flex-direction: column; /* What is this doing? */
+    @media (width <= 991px) {
+      > div.row {
+        flex-direction: column; /* What is this doing? */
+      }
     }
+  }
+
+  /* Service images */
+  > div.section-understated > div > div > div > div > img.service-img {
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 1 / 1;
   }
 }
 
@@ -268,13 +277,6 @@ details > div.topic-filters > form > fieldset {
       flex: 0 0 100%;
     }
   }
-}
-
-/* Service images */
-main > div.section-understated > div > div > div > div > img.service-img {
-  object-fit: cover;
-  object-position: center;
-  aspect-ratio: 1 / 1;
 }
 
 .keywords span.m-r-sm:last-child {
