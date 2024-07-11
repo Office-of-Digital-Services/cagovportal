@@ -142,16 +142,19 @@ main {
     }
   }
 
-  /* Service images */
-  > div.section-understated
-    > div.container
-    > div.row
-    > div
-    > div
-    > img.service-img {
-    object-fit: cover;
-    object-position: center;
-    aspect-ratio: 1 / 1;
+  > div.section-understated > div.container {
+    /* Service images */
+    > div.row > div > div > img.service-img {
+      object-fit: cover;
+      object-position: center;
+      aspect-ratio: 1 / 1;
+    }
+
+    /* light headers */
+    > h1.color-p2-darker,
+    > div.row > div > h1.color-p2-darker {
+      color: var(--color-p2-darker, #214a68);
+    }
   }
 
   /* content */
@@ -171,19 +174,22 @@ main {
   > div.bg-p2-darkest {
     background-color: var(--color-p2-darkest);
   }
+
+  > div.container > div.row > div {
+    /* About California Images */
+    > div.d-flex.flex-column > img.m-t-minus-70 {
+      margin-top: -4.375rem;
+    }
+
+    /* Floating circle icons (Visiting California, California highlights) */
+    > article > div.p-t-xxl {
+      /* stylelint-disable-next-line declaration-property-unit-allowed-list */
+      padding-top: 59%;
+    }
+  }
 }
 
 /* GLOBAL */
-
-/* stylelint-disable-next-line selector-disallowed-list */
-.color-p2-darker {
-  color: var(--color-p2-darker, #214a68) !important;
-}
-
-img.m-t-minus-70 {
-  margin-top: -4.375rem;
-}
-
 h2,
 .h2 {
   scroll-margin-top: 95px;
@@ -191,11 +197,6 @@ h2,
   @media (width >= 992px) {
     scroll-margin-top: 180px;
   }
-}
-
-div.p-t-xxl {
-  /* stylelint-disable-next-line declaration-property-unit-allowed-list */
-  padding-top: 59%;
 }
 
 /* Feedback */
@@ -315,12 +316,18 @@ cagovhome-filterlist {
   }
 }
 
-/* Fixing sticky class in mobile */
+/* 
+Fixing sticky class in mobile 
+NOTE: this applies to img/nav/div but not sure what it is really for 
+*/
 @media (width <= 991px) {
-  /* stylelint-disable-next-line selector-disallowed-list */
-  .sticky-6 {
-    position: relative !important;
-    top: 0 !important;
+  img,
+  nav,
+  div {
+    &.sticky-6 {
+      position: relative !important;
+      top: 0 !important;
+    }
   }
 }
 
