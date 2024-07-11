@@ -160,22 +160,27 @@ main {
 }
 
 /* GLOBAL */
+/* stylelint-disable-next-line selector-disallowed-list */
 .color-primary {
   color: var(--color-p2, #046b99) !important;
 }
 
+/* stylelint-disable-next-line selector-disallowed-list */
 .color-p2-darker {
   color: var(--color-p2-darker, #214a68) !important;
 }
 
+/* stylelint-disable-next-line selector-disallowed-list */
 .bg-p2-darkest {
   background-color: var(--color-p2-darkest) !important;
 }
 
+/* stylelint-disable-next-line selector-disallowed-list */
 .m-t-minus-30 {
   margin-top: -2rem;
 }
 
+/* stylelint-disable-next-line selector-disallowed-list */
 .m-t-minus-70 {
   margin-top: -4.375rem;
 }
@@ -189,6 +194,7 @@ h2,
   }
 }
 
+/* stylelint-disable-next-line selector-disallowed-list */
 .p-t-xxl {
   padding-top: 59%;
 }
@@ -238,12 +244,13 @@ a[aria-current="page"] {
 }
 
 /* TODO: Decided if we want X cancel buttons and clean this up */
-
+/* stylelint-disable-next-line selector-disallowed-list */
 .reset-x-icon::-webkit-search-cancel-button {
   display: unset !important;
 }
 
 /* ios search button white font fix */
+/* stylelint-disable-next-line selector-disallowed-list */
 .webkit-appearance-none {
   -webkit-appearance: none !important;
 }
@@ -311,6 +318,7 @@ cagovhome-filterlist {
 
 /* Fixing sticky class in mobile */
 @media (width <= 991px) {
+  /* stylelint-disable-next-line selector-disallowed-list */
   .sticky-6 {
     position: relative !important;
     top: 0 !important;

@@ -11,6 +11,12 @@
     "number-max-precision": 5,
     "csstools/use-nesting": "always",
     "selector-max-universal": 0,
+    "selector-disallowed-list": [
+      "/^\\./",
+      {
+        "message": "Global Class-only selector \"%s\" is not allowed."
+      }
+    ],
     "selector-combinator-allowed-list": [">"],
     "selector-nested-pattern": [
       "^(?!&\\s*>)(&|>)\\s*",
