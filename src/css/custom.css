@@ -274,14 +274,14 @@ cagovhome-filterlist {
     display: none;
   }
 
-  div.dep-image-wrapper {
+  > div > div > div.dep-image-wrapper {
     max-width: 96px;
     min-width: 96px;
     margin-right: 1rem;
   }
 
-  p.service-description,
-  p.department-description {
+  > div > div > div > p.department-description,
+  > div > p.service-description {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
