@@ -144,18 +144,18 @@ main {
     object-position: center;
     aspect-ratio: 1 / 1;
   }
-}
 
-/* content */
-div.topo-lines {
-  background-image: url("/images/background-lines.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+  /* content */
+  > div.topo-lines {
+    background-image: url("/images/background-lines.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-div.lineart {
-  @media (width <= 1200px) {
-    background-image: none !important;
+  > div.lineart {
+    @media (width <= 1200px) {
+      background-image: none !important;
+    }
   }
 }
 
