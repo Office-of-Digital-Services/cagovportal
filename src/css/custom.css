@@ -21,6 +21,10 @@ header {
       }
 
       > div.logo-text {
+        > span.color-primary {
+          color: var(--color-p2, #046b99);
+        }
+
         > span.logo-state {
           font-size: 1.4rem;
           font-weight: 700;
@@ -101,76 +105,91 @@ header {
       }
     }
   }
-}
 
-/* -- Search * -- */
-@media (width >= 992px) {
-  header > div.full-width-nav > div.featured-search {
-    top: -75px !important; /* override state template */
+  /* -- Search * -- */
+  @media (width >= 992px) {
+    > div.full-width-nav > div.featured-search {
+      top: -75px !important; /* override state template */
 
-    > div.container {
-      /* -- safari 13.1 fix * -- */
-      display: flex;
+      > div.container {
+        /* -- safari 13.1 fix * -- */
+        display: flex;
 
-      /* stylelint-disable-next-line selector-id-pattern */
-      > form#Search {
-        margin-left: auto;
+        /* stylelint-disable-next-line selector-id-pattern */
+        > form#Search {
+          margin-left: auto;
+        }
       }
     }
   }
 }
 
-/* -- Banner * -- */
-main#main > div.header-banner {
-  overflow: hidden;
-  background-image: url("/images/background.svg");
-  background-color: var(--color-p2, #046b99);
-  background-position: center !important;
-  background-size: cover !important;
-  display: block;
-  position: relative;
+main {
+  /* -- Banner * -- */
+  > div.header-banner {
+    overflow: hidden;
+    background-image: url("/images/background.svg");
+    background-color: var(--color-p2, #046b99);
+    background-position: center !important;
+    background-size: cover !important;
+    display: block;
+    position: relative;
 
-  @media (width <= 991px) {
-    > div.row {
-      flex-direction: column; /* What is this doing? */
+    @media (width <= 991px) {
+      > div.row {
+        flex-direction: column; /* What is this doing? */
+      }
+    }
+  }
+
+  > div.section-understated > div.container {
+    /* Service images */
+    > div.row > div > div > img.service-img {
+      object-fit: cover;
+      object-position: center;
+      aspect-ratio: 1 / 1;
+    }
+
+    /* light headers */
+    > h1.color-p2-darker,
+    > div.row > div > h1.color-p2-darker {
+      color: var(--color-p2-darker, #214a68);
+    }
+  }
+
+  /* content */
+  > div.topo-lines {
+    background-image: url("/images/background-lines.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  > div.lineart {
+    @media (width <= 1200px) {
+      background-image: none !important;
+    }
+  }
+
+  /* Popular services on the homepage */
+  > div.bg-p2-darkest {
+    background-color: var(--color-p2-darkest);
+  }
+
+  > div.container > div.row > div {
+    /* About California Images */
+    > div.d-flex.flex-column > img.m-t-minus-70 {
+      margin-top: -4.375rem;
+    }
+
+    /* Floating circle icons (Visiting California, California highlights) */
+    > article > div.p-t-xxl {
+      /* stylelint-disable-next-line declaration-property-unit-allowed-list */
+      padding-top: 59%;
     }
   }
 }
 
-/* content */
-div.topo-lines {
-  background-image: url("/images/background-lines.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-div.lineart {
-  @media (width <= 1200px) {
-    background-image: none !important;
-  }
-}
-
 /* GLOBAL */
-.color-primary {
-  color: var(--color-p2, #046b99) !important;
-}
-
-.color-p2-darker {
-  color: var(--color-p2-darker, #214a68) !important;
-}
-
-.bg-p2-darkest {
-  background-color: var(--color-p2-darkest) !important;
-}
-
-.m-t-minus-30 {
-  margin-top: -2rem;
-}
-
-.m-t-minus-70 {
-  margin-top: -4.375rem;
-}
-
 h2,
 .h2 {
   scroll-margin-top: 95px;
@@ -178,10 +197,6 @@ h2,
   @media (width >= 992px) {
     scroll-margin-top: 180px;
   }
-}
-
-.p-t-xxl {
-  padding-top: 59%;
 }
 
 /* Feedback */
@@ -229,12 +244,13 @@ a[aria-current="page"] {
 }
 
 /* TODO: Decided if we want X cancel buttons and clean this up */
-
+/* stylelint-disable-next-line selector-disallowed-list */
 .reset-x-icon::-webkit-search-cancel-button {
   display: unset !important;
 }
 
 /* ios search button white font fix */
+/* stylelint-disable-next-line selector-disallowed-list */
 .webkit-appearance-none {
   -webkit-appearance: none !important;
 }
@@ -244,26 +260,33 @@ a[aria-current="page"] {
   display: unset !important;
 }
 
-/* form check */
-div.form-check {
-  input.form-check-input {
-    border-color: var(--gray-700);
-  }
+/* topic filter */
+details > div.topic-filters > form > fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
 
-  /* For Topic Filters */
-  label.form-check-label {
-    font-weight: 400;
+  > div.form-check {
+    position: relative;
+    flex: 0 48%;
+
+    > input.form-check-input {
+      border-color: var(--gray-700);
+    }
+
+    /* For Topic Filters */
+    > label.form-check-label {
+      font-weight: 400;
+    }
+
+    @media (width <= 991px) {
+      width: 100%;
+      flex: 0 0 100%;
+    }
   }
 }
 
-/* Service images */
-img.service-img {
-  object-fit: cover;
-  object-position: center;
-  aspect-ratio: 1 / 1;
-}
-
-.keywords span.m-r-sm:last-child {
+p.keywords > span:last-child {
   display: none;
 }
 
@@ -274,14 +297,14 @@ cagovhome-filterlist {
     display: none;
   }
 
-  div.dep-image-wrapper {
+  > div > div > div.dep-image-wrapper {
     max-width: 96px;
     min-width: 96px;
     margin-right: 1rem;
   }
 
-  p.service-description,
-  p.department-description {
+  > div > div > div > p.department-description,
+  > div > p.service-description {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -293,11 +316,18 @@ cagovhome-filterlist {
   }
 }
 
-/* Fixing sticky class in mobile */
+/* 
+Fixing sticky class in mobile 
+NOTE: this applies to img/nav/div but not sure what it is really for 
+*/
 @media (width <= 991px) {
-  .sticky-6 {
-    position: relative !important;
-    top: 0 !important;
+  img,
+  nav,
+  div {
+    &.sticky-6 {
+      position: relative !important;
+      top: 0 !important;
+    }
   }
 }
 
@@ -430,23 +460,6 @@ div.gsc-control-cse
           }
         }
       }
-    }
-  }
-}
-
-/* topic filter */
-details > div.topic-filters > form > fieldset {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 1rem;
-
-  > div.form-check {
-    position: relative;
-    flex: 0 48%;
-
-    @media (width <= 991px) {
-      width: 100%;
-      flex: 0 0 100%;
     }
   }
 }
