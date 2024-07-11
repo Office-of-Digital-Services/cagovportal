@@ -279,7 +279,7 @@ details > div.topic-filters > form > fieldset {
   }
 }
 
-.keywords span.m-r-sm:last-child {
+p.keywords > span:last-child {
   display: none;
 }
 
