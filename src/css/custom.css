@@ -175,16 +175,10 @@ main {
     background-color: var(--color-p2-darkest);
   }
 
-  > div.container > div.row > div {
+  > div > div.row > div {
     /* About California Images */
     > div.d-flex.flex-column > img.m-t-minus-70 {
       margin-top: -4.375rem;
-    }
-
-    /* Floating circle icons (Visiting California, California highlights) */
-    > article > div.p-t-xxl {
-      /* stylelint-disable-next-line declaration-property-unit-allowed-list */
-      padding-top: 59%;
     }
   }
 }
@@ -197,6 +191,12 @@ h2,
   @media (width >= 992px) {
     scroll-margin-top: 180px;
   }
+}
+
+/* stylelint-disable-next-line selector-disallowed-list */
+.p-t-xxl {
+  /* stylelint-disable-next-line declaration-property-unit-allowed-list */
+  padding-top: 59%;
 }
 
 /* Feedback */
