@@ -9,14 +9,36 @@ header {
   > div.utility-header {
     background-color: #f5f9fa;
 
-    > div.container
-      > div.flex-row
+    > div.container > div.flex-row {
       > div.social-media-links
-      > div.official-collapsible-content
-      > button.btn-official {
-      border: none;
-      font-size: 0.875rem;
-      background: transparent;
+        > div.official-collapsible-content
+        > button.btn-official {
+        border: none;
+        font-size: 0.875rem;
+        background: transparent;
+        text-align: left;
+        text-wrap: nowrap;
+      }
+
+      @media (width <= 770px) {
+        flex-direction: column !important;
+
+        > div.settings-links {
+          margin-left: 0 !important;
+          justify-content: flex-start;
+
+          > a {
+            margin-left: 0;
+            margin-right: 1rem;
+          }
+        }
+      }
+
+      @media (width <= 350px) {
+        > div.social-media-links {
+          flex-direction: column;
+        }
+      }
     }
   }
 
