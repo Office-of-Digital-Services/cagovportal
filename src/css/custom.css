@@ -8,6 +8,16 @@ header {
   /* -- Utility header -- */
   > div.utility-header {
     background-color: #f5f9fa;
+
+    > div.container
+      > div.flex-row
+      > div.social-media-links
+      > div.official-collapsible-content
+      > button.btn-official {
+      border: none;
+      font-size: 0.875rem;
+      background: transparent;
+    }
   }
 
   > div.section-default > div.branding > div.header-organization-banner {
