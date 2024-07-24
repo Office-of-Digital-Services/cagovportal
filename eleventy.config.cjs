@@ -8,6 +8,9 @@ const CleanCSS = require("clean-css");
 const domain = "https://www.ca.gov";
 const metatitlepostfix = " | CA.gov";
 
+// dev translate domain
+const translate = "https://dev--cagov-cdt-ca-gov.translate.goog";
+
 module.exports = function (
   /** @type {import("@11ty/eleventy").UserConfig} **/ eleventyConfig
 ) {
@@ -35,6 +38,11 @@ module.exports = function (
     return this.ctx.title + metatitlepostfix;
   });
   eleventyConfig.addShortcode("domain", () => domain);
+
+  // Get the current page URL
+  eleventyConfig.addShortcode("translate", function () {
+    return translate + this.ctx.page.url;
+  });
 
   // {%- for tag in topics | pluck("featured", true) | sortBy("featureOrder") -%}
   eleventyConfig.addFilter(
