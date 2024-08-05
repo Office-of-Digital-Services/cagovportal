@@ -39,9 +39,12 @@ module.exports = function (
   // translateurl  shortcode
   // usage
   //           href="{% translateurl 'es' %}"
-  eleventyConfig.addShortcode("translateurl", function (lang) {
-    return `https://translate.google.com/website?sl=en&tl=${lang}&hl=en&client=webapp&u=${encodeURIComponent(domain + this.ctx.page.url)}`;
-  });
+  eleventyConfig.addShortcode(
+    "translateurl",
+    function (/** @type {string} */ lang) {
+      return `https://translate.google.com/website?sl=en&tl=${lang}&hl=en&client=webapp&u=${encodeURIComponent(domain + this.ctx.page.url)}`;
+    }
+  );
 
   // {%- for tag in topics | pluck("featured", true) | sortBy("featureOrder") -%}
   eleventyConfig.addFilter(
