@@ -30,7 +30,7 @@
       </div>
       <div class="settings-links ms-auto align-items-start pt-2">
         <a
-          href="https://translate.google.com/website?sl=en&tl=es&hl=en&client=webapp&u={% canonical %}"
+          href="{% translateurl 'es' %}"
           class="m-l-0 underline cursor-pointer"
           lang="es"
           hreflang="es"
@@ -39,7 +39,7 @@
           >Español</a
         >
         <a
-          href="https://translate.google.com/website?sl=en&tl=ko&hl=en&client=webapp&u={% canonical %}"
+          href="{% translateurl 'ko' %}"
           lang="ko"
           hreflang="ko"
           translate="no"
@@ -48,7 +48,7 @@
           >한국어</a
         >
         <a
-          href="https://translate.google.com/website?sl=en&tl=tl&hl=en&client=webapp&u={% canonical %}"
+          href="{% translateurl 'tl' %}"
           lang="tl"
           hreflang="tl"
           translate="no"
@@ -57,8 +57,7 @@
           >Tagalog</a
         >
         <a
-          href="https://translate.google.com/website?sl=en&tl=vi&hl=en&client=webapp&u={% canonical %}"
-          lang="vi"
+          href="{% translateurl 'vi' %}"
           hreflang="vi"
           translate="no"
           rel="alternate"
@@ -66,7 +65,7 @@
           >Tiếng Việt</a
         >
         <a
-          href="https://translate.google.com/website?sl=en&tl=zh-hant&hl=en&client=webapp&u={% canonical %}"
+          href="{% translateurl 'zh-hant' %}"
           lang="zh-hant"
           hreflang="zh-hant"
           translate="no"
