@@ -18,6 +18,26 @@ header {
         background: transparent;
         text-align: left;
         text-wrap: nowrap;
+
+        &[aria-expanded="true"] {
+          > span.ca-gov-icon-caret-up {
+            display: inline-block;
+          }
+
+          > span.ca-gov-icon-caret-down {
+            display: none;
+          }
+        }
+
+        &[aria-expanded="false"] {
+          > span.ca-gov-icon-caret-up {
+            display: none;
+          }
+
+          > span.ca-gov-icon-caret-down {
+            display: inline-block;
+          }
+        }
       }
 
       @media (width <= 770px) {
