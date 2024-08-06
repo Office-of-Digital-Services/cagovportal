@@ -202,3 +202,17 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 })();
+
+// Fix the translation links (so the hrefs don't get re-translated)
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all <a> tags with the data-href attribute
+  const links = /** @type {NodeListOf<HTMLAnchorElement>} */ (
+    document.querySelectorAll("a[data-href]")
+  );
+
+  // Loop through each <a> tag
+  links.forEach(link => {
+    // Set the href attribute to the value of the data-href attribute
+    link.href = /** @type {string} */ (link.dataset.href);
+  });
+});
