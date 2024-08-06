@@ -78,16 +78,3 @@
     </div>
   </div>
 </div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Select all <a> tags with the data-href attribute
-      var links = document.querySelectorAll('a[data-href]');
-
-      // Loop through each <a> tag
-      links.forEach(function(link) {
-          // Set the href attribute to the value of the data-href attribute
-          link.href = link.dataset.href;
-      });
-  });
-</script>
