@@ -30,42 +30,46 @@
       </div>
       <div class="settings-links ms-auto align-items-start pt-2">
         <a
-          onclick="location.href='{% translate %}/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=en&_x_tr_pto=wapp'"
+          href="{% translateurl 'es' %}"
           class="m-l-0 underline cursor-pointer"
           lang="es"
           hreflang="es"
           translate="no"
+          rel="alternate"
           >Español</a
         >
         <a
-          onclick="location.href='{% translate %}/?_x_tr_sl=en&_x_tr_tl=ko&_x_tr_hl=en&_x_tr_pto=wapp'"
+          href="{% translateurl 'ko' %}"
           lang="ko"
           hreflang="ko"
           translate="no"
+          rel="alternate"
           class="underline cursor-pointer"
           >한국어</a
         >
         <a
-          onclick="location.href='{% translate %}/?_x_tr_sl=en&_x_tr_tl=tl&_x_tr_hl=en&_x_tr_pto=wapp'"
+          href="{% translateurl 'tl' %}"
           lang="tl"
           hreflang="tl"
           translate="no"
+          rel="alternate"
           class="underline cursor-pointer"
           >Tagalog</a
         >
         <a
-          onclick="location.href='{% translate %}/?_x_tr_sl=en&_x_tr_tl=vi&_x_tr_hl=en&_x_tr_pto=wapp'"
-          lang="vi"
+          href="{% translateurl 'vi' %}"
           hreflang="vi"
           translate="no"
+          rel="alternate"
           class="underline cursor-pointer"
           >Tiếng Việt</a
         >
         <a
-          onclick="location.href='{% translate %}/?_x_tr_sl=en&_x_tr_tl=zh-TW&_x_tr_hl=en&_x_tr_pto=wapp'"
+          href="{% translateurl 'zh-hant' %}"
           lang="zh-hant"
           hreflang="zh-hant"
           translate="no"
+          rel="alternate"
           class="underline cursor-pointer"
           >繁體中文</a
         >

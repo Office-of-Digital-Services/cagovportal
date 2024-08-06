@@ -8,13 +8,28 @@
 <!-- End Public Sans Font -->
 
 <!-- State Web template required CSS -->
-<link rel="stylesheet" href="https://cdn.cdt.ca.gov/cdt/statetemplate/6.3.2/css/cagov.core.min.css" integrity="sha256-IsbJV4wXEfupBmdo9CHdoX1Z8pWydsAGqMkLhHbXhFk=" crossorigin="anonymous">
-<link rel="stylesheet" class="notranslate" href="/css/custom.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.cdt.ca.gov/cdt/statetemplate/6.3.2/css/cagov.core.min.css"
+  integrity="sha256-IsbJV4wXEfupBmdo9CHdoX1Z8pWydsAGqMkLhHbXhFk="
+  crossorigin="anonymous" />
+<link
+  rel="stylesheet"
+  class="notranslate"
+  href="/css/custom.css"
+  crossorigin="anonymous" />
 {%- if customcss -%}
 <link rel="stylesheet" class="notranslate" href="{{ customcss }}" />
 {% endif -%}
-<script src="https://cdn.cdt.ca.gov/cdt/statetemplate/6.3.2/js/cagov.core.js" integrity="sha256-yNF14BZPyxYOPE0VTyjR9B1JDB3zxShvHXNI0+yRLv8=" crossorigin="anonymous"></script>
-<script src="/js/custom.min.js" class="notranslate" type="module"></script>
+<script
+  src="https://cdn.cdt.ca.gov/cdt/statetemplate/6.3.2/js/cagov.core.js"
+  integrity="sha256-yNF14BZPyxYOPE0VTyjR9B1JDB3zxShvHXNI0+yRLv8="
+  crossorigin="anonymous"></script>
+<script
+  src="/js/custom.min.js"
+  class="notranslate"
+  type="module"
+  crossorigin="anonymous"></script>
 
 {%- if customjs -%} {% for link in customjs %}
 <script src="{{ link }}" class="notranslate"></script>
