@@ -28,10 +28,10 @@
           </div>
         </div>
       </div>
-      <div class="settings-links ms-auto align-items-start pt-2 skiptranslate">
+      <div class="settings-links ms-auto align-items-start pt-2">
         <a
-          href="{% translateurl 'es' %}"
-          class="m-l-0 underline cursor-pointer skiptranslate"
+          data-href="{% translateurl 'es' %}"
+          class="m-l-0 underline cursor-pointer"
           lang="es"
           hreflang="es"
           translate="no"
@@ -39,41 +39,55 @@
           >Español</a
         >
         <a
-          href="{% translateurl 'ko' %}"
+          data-href="{% translateurl 'ko' %}"
           lang="ko"
           hreflang="ko"
           translate="no"
           rel="alternate"
-          class="underline cursor-pointer skiptranslate"
+          class="underline cursor-pointer"
           >한국어</a
         >
+
         <a
-          href="{% translateurl 'tl' %}"
+          data-href="{% translateurl 'tl' %}"
           lang="tl"
           hreflang="tl"
           translate="no"
           rel="alternate"
-          class="underline cursor-pointer skiptranslate"
+          class="underline cursor-pointer"
           >Tagalog</a
         >
         <a
-          href="{% translateurl 'vi' %}"
+          data-href="{% translateurl 'vi' %}"
           hreflang="vi"
           translate="no"
           rel="alternate"
-          class="underline cursor-pointer skiptranslate"
+          class="underline cursor-pointer"
           >Tiếng Việt</a
         >
         <a
-          href="{% translateurl 'zh-hant' %}"
+          data-href="{% translateurl 'zh-hant' %}"
           lang="zh-hant"
           hreflang="zh-hant"
           translate="no"
           rel="alternate"
-          class="underline cursor-pointer skiptranslate"
+          class="underline cursor-pointer"
           >繁體中文</a
         >
       </div>
     </div>
   </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Select all <a> tags with the data-href attribute
+      var links = document.querySelectorAll('a[data-href]');
+
+      // Loop through each <a> tag
+      links.forEach(function(link) {
+          // Set the href attribute to the value of the data-href attribute
+          link.href = link.dataset.href;
+      });
+  });
+</script>
