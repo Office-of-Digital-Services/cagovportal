@@ -7,16 +7,14 @@ eleventyExcludeFromCollections: true
 [
   {%- for agency in state_entity.agencies | sortBy("AgencyId") %}
   {
-    "name": "{{agency.FriendlyName}}",
     "target": "/departments/{{agency.AgencyId}}/",
-    "legacy": "/agency/?item={{agency.FriendlyName | lower | replace(" ", "-")}}"
+    "legacy": "/agency/?item={{agency.FriendlyName | slugify | lower | replace(" ", "-")}}"
   },
   {%- endfor %}
   {%- for service in state_entity.services | sortBy("ServiceId") %}
   {
-    "name": "{{service.ServiceName}}",
     "target": "/departments/{{service.AgencyId}}/services/{{service.ServiceId}}/",
-    "legacy": "/service/?item={{service.ServiceName | lower | replace(" ", "-")}}"
+    "legacy": "/service/?item={{service.ServiceName | slugify | lower | replace(" ", "-")}}"
   }{{"," if not loop.last}}
   {%- endfor %}
 ]
