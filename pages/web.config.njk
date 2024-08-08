@@ -1,0 +1,80 @@
+---
+layout: null
+permalink: web.config
+eleventyExcludeFromCollections: true
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <system.web>
+    <compilation debug="false" />
+    <sessionState mode="Off" />
+  </system.web>
+  <system.webServer>
+    <urlCompression doStaticCompression="true" />
+    <!-- Show default IIS error pages (not asp.net) -->
+    <httpErrors existingResponse="Replace" />
+    <staticContent>
+      <remove fileExtension=".woff" />
+      <!-- in case the mime type already exist in IIS -->
+      <clientCache cacheControlCustom="public" cacheControlMode="UseMaxAge" cacheControlMaxAge="00:15:00" />
+      <mimeMap fileExtension=".webp" mimeType="image/webp" />
+      <mimeMap fileExtension=".woff" mimeType="application/x-font-woff" />
+      <mimeMap fileExtension=".woff2" mimeType="application/font-woff2" />
+    </staticContent>
+    <!-- Below block is for custom redirect for 404 error to 404.html -->
+    <httpErrors existingResponse="Replace">
+      <remove statusCode="404" />
+      <error statusCode="404" path="404.html" />
+      <remove statusCode="400" />
+      <error statusCode="400" path="404.html" />
+    </httpErrors>
+    <rewrite>
+      <rewriteMaps>
+        <rewriteMap name="410Removals" defaultValue="">
+          {%- for page in seo.Removals_410 %}
+          <add key="{{page}}" value="foo" />
+          {%- endfor %}
+        </rewriteMap>
+        <rewriteMap name="FullUriMatch" defaultValue="">
+          {%- for page in seo.Redirect_301 %}
+          <add key="{{page.from}}" value="{{page.to}}" />
+          {%- endfor %}
+        </rewriteMap>
+      </rewriteMaps>
+      <rules>
+        <rule name="Production Robots">
+          <match url="robots.txt" />
+          <conditions logicalGrouping="MatchAny">
+            <add input="{HTTP_X_FORWARDED_HOST}" pattern="^www\.ca\.gov$" />
+            <add input="{HTTP_HOST}" pattern="^www\.ca\.gov$" />
+          </conditions>
+          <action type="Rewrite" url="robots-prod.txt" />
+        </rule>
+        <rule name="FullUriMatch Rule" stopProcessing="true">
+          <match url=".*" />
+          <conditions>
+            <add input="{FullUriMatch:{REQUEST_URI}}" pattern="(.+)" />
+          </conditions>
+          <action type="Redirect" url="{C:1}" appendQueryString="False" />
+        </rule>
+        <rule name="410Removals Rule" stopProcessing="true">
+          <conditions>
+            <add input="{410Removals:{URL}}" pattern=".+" />
+          </conditions>
+          <action
+            type="CustomResponse"
+            statusCode="410"
+            statusReason="Gone"
+            statusDescription="Gone. The requested resource is no longer available." />
+        </rule>
+      </rules>
+    </rewrite>
+    <httpProtocol>
+      <customHeaders>
+        <add name="X-Content-Type-Options" value="nosniff" />
+        <add name="Content-Security-Policy" value="frame-ancestors 'self' *.ca.gov" />
+      </customHeaders>
+    </httpProtocol>
+  </system.webServer>
+</configuration>

@@ -1,0 +1,1922 @@
+[
+  {
+    "name": "California Board of Accountancy",
+    "target": "/departments/16/",
+    "legacy": "/agency/?item=california-board-of-accountancy"
+  },
+  {
+    "name": "California Acupuncture Board",
+    "target": "/departments/17/",
+    "legacy": "/agency/?item=california-acupuncture-board"
+  },
+  {
+    "name": "California Architects Board",
+    "target": "/departments/18/",
+    "legacy": "/agency/?item=california-architects-board"
+  },
+  {
+    "name": "California State Athletic Commission",
+    "target": "/departments/19/",
+    "legacy": "/agency/?item=california-state-athletic-commission"
+  },
+  {
+    "name": "Board of Barbering and Cosmetology",
+    "target": "/departments/20/",
+    "legacy": "/agency/?item=board-of-barbering-and-cosmetology"
+  },
+  {
+    "name": "Board of Behavioral Sciences",
+    "target": "/departments/21/",
+    "legacy": "/agency/?item=board-of-behavioral-sciences"
+  },
+  {
+    "name": "Board of Chiropractic Examiners",
+    "target": "/departments/22/",
+    "legacy": "/agency/?item=board-of-chiropractic-examiners"
+  },
+  {
+    "name": "Court Reporters Board of California",
+    "target": "/departments/23/",
+    "legacy": "/agency/?item=court-reporters-board-of-california"
+  },
+  {
+    "name": "Dental Board of California",
+    "target": "/departments/24/",
+    "legacy": "/agency/?item=dental-board-of-california"
+  },
+  {
+    "name": "Dental Hygiene Board of California",
+    "target": "/departments/25/",
+    "legacy": "/agency/?item=dental-hygiene-board-of-california"
+  },
+  {
+    "name": "Bureau of Household Goods and Services",
+    "target": "/departments/26/",
+    "legacy": "/agency/?item=bureau-of-household-goods-and-services"
+  },
+  {
+    "name": "Landscape Architects Technical Committee",
+    "target": "/departments/28/",
+    "legacy": "/agency/?item=landscape-architects-technical-committee"
+  },
+  {
+    "name": "Medical Board of California",
+    "target": "/departments/29/",
+    "legacy": "/agency/?item=medical-board-of-california"
+  },
+  {
+    "name": "Naturopathic Medicine Committee",
+    "target": "/departments/30/",
+    "legacy": "/agency/?item=naturopathic-medicine-committee"
+  },
+  {
+    "name": "California Board of Occupational Therapy",
+    "target": "/departments/31/",
+    "legacy": "/agency/?item=california-board-of-occupational-therapy"
+  },
+  {
+    "name": "California State Board of Optometry",
+    "target": "/departments/32/",
+    "legacy": "/agency/?item=california-state-board-of-optometry"
+  },
+  {
+    "name": "Osteopathic Medical Board of California",
+    "target": "/departments/33/",
+    "legacy": "/agency/?item=osteopathic-medical-board-of-california"
+  },
+  {
+    "name": "California State Board of Pharmacy",
+    "target": "/departments/34/",
+    "legacy": "/agency/?item=california-state-board-of-pharmacy"
+  },
+  {
+    "name": "Physician Assistant Board",
+    "target": "/departments/36/",
+    "legacy": "/agency/?item=physician-assistant-board"
+  },
+  {
+    "name": "Podiatric Medical Board of California",
+    "target": "/departments/37/",
+    "legacy": "/agency/?item=podiatric-medical-board-of-california"
+  },
+  {
+    "name": "Board of Professional Engineers, Land Surveyors, and Geologists",
+    "target": "/departments/38/",
+    "legacy": "/agency/?item=board-of-professional-engineers,-land-surveyors,-and-geologists"
+  },
+  {
+    "name": "Board of Psychology",
+    "target": "/departments/39/",
+    "legacy": "/agency/?item=board-of-psychology"
+  },
+  {
+    "name": "Department of Real Estate",
+    "target": "/departments/40/",
+    "legacy": "/agency/?item=department-of-real-estate"
+  },
+  {
+    "name": "California Board of Registered Nursing",
+    "target": "/departments/41/",
+    "legacy": "/agency/?item=california-board-of-registered-nursing"
+  },
+  {
+    "name": "Respiratory Care Board of California",
+    "target": "/departments/42/",
+    "legacy": "/agency/?item=respiratory-care-board-of-california"
+  },
+  {
+    "name": "Speech-Language Pathology and Audiology and Hearing Aid Dispensers Board",
+    "target": "/departments/43/",
+    "legacy": "/agency/?item=speech-language-pathology-and-audiology-and-hearing-aid-dispensers-board"
+  },
+  {
+    "name": "Structural Pest Control Board",
+    "target": "/departments/44/",
+    "legacy": "/agency/?item=structural-pest-control-board"
+  },
+  {
+    "name": "Veterinary Medical Board",
+    "target": "/departments/45/",
+    "legacy": "/agency/?item=veterinary-medical-board"
+  },
+  {
+    "name": "Board of Vocational Nursing and Psychiatric Technicians",
+    "target": "/departments/46/",
+    "legacy": "/agency/?item=board-of-vocational-nursing-and-psychiatric-technicians"
+  },
+  {
+    "name": "California Uniform Construction Cost Accounting Commission",
+    "target": "/departments/47/",
+    "legacy": "/agency/?item=california-uniform-construction-cost-accounting-commission"
+  },
+  {
+    "name": "Juvenile Parole Board",
+    "target": "/departments/48/",
+    "legacy": "/agency/?item=juvenile-parole-board"
+  },
+  {
+    "name": "Council on Criminal Justice and Behavioral Health",
+    "target": "/departments/49/",
+    "legacy": "/agency/?item=council-on-criminal-justice-and-behavioral-health"
+  },
+  {
+    "name": "Board of Parole Hearings",
+    "target": "/departments/50/",
+    "legacy": "/agency/?item=board-of-parole-hearings"
+  },
+  {
+    "name": "State Mining and Geology Board",
+    "target": "/departments/51/",
+    "legacy": "/agency/?item=state-mining-and-geology-board"
+  },
+  {
+    "name": "California State Board of Education",
+    "target": "/departments/52/",
+    "legacy": "/agency/?item=california-state-board-of-education"
+  },
+  {
+    "name": "Board of Forestry and Fire Protection",
+    "target": "/departments/53/",
+    "legacy": "/agency/?item=board-of-forestry-and-fire-protection"
+  },
+  {
+    "name": "California Gambling Control Commission",
+    "target": "/departments/54/",
+    "legacy": "/agency/?item=california-gambling-control-commission"
+  },
+  {
+    "name": "State Allocation Board",
+    "target": "/departments/55/",
+    "legacy": "/agency/?item=state-allocation-board"
+  },
+  {
+    "name": "California Building Standards Commission",
+    "target": "/departments/56/",
+    "legacy": "/agency/?item=california-building-standards-commission"
+  },
+  {
+    "name": "Office of Administrative Hearings",
+    "target": "/departments/57/",
+    "legacy": "/agency/?item=office-of-administrative-hearings"
+  },
+  {
+    "name": "California Citizens Compensation Commission",
+    "target": "/departments/60/",
+    "legacy": "/agency/?item=california-citizens-compensation-commission"
+  },
+  {
+    "name": "California Apprenticeship Council",
+    "target": "/departments/61/",
+    "legacy": "/agency/?item=california-apprenticeship-council"
+  },
+  {
+    "name": "Commission on Health and Safety and Workers&#39; Compensation",
+    "target": "/departments/62/",
+    "legacy": "/agency/?item=commission-on-health-and-safety-and-workers&#39;-compensation"
+  },
+  {
+    "name": "Industrial Welfare Commission",
+    "target": "/departments/63/",
+    "legacy": "/agency/?item=industrial-welfare-commission"
+  },
+  {
+    "name": "Occupational Safety and Health Appeals Board",
+    "target": "/departments/64/",
+    "legacy": "/agency/?item=occupational-safety-and-health-appeals-board"
+  },
+  {
+    "name": "Worker&#39;s Compensation Appeals Board",
+    "target": "/departments/65/",
+    "legacy": "/agency/?item=worker&#39;s-compensation-appeals-board"
+  },
+  {
+    "name": "California Boating and Waterways Commission",
+    "target": "/departments/67/",
+    "legacy": "/agency/?item=california-boating-and-waterways-commission"
+  },
+  {
+    "name": "State Historical Resources Commission",
+    "target": "/departments/68/",
+    "legacy": "/agency/?item=state-historical-resources-commission"
+  },
+  {
+    "name": "California State Parks and Recreation Commission",
+    "target": "/departments/69/",
+    "legacy": "/agency/?item=california-state-parks-and-recreation-commission"
+  },
+  {
+    "name": "California Water Quality Monitoring Council",
+    "target": "/departments/71/",
+    "legacy": "/agency/?item=california-water-quality-monitoring-council"
+  },
+  {
+    "name": "New Motor Vehicle Board",
+    "target": "/departments/72/",
+    "legacy": "/agency/?item=new-motor-vehicle-board"
+  },
+  {
+    "name": "California Historical Records Advisory Board",
+    "target": "/departments/73/",
+    "legacy": "/agency/?item=california-historical-records-advisory-board"
+  },
+  {
+    "name": "California Alternative Energy and Advanced Transportation Financing Authority",
+    "target": "/departments/74/",
+    "legacy": "/agency/?item=california-alternative-energy-and-advanced-transportation-financing-authority"
+  },
+  {
+    "name": "California Debt and Investment Advisory Commission",
+    "target": "/departments/75/",
+    "legacy": "/agency/?item=california-debt-and-investment-advisory-commission"
+  },
+  {
+    "name": "California Debt Limit Allocation Committee",
+    "target": "/departments/76/",
+    "legacy": "/agency/?item=california-debt-limit-allocation-committee"
+  },
+  {
+    "name": "California Educational Facilities Authority",
+    "target": "/departments/77/",
+    "legacy": "/agency/?item=california-educational-facilities-authority"
+  },
+  {
+    "name": "California Industrial Development Financing Advisory Commission",
+    "target": "/departments/78/",
+    "legacy": "/agency/?item=california-industrial-development-financing-advisory-commission"
+  },
+  {
+    "name": "Scholarshare Investment Board",
+    "target": "/departments/79/",
+    "legacy": "/agency/?item=scholarshare-investment-board"
+  },
+  {
+    "name": "Disabled Veterans Business Enterprise Advisory Council",
+    "target": "/departments/81/",
+    "legacy": "/agency/?item=disabled-veterans-business-enterprise-advisory-council"
+  },
+  {
+    "name": "California Veterans Board",
+    "target": "/departments/82/",
+    "legacy": "/agency/?item=california-veterans-board"
+  },
+  {
+    "name": "Department of Human Resources",
+    "target": "/departments/89/",
+    "legacy": "/agency/?item=department-of-human-resources"
+  },
+  {
+    "name": "Department of Industrial Relations",
+    "target": "/departments/91/",
+    "legacy": "/agency/?item=department-of-industrial-relations"
+  },
+  {
+    "name": "Bureau of Security and Investigative Services",
+    "target": "/departments/94/",
+    "legacy": "/agency/?item=bureau-of-security-and-investigative-services"
+  },
+  {
+    "name": "Cemetery and Funeral Bureau",
+    "target": "/departments/95/",
+    "legacy": "/agency/?item=cemetery-and-funeral-bureau"
+  },
+  {
+    "name": "Bureau for Private and Postsecondary Education",
+    "target": "/departments/96/",
+    "legacy": "/agency/?item=bureau-for-private-and-postsecondary-education"
+  },
+  {
+    "name": "Physical Therapy Board of California",
+    "target": "/departments/98/",
+    "legacy": "/agency/?item=physical-therapy-board-of-california"
+  },
+  {
+    "name": "Professional Fiduciaries Bureau",
+    "target": "/departments/99/",
+    "legacy": "/agency/?item=professional-fiduciaries-bureau"
+  },
+  {
+    "name": "Department of Cannabis Control",
+    "target": "/departments/100/",
+    "legacy": "/agency/?item=department-of-cannabis-control"
+  },
+  {
+    "name": "California Achieving a Better Life Experience",
+    "target": "/departments/101/",
+    "legacy": "/agency/?item=california-achieving-a-better-life-experience"
+  },
+  {
+    "name": "California Health Facilities Financing Authority",
+    "target": "/departments/103/",
+    "legacy": "/agency/?item=california-health-facilities-financing-authority"
+  },
+  {
+    "name": "California Healthy Food Financing Initiative Council",
+    "target": "/departments/104/",
+    "legacy": "/agency/?item=california-healthy-food-financing-initiative-council"
+  },
+  {
+    "name": "California Pollution Control Financing Authority",
+    "target": "/departments/105/",
+    "legacy": "/agency/?item=california-pollution-control-financing-authority"
+  },
+  {
+    "name": "California School Finance Authority",
+    "target": "/departments/106/",
+    "legacy": "/agency/?item=california-school-finance-authority"
+  },
+  {
+    "name": "California Tax Credit Allocation Committee",
+    "target": "/departments/107/",
+    "legacy": "/agency/?item=california-tax-credit-allocation-committee"
+  },
+  {
+    "name": "Pooled Money Investment Board",
+    "target": "/departments/110/",
+    "legacy": "/agency/?item=pooled-money-investment-board"
+  },
+  {
+    "name": "Department of Alcoholic Beverage Control",
+    "target": "/departments/131/",
+    "legacy": "/agency/?item=department-of-alcoholic-beverage-control"
+  },
+  {
+    "name": "Alcoholic Beverage Control Appeals Board",
+    "target": "/departments/132/",
+    "legacy": "/agency/?item=alcoholic-beverage-control-appeals-board"
+  },
+  {
+    "name": "Department of Aging",
+    "target": "/departments/133/",
+    "legacy": "/agency/?item=department-of-aging"
+  },
+  {
+    "name": "Agricultural Labor Relations Board",
+    "target": "/departments/134/",
+    "legacy": "/agency/?item=agricultural-labor-relations-board"
+  },
+  {
+    "name": "Air Resources Board",
+    "target": "/departments/135/",
+    "legacy": "/agency/?item=air-resources-board"
+  },
+  {
+    "name": "California State Assembly",
+    "target": "/departments/136/",
+    "legacy": "/agency/?item=california-state-assembly"
+  },
+  {
+    "name": "Bureau of Automotive Repair",
+    "target": "/departments/137/",
+    "legacy": "/agency/?item=bureau-of-automotive-repair"
+  },
+  {
+    "name": "San Francisco Bay Conservation and Development Commission",
+    "target": "/departments/138/",
+    "legacy": "/agency/?item=san-francisco-bay-conservation-and-development-commission"
+  },
+  {
+    "name": "California Business, Consumer Services, and Housing Agency",
+    "target": "/departments/139/",
+    "legacy": "/agency/?item=california-business,-consumer-services,-and-housing-agency"
+  },
+  {
+    "name": "Baldwin Hills Conservancy",
+    "target": "/departments/140/",
+    "legacy": "/agency/?item=baldwin-hills-conservancy"
+  },
+  {
+    "name": "Board of Equalization",
+    "target": "/departments/141/",
+    "legacy": "/agency/?item=board-of-equalization"
+  },
+  {
+    "name": "Board of Pilot Commissioners for the Bays of San Francisco, San Pablo, and Suisun",
+    "target": "/departments/142/",
+    "legacy": "/agency/?item=board-of-pilot-commissioners-for-the-bays-of-san-francisco,-san-pablo,-and-suisun"
+  },
+  {
+    "name": "California State Auditor",
+    "target": "/departments/143/",
+    "legacy": "/agency/?item=california-state-auditor"
+  },
+  {
+    "name": "California Arts Council",
+    "target": "/departments/144/",
+    "legacy": "/agency/?item=california-arts-council"
+  },
+  {
+    "name": "High-Speed Rail Authority",
+    "target": "/departments/145/",
+    "legacy": "/agency/?item=high-speed-rail-authority"
+  },
+  {
+    "name": "California Exposition and State Fair",
+    "target": "/departments/146/",
+    "legacy": "/agency/?item=california-exposition-and-state-fair"
+  },
+  {
+    "name": "California Department of Forestry and Fire Protection",
+    "target": "/departments/147/",
+    "legacy": "/agency/?item=california-department-of-forestry-and-fire-protection"
+  },
+  {
+    "name": "Governor&#39;s Office of Emergency Services",
+    "target": "/departments/148/",
+    "legacy": "/agency/?item=governor&#39;s-office-of-emergency-services"
+  },
+  {
+    "name": "State Bar of California",
+    "target": "/departments/149/",
+    "legacy": "/agency/?item=state-bar-of-california"
+  },
+  {
+    "name": "Environmental Protection Agency",
+    "target": "/departments/150/",
+    "legacy": "/agency/?item=environmental-protection-agency"
+  },
+  {
+    "name": "California Military Department",
+    "target": "/departments/151/",
+    "legacy": "/agency/?item=california-military-department"
+  },
+  {
+    "name": "Housing Finance Agency",
+    "target": "/departments/152/",
+    "legacy": "/agency/?item=housing-finance-agency"
+  },
+  {
+    "name": "California Office of Health Information Integrity",
+    "target": "/departments/154/",
+    "legacy": "/agency/?item=california-office-of-health-information-integrity"
+  },
+  {
+    "name": "California Lottery",
+    "target": "/departments/155/",
+    "legacy": "/agency/?item=california-lottery"
+  },
+  {
+    "name": "California Public Employees Retirement System",
+    "target": "/departments/156/",
+    "legacy": "/agency/?item=california-public-employees-retirement-system"
+  },
+  {
+    "name": "Prison Industry Authority",
+    "target": "/departments/157/",
+    "legacy": "/agency/?item=prison-industry-authority"
+  },
+  {
+    "name": "Department of Resources Recycling and Recovery",
+    "target": "/departments/158/",
+    "legacy": "/agency/?item=department-of-resources-recycling-and-recovery"
+  },
+  {
+    "name": "California State Independent Living Council",
+    "target": "/departments/159/",
+    "legacy": "/agency/?item=california-state-independent-living-council"
+  },
+  {
+    "name": "California State Transportation Agency",
+    "target": "/departments/160/",
+    "legacy": "/agency/?item=california-state-transportation-agency"
+  },
+  {
+    "name": "California State Teachers Retirement System",
+    "target": "/departments/161/",
+    "legacy": "/agency/?item=california-state-teachers-retirement-system"
+  },
+  {
+    "name": "California Victim Compensation Board",
+    "target": "/departments/162/",
+    "legacy": "/agency/?item=california-victim-compensation-board"
+  },
+  {
+    "name": "Department of Veterans Affairs",
+    "target": "/departments/163/",
+    "legacy": "/agency/?item=department-of-veterans-affairs"
+  },
+  {
+    "name": "California Volunteers",
+    "target": "/departments/164/",
+    "legacy": "/agency/?item=california-volunteers"
+  },
+  {
+    "name": "California Biodiversity Council",
+    "target": "/departments/165/",
+    "legacy": "/agency/?item=california-biodiversity-council"
+  },
+  {
+    "name": "California Conservation Corps",
+    "target": "/departments/166/",
+    "legacy": "/agency/?item=california-conservation-corps"
+  },
+  {
+    "name": "California Community Colleges",
+    "target": "/departments/167/",
+    "legacy": "/agency/?item=california-community-colleges"
+  },
+  {
+    "name": "California Commission on Disability Access",
+    "target": "/departments/168/",
+    "legacy": "/agency/?item=california-commission-on-disability-access"
+  },
+  {
+    "name": "California Commission on Aging",
+    "target": "/departments/169/",
+    "legacy": "/agency/?item=california-commission-on-aging"
+  },
+  {
+    "name": "Commission on Status of Women and Girls",
+    "target": "/departments/170/",
+    "legacy": "/agency/?item=commission-on-status-of-women-and-girls"
+  },
+  {
+    "name": "California Department of Corrections and Rehabilitation",
+    "target": "/departments/171/",
+    "legacy": "/agency/?item=california-department-of-corrections-and-rehabilitation"
+  },
+  {
+    "name": "California Department of Education",
+    "target": "/departments/172/",
+    "legacy": "/agency/?item=california-department-of-education"
+  },
+  {
+    "name": "Department of Food and Agriculture",
+    "target": "/departments/173/",
+    "legacy": "/agency/?item=department-of-food-and-agriculture"
+  },
+  {
+    "name": "Department of Fish and Wildlife",
+    "target": "/departments/174/",
+    "legacy": "/agency/?item=department-of-fish-and-wildlife"
+  },
+  {
+    "name": "Department of Insurance",
+    "target": "/departments/175/",
+    "legacy": "/agency/?item=department-of-insurance"
+  },
+  {
+    "name": "California Department of Public Health",
+    "target": "/departments/176/",
+    "legacy": "/agency/?item=california-department-of-public-health"
+  },
+  {
+    "name": "Department of Pesticide Regulation",
+    "target": "/departments/177/",
+    "legacy": "/agency/?item=department-of-pesticide-regulation"
+  },
+  {
+    "name": "Department of Social Services",
+    "target": "/departments/178/",
+    "legacy": "/agency/?item=department-of-social-services"
+  },
+  {
+    "name": "California Department of Technology",
+    "target": "/departments/179/",
+    "legacy": "/agency/?item=california-department-of-technology"
+  },
+  {
+    "name": "California Earthquake Authority",
+    "target": "/departments/180/",
+    "legacy": "/agency/?item=california-earthquake-authority"
+  },
+  {
+    "name": "California Film Commission",
+    "target": "/departments/181/",
+    "legacy": "/agency/?item=california-film-commission"
+  },
+  {
+    "name": "California Financing Coordinating Committee",
+    "target": "/departments/182/",
+    "legacy": "/agency/?item=california-financing-coordinating-committee"
+  },
+  {
+    "name": "Health and Human Services Agency",
+    "target": "/departments/183/",
+    "legacy": "/agency/?item=health-and-human-services-agency"
+  },
+  {
+    "name": "California Highway Patrol",
+    "target": "/departments/184/",
+    "legacy": "/agency/?item=california-highway-patrol"
+  },
+  {
+    "name": "California Horse Racing Board",
+    "target": "/departments/185/",
+    "legacy": "/agency/?item=california-horse-racing-board"
+  },
+  {
+    "name": "California Institute for Regenerative Medicine",
+    "target": "/departments/186/",
+    "legacy": "/agency/?item=california-institute-for-regenerative-medicine"
+  },
+  {
+    "name": "Commission on Judicial Performance",
+    "target": "/departments/187/",
+    "legacy": "/agency/?item=commission-on-judicial-performance"
+  },
+  {
+    "name": "California Law Revision Commission",
+    "target": "/departments/188/",
+    "legacy": "/agency/?item=california-law-revision-commission"
+  },
+  {
+    "name": "California Coastal Commission",
+    "target": "/departments/189/",
+    "legacy": "/agency/?item=california-coastal-commission"
+  },
+  {
+    "name": "California Tahoe Conservancy",
+    "target": "/departments/190/",
+    "legacy": "/agency/?item=california-tahoe-conservancy"
+  },
+  {
+    "name": "Sacramento-San Joaquin Delta Conservancy",
+    "target": "/departments/191/",
+    "legacy": "/agency/?item=sacramento-san-joaquin-delta-conservancy"
+  },
+  {
+    "name": "Cool California",
+    "target": "/departments/192/",
+    "legacy": "/agency/?item=cool-california"
+  },
+  {
+    "name": "California Courts",
+    "target": "/departments/193/",
+    "legacy": "/agency/?item=california-courts"
+  },
+  {
+    "name": "California Public Utilities Commission",
+    "target": "/departments/194/",
+    "legacy": "/agency/?item=california-public-utilities-commission"
+  },
+  {
+    "name": "Colorado River Board of California",
+    "target": "/departments/195/",
+    "legacy": "/agency/?item=colorado-river-board-of-california"
+  },
+  {
+    "name": "Citizens Redistricting Commission",
+    "target": "/departments/196/",
+    "legacy": "/agency/?item=citizens-redistricting-commission"
+  },
+  {
+    "name": "California State Association of Counties",
+    "target": "/departments/197/",
+    "legacy": "/agency/?item=california-state-association-of-counties"
+  },
+  {
+    "name": "California Student Aid Commission",
+    "target": "/departments/198/",
+    "legacy": "/agency/?item=california-student-aid-commission"
+  },
+  {
+    "name": "Department of Community Services and Development",
+    "target": "/departments/199/",
+    "legacy": "/agency/?item=department-of-community-services-and-development"
+  },
+  {
+    "name": "California State Library",
+    "target": "/departments/200/",
+    "legacy": "/agency/?item=california-state-library"
+  },
+  {
+    "name": "Commission on State Mandates",
+    "target": "/departments/201/",
+    "legacy": "/agency/?item=commission-on-state-mandates"
+  },
+  {
+    "name": "California State University",
+    "target": "/departments/202/",
+    "legacy": "/agency/?item=california-state-university"
+  },
+  {
+    "name": "Commission on Teacher Credentialing",
+    "target": "/departments/203/",
+    "legacy": "/agency/?item=commission-on-teacher-credentialing"
+  },
+  {
+    "name": "Transportation Commission",
+    "target": "/departments/204/",
+    "legacy": "/agency/?item=transportation-commission"
+  },
+  {
+    "name": "Unemployment Insurance Appeals Board",
+    "target": "/departments/205/",
+    "legacy": "/agency/?item=unemployment-insurance-appeals-board"
+  },
+  {
+    "name": "Central Valley Flood Protection Board",
+    "target": "/departments/206/",
+    "legacy": "/agency/?item=central-valley-flood-protection-board"
+  },
+  {
+    "name": "Coachella Valley Mountains Conservancy",
+    "target": "/departments/207/",
+    "legacy": "/agency/?item=coachella-valley-mountains-conservancy"
+  },
+  {
+    "name": "California Workforce Development Board",
+    "target": "/departments/208/",
+    "legacy": "/agency/?item=california-workforce-development-board"
+  },
+  {
+    "name": "Department of Financial Protection and Innovation",
+    "target": "/departments/209/",
+    "legacy": "/agency/?item=department-of-financial-protection-and-innovation"
+  },
+  {
+    "name": "Department of Consumer Affairs",
+    "target": "/departments/210/",
+    "legacy": "/agency/?item=department-of-consumer-affairs"
+  },
+  {
+    "name": "Department of Child Support Services",
+    "target": "/departments/211/",
+    "legacy": "/agency/?item=department-of-child-support-services"
+  },
+  {
+    "name": "Department of Developmental Services",
+    "target": "/departments/212/",
+    "legacy": "/agency/?item=department-of-developmental-services"
+  },
+  {
+    "name": "Delta Protection Commission",
+    "target": "/departments/213/",
+    "legacy": "/agency/?item=delta-protection-commission"
+  },
+  {
+    "name": "Delta Stewardship Council",
+    "target": "/departments/214/",
+    "legacy": "/agency/?item=delta-stewardship-council"
+  },
+  {
+    "name": "Civil Rights Department",
+    "target": "/departments/215/",
+    "legacy": "/agency/?item=civil-rights-department"
+  },
+  {
+    "name": "Department of General Services",
+    "target": "/departments/216/",
+    "legacy": "/agency/?item=department-of-general-services"
+  },
+  {
+    "name": "Department of Health Care Services",
+    "target": "/departments/217/",
+    "legacy": "/agency/?item=department-of-health-care-services"
+  },
+  {
+    "name": "Department of Managed Health Care",
+    "target": "/departments/219/",
+    "legacy": "/agency/?item=department-of-managed-health-care"
+  },
+  {
+    "name": "Department of Motor Vehicles",
+    "target": "/departments/220/",
+    "legacy": "/agency/?item=department-of-motor-vehicles"
+  },
+  {
+    "name": "Department of Conservation",
+    "target": "/departments/221/",
+    "legacy": "/agency/?item=department-of-conservation"
+  },
+  {
+    "name": "Department of Finance",
+    "target": "/departments/222/",
+    "legacy": "/agency/?item=department-of-finance"
+  },
+  {
+    "name": "Department of Justice",
+    "target": "/departments/223/",
+    "legacy": "/agency/?item=department-of-justice"
+  },
+  {
+    "name": "Department of Rehabilitation",
+    "target": "/departments/224/",
+    "legacy": "/agency/?item=department-of-rehabilitation"
+  },
+  {
+    "name": "Department of Transportation",
+    "target": "/departments/225/",
+    "legacy": "/agency/?item=department-of-transportation"
+  },
+  {
+    "name": "Department of State Hospitals",
+    "target": "/departments/226/",
+    "legacy": "/agency/?item=department-of-state-hospitals"
+  },
+  {
+    "name": "Department of Toxic Substances Control",
+    "target": "/departments/227/",
+    "legacy": "/agency/?item=department-of-toxic-substances-control"
+  },
+  {
+    "name": "Department of Water Resources",
+    "target": "/departments/228/",
+    "legacy": "/agency/?item=department-of-water-resources"
+  },
+  {
+    "name": "Employment Development Department",
+    "target": "/departments/229/",
+    "legacy": "/agency/?item=employment-development-department"
+  },
+  {
+    "name": "Emergency Medical Services Authority",
+    "target": "/departments/230/",
+    "legacy": "/agency/?item=emergency-medical-services-authority"
+  },
+  {
+    "name": "California Energy Commission",
+    "target": "/departments/231/",
+    "legacy": "/agency/?item=california-energy-commission"
+  },
+  {
+    "name": "Employment Training Panel",
+    "target": "/departments/232/",
+    "legacy": "/agency/?item=employment-training-panel"
+  },
+  {
+    "name": "Fish and Game Commission",
+    "target": "/departments/233/",
+    "legacy": "/agency/?item=fish-and-game-commission"
+  },
+  {
+    "name": "First 5 California",
+    "target": "/departments/234/",
+    "legacy": "/agency/?item=first-5-california"
+  },
+  {
+    "name": "Fair Political Practices Commission",
+    "target": "/departments/235/",
+    "legacy": "/agency/?item=fair-political-practices-commission"
+  },
+  {
+    "name": "Franchise Tax Board",
+    "target": "/departments/236/",
+    "legacy": "/agency/?item=franchise-tax-board"
+  },
+  {
+    "name": "Governor’s Office of Business and Economic Development",
+    "target": "/departments/237/",
+    "legacy": "/agency/?item=governor’s-office-of-business-and-economic-development"
+  },
+  {
+    "name": "Office of the Governor",
+    "target": "/departments/238/",
+    "legacy": "/agency/?item=office-of-the-governor"
+  },
+  {
+    "name": "Government Operations Agency",
+    "target": "/departments/239/",
+    "legacy": "/agency/?item=government-operations-agency"
+  },
+  {
+    "name": "California Health Benefit Exchange",
+    "target": "/departments/240/",
+    "legacy": "/agency/?item=california-health-benefit-exchange"
+  },
+  {
+    "name": "Department of Housing and Community Development",
+    "target": "/departments/241/",
+    "legacy": "/agency/?item=department-of-housing-and-community-development"
+  },
+  {
+    "name": "Infrastructure and Economic Development Bank (I-Bank)",
+    "target": "/departments/242/",
+    "legacy": "/agency/?item=infrastructure-and-economic-development-bank-(i-bank)"
+  },
+  {
+    "name": "Legislative Analyst&#39;s Office",
+    "target": "/departments/243/",
+    "legacy": "/agency/?item=legislative-analyst&#39;s-office"
+  },
+  {
+    "name": "California State Legislature",
+    "target": "/departments/244/",
+    "legacy": "/agency/?item=california-state-legislature"
+  },
+  {
+    "name": "Little Hoover Commission",
+    "target": "/departments/245/",
+    "legacy": "/agency/?item=little-hoover-commission"
+  },
+  {
+    "name": "Office of Lieutenant Governor",
+    "target": "/departments/246/",
+    "legacy": "/agency/?item=office-of-lieutenant-governor"
+  },
+  {
+    "name": "Labor and Workforce Development Agency",
+    "target": "/departments/247/",
+    "legacy": "/agency/?item=labor-and-workforce-development-agency"
+  },
+  {
+    "name": "Mental Health Services Oversight and Accountability Commission",
+    "target": "/departments/248/",
+    "legacy": "/agency/?item=mental-health-services-oversight-and-accountability-commission"
+  },
+  {
+    "name": "Native American Heritage Commission",
+    "target": "/departments/249/",
+    "legacy": "/agency/?item=native-american-heritage-commission"
+  },
+  {
+    "name": "Office of Administrative Law",
+    "target": "/departments/250/",
+    "legacy": "/agency/?item=office-of-administrative-law"
+  },
+  {
+    "name": "Office of Environmental Health Hazard Assessment",
+    "target": "/departments/251/",
+    "legacy": "/agency/?item=office-of-environmental-health-hazard-assessment"
+  },
+  {
+    "name": "Office of the Inspector General",
+    "target": "/departments/252/",
+    "legacy": "/agency/?item=office-of-the-inspector-general"
+  },
+  {
+    "name": "Office of the Patient Advocate",
+    "target": "/departments/253/",
+    "legacy": "/agency/?item=office-of-the-patient-advocate"
+  },
+  {
+    "name": "Ocean Protection Council",
+    "target": "/departments/254/",
+    "legacy": "/agency/?item=ocean-protection-council"
+  },
+  {
+    "name": "Governor&#39;s Office of Planning and Research",
+    "target": "/departments/255/",
+    "legacy": "/agency/?item=governor&#39;s-office-of-planning-and-research"
+  },
+  {
+    "name": "Department of Health Care Access and Information",
+    "target": "/departments/256/",
+    "legacy": "/agency/?item=department-of-health-care-access-and-information"
+  },
+  {
+    "name": "Office of Systems Integration",
+    "target": "/departments/257/",
+    "legacy": "/agency/?item=office-of-systems-integration"
+  },
+  {
+    "name": "Office of Traffic Safety",
+    "target": "/departments/258/",
+    "legacy": "/agency/?item=office-of-traffic-safety"
+  },
+  {
+    "name": "Department of Parks and Recreation",
+    "target": "/departments/259/",
+    "legacy": "/agency/?item=department-of-parks-and-recreation"
+  },
+  {
+    "name": "California Public Employment Relations Board",
+    "target": "/departments/260/",
+    "legacy": "/agency/?item=california-public-employment-relations-board"
+  },
+  {
+    "name": "Commission on Peace Officer Standards and Training",
+    "target": "/departments/262/",
+    "legacy": "/agency/?item=commission-on-peace-officer-standards-and-training"
+  },
+  {
+    "name": "California Natural Resources Agency",
+    "target": "/departments/263/",
+    "legacy": "/agency/?item=california-natural-resources-agency"
+  },
+  {
+    "name": "San Gabriel and Lower Los Angeles Rivers and Mountains Conservancy",
+    "target": "/departments/264/",
+    "legacy": "/agency/?item=san-gabriel-and-lower-los-angeles-rivers-and-mountains-conservancy"
+  },
+  {
+    "name": "State Coastal Conservancy",
+    "target": "/departments/265/",
+    "legacy": "/agency/?item=state-coastal-conservancy"
+  },
+  {
+    "name": "State Council on Developmental Disabilities",
+    "target": "/departments/266/",
+    "legacy": "/agency/?item=state-council-on-developmental-disabilities"
+  },
+  {
+    "name": "State Compensation Insurance Fund",
+    "target": "/departments/267/",
+    "legacy": "/agency/?item=state-compensation-insurance-fund"
+  },
+  {
+    "name": "State Controller&#39;s Office",
+    "target": "/departments/268/",
+    "legacy": "/agency/?item=state-controller&#39;s-office"
+  },
+  {
+    "name": "San Diego River Conservancy",
+    "target": "/departments/269/",
+    "legacy": "/agency/?item=san-diego-river-conservancy"
+  },
+  {
+    "name": "California State Senate",
+    "target": "/departments/270/",
+    "legacy": "/agency/?item=california-state-senate"
+  },
+  {
+    "name": "San Joaquin River Conservancy",
+    "target": "/departments/271/",
+    "legacy": "/agency/?item=san-joaquin-river-conservancy"
+  },
+  {
+    "name": "California State Lands Commission",
+    "target": "/departments/272/",
+    "legacy": "/agency/?item=california-state-lands-commission"
+  },
+  {
+    "name": "Santa Monica Mountains Conservancy",
+    "target": "/departments/273/",
+    "legacy": "/agency/?item=santa-monica-mountains-conservancy"
+  },
+  {
+    "name": "Sierra Nevada Conservancy",
+    "target": "/departments/274/",
+    "legacy": "/agency/?item=sierra-nevada-conservancy"
+  },
+  {
+    "name": "Secretary of State",
+    "target": "/departments/275/",
+    "legacy": "/agency/?item=secretary-of-state"
+  },
+  {
+    "name": "Save Our Water",
+    "target": "/departments/276/",
+    "legacy": "/agency/?item=save-our-water"
+  },
+  {
+    "name": "State Personnel Board",
+    "target": "/departments/277/",
+    "legacy": "/agency/?item=state-personnel-board"
+  },
+  {
+    "name": "Seismic Safety Commission",
+    "target": "/departments/278/",
+    "legacy": "/agency/?item=seismic-safety-commission"
+  },
+  {
+    "name": "State Treasurer&#39;s Office",
+    "target": "/departments/279/",
+    "legacy": "/agency/?item=state-treasurer&#39;s-office"
+  },
+  {
+    "name": "State Water Resources Control Board",
+    "target": "/departments/280/",
+    "legacy": "/agency/?item=state-water-resources-control-board"
+  },
+  {
+    "name": "Governor&#39;s Office of the Tribal Advisor",
+    "target": "/departments/281/",
+    "legacy": "/agency/?item=governor&#39;s-office-of-the-tribal-advisor"
+  },
+  {
+    "name": "University of California",
+    "target": "/departments/282/",
+    "legacy": "/agency/?item=university-of-california"
+  },
+  {
+    "name": "Visit California",
+    "target": "/departments/283/",
+    "legacy": "/agency/?item=visit-california"
+  },
+  {
+    "name": "Wildlife Conservation Board",
+    "target": "/departments/284/",
+    "legacy": "/agency/?item=wildlife-conservation-board"
+  },
+  {
+    "name": "California Department of Tax and Fee Administration",
+    "target": "/departments/287/",
+    "legacy": "/agency/?item=california-department-of-tax-and-fee-administration"
+  },
+  {
+    "name": "California Water Commission",
+    "target": "/departments/296/",
+    "legacy": "/agency/?item=california-water-commission"
+  },
+  {
+    "name": "Arbitration Certification Program",
+    "target": "/departments/298/",
+    "legacy": "/agency/?item=arbitration-certification-program"
+  },
+  {
+    "name": "Contractors State License Board",
+    "target": "/departments/299/",
+    "legacy": "/agency/?item=contractors-state-license-board"
+  },
+  {
+    "name": "Bureau of Real Estate Appraisers",
+    "target": "/departments/300/",
+    "legacy": "/agency/?item=bureau-of-real-estate-appraisers"
+  },
+  {
+    "name": "Office of the State Fire Marshal",
+    "target": "/departments/301/",
+    "legacy": "/agency/?item=office-of-the-state-fire-marshal"
+  },
+  {
+    "name": "Department of FI$Cal",
+    "target": "/departments/305/",
+    "legacy": "/agency/?item=department-of-fi$cal"
+  },
+  {
+    "name": "Cannabis Control Appeals Panel",
+    "target": "/departments/306/",
+    "legacy": "/agency/?item=cannabis-control-appeals-panel"
+  },
+  {
+    "name": "Office of Data and Innovation",
+    "target": "/departments/308/",
+    "legacy": "/agency/?item=office-of-data-and-innovation"
+  },
+  {
+    "name": "Office of Energy Infrastructure Safety",
+    "target": "/departments/314/",
+    "legacy": "/agency/?item=office-of-energy-infrastructure-safety"
+  },
+  {
+    "name": "California Privacy Protection Agency",
+    "target": "/departments/315/",
+    "legacy": "/agency/?item=california-privacy-protection-agency"
+  },
+  {
+    "name": "Find a Smog Station",
+    "target": "/departments/137/services/6/",
+    "legacy": "/service/?item=find-a-smog-station"
+  },
+  {
+    "name": "Look Up Auto Repair Dealer License",
+    "target": "/departments/137/services/7/",
+    "legacy": "/service/?item=look-up-auto-repair-dealer-license"
+  },
+  {
+    "name": "Apply for Child Support",
+    "target": "/departments/211/services/8/",
+    "legacy": "/service/?item=apply-for-child-support"
+  },
+  {
+    "name": "Calculate Child Support",
+    "target": "/departments/211/services/9/",
+    "legacy": "/service/?item=calculate-child-support"
+  },
+  {
+    "name": "Check Contractor Application",
+    "target": "/departments/299/services/10/",
+    "legacy": "/service/?item=check-contractor-application"
+  },
+  {
+    "name": "File Complaint Against Contractor",
+    "target": "/departments/299/services/11/",
+    "legacy": "/service/?item=file-complaint-against-contractor"
+  },
+  {
+    "name": "Look Up Contractor License",
+    "target": "/departments/299/services/12/",
+    "legacy": "/service/?item=look-up-contractor-license"
+  },
+  {
+    "name": "Search for Unclaimed Property",
+    "target": "/departments/268/services/13/",
+    "legacy": "/service/?item=search-for-unclaimed-property"
+  },
+  {
+    "name": "Traffic tickets",
+    "target": "/departments/193/services/15/",
+    "legacy": "/service/?item=traffic-tickets"
+  },
+  {
+    "name": "Find Where to File for Divorce",
+    "target": "/departments/193/services/16/",
+    "legacy": "/service/?item=find-where-to-file-for-divorce"
+  },
+  {
+    "name": "Find Your Local School",
+    "target": "/departments/172/services/17/",
+    "legacy": "/service/?item=find-your-local-school"
+  },
+  {
+    "name": "File for Disability",
+    "target": "/departments/229/services/18/",
+    "legacy": "/service/?item=file-for-disability"
+  },
+  {
+    "name": "File for Paid Family Leave",
+    "target": "/departments/229/services/19/",
+    "legacy": "/service/?item=file-for-paid-family-leave"
+  },
+  {
+    "name": "File for Unemployment",
+    "target": "/departments/229/services/20/",
+    "legacy": "/service/?item=file-for-unemployment"
+  },
+  {
+    "name": "Manage Your Unemployment Insurance Claim",
+    "target": "/departments/229/services/21/",
+    "legacy": "/service/?item=manage-your-unemployment-insurance-claim"
+  },
+  {
+    "name": "Find a Job",
+    "target": "/departments/229/services/22/",
+    "legacy": "/service/?item=find-a-job"
+  },
+  {
+    "name": "Honor a Hero, Hire a Vet",
+    "target": "/departments/229/services/23/",
+    "legacy": "/service/?item=honor-a-hero,-hire-a-vet"
+  },
+  {
+    "name": "Look Up Tax Rates",
+    "target": "/departments/287/services/24/",
+    "legacy": "/service/?item=look-up-tax-rates"
+  },
+  {
+    "name": "Apply for Business License",
+    "target": "/departments/287/services/25/",
+    "legacy": "/service/?item=apply-for-business-license"
+  },
+  {
+    "name": "Apply for Sellers Permit",
+    "target": "/departments/287/services/26/",
+    "legacy": "/service/?item=apply-for-sellers-permit"
+  },
+  {
+    "name": "File Discrimination Complaint",
+    "target": "/departments/215/services/27/",
+    "legacy": "/service/?item=file-discrimination-complaint"
+  },
+  {
+    "name": "Find a Hunter Education Course",
+    "target": "/departments/174/services/28/",
+    "legacy": "/service/?item=find-a-hunter-education-course"
+  },
+  {
+    "name": "Get a Fishing or Hunting License",
+    "target": "/departments/174/services/29/",
+    "legacy": "/service/?item=get-a-fishing-or-hunting-license"
+  },
+  {
+    "name": "Find Fire Information",
+    "target": "/departments/147/services/31/",
+    "legacy": "/service/?item=find-fire-information"
+  },
+  {
+    "name": "Check your refund status",
+    "target": "/departments/236/services/33/",
+    "legacy": "/service/?item=check-your-refund-status"
+  },
+  {
+    "name": "Find Substance Use Disorder Services",
+    "target": "/departments/217/services/36/",
+    "legacy": "/service/?item=find-substance-use-disorder-services"
+  },
+  {
+    "name": "Apply for Medi-Cal",
+    "target": "/departments/217/services/37/",
+    "legacy": "/service/?item=apply-for-medi-cal"
+  },
+  {
+    "name": "Locate Current Road Conditions",
+    "target": "/departments/184/services/38/",
+    "legacy": "/service/?item=locate-current-road-conditions"
+  },
+  {
+    "name": "Find a CA State Job",
+    "target": "/departments/89/services/39/",
+    "legacy": "/service/?item=find-a-ca-state-job"
+  },
+  {
+    "name": "Look up Crime Statistics",
+    "target": "/departments/223/services/40/",
+    "legacy": "/service/?item=look-up-crime-statistics"
+  },
+  {
+    "name": "Look Up a Bill or Law",
+    "target": "/departments/244/services/41/",
+    "legacy": "/service/?item=look-up-a-bill-or-law"
+  },
+  {
+    "name": "Look Up Winning Lottery Numbers",
+    "target": "/departments/155/services/42/",
+    "legacy": "/service/?item=look-up-winning-lottery-numbers"
+  },
+  {
+    "name": "Release of Liability",
+    "target": "/departments/220/services/43/",
+    "legacy": "/service/?item=release-of-liability"
+  },
+  {
+    "name": "Renew Driver License",
+    "target": "/departments/220/services/44/",
+    "legacy": "/service/?item=renew-driver-license"
+  },
+  {
+    "name": "Renew Vehicle Registration",
+    "target": "/departments/220/services/45/",
+    "legacy": "/service/?item=renew-vehicle-registration"
+  },
+  {
+    "name": "Find a Traffic School",
+    "target": "/departments/220/services/46/",
+    "legacy": "/service/?item=find-a-traffic-school"
+  },
+  {
+    "name": "Change Home Address",
+    "target": "/departments/220/services/47/",
+    "legacy": "/service/?item=change-home-address"
+  },
+  {
+    "name": "Change Name on ID Card",
+    "target": "/departments/220/services/48/",
+    "legacy": "/service/?item=change-name-on-id-card"
+  },
+  {
+    "name": "Find a State Park",
+    "target": "/departments/259/services/49/",
+    "legacy": "/service/?item=find-a-state-park"
+  },
+  {
+    "name": "Make a Camping Reservation",
+    "target": "/departments/259/services/50/",
+    "legacy": "/service/?item=make-a-camping-reservation"
+  },
+  {
+    "name": "Apply for Marriage Certificate",
+    "target": "/departments/176/services/51/",
+    "legacy": "/service/?item=apply-for-marriage-certificate"
+  },
+  {
+    "name": "Apply for Birth Certificate",
+    "target": "/departments/176/services/52/",
+    "legacy": "/service/?item=apply-for-birth-certificate"
+  },
+  {
+    "name": "Apply for Death Certificate",
+    "target": "/departments/176/services/53/",
+    "legacy": "/service/?item=apply-for-death-certificate"
+  },
+  {
+    "name": "Find Recycling location",
+    "target": "/departments/158/services/54/",
+    "legacy": "/service/?item=find-recycling-location"
+  },
+  {
+    "name": "Form a Business",
+    "target": "/departments/275/services/55/",
+    "legacy": "/service/?item=form-a-business"
+  },
+  {
+    "name": "Get Copies of Business Entity Documents",
+    "target": "/departments/275/services/56/",
+    "legacy": "/service/?item=get-copies-of-business-entity-documents"
+  },
+  {
+    "name": "Register to Vote",
+    "target": "/departments/275/services/57/",
+    "legacy": "/service/?item=register-to-vote"
+  },
+  {
+    "name": "Look Up My Representatives",
+    "target": "/departments/275/services/58/",
+    "legacy": "/service/?item=look-up-my-representatives"
+  },
+  {
+    "name": "Find Foster Care",
+    "target": "/departments/178/services/59/",
+    "legacy": "/service/?item=find-foster-care"
+  },
+  {
+    "name": "Food stamps",
+    "target": "/departments/178/services/60/",
+    "legacy": "/service/?item=food-stamps"
+  },
+  {
+    "name": "Find Assisted Living",
+    "target": "/departments/178/services/61/",
+    "legacy": "/service/?item=find-assisted-living"
+  },
+  {
+    "name": "Find Child Care",
+    "target": "/departments/178/services/62/",
+    "legacy": "/service/?item=find-child-care"
+  },
+  {
+    "name": "Apply for a Cal Grant",
+    "target": "/departments/198/services/63/",
+    "legacy": "/service/?item=apply-for-a-cal-grant"
+  },
+  {
+    "name": "Get a Veteran Home Loan",
+    "target": "/departments/163/services/64/",
+    "legacy": "/service/?item=get-a-veteran-home-loan"
+  },
+  {
+    "name": "Facility Locator",
+    "target": "/departments/171/services/71/",
+    "legacy": "/service/?item=facility-locator"
+  },
+  {
+    "name": "Visitation Scheduling Application",
+    "target": "/departments/171/services/72/",
+    "legacy": "/service/?item=visitation-scheduling-application"
+  },
+  {
+    "name": "Find a Fair",
+    "target": "/departments/173/services/73/",
+    "legacy": "/service/?item=find-a-fair"
+  },
+  {
+    "name": "Apply for Medical Insurance",
+    "target": "/departments/240/services/74/",
+    "legacy": "/service/?item=apply-for-medical-insurance"
+  },
+  {
+    "name": "Request Free California Official Visitor&#39;s Guide",
+    "target": "/departments/283/services/75/",
+    "legacy": "/service/?item=request-free-california-official-visitor&#39;s-guide"
+  },
+  {
+    "name": "Find Business Resources",
+    "target": "/departments/237/services/77/",
+    "legacy": "/service/?item=find-business-resources"
+  },
+  {
+    "name": "Get Legal Help",
+    "target": "/departments/178/services/79/",
+    "legacy": "/service/?item=get-legal-help"
+  },
+  {
+    "name": "Get Citizenship Services",
+    "target": "/departments/178/services/80/",
+    "legacy": "/service/?item=get-citizenship-services"
+  },
+  {
+    "name": "Find Refugee Services",
+    "target": "/departments/178/services/81/",
+    "legacy": "/service/?item=find-refugee-services"
+  },
+  {
+    "name": "Find Nearby Adult Education Programs",
+    "target": "/departments/172/services/82/",
+    "legacy": "/service/?item=find-nearby-adult-education-programs"
+  },
+  {
+    "name": "Find an ESL/English Class",
+    "target": "/departments/172/services/83/",
+    "legacy": "/service/?item=find-an-esl/english-class"
+  },
+  {
+    "name": "Get a High School Diploma",
+    "target": "/departments/172/services/84/",
+    "legacy": "/service/?item=get-a-high-school-diploma"
+  },
+  {
+    "name": "Learn to Read and Write",
+    "target": "/departments/172/services/85/",
+    "legacy": "/service/?item=learn-to-read-and-write"
+  },
+  {
+    "name": "Find a Citizenship Class",
+    "target": "/departments/172/services/86/",
+    "legacy": "/service/?item=find-a-citizenship-class"
+  },
+  {
+    "name": "Apply for the California Dream Act",
+    "target": "/departments/198/services/1095/",
+    "legacy": "/service/?item=apply-for-the-california-dream-act"
+  },
+  {
+    "name": "Enroll Your Kids in Technology Programs",
+    "target": "/departments/208/services/1098/",
+    "legacy": "/service/?item=enroll-your-kids-in-technology-programs"
+  },
+  {
+    "name": "Learn About Jobs for Foreign-born Professionals",
+    "target": "/departments/208/services/1099/",
+    "legacy": "/service/?item=learn-about-jobs-for-foreign-born-professionals"
+  },
+  {
+    "name": "Path to U.S. Citizenship",
+    "target": "/departments/200/services/1101/",
+    "legacy": "/service/?item=path-to-u.s.-citizenship"
+  },
+  {
+    "name": "Learn About Applying for College",
+    "target": "/departments/198/services/1106/",
+    "legacy": "/service/?item=learn-about-applying-for-college"
+  },
+  {
+    "name": "Get Student Financial Aid Information",
+    "target": "/departments/198/services/1107/",
+    "legacy": "/service/?item=get-student-financial-aid-information"
+  },
+  {
+    "name": "Attend a Student Financial Aid Workshop",
+    "target": "/departments/198/services/1108/",
+    "legacy": "/service/?item=attend-a-student-financial-aid-workshop"
+  },
+  {
+    "name": "Get Job Training in San Diego",
+    "target": "/departments/208/services/1110/",
+    "legacy": "/service/?item=get-job-training-in-san-diego"
+  },
+  {
+    "name": "Get Job Training in Orange County",
+    "target": "/departments/208/services/1111/",
+    "legacy": "/service/?item=get-job-training-in-orange-county"
+  },
+  {
+    "name": "Get Job Training in Long Beach",
+    "target": "/departments/208/services/1112/",
+    "legacy": "/service/?item=get-job-training-in-long-beach"
+  },
+  {
+    "name": "Get Job Training in Madera/Fresno",
+    "target": "/departments/208/services/1113/",
+    "legacy": "/service/?item=get-job-training-in-madera/fresno"
+  },
+  {
+    "name": "Get Job Training in Sacramento",
+    "target": "/departments/208/services/1114/",
+    "legacy": "/service/?item=get-job-training-in-sacramento"
+  },
+  {
+    "name": "Get Updates on DACA",
+    "target": "/departments/238/services/1115/",
+    "legacy": "/service/?item=get-updates-on-daca"
+  },
+  {
+    "name": "Get DACA Legal Help",
+    "target": "/departments/178/services/1116/",
+    "legacy": "/service/?item=get-daca-legal-help"
+  },
+  {
+    "name": "Get DACA Info about Worker&#39;s Rights",
+    "target": "/departments/247/services/1117/",
+    "legacy": "/service/?item=get-daca-info-about-worker&#39;s-rights"
+  },
+  {
+    "name": "Find UC Undocumented Student Resources",
+    "target": "/departments/282/services/1118/",
+    "legacy": "/service/?item=find-uc-undocumented-student-resources"
+  },
+  {
+    "name": "Find CCC Undocumented Student Resources",
+    "target": "/departments/167/services/1119/",
+    "legacy": "/service/?item=find-ccc-undocumented-student-resources"
+  },
+  {
+    "name": "Learn More About Medi-Cal for DACA",
+    "target": "/departments/217/services/1120/",
+    "legacy": "/service/?item=learn-more-about-medi-cal-for-daca"
+  },
+  {
+    "name": "Learn More about DMV for DACA",
+    "target": "/departments/220/services/1121/",
+    "legacy": "/service/?item=learn-more-about-dmv-for-daca"
+  },
+  {
+    "name": "Get Disaster Relief Assistance",
+    "target": "/departments/238/services/1122/",
+    "legacy": "/service/?item=get-disaster-relief-assistance"
+  },
+  {
+    "name": "Search for an Appraiser",
+    "target": "/departments/300/services/1124/",
+    "legacy": "/service/?item=search-for-an-appraiser"
+  },
+  {
+    "name": "Renew Appraiser License",
+    "target": "/departments/300/services/1125/",
+    "legacy": "/service/?item=renew-appraiser-license"
+  },
+  {
+    "name": "Get a Custom Business Report",
+    "target": "/departments/237/services/1126/",
+    "legacy": "/service/?item=get-a-custom-business-report"
+  },
+  {
+    "name": "Get Permit Assistance",
+    "target": "/departments/237/services/1127/",
+    "legacy": "/service/?item=get-permit-assistance"
+  },
+  {
+    "name": "Explore Business Resources by Region",
+    "target": "/departments/237/services/1128/",
+    "legacy": "/service/?item=explore-business-resources-by-region"
+  },
+  {
+    "name": "Submit an IMR/Complaint Form",
+    "target": "/departments/219/services/1129/",
+    "legacy": "/service/?item=submit-an-imr/complaint-form"
+  },
+  {
+    "name": "Manage Your Real Estate License",
+    "target": "/departments/40/services/1130/",
+    "legacy": "/service/?item=manage-your-real-estate-license"
+  },
+  {
+    "name": "Verify a Real Estate License",
+    "target": "/departments/40/services/1131/",
+    "legacy": "/service/?item=verify-a-real-estate-license"
+  },
+  {
+    "name": "Search for Registered Sex Offenders",
+    "target": "/departments/223/services/1132/",
+    "legacy": "/service/?item=search-for-registered-sex-offenders"
+  },
+  {
+    "name": "Find a Consumer Affairs License",
+    "target": "/departments/210/services/1133/",
+    "legacy": "/service/?item=find-a-consumer-affairs-license"
+  },
+  {
+    "name": "File Complaint Against Professional or Business",
+    "target": "/departments/210/services/1134/",
+    "legacy": "/service/?item=file-complaint-against-professional-or-business"
+  },
+  {
+    "name": "Renew a Consumer Affairs License",
+    "target": "/departments/210/services/1135/",
+    "legacy": "/service/?item=renew-a-consumer-affairs-license"
+  },
+  {
+    "name": "Calculate Your Earthquake Insurance Premium",
+    "target": "/departments/180/services/1136/",
+    "legacy": "/service/?item=calculate-your-earthquake-insurance-premium"
+  },
+  {
+    "name": "Start a Building Safety Project",
+    "target": "/departments/256/services/1137/",
+    "legacy": "/service/?item=start-a-building-safety-project"
+  },
+  {
+    "name": "Apply for Loan Repayments, Scholarships, Grants",
+    "target": "/departments/256/services/1138/",
+    "legacy": "/service/?item=apply-for-loan-repayments,-scholarships,-grants"
+  },
+  {
+    "name": "Get Workforce Capacity Education and Training",
+    "target": "/departments/256/services/1139/",
+    "legacy": "/service/?item=get-workforce-capacity-education-and-training"
+  },
+  {
+    "name": "Find Healthcare Data and Reports",
+    "target": "/departments/256/services/1140/",
+    "legacy": "/service/?item=find-healthcare-data-and-reports"
+  },
+  {
+    "name": "Get a Premium Discount",
+    "target": "/departments/180/services/1141/",
+    "legacy": "/service/?item=get-a-premium-discount"
+  },
+  {
+    "name": "Find harmful chemical warnings",
+    "target": "/departments/251/services/1142/",
+    "legacy": "/service/?item=find-harmful-chemical-warnings"
+  },
+  {
+    "name": "Prepare Your House",
+    "target": "/departments/180/services/1143/",
+    "legacy": "/service/?item=prepare-your-house"
+  },
+  {
+    "name": "Apply for a license",
+    "target": "/departments/185/services/1144/",
+    "legacy": "/service/?item=apply-for-a-license"
+  },
+  {
+    "name": "Review of licensing decisions",
+    "target": "/departments/306/services/1145/",
+    "legacy": "/service/?item=review-of-licensing-decisions"
+  },
+  {
+    "name": "How to begin the appeals process",
+    "target": "/departments/306/services/1146/",
+    "legacy": "/service/?item=how-to-begin-the-appeals-process"
+  },
+  {
+    "name": "Unclaimed Property Reporting Resources",
+    "target": "/departments/268/services/1147/",
+    "legacy": "/service/?item=unclaimed-property-reporting-resources"
+  },
+  {
+    "name": "California Census 2020",
+    "target": "/departments/239/services/1148/",
+    "legacy": "/service/?item=california-census-2020"
+  },
+  {
+    "name": "Procurement and Acquisitions Solutions",
+    "target": "/departments/216/services/1149/",
+    "legacy": "/service/?item=procurement-and-acquisitions-solutions"
+  },
+  {
+    "name": "Administrative Hearings",
+    "target": "/departments/216/services/1152/",
+    "legacy": "/service/?item=administrative-hearings"
+  },
+  {
+    "name": "Design and Construction Oversight for Schools",
+    "target": "/departments/216/services/1155/",
+    "legacy": "/service/?item=design-and-construction-oversight-for-schools"
+  },
+  {
+    "name": "Funding for School Construction",
+    "target": "/departments/216/services/1156/",
+    "legacy": "/service/?item=funding-for-school-construction"
+  },
+  {
+    "name": "Fleet and Asset Management",
+    "target": "/departments/216/services/1157/",
+    "legacy": "/service/?item=fleet-and-asset-management"
+  },
+  {
+    "name": "Risk and Insurance Management",
+    "target": "/departments/216/services/1158/",
+    "legacy": "/service/?item=risk-and-insurance-management"
+  },
+  {
+    "name": "Disability Access",
+    "target": "/departments/216/services/1159/",
+    "legacy": "/service/?item=disability-access"
+  },
+  {
+    "name": "Business and Acquisition",
+    "target": "/departments/216/services/1162/",
+    "legacy": "/service/?item=business-and-acquisition"
+  },
+  {
+    "name": "Human Resources",
+    "target": "/departments/216/services/1164/",
+    "legacy": "/service/?item=human-resources"
+  },
+  {
+    "name": "Make a payment",
+    "target": "/departments/236/services/1166/",
+    "legacy": "/service/?item=make-a-payment"
+  },
+  {
+    "name": "CalEITC is bigger and better",
+    "target": "/departments/236/services/1167/",
+    "legacy": "/service/?item=caleitc-is-bigger-and-better"
+  },
+  {
+    "name": "CalFile - File return for free",
+    "target": "/departments/236/services/1168/",
+    "legacy": "/service/?item=calfile---file-return-for-free"
+  },
+  {
+    "name": "Apply for Compensation for Crime-Related Expenses",
+    "target": "/departments/162/services/1169/",
+    "legacy": "/service/?item=apply-for-compensation-for-crime-related-expenses"
+  },
+  {
+    "name": "California Department of Insurance (CDI)",
+    "target": "/departments/175/services/1170/",
+    "legacy": "/service/?item=california-department-of-insurance-(cdi)"
+  },
+  {
+    "name": "California Low Cost Auto",
+    "target": "/departments/175/services/1171/",
+    "legacy": "/service/?item=california-low-cost-auto"
+  },
+  {
+    "name": "California Senior Gateway",
+    "target": "/departments/175/services/1172/",
+    "legacy": "/service/?item=california-senior-gateway"
+  },
+  {
+    "name": "Get COVID-19 Information and Help",
+    "target": "/departments/239/services/1173/",
+    "legacy": "/service/?item=get-covid-19-information-and-help"
+  },
+  {
+    "name": "Women, Infants and Children (WIC)",
+    "target": "/departments/176/services/1174/",
+    "legacy": "/service/?item=women,-infants-and-children-(wic)"
+  },
+  {
+    "name": "CA COVID-19 Rent Relief",
+    "target": "/departments/139/services/1175/",
+    "legacy": "/service/?item=ca-covid-19-rent-relief"
+  },
+  {
+    "name": "Get Digital Vaccine Record",
+    "target": "/departments/176/services/1177/",
+    "legacy": "/service/?item=get-digital-vaccine-record"
+  },
+  {
+    "name": "CA Meals For Kids App (Android)",
+    "target": "/departments/172/services/1178/",
+    "legacy": "/service/?item=ca-meals-for-kids-app-(android)"
+  },
+  {
+    "name": "Meals For Kids (iOS)",
+    "target": "/departments/172/services/1179/",
+    "legacy": "/service/?item=meals-for-kids-(ios)"
+  },
+  {
+    "name": "Find e-Benefits in Your County",
+    "target": "/departments/178/services/1180/",
+    "legacy": "/service/?item=find-e-benefits-in-your-county"
+  },
+  {
+    "name": "Volunteer Income Tax Assistance (VITA)",
+    "target": "/departments/236/services/1181/",
+    "legacy": "/service/?item=volunteer-income-tax-assistance-(vita)"
+  },
+  {
+    "name": "CalABLE Visa Prepaid Card",
+    "target": "/departments/101/services/1182/",
+    "legacy": "/service/?item=calable-visa-prepaid-card"
+  },
+  {
+    "name": "Earned Income Tax Credit (EITC)",
+    "target": "/departments/178/services/1183/",
+    "legacy": "/service/?item=earned-income-tax-credit-(eitc)"
+  },
+  {
+    "name": "Small Business Assistance Centers",
+    "target": "/departments/237/services/1184/",
+    "legacy": "/service/?item=small-business-assistance-centers"
+  },
+  {
+    "name": "EDD Payroll Taxes",
+    "target": "/departments/229/services/1186/",
+    "legacy": "/service/?item=edd-payroll-taxes"
+  },
+  {
+    "name": "Submit Complaint Form",
+    "target": "/departments/315/services/1187/",
+    "legacy": "/service/?item=submit-complaint-form"
+  },
+  {
+    "name": "California Incarcerated Records and Information Search",
+    "target": "/departments/171/services/1188/",
+    "legacy": "/service/?item=california-incarcerated-records-and-information-search"
+  },
+  {
+    "name": "Find Recruitment Events &amp; Resources",
+    "target": "/departments/89/services/1189/",
+    "legacy": "/service/?item=find-recruitment-events-&amp;-resources"
+  },
+  {
+    "name": "Learn About Your State Employee Benefits",
+    "target": "/departments/89/services/1190/",
+    "legacy": "/service/?item=learn-about-your-state-employee-benefits"
+  },
+  {
+    "name": "Start Saving for Retirement Today",
+    "target": "/departments/89/services/1191/",
+    "legacy": "/service/?item=start-saving-for-retirement-today"
+  },
+  {
+    "name": "Report a Hate Incident",
+    "target": "/departments/215/services/1192/",
+    "legacy": "/service/?item=report-a-hate-incident"
+  }
+]
