@@ -32,13 +32,14 @@ eleventyExcludeFromCollections: true
     <rewrite>
       <rewriteMaps>
         <rewriteMap name="410Removals" defaultValue="">
-          <add key="/archive/proclamations/index.html" value="foo" />
+          {%- for page in seo.Removals_410 %}
+          <add key="{{page}}" value="foo" />
+          {%- endfor %}
         </rewriteMap>
         <rewriteMap name="FullUriMatch" defaultValue="">
-          <add key="/Agencies/Aging-Department-of" value="/agency/?item=department-of-aging" />
-          <add
-            key="/Agencies/Contractors-State-License-Board/Agency-Services/Look-Up-Contractor-License"
-            value="/service/?item=look-up-contractor-license" />
+          {%- for page in seo.Redirect_301 %}
+          <add key="{{page.from}}" value="{{page.to}}" />
+          {%- endfor %}
         </rewriteMap>
       </rewriteMaps>
       <rules>
