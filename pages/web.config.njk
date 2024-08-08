@@ -1,6 +1,6 @@
 ---
 layout: null
-permalink: specialweb.config
+permalink: web.config
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
@@ -11,8 +11,6 @@ eleventyExcludeFromCollections: true
   </system.web>
   <system.webServer>
     <urlCompression doStaticCompression="true" />
-    <!-- Show default IIS error pages (not asp.net) -->
-    <httpErrors existingResponse="Replace" />
     <staticContent>
       <remove fileExtension=".woff" />
       <!-- in case the mime type already exist in IIS -->
