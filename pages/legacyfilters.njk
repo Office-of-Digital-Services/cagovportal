@@ -1,8 +1,22 @@
 ---
 layout: null
-permalink: ..\src\_data\legacy.json
+permalink: null
+# permalink: ..\src\_data\legacy.json
 eleventyExcludeFromCollections: true
 ---
-{
-
-}
+[
+  {%- for agency in state_entity.agencies | sortBy("AgencyId") %}
+    {
+      "name": "{{agency.FriendlyName}}",
+      "target": "/departments/{{agency.AgencyId}}/",
+      "legacy": "/agency/?item={{agency.FriendlyName | lower | replace(" ", "-")}}"
+    },
+  {%- endfor %}
+  {%- for service in state_entity.services | sortBy("ServiceId") %}
+    {
+      "name": "{{service.ServiceName}}",
+      "target": "/departments/{{service.AgencyId}}/services/{{service.ServiceId}}/",
+      "legacy": "/service/?item={{service.ServiceName | lower | replace(" ", "-")}}"
+    }{{"," if not loop.last}}
+  {%- endfor %}
+]
