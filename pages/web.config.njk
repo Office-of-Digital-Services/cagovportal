@@ -1,3 +1,9 @@
+---
+layout: null
+permalink: web.config
+eleventyExcludeFromCollections: true
+---
+
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
   <system.web>
@@ -5,6 +11,9 @@
     <sessionState mode="Off" />
   </system.web>
   <system.webServer>
+    <urlCompression doStaticCompression="true" />
+    <!-- Show default IIS error pages (not asp.net) -->
+    <httpErrors existingResponse="Replace" />
     <staticContent>
       <remove fileExtension=".woff" />
       <!-- in case the mime type already exist in IIS -->
@@ -21,6 +30,17 @@
       <error statusCode="400" path="404.html" />
     </httpErrors>
     <rewrite>
+      <rewriteMaps>
+        <rewriteMap name="410Removals" defaultValue="">
+          <add key="/archive/proclamations/index.html" value="foo" />
+        </rewriteMap>
+        <rewriteMap name="FullUriMatch" defaultValue="">
+          <add key="/Agencies/Aging-Department-of" value="/agency/?item=department-of-aging" />
+          <add
+            key="/Agencies/Contractors-State-License-Board/Agency-Services/Look-Up-Contractor-License"
+            value="/service/?item=look-up-contractor-license" />
+        </rewriteMap>
+      </rewriteMaps>
       <rules>
         <rule name="Production Robots">
           <match url="robots.txt" />
@@ -30,7 +50,30 @@
           </conditions>
           <action type="Rewrite" url="robots-prod.txt" />
         </rule>
+        <rule name="FullUriMatch Rule" stopProcessing="true">
+          <match url=".*" />
+          <conditions>
+            <add input="{FullUriMatch:{REQUEST_URI}}" pattern="(.+)" />
+          </conditions>
+          <action type="Redirect" url="{C:1}" appendQueryString="False" />
+        </rule>
+        <rule name="410Removals Rule" stopProcessing="true">
+          <conditions>
+            <add input="{410Removals:{URL}}" pattern=".+" />
+          </conditions>
+          <action
+            type="CustomResponse"
+            statusCode="410"
+            statusReason="Gone"
+            statusDescription="Gone. The requested resource is no longer available." />
+        </rule>
       </rules>
     </rewrite>
+    <httpProtocol>
+      <customHeaders>
+        <add name="X-Content-Type-Options" value="nosniff" />
+        <add name="Content-Security-Policy" value="frame-ancestors 'self' *.ca.gov" />
+      </customHeaders>
+    </httpProtocol>
   </system.webServer>
 </configuration>

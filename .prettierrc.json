@@ -8,7 +8,7 @@
   "embeddedLanguageFormatting": "off",
   "overrides": [
     {
-      "files": "web.config",
+      "files": "web.config.njk",
       "options": {
         "parser": "html",
         "printWidth": 120
