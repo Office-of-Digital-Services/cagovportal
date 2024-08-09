@@ -1,0 +1,85 @@
+---
+layout: null
+permalink: legacyhandler.ashx
+eleventyExcludeFromCollections: true
+---
+<%@ WebHandler Language="C#" Class="ItemRedirectHandler" %>
+
+using System;
+using System.Web;
+
+public class ItemRedirectHandler : IHttpHandler
+{
+    // Declare a readonly 2-dimensional array to store the redirects
+    private static readonly string[,] redirects = new string[,]
+    {
+
+
+      {%- for agency in state_entity.agencies | sortBy("AgencyId") %}
+      {
+        "/departments/{{agency.AgencyId}}/",
+        "/agency/?item={{agency.FriendlyName | lower | replace(" ", "-") | safe}}"
+      },
+      {%- endfor %}
+      {%- for service in state_entity.services | sortBy("ServiceId") %}
+      {
+        "/departments/{{service.AgencyId}}/services/{{service.ServiceId}}/",
+        "/service/?item={{service.ServiceName | lower | replace(" ", "-") | safe}}"
+      }{{"," if not loop.last}}
+      {%- endfor %}
+ 
+    };
+
+    public void ProcessRequest(HttpContext context)
+    {
+        // Retrieve the 'item' and 'path' query string parameters
+        string item = context.Request.QueryString["item"];
+        string path = context.Request.QueryString["path"];
+
+        // Check if both 'item' and 'path' parameters are present
+        if (!string.IsNullOrEmpty(item) && !string.IsNullOrEmpty(path))
+        {
+            // Construct the legacy path using the 'item' and 'path' parameters
+            string legacyPath = String.Format("/{0}/?item={1}", path, item);
+            string targetPath = null;
+
+            // Iterate through the redirects array to find a matching legacy path
+            for (int i = 0; i < redirects.GetLength(0); i++)
+            {
+                if (redirects[i, 1].Equals(legacyPath, StringComparison.OrdinalIgnoreCase))
+                {
+                    // If a match is found, set the target path
+                    targetPath = redirects[i, 0];
+                    break;
+                }
+            }
+
+            // If a target path is found, redirect to it
+            if (targetPath != null)
+            {
+                context.Response.Redirect(targetPath);
+            }
+            else
+            {
+                // If no matching target path is found, return a 404 Not Found status
+                context.Response.StatusCode = 404; // Not Found
+                context.Response.Write("Target path not found.");
+            }
+        }
+        else
+        {
+            // If 'item' or 'path' parameters are missing, return a 400 Bad Request status
+            context.Response.StatusCode = 400; // Bad Request
+            context.Response.Write("Item or path parameter is missing.");
+        }
+    }
+
+    // Indicate that the handler is not reusable
+    public bool IsReusable
+    {
+        get { return false; }
+    }
+}
+
+
+
