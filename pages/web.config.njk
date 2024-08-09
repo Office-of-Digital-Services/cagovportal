@@ -30,12 +30,12 @@ eleventyExcludeFromCollections: true
       <rewriteMaps>
         <rewriteMap name="410Removals" defaultValue="">
           {%- for page in seo.Removals_410 %}
-          <add key="{{page}}" value="foo" />
+          <add key="{{page | safe}}" value="foo" />
           {%- endfor %}
         </rewriteMap>
         <rewriteMap name="FullUriMatch" defaultValue="">
           {%- for page in seo.Redirect_301 %}
-          <add key="{{page.from}}" value="{{page.to}}" />
+          <add key="{{page.from | safe}}" value="{{page.to | safe}}" />
           {%- endfor %}
         </rewriteMap>
       </rewriteMaps>
@@ -56,8 +56,9 @@ eleventyExcludeFromCollections: true
           <action type="Redirect" url="{C:1}" appendQueryString="False" />
         </rule>
         <rule name="410Removals Rule" stopProcessing="true">
+          <match url=".*" />
           <conditions>
-            <add input="{410Removals:{URL}}" pattern=".+" />
+            <add input="{410Removals:{REQUEST_URI}}" pattern=".+" />
           </conditions>
           <action
             type="CustomResponse"

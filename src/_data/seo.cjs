@@ -5,12 +5,11 @@ const Removals_410 = [
   "/agency/?item=department-of-fair-employment-and-housing"
 ];
 const Redirect_301 = [
-  /*
   {
-    from: "/Agencies/Aging-Department-of",
-    to: "/agency/?item=department-of-aging"
+    to: "/departments/89/services/1189/",
+    from: "/service/?item=find-recruitment-events"
   },
-  */
+
   ...legacy.map(x => ({ from: x.legacy, to: x.target }))
 ];
 

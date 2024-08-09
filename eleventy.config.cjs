@@ -77,6 +77,10 @@ module.exports = function (
       })
   );
 
+  eleventyConfig.addFilter("urlencode", (/** @type {string } */ str) =>
+    encodeURIComponent(str)
+  );
+
   // {%- for tag in topics | pluck("featured", true) | sortBy("featureOrder") -%}
   eleventyConfig.addFilter(
     "sortBy",
