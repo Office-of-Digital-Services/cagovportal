@@ -57,7 +57,9 @@ public class ItemRedirectHandler : IHttpHandler
             // If a target path is found, redirect to it
             if (targetPath != null)
             {
-                context.Response.Redirect(targetPath);
+                context.Response.StatusCode = 301; // Permanent Redirect
+                context.Response.RedirectLocation = targetPath;
+                context.Response.End();
             }
             else
             {
