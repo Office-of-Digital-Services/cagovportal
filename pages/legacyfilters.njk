@@ -8,13 +8,13 @@ eleventyExcludeFromCollections: true
   {%- for agency in state_entity.agencies | sortBy("AgencyId") %}
   {
     "target": "/departments/{{agency.AgencyId}}/",
-    "legacy": "/agency/?item={{agency.FriendlyName | slugify | lower | replace(" ", "-")}}"
+    "legacy": "/agency/?item={{agency.FriendlyName | lower | replace(" ", "-") | urlencode | safe}}"
   },
   {%- endfor %}
   {%- for service in state_entity.services | sortBy("ServiceId") %}
   {
     "target": "/departments/{{service.AgencyId}}/services/{{service.ServiceId}}/",
-    "legacy": "/service/?item={{service.ServiceName | slugify | lower | replace(" ", "-")}}"
+    "legacy": "/service/?item={{service.ServiceName | lower | replace(" ", "-") | urlencode | safe}}"
   }{{"," if not loop.last}}
   {%- endfor %}
 ]

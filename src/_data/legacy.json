@@ -81,7 +81,7 @@
   },
   {
     "target": "/departments/38/",
-    "legacy": "/agency/?item=board-of-professional-engineers-land-surveyors-and-geologists"
+    "legacy": "/agency/?item=board-of-professional-engineers%2C-land-surveyors%2C-and-geologists"
   },
   {
     "target": "/departments/39/",
@@ -169,7 +169,7 @@
   },
   {
     "target": "/departments/62/",
-    "legacy": "/agency/?item=commission-on-health-and-safety-and-workers-compensation"
+    "legacy": "/agency/?item=commission-on-health-and-safety-and-workers'-compensation"
   },
   {
     "target": "/departments/63/",
@@ -181,7 +181,7 @@
   },
   {
     "target": "/departments/65/",
-    "legacy": "/agency/?item=worker-s-compensation-appeals-board"
+    "legacy": "/agency/?item=worker's-compensation-appeals-board"
   },
   {
     "target": "/departments/67/",
@@ -333,7 +333,7 @@
   },
   {
     "target": "/departments/139/",
-    "legacy": "/agency/?item=california-business-consumer-services-and-housing-agency"
+    "legacy": "/agency/?item=california-business%2C-consumer-services%2C-and-housing-agency"
   },
   {
     "target": "/departments/140/",
@@ -345,7 +345,7 @@
   },
   {
     "target": "/departments/142/",
-    "legacy": "/agency/?item=board-of-pilot-commissioners-for-the-bays-of-san-francisco-san-pablo-and-suisun"
+    "legacy": "/agency/?item=board-of-pilot-commissioners-for-the-bays-of-san-francisco%2C-san-pablo%2C-and-suisun"
   },
   {
     "target": "/departments/143/",
@@ -369,7 +369,7 @@
   },
   {
     "target": "/departments/148/",
-    "legacy": "/agency/?item=governor-s-office-of-emergency-services"
+    "legacy": "/agency/?item=governor's-office-of-emergency-services"
   },
   {
     "target": "/departments/149/",
@@ -717,7 +717,7 @@
   },
   {
     "target": "/departments/237/",
-    "legacy": "/agency/?item=governor-s-office-of-business-and-economic-development"
+    "legacy": "/agency/?item=governor%E2%80%99s-office-of-business-and-economic-development"
   },
   {
     "target": "/departments/238/",
@@ -737,11 +737,11 @@
   },
   {
     "target": "/departments/242/",
-    "legacy": "/agency/?item=infrastructure-and-economic-development-bank-i-bank"
+    "legacy": "/agency/?item=infrastructure-and-economic-development-bank-(i-bank)"
   },
   {
     "target": "/departments/243/",
-    "legacy": "/agency/?item=legislative-analyst-s-office"
+    "legacy": "/agency/?item=legislative-analyst's-office"
   },
   {
     "target": "/departments/244/",
@@ -789,7 +789,7 @@
   },
   {
     "target": "/departments/255/",
-    "legacy": "/agency/?item=governor-s-office-of-planning-and-research"
+    "legacy": "/agency/?item=governor's-office-of-planning-and-research"
   },
   {
     "target": "/departments/256/",
@@ -837,7 +837,7 @@
   },
   {
     "target": "/departments/268/",
-    "legacy": "/agency/?item=state-controller-s-office"
+    "legacy": "/agency/?item=state-controller's-office"
   },
   {
     "target": "/departments/269/",
@@ -881,7 +881,7 @@
   },
   {
     "target": "/departments/279/",
-    "legacy": "/agency/?item=state-treasurer-s-office"
+    "legacy": "/agency/?item=state-treasurer's-office"
   },
   {
     "target": "/departments/280/",
@@ -889,7 +889,7 @@
   },
   {
     "target": "/departments/281/",
-    "legacy": "/agency/?item=governor-s-office-of-the-tribal-advisor"
+    "legacy": "/agency/?item=governor's-office-of-the-tribal-advisor"
   },
   {
     "target": "/departments/282/",
@@ -929,7 +929,7 @@
   },
   {
     "target": "/departments/305/",
-    "legacy": "/agency/?item=department-of-fi-cal"
+    "legacy": "/agency/?item=department-of-fi%24cal"
   },
   {
     "target": "/departments/306/",
@@ -1013,7 +1013,7 @@
   },
   {
     "target": "/departments/229/services/23/",
-    "legacy": "/service/?item=honor-a-hero-hire-a-vet"
+    "legacy": "/service/?item=honor-a-hero%2C-hire-a-vet"
   },
   {
     "target": "/departments/287/services/24/",
@@ -1181,7 +1181,7 @@
   },
   {
     "target": "/departments/283/services/75/",
-    "legacy": "/service/?item=request-free-california-official-visitor-s-guide"
+    "legacy": "/service/?item=request-free-california-official-visitor's-guide"
   },
   {
     "target": "/departments/237/services/77/",
@@ -1205,7 +1205,7 @@
   },
   {
     "target": "/departments/172/services/83/",
-    "legacy": "/service/?item=find-an-esl-english-class"
+    "legacy": "/service/?item=find-an-esl%2Fenglish-class"
   },
   {
     "target": "/departments/172/services/84/",
@@ -1233,7 +1233,7 @@
   },
   {
     "target": "/departments/200/services/1101/",
-    "legacy": "/service/?item=path-to-u-s-citizenship"
+    "legacy": "/service/?item=path-to-u.s.-citizenship"
   },
   {
     "target": "/departments/198/services/1106/",
@@ -1261,7 +1261,7 @@
   },
   {
     "target": "/departments/208/services/1113/",
-    "legacy": "/service/?item=get-job-training-in-madera-fresno"
+    "legacy": "/service/?item=get-job-training-in-madera%2Ffresno"
   },
   {
     "target": "/departments/208/services/1114/",
@@ -1277,7 +1277,7 @@
   },
   {
     "target": "/departments/247/services/1117/",
-    "legacy": "/service/?item=get-daca-info-about-worker-s-rights"
+    "legacy": "/service/?item=get-daca-info-about-worker's-rights"
   },
   {
     "target": "/departments/282/services/1118/",
@@ -1321,7 +1321,7 @@
   },
   {
     "target": "/departments/219/services/1129/",
-    "legacy": "/service/?item=submit-an-imr-complaint-form"
+    "legacy": "/service/?item=submit-an-imr%2Fcomplaint-form"
   },
   {
     "target": "/departments/40/services/1130/",
@@ -1357,7 +1357,7 @@
   },
   {
     "target": "/departments/256/services/1138/",
-    "legacy": "/service/?item=apply-for-loan-repayments-scholarships-grants"
+    "legacy": "/service/?item=apply-for-loan-repayments%2C-scholarships%2C-grants"
   },
   {
     "target": "/departments/256/services/1139/",
@@ -1445,7 +1445,7 @@
   },
   {
     "target": "/departments/236/services/1168/",
-    "legacy": "/service/?item=calfile-file-return-for-free"
+    "legacy": "/service/?item=calfile---file-return-for-free"
   },
   {
     "target": "/departments/162/services/1169/",
@@ -1453,7 +1453,7 @@
   },
   {
     "target": "/departments/175/services/1170/",
-    "legacy": "/service/?item=california-department-of-insurance-cdi"
+    "legacy": "/service/?item=california-department-of-insurance-(cdi)"
   },
   {
     "target": "/departments/175/services/1171/",
@@ -1469,7 +1469,7 @@
   },
   {
     "target": "/departments/176/services/1174/",
-    "legacy": "/service/?item=women-infants-and-children-wic"
+    "legacy": "/service/?item=women%2C-infants-and-children-(wic)"
   },
   {
     "target": "/departments/139/services/1175/",
@@ -1481,11 +1481,11 @@
   },
   {
     "target": "/departments/172/services/1178/",
-    "legacy": "/service/?item=ca-meals-for-kids-app-android"
+    "legacy": "/service/?item=ca-meals-for-kids-app-(android)"
   },
   {
     "target": "/departments/172/services/1179/",
-    "legacy": "/service/?item=meals-for-kids-ios"
+    "legacy": "/service/?item=meals-for-kids-(ios)"
   },
   {
     "target": "/departments/178/services/1180/",
@@ -1493,7 +1493,7 @@
   },
   {
     "target": "/departments/236/services/1181/",
-    "legacy": "/service/?item=volunteer-income-tax-assistance-vita"
+    "legacy": "/service/?item=volunteer-income-tax-assistance-(vita)"
   },
   {
     "target": "/departments/101/services/1182/",
@@ -1501,7 +1501,7 @@
   },
   {
     "target": "/departments/178/services/1183/",
-    "legacy": "/service/?item=earned-income-tax-credit-eitc"
+    "legacy": "/service/?item=earned-income-tax-credit-(eitc)"
   },
   {
     "target": "/departments/237/services/1184/",
@@ -1521,7 +1521,7 @@
   },
   {
     "target": "/departments/89/services/1189/",
-    "legacy": "/service/?item=find-recruitment-events-and-resources"
+    "legacy": "/service/?item=find-recruitment-events-%26-resources"
   },
   {
     "target": "/departments/89/services/1190/",
