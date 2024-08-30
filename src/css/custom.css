@@ -68,8 +68,8 @@ header {
 
     > a > div.logo-assets {
       > img.logo-img {
-        max-height: 90px;
-        height: 90px;
+        max-height: 70px;
+        height: 70px;
       }
 
       > div.logo-text {
@@ -161,7 +161,7 @@ header {
   /* -- Search * -- */
   @media (width >= 992px) {
     > div.full-width-nav > div.featured-search {
-      top: -75px !important; /* override state template */
+      top: -65px !important; /* override state template */
 
       > div.container {
         /* -- safari 13.1 fix * -- */
