@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{% metatitle %}</title>
+    <meta charset="utf-8" />
+    <meta name="Author" content="State of California" />
+    <meta name="Description" content="{{ description }}" />
+    <meta name="Keywords" content="California, government, {{ keywords }}" />
+    {%- if noindex %}
+    <meta name="robots" content="noindex" />
+    {% else %}
+    <meta name="robots" content="index, follow" />
+    {%- endif %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="{% metatitle %}" />
+
+    <!-- Canonical link, improves SEO -->
+    <link href="{% canonical %}" rel="canonical" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="California State Portal" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{% canonical %}" />
+    <meta property="og:title" content="{% metatitle %}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:image" content="{{ socialimage }}" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{% canonical %}" />
+    <meta name="twitter:title" content="{% metatitle %}" />
+    <meta name="twitter:description" content="{{ description }}" />
+    <meta name="twitter:image" content="{{ socialimage }}" />
+
+    <link href="/css/175.css" rel="stylesheet" />
+    <script src="/js/175.js"></script>
+  </head>
+  <body class="primary">
+    {% block content -%} {{ content | safe }} {%- endblock -%}
+  </body>
+</html>
