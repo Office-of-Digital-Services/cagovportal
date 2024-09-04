@@ -39,9 +39,10 @@
     <meta name="twitter:image" content="{{ socialimage }}" />
 
     <link href="/css/175.css" rel="stylesheet" />
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script src="/js/175.js"></script>
   </head>
-  <body class="primary">
+  <body style="margin:0px;">
     {% block content -%} {{ content | safe }} {%- endblock -%}
   </body>
 </html>
