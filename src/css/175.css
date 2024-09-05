@@ -2,6 +2,7 @@
   /* layout variables */
   --columns-gap: 1.674vw;
   --desktop-max-width: 1276px;
+  --desktop-max-width-tablet: 921px;
   --mobile-breakpoint-width: 1080px;
   --sidebar-max-width: 15rem;
   --main-content-max-width: 82rem;
@@ -22,6 +23,7 @@
   --brand-secondary-300: #d9b873;
   --brand-secondary-200: #ecd892;
   --brand-secondary-100: #fbeca8;
+  --brand-secondary-50: #f6f3ea;
   --text-dark: #323232;
   --text-white: #ffffff;
   --hyperlink-light: #0057ad;
@@ -128,6 +130,14 @@
   main * + * {
     margin-block-start: var(--space-unit-x2);
   }
+
+  header,
+  footer,
+  main,
+  section,
+  article {
+    container-type: inline-size;
+  }
 }
 
 @layer typogrqphy {
@@ -157,15 +167,20 @@
   }
 
   /* --- Typography ---  */
-  p,
-  li,
+  h1,
   h2,
   h3,
   h4,
-  h5,
+  h5 {
+    text-wrap: balance;
+  }
+
+  p,
+  li,
   small,
   blockquote {
     max-width: var(--text-max-width);
+    text-wrap: pretty;
   }
 
   h1 {
@@ -295,15 +310,80 @@
     align-items: flex-end;
   }
 
+  .flex-gap-1 {
+    gap: var(--space-unit-1);
+  }
+
   .mt-0 {
     margin-top: 0 !important;
+  }
+
+  .mt-1 {
+    margin-top: var(--space-unit-1) !important;
+  }
+
+  .mt-x2 {
+    margin-top: var(--space-unit-x2) !important;
+  }
+
+  .mt-x4 {
+    margin-top: var(--space-unit-x4) !important;
+  }
+
+  .mt-x8 {
+    margin-top: var(--space-unit-x8) !important;
+  }
+
+  .mt-x16 {
+    margin-top: var(--space-unit-x16) !important;
+  }
+
+  .mb-1 {
+    margin-bottom: var(--space-unit-1) !important;
+  }
+
+  .mb-x2 {
+    margin-bottom: var(--space-unit-x2) !important;
+  }
+
+  .mb-x4 {
+    margin-bottom: var(--space-unit-x4) !important;
+  }
+
+  .mb-x8 {
+    margin-bottom: var(--space-unit-x8) !important;
+  }
+
+  .mb-x16 {
+    margin-bottom: var(--space-unit-x16) !important;
   }
 
   .mx-auto {
     margin: 0 auto !important;
   }
 
+  .text-center {
+    text-align: center !important;
+  }
+
+  .font-size-2rem {
+    font-size: clamp(1.75rem, 1.6667rem + 0.4444vw, 2rem) !important;
+  }
+
+  .font-weight-400 {
+    font-weight: 400;
+  }
+
+  .font-weight-300 {
+    font-weight: 300;
+  }
+
   /* spacing */
+
+  .pr-0 {
+    padding-top: 0 !important;
+  }
+
   .pt-1 {
     padding-top: var(--space-unit-1) !important;
   }
@@ -318,6 +398,10 @@
 
   .pt-x8 {
     padding-top: var(--space-unit-x8) !important;
+  }
+
+  .pb-0 {
+    padding-bottom: 0 !important;
   }
 
   .pb-1 {
@@ -336,6 +420,10 @@
     padding-bottom: var(--space-unit-x8) !important;
   }
 
+  .pl-0 {
+    padding-left: 0 !important;
+  }
+
   .pl-1 {
     padding-left: var(--space-unit-1) !important;
   }
@@ -350,6 +438,10 @@
 
   .pl-x8 {
     padding-left: var(--space-unit-x8) !important;
+  }
+
+  .pr-0 {
+    padding-right: 0 !important;
   }
 
   .pr-1 {
@@ -375,6 +467,22 @@
 
   .bg-white {
     background-color: var(--white) !important;
+  }
+
+  .bg-gray-10 {
+    background-color: var(--gray-10) !important;
+  }
+
+  .bg-gray-25 {
+    background-color: var(--gray-25) !important;
+  }
+
+  .bg-gray-50 {
+    background-color: var(--gray-50) !important;
+  }
+
+  .bg-gray-75 {
+    background-color: var(--gray-75) !important;
   }
 
   .bg-gray-700 {
@@ -445,6 +553,10 @@
     background-color: var(--brand-secondary-100) !important;
   }
 
+  .bg-secondary-50 {
+    background-color: var(--brand-secondary-50) !important;
+  }
+
   .gold-gradient-header {
     background: linear-gradient(
       90deg,
@@ -488,6 +600,12 @@
   /* --- Layouts --- */
   .wrapper-fixed-width {
     max-width: var(--desktop-max-width);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .wrapper-fixed-width-tablet {
+    max-width: var(--desktop-max-width-tablet);
     margin-right: auto;
     margin-left: auto;
   }
@@ -753,16 +871,6 @@
   }
 }
 
-/* Dark theme */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: var(--main-dark);
-    --text-color: var(--text-white);
-    --link-color: var(--hyperlink-dark);
-    --active-link-color: var(--hyperlink-activated-dark);
-  }
-}
-
 /* UTILITY HEADER *?/
 /* -----------------------------------------
    TOP NAVIGATION
@@ -942,6 +1050,7 @@ header {
   z-index: 10000;
   transition: all 600ms;
   background-color: #f2e9c9;
+  position: relative;
 }
 
 @media (min-width: 921px) {
@@ -1027,4 +1136,26 @@ header .header-button-links {
   object-position: 50% 50%;
   display: block;
   width: 100%;
+}
+
+/* -----------------------------------------
+   Countdown
+----------------------------------------- */
+.countdown div {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 0;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--brand-primary-900);
+}
+
+.countdown-text {
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none !important;
+}
+
+abbr[title] {
+  text-decoration: none !important;
 }
