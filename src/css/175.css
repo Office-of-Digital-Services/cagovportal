@@ -18,6 +18,7 @@
   --brand-primary-500: #2a71f0;
   --brand-primary-300: #9dbef8;
   --brand-primary-100: #e6eefd;
+  --brand-secondary-1000: #896a39;
   --brand-secondary-900: #ab8547;
   --brand-secondary-500: #cbad6d;
   --brand-secondary-300: #d9b873;
@@ -263,8 +264,9 @@
   .btn-primary:focus {
     background-color: var(--brand-primary-900);
     border-color: var(--brand-primary-900);
-    outline: var(--border-2) solid var(--brand-primary-500);
+    outline: 2px solid var(--brand-primary-500);
     outline-offset: 2px;
+    color: var(--white);
   }
 
   .btn-primary:active {
@@ -368,6 +370,14 @@
 
   .font-size-2rem {
     font-size: clamp(1.75rem, 1.6667rem + 0.4444vw, 2rem) !important;
+  }
+
+  .font-size-2-25rem {
+    font-size: clamp(1.85rem, 1.7167rem + 0.7111vw, 2.25rem) !important;
+  }
+
+  .font-size-3rem {
+    font-size: clamp(2rem, 1.6667rem + 1.7778vw, 3rem) !important;
   }
 
   .font-weight-400 {
@@ -577,6 +587,58 @@
       rgba(217, 184, 115, 0.6) 65.49%,
       rgba(171, 133, 71, 0.6) 86.14%
     );
+  }
+
+  .white {
+    color: var(--white) !important;
+  }
+
+  .primary-900 {
+    color: var(--brand-primary-900) !important;
+  }
+
+  .primary-700 {
+    color: var(--brand-primary-700) !important;
+  }
+
+  .primary-500 {
+    color: var(--brand-primary-500) !important;
+  }
+
+  .primary-300 {
+    color: var(--brand-primary-300) !important;
+  }
+
+  .primary-100 {
+    color: var(--brand-primary-100) !important;
+  }
+
+  .secondary-1000 {
+    color: var(--brand-secondary-1000) !important;
+  }
+
+  .secondary-900 {
+    color: var(--brand-secondary-900) !important;
+  }
+
+  .secondary-700 {
+    color: var(--brand-secondary-700) !important;
+  }
+
+  .secondary-500 {
+    color: var(--brand-secondary-500) !important;
+  }
+
+  .secondary-300 {
+    color: var(--brand-secondary-300) !important;
+  }
+
+  .secondary-100 {
+    color: var(--brand-secondary-100) !important;
+  }
+
+  .secondary-50 {
+    color: var(--brand-secondary-50) !important;
   }
 
   /* borders */
@@ -1158,4 +1220,105 @@ header .header-button-links {
 
 abbr[title] {
   text-decoration: none !important;
+}
+
+/* -----------------------------------------
+   PANES 
+----------------------------------------- */
+.pane {
+  width: 100%;
+  display: block;
+}
+
+.group-left,
+.group-right {
+  float: none;
+  min-height: 320px;
+  vertical-align: middle;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.group-left .pane-img,
+.group-right .pane-img {
+  display: block;
+  min-height: 320px;
+  width: 100%;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: 50% 50% !important;
+}
+
+.pane-content {
+  padding: 10px 30px 20px 40px;
+}
+
+.odd .group-right:before,
+.even .group-left:after {
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.bg-highlight a {
+  color: #111111;
+  text-decoration: underline;
+}
+
+.bg-highlight .btn {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .pane {
+    display: table;
+  }
+  .group-left,
+  .group-right {
+    width: 50%;
+    display: table-cell;
+    top: 0;
+  }
+  .odd .group-right:before {
+    right: 100%;
+    top: 50%;
+    border-width: 30px;
+    margin-top: -30px;
+  }
+  .even .group-left:after {
+    left: 100%;
+    top: 50%;
+    border-width: 30px;
+    margin-top: -30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .even .group-left {
+    top: 320px;
+  }
+  .even .group-right {
+    top: -320px;
+  }
+  .odd .group-right:before {
+    bottom: 100%;
+    left: 25%;
+    border-width: 20px;
+    margin-left: -20px;
+  }
+  .even .group-left:after {
+    bottom: 100%;
+    left: 25%;
+    border-width: 20px;
+    margin-left: -20px;
+    bottom: 100%;
+    left: 25%;
+    border-width: 20px;
+    margin-left: -20px;
+  }
 }

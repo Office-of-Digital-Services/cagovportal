@@ -61,3 +61,47 @@ document.addEventListener("DOMContentLoaded", () => {
     header.classList.toggle("sticky", window.scrollY > 0);
   });
 });
+
+// PANES
+
+document.addEventListener("DOMContentLoaded", pane);
+window.addEventListener("resize", pane);
+
+function pane() {
+  document.querySelectorAll(".even .group-left").forEach(element => {
+    if (element instanceof HTMLElement) {
+      if (window.innerWidth < 768) {
+        let EvenLeftHeight = element.offsetHeight;
+        element.style.height = `${EvenLeftHeight}px`;
+        element.style.top = `${EvenLeftHeight}px`;
+      } else {
+        element.style.top = "0";
+      }
+    }
+  });
+
+  document.querySelectorAll(".even .group-right").forEach(element => {
+    if (
+      element instanceof HTMLElement &&
+      element.previousElementSibling instanceof HTMLElement
+    ) {
+      if (window.innerWidth < 768) {
+        let EvenRightHeight = element.previousElementSibling.offsetHeight;
+        element.style.height = `${EvenRightHeight}px`;
+        element.style.top = `${-EvenRightHeight}px`;
+      } else {
+        element.style.top = "0";
+      }
+    }
+  });
+
+  document.querySelectorAll(".pane-img").forEach(element => {
+    if (
+      element instanceof HTMLElement &&
+      element.parentElement instanceof HTMLElement
+    ) {
+      let SetHeight = element.parentElement.offsetHeight;
+      element.style.height = SetHeight + "px";
+    }
+  });
+}
