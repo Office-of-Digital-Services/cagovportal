@@ -18,6 +18,7 @@
   --brand-primary-500: #2a71f0;
   --brand-primary-300: #9dbef8;
   --brand-primary-100: #e6eefd;
+  --brand-secondary-1000: #896a39;
   --brand-secondary-900: #ab8547;
   --brand-secondary-500: #cbad6d;
   --brand-secondary-300: #d9b873;
@@ -370,6 +371,10 @@
     font-size: clamp(1.75rem, 1.6667rem + 0.4444vw, 2rem) !important;
   }
 
+  .font-size-3rem {
+    font-size: clamp(2rem, 1.6667rem + 1.7778vw, 3rem);
+  }
+
   .font-weight-400 {
     font-weight: 400;
   }
@@ -577,6 +582,54 @@
       rgba(217, 184, 115, 0.6) 65.49%,
       rgba(171, 133, 71, 0.6) 86.14%
     );
+  }
+
+  .primary-900 {
+    color: var(--brand-primary-900) !important;
+  }
+
+  .primary-700 {
+    color: var(--brand-primary-700) !important;
+  }
+
+  .primary-500 {
+    color: var(--brand-primary-500) !important;
+  }
+
+  .primary-300 {
+    color: var(--brand-primary-300) !important;
+  }
+
+  .primary-100 {
+    color: var(--brand-primary-100) !important;
+  }
+
+  .secondary-1000 {
+    color: var(--brand-secondary-1000) !important;
+  }
+
+  .secondary-900 {
+    color: var(--brand-secondary-900) !important;
+  }
+
+  .secondary-700 {
+    color: var(--brand-secondary-700) !important;
+  }
+
+  .secondary-500 {
+    color: var(--brand-secondary-500) !important;
+  }
+
+  .secondary-300 {
+    color: var(--brand-secondary-300) !important;
+  }
+
+  .secondary-100 {
+    color: var(--brand-secondary-100) !important;
+  }
+
+  .secondary-50 {
+    color: var(--brand-secondary-50) !important;
   }
 
   /* borders */
