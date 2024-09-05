@@ -1,22 +1,63 @@
-window.addEventListener("load", () => {
-  let prevScrollpos = window.pageYOffset;
-  const navbar = document.getElementById("navbar");
+/* HEADER */
 
-  window.onscroll = function () {
-    let currentScrollPos = window.pageYOffset;
-    if (currentScrollPos > 200) {
-      if (prevScrollpos > currentScrollPos) {
-        navbar.classList.add("sticky");
-        navbar.classList.remove("hidden");
-      } else {
-        navbar.classList.add("hidden");
-        navbar.classList.remove("sticky");
-      }
-    } else {
-      navbar.classList.remove("hidden");
-      navbar.classList.remove("sticky");
+//@ts-check
+
+/* sticky header / hiding official header on scroll */
+window.addEventListener("load", () => {
+  const doc = document.documentElement;
+
+  let prevScroll = window.scrollY || doc.scrollTop;
+  let curScroll;
+  let direction = 0;
+  let prevDirection = 0;
+
+  const headerAlert = document.querySelector("header .alert");
+  const header = document.querySelector(".utility-header");
+  const mainheader = document.querySelector("header");
+  if (!header || !mainheader) return;
+
+  window.addEventListener("scroll", () => {
+    /*
+     ** Find the direction of scroll
+     ** 0 - initial, 1 - up, 2 - down
+     */
+
+    curScroll = window.scrollY || doc.scrollTop;
+    if (curScroll > prevScroll) {
+      //scrolled up
+      direction = 2;
+    } else if (curScroll < prevScroll) {
+      //scrolled down
+      direction = 1;
     }
-    prevScrollpos = currentScrollPos;
-  };
-  console.log("test");
+
+    if (direction !== prevDirection) {
+      // Toggle Header
+      if (direction === 2 && curScroll > 40) {
+        const hiddenheight =
+          header.clientHeight + (headerAlert?.clientHeight || 0);
+
+        mainheader.style.top = `-${hiddenheight}px`;
+        prevDirection = direction;
+      } else if (direction === 1 && curScroll < 40) {
+        // mainheader.classList.remove('scrolled');
+        // header.classList.remove('is-hidden');
+        // header.removeAttribute("style");
+        mainheader.style.removeProperty("top");
+        prevDirection = direction;
+      }
+    }
+
+    prevScroll = curScroll;
+  });
+});
+
+// retain scroll position
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Add an event listener for the scroll event
+  window.addEventListener("scroll", () => {
+    let header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+  });
 });
