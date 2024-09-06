@@ -357,6 +357,14 @@
     gap: var(--space-unit-1);
   }
 
+  .flex-gap-x2 {
+    gap: var(--space-unit-x2);
+  }
+
+  .flex-gap-x4 {
+    gap: var(--space-unit-x4);
+  }
+
   .mt-0 {
     margin-top: 0 !important;
   }
@@ -1436,4 +1444,99 @@ abbr[title] {
 
 .height-100 {
   max-height: 100px !important;
+}
+
+.no-underline {
+  text-decoration: none !important;
+}
+
+.underline-hover:hover {
+  text-decoration: underline !important;
+}
+
+/* footer */
+footer {
+  font-size: 1rem;
+}
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: var(--desktop-max-width, 1276px);
+  margin: 0 auto;
+  padding: var(--space-unit-x2, 1rem);
+}
+footer a:hover {
+  color: var(--brand-primary-900, #003588);
+}
+footer a:focus {
+  outline: 2px solid var(--brand-primary-500);
+}
+footer .footer-secondary-links {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-secondary-links a {
+  margin-right: 1.5rem;
+  padding-top: var(--space-unit-1, 0.5rem);
+  padding-bottom: var(--space-unit-1, 0.5rem);
+  text-decoration: none;
+  color: var(--gray-900);
+}
+footer .footer-secondary-links a span.external-link-icon,
+footer .footer-secondary-links a span.ca-gov-icon-external-link {
+  display: none;
+}
+footer .footer-secondary-links a:hover {
+  color: #000;
+  text-decoration: underline !important;
+}
+footer .bg-light-grey svg {
+  padding: 0;
+}
+footer .bg-light-grey svg .ca {
+  fill: var(--cagov-highlight, #fec02f);
+}
+
+footer .bg-light-grey svg .gov {
+  fill: var(--brand-primary-900, #003484);
+}
+footer .cagov-logo {
+  padding-top: var(--space-unit-1, 0.5rem);
+  padding-bottom: var(--space-unit-1, 0.5rem);
+  padding-right: 1.5rem;
+}
+
+footer .footer-secondary-links a,
+footer .copyright {
+  color: var(--gray-900);
+  padding-top: var(--space-unit-1, 0.5rem);
+  padding-bottom: var(--space-unit-1, 0.5rem);
+}
+
+footer .copyright {
+  margin: 0;
+}
+
+.bg-light-grey {
+  background-color: var(--white, #fff);
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+@media (min-width: 991px) {
+  footer .footer-secondary-links,
+  footer .container {
+    margin-right: auto;
+    flex-direction: row;
+    align-items: center;
+  }
+  footer .footer-secondary-links.flex-col-end,
+  footer .container.flex-col-end {
+    flex-direction: column;
+    align-items: end;
+  }
 }
