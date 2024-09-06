@@ -363,6 +363,10 @@
     align-items: flex-end;
   }
 
+  .flex-gap-0 {
+    gap: 0 !important;
+  }
+
   .flex-gap-1 {
     gap: var(--space-unit-1);
   }
@@ -373,6 +377,12 @@
 
   .flex-gap-x4 {
     gap: var(--space-unit-x4);
+  }
+
+  @media (min-width: 921px) {
+    .flex-order-reverse {
+      flex-direction: row-reverse;
+    }
   }
 
   .mt-0 {
@@ -739,6 +749,12 @@
     height: auto;
     display: inline-block;
     vertical-align: top;
+  }
+
+  .image-fit {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
   /* Accessibility */
@@ -1323,107 +1339,6 @@ header .header-button-links {
 
 abbr[title] {
   text-decoration: none !important;
-}
-
-/* -----------------------------------------
-   PANES 
------------------------------------------ */
-.pane {
-  width: 100%;
-  display: block;
-}
-
-.group-left,
-.group-right {
-  float: none;
-  min-height: 320px;
-  vertical-align: middle;
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-
-.group-left .pane-img,
-.group-right .pane-img {
-  display: block;
-  min-height: 320px;
-  width: 100%;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-position: 50% 50% !important;
-}
-
-.pane-content {
-  padding: 10px 30px 20px 40px;
-}
-
-.odd .group-right:before,
-.even .group-left:after {
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.bg-highlight a {
-  color: #111111;
-  text-decoration: underline;
-}
-
-.bg-highlight .btn {
-  text-decoration: none;
-}
-
-@media (min-width: 768px) {
-  .pane {
-    display: table;
-  }
-  .group-left,
-  .group-right {
-    width: 50%;
-    display: table-cell;
-    top: 0;
-  }
-  .odd .group-right:before {
-    right: 100%;
-    top: 50%;
-    border-width: 30px;
-    margin-top: -30px;
-  }
-  .even .group-left:after {
-    left: 100%;
-    top: 50%;
-    border-width: 30px;
-    margin-top: -30px;
-  }
-}
-
-@media (max-width: 767px) {
-  .even .group-left {
-    top: 320px;
-  }
-  .even .group-right {
-    top: -320px;
-  }
-  .odd .group-right:before {
-    bottom: 100%;
-    left: 25%;
-    border-width: 20px;
-    margin-left: -20px;
-  }
-  .even .group-left:after {
-    bottom: 100%;
-    left: 25%;
-    border-width: 20px;
-    margin-left: -20px;
-    bottom: 100%;
-    left: 25%;
-    border-width: 20px;
-    margin-left: -20px;
-  }
 }
 
 /* VIDEO CONTAINER */
