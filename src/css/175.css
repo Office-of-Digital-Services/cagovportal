@@ -73,7 +73,9 @@
   --space-unit-x16: calc(0.5rem * 16);
 
   /* typography variables */
-  --font-family: Noto Sans;
+  --font-family: Outfit;
+  --font-family-caladea: Caladea;
+  --font-family-outfit: Outfit;
   --text-max-width: 48rem;
   --font-size-base: 1rem;
   --font-weight-base: 400;
@@ -237,6 +239,14 @@
 
   li + li {
     margin-top: var(--space-unit-x4);
+  }
+
+  .font-family-caladea {
+    font-family: var(--font-family-caladea) !important;
+  }
+
+  .font-family-outfit {
+    font-family: var(--font-family-outfit) !important;
   }
 
   /* buttons */
