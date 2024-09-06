@@ -1,6 +1,7 @@
 ---
-description: 175 Website
-title: 175 years of California
+description: On September 9, 2025, California will celebrate 175 years of statehood. A lot of our progress in society has roots in California. The future happens here, first.
+title: 175 years of California Dreaming
+metatitle: 175 years of California Dreaming
 layout: landing175
 permalink: 175/index.html
 ---
@@ -11,9 +12,9 @@ permalink: 175/index.html
       <div class="flex-row">
         <div class="social-media-links">
           <div class="header-cagov-logo">
-            <a class="cagov-logo" href="https://ca.gov" target="_blank"
+            <a class="cagov-logo" href="/" target="_blank"
               ><svg
-                aria-labelledby="cagov-logo--title"
+                alt="CA.gov logo"
                 role="img"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +101,7 @@ permalink: 175/index.html
   <div class="site-header">
     <div class="container">
       <div class="site-header-content">
-        <a href="/" class="logo p-relative">
+        <a href="/175/" class="logo p-relative">
           <img
             src="https://cdn.cdt.ca.gov/cdt/CAWeb/ca175-logo.svg"
             class="p-absolute"
@@ -108,8 +109,8 @@ permalink: 175/index.html
         </a>
 
         <div class="header-button-links">
-          <a href="#youtube" class="btn-primary">Stay in the loop</a>
-          <a href="#" class="btn-primary">Follow us</a>
+          <a href="#form" class="btn-primary">Stay in the loop</a>
+          <a href="#follow" class="btn-primary">Follow us</a>
         </div>
       </div>
     </div>
@@ -121,17 +122,21 @@ permalink: 175/index.html
     class="d-flex flex-justify-content-center bg-gray-700 p-relative main-banner">
     <figure class="video-background">
       <video
+        alt="Scenes of California play in a video in the background. This includes black and white footage, the beaches and coast, Yosemite, cityscapes, and more. The CA 175 logo in the middle of the video."
         src="https://cdn.cdt.ca.gov/cdt/CAWeb/175website-movie.mp4"
         muted=""
         playsinline=""
         loop=""
         autoplay=""
-        loading="lazy"></video>
+        loading="lazy"
+        controls
+        poster="https://cdn.cdt.ca.gov/cdt/CAWeb/poster.jpg"></video>
     </figure>
     <div
       id="animation_container"
       style="background-color:rgba(51, 51, 51, 0.00); width:287px; height:323px">
       <canvas
+        alt="The CA 175 logo animation"
         id="canvas"
         width="287"
         height="323"
@@ -248,7 +253,7 @@ permalink: 175/index.html
       <div class="group-right" style="top: 0px;">
         <div
           class="pane-img"
-          aria-label="Group of young people"
+          aria-label="UFW strikers await the arrival of Cesar Chavez in a field near El Centro, CA"
           style='background: url("https://cdn.cdt.ca.gov/cdt/CAWeb/group.jpg"); height: 0px;'></div>
       </div>
     </div>
@@ -256,7 +261,7 @@ permalink: 175/index.html
       <div class="group-left">
         <div
           class="pane-img"
-          aria-label="Elderly couple are cutting a wedding cake with governor Gavin Newson cheering them on the background"
+          aria-label="Del Martin and Phyllis Lyon are married by then San Francisco Mayor Gavin Newsom at San Francisco City Hall."
           style='background: url("https://cdn.cdt.ca.gov/cdt/CAWeb/wedding.jpg"); height: 0px;'></div>
       </div>
       <div class="group-right bg-primary-900 white">
@@ -284,8 +289,7 @@ permalink: 175/index.html
   <div class="wrapper-fixed-width-tablet">
     <div class="container mt-x8 mb-x8">
       <h2
-        class="font-size-3rem primary-900 text-center font-family-caladea font-weight-400"
-        id="youtube">
+        class="font-size-3rem primary-900 text-center font-family-caladea font-weight-400">
         175 Years of California Dreaming
       </h2>
 
@@ -303,11 +307,14 @@ permalink: 175/index.html
   <!--YOUTUBE END-->
 
   <!--FORM-->
-  <div class="bg-secondary-50">
+  <div class="bg-secondary-50 scroller" id="form">
     <div class="wrapper-fixed-width">
       <div class="container-flex-two-columns-1fr-2fr-breakpoint-small">
         <div class="pt-x8 pb-x8 pr-x4">
-          <img src="https://cdn.cdt.ca.gov/cdt/CAWeb/map-outline.svg" />
+          <img
+            src="https://cdn.cdt.ca.gov/cdt/CAWeb/map-outline.svg"
+            alt=""
+            aria-hidden="true" />
         </div>
         <div class="pt-x8 pb-x8">
           <h2 class="font-size-3rem primary-900">Be the first to know</h2>
@@ -441,7 +448,7 @@ permalink: 175/index.html
             <input
               type="submit"
               value="Submit"
-              class="btn btn-primary m-t-lg" />
+              class="btn btn-primary mt-x4 width-auto" />
 
             <button
               class="g-recaptcha hidden"
@@ -453,76 +460,6 @@ permalink: 175/index.html
       </div>
     </div>
   </div>
-
-  <style type="text/css">
-    form:not(form[submit_attempted]) .form-control+.invalid-feedback,
-    form:not(form[submit_attempted]) .alert,
-    form:valid .alert,
-    .form-control:valid+.invalid-feedback {
-      display: none !important;
-    }
-
-
-    /* new */
-
-    .invalid-feedback {
-      position: relative;
-    }
-
-    .invalid-feedback::before {
-      content: "\ea2f";
-      position: absolute;
-      font-family: "CaGov";
-      font-size: 1.5rem;
-      right: 10px;
-      top: -51px;
-    }
-
-    form[submit_attempted] .alert {
-      border-left: 5px solid;
-    }
-
-    form[submit_attempted] .alert .container {
-      padding-top: 2px;
-    }
-
-    form[submit_attempted] .form-control:invalid {
-      border-bottom: 4px solid #cd402d;
-      position: relative;
-    }
-
-
-
-    .error-icon {
-      display: none;
-      float: right;
-      position: relative;
-      top: -2.7rem !important;
-      right: 10px;
-      font-size: 1.5rem;
-    }
-
-    form[submit_attempted] .form-control:invalid~.error-icon {
-      display: block;
-    }
-
-    .form-control[role="combobox"]::placeholder {
-      font-size: 1.1rem !important;
-    }
-
-    /* masking combobox carrot */
-    .combobox::before {
-      content: "\33";
-      position: absolute;
-      font-family: "CaGov";
-      font-size: 1.4rem;
-      width: 30px;
-      height: 30px;
-      background-color: white;
-      right: 5px;
-      top: 8px;
-    }
-  </style>
 
   <div class="modal fade" id="modalResponse" role="dialog" tabindex="-1">
     <div class="modal-dialog modal-lg">
@@ -653,7 +590,7 @@ permalink: 175/index.html
 
   <!--FORM END-->
   <!--FOOTER-->
-  <div class="gold-gradient-footer mt-0 pb-x8">
+  <div class="gold-gradient-footer mt-0 pb-x8 scroller" id="follow">
     <div class="wrapper-fixed-width">
       <div class="wrapper-fixed-width-tablet bg-primary-900 transformy-minus70">
         <div class="container-flex-two-columns-breakpoint-small pl-x8 pr-x8">
@@ -663,26 +600,26 @@ permalink: 175/index.html
               California Governor
             </h2>
             <div class="d-flex flex-gap-1">
-              <a href="#" class="mt-0"
+              <a href="https://www.facebook.com/CAgovernor/" class="mt-0"
                 ><img
                   class="share-icon"
                   src="https://cdn.cdt.ca.gov/cdt/CAWeb/share-facebook.svg"
                   alt="facebook share icon"
               /></a>
-              <a href="#" class="mt-0"
+              <a href="https://www.instagram.com/cagovernor/" class="mt-0"
                 ><img
                   class="share-icon"
                   src="https://cdn.cdt.ca.gov/cdt/CAWeb/share-Instagram.svg"
                   alt="Instagram share icon"
               /></a>
-              <a href="#" class="mt-0"
+              <a href="https://twitter.com/cagovernor" class="mt-0"
                 ><img
                   class="share-icon"
                   src="https://cdn.cdt.ca.gov/cdt/CAWeb/share-twitter.svg"
                   alt="Twitter share icon"
               /></a>
 
-              <a href="#" class="mt-0"
+              <a href="http://youtube.com/cagovernor" class="mt-0"
                 ><img
                   class="share-icon"
                   src="https://cdn.cdt.ca.gov/cdt/CAWeb/share-youtube.svg"
@@ -696,26 +633,28 @@ permalink: 175/index.html
               America 250
             </h2>
             <div class="d-flex flex-gap-1">
-              <a href="#" class="mt-0"
+              <a href="https://www.facebook.com/America250/" class="mt-0"
                 ><img
                   class="share-icon"
                   src="https://cdn.cdt.ca.gov/cdt/CAWeb/share-facebook.svg"
                   alt="facebook share icon"
               /></a>
-              <a href="#" class="mt-0"
+              <a href="https://www.instagram.com/250america/" class="mt-0"
                 ><img
                   class="share-icon"
                   src="https://cdn.cdt.ca.gov/cdt/CAWeb/share-Instagram.svg"
                   alt="Instagram share icon"
               /></a>
-              <a href="#" class="mt-0"
+              <a href="https://twitter.com/America250" class="mt-0"
                 ><img
                   class="share-icon"
                   src="https://cdn.cdt.ca.gov/cdt/CAWeb/share-twitter.svg"
                   alt="Twitter share icon"
               /></a>
 
-              <a href="#" class="mt-0"
+              <a
+                href="https://www.youtube.com/channel/UC5kBZFeCDcR_X7cOj9HC1hQ"
+                class="mt-0"
                 ><img
                   class="share-icon"
                   src="https://cdn.cdt.ca.gov/cdt/CAWeb/share-youtube.svg"
@@ -748,10 +687,14 @@ permalink: 175/index.html
               aria-level="2">
               About California
             </div>
-            <a href="#" class="d-block mt-x4 mb-x4 no-underline underline-hover"
+            <a
+              href="https://www.library.ca.gov/california-history/"
+              class="d-block mt-x4 mb-x4 no-underline underline-hover"
               >California history</a
             >
-            <a href="#" class="d-block mt-x4 mb-x4 no-underline underline-hover"
+            <a
+              href="https://gov.ca.gov/"
+              class="d-block mt-x4 mb-x4 no-underline underline-hover"
               >Office of the Governor</a
             >
           </div>
@@ -769,7 +712,7 @@ permalink: 175/index.html
                 <a href="#" class="mt-0">
                   <img
                     src="https://cdn.cdt.ca.gov/cdt/CAWeb/ca175-license-plate.jpg"
-                    alt="CA175 logo inside of license plate treatment"
+                    alt="CA 175 logo as a blue California license plate."
                     class="image-resposive height-100" />
                 </a>
               </div>
@@ -783,7 +726,7 @@ permalink: 175/index.html
   <footer class="mt-0">
     <div class="bg-light-grey">
       <div class="container">
-        <a href="https://ca.gov" class="cagov-logo mt-0" target="_blank">
+        <a href="/" class="cagov-logo mt-0" target="_blank">
           <svg
             aria-labelledby="cagov-logo--title"
             version="1.1"
@@ -834,13 +777,9 @@ permalink: 175/index.html
           </svg>
         </a>
         <div class="footer-secondary-links mt-0">
-          <a href="https://www.ca.gov/use/" class="mt-0">Conditions of Use</a>
-          <a href="https://www.ca.gov/privacy-policy/" class="mt-0"
-            >Privacy Policy</a
-          >
-          <a href="https://www.ca.gov/accessibility/" class="mt-0"
-            >Accessibility</a
-          >
+          <a href="/use/" class="mt-0">Conditions of Use</a>
+          <a href="/privacy-policy/" class="mt-0">Privacy Policy</a>
+          <a href="/accessibility/" class="mt-0">Accessibility</a>
         </div>
         <p class="copyright">
           Copyright &copy;
