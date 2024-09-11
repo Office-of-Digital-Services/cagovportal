@@ -26,7 +26,7 @@
       </div>
       <div class="settings-links ms-auto align-items-start pt-2">
         <a
-          data-href="{% translateurl 'es' %}"
+          href="#googtrans(en|es)"
           class="m-l-0 underline cursor-pointer"
           lang="es"
           hreflang="es"
@@ -35,7 +35,7 @@
           >Español</a
         >
         <a
-          data-href="{% translateurl 'ko' %}"
+          href="#googtrans(en|ko)"
           lang="ko"
           hreflang="ko"
           translate="no"
@@ -45,7 +45,7 @@
         >
 
         <a
-          data-href="{% translateurl 'tl' %}"
+          href="#googtrans(en|tl)"
           lang="tl"
           hreflang="tl"
           translate="no"
@@ -54,7 +54,7 @@
           >Tagalog</a
         >
         <a
-          data-href="{% translateurl 'vi' %}"
+          href="./#googtrans(en|vi)"
           hreflang="vi"
           translate="no"
           rel="alternate"
@@ -62,7 +62,7 @@
           >Tiếng Việt</a
         >
         <a
-          data-href="{% translateurl 'zh-hant' %}"
+          href="#googtrans(en|zh-TW)"
           lang="zh-hant"
           hreflang="zh-hant"
           translate="no"
@@ -70,6 +70,16 @@
           class="underline cursor-pointer"
           >繁體中文</a
         >
+
+        <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+          }
+        </script>
+
+        <script
+          type="text/javascript"
+          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
       </div>
     </div>
   </div>
