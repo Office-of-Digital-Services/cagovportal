@@ -65,11 +65,13 @@ header {
   > div.section-default > div.branding > div.header-organization-banner {
     display: flex;
     margin-right: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
     > a > div.logo-assets {
       > img.logo-img {
-        max-height: 70px;
-        height: 70px;
+        max-height: 60px;
+        height: 60px;
       }
 
       > div.logo-text {
@@ -92,7 +94,7 @@ header {
 
       @media (width <= 991px) {
         > img.logo-img {
-          max-height: 60px;
+          max-height: 50px;
         }
 
         > div.logo-text {
@@ -127,7 +129,7 @@ header {
         }
 
         > img.logo-img {
-          max-height: 55px;
+          max-height: 50px;
         }
       }
     }
@@ -137,6 +139,10 @@ header {
   > div.mobile-controls {
     > div.main-nav-icons {
       top: -5rem;
+
+      > button.toggle-menu {
+        margin-top: 1.8rem;
+      }
     }
   }
 
