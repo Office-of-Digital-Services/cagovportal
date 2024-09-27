@@ -1,0 +1,143 @@
+---
+landing: Services
+dynamic_sidenavid: topic
+layout: landing
+breadcrumbparent: Topics
+pagination:
+    data: topics
+    size: 1
+    alias: item
+    addAllPagesToCollections : true
+permalink: "topics/{{ item.slug }}/"
+eleventyComputed: 
+  description: "{{ item.metaDescription | safe }}"
+  title: "{{ item.name | safe }}"
+---
+
+<div
+  class="section-understated lineart"
+  style="background-image: url('{{item.topicImg}}'); background-repeat:no-repeat; background-position:right;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0 color-p2-darker">{{title}}</h1>
+  </div>
+</div>
+
+<div class="container p-y-lg">
+  <div class="row p-b-lg">
+    <div class="col-lg-3 pb-lg-5" role="complementary">
+      <!-- Side navigation -->
+      <nav class="side-navigation sticky-6">
+        <a href="javascript:;" aria-hidden="true" class="d-none">{{title}}</a>
+        <ul class="list-navigation">
+          <li>
+            <a href="/topics/" class="landing back" id="color-themes-list"
+              ><span class="sr-only">Back to </span>
+              Topics
+            </a>
+          </li>
+          {%- for link in topics | sortBy("featureOrder") %} {%- set href =
+          "/topics/"+link.slug+"/" -%} {%- set active = href === page.url -%}
+          <li>
+            <a
+              href="{{-href-}}"
+              {%-if
+              active%}
+              class="active landing"
+              aria-current="page"
+              tabindex="-1"
+              {%-endif-%}>
+              {{-link.text | default(link.name) | safe-}}
+            </a>
+          </li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </div>
+    <div class="col-md-9 mx-auto">
+      <div class="p-t-md lead">{{item.description | md | safe-}}</div>
+
+      <h2 class="m-b-0">Popular related services</h2>
+
+      <div class="row m-b-lg">
+        {%- for pop in item.popularServices -%}
+
+        <div class="col-md-6 m-t-md">
+          <article
+            class="pos-rel h-100 d-flex flex-column transform-scale-1_05--hover transition-0_3">
+            <figure
+              class="pos-rel border-0 pb-5 mb-5 pb-xl-5 mb-xl-4 pb-lg-5 mb-lg-4 pb-md-4 mb-md-4">
+              <img
+                src="{{pop.umgURL}}"
+                class="img-fluid p-a pos-abs absolute-centered-x width-75pct square"
+                loading="lazy"
+                alt="{{pop.imgAlt}}" />
+            </figure>
+            <div
+              class="bg-white bg-gray-50-hover text-center p-t-xxl p-x-md p-b-md  brd-solid-1 brd-gray-200 rounded-10 h-100">
+              <h3 class="h4 m-b text-left">
+                <a
+                  href="/departments/{{-pop.DepartmentId-}}/services/{{-pop.ServiceId-}}/"
+                  class="link-before no-underline">
+                  {{-pop.ServiceName-}}</a
+                >
+              </h3>
+              <p class="m-b text-left gray-900">{{-pop.Description-}}</p>
+            </div>
+          </article>
+        </div>
+
+        {%- endfor %}
+      </div>
+
+      <hr />
+
+      <h2 class="lead m-t items-count" aria-live="polite" role="region">
+        0 services <span class="sr-only">found</span>
+      </h2>
+      <div class="d-flex m-b-lg">
+        <label class="sr-only" for="searchbox">Filter by topic</label>
+        <input
+          type="search"
+          id="searchbox"
+          placeholder="Filter services"
+          class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-l webkit-appearance-none" />
+      </div>
+
+      <input
+        type="hidden"
+        id="defaultFilter"
+        name="AgencyTags"
+        value="{{item.name}}" />
+      <!-- This is the filter that will be applied to the search results -->
+
+      <cagovhome-filterlist
+        data-search-input-id="searchbox"
+        data-result-count-query=".items-count"
+        data-filter-storage-key="service"
+        data-row-filter-key="ServiceId"
+        data-filter-trigger-selector="input#defaultFilter">
+        {%- for service in state_entity.services |
+        pluck('AgencyTags',item.name,"includes") -%}
+        <div data-row-key="{{service.ServiceId}}" class="pos-rel">
+          <h2 class="lead bold m-t-0 m-b">
+            <a
+              href="/departments/{{ service.AgencyId }}/services/{{ service.ServiceId }}/"
+              >{{service.ServiceName}}</a
+            >
+          </h2>
+          <p class="font-size-14 bold m-t-sm">by {{service.FriendlyName}}</p>
+          <p class="service-description">{{service.Description}}</p>
+          <a
+            class="btn btn-outline-primary btn-lg"
+            href="{{ service.ServiceUrl }}"
+            >Launch service
+            <span class="sr-only">: {{service.ServiceName}}</span></a
+          >
+          <hr class="m-y-md" />
+        </div>
+        {%- endfor %}
+      </cagovhome-filterlist>
+    </div>
+  </div>
+</div>

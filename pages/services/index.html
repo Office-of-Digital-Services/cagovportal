@@ -1,0 +1,90 @@
+---
+landing: Services
+description: Find California state services by browsing popular options or searching by topic.
+title: Services
+layout: landing
+dynamic_sidenavid: service
+---
+
+<div
+  class="section-primary lineart"
+  style="background-image: url('/images/services-lineart.svg'); background-repeat:no-repeat; background-position:right; background-size:auto;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0">{{title}}</h1>
+  </div>
+</div>
+
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-lg-3 pb-lg-5 sticky-6 h-100 p-b-md">
+      {%-include "dynamic-sidenav.html"-%}
+    </div>
+    <div class="col-lg-9">
+      <p class="lead">
+        Find California state services by browsing popular options or searching
+        by topic.
+      </p>
+
+      <h2>Popular services</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <a href="/departments/178/services/60/" class="link-grid"
+            ><h3 class="m-a-0 lead bold">Food stamps</h3></a
+          >
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="/departments/193/services/15/" class="link-grid"
+            ><h3 class="m-a-0 lead bold">Traffic tickets</h3></a
+          >
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="/departments/287/services/25/" class="link-grid"
+            ><h3 class="m-a-0 lead bold">Business licenses</h3></a
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <a href="/departments/176/services/52/" class="link-grid"
+            ><h3 class="m-a-0 lead bold">Birth certificates</h3></a
+          >
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="/departments/217/services/37/" class="link-grid"
+            ><h3 class="m-a-0 lead bold">Apply for Medi-Cal</h3></a
+          >
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="/departments/155/services/42/" class="link-grid"
+            ><h3 class="m-a-0 lead bold">Lottery numbers</h3></a
+          >
+        </div>
+      </div>
+
+      <a href="/services/all/" class="btn btn-primary btn-lg btn-hover m-t"
+        >View all services</a
+      >
+
+      <h2>Topics</h2>
+
+      <div class="row">
+        {%- for tag in topics | sortBy("featureOrder") -%}
+        <div class="col-md-4 mb-4">
+          <div
+            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
+            <h3 class="h5 m-b">
+              <a
+                href="/topics/{{-tag.slug-}}/"
+                class="color-p2 link-before text-left no-underline d-block"
+                >{{-tag.name-}}</a
+              >
+            </h3>
+            <p class="m-b text-left">{{-tag.cardDescription-}}</p>
+          </div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<!-- Site navigation structural component -->
+<nav
+  id="navigation"
+  class="main-navigation dropdown"
+  aria-label="Main navigation">
+  <ul id="nav_list" class="top-level-nav">
+    <li class="nav-item">
+      <a
+        class="first-level-link {{- ' active' if landing === 'Services' }}"
+        href="/services/">
+        Services
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="first-level-link {{- ' active' if landing === 'Departments' }}"
+        href="/departments/">
+        Departments
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="first-level-link {{- ' active' if landing === 'About' }}"
+        href="/about-california/">
+        About California
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="first-level-link {{- ' active' if landing === 'Support' }}"
+        href="/support/">
+        Get help
+      </a>
+    </li>
+  </ul>
+</nav>

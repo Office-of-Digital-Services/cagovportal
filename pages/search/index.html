@@ -1,0 +1,97 @@
+---
+landing: Home
+description: Search CA.gov for state websites and featured services.
+title: Search CA.gov
+layout: landing
+noindex: True
+hide_search: true
+---
+
+<div
+  class="section-primary lineart"
+  style="background-image: url('/images/search-lineart.svg'); background-repeat:no-repeat; background-position:right;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0">{{title}}</h1>
+  </div>
+</div>
+
+<div class="container p-y-lg">
+  <!--Search result section-->
+  <div class="row">
+    <div class="col-lg-9 mx-auto">
+      <div class="search-results-header">
+        <!--Uncomment if you prefer to use original google search box. Be advised that original custom search box is not meeting WCAG accessibility standards. -->
+        <!--<gcse:searchbox-only resultsUrl="/serp.html" enableAutoComplete="true"></gcse:searchbox-only>-->
+
+        <form id="Search" class="d-flex" action="?">
+          <span class="sr-only" id="SearchInput">Custom Google Search</span>
+          <input
+            type="search"
+            id="q"
+            name="q"
+            aria-labelledby="SearchInput"
+            placeholder="Search this website"
+            class="search-textfield height-40"
+            style="width:95%" />
+          <button
+            type="submit"
+            class="gsc-search-button width-60 height-40 color-white border-0 bg-gray-600 bg-gray-800-hover">
+            <span class="ca-gov-icon-search" aria-hidden="true"></span>
+            <span class="sr-only">Submit</span>
+          </button>
+        </form>
+      </div>
+
+      <div class="section gcse-parent">
+        <gcse:searchresults-only
+          defaultToRefinement="this_site_first"></gcse:searchresults-only>
+        <!-- <script src='//www.google.com/jsapi' type='text/javascript'></script> -->
+
+        {{ content | safe }}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  window.addEventListener("load", () => {
+    // Search ID
+    const cx = "001779225245372747843:mdsmtl_vi1a"; // Update this value with your search engine unique ID. Submit a request to the CDT Service Desk if you don't already know your unique search engine ID.
+    const gcse = document.createElement("script");
+    gcse.type = "text/javascript";
+    gcse.async = true;
+    gcse.src = "https://cse.google.com/cse.js?cx=" + cx;
+    const s = document.getElementsByTagName("script");
+    s[s.length - 1].parentNode.insertBefore(gcse, s[s.length - 1]);
+
+    // extracting search query from the url parameter and applying it to the searchbox
+    document.querySelector("input[name=q]").value = new URLSearchParams(
+      window.location.search
+    ).get("q");
+
+    const gcseparent = document.querySelector(".gcse-parent");
+    if (gcseparent)
+      // Create a MutationObserver
+      new MutationObserver(mutationsList =>
+        mutationsList.forEach(mutation =>
+          /** @type {HTMLElement[]} */ (
+            [...mutation.addedNodes].filter(
+              node =>
+                node instanceof HTMLElement &&
+                node.querySelector(".gs-result:has(.gs-label.gs-labelActive")
+            )
+          ).forEach(titleDiv => {
+            const atag = titleDiv.querySelector("a");
+            if (atag)
+              atag.innerHTML = atag.innerHTML
+                .replace(" | www.ca.gov", "")
+                .replace(" Agency Details", "")
+                .replace(" Service Details", "");
+          })
+        )
+      ).observe(gcseparent, {
+        childList: true,
+        subtree: true
+      });
+  });
+</script>

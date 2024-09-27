@@ -1,0 +1,126 @@
+---
+landing: Services
+layout: landing
+breadcrumbparent: Services
+pagination:
+    data: state_entity.services
+    size: 1
+    alias: item
+    addAllPagesToCollections : true
+permalink: "departments/{{ item.AgencyId }}/services/{{ item.ServiceId }}/"
+eleventyComputed: 
+  description: Service details for "{{ item.ServiceName | safe }}"
+  keywords: "{{ item.Keywords | safe }}"
+  title: "{{ item.ServiceName | safe }}"
+---
+
+<!-- Begin Structured Data -->
+<script type="application/ld+json">
+  {{ item.structuredData  | dump | safe }}
+</script>
+<!-- End Structured Data -->
+
+<div class="section-understated">
+  <div class="container p-y-md">
+    <div class="row">
+      <div class="col-lg-7">
+        {%- include "breadcrumbs.html" -%}
+        <h1 class="m-t-0 color-p2-darker">{{title}}</h1>
+        <p>
+          <a href="../../">{{item.FriendlyName}}</a>
+        </p>
+      </div>
+      <div class="col-lg-5">
+        {% if item.ImageUrl %}
+        <div class="pos-rel">
+          <img
+            src="https://stateentityprofile.ca.gov/Uploads/{{item.ImageUrl}}"
+            loading="lazy"
+            class="rounded-circle service-img width-300 height-300 pos-abs right-sm d-none d-lg-block"
+            alt="" />
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container p-y-md">
+  <div class="row p-y-lg">
+    <div class="col-md-9">
+      <a class="btn btn-primary btn-lg m-r-md m-b" href="{{ item.ServiceUrl }}"
+        >Launch service</a
+      >
+
+      <a
+        class="btn btn-outline-primary btn-lg m-r-md m-b"
+        href="{{ item.structuredData.provider.url }}"
+        >Department website</a
+      >
+
+      <a
+        class="btn btn-outline-primary btn-lg m-r-md m-b"
+        href="{{ item.ContactUrl }}"
+        >Contact</a
+      >
+
+      <hr class="m-t-md" />
+
+      <h2 class="m-t-md">Description</h2>
+      <p>{{item.Description}}</p>
+
+      <p class="m-t-md">
+        <span class="bold">Phone:</span>
+        <a href="tel:{{item.ContactPhone}}">{{item.ContactPhone}}</a>
+      </p>
+
+      {%- for qa in item.QA -%} {%- if loop.first %}
+      <h3>Frequently Asked Questions</h3>
+      {%- endif %}
+      <cagov-accordion>
+        <details>
+          <summary>{{qa.Question}}</summary>
+          <div class="accordion-body">{{ qa.Answer | safe }}</div>
+        </details>
+      </cagov-accordion>
+      {%- endfor %}
+      <hr class="m-t-md" />
+
+      {%- set related_services = state_entity.services |
+      pluck("AgencyId",item.AgencyId) | pluck("ServiceId",item.ServiceId,"not")
+      | sortBy("ServiceName") -%} {%- if related_services.length %}
+      <h3>Related services</h3>
+      <p class="keywords">
+        {%- for related in related_services %}
+        <a
+          href="../{{related.ServiceId}}/"
+          class="btn btn-default btn-sm me-2 my-2"
+          >{{-related.ServiceName-}}</a
+        >{%- endfor %}
+      </p>
+      {%- endif %} {%- if item.AgencyTags.includes(topic.name) %}
+      <h3 class="m-t-md">Topics</h3>
+      <p class="keywords">
+        {%- for topic in topics | sortBy("featureOrder") %}
+        <a href="/topics/{{topic.slug}}/"> {{- topic.name | trim -}} </a
+        ><span class="m-r-sm">, </span>
+        {%- endfor %}
+      </p>
+      {%- endif -%}
+      <h3>Keywords</h3>
+      <p class="keywords">
+        {%- for keyword in item.Keywords.split(",") %} {%- if
+        keyword.trim().length > 0 %}
+        <a href="/services/all/?q={{keyword | trim | urlencode}}+">
+          {{- keyword | trim -}} </a
+        ><span class="m-r-sm">,</span> {% endif -%} {%- endfor %}
+      </p>
+
+      <!-- Begin Structured Data for QAPage -->
+      <script type="application/ld+json">
+        {{ item.structuredData_FAQPage  | dump | safe }}
+      </script>
+      <!-- End Structured Data -->
+    </div>
+  </div>
+</div>

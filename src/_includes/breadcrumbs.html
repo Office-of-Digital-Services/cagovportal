@@ -1,0 +1,11 @@
+<!-- Breadcrumbs component -->
+
+<nav aria-label="You are here" class="breadcrumbs">
+  {%- set node = breadcrumbs | pluck("key",breadcrumbparent) | first %}
+  <ol>
+    {%- for link in node.links %}
+    <li><a href="{{link.href}}">{{link.title}}</a></li>
+    {%- endfor %}
+    <li class="active">{{title}}</li>
+  </ol>
+</nav>

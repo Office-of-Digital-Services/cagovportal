@@ -1,0 +1,32 @@
+{
+  "name": "www.ca.gov",
+  "version": "6.3.4",
+  "description": "www.ca.gov",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Office-of-Digital-Services/cagovportal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "8.56.0",
+    "eslint-plugin-jsdoc": "^48.2.0",
+    "prettier": "^3.3.2",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^35.0.0",
+    "stylelint-use-nesting": "^5.1.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-fetch": "^4.0.0",
+    "clean-css": "^5.3.3",
+    "markdown-it": "^14.1.0",
+    "terser": "^5.30.3",
+    "xml2js": "^0.6.2"
+  }
+}

@@ -1,0 +1,68 @@
+<!-- Public Sans Font-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://cdn.cdt.ca.gov" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=block"
+  rel="stylesheet" />
+<!-- End Public Sans Font -->
+
+<!-- State Web template required CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.cdt.ca.gov/cdt/statetemplate/6.3.4/css/cagov.core.min.css"
+  integrity="sha256-LiaSsFp6ZntlaZi/Ikd5CmZiIF0fKpFtmwpZewSsR0Q="
+  crossorigin="anonymous" />
+<link rel="stylesheet" href="/css/custom.css" />
+{%- if customcss -%}
+<link rel="stylesheet" href="{{ customcss }}" />
+{% endif -%}
+<script
+  src="https://cdn.cdt.ca.gov/cdt/statetemplate/6.3.4/js/cagov.core.min.js"
+  integrity="sha256-jWwKnFKgjb8cEjfRfxm0ZoTtu7mVxdqyRcLDAF2Z+kc="
+  crossorigin="anonymous"></script>
+<script src="/js/custom.min.js" type="module"></script>
+
+{%- if customjs -%} {% for link in customjs %}
+<script src="{{ link }}" class="notranslate"></script>
+{%- endfor -%} {%- endif %}
+<!-- Site icons -->
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="100x100"
+  href="/images/apple-touch-icon-precomposed.png" />
+<link rel="icon" sizes="192x192" href="/images/apple-touch-icon-192x192.png" />
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="180x180"
+  href="/images/apple-touch-icon-180x180.png" />
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="152x152"
+  href="/images/apple-touch-icon-152x152.png" />
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="/images/apple-touch-icon-144x144.png" />
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="120x120"
+  href="/images/apple-touch-icon-120x120.png" />
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="/images/apple-touch-icon-114x114.png" />
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="72x72"
+  href="/images/apple-touch-icon-72x72.png" />
+<link
+  rel="apple-touch-icon-precomposed"
+  href="/images/apple-touch-icon-57x57.png" />
+<link rel="shortcut icon" href="/images/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<!-- Google analytics -->
+{% include "analytics.html" -%}
+<!-- Statewide Alerts Server -->
+<script defer src="https://alert.cdt.ca.gov" crossorigin="anonymous"></script>

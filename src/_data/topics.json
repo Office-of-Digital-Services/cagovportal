@@ -1,0 +1,530 @@
+[
+  {
+    "topicId": 1,
+    "name": "Personal records",
+    "description": "Your birth certificate, ID card, and other personal records confirm who you are. They help you get the services you need.",
+    "metaDescription": "Browse California state services related to personal records. This includes birth certificates, vaccine records, and more.",
+    "cardDescription": "Update your personal records, which make it easier to access services.",
+    "featureOrder": 8,
+    "slug": "personal-records",
+    "topicImg": "/images/topic1-lineart.svg",
+    "popularServices": [
+      {
+        "DepartmentId": 176,
+        "ServiceId": 52,
+        "ServiceName": "Apply for a birth certificate",
+        "Description": "Get a birth certificate for proof of citizenship, social security, passport, and more.",
+        "umgURL": "/images/topic1-1.png",
+        "imgAlt": "A close-up look at a County of Riverside, in Riverside, California, Certificate of Live Birth."
+      },
+      {
+        "DepartmentId": 220,
+        "ServiceId": 47,
+        "ServiceName": "DMV address change",
+        "Description": "Change your address for your driver’s license, identification card, vehicle, or vessel.",
+        "umgURL": "/images/topic1-2.png",
+        "imgAlt": "Multiple mailboxes line a suburban street. A white mailbox with a red handle is in focus."
+      },
+      {
+        "DepartmentId": 176,
+        "ServiceId": 1177,
+        "ServiceName": "Get digital vaccine records",
+        "Description": "Show proof of your vaccinations with digital vaccine records.",
+        "umgURL": "/images/topic1-3.png",
+        "imgAlt": "A light-skinned hand holds a face mask and a mobile phone showing a digital Covid-19 vaccine record."
+      },
+      {
+        "DepartmentId": 176,
+        "ServiceId": 53,
+        "ServiceName": "Apply for a death certificate",
+        "Description": "Get an official death certificate copy for benefits, insurance claims, and legal needs.",
+        "umgURL": "/images/topic1-4.png",
+        "imgAlt": "Yellow, white, and purple flowers sit on a grave at a cemetery."
+      }
+    ]
+  },
+  {
+    "topicId": 2,
+    "name": "Businesses",
+    "description": "California offers services for your business through licensing, permitting, verification, and more.",
+    "metaDescription": "Browse California state services related to businesses.",
+    "cardDescription": "Grow your business through licensing, permitting, and other resources.",
+    "featureOrder": 2,
+    "slug": "businesses",
+    "topicImg": "/images/topic2-lineart.svg",
+    "popularServices": [
+      {
+        "DepartmentId": 287,
+        "ServiceId": 25,
+        "ServiceName": "Apply for a business license",
+        "Description": "Register online for a California business license, permit, or account.",
+        "umgURL": "/images/topic2-1.png",
+        "imgAlt": "A middle-aged, medium-skin-toned Asian woman with glasses smiles and uses a laptop on a table."
+      },
+      {
+        "DepartmentId": 287,
+        "ServiceId": 26,
+        "ServiceName": "Apply for a seller’s permit",
+        "Description": "Obtain a seller's permit online, required for sales subject to sales tax.",
+        "umgURL": "/images/topic2-2.png",
+        "imgAlt": "A white man and woman stand behind a counter at a cafe and look at a clipboard with paperwork. "
+      },
+      {
+        "DepartmentId": 174,
+        "ServiceId": 29,
+        "ServiceName": "Get a fishing or hunting license",
+        "Description": "Find out how you can buy a fishing or hunting license in person or online. ",
+        "umgURL": "/images/topic2-3.png",
+        "imgAlt": "A commercial fishing boat is on a lake hauling a load of fish inside a net."
+      },
+      {
+        "DepartmentId": 268,
+        "ServiceId": 13,
+        "ServiceName": "Search for Unclaimed Property",
+        "Description": "Locate unclaimed property that has been sent to the state. Typically the property is money. It is not real estate.",
+        "umgURL": "/images/topic2-4.png",
+        "imgAlt": "A light-skinned hand holds a signed blue and white check for $10,247.40."
+      }
+    ]
+  },
+  {
+    "topicId": 3,
+    "name": "DMV/Auto",
+    "description": "Get or renew your California driver’s license, vehicle registration, and more. Learn about and obtain auto insurance. Resolve traffic tickets and keep your vehicle in shape with smog and repair services.",
+    "metaDescription": "Browse California state services related to vehicles and the DMV.",
+    "cardDescription": "Update your driver’s license, registration, and insurance, and resolve traffic tickets.",
+    "featureOrder": 3,
+    "slug": "dmv-auto",
+    "topicImg": "/images/topic3-lineart.svg",
+    "popularServices": [
+      {
+        "DepartmentId": 193,
+        "ServiceId": 15,
+        "ServiceName": "Pay traffic ticket",
+        "Description": "Find the appropriate county traffic court to pay or challenge your ticket.",
+        "umgURL": "/images/topic3-1.png",
+        "imgAlt": "A crowded row of cars are parked the street in close proximity to one another."
+      },
+      {
+        "DepartmentId": 137,
+        "ServiceId": 6,
+        "ServiceName": "Find a smog station",
+        "Description": "Search for a smog station by location and service type, including STAR inspections.",
+        "umgURL": "/images/topic3-2.png",
+        "imgAlt": "A young man working at an auto repair shop shakes a customer’s hand."
+      },
+      {
+        "DepartmentId": 220,
+        "ServiceId": 44,
+        "ServiceName": "Renew driver's license",
+        "Description": "Skip the line and renew your driver’s license or identification card online. Your address must be up-to-date to renew.",
+        "umgURL": "/images/topic3-3.png",
+        "imgAlt": "A young Black woman in business attire smiles and holds up her driver’s license to a DMV worker."
+      },
+      {
+        "DepartmentId": 175,
+        "ServiceId": 1171,
+        "ServiceName": "Get low cost auto insurance",
+        "Description": "Get auto insurance at low cost, affordable rates. To qualify, you must be income-eligible with a good driving record.",
+        "umgURL": "/images/topic3-4.png",
+        "imgAlt": "A car key is attached to a car-shaped silver keychain and rests on top of a clipboard."
+      }
+    ]
+  },
+  {
+    "topicId": 4,
+    "name": "Jobs and unemployment",
+    "description": "Review job openings, trainings, and resources. Get financial support while you are unemployed.",
+    "metaDescription": "Browse California state services related to employment.",
+    "cardDescription": "Find a job, enroll in job training, and get support while you are unemployed.",
+    "featureOrder": 7,
+    "slug": "jobs",
+    "topicImg": "/images/topic4-lineart.svg",
+    "popularServices": [
+      {
+        "DepartmentId": 89,
+        "ServiceId": 39,
+        "ServiceName": "Find a California state job",
+        "Description": "Learn more about jobs with the State, look at job openings and apply for jobs with the state of California.",
+        "umgURL": "/images/topic4-1.png",
+        "imgAlt": "The CalCareers logo"
+      },
+      {
+        "DepartmentId": 229,
+        "ServiceId": 20,
+        "ServiceName": "File for unemployment",
+        "Description": "File and manage unemployment claims to receive financial support while you are looking for a job.",
+        "umgURL": "/images/topic4-2.png",
+        "imgAlt": "The hands of a man with tan skin and a checkered button-down shirt work on a laptop."
+      },
+      {
+        "DepartmentId": 229,
+        "ServiceId": 22,
+        "ServiceName": "Find a job",
+        "Description": "Find job openings and information about applying for jobs in California.",
+        "umgURL": "/images/topic4-3.png",
+        "imgAlt": "A young Asian man sits at a desk and smiles as a woman sits across from him and looks at his resume."
+      },
+      {
+        "DepartmentId": 229,
+        "ServiceId": 18,
+        "ServiceName": "File for disability",
+        "Description": "Apply for short-term benefits, available to eligible workers who need time off work.",
+        "umgURL": "/images/topic4-4.png",
+        "imgAlt": "A young pregnant Black woman smiles and works on a laptop while sitting on a couch in a living room."
+      }
+    ]
+  },
+  {
+    "topicId": 5,
+    "name": "Assistance and social programs",
+    "description": "Find services that help improve the well-being of individuals, families, and communities in California. Benefits support\n- obtaining food\n- health coverage\n- vehicle and education costs\n- income assistance when unemployed or on disability",
+    "metaDescription": "Browse California state services that provide social and financial help.",
+    "cardDescription": "Get help covering food and medical costs, and access other discounted benefits.",
+    "featureOrder": 1,
+    "slug": "assistance",
+    "topicImg": "/images/topic5-lineart.svg",
+    "popularServices": [
+      {
+        "DepartmentId": 178,
+        "ServiceId": 60,
+        "ServiceName": "Apply for food stamps",
+        "Description": "Add to your food budget and get help putting healthy food on the table with the CalFresh Program.",
+        "umgURL": "/images/topic5-1.png",
+        "imgAlt": "An Asian man is in a grocery store with his young son, who sits in a shopping cart."
+      },
+      {
+        "DepartmentId": 217,
+        "ServiceId": 37,
+        "ServiceName": "Apply for Medi-Cal",
+        "Description": "Get free or low-cost medical care. Medi-Cal provides health coverage for qualified individuals.",
+        "umgURL": "/images/topic5-2.png",
+        "imgAlt": "A tan middle-aged doctor uses a stethoscope on a baby as the baby sits on his mother’s lap."
+      },
+      {
+        "DepartmentId": 229,
+        "ServiceId": 20,
+        "ServiceName": "File for unemployment",
+        "Description": "File and manage unemployment claims to receive financial support while you are looking for a job.",
+        "umgURL": "/images/topic5-3.png",
+        "imgAlt": "The hands of a man with tan skin and a checkered button-down shirt work on a laptop."
+      },
+      {
+        "DepartmentId": 101,
+        "ServiceId": 1182,
+        "ServiceName": "Get a CalABLE Visa prepaid card",
+        "Description": "Pay for disability-related expenses (tax free) with a CalABLE card.",
+        "umgURL": "/images/topic5-4.png",
+        "imgAlt": "A blue CalABLE prepared card"
+      }
+    ]
+  },
+  {
+    "topicId": 6,
+    "name": "Housing and real estate",
+    "description": "Make informed decisions about your home. Find the status of contractors, real estate agents, and appraisers. Maintain your real estate business license. Find help to pay rent or get home insurance estimates.",
+    "metaDescription": "Browse California state services related to housing and real estate.",
+    "cardDescription": "Manage your home and real estate for individuals or businesses.",
+    "featureOrder": 6,
+    "slug": "housing",
+    "topicImg": "/images/topic6-lineart.svg",
+    "popularServices": [
+      {
+        "DepartmentId": 299,
+        "ServiceId": 12,
+        "ServiceName": "Look up a contractor license",
+        "Description": "Look up a contractor license to verify information, including complaint disclosure.",
+        "umgURL": "/images/topic6-1.png",
+        "imgAlt": "A laptop is on a table with blueprints at a construction site."
+      },
+      {
+        "DepartmentId": 40,
+        "ServiceId": 1131,
+        "ServiceName": "Verify a real estate license",
+        "Description": "Check the status of a real estate licensee using a name, address, or license ID.",
+        "umgURL": "/images/topic6-2.png",
+        "imgAlt": "A tan middle-aged female real estate agent holds a sign that says Open House in front of a house."
+      },
+      {
+        "DepartmentId": 180,
+        "ServiceId": 1136,
+        "ServiceName": "Calculate your earthquake insurance premium",
+        "Description": "Get an earthquake insurance premium estimate for your residence.",
+        "umgURL": "/images/topic6-3.png",
+        "imgAlt": "A row of houses are on a suburban street with a clear sky in the background."
+      },
+      {
+        "DepartmentId": 139,
+        "ServiceId": 1175,
+        "ServiceName": "COVID-19 rent relief",
+        "Description": "Check the status of your submitted COVID-19 rent relief application.",
+        "umgURL": "/images/topic6-4.png",
+        "imgAlt": "A tan-skinned family is smiling and standing outside of their home and next to their car."
+      }
+    ]
+  },
+  {
+    "topicId": 7,
+    "name": "Safety and emergencies",
+    "description": "Look up public safety information and receive support if you are a victim of a crime or disaster.",
+    "metaDescription": "Browse California state services related to public safety and disaster assistance.",
+    "cardDescription": "Learn about disasters, public safety, and get emergency assistance.",
+    "featureOrder": 9,
+    "slug": "safety",
+    "topicImg": "/images/topic7-lineart.svg",
+    "popularServices": [
+      {
+        "DepartmentId": 238,
+        "ServiceId": 1122,
+        "ServiceName": "Get disaster relief assistance",
+        "Description": "Access disaster relief services and tips on ensuring your health and safety.",
+        "umgURL": "/images/topic7-3.png",
+        "imgAlt": "A tan female volunteer with a yellow safety vest holds a tablet and speaks to a person at a shelter."
+      },
+      {
+        "DepartmentId": 162,
+        "ServiceId": 1169,
+        "ServiceName": "Apply for compensation for crime-related expenses",
+        "Description": "Are you a victim of crime? CalVCB can help with bills and expenses that result from crime. ",
+        "umgURL": "/images/topic7-4.png",
+        "imgAlt": "A light skinned hand with long, manicured nails taps a button on a white iPhone."
+      },
+      {
+        "DepartmentId": 223,
+        "ServiceId": 1132,
+        "ServiceName": "Search for registered sex offenders",
+        "Description": "Check the database to get information about registered sex offenders by location.",
+        "umgURL": "/images/topic7-1.png",
+        "imgAlt": "A person is pointing to a search bar displaying on their laptop."
+      },
+      {
+        "DepartmentId": 171,
+        "ServiceId": 1188,
+        "ServiceName": "Inmate locator and records",
+        "Description": "Search for information about inmates in custody, including location and admission date.",
+        "umgURL": "/images/topic7-2.png",
+        "imgAlt": "A red map pointer is pointing to a location on an open map on top of a laptop keyboard."
+      }
+    ]
+  },
+  {
+    "topicId": 8,
+    "name": "State info and laws",
+    "description": "Look up state representatives and laws. Access other state data, like lottery numbers, local schools, and voter registration.",
+    "metaDescription": "Browse California state services related to state information, records, and laws.",
+    "cardDescription": "Look up state information, including representatives, voting, schools, and lotto numbers.",
+    "featureOrder": 10,
+    "slug": "laws-info",
+    "topicImg": "/images/topic8-lineart.svg",
+    "popularServices": [
+      {
+        "DepartmentId": 155,
+        "ServiceId": 42,
+        "ServiceName": "Look up winning lottery numbers",
+        "Description": "Look up winning lottery numbers on the CA Lottery website. See if you're a winner!",
+        "umgURL": "/images/topic8-1.png",
+        "imgAlt": "California state lottery logo"
+      },
+      {
+        "DepartmentId": 268,
+        "ServiceId": 13,
+        "ServiceName": "Search for unclaimed property",
+        "Description": "Locate unclaimed property that has been sent to the state. Typically the property is money. It is not real estate.",
+        "umgURL": "/images/topic8-2.png",
+        "imgAlt": "A light-skinned hand holds a signed blue and white check for $10,247.40."
+      },
+      {
+        "DepartmentId": 275,
+        "ServiceId": 58,
+        "ServiceName": "Look up my representatives",
+        "Description": "Find your State Senate, State Assembly, or US Representative and how you can contact them.",
+        "umgURL": "/images/topic8-3.png",
+        "imgAlt": "The American flag and State of California flag are raised in front of the Sacramento State Capitol."
+      },
+      {
+        "DepartmentId": 244,
+        "ServiceId": 41,
+        "ServiceName": "Look up a bill or law",
+        "Description": "Access California law and bill information, including legislative publications.",
+        "umgURL": "/images/topic8-4.png",
+        "imgAlt": "A wooden judge’s gavel lies on a desk next to a set of copper scales."
+      }
+    ]
+  },
+  {
+    "topicId": 9,
+    "name": "Taxes",
+    "description": "Learn about taxes in California and how to file for free, check your refund, and earn tax credits.",
+    "metaDescription": "Browse California state services related to taxes, refunds, and credits.",
+    "cardDescription": "Learn how to file your taxes for free, check your refund, and earn tax credits.",
+    "featureOrder": 11,
+    "slug": "taxes",
+    "topicImg": "/images/topic9-lineart.svg",
+    "popularServices": [
+      {
+        "DepartmentId": 236,
+        "ServiceId": 33,
+        "ServiceName": "Check your tax refund status",
+        "Description": "You may be able to get a tax refund if you’ve paid too much tax. Use this service to check your refund status.",
+        "umgURL": "/images/topic9-1.png",
+        "imgAlt": "A young white man with glasses sits and looks at his phone."
+      },
+      {
+        "DepartmentId": 236,
+        "ServiceId": 1168,
+        "ServiceName": "File taxes for free with CalFile",
+        "Description": "Use CalFile to e-file your state tax return. Get real-time confirmation and the fastest refund possible. And best of all, it’s free.",
+        "umgURL": "/images/topic9-2.png",
+        "imgAlt": "A senior-aged Asian couple smile while they sit on a couch and look at a mobile device."
+      },
+      {
+        "DepartmentId": 287,
+        "ServiceId": 24,
+        "ServiceName": "Look up tax rates",
+        "Description": "Enter an address to find the sales and use tax rate for that location.",
+        "umgURL": "/images/topic9-3.png",
+        "imgAlt": "A person with light-skinned hands uses a calculator and fills out tax forms in front of a laptop."
+      },
+      {
+        "DepartmentId": 236,
+        "ServiceId": 1167,
+        "ServiceName": "Learn about the Earned Income Tax Credit",
+        "Description": "The CalEITC is a state tax credit for working Californians. If you qualify, you may see a reduced tax bill or a bigger refund.",
+        "umgURL": "/images/topic9-4.png",
+        "imgAlt": "A young Black girl with curly hair smiles at her mom and holds hands with her father in a field."
+      }
+    ]
+  },
+  {
+    "topicId": 10,
+    "name": "Health and wellness",
+    "description": "Get health and wellness support for you and your family. Find resources for medical care, nutrition, and senior services.",
+    "metaDescription": "Browse California state services that support you and your family’s health.",
+    "cardDescription": "Find support for your family's health needs, including senior and medical care.",
+    "featureOrder": 5,
+    "slug": "health",
+    "topicImg": "/images/topic10-lineart.svg",
+    "popularServices": [
+      {
+        "DepartmentId": 217,
+        "ServiceId": 37,
+        "ServiceName": "Apply for Medi-Cal",
+        "Description": "Get free or low-cost medical care. Medi-Cal provides health coverage for qualified individuals.",
+        "umgURL": "/images/topic10-1.png",
+        "imgAlt": "A tan middle-aged doctor uses a stethoscope on a baby as the baby sits on his mother’s lap."
+      },
+      {
+        "DepartmentId": 176,
+        "ServiceId": 1177,
+        "ServiceName": "Get digital vaccine records",
+        "Description": "Show proof of your vaccinations with digital vaccine records.",
+        "umgURL": "/images/topic10-2.png",
+        "imgAlt": "A light-skinned hand holds a face mask and a mobile phone showing a digital Covid-19 vaccine record."
+      },
+      {
+        "DepartmentId": 240,
+        "ServiceId": 74,
+        "ServiceName": "Apply for medical insurance",
+        "Description": "Apply for medical insurance via Covered California.",
+        "umgURL": "/images/topic10-3.png",
+        "imgAlt": "A light-skinned doctor is filling out paperwork on a clipboard with a pen while using a laptop."
+      },
+      {
+        "DepartmentId": 178,
+        "ServiceId": 60,
+        "ServiceName": "Apply for food stamps",
+        "Description": "Add to your food budget and get help putting healthy food on the table with the CalFresh Program.",
+        "umgURL": "/images/topic10-4.png",
+        "imgAlt": "An Asian man is in a grocery store with his young son who sits in a shopping cart."
+      }
+    ]
+  },
+  {
+    "topicId": 11,
+    "name": "Travel and recreation",
+    "description": "Discover California's top destinations like state parks, campsites, and museums. Plan trips, reserve campsites, and get licenses for activities.",
+    "metaDescription": "Browse California state services related to travel and recreation within the state.",
+    "cardDescription": "Explore California's attractions and plan outdoor activities.",
+    "featureOrder": 12,
+    "slug": "recreation",
+    "topicImg": "/images/topic11-lineart.svg",
+    "popularServices": [
+      {
+        "DepartmentId": 283,
+        "ServiceId": 75,
+        "ServiceName": "Request a free California visitor’s guide",
+        "Description": "Explore the Golden State with trip itineraries for every region of California.",
+        "umgURL": "/images/topic11-3.png",
+        "imgAlt": "Three examples of the California visitor guide."
+      },
+      {
+        "DepartmentId": 259,
+        "ServiceId": 49,
+        "ServiceName": "Find a state park",
+        "Description": "Visit California’s state parks, a diverse collection of natural and cultural resources.",
+        "umgURL": "/images/topic11-4.png",
+        "imgAlt": "Waves flow out from an enclave surrounded by rock formations at Julia Pfeiffer Beach in the daytime."
+      },
+      {
+        "DepartmentId": 174,
+        "ServiceId": 29,
+        "ServiceName": "Get a fishing or hunting license",
+        "Description": "Get information for how you can buy a fishing or hunting license in person or online.",
+        "umgURL": "/images/topic11-1.png",
+        "imgAlt": "A father and son with brown skin stand in front of a lake as the son shows off a fish he caught."
+      },
+      {
+        "DepartmentId": 185,
+        "ServiceId": 1144,
+        "ServiceName": "Get a horse racing license",
+        "Description": "Get a license for horse owners, trainers, jockeys, grooms, agents, and officials.",
+        "umgURL": "/images/topic11-2.png",
+        "imgAlt": "A group of riders race on horses, wearing assorted colors of racing clothes and helmets."
+      }
+    ]
+  },
+  {
+    "topicId": 12,
+    "name": "Education",
+    "description": "Find educational opportunities for people of all ages. Apply for financial help for your degree, vocational training, and more.",
+    "metaDescription": "Browse California state services related to education and professional development.",
+    "cardDescription": "Find educational opportunities and get financial aid.",
+    "featureOrder": 4,
+    "slug": "education",
+    "topicImg": "/images/topic12-lineart.svg",
+    "popularServices": [
+      {
+        "DepartmentId": 172,
+        "ServiceId": 84,
+        "ServiceName": "Get a high school diploma",
+        "Description": "Find GED program classes, which help adults who did not graduate from high school get a diploma.",
+        "umgURL": "/images/topic12-1.png",
+        "imgAlt": "A young woman with tan skin and dark hair wears a black cap and gown and holds a diploma."
+      },
+      {
+        "DepartmentId": 198,
+        "ServiceId": 63,
+        "ServiceName": "Apply for a Cal Grant",
+        "Description": "Cal Grants provide aid to California undergraduates and vocational students.",
+        "umgURL": "/images/topic12-2.png",
+        "imgAlt": "A tiny paper graduation cap and tassel are on top of some cash."
+      },
+      {
+        "DepartmentId": 172,
+        "ServiceId": 83,
+        "ServiceName": "Find an ESL/English class",
+        "Description": "Find a class to learn English near you with this Directory of Adult Education Programs.",
+        "umgURL": "/images/topic12-3.png",
+        "imgAlt": "A medium skin toned man with salt and pepper hair sits at a desk in a classroom while holding a pen."
+      },
+      {
+        "DepartmentId": 256,
+        "ServiceId": 1138,
+        "ServiceName": "Apply for financial assistance in healthcare education",
+        "Description": "Access scholarships and grants for students, graduates, and institutions in the healthcare industry.",
+        "umgURL": "/images/topic12-4.png",
+        "imgAlt": "A young tan-skinned female scientist in a white lab coat holds books while smiling at the camera."
+      }
+    ]
+  }
+]

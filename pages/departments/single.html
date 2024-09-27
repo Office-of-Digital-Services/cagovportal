@@ -1,0 +1,118 @@
+---
+landing: Departments
+layout: landing
+breadcrumbparent: Departments
+pagination:
+    data: state_entity.agencies
+    size: 1
+    alias: item
+    addAllPagesToCollections : true
+permalink: "departments/{{ item.AgencyId }}/"
+eleventyComputed: 
+  description: Department details for "{{ item.AgencyFullName | safe }}"
+  title: "{{ item.FriendlyName | safe }} ({{ item.Acronym | safe }})"
+  keywords: "{{ item.Keywords | safe }}"
+---
+
+{%-set QAs = [] -%} {%- for service in state_entity.services |
+pluck('AgencyId',item.AgencyId) -%} {%- for qa in service.QA |
+pluck('Featured',true) -%} {%- set _ = QAs.push({service:service,qa:qa}) -%} {%
+endfor %} {%- endfor -%}
+
+<!-- Begin Structured Data -->
+<script type="application/ld+json">
+  {{
+    item.structuredData | dump | safe
+  }}
+</script>
+<!-- End Structured Data -->
+
+<div
+  class="section-understated lineart"
+  style="background-image: url('/images/departments-lineart.svg'); background-repeat:no-repeat; background-position:right;">
+  <div class="container p-y-md">
+    <div class="row">
+      <div class="col-xl-8">
+        {%- include "breadcrumbs.html" -%}
+        <h1 class="m-t-0 color-p2-darker">{{title}}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-lg-3 pb-lg-5">
+      {% if item.LogoUrl %}
+      <img
+        src="{{item.structuredData.logo}}"
+        class="img-fluid sticky-6 square"
+        style="object-fit: contain;"
+        alt="'{{item.FriendlyName}}' logo" />
+      {% endif %}
+    </div>
+    <div class="col-lg-9">
+      <h2 class="mt-lg-0">Contact</h2>
+      <ul>
+        {% if item.ContactEmail %}
+        <li>
+          <span class="bold">Email:</span>
+          <a href="mailto:{{item.ContactEmail}}">{{item.ContactEmail}}</a>
+        </li>
+        {% endif %} {% if item.ContactPhone %}
+        <li>
+          <span class="bold">Phone:</span>
+          <a href="tel:{{item.ContactPhone}}">{{item.ContactPhone}}</a>
+        </li>
+        {% endif %}
+      </ul>
+      <div class="p-y-md">
+        <a class="btn btn-primary btn-lg m-r-md m-b" href="{{item.WebsiteURL}}">
+          Department website
+        </a>
+        <a
+          href="{{item.ContactURL}}"
+          class="btn btn-outline-primary btn-lg m-b">
+          More contact info
+        </a>
+      </div>
+
+      <hr />
+
+      <h2 class="m-t-md">Description</h2>
+      <p class="m-b">{{item.Description}}</p>
+
+      {% for service in state_entity.services | pluck('AgencyId',item.AgencyId)
+      -%} {%- if loop.first -%}
+      <hr class="m-b-md" />
+      <h2>Services</h2>
+      {% endif %}
+      <h3 class="lead bold m-t-0">
+        <a href="./services/{{ service.ServiceId }}/"
+          >{{service.ServiceName}}</a
+        >
+      </h3>
+      <p>{{service.Description}}</p>
+      <a
+        class="btn btn-outline-primary btn-lg m-r-sm"
+        href="{{ service.ServiceUrl }}">
+        Launch service<span class="sr-only">: {{service.ServiceName}}</span></a
+      >
+      {%- if not loop.last -%}
+      <hr class="m-b-lg m-t-md" />
+      {%- endif -%} {% endfor %} {%- for x in QAs -%} {%- if loop.first %}
+      <hr class="m-b-lg" />
+      <h3 class="mt-lg-9">Frequently Asked Questions</h3>
+      {% endif -%}
+      <cagov-accordion>
+        <details>
+          <summary>{{x.qa.Question}}</summary>
+          <div class="accordion-body">
+            <p>{{ x.qa.Answer | safe }}</p>
+          </div>
+        </details>
+      </cagov-accordion>
+      {%- endfor %}
+    </div>
+  </div>
+</div>

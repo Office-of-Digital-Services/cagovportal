@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{% metatitle %}</title>
+    <meta charset="utf-8" />
+    <meta name="Author" content="State of California" />
+    <meta name="Description" content="{{ description }}" />
+    <meta name="Keywords" content="California, government, {{ keywords }}" />
+    {%- if noindex %}
+    <meta name="robots" content="noindex" />
+    {% else %}
+    <meta name="robots" content="index, follow" />
+    {%- endif %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="{% metatitle %}" />
+
+    <!-- Canonical link, improves SEO -->
+    <link href="{% canonical %}" rel="canonical" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="California State Portal" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{% canonical %}" />
+    <meta property="og:title" content="{% metatitle %}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:image" content="{{ socialimage }}" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{% canonical %}" />
+    <meta name="twitter:title" content="{% metatitle %}" />
+    <meta name="twitter:description" content="{{ description }}" />
+    <meta name="twitter:image" content="{{ socialimage }}" />
+    {% include "head-js-css.html" %}
+  </head>
+  <body class="primary">
+    <header id="header" class="global-header fixed">
+      <div id="skip-to-content">
+        <a href="#main-content">Skip to Main Content</a>
+      </div>
+      {% if alert -%} {%- include alert -%} {%- endif -%} {%- include
+      "../utility-header.html" -%} {%- include "../site-header.html" -%} {%-
+      include "../mobile-controls.html" -%}
+      <div class="navigation-search full-width-nav container">
+        <div id="head-search" class="search-container featured-search">
+          <div class="d-block d-lg-none">
+            <a href="/" class="drawer-logo-link first-level-link">
+              <img
+                src="/images/CAgov-logo-white.svg"
+                loading="lazy"
+                alt="CA.gov official logo"
+                class="drawer-logo mb-4"
+                width="232"
+                style="aspect-ratio: 232 / 60;" />
+            </a>
+          </div>
+          {%- include "../search.html" -%}
+        </div>
+        {# navigation types #} {%- if navigation -%} {%- include navigation -%}
+        {%- else -%} {%- include "../navigation.html" -%} {%- endif -%}
+      </div>
+    </header>
+    {% block content -%} {{ content | safe }} {%- endblock -%} {%- include
+    "../feedback.html" -%} {%- include "../site-footer.html" -%} {%- include
+    "../global-footer.html" -%}
+  </body>
+</html>
