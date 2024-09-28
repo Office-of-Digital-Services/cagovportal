@@ -155,31 +155,148 @@ description: Get help with essential California services. Get answers to your qu
 
       <!--FAQ-->
       <h2>Frequently asked questions</h2>
-      <p>
-        Enter your question or keywords in the search below. You will find
-        related state services and information from department FAQs.
+      <p class="lead">
+        These are some commonly asked questions and answers, by service.
       </p>
 
-      <form action="/search/" role="search">
-        <label class="h3 sr-only" for="searchbox">Search all services</label>
-        <div class="d-flex m-y-lg">
-          <input
-            type="search"
-            name="q"
-            id="searchbox"
-            placeholder="Search FAQs"
-            class="height-50 brd-solid-1 brd-color-light rounded-start flex-grow-1 p-l" />
-          <button
-            class="bg-gray-600 bg-gray-700-hover rounded-end brd-0 width-60">
-            <span class="sr-only">Submit</span>
-            <span
-              class="ca-gov-icon-search font-size-25 color-white"
-              aria-hidden="true"></span>
-          </button>
-        </div>
-      </form>
+      <cagov-accordion>
+        <details>
+          <summary>How do I apply for CalFresh/Food Stamps?</summary>
+          <div class="accordion-body">
+            <p>
+              In California, each county may have a different way to apply for
+              CalFresh benefits.
+              <a href="https://www.getcalfresh.org/">Apply in your county</a>,
+              or online at the
+              <a href="https://benefitscal.com/">Benefitscal.com</a> Website.
+            </p>
+            <p>
+              More information:
+              <a href="/departments/178/services/60/">Food stamps</a>
+            </p>
+          </div>
+        </details>
+      </cagov-accordion>
+      <cagov-accordion>
+        <details>
+          <summary>
+            Where do I go if I have questions about a traffic citation?
+          </summary>
+          <div class="accordion-body">
+            <p>
+              You must contact the court specified on the Notice to Appear
+              citation or the law enforcement agency specified on the Notice to
+              Correct Violation form to obtain information about your ticket,
+              including information relating to fines and bail. Please refer to
+              the warnings and follow the instructions provided on your ticket.
+              Direct your inquiries to the specific court indicated on the front
+              of your ticket.
+            </p>
+            <p>
+              More information:
+              <a href="/departments/193/services/15/">Traffic tickets</a>
+            </p>
+          </div>
+        </details>
+      </cagov-accordion>
+      <cagov-accordion>
+        <details>
+          <summary>You must obtain a seller’s permit if you:</summary>
+          <div class="accordion-body">
+            <ul>
+              <li>Are engaged in business in California</li>
+              <li>
+                Intend to sell or lease tangible personal property that would
+                ordinarily be subject to sales tax if sold at retail (this
+                includes wholesalers, manufactures and retailers.)
+              </li>
+              <li>
+                Will make sales for a temporary period, normally lasting no
+                longer than 90 days at one or more locations (for example,
+                fireworks booth, Christmas tree lots, garage sale)
+              </li>
+            </ul>
+            <p>
+              More information:
+              <a href="/departments/287/services/25/"
+                >Apply for Business License</a
+              >
+            </p>
+          </div>
+        </details>
+      </cagov-accordion>
 
-      <div class="faq-results m-y-lg p-y-md"></div>
+      <cagov-accordion>
+        <details>
+          <summary>
+            How much does it cost to buy insurance through Covered California?
+          </summary>
+          <div class="accordion-body">
+            <p>
+              The best way to get a quick estimate of the price you would pay is
+              to use the
+              <a href="http://www.coveredca.com/shopandcompare/2016/"
+                >Shop and Compare Tool</a
+              >. The price is based on your estimated income for the coverage
+              year, your ZIP code, your household size and your age. If you are
+              a low- or moderate-income Californian, you may get help buying
+              insurance from Covered California through monthly subsidies that
+              lower your premium costs so that you pay less for top-quality,
+              brand-name insurance. Learn more about
+              <a
+                href="http://www.coveredca.com/individuals-and-families/getting-covered/health-care-costs/"
+                >who qualifies for a subsidy</a
+              >.
+            </p>
+            <p>
+              More information:
+              <a href="/departments/240/services/74/"
+                >Apply for Medical Insurance</a
+              >
+            </p>
+          </div>
+        </details>
+      </cagov-accordion>
+
+      <cagov-accordion>
+        <details>
+          <summary>How much does Medi-Cal cost?</summary>
+          <div class="accordion-body">
+            <p>
+              For many individuals who enroll in Medi-Cal, there is no premium,
+              no co-payment, and no out of pocket cost. Some households will see
+              affordable costs, such as a low monthly premium. For some Medi-Cal
+              children, the monthly premiums are $13 per child up to a family
+              maximum of $39 per month. In general, individuals in Medi-Cal will
+              get the same health benefits available through Covered California
+              at a lower cost.
+            </p>
+            <p>
+              More information:
+              <a href="/departments/217/services/37/">Apply for Medi-Cal</a>
+            </p>
+          </div>
+        </details>
+      </cagov-accordion>
+
+      <cagov-accordion>
+        <details>
+          <summary>How can I make a reservation at a State Park?</summary>
+          <div class="accordion-body">
+            <p>
+              Visit
+              <a href="https://www.reservecalifornia.com/">ReserveCalifornia</a
+              >, our new system is easy to use - similar to booking hotels,
+              airline tickets and other comparable services.
+            </p>
+            <p>
+              More information:
+              <a href="/departments/259/services/49/">Find a State Park</a>
+            </p>
+          </div>
+        </details>
+      </cagov-accordion>
+
       <!--general assistance-->
       <div
         class="bg-white m-y-lg p-x-md p-b-lg brd-solid-1 brd-gray-200 rounded">
