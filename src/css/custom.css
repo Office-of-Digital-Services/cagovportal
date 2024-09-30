@@ -387,6 +387,11 @@ NOTE: this applies to img/nav/div but not sure what it is really for
       top: 0 !important;
     }
   }
+
+  main > div.topo-lines {
+    background-image: none;
+    background-color: color-mix(in srgb, var(--color-p2), #000 15%);
+  }
 }
 
 /* Search results */
