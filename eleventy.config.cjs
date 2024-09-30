@@ -5,7 +5,7 @@ const MarkdownIt = require("markdown-it");
 const CleanCSS = require("clean-css");
 
 // canonical domain
-const domain = "https://dev-cagov.cdt.ca.gov"; //"https://www.ca.gov";
+const domain = "https://www.ca.gov";
 const metatitlepostfix = " | CA.gov";
 
 module.exports = function (
