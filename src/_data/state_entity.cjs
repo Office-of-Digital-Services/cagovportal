@@ -130,25 +130,23 @@ module.exports = async function () {
       x => x.AgencyServiceId === item.ServiceId
     );
 
-    if (QaResult) {
-      item.QA = QaResult;
-      if (QaResult.length) {
-        item["structuredData_FAQPage"] = {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: QaResult.map(x => ({
-            "@type": "Question",
-            name: x.Question,
-            answerCount: 1,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: x.Answer,
-              dateCreated: x.DateTimeStamp
-            }
-          })),
-          provider
-        };
-      }
+    item.QA = QaResult;
+    if (QaResult.length) {
+      item["structuredData_FAQPage"] = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: QaResult.map(x => ({
+          "@type": "Question",
+          name: x.Question,
+          answerCount: 1,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: x.Answer,
+            dateCreated: x.DateTimeStamp
+          }
+        })),
+        provider
+      };
     }
   });
 
