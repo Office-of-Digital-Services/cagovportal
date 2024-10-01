@@ -130,8 +130,8 @@ module.exports = async function () {
       x => x.AgencyServiceId === item.ServiceId
     );
 
-    if (QaResult) {
-      item.QA = QaResult;
+    item.QA = QaResult;
+    if (QaResult.length) {
       item["structuredData_FAQPage"] = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
