@@ -215,3 +215,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+  // Function to get a cookie by name using modern JavaScript
+  /**
+   * @param {string} name
+   */
+  function getCookie(name) {
+    const cookies = document.cookie.split("; ").reduce((acc, cookie) => {
+      const [key, value] = cookie.split("=");
+      acc[key] = value;
+      return acc;
+    }, {});
+    return cookies[name] || null;
+  }
+
+  // Function to dynamically add and run a script
+  /**
+   * @param {string} src
+   */
+  function runScript(src) {
+    const script = document.createElement("script");
+    script.src = src;
+    document.head.appendChild(script);
+  }
+
+  // Check for the "googtrans" cookie or #googtrans URL fragment
+  if (getCookie("googtrans") || window.location.hash.includes("#googtrans")) {
+    window["googleTranslateElementInit"] = () => {
+      new window["google"].translate.TranslateElement({
+        pageLanguage: "en",
+        includedLanguages: "en,es,ko,tl,vi,zh-TW"
+      });
+    };
+
+    runScript(
+      "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    );
+  }
+});
