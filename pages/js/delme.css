@@ -1,0 +1,593 @@
+/* <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" /> */
+
+/* vietnamese */
+@font-face {
+  font-family: "Public Sans";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/publicsans/v18/ijwTs572Xtc6ZYQws9YVwnNDTJPax8s3JimW3w.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
+    U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Public Sans";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/publicsans/v18/ijwTs572Xtc6ZYQws9YVwnNDTJLax8s3JimW3w.woff2)
+    format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Public Sans";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/publicsans/v18/ijwTs572Xtc6ZYQws9YVwnNDTJzax8s3Jik.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/publicsans/v18/ijwRs572Xtc6ZYQws9YVwnNIfJ7QwOk1Fig.woff2)
+    format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/publicsans/v18/ijwRs572Xtc6ZYQws9YVwnNGfJ7QwOk1.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+/* stylelint-disable selector-class-pattern */
+
+/* THIS IS CUSTOM CSS */
+
+/* -- Site header * -- */
+header {
+  /* -- Utility header -- */
+  > div.utility-header {
+    background-color: #f5f9fa;
+
+    > div.container > div.flex-row {
+      > div.social-media-links
+        > div.official-collapsible-content
+        > button.btn-official {
+        border: none;
+        font-size: 0.875rem;
+        background: transparent;
+        text-align: left;
+        text-wrap: nowrap;
+
+        &[aria-expanded="true"] {
+          > span.ca-gov-icon-caret-up {
+            display: inline-block;
+          }
+
+          > span.ca-gov-icon-caret-down {
+            display: none;
+          }
+        }
+
+        &[aria-expanded="false"] {
+          > span.ca-gov-icon-caret-up {
+            display: none;
+          }
+
+          > span.ca-gov-icon-caret-down {
+            display: inline-block;
+          }
+        }
+      }
+
+      @media (width <= 770px) {
+        flex-direction: column !important;
+
+        > div.settings-links {
+          margin-left: 0 !important;
+          justify-content: flex-start;
+
+          > a {
+            margin-left: 0;
+            margin-right: 1rem;
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      @media (width <= 350px) {
+        > div.social-media-links {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  > div.section-default > div.branding > div.header-organization-banner {
+    display: flex;
+    margin-right: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    > a > div.logo-assets {
+      > img.logo-img {
+        max-height: 60px;
+        height: 60px;
+      }
+
+      > div.logo-text {
+        > span.color-primary {
+          color: var(--color-p2, #046b99);
+        }
+
+        > span.logo-state {
+          font-size: 1.4rem;
+          font-weight: 700;
+          position: relative;
+          top: -5px;
+        }
+
+        > span.logo-dept {
+          font-size: 2.4rem;
+          height: 2.5rem;
+        }
+      }
+
+      @media (width <= 991px) {
+        > img.logo-img {
+          max-height: 50px;
+        }
+
+        > div.logo-text {
+          > span.logo-state {
+            font-size: 1.3rem;
+            top: -2px;
+          }
+
+          > span.logo-dept {
+            font-size: 1.8rem;
+            height: 2.2rem;
+          }
+        }
+      }
+    }
+
+    @media (width <= 575px) {
+      margin-right: 15%;
+
+      > a > div.logo-assets {
+        > div.logo-text {
+          > span.logo-dept {
+            font-size: 1.6rem;
+            height: 2.2rem;
+          }
+
+          > span.logo-state {
+            font-size: 1rem;
+            position: relative;
+            top: -2px;
+          }
+        }
+
+        > img.logo-img {
+          max-height: 50px;
+        }
+      }
+    }
+  }
+
+  /* -- Mobile controls * -- */
+  > div.mobile-controls {
+    > div.main-nav-icons {
+      top: -5rem;
+
+      > button.toggle-menu {
+        margin-top: 1.8rem;
+      }
+    }
+  }
+
+  > div.navigation-search {
+    > div.nav-drawer {
+      padding-bottom: 0;
+    }
+
+    > div#head-seach {
+      > div.d-block {
+        > a.drawer-logo-link {
+          outline-offset: -3px;
+
+          > img.drawer-logo {
+            max-width: 232px;
+          }
+        }
+      }
+    }
+  }
+
+  /* -- Search * -- */
+  @media (width >= 992px) {
+    > div.full-width-nav > div.featured-search {
+      top: -65px !important; /* override state template */
+
+      > div.container {
+        /* -- safari 13.1 fix * -- */
+        display: flex;
+
+        /* stylelint-disable-next-line selector-id-pattern */
+        > form#Search {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+main {
+  /* -- Banner * -- */
+  > div.header-banner {
+    overflow: hidden;
+    background-image: url("/images/background.svg");
+    background-color: var(--color-p2, #046b99);
+    background-position: center !important;
+    background-size: cover !important;
+    display: block;
+    position: relative;
+
+    @media (width <= 991px) {
+      > div.row {
+        flex-direction: column; /* What is this doing? */
+      }
+    }
+  }
+
+  > div.section-understated > div.container {
+    /* Service images */
+    > div.row > div > div > img.service-img {
+      object-fit: cover;
+      object-position: center;
+      aspect-ratio: 1 / 1;
+    }
+
+    /* light headers */
+    > h1.color-p2-darker,
+    > div.row > div > h1.color-p2-darker {
+      color: var(--color-p2-darker, #214a68);
+    }
+  }
+
+  /* content */
+  > div.topo-lines {
+    background-image: url("/images/background-lines.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  > div.lineart {
+    @media (width <= 1200px) {
+      background-image: none !important;
+    }
+  }
+
+  /* Popular services on the homepage */
+  > div.bg-p2-darkest {
+    background-color: var(--color-p2-darkest);
+  }
+
+  > div > div.row > div {
+    /* About California Images */
+    > div.d-flex.flex-column > img.m-t-minus-70 {
+      margin-top: -4.375rem;
+    }
+  }
+}
+
+/* GLOBAL */
+h2,
+.h2 {
+  scroll-margin-top: 95px;
+
+  @media (width >= 992px) {
+    scroll-margin-top: 180px;
+  }
+}
+
+/* stylelint-disable-next-line selector-disallowed-list */
+.p-t-xxl {
+  /* stylelint-disable-next-line declaration-property-unit-allowed-list */
+  padding-top: 59%;
+}
+
+/* Feedback */
+cagov-feedback > section > div.feedback-form {
+  padding: 0;
+  background: transparent;
+  color: var(--gray-900);
+
+  > div.feedback-form-add > label.feedback-form-label,
+  > div.feedback-form-question > h2.feedback-form-label,
+  > div.feedback-form-thanks {
+    background: transparent;
+    color: var(--gray-900);
+  }
+
+  > div.feedback-form-add > label.feedback-form-label,
+  > div.feedback-form-question > h2.feedback-form-label {
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 1.7rem;
+  }
+
+  > div.feedback-form-question > button.feedback-form-button,
+  > div.feedback-form-add
+    > div.feedback-form-add-grid
+    > button.feedback-form-button {
+    border: 1px solid var(--color-p2);
+    border-radius: 5px;
+    margin-right: 1rem;
+    color: var(--color-p2);
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      text-decoration: none;
+      background: var(--gray-75);
+      color: var(--color-p2-darker);
+    }
+  }
+}
+
+/* disables clicks when aria-cuurent="page" */
+a[aria-current="page"] {
+  pointer-events: none;
+}
+
+/* TODO: Decided if we want X cancel buttons and clean this up */
+/* stylelint-disable-next-line selector-disallowed-list */
+.reset-x-icon::-webkit-search-cancel-button {
+  display: unset !important;
+}
+
+/* ios search button white font fix */
+/* stylelint-disable-next-line selector-disallowed-list */
+.webkit-appearance-none {
+  -webkit-appearance: none !important;
+}
+
+/* Bringing back the little "X" buttons on form fields */
+::-webkit-search-cancel-button(:not(.webkit-appearance-none)) {
+  display: unset !important;
+}
+
+/* topic filter */
+details > div.topic-filters > fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+
+  > div.form-check {
+    position: relative;
+    flex: 0 48%;
+
+    > input.form-check-input {
+      border-color: var(--gray-700);
+    }
+
+    /* For Topic Filters */
+    > label.form-check-label {
+      font-weight: 400;
+    }
+
+    @media (width <= 991px) {
+      width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+}
+
+p.keywords > span:last-child {
+  display: none;
+}
+
+/* Elipsis overflow */
+cagovhome-filterlist {
+  /* Hiding the header if the row has hidden results */
+  > div.row:not(:has([data-row-key]:not([aria-hidden="true"]))) {
+    display: none;
+  }
+
+  > div > div > div.dep-image-wrapper {
+    max-width: 96px;
+    min-width: 96px;
+    margin-right: 1rem;
+  }
+
+  > div > div > div > p.department-description,
+  > div > p.service-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @media (width >= 992px) {
+      -webkit-line-clamp: 2;
+    }
+  }
+}
+
+/* 
+Fixing sticky class in mobile 
+NOTE: this applies to img/nav/div but not sure what it is really for 
+*/
+@media (width <= 991px) {
+  img,
+  nav,
+  div {
+    &.sticky-6 {
+      position: relative !important;
+      top: 0 !important;
+    }
+  }
+
+  main > div.topo-lines {
+    background-image: none;
+    background-color: color-mix(in srgb, var(--color-p2), #000 15%);
+  }
+}
+
+/* Search results */
+div.gsc-control-cse
+  > div.gsc-control-wrapper-cse
+  > div.gsc-results-wrapper-visible {
+  > div.gsc-positioningWrapper {
+    /* Hide Tabs */
+    display: none;
+  }
+
+  > div.gsc-above-wrapper-area {
+    border-bottom: none;
+
+    /* result counts */
+    > table {
+      display: none;
+    }
+  }
+
+  > div.gsc-adBlockNoHeight {
+    clear: both;
+  }
+
+  > div.gsc-wrapper
+    > div.gsc-resultsbox-visible
+    > div.gsc-tabdActive
+    > div.gsc-webResult {
+    font-size: 1.125rem !important;
+    line-height: 1.5 !important;
+
+    > div.gsc-expansionArea {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 1.5rem;
+
+      > div.gsc-webResult.gsc-result {
+        border-bottom: 1px solid var(--gray-200) !important;
+        padding-bottom: 1rem !important;
+        position: relative;
+
+        > div.gs-webResult.gs-result {
+          > div.gsc-thumbnail-inside > div.gs-title {
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+
+            > a.gs-title {
+              font-size: 1.35rem;
+              font-weight: 700;
+              text-decoration: none;
+
+              > b {
+                font-size: 1.35rem;
+              }
+
+              &:hover,
+              &:focus,
+              > b:hover {
+                /* Overrides State Template color */
+                color: var(--color-p2-darker) !important;
+                text-decoration: underline;
+              }
+
+              &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+              }
+            }
+          }
+
+          > div.gsc-url-top {
+            padding-bottom: 0.5rem;
+
+            > div.gs-visibleUrl-short {
+              font-weight: 700;
+            }
+          }
+
+          > div.gsc-table-result {
+            font-size: 1.125rem;
+            line-height: 1.5;
+          }
+        }
+
+        &:not(:has(a.gs-labelActive)) {
+          width: 100%;
+          flex: 0 0 100%;
+        }
+
+        &:has(a.gs-labelActive) {
+          padding: 0;
+          padding-left: 1rem;
+          padding-right: 2.25rem;
+          border: 1px solid var(--gray-300);
+          border-radius: 8px;
+          margin-bottom: 1rem;
+          flex: 0 48%;
+
+          @media (width <= 991px) {
+            width: 100%;
+            flex: 0 0 100%;
+          }
+
+          &:hover,
+          &:focus {
+            background-color: var(--gray-50);
+            text-decoration: none !important; /* What is this for? */
+          }
+
+          &::after {
+            font-family: CaGov;
+            content: "5";
+            position: absolute;
+            top: 0.8rem;
+            right: 0.7rem;
+            font-size: 1.6rem;
+            visibility: visible;
+          }
+
+          > div.gs-result {
+            > div.gsc-url-top,
+            > div.gsc-table-result {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+img.square {
+  aspect-ratio: 1;
+}
