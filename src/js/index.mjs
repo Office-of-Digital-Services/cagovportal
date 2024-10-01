@@ -230,16 +230,6 @@ window.addEventListener("DOMContentLoaded", () => {
     return cookies[name] || null;
   }
 
-  // Function to dynamically add and run a script
-  /**
-   * @param {string} src
-   */
-  function runScript(src) {
-    const script = document.createElement("script");
-    script.src = src;
-    document.head.appendChild(script);
-  }
-
   // Check for the "googtrans" cookie or #googtrans URL fragment
   if (getCookie("googtrans") || window.location.hash.includes("#googtrans")) {
     window["googleTranslateElementInit"] = () => {
@@ -249,8 +239,9 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     };
 
-    runScript(
-      "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    );
+    const script = document.createElement("script");
+    script.src =
+      "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    document.head.appendChild(script);
   }
 });
