@@ -135,6 +135,7 @@ module.exports = async function () {
       item["structuredData_FAQPage"] = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
+        name: `FAQPage for "${item.ServiceName}"`,
         mainEntity: QaResult.map(x => ({
           "@type": "Question",
           name: x.Question,
