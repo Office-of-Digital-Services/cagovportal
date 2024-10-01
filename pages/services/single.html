@@ -9,7 +9,7 @@ pagination:
     addAllPagesToCollections : true
 permalink: "departments/{{ item.AgencyId }}/services/{{ item.ServiceId }}/"
 eleventyComputed: 
-  description: Service details for "{{ item.ServiceName | safe }}"
+  description: "{{ item.Description | safe }}"
   keywords: "{{ item.Keywords | safe }}"
   title: "{{ item.ServiceName | safe }}"
 ---
@@ -115,12 +115,13 @@ eleventyComputed:
           {{- keyword | trim -}} </a
         ><span class="m-r-sm">,</span> {% endif -%} {%- endfor %}
       </p>
-
+      {%- if item.structuredData_FAQPage %}
       <!-- Begin Structured Data for QAPage -->
       <script type="application/ld+json">
-        {{ item.structuredData_FAQPage  | dump | safe }}
+        {{ item.structuredData_FAQPage | dump | safe }}
       </script>
       <!-- End Structured Data -->
+      {%- endif %}
     </div>
   </div>
 </div>

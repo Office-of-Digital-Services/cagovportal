@@ -1,10 +1,12 @@
 ---
 layout: null
 permalink: "js/custom.js"
+eleventyExcludeFromCollections: true
 ---
 
 {%- include "../../src/js/index.mjs" -%}
 {%- include "../../src/js/cagov-feedback.mjs" -%}
+{%- include "../../src/js/googletranslate.mjs" -%}
 (function () {
   let a={{-state_entity_client_filter.agency | dump(2) | safe -}};
   let s={{-state_entity_client_filter.service | dump(2) | safe -}};

@@ -202,16 +202,3 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 })();
-
-//Google Translate
-document.addEventListener("DOMContentLoaded", () => {
-  /** @type {NodeListOf<HTMLAnchorElement>} */
-  (document.querySelectorAll(".settings-links > a")).forEach(l => {
-    l.addEventListener("click", e => {
-      e.preventDefault();
-      window.location.hash = l.href;
-
-      location.reload();
-    });
-  });
-});

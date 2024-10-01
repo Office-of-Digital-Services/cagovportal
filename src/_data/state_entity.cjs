@@ -130,11 +130,12 @@ module.exports = async function () {
       x => x.AgencyServiceId === item.ServiceId
     );
 
-    if (QaResult) {
-      item.QA = QaResult;
+    item.QA = QaResult;
+    if (QaResult.length) {
       item["structuredData_FAQPage"] = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
+        name: `FAQPage for "${item.ServiceName}"`,
         mainEntity: QaResult.map(x => ({
           "@type": "Question",
           name: x.Question,

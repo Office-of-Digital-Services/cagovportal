@@ -1,6 +1,6 @@
 ---
 layout: null
-permalink: "css/custom.min.css"
+permalink: "css/custom.css"
 eleventyExcludeFromCollections: true
 ---
 
@@ -8,4 +8,4 @@ eleventyExcludeFromCollections: true
 {%- include "../../src/css/fonts.css" -%}
 {%- include "../../src/css/custom.css" -%}
 {%- endset -%}
-{{- css | cssmin | safe -}}
+{{- css | safe -}}

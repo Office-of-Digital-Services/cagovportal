@@ -9,7 +9,7 @@ pagination:
     addAllPagesToCollections : true
 permalink: "departments/{{ item.AgencyId }}/"
 eleventyComputed: 
-  description: Department details for "{{ item.AgencyFullName | safe }}"
+  description: "{{ item.Description | safe }}"
   title: "{{ item.FriendlyName | safe }} ({{ item.Acronym | safe }})"
   keywords: "{{ item.Keywords | safe }}"
 ---
