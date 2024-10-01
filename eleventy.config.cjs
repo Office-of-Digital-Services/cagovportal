@@ -2,7 +2,6 @@
 const defaultConfig = require("@11ty/eleventy/src/defaultConfig");
 const { minify } = require("terser");
 const MarkdownIt = require("markdown-it");
-const CleanCSS = require("clean-css");
 
 // canonical domain
 const domain = "https://www.ca.gov";
@@ -88,6 +87,18 @@ module.exports = function (
     }
   );
 
+  /**
+   * @param {string} content
+   */
+  const minifyCSS = content =>
+    content
+      .replace(/\/\*(?:(?!\*\/)[\s\S])*\*\/|[\r\n\t]+/g, "")
+      .replace(/ {2,}/g, " ")
+      .replace(/ ([{:}]) /g, "$1")
+      .replace(/([{:}]) /g, "$1")
+      .replace(/([;,]) /g, "$1")
+      .replace(/ !/g, "!");
+
   eleventyConfig.addNunjucksAsyncFilter(
     "cssmin",
     /**
@@ -95,11 +106,9 @@ module.exports = function (
      * @param {string} code
      * @param {(arg0: null, arg1: string) => void} callback
      */
+
     async (code, callback) => {
-      /** @type {import("clean-css").OptionsOutput} */
-      const options = {};
-      const minified = new CleanCSS(options).minify(code);
-      callback(null, minified.styles);
+      callback(null, minifyCSS(code));
     }
   );
 
