@@ -85,6 +85,7 @@ eleventyExcludeFromCollections: true
             const atag = titleDiv.querySelector("a");
             if (atag)
               atag.innerHTML = atag.innerHTML
+                .replace(" | CA.gov", "")
                 .replace(" | www.ca.gov", "")
                 .replace(" Agency Details", "")
                 .replace(" Service Details", "");
