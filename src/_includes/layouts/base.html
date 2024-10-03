@@ -8,7 +8,9 @@
     <meta name="Keywords" content="California, government, {{ keywords }}" />
     {%- if noindex %}
     <meta name="robots" content="noindex" />
-    {% else %}
+    {%- elseif noindex_follow %}
+    <meta name="robots" content="noindex, follow" />
+    {%- else %}
     <meta name="robots" content="index, follow" />
     {%- endif %}
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
