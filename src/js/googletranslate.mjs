@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
     .querySelectorAll(".settings-links > a")
     .forEach(l =>
       l.addEventListener("click", () =>
-        window.addEventListener("hashchange", () => window.location.reload())
+        window.setTimeout(() => window.location.reload())
       )
     );
 
