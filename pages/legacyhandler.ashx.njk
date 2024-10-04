@@ -39,6 +39,10 @@ public class ItemRedirectHandler : IHttpHandler
         // Check if both 'item' and 'path' parameters are present
         if (!string.IsNullOrEmpty(item) && !string.IsNullOrEmpty(path))
         {
+            // Replace "dashline" with "-" in the 'item' string
+            // Some old indexes have this
+            item = item.Replace("dashline", "-");
+
             // Construct the legacy path using the 'item' and 'path' parameters
             string legacyPath = String.Format("/{0}/?item={1}", path, item);
             string targetPath = null;
