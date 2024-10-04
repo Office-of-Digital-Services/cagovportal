@@ -3,7 +3,7 @@ landing: Home
 description: Search CA.gov for state websites and featured services.
 title: Search CA.gov
 layout: landing
-noindex: True
+noindex: true
 hide_search: true
 eleventyExcludeFromCollections: true
 ---
@@ -85,6 +85,7 @@ eleventyExcludeFromCollections: true
             const atag = titleDiv.querySelector("a");
             if (atag)
               atag.innerHTML = atag.innerHTML
+                .replace(" | CA.gov", "")
                 .replace(" | www.ca.gov", "")
                 .replace(" Agency Details", "")
                 .replace(" Service Details", "");
