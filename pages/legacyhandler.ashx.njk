@@ -13,7 +13,13 @@ public class ItemRedirectHandler : IHttpHandler
     // Declare a readonly 2-dimensional array to store the redirects
     private static readonly string[,] redirects = new string[,]
     {
-
+      // Begin Manual entries
+      {"/departments/208/services/1110/", "/service/?item=job-training-in-san-diego"},
+      {"/departments/208/services/1114/", "/service/?item=job-training-in-sacramento"},
+      {"/departments/208/services/1111/", "/service/?item=job-training-in-orange-county"},
+      {"/departments/208/services/1113/", "/service/?item=job-training-in-madera"},
+      {"/departments/208/services/1112/", "/service/?item=job-training-in-long-beach"},
+      // End Manual entries
 
       {%- for agency in state_entity.agencies | sortBy("AgencyId") %}
       {
