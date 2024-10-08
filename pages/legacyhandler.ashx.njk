@@ -72,7 +72,7 @@ public class ItemRedirectHandler : IHttpHandler
             // Iterate through the redirects array to find a matching legacy path
             for (int i = 0; i < redirects.GetLength(0); i++)
             {
-                if (redirects[i, 1].Equals(legacyPath, StringComparison.OrdinalIgnoreCase))
+                if (redirects[i, 1].StartsWith(legacyPath, StringComparison.OrdinalIgnoreCase))
                 {
                     // If a match is found, set the target path
                     targetPath = redirects[i, 0];
