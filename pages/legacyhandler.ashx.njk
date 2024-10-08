@@ -42,7 +42,7 @@ public class ItemRedirectHandler : IHttpHandler
     public void ProcessRequest(HttpContext context)
     {
         // Retrieve the 'item' and 'path' query string parameters
-        string item = HttpUtility.UrlEncode(context.Request.QueryString["item"]);
+        string item = context.Request.QueryString["item"];
         string path = context.Request.QueryString["path"];
 
         // Check if both 'item' and 'path' parameters are present
@@ -53,7 +53,7 @@ public class ItemRedirectHandler : IHttpHandler
             item = item.Replace("dashline", "-");
 
             // Construct the current path using the 'item' and 'path' parameters
-            string currentPath = String.Format("/{0}/?item={1}", path, item).ToLower();
+            string currentPath = String.Format("/{0}/?item={1}", path, HttpUtility.UrlEncode(item)).ToLower();
             string redirectLocation = null;
 
             // Iterate through the redirects array to find a matching legacy path
@@ -78,8 +78,9 @@ public class ItemRedirectHandler : IHttpHandler
             else
             {
                 // If no matching target path is found, return a 404 Not Found status
-                context.Response.StatusCode = 400; // Not Found
+                context.Response.StatusCode = 404; // Not Found
                 context.Response.Headers.Add("X-Status-Message", "Target path not found. "+currentPath);
+                context.Response.End();
             }
         }
         else
@@ -87,6 +88,7 @@ public class ItemRedirectHandler : IHttpHandler
             // If 'item' or 'path' parameters are missing, return a 400 Bad Request status
             context.Response.StatusCode = 400; // Bad Request
             context.Response.Write("Item or path parameter is missing.");
+            context.Response.End();
         }
     }
 
