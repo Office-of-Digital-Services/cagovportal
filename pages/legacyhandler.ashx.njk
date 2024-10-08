@@ -14,11 +14,13 @@ public class ItemRedirectHandler : IHttpHandler
     private static readonly string[,] redirects = new string[,]
     {
       // Begin Manual entries
+      {"/departments/283/services/75/", "/service/?item=get-a-visitors-guide"},
       {"/departments/208/services/1110/", "/service/?item=job-training-in-san-diego"},
       {"/departments/208/services/1114/", "/service/?item=job-training-in-sacramento"},
       {"/departments/208/services/1111/", "/service/?item=job-training-in-orange-county"},
       {"/departments/208/services/1113/", "/service/?item=job-training-in-madera"},
       {"/departments/208/services/1112/", "/service/?item=job-training-in-long-beach"},
+      {"/departments/193/services/15/", "/service/?item=pay-traffic-ticket"},
       // End Manual entries
 
       {%- for agency in state_entity.agencies | sortBy("AgencyId") %}
@@ -49,26 +51,27 @@ public class ItemRedirectHandler : IHttpHandler
             // Some old indexes have this
             item = item.Replace("dashline", "-");
 
-            // Construct the legacy path using the 'item' and 'path' parameters
-            string legacyPath = String.Format("/{0}/?item={1}", path, item);
-            string targetPath = null;
+            // Construct the current path using the 'item' and 'path' parameters
+            string currentPath = String.Format("/{0}/?item={1}", path, item).ToLower();
+            string redirectLocation = null;
 
             // Iterate through the redirects array to find a matching legacy path
             for (int i = 0; i < redirects.GetLength(0); i++)
             {
-                if (redirects[i, 1].Equals(legacyPath, StringComparison.OrdinalIgnoreCase))
+                string targetPath = redirects[i, 1].ToLower();
+                if (targetPath.StartsWith(currentPath) || currentPath.StartsWith(targetPath))
                 {
                     // If a match is found, set the target path
-                    targetPath = redirects[i, 0];
+                    redirectLocation = redirects[i, 0];
                     break;
                 }
             }
 
             // If a target path is found, redirect to it
-            if (targetPath != null)
+            if (redirectLocation != null)
             {
                 context.Response.StatusCode = 301; // Permanent Redirect
-                context.Response.RedirectLocation = targetPath;
+                context.Response.RedirectLocation = redirectLocation;
                 context.Response.End();
             }
             else
