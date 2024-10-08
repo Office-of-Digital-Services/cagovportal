@@ -14,7 +14,7 @@ public class ItemRedirectHandler : IHttpHandler
     private static readonly string[,] redirects = new string[,]
     {
       // Begin Manual entries
-      {"/departments/237/", "/agency/?item=governor%E2%80%99s-office-of-business-and-economic-development"},
+      {"/departments/237/", "/agency/?item=governor%e2%80%99s-office-of-business-and-economic-development"},
       {"/departments/283/services/75/", "/service/?item=get-a-visitors-guide"},
       {"/departments/208/services/1110/", "/service/?item=job-training-in-san-diego"},
       {"/departments/208/services/1114/", "/service/?item=job-training-in-sacramento"},
@@ -27,13 +27,13 @@ public class ItemRedirectHandler : IHttpHandler
       {%- for agency in state_entity.agencies | sortBy("AgencyId") %}
       {
         "/departments/{{agency.AgencyId}}/",
-        "/agency/?item={{agency.FriendlyName | lower | replace(" ", "-") | urlencode | safe}}"
+        "/agency/?item={{agency.FriendlyName | replace(" ", "-") | urlencode | lower | safe}}"
       },
       {%- endfor %}
       {%- for service in state_entity.services | sortBy("ServiceId") %}
       {
         "/departments/{{service.AgencyId}}/services/{{service.ServiceId}}/",
-        "/service/?item={{service.ServiceName | lower | replace(" ", "-") | urlencode | safe}}"
+        "/service/?item={{service.ServiceName | replace(" ", "-") | urlencode | lower | safe}}"
       }{{"," if not loop.last}}
       {%- endfor %}
  
@@ -87,7 +87,7 @@ public class ItemRedirectHandler : IHttpHandler
         {
             // If 'item' or 'path' parameters are missing, return a 400 Bad Request status
             context.Response.StatusCode = 400; // Bad Request
-            context.Response.Write("Item or path parameter is missing.");
+            context.Response.Headers.Add("X-Status-Message", "Item or path parameter is missing.");
             context.Response.End();
         }
     }
