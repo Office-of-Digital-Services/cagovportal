@@ -19,6 +19,22 @@ public class ItemRedirectHandler : IHttpHandler
       {"/departments/208/services/1111/", "/service/?item=job-training-in-orange-county"},
       {"/departments/208/services/1113/", "/service/?item=job-training-in-madera"},
       {"/departments/208/services/1112/", "/service/?item=job-training-in-long-beach"},
+
+
+      {"/departments/193/services/15/", "/service/?item=pay-traffic-ticket/1000"},
+      {"/departments/275/services/58/", "/service/?item=look-up-my-representatives/1000"},      
+      {"/departments/216/services/1164/", "/service/?item=human-resources/1000"},
+      {"/departments/229/services/18/", "/service/?item=file-for-disability/1000"},
+      {"", ""},
+      {"", ""},
+      {"", ""},
+      {"", ""},
+      {"", ""},
+      {"", ""},
+      {"", ""},
+      {"", ""},
+      
+
       // End Manual entries
 
       {%- for agency in state_entity.agencies | sortBy("AgencyId") %}
