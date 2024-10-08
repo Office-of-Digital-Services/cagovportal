@@ -14,7 +14,7 @@ public class ItemRedirectHandler : IHttpHandler
     private static readonly string[,] redirects = new string[,]
     {
       // Begin Manual entries
-      {"/departments/237/", "/agency/?item=governorâ€™s-office-of-business-and-economic-development"},
+      {"/departments/237/", "/agency/?item=governor%E2%80%99s-office-of-business-and-economic-development"},
       {"/departments/283/services/75/", "/service/?item=get-a-visitors-guide"},
       {"/departments/208/services/1110/", "/service/?item=job-training-in-san-diego"},
       {"/departments/208/services/1114/", "/service/?item=job-training-in-sacramento"},
@@ -42,7 +42,7 @@ public class ItemRedirectHandler : IHttpHandler
     public void ProcessRequest(HttpContext context)
     {
         // Retrieve the 'item' and 'path' query string parameters
-        string item = HttpUtility.UrlDecode(context.Request.QueryString["item"]);
+        string item = HttpUtility.UrlDecode(context.Request.QueryString["item"], Encoding.UTF8);
         string path = context.Request.QueryString["path"];
 
         // Check if both 'item' and 'path' parameters are present
