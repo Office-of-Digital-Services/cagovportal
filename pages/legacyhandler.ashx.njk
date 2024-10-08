@@ -27,13 +27,13 @@ public class ItemRedirectHandler : IHttpHandler
       {%- for agency in state_entity.agencies | sortBy("AgencyId") %}
       {
         "/departments/{{agency.AgencyId}}/",
-        "/agency/?item={{agency.FriendlyName | replace(" ", "-") | urlencode | lower | safe}}"
+        "/agency/?item={{agency.FriendlyName | replace(" ", "-") | urlencode | replace("'", "%27") | lower | safe}}"
       },
       {%- endfor %}
       {%- for service in state_entity.services | sortBy("ServiceId") %}
       {
         "/departments/{{service.AgencyId}}/services/{{service.ServiceId}}/",
-        "/service/?item={{service.ServiceName | replace(" ", "-") | urlencode | lower | safe}}"
+        "/service/?item={{service.ServiceName | replace(" ", "-") | urlencode | replace("'", "%27") | lower | safe}}"
       }{{"," if not loop.last}}
       {%- endfor %}
  
