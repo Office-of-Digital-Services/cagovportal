@@ -14,6 +14,7 @@ public class ItemRedirectHandler : IHttpHandler
     private static readonly string[,] redirects = new string[,]
     {
       // Begin Manual entries
+      {"/departments/237/", "/agency/?item=governor%e2%80%99s-office-of-business-and-economic-development"},
       {"/departments/283/services/75/", "/service/?item=get-a-visitors-guide"},
       {"/departments/208/services/1110/", "/service/?item=job-training-in-san-diego"},
       {"/departments/208/services/1114/", "/service/?item=job-training-in-sacramento"},
@@ -26,13 +27,13 @@ public class ItemRedirectHandler : IHttpHandler
       {%- for agency in state_entity.agencies | sortBy("AgencyId") %}
       {
         "/departments/{{agency.AgencyId}}/",
-        "/agency/?item={{agency.FriendlyName | lower | replace(" ", "-") | safe}}"
+        "/agency/?item={{agency.FriendlyName | replace(" ", "-") | urlencode | replace("'", "%27") | lower | safe}}"
       },
       {%- endfor %}
       {%- for service in state_entity.services | sortBy("ServiceId") %}
       {
         "/departments/{{service.AgencyId}}/services/{{service.ServiceId}}/",
-        "/service/?item={{service.ServiceName | lower | replace(" ", "-") | safe}}"
+        "/service/?item={{service.ServiceName | replace(" ", "-") | urlencode | replace("'", "%27") | lower | safe}}"
       }{{"," if not loop.last}}
       {%- endfor %}
  
@@ -52,7 +53,7 @@ public class ItemRedirectHandler : IHttpHandler
             item = item.Replace("dashline", "-");
 
             // Construct the current path using the 'item' and 'path' parameters
-            string currentPath = String.Format("/{0}/?item={1}", path, item).ToLower();
+            string currentPath = String.Format("/{0}/?item={1}", path, HttpUtility.UrlEncode(item)).ToLower();
             string redirectLocation = null;
 
             // Iterate through the redirects array to find a matching legacy path
@@ -78,14 +79,16 @@ public class ItemRedirectHandler : IHttpHandler
             {
                 // If no matching target path is found, return a 404 Not Found status
                 context.Response.StatusCode = 404; // Not Found
-                context.Response.Write("Target path not found.");
+                context.Response.Headers.Add("X-Status-Message", "Target path not found. "+currentPath);
+                context.Response.End();
             }
         }
         else
         {
             // If 'item' or 'path' parameters are missing, return a 400 Bad Request status
             context.Response.StatusCode = 400; // Bad Request
-            context.Response.Write("Item or path parameter is missing.");
+            context.Response.Headers.Add("X-Status-Message", "Item or path parameter is missing.");
+            context.Response.End();
         }
     }
 
