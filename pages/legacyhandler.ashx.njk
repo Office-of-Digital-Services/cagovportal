@@ -79,7 +79,7 @@ public class ItemRedirectHandler : IHttpHandler
             {
                 // If no matching target path is found, return a 404 Not Found status
                 context.Response.StatusCode = 400; // Not Found
-                context.Response.Write("Target path not found. "+currentPath);
+                context.Response.Headers.Add("X-Status-Message", "Target path not found. "+currentPath);
             }
         }
         else
