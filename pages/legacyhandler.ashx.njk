@@ -42,7 +42,7 @@ public class ItemRedirectHandler : IHttpHandler
     public void ProcessRequest(HttpContext context)
     {
         // Retrieve the 'item' and 'path' query string parameters
-        string item = HttpUtility.UrlDecode(context.Request.QueryString["item"], Encoding.UTF8);
+        string item = HttpUtility.UrlEncode(context.Request.QueryString["item"]);
         string path = context.Request.QueryString["path"];
 
         // Check if both 'item' and 'path' parameters are present
