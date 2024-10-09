@@ -13,5 +13,5 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "prettier.documentSelectors": ["**/web.config"]
+  "prettier.documentSelectors": ["**/web.config", "**/*.svg"]
 }
