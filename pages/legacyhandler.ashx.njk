@@ -15,6 +15,7 @@ public class ItemRedirectHandler : IHttpHandler
     {
       // Begin Manual entries
       {"/departments/237/", "/agency/?item=governor%e2%80%99s-office-of-business-and-economic-development"},
+      {"/departments/243/","/agency/?item=legislative-analyst%2527s-office"},
       {"/departments/283/services/75/", "/service/?item=get-a-visitors-guide"},
       {"/departments/208/services/1110/", "/service/?item=job-training-in-san-diego"},
       {"/departments/208/services/1114/", "/service/?item=job-training-in-sacramento"},
@@ -22,6 +23,7 @@ public class ItemRedirectHandler : IHttpHandler
       {"/departments/208/services/1113/", "/service/?item=job-training-in-madera"},
       {"/departments/208/services/1112/", "/service/?item=job-training-in-long-beach"},
       {"/departments/193/services/15/", "/service/?item=pay-traffic-ticket"},
+
       // End Manual entries
 
       {%- for agency in state_entity.agencies | sortBy("AgencyId") %}
