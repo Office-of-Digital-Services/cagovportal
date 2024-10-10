@@ -13,6 +13,13 @@
         "parser": "html",
         "printWidth": 120
       }
+    },
+    {
+      "files": "*.svg",
+      "options": {
+        "parser": "html",
+        "printWidth": 9999
+      }
     }
   ]
 }
