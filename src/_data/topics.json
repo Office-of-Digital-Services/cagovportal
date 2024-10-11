@@ -56,8 +56,8 @@
       {
         "DepartmentId": 287,
         "ServiceId": 25,
-        "ServiceName": "Apply for a business license",
-        "Description": "Register online for a California business license, permit, or account.",
+        "ServiceName": "Apply for a business permit",
+        "Description": "Register for new business permits, licenses, and accounts or add business locations.",
         "umgURL": "/images/topic2-1.png",
         "imgAlt": "A middle-aged, medium-skin-toned Asian woman with glasses smiles and uses a laptop on a table."
       },
