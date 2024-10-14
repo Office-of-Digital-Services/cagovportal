@@ -187,7 +187,7 @@ main {
   /* -- Banner * -- */
   > div.header-banner {
     overflow: hidden;
-    background-image: url("/images/background.svg");
+    background-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 498"><polygon fill="%23035D85" points="598 -1 -1 -1 -1 243 -1 244 -1 497 98 497 98 497 840 497"/><polygon fill="%23035376" points="1204 -1 598 -1 840 497 949 497 1440 497 1440 -1"/></svg>');
     background-color: var(--color-p2, #046b99);
     background-position: center !important;
     background-size: cover !important;
