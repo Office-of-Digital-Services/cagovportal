@@ -2,6 +2,9 @@
 const defaultConfig = require("@11ty/eleventy/src/defaultConfig");
 const { minify } = require("terser");
 const MarkdownIt = require("markdown-it");
+const { svg64 } = require("./node_modules/svg64/dist/svg64.cjs");
+const { readFileSync } = require("node:fs");
+const path = require("node:path");
 
 // canonical domain
 const domain = "https://www.ca.gov";
@@ -136,6 +139,10 @@ module.exports = function (
         month: "long",
         day: "numeric"
       })
+  );
+
+  eleventyConfig.addFilter("svg64", (/** @type {string} */ svgPath) =>
+    svg64(readFileSync(path.join(__dirname, svgPath), "utf-8"))
   );
 
   //Start with default config, easier to configure 11ty later
