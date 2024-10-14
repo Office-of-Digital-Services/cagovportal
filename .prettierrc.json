@@ -18,7 +18,6 @@
       "files": "*.svg",
       "options": {
         "parser": "html",
-        "htmlWhitespaceSensitivity": "ignore",
         "printWidth": 9999
       }
     }
