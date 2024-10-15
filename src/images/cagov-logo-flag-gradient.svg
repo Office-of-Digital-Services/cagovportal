@@ -4,7 +4,7 @@
       <stop offset="77%" stop-color="#2f85b0" />
       <stop offset="78%" stop-color="#326130" />
     </linearGradient>
-    <linearGradient id="grad1" gradientUnits="userSpaceOnUse" y1="149" x2="0" y2="38" gradientTransform="matrix(1 0 0 -1 0 263)">
+    <linearGradient id="grad1" gradientUnits="userSpaceOnUse" y1="114" x2="0" y2="225">
       <stop offset="0" stop-color="#8B5A24" />
       <stop offset="1" stop-color="#441A12" />
     </linearGradient>
