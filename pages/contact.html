@@ -4,7 +4,9 @@ description: Get contact information for agencies, government, and the CA.gov we
 layout: landing
 ---
 
-<div class="section-default bg-gray-75">
+<div
+  class="section-default bg-gray-75 lineart"
+  style="background: url('/images/contact-lineart.svg') no-repeat right / auto;">
   <div class="container p-y-md">
     {%- include "breadcrumbs.html" -%}
     <h1 class="m-t-0">{{title}}</h1>
@@ -18,13 +20,19 @@ layout: landing
         Get contact information for agencies, government, and the CA.gov
         website.
       </p>
-      <h2>State agency contact information</h2>
-      <p>
-        Please visit the <a href="/departments/">Departments</a> page for
-        department specific contact information. You can also find a list of
-        services that each department provides.
-      </p>
-      <h2>State government contact information</h2>
+
+      <div class="m-t-lg p-x-md p-b-md brd-solid-1 brd-gray-200 rounded">
+        <h2 class="color-p2 m-t-md">State agency contact information</h2>
+        <p class="m-b-md">
+          Are you looking for help for a government service? Find the contact
+          information for the department that provides that service. You can
+          also find a list of services that each department provides.
+        </p>
+        <a href="/departments/" class="btn btn-primary">Find a department</a>
+        <p class="m-b text-left">{{-tag.cardDescription-}}</p>
+      </div>
+
+      <h2 class="h3">State government contact information</h2>
 
       <ul>
         <li>
@@ -37,7 +45,7 @@ layout: landing
         </li>
       </ul>
 
-      <h2>Website help</h2>
+      <h2 class="h3">Website help</h2>
       <p>
         Visit our <a href="/support/technical-help/">Technical help</a> page if
         you have questions about using this website.
