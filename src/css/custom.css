@@ -137,13 +137,11 @@ header {
   }
 
   /* -- Mobile controls * -- */
-  > div.mobile-controls {
-    > div.main-nav-icons {
-      top: -5rem;
+  > div.mobile-controls > div.main-nav-icons {
+    top: -5rem;
 
-      > button.toggle-menu {
-        margin-top: 1.8rem;
-      }
+    > button.toggle-menu {
+      margin-top: 1.8rem;
     }
   }
 
@@ -152,15 +150,13 @@ header {
       padding-bottom: 0;
     }
 
-    > div#head-seach {
-      > div.d-block {
-        > a.drawer-logo-link {
-          outline-offset: -3px;
+    > div.search-container > div.d-block > a.drawer-logo-link {
+      outline-offset: -3px;
 
-          > img.drawer-logo {
-            max-width: 232px;
-          }
-        }
+      > img.drawer-logo {
+        max-width: 232px;
+        filter: brightness(0) invert(1);
+        aspect-ratio: 232/60;
       }
     }
   }
