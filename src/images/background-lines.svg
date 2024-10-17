@@ -10,7 +10,7 @@
       <stop offset="0.08" stop-color="#669DC4" />
       <stop offset="1" stop-color="#99BDD8" />
     </linearGradient>
-    <linearGradient id="lgrad2" gradientUnits="userSpaceOnUse" x1="-3173" y1="76" x2="-2814" y2="110" gradientTransform="matrix(-1 0 0 1 -2822 0)">
+    <linearGradient id="lgrad2" gradientUnits="userSpaceOnUse" x1="351" y1="76" x2="-8" y2="110">
       <stop offset="0" stop-color="#6EA9C4" />
       <stop offset="1" stop-color="#549AB9" />
     </linearGradient>
