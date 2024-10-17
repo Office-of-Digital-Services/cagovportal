@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 164.2">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 164.2">
   <style type="text/css">
     .temp {display:none}
   </style>
 
-  <rect x="-0.1" y="-0.4" fill="#0D4581" width="400" height="165" />
+  <rect y="-0.4" fill="#0D4581" width="400" height="165" />
   <defs>
     <linearGradient id="lgrad1" gradientUnits="userSpaceOnUse" x1="-10" y1="57" x2="352" y2="62">
       <stop offset="0.08" stop-color="#669DC4" />
