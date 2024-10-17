@@ -6,7 +6,7 @@
 
   <rect x="-0.1" y="-0.4" fill="#0D4581" width="400" height="165" />
   <defs>
-    <linearGradient id="lgrad1" gradientUnits="userSpaceOnUse" x1="-2812" y1="57" x2="-3164" y2="62" gradientTransform="matrix(-1 0 0 1 -2822 0)">
+    <linearGradient id="lgrad1" gradientUnits="userSpaceOnUse" x1="10" y1="57" x2="-352" y2="62" gradientTransform="matrix(-1 0 0 1 0 0)">
       <stop offset="0.08" stop-color="#669DC4" />
       <stop offset="1" stop-color="#99BDD8" />
     </linearGradient>
