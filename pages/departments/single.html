@@ -28,8 +28,6 @@ endfor %} {%- endfor -%}
 </script>
 <!-- End Structured Data -->
 
-<p>Updated {{ item.Updated }}</p>
-
 <div
   class="section-understated lineart bg-s1"
   style="background: url('/images/departments-lineart.svg') no-repeat right / auto;">
@@ -116,6 +114,8 @@ endfor %} {%- endfor -%}
         </details>
       </cagov-accordion>
       {%- endfor %}
+      <h3>Updated</h3>
+      <p><time datetime="{{ item.Updated }}">{{ item.Updated }}</time></p>
     </div>
   </div>
 </div>
