@@ -12,6 +12,7 @@ eleventyComputed:
   description: "{{ item.Description | safe }}"
   title: "{{ item.FriendlyName | safe }} ({{ item.Acronym | safe }})"
   keywords: "{{ item.Keywords | safe }}"
+  updated: "{{ item.Updated | safe }}"
 ---
 
 {%-set QAs = [] -%} {%- for service in state_entity.services |
@@ -26,6 +27,8 @@ endfor %} {%- endfor -%}
   }}
 </script>
 <!-- End Structured Data -->
+
+<p>Updated {{ item.Updated }}</p>
 
 <div
   class="section-understated lineart bg-s1"
