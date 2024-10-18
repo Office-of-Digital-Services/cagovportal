@@ -21,6 +21,9 @@
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
     <!-- Primary Meta Tags -->
     <meta name="title" content="{% metatitle %}" />
+    {%- if updated %}
+    <meta name="last-modified" content="{{ updated }}" />
+    {%- endif %}
 
     <!-- Canonical link, improves SEO -->
     <link href="{% canonical %}" rel="canonical" />

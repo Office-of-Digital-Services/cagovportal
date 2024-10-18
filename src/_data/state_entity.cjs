@@ -9,6 +9,14 @@ module.exports = async function () {
       "Assistance and social programs"
     );
 
+  const myDateFormat = (/** @type {string | number | Date} */ dateString) =>
+    new Date(dateString).toLocaleDateString("en-CA", {
+      timeZone: "America/Los_Angeles",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit"
+    });
+
   /**
    * Recursively trims strings in the object
    * @param {{[x: string]: string | object}} obj
@@ -55,6 +63,8 @@ module.exports = async function () {
 
     item["AgencyFullName"] = `${item["FriendlyName"]} (${item["Acronym"]})`;
 
+    item["Updated"] = myDateFormat(item["Updated"]);
+
     //Fix annoying typos
     item["AgencyTags"] = cleanup(item["AgencyTags"]);
 
@@ -99,6 +109,8 @@ module.exports = async function () {
 
     //Fix annoying typos
     item["AgencyTags"] = cleanup(item["AgencyTags"]);
+
+    item["Updated"] = myDateFormat(item["Updated"]);
 
     const provider = results.agencies.find(
       x => x.AgencyId === item.AgencyId

@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: true
   {%- for page in collections.all %}
   <url>
     <loc>{{-site.url-}}{{-page.url-}}</loc>
-    <lastmod>{{-page.date.toISOString().split('T')[0]-}}</lastmod>
+    <lastmod>{{-(page.data.updated | default(page.date.toISOString().split('T')[0]))-}}</lastmod>
   </url>
   {%- endfor %}
   <url>
