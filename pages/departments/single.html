@@ -12,6 +12,7 @@ eleventyComputed:
   description: "{{ item.Description | safe }}"
   title: "{{ item.FriendlyName | safe }} ({{ item.Acronym | safe }})"
   keywords: "{{ item.Keywords | safe }}"
+  updated: "{{ item.Updated | safe }}"
 ---
 
 {%-set QAs = [] -%} {%- for service in state_entity.services |
