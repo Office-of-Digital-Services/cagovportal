@@ -2,6 +2,8 @@
 const defaultConfig = require("@11ty/eleventy/src/defaultConfig");
 const { minify } = require("terser");
 const MarkdownIt = require("markdown-it");
+const postcss = require("postcss");
+const postcssNested = require("postcss-nested");
 
 // canonical domain
 const domain = "https://www.ca.gov";
@@ -111,6 +113,14 @@ module.exports = function (
       callback(null, minifyCSS(code));
     }
   );
+
+  // For making a non-nested fallback
+  eleventyConfig.addFilter("flattenCSS", async code => {
+    const result = await postcss([postcssNested]).process(code, {
+      from: undefined
+    });
+    return result.css;
+  });
 
   // a special filter for converting md text to HTML
   eleventyConfig.addFilter("md", (/** @type {string} */ contents) => {
