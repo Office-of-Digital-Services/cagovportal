@@ -1,0 +1,11 @@
+---
+layout: null
+permalink: "css/custom.flat.css"
+eleventyExcludeFromCollections: true
+---
+
+{%- set css -%}
+{%- include "../../src/css/fonts.css" -%}
+{%- include "../../src/css/custom.css" -%}
+{%- endset -%}
+{{- css | flattenCSS | safe -}}

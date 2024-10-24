@@ -37,6 +37,15 @@ When working with our custom HTML element for filtering search results, it's ess
  */
 
 window.addEventListener("DOMContentLoaded", () => {
+  // Feature detection for CSS nesting
+  if (!CSS.supports("selector(&)")) {
+    // CSS Nesting not supported.  Load alternative CSS file
+    const link = /** @type {HTMLLinkElement} */ (
+      document.getElementById("main-stylesheet")
+    );
+    link.href = link.href.replace("min", "flat");
+  }
+
   customElements.define(
     "cagovhome-filterlist",
     class extends HTMLElement {
