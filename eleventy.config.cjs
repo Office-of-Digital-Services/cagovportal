@@ -114,8 +114,78 @@ module.exports = function (
     }
   );
 
+  function flattenCSS(css) {
+    const json = cssToJson(css);
+
+    return jsonToCss(json);
+  }
+
+  /**
+   * @param {string} css
+   */
+  function cssToJson(css) {
+    // Remove CSS comments
+    css = css.replace(/\/\*[\s\S]*?\*\//g, "");
+
+    // Remove carriage returns and newlines
+    css = css.replace(/[\r\n]/g, "");
+
+    // Replace multiple spaces with a single space
+    css = css.replace(/\s\s+/g, " ");
+
+    // Escape quote characters
+    css = css.replace(/"/g, '\\"');
+
+    // add surrounding braces
+    css = `{\n${css}\n}`;
+
+    // Handle properties
+    css = css.replace(/([^{};]+):\s*([^;]+);/g, (match, p1, p2) => {
+      return `"${p1.trim()}": "${p2.trim()}";`;
+    });
+
+    // Add quotes around selectors and properties
+    css = css.replace(/([^{};]+)\s*{/g, (match, p1) => `"${p1.trim()}": {\n`);
+
+    // Finish property quotes
+    css = css.replace(/";/g, '",');
+
+    // Finish next object quotes
+    css = css.replace(/}"/g, '},"');
+
+    // Remove trailing commas
+    css = css.replace(/,\s*}/g, "}");
+
+    console.log(css);
+
+    // Parse the JSON string
+    return JSON.parse(css);
+  }
+
+  function jsonToCss(json, parentSelector = "") {
+    let css = "";
+
+    for (const selector in json) {
+      if (typeof json[selector] === "object") {
+        const fullSelector = parentSelector
+          ? `${parentSelector} ${selector}`
+          : selector;
+        css += jsonToCss(json[selector], fullSelector);
+      } else {
+        css += `${parentSelector} { ${selector}: ${json[selector]}; }\n`;
+      }
+    }
+
+    return css;
+  }
+
   // For making a non-nested fallback
-  eleventyConfig.addFilter("flattenCSS", async code => {
+  eleventyConfig.addFilter("flattenCSS", (/** @type {string} */ code) =>
+    flattenCSS(code)
+  );
+
+  // For making a non-nested fallback
+  eleventyConfig.addFilter("flattenCSS2", async code => {
     const result = await postcss([postcssNested]).process(code, {
       from: undefined
     });
