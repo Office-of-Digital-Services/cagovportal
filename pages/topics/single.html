@@ -116,10 +116,14 @@ eleventyComputed:
         data-result-count-query=".items-count"
         data-filter-storage-key="service"
         data-row-filter-key="ServiceId"
-        data-filter-trigger-selector="input#defaultFilter">
+        data-filter-trigger-selector="input#defaultFilter"
+        role="list">
         {%- for service in state_entity.services |
         pluck('AgencyTags',item.name,"includes") -%}
-        <div data-row-key="{{service.ServiceId}}" class="pos-rel">
+        <div
+          data-row-key="{{service.ServiceId}}"
+          class="pos-rel"
+          role="listitem">
           <h2 class="lead bold m-t-0 m-b">
             <a
               href="/departments/{{ service.AgencyId }}/services/{{ service.ServiceId }}/"

@@ -45,9 +45,10 @@ noindex_follow: true
         data-result-count-query=".items-count"
         data-filter-storage-key="agency"
         data-row-filter-key="AgencyId"
-        data-filter-trigger-selector='input[name="AgencyTags"]'>
+        data-filter-trigger-selector='input[name="AgencyTags"]'
+        role="list">
         {%- for agency in state_entity.agencies -%}
-        <div data-row-key="{{agency.AgencyId}}" class="pos-rel">
+        <div data-row-key="{{agency.AgencyId}}" class="pos-rel" role="listitem">
           <div class="d-flex">
             <div class="dep-image-wrapper">
               <img
