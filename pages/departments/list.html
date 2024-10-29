@@ -56,9 +56,9 @@ noindex_follow: true
             <h3 class="m-t-0" lang="en" translate="no">{{ letter }}</h3>
           </div>
           <div class="col-lg-11">
-            <ul role="list">
+            <ul>
               {%- for agency in agencies %}
-              <li data-row-key="{{agency.AgencyId}}" role="listitem">
+              <li data-row-key="{{agency.AgencyId}}">
                 <a href="/departments/{{ agency.AgencyId }}/"
                   >{{-agency.AgencyName-}}</a
                 >
