@@ -46,18 +46,19 @@ noindex_follow: true
         data-result-count-query=".items-count"
         data-filter-storage-key="agency"
         data-row-filter-key="AgencyId"
-        data-filter-trigger-selector='input[name="AgencyTags"]'>
+        data-filter-trigger-selector='input[name="AgencyTags"]'
+        role="list">
         {% for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' -%} {%- set agencies =
         state_entity.agencies | pluck("AgencyName", letter, "startswith") -%}
         {%- if agencies.length %}
-        <div class="row">
+        <div class="row" role="listitem">
           <div class="col-lg-1">
             <h3 class="m-t-0" lang="en" translate="no">{{ letter }}</h3>
           </div>
           <div class="col-lg-11">
-            <ul>
+            <ul role="list">
               {%- for agency in agencies %}
-              <li data-row-key="{{agency.AgencyId}}">
+              <li data-row-key="{{agency.AgencyId}}" role="listitem">
                 <a href="/departments/{{ agency.AgencyId }}/"
                   >{{-agency.AgencyName-}}</a
                 >

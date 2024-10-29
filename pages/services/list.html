@@ -46,18 +46,19 @@ noindex_follow: true
         data-result-count-query=".items-count"
         data-filter-storage-key="service"
         data-row-filter-key="ServiceId"
-        data-filter-trigger-selector='input[name="AgencyTags"]'>
+        data-filter-trigger-selector='input[name="AgencyTags"]'
+        role="list">
         {% for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' -%} {%- set services =
         state_entity.services | pluck("ServiceName", letter, "startswith") -%}
         {%- if services.length %}
-        <div class="row">
+        <div class="row" role="listitem">
           <div class="col-lg-1">
             <h3 class="m-t-0" lang="en" translate="no">{{ letter }}</h3>
           </div>
           <div class="col-lg-11">
-            <ul>
+            <ul role="list">
               {%- for service in services %}
-              <li data-row-key="{{service.ServiceId}}">
+              <li data-row-key="{{service.ServiceId}}" role="listitem">
                 <a
                   href="/departments/{{ service.AgencyId }}/services/{{ service.ServiceId }}/">
                   {{-service.ServiceName-}}
