@@ -47,15 +47,16 @@ noindex_follow: true
         data-filter-storage-key="agency"
         data-row-filter-key="AgencyId"
         data-filter-trigger-selector='input[name="AgencyTags"]'>
-        {%- for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' -%}
+        {% for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' -%} {%- set agencies =
+        state_entity.agencies | pluck("AgencyName", letter, "startswith") -%}
+        {%- if agencies.length %}
         <div class="row">
           <div class="col-lg-1">
             <h3 class="m-t-0" lang="en" translate="no">{{ letter }}</h3>
           </div>
           <div class="col-lg-11">
             <ul>
-              {%- for agency in state_entity.agencies | pluck("AgencyName",
-              letter, "startswith") -%}
+              {%- for agency in agencies %}
               <li data-row-key="{{agency.AgencyId}}">
                 <a href="/departments/{{ agency.AgencyId }}/"
                   >{{-agency.AgencyName-}}</a
@@ -67,7 +68,7 @@ noindex_follow: true
           <hr />
         </div>
 
-        {%- endfor %}
+        {%- endif -%} {%- endfor %}
       </cagovhome-filterlist>
     </div>
   </div>
