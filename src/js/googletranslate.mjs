@@ -24,13 +24,26 @@ window.addEventListener("DOMContentLoaded", () => {
     return cookies[name] || null;
   }
 
+  const translateWidgetName = window.location.href.includes("/translate/")
+    ? "google_translate_element"
+    : undefined;
+
   // Check for the "googtrans" cookie or #googtrans URL fragment
-  if (getCookie("googtrans") || window.location.hash.includes("#googtrans")) {
+  if (
+    getCookie("googtrans") ||
+    window.location.hash.includes("#googtrans") ||
+    translateWidgetName
+  ) {
+    const options = {
+      pageLanguage: "en",
+      includedLanguages: "en,es,ko,tl,vi,zh-TW"
+    };
+
     window["googleTranslateElementInit"] = () => {
-      new window["google"].translate.TranslateElement({
-        pageLanguage: "en",
-        includedLanguages: "en,es,ko,tl,vi,zh-TW"
-      });
+      new window["google"].translate.TranslateElement(
+        options,
+        translateWidgetName
+      );
     };
 
     // Add translate script to page

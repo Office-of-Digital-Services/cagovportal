@@ -111,10 +111,10 @@ eleventyComputed:
       {%- endif -%}
       <h3>Keywords</h3>
       <p class="keywords">
-        {%- for keyword in item.Keywords.split(",") %} {%- if
+        {%- for keyword in item.Keywords.split(",") | sort %} {%- if
         keyword.trim().length > 0 %}
         <a
-          href="/services/all/?q={{keyword | trim | urlencode}}+"
+          href="/services/all/?q={{keyword | trim | lower | urlencode}}+"
           rel="nofollow">
           {{- keyword | trim -}} </a
         ><span class="m-r-sm">,</span> {% endif -%} {%- endfor %}
