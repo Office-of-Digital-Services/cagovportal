@@ -3,13 +3,13 @@
 // Google Translate support
 window.addEventListener("DOMContentLoaded", () => {
   // // trigger a refresh after the translate link changes the page hash
-  // document
-  //   .querySelectorAll(".settings-links > a")
-  //   .forEach(l =>
-  //     l.addEventListener("click", () =>
-  //       window.setTimeout(() => window.location.reload())
-  //     )
-  //   );
+  document
+    .querySelectorAll(".settings-links > a:not(.translate)")
+    .forEach(l =>
+      l.addEventListener("click", () =>
+        window.setTimeout(() => window.location.reload())
+      )
+    );
 
   // Function to get a cookie by name using modern JavaScript
   /**
