@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
       // Replace WEBP with PNG
 
       /** @type {NodeListOf<HTMLImageElement>} */ (
-        document.querySelectorAll('img[src$=".webp"]')
+        document.querySelectorAll('img[src$=".webp" i]')
       ).forEach(img => {
         img.src = img.src.replace(/\.webp$/i, ".png");
       });
