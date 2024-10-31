@@ -36,6 +36,7 @@ window.addEventListener("DOMContentLoaded", () => {
   ) {
     const options = {
       pageLanguage: "en"
+      //includedLanguages: "en,es,ko,tl,vi,zh-TW"
     };
 
     window["googleTranslateElementInit"] = () => {
