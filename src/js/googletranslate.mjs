@@ -35,8 +35,8 @@ window.addEventListener("DOMContentLoaded", () => {
     translateWidgetName
   ) {
     const options = {
-      pageLanguage: "en",
-      includedLanguages: "en,es,ko,tl,vi,zh-TW"
+      pageLanguage: "en"
+      //includedLanguages: "en,es,ko,tl,vi,zh-TW"
     };
 
     window["googleTranslateElementInit"] = () => {
