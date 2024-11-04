@@ -2,9 +2,9 @@
 
 // Google Translate support
 window.addEventListener("DOMContentLoaded", () => {
-  // trigger a refresh after the translate link changes the page hash
+  // // trigger a refresh after the translate link changes the page hash
   document
-    .querySelectorAll(".settings-links > a")
+    .querySelectorAll(".settings-links > a:not(.translate)")
     .forEach(l =>
       l.addEventListener("click", () =>
         window.setTimeout(() => window.location.reload())
@@ -35,8 +35,8 @@ window.addEventListener("DOMContentLoaded", () => {
     translateWidgetName
   ) {
     const options = {
-      pageLanguage: "en",
-      includedLanguages: "en,es,ko,tl,vi,zh-TW"
+      pageLanguage: "en"
+      //includedLanguages: "en,es,ko,tl,vi,zh-TW"
     };
 
     window["googleTranslateElementInit"] = () => {
