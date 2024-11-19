@@ -148,6 +148,25 @@ module.exports = function (
       })
   );
 
+  // Get a hex representation of the current date.
+  // Used for cache busting on files that need to be updated on each deploy
+  eleventyConfig.addShortcode("DateHex", () => {
+    // Define the reference date, to keep the number small
+    const referenceDate = new Date("2024-11-01");
+
+    // Use the current date or a provided date
+    const currentDate = new Date();
+
+    // Calculate the difference in days
+    const diffTime = Math.abs(currentDate.getTime() - referenceDate.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    // Convert the number of days to a hex string
+    const hexDays = diffDays.toString(16).padStart(4, "0");
+
+    return hexDays;
+  });
+
   //Start with default config, easier to configure 11ty later
   const config = defaultConfig(eleventyConfig);
 
