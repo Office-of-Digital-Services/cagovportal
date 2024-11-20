@@ -167,6 +167,14 @@ module.exports = function (
     return hexDays;
   });
 
+  // Used to get the first day of the month, usefull for montly sitemaps
+  // Usage
+  // {% set globallastmode -%}{%- firstDayOfMonth -%}{%- endset %}
+  eleventyConfig.addShortcode(
+    "firstDayOfMonth",
+    () => `${new Date().toISOString().substring(0, 8)}01`
+  );
+
   //Start with default config, easier to configure 11ty later
   const config = defaultConfig(eleventyConfig);
 

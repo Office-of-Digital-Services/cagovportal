@@ -3,16 +3,19 @@ layout: null
 permalink: sitemap.xml
 eleventyExcludeFromCollections: true
 ---
+{#- No space -#} 
+{% set globallastmode %}{%- firstDayOfMonth -%}{% endset %}
+{#- No space -#} 
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {%- for page in collections.all %}
   <url>
     <loc>{{-site.url-}}{{-page.url-}}</loc>
-    <lastmod>{{-(page.data.updated | default(page.date.toISOString().split('T')[0]))-}}</lastmod>
+    <lastmod>{{-page.data.updated | default(globallastmode)-}}</lastmod>
   </url>
   {%- endfor %}
   <url>
     <loc>https://www.ca.gov/images/WebsiteAccessibilityCert-ca.gov.pdf</loc>
-    <lastmod>2024-10-01</lastmod>
+    <lastmod>{{globallastmode}}</lastmod>
   </url>
 </urlset>
