@@ -13,4 +13,9 @@ column-reverse; } .header-primary-banner img { width: 100%; } } @media
 (min-width: 768px) { .p-r-lg-desktop { padding-right: 3rem !important; }
 .p-l-lg-desktop { padding-left: 3rem !important; } } p { text-wrap: pretty; } h1
 { font-size: 4rem !important; } .section-lightgreen { background-color: #ebf6f3
-!important; }
+!important; } cagov-accordion details summary:hover, cagov-accordion details
+summary:focus { color: #fff; } cagov-accordion details summary::before {
+background-color: var(--color-p2); } cagov-accordion details
+summary:hover::before, cagov-accordion details summary:focus::before,
+cagov-accordion:defined details[open] summary::before { background-color:
+var(--color-p2-dark) !important; }
