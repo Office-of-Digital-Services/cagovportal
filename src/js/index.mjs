@@ -131,28 +131,30 @@ window.addEventListener("DOMContentLoaded", () => {
                   // grab a row from the dataset that matches the key
                   const datarow = storageData.find(x => x[keyProperty] == key);
 
-                  if (!datarow)
-                    throw new Error(
+                  if (datarow) {
+                    // join all the dataset values for this row together for general search
+                    const alldata = Object.values(datarow).join(" ");
+
+                    const textBoxMatches = //true if nothing typed or it matches data
+                      !value ||
+                      (alldata || "")
+                        .replace(/\W/g, " ")
+                        .toLowerCase()
+                        .includes(value);
+
+                    const filterTriggersMatch = //true if nothing checked or ANY checks match data
+                      !checkedTriggers.length ||
+                      checkedTriggers.some(x =>
+                        datarow[x.name].includes(x.value)
+                      );
+
+                    return textBoxMatches && filterTriggersMatch; //Textbox and checks need to match up
+                  } else {
+                    console.error(
                       `data-row-key not found in data storage - ${keyProperty}:${key}`
                     );
-
-                  // join all the dataset values for this row together for general search
-                  const alldata = Object.values(datarow).join(" ");
-
-                  const textBoxMatches = //true if nothing typed or it matches data
-                    !value ||
-                    (alldata || "")
-                      .replace(/\W/g, " ")
-                      .toLowerCase()
-                      .includes(value);
-
-                  const filterTriggersMatch = //true if nothing checked or ANY checks match data
-                    !checkedTriggers.length ||
-                    checkedTriggers.some(x =>
-                      datarow[x.name].includes(x.value)
-                    );
-
-                  return textBoxMatches && filterTriggersMatch; //Textbox and checks need to match up
+                    return false;
+                  }
                 });
 
           // Apply test to count displays
