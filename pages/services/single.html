@@ -76,6 +76,10 @@ eleventyComputed:
         <a href="tel:{{item.ContactPhone}}">{{item.ContactPhone}}</a>
       </p>
 
+      <p class="m-t-md small">
+        <em>Last updated {{ item.Updated | formatDate }}</em>
+      </p>
+
       {%- for qa in item.QA -%} {%- if loop.first %}
       <h3>Frequently Asked Questions</h3>
       {%- endif %}

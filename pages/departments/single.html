@@ -83,6 +83,10 @@ endfor %} {%- endfor -%}
       <h2 class="m-t-md">Description</h2>
       <p class="m-b">{{item.Description}}</p>
 
+      <p class="m-t-md small">
+        <em>Last updated {{ item.Updated | formatDate }}</em>
+      </p>
+
       {% for service in state_entity.services | pluck('AgencyId',item.AgencyId)
       -%} {%- if loop.first -%}
       <hr class="m-b-md" />
