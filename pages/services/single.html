@@ -30,6 +30,9 @@ eleventyComputed:
         <p>
           <a href="../../">{{item.FriendlyName}}</a>
         </p>
+        <p class="m-t-md font-size-13">
+          Last updated {{ item.Updated | formatDate }}
+        </p>
       </div>
       <div class="col-lg-5">
         {% if item.ImageUrl %}
@@ -74,10 +77,6 @@ eleventyComputed:
       <p class="m-t-md">
         <span class="bold">Phone:</span>
         <a href="tel:{{item.ContactPhone}}">{{item.ContactPhone}}</a>
-      </p>
-
-      <p class="m-t-md small">
-        <em>Last updated {{ item.Updated | formatDate }}</em>
       </p>
 
       {%- for qa in item.QA -%} {%- if loop.first %}

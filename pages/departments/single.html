@@ -36,6 +36,9 @@ endfor %} {%- endfor -%}
       <div class="col-xl-8">
         {%- include "breadcrumbs.html" -%}
         <h1 class="m-t-0 color-p2-darker">{{title}}</h1>
+        <p class="m-t-md font-size-13">
+          Last updated {{ item.Updated | formatDate }}
+        </p>
       </div>
     </div>
   </div>
@@ -83,10 +86,6 @@ endfor %} {%- endfor -%}
       <h2 class="m-t-md">Description</h2>
       <p class="m-b">{{item.Description}}</p>
 
-      <p class="m-t-md small">
-        <em>Last updated {{ item.Updated | formatDate }}</em>
-      </p>
-
       {% for service in state_entity.services | pluck('AgencyId',item.AgencyId)
       -%} {%- if loop.first -%}
       <hr class="m-b-md" />
@@ -98,11 +97,20 @@ endfor %} {%- endfor -%}
         >
       </h3>
       <p>{{service.Description}}</p>
-      <a
-        class="btn btn-outline-primary btn-lg m-r-sm"
-        href="{{ service.ServiceUrl }}">
-        Launch service<span class="sr-only">: {{service.ServiceName}}</span></a
-      >
+      <div
+        class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3">
+        <a
+          class="btn btn-outline-primary btn-lg m-r-sm"
+          href="{{ service.ServiceUrl }}">
+          Launch service<span class="sr-only"
+            >: {{service.ServiceName}}</span
+          ></a
+        >
+        <p class="font-size-13 ms-sm-auto">
+          Last updated {{ service.Updated | formatDate }}
+        </p>
+      </div>
+
       {%- if not loop.last -%}
       <hr class="m-b-lg m-t-md" />
       {%- endif -%} {% endfor %} {%- for x in QAs -%} {%- if loop.first %}
