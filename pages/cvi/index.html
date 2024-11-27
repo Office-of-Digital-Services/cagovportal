@@ -4,285 +4,237 @@ layout: page
 description: Submit Certificates of Veterinary Inspections
 noindex_follow: true
 ---
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CVI Portal</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f9;
-      }
 
+<style>
 
-    h2, h3, h4, p, ul {
-        text-align: center;
-    }
+  .form-container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+  }
 
-      .container {
-        padding: 20px;
-        max-width: 800px;
-        margin: 0 auto;
-      }
+  .form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
-      .heading {
-        font-size: 36px;
-        margin-bottom: 20px;
-        color: #333;
-        text-align: center;
-      }
+  .form-group {
+    margin-bottom: 15px;
+  }
 
-      .subheading {
-        font-size: 20px;
-        margin-bottom: 20px;
-        color: #555;
-      }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
 
-      .content {
-        font-size: 16px;
-        text-align: left;
-        margin-bottom: 40px;
-        color: #555;
-        line-height: 1.6;
-      }
+  .form-group select,
+  .form-group input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+</style>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-      .content b {
-        font-weight: bold;
-      }
+<h1>Submit a Certificate of Veterinary Inspection</h1>
+<p>
+  We developed this page for veterinarians and officials to submit Certificates
+  of Veterinary Inspection (CVI). They can easily comply with California’s
+  requirements for CVIs for dogs and cats entering the state.
+</p>
+<h2>What you need to know</h2>
 
-      .content u {
-        text-decoration: underline;
-      }
+<h3>Who needs a CVI?</h3>
+<p>
+  CVIs (health certificates) are required only for dogs being brought into
+  California for sale or transfer of ownership.
+</p>
+<p>
+  <b>Important:</b> This requirement does not apply to cats or most privately
+  owned dogs.
+</p>
 
-      .content a {
-        color: #007bff;
-        text-decoration: none;
-      }
+<h3>What does the law say?</h3>
+<p>
+  According to California Health & Safety Code § 121720, anyone importing dogs
+  into California for sale or transfer must:
+</p>
+<ul>
+  <li>
+    Obtain a health certificate from a licensed and accredited veterinarian
+    within 10 days before importation.
+  </li>
+  <li>
+    Send the certificate to the county health department where the dog will be
+    sold or to the county where the new owner lives.
+  </li>
+</ul>
 
-      .content a:hover {
-        text-decoration: underline;
-      }
+<h3>Where should CVIs be sent?</h3>
+<p>
+  Use this form to send CVIs to local county health departments. This form is
+  the official method to submit CVIs.
+</p>
+<p>
+  <b
+    >Do not send CVIs to CDFA or CDPH. These agencies do not process or forward
+    CVIs to counties.</b
+  >
+</p>
 
-      .form-container {
-        background-color: #fff;
-        padding: 20px 30px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        margin-top: 40px;
-      }
+<h3>Need more information?</h3>
+<p>
+  For more details, including rabies vaccination requirements for dog and cat
+  importation, visit the
+  <a
+    href="https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/VPHS.aspx"
+    target="_blank"
+    >CDPH Veterinary Public Health Section website</a
+  >.
+</p>
+<p>
+  Thank you for helping ensure the health and safety of California’s animals and
+  residents!
+</p>
 
-      .form-container h1 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .form-group {
-        margin-bottom: 15px;
-      }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-      }
-
-      .form-group select,
-      .form-group input {
-        width: 100%;
-        padding: 8px 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-      }
-
-      .form-group button {
-        width: 100%;
-        padding: 10px 15px;
-        border: none;
-        background-color: #007bff;
-        color: white;
-        border-radius: 4px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .form-group button:hover {
-        background-color: #0056b3;
-      }
-    </style>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  </head>
-  <body>
-    <div class="content">
-        <h2>Submit a Certificate of Veterinary Inspection</h2>
-        <p>
-            We developed this page for veterinarians and officials to submit Certificates of Veterinary Inspection (CVI). They can easily comply with California’s requirements for CVIs for dogs and cats entering the state.
-        </p>
-        <h3>What you need to know</h3>
-    
-        <h4>Who needs a CVI?</h4>
-        <p>
-            CVIs (health certificates) are required only for dogs being brought into California for sale or transfer of ownership.
-        </p>
-        <p><b>Important:</b> This requirement does not apply to cats or most privately owned dogs.</p>
-    
-        <h4>What does the law say?</h4>
-        <p>
-            According to California Health & Safety Code § 121720, anyone importing dogs into California for sale or transfer must:
-        </p>
-        <ul>
-            <li>Obtain a health certificate from a licensed and accredited veterinarian within 10 days before importation.</li>
-            <li>Send the certificate to the county health department where the dog will be sold or to the county where the new owner lives.</li>
-        </ul>
-    
-        <h4>Where should CVIs be sent?</h4>
-        <p>
-            Use this form to send CVIs to local county health departments. This form is the official method to submit CVIs.
-        </p>
-        <p><b>Do not send CVIs to CDFA or CDPH. These agencies do not process or forward CVIs to counties.</b></p>
-    
-        <h4>Need more information?</h4>
-        <p>
-            For more details, including rabies vaccination requirements for dog and cat importation, visit the
-            <a href="https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/VPHS.aspx" target="_blank">CDPH Veterinary Public Health Section website</a>.
-        </p>
-        <p>Thank you for helping ensure the health and safety of California’s animals and residents!</p>
+<!-- Form Section -->
+<div class="form-container">
+  <p>
+    When you submit this form, a pre-filled email will open in your default
+    email program addressed to the correct local county health official. You
+    will attach your CVI to the email.
+  </p>
+  <form id="cviForm">
+    <input type="text" name="cdt" id="cdt" style="display: none" />
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required />
     </div>
-    
-
-      <!-- Form Section -->
-      <div class="form-container">
-        <p>When you submit this form, a pre-filled email will open in your default email program addressed to the correct local county health official. You will attach your CVI to the email. </p>
-        <form id="cviForm">
-          <input type="text" name="cdt" id="cdt" style="display: none" />
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="destinationCounty">Destination County</label>
-            <select id="destinationCounty" name="destinationCounty" required>
-              <option value="">Select a county</option>
-              <option value="Alameda County">Alameda County</option>
-              <option value="Alpine County">Alpine County</option>
-              <option value="Amador County">Amador County</option>
-              <option value="Berkeley (City of)">Berkeley (City of)</option>
-              <option value="Butte County">Butte County</option>
-              <option value="Calaveras County">Calaveras County</option>
-              <option value="Colusa County">Colusa County</option>
-              <option value="Contra Costa County">Contra Costa County</option>
-              <option value="Del Norte County">Del Norte County</option>
-              <option value="El Dorado County">El Dorado County</option>
-              <option value="Fresno County">Fresno County</option>
-              <option value="Glenn County">Glenn County</option>
-              <option value="Humboldt County">Humboldt County</option>
-              <option value="Imperial County">Imperial County</option>
-              <option value="Inyo County">Inyo County</option>
-              <option value="Kern County">Kern County</option>
-              <option value="Kings County">Kings County</option>
-              <option value="Lake County">Lake County</option>
-              <option value="Lassen County">Lassen County</option>
-              <option value="Long Beach (City of)">Long Beach (City of)</option>
-              <option value="Los Angeles County">Los Angeles County</option>
-              <option value="Madera County">Madera County</option>
-              <option value="Marin County">Marin County</option>
-              <option value="Mariposa County">Mariposa County</option>
-              <option value="Mendocino County">Mendocino County</option>
-              <option value="Merced County">Merced County</option>
-              <option value="Modoc County">Modoc County</option>
-              <option value="Mono County">Mono County</option>
-              <option value="Monterey County">Monterey County</option>
-              <option value="Napa County">Napa County</option>
-              <option value="Nevada County">Nevada County</option>
-              <option value="Orange County">Orange County</option>
-              <option value="Pasadena (City of)">Pasadena (City of)</option>
-              <option value="Placer County">Placer County</option>
-              <option value="Plumas County">Plumas County</option>
-              <option value="Riverside County">Riverside County</option>
-              <option value="Sacramento County">Sacramento County</option>
-              <option value="San Benito County">San Benito County</option>
-              <option value="San Bernardino County">San Bernardino County </option>
-              <option value="San Diego County">San Diego County</option>
-              <option value="San Francisco City and County">San Francisco City and County</option>
-              <option value="San Joaquin County">San Joaquin County</option>
-              <option value="San Luis Obispo County">San Luis Obispo County</option>
-              <option value="San Mateo County">San Mateo County</option>
-              <option value="Santa Barbara County">Santa Barbara County</option>
-              <option value="Santa Clara County">Santa Clara County</option>
-              <option value="Santa Cruz County">Santa Cruz County</option>
-              <option value="Shasta County">Shasta County</option>
-              <option value="Sierra County">Sierra County</option>
-              <option value="Siskiyou County">Siskiyou County</option>
-              <option value="Solano County">Solano County</option>
-              <option value="Sonoma County">Sonoma County</option>
-              <option value="Stanislaus County">Stanislaus County</option>
-              <option value="Sutter County">Sutter County</option>
-              <option value="Tehama County">Tehama County</option>
-              <option value="Trinity County">Trinity County</option>
-              <option value="Tulare County">Tulare County</option>
-              <option value="Tuolumne County">Tuolumne County</option>
-              <option value="Ventura County">Ventura County</option>
-              <option value="Yolo County">Yolo County</option>
-              <option value="Yuba County">Yuba County</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <button type="submit">Submit</button>
-          </div>
-          <p><b>Reminder:</b> Be sure to attach your CVI to the email before sending.</p>
-        </form>
-      </div>
+    <div class="form-group">
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required />
     </div>
+    <div class="form-group">
+      <label for="destinationCounty">Destination County</label>
+      <select id="destinationCounty" name="destinationCounty" required>
+        <option value="">Select a county</option>
+        <option value="Alameda County">Alameda County</option>
+        <option value="Alpine County">Alpine County</option>
+        <option value="Amador County">Amador County</option>
+        <option value="Berkeley (City of)">Berkeley (City of)</option>
+        <option value="Butte County">Butte County</option>
+        <option value="Calaveras County">Calaveras County</option>
+        <option value="Colusa County">Colusa County</option>
+        <option value="Contra Costa County">Contra Costa County</option>
+        <option value="Del Norte County">Del Norte County</option>
+        <option value="El Dorado County">El Dorado County</option>
+        <option value="Fresno County">Fresno County</option>
+        <option value="Glenn County">Glenn County</option>
+        <option value="Humboldt County">Humboldt County</option>
+        <option value="Imperial County">Imperial County</option>
+        <option value="Inyo County">Inyo County</option>
+        <option value="Kern County">Kern County</option>
+        <option value="Kings County">Kings County</option>
+        <option value="Lake County">Lake County</option>
+        <option value="Lassen County">Lassen County</option>
+        <option value="Long Beach (City of)">Long Beach (City of)</option>
+        <option value="Los Angeles County">Los Angeles County</option>
+        <option value="Madera County">Madera County</option>
+        <option value="Marin County">Marin County</option>
+        <option value="Mariposa County">Mariposa County</option>
+        <option value="Mendocino County">Mendocino County</option>
+        <option value="Merced County">Merced County</option>
+        <option value="Modoc County">Modoc County</option>
+        <option value="Mono County">Mono County</option>
+        <option value="Monterey County">Monterey County</option>
+        <option value="Napa County">Napa County</option>
+        <option value="Nevada County">Nevada County</option>
+        <option value="Orange County">Orange County</option>
+        <option value="Pasadena (City of)">Pasadena (City of)</option>
+        <option value="Placer County">Placer County</option>
+        <option value="Plumas County">Plumas County</option>
+        <option value="Riverside County">Riverside County</option>
+        <option value="Sacramento County">Sacramento County</option>
+        <option value="San Benito County">San Benito County</option>
+        <option value="San Bernardino County">San Bernardino County</option>
+        <option value="San Diego County">San Diego County</option>
+        <option value="San Francisco City and County">
+          San Francisco City and County
+        </option>
+        <option value="San Joaquin County">San Joaquin County</option>
+        <option value="San Luis Obispo County">San Luis Obispo County</option>
+        <option value="San Mateo County">San Mateo County</option>
+        <option value="Santa Barbara County">Santa Barbara County</option>
+        <option value="Santa Clara County">Santa Clara County</option>
+        <option value="Santa Cruz County">Santa Cruz County</option>
+        <option value="Shasta County">Shasta County</option>
+        <option value="Sierra County">Sierra County</option>
+        <option value="Siskiyou County">Siskiyou County</option>
+        <option value="Solano County">Solano County</option>
+        <option value="Sonoma County">Sonoma County</option>
+        <option value="Stanislaus County">Stanislaus County</option>
+        <option value="Sutter County">Sutter County</option>
+        <option value="Tehama County">Tehama County</option>
+        <option value="Trinity County">Trinity County</option>
+        <option value="Tulare County">Tulare County</option>
+        <option value="Tuolumne County">Tuolumne County</option>
+        <option value="Ventura County">Ventura County</option>
+        <option value="Yolo County">Yolo County</option>
+        <option value="Yuba County">Yuba County</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <p>
+      <b>Reminder:</b> Be sure to attach your CVI to the email before sending.
+    </p>
+  </form>
+</div>
 
-    <script>
-document.getElementById('cviForm').addEventListener('submit', function (e) {
-    e.preventDefault();
+<script>
+  document.getElementById('cviForm').addEventListener('submit', function (e) {
+      e.preventDefault();
 
-    // Check the honeypot field (it should be empty)
-    const hiddenField = document.getElementById('cdt').value;
-    if (hiddenField) {
-        alert('Spam detected. Submission rejected.');
-        return;
-    }
+      // Check the honeypot field (it should be empty)
+      const hiddenField = document.getElementById('cdt').value;
+      if (hiddenField) {
+          alert('Spam detected. Submission rejected.');
+          return;
+      }
 
-    // Get form values
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const destinationCounty = document.getElementById('destinationCounty').value;
+      // Get form values
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const destinationCounty = document.getElementById('destinationCounty').value;
 
-    if (!name || !email || !destinationCounty) {
-        alert('All fields are required!');
-        return;
-    }
+      if (!name || !email || !destinationCounty) {
+          alert('All fields are required!');
+          return;
+      }
 
-    const countyEmails = {
-        "Alameda County": "dummy@example.com",
-        "Alpine County": "dummy@example.com"
-        // Add all other counties with dummy email
-    };
+      const countyEmails = {
+          "Alameda County": "dummy@example.com",
+          "Alpine County": "dummy@example.com"
+          // Add all other counties with dummy email
+      };
 
-    const countyEmail = countyEmails[destinationCounty];
-    if (!countyEmail) {
-        alert('No email associated with the selected county.');
-        return;
-    }
+      const countyEmail = countyEmails[destinationCounty];
+      if (!countyEmail) {
+          alert('No email associated with the selected county.');
+          return;
+      }
 
-    const subject = `CVI Submission for ${destinationCounty}`;
-    const body = `Name: ${name}\nEmail: ${email}\nDestination County: ${destinationCounty}`;
-    const mailtoLink = `mailto:${countyEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
+      const subject = `CVI Submission for ${destinationCounty}`;
+      const body = `Name: ${name}\nEmail: ${email}\nDestination County: ${destinationCounty}`;
+      const mailtoLink = `mailto:${countyEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoLink;
 
-    alert('Redirecting to your email client to send the CVI.');
-});
-    </script>
-  </body>
-</html>
+      alert('Redirecting to your email client to send the CVI.');
+  });
+</script>
