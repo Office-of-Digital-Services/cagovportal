@@ -135,7 +135,6 @@ noindex_follow: true
               <option value="Alameda County">Alameda County</option>
               <option value="Alpine County">Alpine County</option>
               <option value="Amador County">Amador County</option>
-              <option value="Berkeley (City of)">Berkeley (City of)</option>
               <option value="Butte County">Butte County</option>
               <option value="Calaveras County">Calaveras County</option>
               <option value="Colusa County">Colusa County</option>
@@ -151,7 +150,6 @@ noindex_follow: true
               <option value="Kings County">Kings County</option>
               <option value="Lake County">Lake County</option>
               <option value="Lassen County">Lassen County</option>
-              <option value="Long Beach (City of)">Long Beach (City of)</option>
               <option value="Los Angeles County">Los Angeles County</option>
               <option value="Madera County">Madera County</option>
               <option value="Marin County">Marin County</option>
@@ -164,7 +162,6 @@ noindex_follow: true
               <option value="Napa County">Napa County</option>
               <option value="Nevada County">Nevada County</option>
               <option value="Orange County">Orange County</option>
-              <option value="Pasadena (City of)">Pasadena (City of)</option>
               <option value="Placer County">Placer County</option>
               <option value="Plumas County">Plumas County</option>
               <option value="Riverside County">Riverside County</option>
@@ -235,7 +232,6 @@ noindex_follow: true
           return;
       }
 
-<<<<<<< HEAD
     const countyEmails = {
   "Alameda": {"to": "john.serrano2@acgov.org"},
   "Alpine": {"to": "tstreeper@alpinecountyca.gov"},
@@ -313,24 +309,7 @@ const countyData = countyEmails[destinationCounty];
     mailtoLink += `&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nDestination County: ${destinationCounty}`)}`;
 
     window.location.href = mailtoLink;
-=======
-      const countyEmails = {
-          "Alameda County": "dummy@example.com",
-          "Alpine County": "dummy@example.com"
-          // Add all other counties with dummy email
-      };
 
-      const countyEmail = countyEmails[destinationCounty];
-      if (!countyEmail) {
-          alert('No email associated with the selected county.');
-          return;
-      }
-
-      const subject = `CVI Submission for ${destinationCounty}`;
-      const body = `Name: ${name}\nEmail: ${email}\nDestination County: ${destinationCounty}`;
-      const mailtoLink = `mailto:${countyEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailtoLink;
->>>>>>> a9faf1d2b6808a7d03cec44d9a5b903d6f558ce3
 
       alert('Redirecting to your email client to send the CVI.');
   });
