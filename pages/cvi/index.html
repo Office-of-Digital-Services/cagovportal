@@ -1,163 +1,123 @@
 ---
-title: Certificate of Veterinary Inspection Redirect
-layout: page
+title: Submit a Certificate of Veterinary Inspection
+layout: landing
 description: Submit Certificates of Veterinary Inspections
 noindex_follow: true
 ---
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CVI Portal</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f9;
-      }
 
+<style>
 
-    h2, h3, h4, p, ul {
-        text-align: center;
-    }
+  .form-container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    margin-top: 40px;
+  }
 
-      .container {
-        padding: 20px;
-        max-width: 800px;
-        margin: 0 auto;
-      }
+  .form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
-      .heading {
-        font-size: 36px;
-        margin-bottom: 20px;
-        color: #333;
-        text-align: center;
-      }
+  .form-group {
+    margin-bottom: 15px;
+  }
 
-      .subheading {
-        font-size: 20px;
-        margin-bottom: 20px;
-        color: #555;
-      }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
 
-      .content {
-        font-size: 16px;
-        text-align: left;
-        margin-bottom: 40px;
-        color: #555;
-        line-height: 1.6;
-      }
+  .form-group select,
+  .form-group input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+</style>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-      .content b {
-        font-weight: bold;
-      }
+<div class="section-default bg-gray-75">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0">{{title}}</h1>
+  </div>
+</div>
 
-      .content u {
-        text-decoration: underline;
-      }
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-lg-9">
+      <p>
+        We developed this page for veterinarians and officials to submit
+        Certificates of Veterinary Inspection (CVI). They can easily comply with
+        California’s requirements for CVIs for dogs and cats entering the state.
+      </p>
+      <h2>What you need to know</h2>
 
-      .content a {
-        color: #007bff;
-        text-decoration: none;
-      }
+      <h3>Who needs a CVI?</h3>
+      <p>
+        CVIs (health certificates) are required only for dogs being brought into
+        California for sale or transfer of ownership.
+      </p>
+      <p>
+        <b>Important:</b> This requirement does not apply to cats or most
+        privately owned dogs.
+      </p>
 
-      .content a:hover {
-        text-decoration: underline;
-      }
+      <h3>What does the law say?</h3>
+      <p>
+        According to California Health & Safety Code § 121720, anyone importing
+        dogs into California for sale or transfer must:
+      </p>
+      <ul>
+        <li>
+          Obtain a health certificate from a licensed and accredited
+          veterinarian within 10 days before importation.
+        </li>
+        <li>
+          Send the certificate to the county health department where the dog
+          will be sold or to the county where the new owner lives.
+        </li>
+      </ul>
 
-      .form-container {
-        background-color: #fff;
-        padding: 20px 30px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        margin-top: 40px;
-      }
+      <h3>Where should CVIs be sent?</h3>
+      <p>
+        Use this form to send CVIs to local county health departments. This form
+        is the official method to submit CVIs.
+      </p>
+      <p>
+        <b
+          >Do not send CVIs to CDFA or CDPH. These agencies do not process or
+          forward CVIs to counties.</b
+        >
+      </p>
 
-      .form-container h1 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .form-group {
-        margin-bottom: 15px;
-      }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-      }
-
-      .form-group select,
-      .form-group input {
-        width: 100%;
-        padding: 8px 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-      }
-
-      .form-group button {
-        width: 100%;
-        padding: 10px 15px;
-        border: none;
-        background-color: #007bff;
-        color: white;
-        border-radius: 4px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .form-group button:hover {
-        background-color: #0056b3;
-      }
-    </style>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  </head>
-  <body>
-    <div class="content">
-        <h2>Submit a Certificate of Veterinary Inspection</h2>
-        <p>
-            We developed this page for veterinarians and officials to submit Certificates of Veterinary Inspection (CVI). They can easily comply with California’s requirements for CVIs for dogs and cats entering the state.
-        </p>
-        <h3>What you need to know</h3>
-    
-        <h4>Who needs a CVI?</h4>
-        <p>
-            CVIs (health certificates) are required only for dogs being brought into California for sale or transfer of ownership.
-        </p>
-        <p><b>Important:</b> This requirement does not apply to cats or most privately owned dogs.</p>
-    
-        <h4>What does the law say?</h4>
-        <p>
-            According to California Health & Safety Code § 121720, anyone importing dogs into California for sale or transfer must:
-        </p>
-        <ul>
-            <li>Obtain a health certificate from a licensed and accredited veterinarian within 10 days before importation.</li>
-            <li>Send the certificate to the county health department where the dog will be sold or to the county where the new owner lives.</li>
-        </ul>
-    
-        <h4>Where should CVIs be sent?</h4>
-        <p>
-            Use this form to send CVIs to local county health departments. This form is the official method to submit CVIs.
-        </p>
-        <p><b>Do not send CVIs to CDFA or CDPH. These agencies do not process or forward CVIs to counties.</b></p>
-    
-        <h4>Need more information?</h4>
-        <p>
-            For more details, including rabies vaccination requirements for dog and cat importation, visit the
-            <a href="https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/VPHS.aspx" target="_blank">CDPH Veterinary Public Health Section website</a>.
-        </p>
-        <p>Thank you for helping ensure the health and safety of California’s animals and residents!</p>
-    </div>
-    
+      <h3>Need more information?</h3>
+      <p>
+        For more details, including rabies vaccination requirements for dog and
+        cat importation, visit the
+        <a
+          href="https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/VPHS.aspx"
+          target="_blank"
+          >CDPH Veterinary Public Health Section website</a
+        >.
+      </p>
+      <p>
+        Thank you for helping ensure the health and safety of California’s
+        animals and residents!
+      </p>
 
       <!-- Form Section -->
-      <div class="form-container">
-        <p>When you submit this form, a pre-filled email will open in your default email program addressed to the correct local county health official. You will attach your CVI to the email. </p>
+      <div class="form-container bg-gray-50 brd-solid-1 brd-gray-light">
+        <h3 class="m-t-0">Submit your CVI</h3>
+        <p>
+          When you submit this form, a pre-filled email will open in your
+          default email program addressed to the correct local county health
+          official. You will attach your CVI to the email.
+        </p>
         <form id="cviForm">
           <input type="text" name="cdt" id="cdt" style="display: none" />
           <div class="form-group">
@@ -210,11 +170,17 @@ noindex_follow: true
               <option value="Riverside County">Riverside County</option>
               <option value="Sacramento County">Sacramento County</option>
               <option value="San Benito County">San Benito County</option>
-              <option value="San Bernardino County">San Bernardino County </option>
+              <option value="San Bernardino County">
+                San Bernardino County
+              </option>
               <option value="San Diego County">San Diego County</option>
-              <option value="San Francisco City and County">San Francisco City and County</option>
+              <option value="San Francisco City and County">
+                San Francisco City and County
+              </option>
               <option value="San Joaquin County">San Joaquin County</option>
-              <option value="San Luis Obispo County">San Luis Obispo County</option>
+              <option value="San Luis Obispo County">
+                San Luis Obispo County
+              </option>
               <option value="San Mateo County">San Mateo County</option>
               <option value="Santa Barbara County">Santa Barbara County</option>
               <option value="Santa Clara County">Santa Clara County</option>
@@ -236,34 +202,40 @@ noindex_follow: true
             </select>
           </div>
           <div class="form-group">
-            <button type="submit">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
           </div>
-          <p><b>Reminder:</b> Be sure to attach your CVI to the email before sending.</p>
+          <p>
+            <b>Reminder:</b> Be sure to attach your CVI to the email before
+            sending.
+          </p>
         </form>
       </div>
     </div>
+  </div>
+</div>
 
-    <script>
-document.getElementById('cviForm').addEventListener('submit', function (e) {
-    e.preventDefault();
+<script>
+  document.getElementById('cviForm').addEventListener('submit', function (e) {
+      e.preventDefault();
 
-    // Check the honeypot field (it should be empty)
-    const hiddenField = document.getElementById('cdt').value;
-    if (hiddenField) {
-        alert('Spam detected. Submission rejected.');
-        return;
-    }
+      // Check the honeypot field (it should be empty)
+      const hiddenField = document.getElementById('cdt').value;
+      if (hiddenField) {
+          alert('Spam detected. Submission rejected.');
+          return;
+      }
 
-    // Get form values
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const destinationCounty = document.getElementById('destinationCounty').value;
+      // Get form values
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const destinationCounty = document.getElementById('destinationCounty').value;
 
-    if (!name || !email || !destinationCounty) {
-        alert('All fields are required!');
-        return;
-    }
+      if (!name || !email || !destinationCounty) {
+          alert('All fields are required!');
+          return;
+      }
 
+<<<<<<< HEAD
     const countyEmails = {
   "Alameda": {"to": "john.serrano2@acgov.org"},
   "Alpine": {"to": "tstreeper@alpinecountyca.gov"},
@@ -341,9 +313,25 @@ const countyData = countyEmails[destinationCounty];
     mailtoLink += `&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nDestination County: ${destinationCounty}`)}`;
 
     window.location.href = mailtoLink;
+=======
+      const countyEmails = {
+          "Alameda County": "dummy@example.com",
+          "Alpine County": "dummy@example.com"
+          // Add all other counties with dummy email
+      };
 
-    alert('Redirecting to your email client to send the CVI.');
-});
-    </script>
-  </body>
-</html>
+      const countyEmail = countyEmails[destinationCounty];
+      if (!countyEmail) {
+          alert('No email associated with the selected county.');
+          return;
+      }
+
+      const subject = `CVI Submission for ${destinationCounty}`;
+      const body = `Name: ${name}\nEmail: ${email}\nDestination County: ${destinationCounty}`;
+      const mailtoLink = `mailto:${countyEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoLink;
+>>>>>>> a9faf1d2b6808a7d03cec44d9a5b903d6f558ce3
+
+      alert('Redirecting to your email client to send the CVI.');
+  });
+</script>

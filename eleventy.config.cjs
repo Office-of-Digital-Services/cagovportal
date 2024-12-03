@@ -4,6 +4,7 @@ const { minify } = require("terser");
 const MarkdownIt = require("markdown-it");
 const postcss = require("postcss");
 const postcssNested = require("postcss-nested");
+const { DateTime } = require("luxon");
 
 // canonical domain
 const domain = "https://www.ca.gov";
@@ -120,6 +121,11 @@ module.exports = function (
       from: undefined
     });
     return result.css;
+  });
+
+  // Custom filter to format date as MM/DD/YYYY
+  eleventyConfig.addFilter("formatDate", dateString => {
+    return DateTime.fromISO(dateString).toFormat("MM/dd/yyyy");
   });
 
   // a special filter for converting md text to HTML
