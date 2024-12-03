@@ -265,20 +265,81 @@ document.getElementById('cviForm').addEventListener('submit', function (e) {
     }
 
     const countyEmails = {
-        "Alameda County": "dummy@example.com",
-        "Alpine County": "dummy@example.com"
-        // Add all other counties with dummy email
-    };
+  "Alameda": {"to": "john.serrano2@acgov.org"},
+  "Alpine": {"to": "tstreeper@alpinecountyca.gov"},
+  "Amador": {"to": "jhasson@amadorcounty.gov"},
+  "Butte": {"to": "NOstrovskiy@buttecounty.net"},
+  "Calaveras": {"to": "hgraham@calaverascounty.gov"},
+  "Colusa": {"to": "consuelo.lopez@countyofcolusa.com"},
+  "Contra Costa": {"to": "jane.andreotti@asd.cccounty.us"},
+  "Del Norte": {"to": "janel.obenchain@co.del-norte.ca.us"},
+  "El Dorado": {"to": "lynette.stott@edcgov.us"},
+  "Fresno": {"to": "environmentalhealth@fresnocountyca.gov"},
+  "Glenn": {"to": "jgarrison@countyofglenn.net"},
+  "Humboldt": {"to": "dstoneman@co.humboldt.ca.us"},
+  "Imperial": {"to": "jefflamoure@co.imperial.ca.us", "cc": "beatricepalacio@co.imperial.ca.us"},
+  "Inyo": {"to": "phadmin@inyocounty.us"},
+  "Kern": {"to": "besnardkr@kerncounty.com"},
+  "Kings": {"to": "EHS@co.kings.ca.us"},
+  "Lake": {"to": "Lori.Lalaguna@lakecountyca.gov"},
+  "Lassen": {"to": "kcalvillo-hefner@co.lassen.ca.us"},
+  "Los Angeles": {"to": "vet@ph.lacounty.gov"},
+  "Madera": {"to": "amy.toler@maderacounty.com"},
+  "Marin": {"to": "Marisol.Medina@marincounty.gov"},
+  "Mariposa": {"to": "kballard@mariposacounty.org"},
+  "Mendocino": {"to": "rodrigur@mendocinocounty.gov"},
+  "Merced": {"to": "yadira.vazquez@countyofmerced.com"},
+  "Modoc": {"to": "chrismurray@co.modoc.ca.us"},
+  "Mono": {"to": "kpeterson@mono.ca.go"},
+  "Monterey": {"to": "BurnhamC1@countyofmonterey.gov"},
+  "Napa": {"to": "cdreports@countyofnapa.org", "cc": "jvargas@countyofnapa.org"},
+  "Nevada": {"to": "cindy.key@nevadacountyca.gov"},
+  "Orange": {"to": "RChinsioKwong@ochca.com", "cc": "epi@ochca.com"},
+  "Placer": {"to": "jphillippe@placer.ca.gov"},
+  "Plumas": {"to": "tinavenable@countyofplumas.com"},
+  "Riverside": {"to": "dparliman@ruhealth.org"},
+  "Sacramento": {"to": "sacdhs@saccounty.gov"},
+  "San Benito": {"to": "cscott@sanbenitocountyca.gov"},
+  "San Bernardino": {"to": "brittani.saenz@dph.sbcounty.gov"},
+  "San Diego": {"to": "amy.menolez@sdcounty.ca.gov", "cc": "emily.trumbull@sdcounty.ca.gov"},
+  "San Francisco": {"to": "virginia.donohue@sfgov.org"},
+  "San Joaquin": {"to": "rsunseri@sjcphs.org"},
+  "San Luis Obispo": {"to": "Eanderson@co.slo.ca.us"},
+  "San Mateo": {"to": "HS_PHPP_ANIMAL_BITE_REPORTS@smcgov.org"},
+  "Santa Barbara": {"to": "saguilar@sbcphd.org"},
+  "Santa Clara": {"to": "disease@phd.sccgov.org"},
+  "Santa Cruz": {"to": "HSAPHAdmin@santacruzcountyca.gov"},
+  "Shasta": {"to": "sdmoore@shastacounty.gov"},
+  "Sierra": {"to": "tnorman@sierracounty.ca.gov"},
+  "Siskiyou": {"to": "rdean@co.siskiyou.ca.us"},
+  "Solano": {"to": "JMRichards@SolanoCounty.com"},
+  "Sonoma": {"to": "brian.whipple@sonoma-county.org", "cc": "scasdispatch@sonoma-county.org"},
+  "Stanislaus": {"to": "CDnurse@schsa.org"},
+  "Sutter": {"to": "rahogan@co.sutter.ca.us"},
+  "Tehama": {"to": "dolly.hopper@tchsa.net"},
+  "Trinity": {"to": "ctillman@trinitycounty.org"},
+  "Tulare": {"to": "EMOrth@tularecounty.ca.gov"},
+  "Tuolumne": {"to": "CD@co.tuolumne.ca.us"},
+  "Ventura": {"to": "virginia.hearn@ventura.org"},
+  "Yolo": {"to": "Aimee.Sisson@yolocounty.gov"},
+  "Yuba": {"to": "Nbrar@co.yuba.ca.us"}
+}
+;
 
-    const countyEmail = countyEmails[destinationCounty];
-    if (!countyEmail) {
+const countyData = countyEmails[destinationCounty];
+    if (!countyData) {
         alert('No email associated with the selected county.');
         return;
     }
 
-    const subject = `CVI Submission for ${destinationCounty}`;
-    const body = `Name: ${name}\nEmail: ${email}\nDestination County: ${destinationCounty}`;
-    const mailtoLink = `mailto:${countyEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    // Build the mailto link with optional CC
+    let mailtoLink = `mailto:${countyData.to}`;
+    if (countyData.cc) {
+        mailtoLink += `?cc=${countyData.cc}`;
+    }
+    mailtoLink += `&subject=${encodeURIComponent(`CVI Submission for ${destinationCounty}`)}`;
+    mailtoLink += `&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nDestination County: ${destinationCounty}`)}`;
+
     window.location.href = mailtoLink;
 
     alert('Redirecting to your email client to send the CVI.');
