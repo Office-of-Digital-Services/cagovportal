@@ -286,14 +286,16 @@ const countyData = countyEmails[destinationCounty];
         alert('No email associated with the selected county.');
         return;
     }
-
+ 
     // Build the mailto link with optional CC
     let mailtoLink = `mailto:${countyData.to}`;
-    if (countyData.cc) {
-        mailtoLink += `?cc=${countyData.cc}`;
-    }
-    mailtoLink += `&subject=${encodeURIComponent(`CVI Submission for ${destinationCounty}`)}`;
+ 
+    mailtoLink += `?subject=${encodeURIComponent(`CVI Submission for ${destinationCounty}`)}`;
     mailtoLink += `&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nDestination County: ${destinationCounty}`)}`;
+ 
+    if (countyData.cc) {
+        mailtoLink += `&cc=${countyData.cc}`;
+    }
 
     window.location.href = mailtoLink;
 
