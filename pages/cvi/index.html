@@ -1,0 +1,305 @@
+---
+title: Certificate of Veterinary Inspection for importing dogs
+layout: landing
+description: Submit Certificates of Veterinary Inspections
+noindex_follow: true
+---
+
+<style>
+
+  .form-container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    margin-top: 40px;
+  }
+
+  .form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .form-group select,
+  .form-group input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+</style>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<div class="section-default bg-gray-75">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0">{{title}}</h1>
+  </div>
+</div>
+
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-lg-9">
+      <p>
+        This page helps veterinarians and individuals meet the requirements of dogs entering California. You can submit a Certificate of Veterinary Inspection (CVI) to meet state requirements.
+      </p>
+      
+      <h2>What you need to know</h2>
+
+      
+      <h3>Animals that need a CVI to enter California</h3>
+      <ul>
+        <li>All dogs need a CVI.</li>
+        <li>
+          Many livestock species require a CVI to enter California (even if they are intended as pets). Visit
+          <a href="https://www.cdfa.ca.gov/ahfss/entry/" target="_blank">CDFA Entry Requirements</a> for more information.
+        </li>
+      </ul>
+      <p><b>Important:</b> This requirement does not apply to cats.</p>
+      
+      <h3>What does the law say?</h3>
+      <p>
+        According to <a href="https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=HSC&division=105.&title=&part=6.&chapter=2.&article=4." target="_blank">California Health & Safety Code § 121720</a>, anyone importing dogs into California for sale or transfer must:
+      </p>
+      <ol>
+        <li>Obtain a health certificate from a licensed and accredited veterinarian <b>within 10 days before importation.</b></li>
+        <li>Send the certificate to the <b>county health department</b> where the dog will be sold or to the county where the new owner lives.</li>
+      </ol>
+      
+      <h3>Where should CVIs be sent?</h3>
+      <p>
+        Use this form to send CVI’s to local county health departments. This form is the official method to submit CVIs.
+      </p>
+      <p><b>Do not send CVIs to CDFA or CDPH.</b> These agencies do not process or forward CVIs to counties.</p>
+      
+      <h3>Need more information?</h3>
+      <ul>
+        <li>
+          <a href="https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/VPHS.aspx" target="_blank">CDPH Veterinary Public Health Section website</a>: Rabies vaccination requirements and other information for dog and cat importation
+        </li>
+        <li>
+          <a href="https://www.cdfa.ca.gov/ahfss/entry/" target="_blank">CDFA Entry Requirements</a>: Livestock species requirements for bringing livestock and other animals into California.
+        </li>
+      </ul>
+      
+      <p>Thank you for supporting the health and safety of California’s animals and residents!</p>
+      
+      
+      
+
+      <!-- Form Section -->
+      <div class="form-container bg-gray-50 brd-solid-1 brd-gray-light">
+        <h3 class="m-t-0">Submit a Certificate of Veterinary Inspections</h3>
+        <p>
+          When you submit this form, a pre-filled email will open in your
+          default email program addressed to the correct local county health
+          official. You will attach your CVI to the email.
+        </p>
+        <form id="cviForm">
+          <input type="text" name="cdt" id="cdt" style="display: none" />
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="destinationCounty">Destination county</label>
+            <select id="destinationCounty" name="destinationCounty" required>
+              <option value="">Select a county</option>
+              <option value="Alameda">Alameda County</option>
+              <option value="Alpine">Alpine County</option>
+              <option value="Amador">Amador County</option>
+              <option value="Butte">Butte County</option>
+              <option value="Calaveras">Calaveras County</option>
+              <option value="Colusa">Colusa County</option>
+              <option value="Contra Costa">Contra Costa County</option>
+              <option value="Del Norte">Del Norte County</option>
+              <option value="El Dorado">El Dorado County</option>
+              <option value="Fresno">Fresno County</option>
+              <option value="Glenn">Glenn County</option>
+              <option value="Humboldt">Humboldt County</option>
+              <option value="Imperial">Imperial County</option>
+              <option value="Inyo">Inyo County</option>
+              <option value="Kern">Kern County</option>
+              <option value="Kings">Kings County</option>
+              <option value="Lake">Lake County</option>
+              <option value="Lassen">Lassen County</option>
+              <option value="Los Angeles">Los Angeles County</option>
+              <option value="Madera">Madera County</option>
+              <option value="Marin">Marin County</option>
+              <option value="Mariposa">Mariposa County</option>
+              <option value="Mendocino">Mendocino County</option>
+              <option value="Merced">Merced County</option>
+              <option value="Modoc">Modoc County</option>
+              <option value="Mono">Mono County</option>
+              <option value="Monterey">Monterey County</option>
+              <option value="Napa">Napa County</option>
+              <option value="Nevada">Nevada County</option>
+              <option value="Orange">Orange County</option>
+              <option value="Placer">Placer County</option>
+              <option value="Plumas">Plumas County</option>
+              <option value="Riverside">Riverside County</option>
+              <option value="Sacramento">Sacramento County</option>
+              <option value="San Benito">San Benito County</option>
+              <option value="San Bernardino">
+                San Bernardino County
+              </option>
+              <option value="San Diego">San Diego County</option>
+              <option value="San Francisco">
+                San Francisco City and County
+              </option>
+              <option value="San Joaquin">San Joaquin County</option>
+              <option value="San Luis Obispo">
+                San Luis Obispo County
+              </option>
+              <option value="San Mateo">San Mateo County</option>
+              <option value="Santa Barbara">Santa Barbara County</option>
+              <option value="Santa Clara">Santa Clara County</option>
+              <option value="Santa Cruz">Santa Cruz County</option>
+              <option value="Shasta">Shasta County</option>
+              <option value="Sierra">Sierra County</option>
+              <option value="Siskiyou">Siskiyou County</option>
+              <option value="Solano">Solano County</option>
+              <option value="Sonoma">Sonoma County</option>
+              <option value="Stanislaus">Stanislaus County</option>
+              <option value="Sutter">Sutter County</option>
+              <option value="Tehama">Tehama County</option>
+              <option value="Trinity">Trinity County</option>
+              <option value="Tulare">Tulare County</option>
+              <option value="Tuolumne">Tuolumne County</option>
+              <option value="Ventura">Ventura County</option>
+              <option value="Yolo">Yolo County</option>
+              <option value="Yuba">Yuba County</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+          <p>
+            <b>Reminder:</b> Be sure to attach your CVI to the email before
+            sending.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('cviForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Check the honeypot field (it should be empty)
+      const hiddenField = document.getElementById('cdt').value;
+      if (hiddenField) {
+          alert('Spam detected. Submission rejected.');
+          return;
+      }
+
+      // Get form values
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const destinationCounty = document.getElementById('destinationCounty').value;
+
+      if (!name || !email || !destinationCounty) {
+          alert('All fields are required!');
+          return;
+      }
+
+    const countyEmails = {
+  "Alameda": {"to": "john.serrano2@acgov.org"},
+  "Alpine": {"to": "tstreeper@alpinecountyca.gov"},
+  "Amador": {"to": "jhasson@amadorcounty.gov"},
+  "Butte": {"to": "NOstrovskiy@buttecounty.net"},
+  "Calaveras": {"to": "hgraham@calaverascounty.gov"},
+  "Colusa": {"to": "consuelo.lopez@countyofcolusa.com"},
+  "Contra Costa": {"to": "jane.andreotti@asd.cccounty.us"},
+  "Del Norte": {"to": "janel.obenchain@co.del-norte.ca.us"},
+  "El Dorado": {"to": "lynette.stott@edcgov.us"},
+  "Fresno": {"to": "environmentalhealth@fresnocountyca.gov"},
+  "Glenn": {"to": "jgarrison@countyofglenn.net"},
+  "Humboldt": {"to": "dstoneman@co.humboldt.ca.us"},
+  "Imperial": {"to": "jefflamoure@co.imperial.ca.us", "cc": "beatricepalacio@co.imperial.ca.us"},
+  "Inyo": {"to": "phadmin@inyocounty.us"},
+  "Kern": {"to": "besnardkr@kerncounty.com"},
+  "Kings": {"to": "EHS@co.kings.ca.us"},
+  "Lake": {"to": "Lori.Lalaguna@lakecountyca.gov"},
+  "Lassen": {"to": "kcalvillo-hefner@co.lassen.ca.us"},
+  "Los Angeles": {"to": "vet@ph.lacounty.gov"},
+  "Madera": {"to": "amy.toler@maderacounty.com"},
+  "Marin": {"to": "Marisol.Medina@marincounty.gov"},
+  "Mariposa": {"to": "kballard@mariposacounty.org"},
+  "Mendocino": {"to": "rodrigur@mendocinocounty.gov"},
+  "Merced": {"to": "yadira.vazquez@countyofmerced.com"},
+  "Modoc": {"to": "chrismurray@co.modoc.ca.us"},
+  "Mono": {"to": "kpeterson@mono.ca.go"},
+  "Monterey": {"to": "BurnhamC1@countyofmonterey.gov"},
+  "Napa": {"to": "cdreports@countyofnapa.org", "cc": "jvargas@countyofnapa.org"},
+  "Nevada": {"to": "cindy.key@nevadacountyca.gov"},
+  "Orange": {"to": "RChinsioKwong@ochca.com", "cc": "epi@ochca.com"},
+  "Placer": {"to": "jphillippe@placer.ca.gov"},
+  "Plumas": {"to": "tinavenable@countyofplumas.com"},
+  "Riverside": {"to": "dparliman@ruhealth.org"},
+  "Sacramento": {"to": "sacdhs@saccounty.gov"},
+  "San Benito": {"to": "cscott@sanbenitocountyca.gov"},
+  "San Bernardino": {"to": "brittani.saenz@dph.sbcounty.gov"},
+  "San Diego": {"to": "amy.menolez@sdcounty.ca.gov", "cc": "emily.trumbull@sdcounty.ca.gov"},
+  "San Francisco": {"to": "virginia.donohue@sfgov.org"},
+  "San Joaquin": {"to": "rsunseri@sjcphs.org"},
+  "San Luis Obispo": {"to": "Eanderson@co.slo.ca.us"},
+  "San Mateo": {"to": "HS_PHPP_ANIMAL_BITE_REPORTS@smcgov.org"},
+  "Santa Barbara": {"to": "saguilar@sbcphd.org"},
+  "Santa Clara": {"to": "disease@phd.sccgov.org"},
+  "Santa Cruz": {"to": "HSAPHAdmin@santacruzcountyca.gov"},
+  "Shasta": {"to": "sdmoore@shastacounty.gov"},
+  "Sierra": {"to": "tnorman@sierracounty.ca.gov"},
+  "Siskiyou": {"to": "rdean@co.siskiyou.ca.us"},
+  "Solano": {"to": "JMRichards@SolanoCounty.com"},
+  "Sonoma": {"to": "brian.whipple@sonoma-county.org", "cc": "scasdispatch@sonoma-county.org"},
+  "Stanislaus": {"to": "CDnurse@schsa.org"},
+  "Sutter": {"to": "rahogan@co.sutter.ca.us"},
+  "Tehama": {"to": "dolly.hopper@tchsa.net"},
+  "Trinity": {"to": "ctillman@trinitycounty.org"},
+  "Tulare": {"to": "EMOrth@tularecounty.ca.gov"},
+  "Tuolumne": {"to": "CD@co.tuolumne.ca.us"},
+  "Ventura": {"to": "virginia.hearn@ventura.org"},
+  "Yolo": {"to": "Aimee.Sisson@yolocounty.gov"},
+  "Yuba": {"to": "Nbrar@co.yuba.ca.us"}
+}
+;
+
+const countyData = countyEmails[destinationCounty];
+    if (!countyData) {
+        alert('No email associated with the selected county.');
+        return;
+    }
+ 
+    // Build the mailto link with optional CC
+    let mailtoLink = `mailto:${countyData.to}`;
+ 
+    mailtoLink += `?subject=${encodeURIComponent(`CVI Submission for ${destinationCounty}`)}`;
+    mailtoLink += `&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nDestination County: ${destinationCounty}`)}`;
+ 
+    if (countyData.cc) {
+        mailtoLink += `&cc=${countyData.cc}`;
+    }
+
+    window.location.href = mailtoLink;
+
+
+      alert('Redirecting to your email client to send the CVI.');
+  });
+</script>
