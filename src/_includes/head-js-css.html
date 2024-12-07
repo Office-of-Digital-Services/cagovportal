@@ -1,6 +1,7 @@
 <!-- Public Sans Font-->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preconnect" href="https://cdn.cdt.ca.gov" crossorigin />
+<link rel="preconnect" href="https://cdn.cdt.ca.gov" crossorigin="anonymous" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
 <!-- End Public Sans Font -->
 
 <!-- State Web template required CSS -->
@@ -16,8 +17,8 @@
 <script
   src="https://cdn.cdt.ca.gov/cdt/statetemplate/6.4.1/js/cagov.core.min.js"
   integrity="sha256-e675J/VKorpekjw24pAfI7kxIF5TwFmKBfDOyX1PI10="
-  crossorigin="anonymous"></script>
-<script src="/js/custom.min.js?dv{% DateHex %}x" type="module"></script>
+  crossorigin="anonymous" defer></script>
+<script src="/js/custom.min.js?dv{% DateHex %}" type="module" defer></script>
 
 {%- if customjs -%} {% for link in customjs %}
 <script src="{{ link }}" class="notranslate"></script>
