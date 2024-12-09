@@ -8,7 +8,7 @@ pagination:
     alias: item
     addAllPagesToCollections : true
 permalink: "departments/{{ item.AgencyId }}/services/{{ item.ServiceId }}/"
-eleventyComputed: 
+eleventyComputed:
   description: "{{ item.Description | safe }}"
   keywords: "{{ item.Keywords | safe }}"
   title: "{{ item.ServiceName | safe }}"
@@ -29,6 +29,9 @@ eleventyComputed:
         <h1 class="m-t-0 color-p2-darker">{{title}}</h1>
         <p>
           <a href="../../">{{item.FriendlyName}}</a>
+        </p>
+        <p class="m-t-md font-size-13">
+          Last updated {{ item.Updated | formatDate }}
         </p>
       </div>
       <div class="col-lg-5">
