@@ -37,7 +37,7 @@ endfor %} {%- endfor -%}
         {%- include "breadcrumbs.html" -%}
         <h1 class="m-t-0 color-p2-darker">{{title}}</h1>
         <p class="m-t-md font-size-13">
-          Last updated {{ item.Updated | formatDate }}
+          <em>Last updated {{ item.Updated | formatDate }}</em>
         </p>
       </div>
     </div>
@@ -108,7 +108,7 @@ endfor %} {%- endfor -%}
           ></a
         >
         <p class="font-size-13 ms-sm-auto">
-          Last updated {{ service.Updated | formatDate }}
+          <em>Last updated {{ service.Updated | formatDate }}</em>
         </p>
       </div>
 
