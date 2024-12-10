@@ -61,12 +61,19 @@ noindex_follow: true
           </h2>
           <p class="font-size-14 bold m-t-sm">by {{service.FriendlyName}}</p>
           <p class="service-description">{{service.Description}}</p>
-          <a
-            class="btn btn-outline-primary btn-lg"
-            href="{{ service.ServiceUrl }}">
-            Launch service
-            <span class="sr-only">: {{service.ServiceName}}</span></a
-          >
+          <div
+            class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3">
+            <a
+              class="btn btn-outline-primary btn-lg m-r-sm"
+              href="{{ service.ServiceUrl }}">
+              Launch service<span class="sr-only"
+                >: {{service.ServiceName}}</span
+              ></a
+            >
+            <p class="font-size-13 ms-sm-auto">
+              <em>Last updated {{ service.Updated | formatDate }}</em>
+            </p>
+          </div>
 
           {%-set topicResults=[]%}{%for topic in
           topics|sortBy("featureOrder")%}{%if topic.name in
