@@ -2,6 +2,7 @@
   "$schema": "https://json.schemastore.org/stylelintrc",
   "extends": "stylelint-config-standard",
   "plugins": ["stylelint-use-nesting"],
+  "ignoreFiles": ["_site/**/*"],
   "rules": {
     "declaration-property-unit-allowed-list": {
       "/^border/": ["px"],
