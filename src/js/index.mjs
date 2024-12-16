@@ -171,6 +171,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
             rowElement.style.display = bShow ? "" : "none";
             rowElement.ariaHidden = bShow ? null : "true";
+            rowElement.hidden = !bShow;
           });
         };
         if (inputBox) inputBox.addEventListener("input", checkme);
