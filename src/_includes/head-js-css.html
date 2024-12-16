@@ -11,18 +11,18 @@
   integrity="sha256-ZBxc9vOxgmVhJsrXWWcvEN6iGIZgEXXS0Ir1i2ZWeLU="
   crossorigin="anonymous" />
 <link rel="stylesheet" href="/css/custom.min.css?vJKX1" id="main-stylesheet" />
-{%- if customcss -%}
-<link rel="stylesheet" href="{{ customcss }}" />
-{% endif -%}
 <script
   src="https://cdn.cdt.ca.gov/cdt/statetemplate/6.4.1/js/cagov.core.min.js"
   integrity="sha256-e675J/VKorpekjw24pAfI7kxIF5TwFmKBfDOyX1PI10="
-  crossorigin="anonymous" defer></script>
-<script src="/js/custom.min.js?dv{% DateHex %}" type="module" defer></script>
+  crossorigin="anonymous"
+  defer></script>
+<script src="/js/custom.min.js?vVEWJHBV" type="module" defer></script>
+{%- if data_agency %}
+<script src="/js/data_agency.min.js?dv{% DateHex %}" defer></script>
+{%- endif -%} {%- if data_service %}
+<script src="/js/data_service.min.js?dv{% DateHex %}" defer></script>
+{%- endif -%}
 
-{%- if customjs -%} {% for link in customjs %}
-<script src="{{ link }}" class="notranslate"></script>
-{%- endfor -%} {%- endif %}
 <!-- Site icons -->
 <link
   rel="apple-touch-icon-precomposed"
