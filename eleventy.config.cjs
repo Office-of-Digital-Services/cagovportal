@@ -57,11 +57,17 @@ module.exports = function (
 
         switch (operator?.toLowerCase()) {
           case "includes":
-            return itemval.includes(value);
+            return itemval
+              .toString()
+              .toLowerCase()
+              .includes(value.toString().toLowerCase());
           case "not":
             return itemval !== value;
           case "startswith":
-            return itemval.startsWith(value);
+            return itemval
+              .toString()
+              .toLowerCase()
+              .startsWith(value.toString().toLowerCase());
           default:
             return itemval === value;
         }
