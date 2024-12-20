@@ -1,6 +1,6 @@
 ---
 layout: null
-permalink: sitemap.xml
+permalink: sitemaps/static.xml
 eleventyExcludeFromCollections: true
 ---
 {#- No space -#} 
@@ -8,11 +8,13 @@ eleventyExcludeFromCollections: true
 {#- No space -#} 
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {%- for page in collections.all %}
+  {%- for page in collections.all | sortBy("url") -%}
+    {%-if not page.data.sitemap %}
   <url>
     <loc>{{-site.url-}}{{-page.url-}}</loc>
     <lastmod>{{-page.data.updated | default(globallastmode)-}}</lastmod>
   </url>
+    {%- endif -%}
   {%- endfor %}
   <url>
     <loc>https://www.ca.gov/images/WebsiteAccessibilityCert-ca.gov.pdf</loc>

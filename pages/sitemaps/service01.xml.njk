@@ -1,0 +1,17 @@
+---
+layout: null
+permalink: sitemaps/service01.xml
+eleventyExcludeFromCollections: true
+---
+{#- No space -#}
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- for page in collections.all | sortBy("url") -%}
+    {%-if page.data.sitemap=="service"%}
+  <url>
+    <loc>{{-site.url-}}{{-page.url-}}</loc>
+    <lastmod>{{-page.data.updated | default(globallastmode)-}}</lastmod>
+  </url>
+    {%- endif -%}
+  {%- endfor %}
+</urlset>
