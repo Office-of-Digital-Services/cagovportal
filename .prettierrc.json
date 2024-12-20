@@ -15,7 +15,7 @@
       }
     },
     {
-      "files": "*.svg",
+      "files": ["*.svg", "*.xml"],
       "options": {
         "parser": "html",
         "printWidth": 9999
