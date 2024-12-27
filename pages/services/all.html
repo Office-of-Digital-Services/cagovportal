@@ -49,7 +49,7 @@ data_service: true
         data-row-filter-key="ServiceId"
         data-filter-trigger-selector='input[name="AgencyTags"]'
         role="list">
-        {%- for service in state_entity.services -%}
+        {%- for service in state_entity.services %}
         <div
           data-row-key="{{service.ServiceId}}"
           class="pos-rel"
@@ -76,13 +76,13 @@ data_service: true
             </p>
           </div>
 
-          {%-set topicResults=[]%}{%for topic in
-          topics|sortBy("featureOrder")%}{%if topic.name in
-          service.AgencyTags%}{%set _=topicResults.push('<a
+          {%-set topicResults=[]-%}{%-for topic in
+          topics|sortBy("featureOrder")-%}{%-if topic.name in
+          service.AgencyTags-%}{%-set _=topicResults.push('<a
             href="/topics/'+topic.slug+'/"
             class="py-1"
             >'+topic.name+'</a
-          >')%}{%endif%}{%endfor%}{%if topicResults.length%}
+          >')-%}{%-endif-%}{%-endfor-%}{%-if topicResults.length%}
           <p class="font-size-14 m-t-md">
             Topics: {{topicResults.join(", ") | safe}}
           </p>
