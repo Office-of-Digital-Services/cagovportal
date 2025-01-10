@@ -526,23 +526,5 @@
         "imgAlt": "A young tan-skinned female scientist in a white lab coat holds books while smiling at the camera."
       }
     ]
-  },
-  {
-    "topicId": 13,
-    "name": "Immigration",
-    "featureOrder": 13,
-    "slug": "immigration",
-    "description": "Immigration",
-    "metaDescription": "Immigration",
-    "cardDescription": "Immigration"
-  },
-  {
-    "topicId": 14,
-    "name": "Environment",
-    "featureOrder": 14,
-    "slug": "environment",
-    "description": "Environment",
-    "metaDescription": "Environment",
-    "cardDescription": "Environment"
   }
 ]
