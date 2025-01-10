@@ -105,7 +105,7 @@ eleventyComputed:
           >{{-related.ServiceName-}}</a
         >{%- endfor %}
       </p>
-      {%- endif %} {%- if item.AgencyTags.includes(topic.name) %}
+      {%- endif %} {%- if item.AgencyTags.includes(topic.slug) %}
       <h3 class="m-t-md">Topics</h3>
       <p class="keywords">
         {%- for topic in topics | sortBy("featureOrder") %}
@@ -116,8 +116,9 @@ eleventyComputed:
       {%- endif -%}
       <h3>Keywords</h3>
       <p class="keywords">
-        {%- for keyword in item.Keywords.split(",") | sort %} {%- if
-        keyword.trim().length > 0 %}
+        {%- for keyword in
+        item.Keywords.split(",").concat(item.AgencyTags.split("|")) | sort %}
+        {%- if keyword.trim().length > 0 %}
         <a
           href="/services/all/?q={{keyword | trim | lower | urlencode}}+"
           rel="nofollow">
