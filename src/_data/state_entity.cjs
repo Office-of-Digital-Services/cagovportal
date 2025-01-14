@@ -58,6 +58,8 @@ module.exports = async function () {
     qa: /** @type {*[]} */ (returns[2])
   };
 
+  results.qa.sort((a, b) => a.Id - b.Id);
+
   results.agencies.forEach(item => {
     trimObjectProperties(item);
 
