@@ -63,7 +63,7 @@ module.exports = function (
               .includes(value.toString().toLowerCase());
           case "match":
             // Expects value to be an array
-            // set topicsToDispaly = topics | pluck("name",item.AgencyTags.split("|"),"match")
+            // set topicsToDisplay = topics | pluck("name",item.AgencyTags.split("|"),"match")
             return /** @type {string[]} */ (value)
               .map(x => x.toLowerCase())
               .includes(itemval.toLowerCase());

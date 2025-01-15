@@ -105,12 +105,12 @@ eleventyComputed:
           >{{-related.ServiceName-}}</a
         >{%- endfor %}
       </p>
-      {%- endif %} {%- set topicsToDispaly = topics | sortBy("featureOrder") |
+      {%- endif %} {%- set topicsToDisplay = topics | sortBy("featureOrder") |
       pluck("name",item.AgencyTags.split("|"),"match")-%} {%- if
-      topicsToDispaly.length > 0 %}
+      topicsToDisplay.length > 0 %}
       <h3 class="m-t-md">Topics</h3>
       <p class="keywords">
-        {%- for topic in topicsToDispaly %}
+        {%- for topic in topicsToDisplay %}
         <a href="/topics/{{topic.slug}}/"> {{- topic.name | trim -}} </a
         ><span class="m-r-sm">, </span>
         {%- endfor %}
