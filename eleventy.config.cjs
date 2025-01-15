@@ -44,7 +44,7 @@ module.exports = function (
      * @param {*[]} arr
      * @param {string} attr
      * @param {*} value
-     * @param {"includes" | "not"} [operator]
+     * @param {"includes" | "not" | "match" | "startswith"} [operator]
      * @example
      * {%- for tag in topics | pluck("featured", true) | sortBy("featureOrder") -%}
      * {%- for tag in pluck("ServiceId",item.ServiceId,"not") -%}
@@ -61,6 +61,12 @@ module.exports = function (
               .toString()
               .toLowerCase()
               .includes(value.toString().toLowerCase());
+          case "match":
+            // Expects value to be an array
+            // set topicsToDispaly = topics | pluck("name",item.AgencyTags.split("|"),"match")
+            return /** @type {string[]} */ (value)
+              .map(x => x.toLowerCase())
+              .includes(itemval.toLowerCase());
           case "not":
             return itemval !== value;
           case "startswith":
