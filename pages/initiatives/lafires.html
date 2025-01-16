@@ -84,8 +84,10 @@ permalink: lafires/
           <div class="p-a-md">
             <h3 class="h4 m-t-0 m-b-0 color-gray-dark text-left">
               Palisades fire
-              <span class="percent-contained font-weight-400"
-                >— 22% contained</span
+              <span
+                id="percent-contained-palisades"
+                class="percent-contained font-weight-400"
+                >— _% contained</span
               >
             </h3>
 
@@ -107,8 +109,10 @@ permalink: lafires/
           <div class="p-a-md">
             <h3 class="h4 m-t-0 m-b-0 color-gray-dark text-left">
               Eaton fire
-              <span class="percent-contained font-weight-400"
-                >— 55% contained</span
+              <span
+                id="percent-contained-eaton"
+                class="percent-contained font-weight-400"
+                >— _% contained</span
               >
             </h3>
 
@@ -627,3 +631,39 @@ permalink: lafires/
     <li class="m-t">small businesses.</li>
   </ul>
 </div>
+
+<script>
+  async function fetchFireData() {
+    const mapDataUrl = "https://services3.arcgis.com/T4QMspbfLg3qTGWY/arcgis/rest/services/WFIGS_Incident_Locations_Current/FeatureServer/0/query?where=IncidentName+%3D+%27EATON%27+OR+IncidentName+%3D+%27PALISADES%27&fullText=&objectIds=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&relationParam=&returnGeodetic=false&outFields=IncidentName%2CPercentContained&returnGeometry=false&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&defaultSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&collation=&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnTrueCurves=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pjson&token="
+
+    try {
+      const response = await fetch(mapDataUrl);
+      const data = await response.json();
+
+      const featurelist = /** @type {*[]} **/ (data.features).map(x => ({
+        IncidentName: x.attributes.IncidentName,
+        PercentContained: x.attributes.PercentContained
+      }));
+
+      /**
+       *
+       * @param {string} id
+       * @param {string} name
+       */
+      const updatePercentContained = (id, name) => {
+        const element = document.getElementById(id);
+        element.textContent = element.textContent.replace(
+          "_",
+          featurelist.find(x => x.IncidentName === name).PercentContained
+        );
+      };
+
+      updatePercentContained("percent-contained-eaton", "EATON");
+      updatePercentContained("percent-contained-palisades", "Palisades");
+    } catch (error) {
+      console.error("Error fetching fire data:", error);
+    }
+  }
+
+  fetchFireData();
+</script>
