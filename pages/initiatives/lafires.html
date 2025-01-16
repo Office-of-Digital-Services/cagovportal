@@ -5,6 +5,9 @@ layout: landing
 description: Resources for Californians Impacted by 2025 Early January Los Angeles County Fires.
 hidestatewidealert: true
 permalink: lafires/
+category1: LA Fires
+category2: Top Story
+category3: Public Safety
 ---
 
 <div
@@ -585,6 +588,31 @@ permalink: lafires/
             <a href="https://www.instagram.com/sbcounty/">@SBCounty</a>
           </li>
         </ul>
+
+        <!-- News list -->
+        <div class="brd-solid-1 brd-gray-200 rounded-4 p-a m-t-lg">
+          <h2 class="m-t h3">LA fires latest news</h2>
+
+          {%- set counter = 0 -%} {%- for story in
+          laFiresStories.rss.channel[0].item -%} {%- if counter < 3 and
+          (category1 in story.category or category2 in story.category or
+          category3 in story.category) -%}
+          <hr class="m-y-md" />
+          <h3 class="lead font-weight-700">
+            <a href="{{ story.link }}">{{ story.title }}</a>
+          </h3>
+          <p>{{ story.pubDate | customDate }}</p>
+          {%- set counter = counter + 1 -%} {%- endif -%} {%- endfor %}
+
+          <hr class="m-y-md" />
+          <!-- End News list  -->
+
+          <p class="m-b-md">
+            <a href="https://www.gov.ca.gov/tag/la-fires/"
+              >View all LA fires news</a
+            >
+          </p>
+        </div>
       </div>
     </div>
   </div>
