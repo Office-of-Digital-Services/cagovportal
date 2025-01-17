@@ -594,7 +594,7 @@ category3: Public Safety
           <h2 class="m-t h3">LA fires latest news</h2>
 
           {%- set counter = 0 -%} {%- for story in
-          laFiresStories.rss.channel[0].item -%} {%- if counter < 3 and
+          laFiresStories.rss.channel[0].item -%} {%- if counter < 4 and
           (category1 in story.category or category2 in story.category or
           category3 in story.category) -%}
           <hr class="m-y-md" />
