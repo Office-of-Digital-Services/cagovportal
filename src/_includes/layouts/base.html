@@ -3,6 +3,10 @@
   <head>
     <title>{% metatitle %}</title>
     <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' *.ca.gov https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' *.ca.gov; img-src 'self' data:; font-src 'self' https://cdn.cdt.ca.gov https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com  https://services3.arcgis.com; frame-src 'self';" />
+
     <meta name="Author" content="State of California" />
     <meta name="Description" content="{{ description }}" />
     <meta name="Keywords" content="California, government, {{ keywords }}" />
