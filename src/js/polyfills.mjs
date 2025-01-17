@@ -18,9 +18,11 @@ window.addEventListener("DOMContentLoaded", () => {
       // Replace WEBP with PNG
 
       /** @type {NodeListOf<HTMLImageElement>} */ (
-        document.querySelectorAll('img[src$=".webp" i]')
+        document.querySelectorAll('img[src*=".webp" i]')
       ).forEach(img => {
-        img.src = img.src.replace(/\.webp$/i, ".png");
+        img.src = img.src
+          .replace(/\.jpg\.webp/i, ".jpg")
+          .replace(/\.webp/i, ".png");
       });
       console.log("POLYFILL: Using PNG instead of WEBP");
     }
