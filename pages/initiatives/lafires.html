@@ -5,6 +5,9 @@ layout: landing
 description: Resources for Californians Impacted by 2025 Early January Los Angeles County Fires.
 hidestatewidealert: true
 permalink: lafires/
+category1: LA Fires
+category2: Top Story
+category3: Public Safety
 ---
 
 <div
@@ -22,7 +25,7 @@ permalink: lafires/
 <div class="section-understated">
   <div class="container p-y-lg">
     <div class="row">
-      <div class="col-lg-11">
+      <div class="col-lg-12">
         <h2 class="m-t-0">Top links</h2>
 
         <a
@@ -73,7 +76,7 @@ permalink: lafires/
 
 <div class="section-default">
   <div class="container p-y-lg">
-    <h2>Fire damage maps</h2>
+    <h2 class="m-t-0">Fire damage maps</h2>
     <p>
       Stay informed. View damage maps from the Palisade and Eaton fires to check
       the status of your property.
@@ -89,6 +92,11 @@ permalink: lafires/
           <div class="p-a-md">
             <h3 class="h4 m-t-0 m-b-0 color-gray-dark text-left">
               Palisades Fire
+              <span
+                id="percent-contained-palisades"
+                class="percent-contained font-weight-400"
+                >— _% contained</span
+              >
             </h3>
 
             <a
@@ -107,7 +115,14 @@ permalink: lafires/
             src="/images/fire-eaton.jpg"
             alt="Eaton fire map" />
           <div class="p-a-md">
-            <h3 class="h4 m-t-0 m-b-0 color-gray-dark text-left">Eaton Fire</h3>
+            <h3 class="h4 m-t-0 m-b-0 color-gray-dark text-left">
+              Eaton Fire
+              <span
+                id="percent-contained-eaton"
+                class="percent-contained font-weight-400"
+                >— _% contained</span
+              >
+            </h3>
 
             <a href="https://arcg.is/nqWXD0" class="btn btn-primary m-t-md m-r">
               View the Eaton Fire map
@@ -573,52 +588,116 @@ permalink: lafires/
             <a href="https://www.instagram.com/sbcounty/">@SBCounty</a>
           </li>
         </ul>
+
+        <!-- News list -->
+        <div class="brd-solid-1 brd-gray-200 rounded-4 p-a m-t-lg">
+          <h2 class="m-t h3">State updates</h2>
+
+          {%- set counter = 0 -%} {%- for story in
+          laFiresStories.rss.channel[0].item -%} {%- if counter < 4 and
+          (category1 in story.category or category2 in story.category or
+          category3 in story.category) -%}
+          <hr class="m-y-md" />
+          <h3 class="lead font-weight-700">
+            <a href="{{ story.link }}">{{ story.title }}</a>
+          </h3>
+          <p>{{ story.pubDate | customDate }}</p>
+          {%- set counter = counter + 1 -%} {%- endif -%} {%- endfor %}
+
+          <hr class="m-y-md" />
+          <!-- End News list  -->
+
+          <p class="m-b-md">
+            <a href="https://www.gov.ca.gov/tag/la-fires/"
+              >View all LA fires news</a
+            >
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <div class="container p-b-lg">
-  <h2>How you can help</h2>
-  <p>
-    Thank you for donating your time or money. When deciding how to help, rely
-    on trusted sources and beware of scams.
-  </p>
-  <ul>
-    <li class="m-t">
-      Volunteer opportunities:
-      <a href="https://www.californiavolunteers.ca.gov/wildfire-recovery/"
-        >California Volunteers</a
-      >
-    </li>
-    <li class="m-t">
-      Safe ways to donate:
-      <a href="https://www.philanthropyca.org/2025-california-disaster-response"
-        >Philanthropy California</a
-      >
-    </li>
-  </ul>
+  <div class="row">
+    <div class="col-lg-10">
+      <h2>How you can help</h2>
+      <p>
+        Thank you for donating your time or money. When deciding how to help,
+        rely on trusted sources and beware of scams.
+      </p>
+      <ul>
+        <li class="m-t">
+          Volunteer opportunities:
+          <a href="https://www.californiavolunteers.ca.gov/wildfire-recovery/"
+            >California Volunteers</a
+          >
+        </li>
+        <li class="m-t">
+          Safe ways to donate:
+          <a
+            href="https://www.philanthropyca.org/2025-california-disaster-response"
+            >Philanthropy California</a
+          >
+        </li>
+      </ul>
+
+      <h2>Major Disaster Declaration</h2>
+      <p>
+        On January 8, California got a
+        <a
+          href="https://www.whitehouse.gov/briefing-room/presidential-actions/2025/01/08/president-joseph-r-biden-jr-approves-california-major-disaster-declaration/#:~:text=Today%2C%20President%20Joseph%20R.%20Biden%2C%20Jr.%20declared%20that,winds%20beginning%20on%20January%207%2C%202025%2C%20and%20continuing."
+          >Major Disaster Declaration</a
+        >
+        for the California wildfires. This lets federal agencies give aid and
+        resources for recovery in the affected areas.
+      </p>
+
+      <p>
+        Through this declaration from President Biden, California gets
+        assistance for:
+      </p>
+      <ul>
+        <li class="m-t">individuals,</li>
+        <li class="m-t">the public, and</li>
+        <li class="m-t">small businesses.</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<div class="container p-b-lg">
-  <h2>Major Disaster Declaration</h2>
-  <p>
-    On January 8, California got a
-    <a
-      href="https://www.whitehouse.gov/briefing-room/presidential-actions/2025/01/08/president-joseph-r-biden-jr-approves-california-major-disaster-declaration/#:~:text=Today%2C%20President%20Joseph%20R.%20Biden%2C%20Jr.%20declared%20that,winds%20beginning%20on%20January%207%2C%202025%2C%20and%20continuing."
-      >Major Disaster Declaration</a
-    >
-    for the California wildfires. This lets federal agencies give aid and
-    resources for recovery in the affected areas.
-  </p>
+<script>
+  async function fetchFireData() {
+    const mapDataUrl = "https://services3.arcgis.com/T4QMspbfLg3qTGWY/arcgis/rest/services/WFIGS_Incident_Locations_Current/FeatureServer/0/query?where=IncidentName+%3D+%27EATON%27+OR+IncidentName+%3D+%27PALISADES%27&outFields=IncidentName%2CPercentContained&returnGeometry=false&f=pjson"
 
-  <p>
-    Through this declaration from President Biden, California gets assistance
-    for:
-  </p>
-  <ul>
-    <li class="m-t">individuals,</li>
-    <li class="m-t">the public, and</li>
-    <li class="m-t">small businesses.</li>
-  </ul>
-</div>
+    try {
+      const response = await fetch(mapDataUrl);
+      const data = await response.json();
+
+      const featurelist = /** @type {*[]} **/ (data.features).map(x => ({
+        IncidentName: x.attributes.IncidentName,
+        PercentContained: x.attributes.PercentContained
+      }));
+
+      /**
+       *
+       * @param {string} id
+       * @param {string} name
+       */
+      const updatePercentContained = (id, name) => {
+        const element = document.getElementById(id);
+        element.textContent = element.textContent.replace(
+          "_",
+          featurelist.find(x => x.IncidentName === name).PercentContained
+        );
+      };
+
+      updatePercentContained("percent-contained-eaton", "EATON");
+      updatePercentContained("percent-contained-palisades", "Palisades");
+    } catch (error) {
+      console.error("Error fetching fire data:", error);
+    }
+  }
+
+  fetchFireData();
+</script>
