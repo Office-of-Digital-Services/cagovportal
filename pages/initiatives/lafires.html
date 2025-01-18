@@ -93,11 +93,6 @@ category3: Public Safety
           <div class="p-a-md">
             <h3 class="h4 m-t-0 m-b-0 color-gray-dark text-left">
               Palisades Fire
-              <span
-                id="percent-contained-palisades"
-                class="percent-contained font-weight-400"
-                >— _% contained</span
-              >
             </h3>
 
             <a
@@ -117,14 +112,7 @@ category3: Public Safety
             style="aspect-ratio:558/316"
             alt="Eaton fire map" />
           <div class="p-a-md">
-            <h3 class="h4 m-t-0 m-b-0 color-gray-dark text-left">
-              Eaton Fire
-              <span
-                id="percent-contained-eaton"
-                class="percent-contained font-weight-400"
-                >— _% contained</span
-              >
-            </h3>
+            <h3 class="h4 m-t-0 m-b-0 color-gray-dark text-left">Eaton Fire</h3>
 
             <a href="https://arcg.is/nqWXD0" class="btn btn-primary m-t-md m-r">
               View the Eaton Fire map
@@ -666,39 +654,3 @@ category3: Public Safety
     </div>
   </div>
 </div>
-
-<script>
-  async function fetchFireData() {
-    const mapDataUrl = "https://services3.arcgis.com/T4QMspbfLg3qTGWY/arcgis/rest/services/WFIGS_Incident_Locations_Current/FeatureServer/0/query?where=IncidentName+%3D+%27EATON%27+OR+IncidentName+%3D+%27PALISADES%27&outFields=IncidentName%2CPercentContained&returnGeometry=false&f=pjson"
-
-    try {
-      const response = await fetch(mapDataUrl);
-      const data = await response.json();
-
-      const featurelist = /** @type {*[]} **/ (data.features).map(x => ({
-        IncidentName: x.attributes.IncidentName,
-        PercentContained: x.attributes.PercentContained
-      }));
-
-      /**
-       *
-       * @param {string} id
-       * @param {string} name
-       */
-      const updatePercentContained = (id, name) => {
-        const element = document.getElementById(id);
-        element.textContent = element.textContent.replace(
-          "_",
-          featurelist.find(x => x.IncidentName === name).PercentContained
-        );
-      };
-
-      updatePercentContained("percent-contained-eaton", "EATON");
-      updatePercentContained("percent-contained-palisades", "Palisades");
-    } catch (error) {
-      console.error("Error fetching fire data:", error);
-    }
-  }
-
-  fetchFireData();
-</script>
