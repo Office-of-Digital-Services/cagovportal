@@ -102,7 +102,10 @@ category3: Public Safety
             alt="Palisades fire map" />
           <div class="p-a-md">
             <h3 class="h4 m-t-0 m-b-0 color-gray-dark text-left">
-              Palisades Fire
+              Palisades Fire 
+              <span id="percent-contained-palisades"
+              class="percent-contained font-weight-400"
+              >— _% contained</span>
             </h3>
 
             <a
@@ -122,8 +125,11 @@ category3: Public Safety
             style="aspect-ratio:558/316"
             alt="Eaton fire map" />
           <div class="p-a-md">
-            <h3 class="h4 m-t-0 m-b-0 color-gray-dark text-left">Eaton Fire</h3>
-
+            <h3 class="h4 m-t-0 m-b-0 color-gray-dark text-left">Eaton Fire   
+              <span id="percent-contained-eaton"
+              class="percent-contained font-weight-400"
+              >— _% contained</span=>
+            </h3>
             <a href="https://arcg.is/nqWXD0" class="btn btn-primary m-t-md m-r">
               View the Eaton Fire map
             </a>
@@ -673,3 +679,38 @@ category3: Public Safety
     </div>
   </div>
 </div>
+<script>
+  async function fetchFireData() {
+    const mapDataUrl = "https://rdipowerplatformfd-e5hhgqaahef7fbdr.a02.azurefd.net/incidents/incidents.json"
+
+    try {
+      const response = await fetch(mapDataUrl);
+      const data = await response.json();
+
+      const featurelist = data.map(x => ({
+        name: x.attributes.name,
+        percentContained: x.attributes.percentContained
+      }));
+
+      /**
+       *
+       * @param {string} id
+       * @param {string} name
+       */
+      const updatePercentContained = (id, name) => {
+        const element = document.getElementById(id);
+        element.textContent = element.textContent.replace(
+          "_",
+          featurelist.find(x => x.name === name)?.percentContained || "N/A"
+        );
+      };
+
+      updatePercentContained("percent-contained-eaton", "Eaton Fire");
+      updatePercentContained("percent-contained-palisades", "Palisades Fire");
+    } catch (error) {
+      console.error("Error fetching fire data:", error);
+    }
+  }
+
+  fetchFireData();
+</script>
