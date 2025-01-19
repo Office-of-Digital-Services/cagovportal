@@ -18,6 +18,7 @@ module.exports = function (
   // Copy state tempate code files from NPM
   eleventyConfig.addPassthroughCopy({
     "src/images": "images",
+    "src/docs": "docs",
     "src/root": "/"
   });
 
