@@ -116,7 +116,9 @@ category3: Public Safety
   </div>
 </div>
 
+
 <div class="container p-y-lg m-b-sm">
+
   <div class="row">
     <div class="col-lg-10">
       <h2 class="header-bg-primary m-t-md">Staying safe now</h2>
@@ -172,8 +174,18 @@ category3: Public Safety
           >
         </li>
       </ul>
+
       <hr class="m-t-lg" />
-      <h3>Find shelter and get help</h3>
+
+
+      <h3>Employment</h3>
+      <h4>If you can’t work</h4>
+      <p>
+        You may not be able to work for many reasons. Here's how to receive wage
+        replacement during this time. You may qualify for unemployment,
+        disability, or Paid Family Leave benefits.
+      </p>
+
       <ul>
         <li class="m-t">
           <a
@@ -217,8 +229,26 @@ category3: Public Safety
           Find food banks in your area.
         </li>
       </ul>
+
       <hr class="m-t-lg" />
       <h3>Real-time updates</h3>
+
+      <p>
+        Learn about
+        <a
+          href="https://edd.ca.gov/en/unemployment/Disaster_Unemployment_Assistance/"
+          >Disaster Unemployment Assistance</a
+        >
+        for the LA Fires.
+      </p>
+
+      <h4>If you’re looking for new work</h4>
+      <p>
+        Learn about resources to assist you in finding employment after the
+        wildfire. You may qualify for job placement services, training programs,
+        or other support through the EDD.
+      </p>
+
       <ul>
         <li class="m-t">
           Ongoing fires:
@@ -246,6 +276,7 @@ category3: Public Safety
     </div>
   </div>
 </div>
+
 
 <div class="section-understated p-y-lg">
   <div class="container">
@@ -445,579 +476,741 @@ category3: Public Safety
       <div class="p-a-md m-t-lg brd-solid-1 brd-gray-200 rounded-10">
         <h2 class="mt-0">Financial help</h2>
 
-        <ul>
-          <li>
-            <span class="bold">Help for individuals</span> available through
-            <a href="https://www.fema.gov/disaster/recover">FEMA</a>.
 
-            <p class="m-t">Three ways to apply:</p>
+  <ul>
+    <li class="m-t">
+      <a href="https://www.sba.gov/funding-programs/disaster-assistance"
+        >Small business support</a
+      >
+      <br />
+      The Small Business Administration (SBA) provides a variety of resources to
+      help small businesses and entrepreneurs including financing, training, and
+      advocacy.
+    </li>
+    <li class="m-t">
+      <a
+        href="https://edd.ca.gov/en/payroll_taxes/emergency_and_disaster_assistance_for_employers"
+        >Apply for emergency and disaster assistance for employers</a
+      >
+      <br />
+      The Employment Development Department (EDD) offers services to support
+      employers impacted by disasters including disaster relief payments,
+      request an extension for payment and payroll reports.
+    </li>
+  </ul>
 
-            <ol>
-              <li class="m-t">
-                Online at
-                <a href="https://www.disasterassistance.gov/"
-                  >DisasterAssistance.gov</a
-                >. This is the fastest and easiest way to apply.
-              </li>
-              <li class="m-t">
-                Through the
-                <a
-                  href="https://www.fema.gov/about/news-multimedia/mobile-products#download"
-                  >FEMA App</a
-                >
-                for mobile devices.
-              </li>
-              <li class="m-t">
-                By calling the FEMA helpline at 1-800-621-3362, 4 AM to 10 PM
-                (PST). Help is available in most languages.
-              </li>
-            </ol>
+  <h3>Taxes for businesses</h3>
+  <p>
+    <strong>Business income taxes</strong> (Franchise Tax Board)<br />
+    Businesses impacted by the wildfires qualify for a postponement to file and
+    pay income taxes until October 15, 2025. Only Los Angeles County was granted
+    postponement. If the principal place of business is outside of Los Angeles
+    County, you must file and pay by the normal due dates. Los Angeles County
+    fires - 2024 taxable year disaster
+  </p>
+  <ul>
+    <li class="m-t">
+      <a
+        href="https://www.ftb.ca.gov/file/when-to-file/los-angeles-county-fires.html"
+        >Los Angeles County fires - 2024 taxable year disaster</a
+      >
+    </li>
+  </ul>
+  <p>
+    <strong>Emergency sales tax or fee relief</strong> (CA Department of Tax and
+    Fee Administration)<br />
+    Get relief from penalty, collection cost, and interest. You can also get
+    copies of tax records and up to a 3- month filing extension on your tax
+    returns.
+  </p>
+  <ul>
+    <li class="m-t">
+      <a
+        href="https://www.cdtfa.ca.gov/services/state-of-emergency-tax-relief.htm"
+        >Apply for emergency tax relief</a
+      >
+    </li>
+  </ul>
+</div>
 
-            <p class="m-t">Help with applying:</p>
-            <ul>
-              <li class="m-t">
-                Video on how to apply:
-                <a href="https://www.youtube.com/watch?v=HhtlyTX49RE"
-                  >FEMA Accessible: Registering for Individual Assistance
-                </a>
-              </li>
-              <li class="m-t">
-                <a
-                  href="https://www.fema.gov/assistance/individual/program/citizenship-immigration-status"
-                  >Citizenship and immigration status requirements</a
-                >
-              </li>
-            </ul>
-          </li>
+<div class="container m-b-sm">
+  <h2 class="header-bg-primary">Stay informed</h2>
+  <!-- News list -->
+  <div class="brd-solid-1 brd-gray-200 rounded-4 p-a m-t-lg">
+    <h2 class="m-t h3">State updates</h2>
 
-          <li class="m-t">
-            <span class="bold"
-              >Help from
-              <a
-                href="https://news.caloes.ca.gov/los-angeles-county-disaster-recovery-centers-open-tuesday-for-hurricane-force-firestorm-survivors/"
-                >Disaster Recovery Centers</a
-              ></span
-            >. They assist with:
-            <ul>
-              <li class="m-t">federal aid applications</li>
-              <li class="m-t">housing and rental support</li>
-              <li class="m-t">access to services</li>
-            </ul>
-          </li>
+    {%- set counter = 0 -%} {%- for story in laFiresStories.rss.channel[0].item
+    -%} {%- if counter < 4 and (category1 in story.category or category2 in
+    story.category or category3 in story.category) -%}
+    <hr class="m-y-md" />
+    <h3 class="lead font-weight-700">
+      <a href="{{ story.link }}">{{ story.title }}</a>
+    </h3>
+    <p>{{ story.pubDate | customDate }}</p>
+    {%- set counter = counter + 1 -%} {%- endif -%} {%- endfor %}
 
-          <p class="m-t">
-            Review the
-            <a href="/docs/disaster-recovery-center-checklist.pdf"
-              >Disaster Recovery Center checklist</a
-            >.
-          </p>
+    <hr class="m-y-md" />
+    <!-- End News list  -->
 
-          <li class="m-t">
-            <span class="bold"
-              ><a href="https://edd.ca.gov/unemployment"
-                >Unemployment benefits</a
-              ></span
-            >: Apply if you lost your job due to the fires
-          </li>
-
-          <li class="m-t">
-            <span class="bold">State tax relief</span> for
-            <a
-              href="https://www.ftb.ca.gov/file/when-to-file/los-angeles-county-fires.html?WT.ac=Home_Ad_LAFires"
-              >individuals</a
-            >
-            and
-            <a
-              href="https://www.cdtfa.ca.gov/services/state-of-emergency-tax-relief.htm"
-              >businesses</a
-            >
-            affected by the fires.
-            <ul>
-              <li class="m-t">
-                You can also get copies of your tax records and a one-month
-                filing extension on your tax returns. Learn more at
-                <a href="https://www.cdtfa.ca.gov/">CDTFA</a>.
-              </li>
-            </ul>
-          </li>
-
-          <li class="m-t">
-            <span class="bold">Help for small businesses: </span>
-            <ul>
-              <li class="m-t">
-                <a
-                  href="https://www.sba.gov/funding-programs/disaster-assistance"
-                  >Small Business Administration (SBA)</a
-                >
-              </li>
-              <li class="m-t">
-                <a
-                  href="https://edd.ca.gov/en/payroll_taxes/emergency_and_disaster_assistance_for_employers"
-                  >Emergency and Disaster Assistance for Employers (EDD)</a
-                >
-              </li>
-            </ul>
-          </li>
-
-          <li class="m-t">
-            <span class="bold">Help for immigrants:</span>
-            <ul>
-              <li class="m-t">
-                <a
-                  href="https://cdss.ca.gov/Portals/13/DisasterAssistanceGuideforImmigrantCaliforniansFinal.pdf"
-                  >Disaster Assistance Guide (English)</a
-                >
-              </li>
-              <li class="m-t">
-                <a
-                  href="https://cdss.ca.gov/Portals/13/DisasterAssistanceGuideforImmigrantCaliforniansSpanishFinal.pdf"
-                  >Disaster Assistance Guide (Spanish)</a
-                >
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <h2>Federal programs</h2>
-      <p>
-        There is a group of federal programs that help disaster survivors start
-        to recover. It’s called
-        <a href="https://www.fema.gov/assistance/individual"
-          >Individual Assistance.</a
-        >
-        These programs include:
-      </p>
-
-      <ul>
-        <li class="m-t">Advanced Financial Assistance</li>
-        <li class="m-t">Housing</li>
-        <li class="m-t">Rental Assistance</li>
-        <li class="m-t">Funds to repair or replace damaged homes</li>
-        <li class="m-t">Legal services</li>
-        <li class="m-t">Unemployment assistance</li>
-        <li class="m-t">Help with other needs</li>
-      </ul>
-
-      <h2>Food assistance</h2>
-      <ul>
-        <li class="m-t">
-          For low-income women and children:
-          <a href="https://myfamily.wic.ca.gov/Home/HowCanIGetWIC#HowCanIGetWIC"
-            >WIC</a
-          >
-        </li>
-        <li class="m-t">
-          Sign up for <a href="https://benefitscal.com/">CalFresh</a> or have
-          them
-          <a
-            href="https://www.getcalfresh.org/faq#info-benefits-replacement-end"
-            >replace food lost in the fires</a
-          >
-        </li>
-        <li class="m-t">
-          <a href="https://cdss.ca.gov/food-banks">Food banks</a> in your area
-        </li>
-      </ul>
-
-      <div class="p-a-md m-t-lg brd-solid-1 brd-gray-200 rounded-10">
-        <h2 class="m-t">What to do when you’ve lost your home</h2>
-        <h3 class="m-t">Find shelter and get help</h3>
-        <p>
-          <span class="bold"
-            ><a
-              href="https://news.caloes.ca.gov/shelters-available-for-communities-impacted-by-wildfires-in-southern-california-5/"
-              >Real-time list of open shelters</a
-            ></span
-          >
-        </p>
-
-        <p>
-          FEMA offers
-          <span class="bold">help for temporary housing</span> through their
-          <a href="https://www.fema.gov/assistance/individual/program"
-            >Individuals and Households Program</a
-          >. They offer displacement assistance of 14 days of housing for
-          residents who qualify. You could also qualify for several months of
-          <span class="bold">rental assistance</span>.
-        </p>
-
-        <h3 class="m-t">File an insurance claim</h3>
-        <p>
-          <span class="bold">Know your protections.</span>
-          <a
-            href="https://www.insurance.ca.gov/01-consumers/140-catastrophes/MandatoryOneYearMoratoriumNonRenewals.cfm"
-            >California protects you from losing your home insurance</a
-          >
-          if you were impacted by these fires.
-        </p>
-        <p>
-          <span class="bold">Get help with your claim.</span> The California
-          Department of Insurance gives help in many languages.
-        </p>
-
-        <ul>
-          <li class="m-t">
-            <a
-              href="https://www.insurance.ca.gov/01-consumers/140-catastrophes/WildfireResources.cfm"
-              >Resources to Help Recent Wildfire Victims</a
-            >
-          </li>
-          <li class="m-t">
-            <a
-              href="https://www.insurance.ca.gov/01-consumers/140-catastrophes/TopTenTips_WildfireClaimants.cfm"
-              >Top Ten Tips for Wildfire Claimants</a
-            >
-          </li>
-          <li class="m-t">
-            <a href="https://www2.cslb.ca.gov/Consumer.aspx"
-              >Working with contractors</a
-            >
-          </li>
-          <li class="m-t">
-            <a
-              href="https://www.calvet.ca.gov/HomeLoans/Pages/How-to-submit-a-claim.aspx"
-              >Help with CalVet claims</a
-            >
-          </li>
-          <li class="m-t">
-            <a href="https://www.insurance.ca.gov/01-consumers/101-help/"
-              >Getting help with claims</a
-            >
-          </li>
-          <li class="m-t">
-            On the phone: Call 1-800-927-4357 (HELP) or TTY: 1-800-482-4833 for
-            assistance.
-          </li>
-          <li class="m-t">
-            In-person: Go to
-            <a
-              href="https://www.insurance.ca.gov/01-consumers/140-catastrophes/LACs.cfm"
-              >insurance workshops</a
-            >
-            the weekends of January 18 and January 25.
-          </li>
-        </ul>
-
-        <h3 class="m-t">Replace documents</h3>
-        <p>
-          <span class="bold"
-            >Driver’s license, ID cards, and vehicle titles:</span
-          >
-          The DMV can help you get replacements.
-        </p>
-        <ul>
-          <li class="m-t">
-            <a
-              href="https://www.dmv.ca.gov/portal/customer-service/natural-disaster-assistance/"
-              >CA DMV - Natural Disaster Assistance</a
-            >
-          </li>
-          <li class="m-t">
-            1-800-777-0133 (or TTY 1-800-735-2929 or 1-800-368-4327 for hearing
-            or speech impaired)
-          </li>
-        </ul>
-
-        <p>
-          <span class="bold">Birth, death, and marriage records:</span> You must
-          contact the county recorder where the event occurred.
-        </p>
-        <ul>
-          <li class="m-t">
-            <a
-              href="https://www.cdph.ca.gov/Programs/CHSI/Pages/County-Registrars-and-Recorders.aspx"
-              >List of county recorders</a
-            >
-          </li>
-          <li class="m-t">916-445-2684, TTY 7-1-1, or 1-800-735-2929</li>
-        </ul>
-
-        <p>
-          <span class="bold">Manufactured and mobile homes:</span> Help with
-          <a href="https://www.hcd.ca.gov/manufactured-and-mobilehomes"
-            >replacing titles and registration</a
-          >
-        </p>
-
-        <h3 class="m-t">Rebuild - faster</h3>
-        <p>
-          Governor Newsom
-          <a
-            href="https://www.gov.ca.gov/2025/01/12/governor-newsom-signs-executive-order-to-help-los-angeles-rebuild-faster-and-stronger/"
-            >suspended permit and review requirements</a
-          >
-          under the California Environmental Quality Act (CEQA) and the
-          California Coastal Act. This allows victims of the recent fires to
-          restore their homes and businesses faster.
-        </p>
-      </div>
-
-      <!--END col-lg-10-->
-    </div>
+    <p class="m-b-md">
+      <a href="https://www.gov.ca.gov/tag/la-fires/">View all LA fires news</a>
+    </p>
   </div>
 </div>
 
-<div class="section-understated">
-  <div class="container p-b-lg">
-    <div class="row">
-      <div class="col-lg-10">
-        <h2>Stay informed</h2>
+<div class="container m-b-sm">
+  <h3 class="header-bg-primary">Social media</h3>
 
-        <h3>Evacuation</h3>
+  <h4>LA County</h4>
+  <div class="row">
+    <article
+      class="col-lg-6 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b">
+      <div class="p-a-md">
+        LA Office of Emergency Management
         <ul>
-          <li class="m-t">
-            Evacuation notices and critical updates for LA County:
-            <a href="https://ready.lacounty.gov/emergency-notifications/"
-              >Ready LA</a
-            >
+          <li>
+            X: <a href="https://twitter.com/readylacounty">@ReadyLACounty</a>
           </li>
-          <li class="m-t">
-            Tips for evacuating safely:
-            <a
-              href="https://readyforwildfire.org/prepare-for-wildfire/go-evacuation-guide/"
-              >Evacuation Guide</a
-            >
-          </li>
-        </ul>
-
-        <h3>Real-time updates</h3>
-
-        <ul>
-          <li class="m-t">
-            Ongoing fires:
-            <a href="https://www.fire.ca.gov/">fire.ca.gov</a>
-          </li>
-
-          <li class="m-t">
-            Air quality:
-            <a href="https://www.aqmd.gov/"
-              >Air Quality Monitoring (South Coast AQMD)</a
-            >
-          </li>
-          <li class="m-t">
-            Power shutoffs:
-            <a href="https://www.sce.com/outage-center/outage-information/psps"
-              >Stay Updated on Public Safety Power Shutoffs</a
-            >
-          </li>
-          <li class="m-t">
-            School and government closures:
-            <a href="https://211la.org/LA-Wildfires">LA County 211</a>
-          </li>
-
-          <li class="m-t">
-            Traffic maps:
-            <a href="https://quickmap.dot.ca.gov/"
-              >CalTrans Traffic Alert/Map</a
-            >
-          </li>
-
-          <li class="m-t">
-            Latest news:
-            <a href="https://news.caloes.ca.gov/">Cal OES News</a>
-          </li>
-        </ul>
-
-        <h3>Avoiding scams</h3>
-        <ul>
-          <li class="m-t">
-            Consumer protections against price gouging:
-            <a
-              href="https://oag.ca.gov/news/press-releases/attorney-general-bonta-issues-consumer-alert-price-gouging-following-state-13"
-              >Office of the Attorney General</a
-            >
-          </li>
-        </ul>
-
-        <h3>Preparing for disaster</h3>
-
-        <ul>
-          <li class="m-t">
-            Life-saving disaster tips:
-            <a href="https://www.listoscalifornia.org/disaster-readiness/"
-              >Ready.ca.gov</a
-            >
-          </li>
-        </ul>
-
-        <h3>Staying healthy</h3>
-        <ul>
-          <li class="m-t">
-            Resources to stay healthy:
-            <a
-              href="https://www.cdph.ca.gov/Programs/EPO/Pages/Wildfire%20Pages/Wildfires--.aspx"
-              >California Department of Public Health - Wildfires</a
-            >
-          </li>
-        </ul>
-
-        <h3>Social media</h3>
-        <p class="m-t">
-          <span class="bold">LA County</span>
-        </p>
-
-        <ul>
-          <li class="m-t">
-            LA Office of Emergency Management<br />
-            X: <a href="https://twitter.com/readylacounty">@ReadyLACounty</a> |
+          <li>
             Instagram:
             <a href="https://www.instagram.com/lausd_oem/">@lausd_oem</a>
           </li>
-          <li class="m-t">
-            LA County Fire<br />
-            X: <a href="https://x.com/LACoFDPIO/?mx=2">@LACoFDPIO</a> |
+        </ul>
+      </div>
+    </article>
+
+    <article
+      class="col-lg-6 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b">
+      <div class="p-a-md">
+        LA County Fire
+        <ul>
+          <li>X: <a href="https://x.com/LACoFDPIO/?mx=2">@LACoFDPIO</a></li>
+          <li>
             Instagram:
             <a href="https://www.instagram.com/lacountyfd/">@LAacountyfd</a>
           </li>
-          <li class="m-t">
-            LA County Sheriff<br />
-            X: <a href="https://x.com/LASDHQ">@LASDHQ</a> | Instagram:
+        </ul>
+      </div>
+    </article>
+  </div>
+
+  <div class="row">
+    <article
+      class="col-lg-6 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b">
+      <div class="p-a-md">
+        LA County Sheriff
+        <ul>
+          <li>X: <a href="https://x.com/LASDHQ">@LASDHQ</a></li>
+          <li>
+            Instagram:
             <a href="https://www.instagram.com/lasdhq/">@LASDHQ</a>
           </li>
-          <li class="m-t">
-            LA County<br />
-            X: <a href="https://x.com/CountyofLA">@CountyofLA</a> | Instagram:
+        </ul>
+      </div>
+    </article>
+
+    <article
+      class="col-lg-6 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b">
+      <div class="p-a-md">
+        LA County
+        <ul>
+          <li>X: <a href="https://x.com/CountyofLA">@CountyofLA</a></li>
+          <li>
+            Instagram:
             <a href="https://www.instagram.com/CountyofLA/">@CountyofLA</a>
           </li>
         </ul>
+      </div>
+    </article>
+  </div>
 
-        <p class="m-t"><span class="bold">CAL FIRE</span></p>
+  <!-- BEGIN OLD CONTENT ***************************************** -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 m-b-lg">
+        <div class="p-a-md m-t-lg brd-solid-1 brd-gray-200 rounded-10">
+          <h2 class="mt-0">Financial help</h2>
+
+          <ul>
+            <li>
+              <span class="bold">Help for individuals</span> available through
+              <a href="https://www.fema.gov/disaster/recover">FEMA</a>.
+
+              <p class="m-t">Three ways to apply:</p>
+
+              <ol>
+                <li class="m-t">
+                  Online at
+                  <a href="https://www.disasterassistance.gov/"
+                    >DisasterAssistance.gov</a
+                  >. This is the fastest and easiest way to apply.
+                </li>
+                <li class="m-t">
+                  Through the
+                  <a
+                    href="https://www.fema.gov/about/news-multimedia/mobile-products#download"
+                    >FEMA App</a
+                  >
+                  for mobile devices.
+                </li>
+                <li class="m-t">
+                  By calling the FEMA helpline at 1-800-621-3362, 4 AM to 10 PM
+                  (PST). Help is available in most languages.
+                </li>
+              </ol>
+
+              <p class="m-t">Help with applying:</p>
+              <ul>
+                <li class="m-t">
+                  Video on how to apply:
+                  <a href="https://www.youtube.com/watch?v=HhtlyTX49RE"
+                    >FEMA Accessible: Registering for Individual Assistance
+                  </a>
+                </li>
+                <li class="m-t">
+                  <a
+                    href="https://www.fema.gov/assistance/individual/program/citizenship-immigration-status"
+                    >Citizenship and immigration status requirements</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="m-t">
+              <span class="bold"
+                >Help from
+                <a
+                  href="https://news.caloes.ca.gov/los-angeles-county-disaster-recovery-centers-open-tuesday-for-hurricane-force-firestorm-survivors/"
+                  >Disaster Recovery Centers</a
+                ></span
+              >. They assist with:
+              <ul>
+                <li class="m-t">federal aid applications</li>
+                <li class="m-t">housing and rental support</li>
+                <li class="m-t">access to services</li>
+              </ul>
+            </li>
+
+            <p class="m-t">
+              Review the
+              <a href="/docs/disaster-recovery-center-checklist.pdf"
+                >Disaster Recovery Center checklist</a
+              >.
+            </p>
+
+            <li class="m-t">
+              <span class="bold"
+                ><a href="https://edd.ca.gov/unemployment"
+                  >Unemployment benefits</a
+                ></span
+              >: Apply if you lost your job due to the fires
+            </li>
+
+            <li class="m-t">
+              <span class="bold">State tax relief</span> for
+              <a
+                href="https://www.ftb.ca.gov/file/when-to-file/los-angeles-county-fires.html?WT.ac=Home_Ad_LAFires"
+                >individuals</a
+              >
+              and
+              <a
+                href="https://www.cdtfa.ca.gov/services/state-of-emergency-tax-relief.htm"
+                >businesses</a
+              >
+              affected by the fires.
+              <ul>
+                <li class="m-t">
+                  You can also get copies of your tax records and a one-month
+                  filing extension on your tax returns. Learn more at
+                  <a href="https://www.cdtfa.ca.gov/">CDTFA</a>.
+                </li>
+              </ul>
+            </li>
+
+            <li class="m-t">
+              <span class="bold">Help for small businesses: </span>
+              <ul>
+                <li class="m-t">
+                  <a
+                    href="https://www.sba.gov/funding-programs/disaster-assistance"
+                    >Small Business Administration (SBA)</a
+                  >
+                </li>
+                <li class="m-t">
+                  <a
+                    href="https://edd.ca.gov/en/payroll_taxes/emergency_and_disaster_assistance_for_employers"
+                    >Emergency and Disaster Assistance for Employers (EDD)</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="m-t">
+              <span class="bold">Help for immigrants:</span>
+              <ul>
+                <li class="m-t">
+                  <a
+                    href="https://cdss.ca.gov/Portals/13/DisasterAssistanceGuideforImmigrantCaliforniansFinal.pdf"
+                    >Disaster Assistance Guide (English)</a
+                  >
+                </li>
+                <li class="m-t">
+                  <a
+                    href="https://cdss.ca.gov/Portals/13/DisasterAssistanceGuideforImmigrantCaliforniansSpanishFinal.pdf"
+                    >Disaster Assistance Guide (Spanish)</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <h2>Federal programs</h2>
+        <p>
+          There is a group of federal programs that help disaster survivors
+          start to recover. It’s called
+          <a href="https://www.fema.gov/assistance/individual"
+            >Individual Assistance.</a
+          >
+          These programs include:
+        </p>
 
         <ul>
+          <li class="m-t">Advanced Financial Assistance</li>
+          <li class="m-t">Housing</li>
+          <li class="m-t">Rental Assistance</li>
+          <li class="m-t">Funds to repair or replace damaged homes</li>
+          <li class="m-t">Legal services</li>
+          <li class="m-t">Unemployment assistance</li>
+          <li class="m-t">Help with other needs</li>
+        </ul>
+
+        <h2>Food assistance</h2>
+        <ul>
           <li class="m-t">
-            X: <a href="https://twitter.com/CAL_FIRE">@CAL_FIRE</a> | Instagram:
-            <a href="https://www.instagram.com/calfire/?hl=en">@calfire</a>
+            For low-income women and children:
+            <a
+              href="https://myfamily.wic.ca.gov/Home/HowCanIGetWIC#HowCanIGetWIC"
+              >WIC</a
+            >
+          </li>
+          <li class="m-t">
+            Sign up for <a href="https://benefitscal.com/">CalFresh</a> or have
+            them
+            <a
+              href="https://www.getcalfresh.org/faq#info-benefits-replacement-end"
+              >replace food lost in the fires</a
+            >
+          </li>
+          <li class="m-t">
+            <a href="https://cdss.ca.gov/food-banks">Food banks</a> in your area
           </li>
         </ul>
 
-        <p class="m-t"><span class="bold">Cal Guard</span></p>
-
-        <ul>
-          <li class="m-t">
-            X: <a href="https://twitter.com/calguard">@calguard</a> | Instagram:
-            <a href="https://www.instagram.com/thecalguard/">@thecalguard</a>
-          </li>
-        </ul>
-
-        <p class="m-t"><span class="bold">Cal OES</span></p>
-
-        <ul>
-          <li class="m-t">
-            X: <a href="https://twitter.com/cal_oes">@cal_oes</a> | Instagram:
-            <a href="https://www.instagram.com/cal_OES/">@cal_OES</a>
-          </li>
-        </ul>
-
-        <!-- News list -->
-        <div class="brd-solid-1 brd-gray-200 rounded-4 p-a m-t-lg">
-          <h2 class="m-t h3">State updates</h2>
-
-          {%- set counter = 0 -%} {%- for story in
-          laFiresStories.rss.channel[0].item -%} {%- if counter < 4 and
-          (category1 in story.category or category2 in story.category or
-          category3 in story.category) -%}
-          <hr class="m-y-md" />
-          <h3 class="lead font-weight-700">
-            <a href="{{ story.link }}">{{ story.title }}</a>
-          </h3>
-          <p>{{ story.pubDate | customDate }}</p>
-          {%- set counter = counter + 1 -%} {%- endif -%} {%- endfor %}
-
-          <hr class="m-y-md" />
-          <!-- End News list  -->
-
-          <p class="m-b-md">
-            <a href="https://www.gov.ca.gov/tag/la-fires/"
-              >View all LA fires news</a
+        <div class="p-a-md m-t-lg brd-solid-1 brd-gray-200 rounded-10">
+          <h2 class="m-t">What to do when you’ve lost your home</h2>
+          <h3 class="m-t">Find shelter and get help</h3>
+          <p>
+            <span class="bold"
+              ><a
+                href="https://news.caloes.ca.gov/shelters-available-for-communities-impacted-by-wildfires-in-southern-california-5/"
+                >Real-time list of open shelters</a
+              ></span
             >
           </p>
+
+          <p>
+            FEMA offers
+            <span class="bold">help for temporary housing</span> through their
+            <a href="https://www.fema.gov/assistance/individual/program"
+              >Individuals and Households Program</a
+            >. They offer displacement assistance of 14 days of housing for
+            residents who qualify. You could also qualify for several months of
+            <span class="bold">rental assistance</span>.
+          </p>
+
+          <h3 class="m-t">File an insurance claim</h3>
+          <p>
+            <span class="bold">Know your protections.</span>
+            <a
+              href="https://www.insurance.ca.gov/01-consumers/140-catastrophes/MandatoryOneYearMoratoriumNonRenewals.cfm"
+              >California protects you from losing your home insurance</a
+            >
+            if you were impacted by these fires.
+          </p>
+          <p>
+            <span class="bold">Get help with your claim.</span> The California
+            Department of Insurance gives help in many languages.
+          </p>
+
+          <ul>
+            <li class="m-t">
+              <a
+                href="https://www.insurance.ca.gov/01-consumers/140-catastrophes/WildfireResources.cfm"
+                >Resources to Help Recent Wildfire Victims</a
+              >
+            </li>
+            <li class="m-t">
+              <a
+                href="https://www.insurance.ca.gov/01-consumers/140-catastrophes/TopTenTips_WildfireClaimants.cfm"
+                >Top Ten Tips for Wildfire Claimants</a
+              >
+            </li>
+            <li class="m-t">
+              <a href="https://www2.cslb.ca.gov/Consumer.aspx"
+                >Working with contractors</a
+              >
+            </li>
+            <li class="m-t">
+              <a
+                href="https://www.calvet.ca.gov/HomeLoans/Pages/How-to-submit-a-claim.aspx"
+                >Help with CalVet claims</a
+              >
+            </li>
+            <li class="m-t">
+              <a href="https://www.insurance.ca.gov/01-consumers/101-help/"
+                >Getting help with claims</a
+              >
+            </li>
+            <li class="m-t">
+              On the phone: Call 1-800-927-4357 (HELP) or TTY: 1-800-482-4833
+              for assistance.
+            </li>
+            <li class="m-t">
+              In-person: Go to
+              <a
+                href="https://www.insurance.ca.gov/01-consumers/140-catastrophes/LACs.cfm"
+                >insurance workshops</a
+              >
+              the weekends of January 18 and January 25.
+            </li>
+          </ul>
+
+          <h3 class="m-t">Replace documents</h3>
+          <p>
+            <span class="bold"
+              >Driver’s license, ID cards, and vehicle titles:</span
+            >
+            The DMV can help you get replacements.
+          </p>
+          <ul>
+            <li class="m-t">
+              <a
+                href="https://www.dmv.ca.gov/portal/customer-service/natural-disaster-assistance/"
+                >CA DMV - Natural Disaster Assistance</a
+              >
+            </li>
+            <li class="m-t">
+              1-800-777-0133 (or TTY 1-800-735-2929 or 1-800-368-4327 for
+              hearing or speech impaired)
+            </li>
+          </ul>
+
+          <p>
+            <span class="bold">Birth, death, and marriage records:</span> You
+            must contact the county recorder where the event occurred.
+          </p>
+          <ul>
+            <li class="m-t">
+              <a
+                href="https://www.cdph.ca.gov/Programs/CHSI/Pages/County-Registrars-and-Recorders.aspx"
+                >List of county recorders</a
+              >
+            </li>
+            <li class="m-t">916-445-2684, TTY 7-1-1, or 1-800-735-2929</li>
+          </ul>
+
+          <p>
+            <span class="bold">Manufactured and mobile homes:</span> Help with
+            <a href="https://www.hcd.ca.gov/manufactured-and-mobilehomes"
+              >replacing titles and registration</a
+            >
+          </p>
+
+          <h3 class="m-t">Rebuild - faster</h3>
+          <p>
+            Governor Newsom
+            <a
+              href="https://www.gov.ca.gov/2025/01/12/governor-newsom-signs-executive-order-to-help-los-angeles-rebuild-faster-and-stronger/"
+              >suspended permit and review requirements</a
+            >
+            under the California Environmental Quality Act (CEQA) and the
+            California Coastal Act. This allows victims of the recent fires to
+            restore their homes and businesses faster.
+          </p>
+        </div>
+
+        <!--END col-lg-10-->
+      </div>
+    </div>
+  </div>
+
+  <div class="section-understated">
+    <div class="container p-b-lg">
+      <div class="row">
+        <div class="col-lg-10">
+          <h2>Stay informed</h2>
+
+          <h3>Evacuation</h3>
+          <ul>
+            <li class="m-t">
+              Evacuation notices and critical updates for LA County:
+              <a href="https://ready.lacounty.gov/emergency-notifications/"
+                >Ready LA</a
+              >
+            </li>
+            <li class="m-t">
+              Tips for evacuating safely:
+              <a
+                href="https://readyforwildfire.org/prepare-for-wildfire/go-evacuation-guide/"
+                >Evacuation Guide</a
+              >
+            </li>
+          </ul>
+
+          <h3>Real-time updates</h3>
+
+          <ul>
+            <li class="m-t">
+              Ongoing fires:
+              <a href="https://www.fire.ca.gov/">fire.ca.gov</a>
+            </li>
+
+            <li class="m-t">
+              Air quality:
+              <a href="https://www.aqmd.gov/"
+                >Air Quality Monitoring (South Coast AQMD)</a
+              >
+            </li>
+            <li class="m-t">
+              Power shutoffs:
+              <a
+                href="https://www.sce.com/outage-center/outage-information/psps"
+                >Stay Updated on Public Safety Power Shutoffs</a
+              >
+            </li>
+            <li class="m-t">
+              School and government closures:
+              <a href="https://211la.org/LA-Wildfires">LA County 211</a>
+            </li>
+
+            <li class="m-t">
+              Traffic maps:
+              <a href="https://quickmap.dot.ca.gov/"
+                >CalTrans Traffic Alert/Map</a
+              >
+            </li>
+
+            <li class="m-t">
+              Latest news:
+              <a href="https://news.caloes.ca.gov/">Cal OES News</a>
+            </li>
+          </ul>
+
+          <h3>Avoiding scams</h3>
+          <ul>
+            <li class="m-t">
+              Consumer protections against price gouging:
+              <a
+                href="https://oag.ca.gov/news/press-releases/attorney-general-bonta-issues-consumer-alert-price-gouging-following-state-13"
+                >Office of the Attorney General</a
+              >
+            </li>
+          </ul>
+
+          <h3>Preparing for disaster</h3>
+
+          <ul>
+            <li class="m-t">
+              Life-saving disaster tips:
+              <a href="https://www.listoscalifornia.org/disaster-readiness/"
+                >Ready.ca.gov</a
+              >
+            </li>
+          </ul>
+
+          <h3>Staying healthy</h3>
+          <ul>
+            <li class="m-t">
+              Resources to stay healthy:
+              <a
+                href="https://www.cdph.ca.gov/Programs/EPO/Pages/Wildfire%20Pages/Wildfires--.aspx"
+                >California Department of Public Health - Wildfires</a
+              >
+            </li>
+          </ul>
+
+          <h3>Social media</h3>
+          <p class="m-t">
+            <span class="bold">LA County</span>
+          </p>
+
+          <ul>
+            <li class="m-t">
+              LA Office of Emergency Management<br />
+              X:
+              <a href="https://twitter.com/readylacounty">@ReadyLACounty</a> |
+              Instagram:
+              <a href="https://www.instagram.com/lausd_oem/">@lausd_oem</a>
+            </li>
+            <li class="m-t">
+              LA County Fire<br />
+              X: <a href="https://x.com/LACoFDPIO/?mx=2">@LACoFDPIO</a> |
+              Instagram:
+              <a href="https://www.instagram.com/lacountyfd/">@LAacountyfd</a>
+            </li>
+            <li class="m-t">
+              LA County Sheriff<br />
+              X: <a href="https://x.com/LASDHQ">@LASDHQ</a> | Instagram:
+              <a href="https://www.instagram.com/lasdhq/">@LASDHQ</a>
+            </li>
+            <li class="m-t">
+              LA County<br />
+              X: <a href="https://x.com/CountyofLA">@CountyofLA</a> | Instagram:
+              <a href="https://www.instagram.com/CountyofLA/">@CountyofLA</a>
+            </li>
+          </ul>
+
+          <p class="m-t"><span class="bold">CAL FIRE</span></p>
+
+          <ul>
+            <li class="m-t">
+              X: <a href="https://twitter.com/CAL_FIRE">@CAL_FIRE</a> |
+              Instagram:
+              <a href="https://www.instagram.com/calfire/?hl=en">@calfire</a>
+            </li>
+          </ul>
+
+          <p class="m-t"><span class="bold">Cal Guard</span></p>
+
+          <ul>
+            <li class="m-t">
+              X: <a href="https://twitter.com/calguard">@calguard</a> |
+              Instagram:
+              <a href="https://www.instagram.com/thecalguard/">@thecalguard</a>
+            </li>
+          </ul>
+
+          <p class="m-t"><span class="bold">Cal OES</span></p>
+
+          <ul>
+            <li class="m-t">
+              X: <a href="https://twitter.com/cal_oes">@cal_oes</a> | Instagram:
+              <a href="https://www.instagram.com/cal_OES/">@cal_OES</a>
+            </li>
+          </ul>
+
+          <!-- News list -->
+          <div class="brd-solid-1 brd-gray-200 rounded-4 p-a m-t-lg">
+            <h2 class="m-t h3">State updates</h2>
+
+            {%- set counter = 0 -%} {%- for story in
+            laFiresStories.rss.channel[0].item -%} {%- if counter < 4 and
+            (category1 in story.category or category2 in story.category or
+            category3 in story.category) -%}
+            <hr class="m-y-md" />
+            <h3 class="lead font-weight-700">
+              <a href="{{ story.link }}">{{ story.title }}</a>
+            </h3>
+            <p>{{ story.pubDate | customDate }}</p>
+            {%- set counter = counter + 1 -%} {%- endif -%} {%- endfor %}
+
+            <hr class="m-y-md" />
+            <!-- End News list  -->
+
+            <p class="m-b-md">
+              <a href="https://www.gov.ca.gov/tag/la-fires/"
+                >View all LA fires news</a
+              >
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container p-b-lg">
-  <div class="row">
-    <div class="col-lg-10">
-      <h2>How you can help</h2>
-      <p>
-        Thank you for donating your time or money. When deciding how to help,
-        rely on trusted sources and beware of scams.
-      </p>
-      <ul>
-        <li class="m-t">
-          Volunteer opportunities:
-          <a href="https://www.californiavolunteers.ca.gov/wildfire-recovery/"
-            >California Volunteers</a
-          >
-        </li>
-        <li class="m-t">
-          Safe ways to donate:
+  <div class="container p-b-lg">
+    <div class="row">
+      <div class="col-lg-10">
+        <h2>How you can help</h2>
+        <p>
+          Thank you for donating your time or money. When deciding how to help,
+          rely on trusted sources and beware of scams.
+        </p>
+        <ul>
+          <li class="m-t">
+            Volunteer opportunities:
+            <a href="https://www.californiavolunteers.ca.gov/wildfire-recovery/"
+              >California Volunteers</a
+            >
+          </li>
+          <li class="m-t">
+            Safe ways to donate:
+            <a
+              href="https://www.philanthropyca.org/2025-california-disaster-response"
+              >Philanthropy California</a
+            >
+          </li>
+        </ul>
+
+        <h2>Major Disaster Declaration</h2>
+        <p>
+          On January 8, California got a
           <a
-            href="https://www.philanthropyca.org/2025-california-disaster-response"
-            >Philanthropy California</a
+            href="https://www.whitehouse.gov/briefing-room/presidential-actions/2025/01/08/president-joseph-r-biden-jr-approves-california-major-disaster-declaration/#:~:text=Today%2C%20President%20Joseph%20R.%20Biden%2C%20Jr.%20declared%20that,winds%20beginning%20on%20January%207%2C%202025%2C%20and%20continuing."
+            >Major Disaster Declaration</a
           >
-        </li>
-      </ul>
+          for the California wildfires. This lets federal agencies give aid and
+          resources for recovery in the affected areas.
+        </p>
 
-      <h2>Major Disaster Declaration</h2>
-      <p>
-        On January 8, California got a
-        <a
-          href="https://www.whitehouse.gov/briefing-room/presidential-actions/2025/01/08/president-joseph-r-biden-jr-approves-california-major-disaster-declaration/#:~:text=Today%2C%20President%20Joseph%20R.%20Biden%2C%20Jr.%20declared%20that,winds%20beginning%20on%20January%207%2C%202025%2C%20and%20continuing."
-          >Major Disaster Declaration</a
-        >
-        for the California wildfires. This lets federal agencies give aid and
-        resources for recovery in the affected areas.
-      </p>
-
-      <p>
-        Through this declaration from President Biden, California gets
-        assistance for:
-      </p>
-      <ul>
-        <li class="m-t">individuals,</li>
-        <li class="m-t">the public, and</li>
-        <li class="m-t">small businesses.</li>
-      </ul>
+        <p>
+          Through this declaration from President Biden, California gets
+          assistance for:
+        </p>
+        <ul>
+          <li class="m-t">individuals,</li>
+          <li class="m-t">the public, and</li>
+          <li class="m-t">small businesses.</li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
 
-<script>
-  async function fetchFireData() {
-    const mapDataUrl = "https://rdipowerplatformfd-e5hhgqaahef7fbdr.a02.azurefd.net/incidents/incidents.json"
+  <script>
+    async function fetchFireData() {
+      const mapDataUrl = "https://rdipowerplatformfd-e5hhgqaahef7fbdr.a02.azurefd.net/incidents/incidents.json"
 
-    try {
-      const response = await fetch(mapDataUrl);
-      const data = await response.json();
+      try {
+        const response = await fetch(mapDataUrl);
+        const data = await response.json();
 
-      const featurelist = data.map(x => ({
-        name: x.attributes.name,
-        percentContained: x.attributes.percentContained
-      }));
+        const featurelist = data.map(x => ({
+          name: x.attributes.name,
+          percentContained: x.attributes.percentContained
+        }));
 
-      /**
-       *
-       * @param {string} id
-       * @param {string} name
-       */
-      const updatePercentContained = (id, name) => {
-        const element = document.getElementById(id);
-        element.textContent = element.textContent.replace(
-          "_",
-          featurelist.find(x => x.name === name)?.percentContained || "N/A"
-        );
-      };
+        /**
+         *
+         * @param {string} id
+         * @param {string} name
+         */
+        const updatePercentContained = (id, name) => {
+          const element = document.getElementById(id);
+          element.textContent = element.textContent.replace(
+            "_",
+            featurelist.find(x => x.name === name)?.percentContained || "N/A"
+          );
+        };
 
-      updatePercentContained("percent-contained-eaton", "Eaton Fire");
-      updatePercentContained("percent-contained-palisades", "Palisades Fire");
-    } catch (error) {
-      console.error("Error fetching fire data:", error);
+        updatePercentContained("percent-contained-eaton", "Eaton Fire");
+        updatePercentContained("percent-contained-palisades", "Palisades Fire");
+      } catch (error) {
+        console.error("Error fetching fire data:", error);
+      }
     }
-  }
 
-  fetchFireData();
-</script>
+    fetchFireData();
+  </script>
+</div>
