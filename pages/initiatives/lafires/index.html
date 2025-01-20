@@ -683,38 +683,3 @@ category3: Public Safety
     </div>
   </div>
 </div>
-<!---<script>
-  async function fetchFireData() {
-    const mapDataUrl = "https://rdipowerplatformfd-e5hhgqaahef7fbdr.a02.azurefd.net/incidents/incidents.json"
-
-    try {
-      const response = await fetch(mapDataUrl);
-      const data = await response.json();
-
-      const featurelist = data.map(x => ({
-        name: x.attributes.name,
-        percentContained: x.attributes.percentContained
-      }));
-
-      /**
-       *
-       * @param {string} id
-       * @param {string} name
-       */
-      const updatePercentContained = (id, name) => {
-        const element = document.getElementById(id);
-        element.textContent = element.textContent.replace(
-          "_",
-          featurelist.find(x => x.name === name)?.percentContained || "N/A"
-        );
-      };
-
-      updatePercentContained("percent-contained-eaton", "Eaton Fire");
-      updatePercentContained("percent-contained-palisades", "Palisades Fire");
-    } catch (error) {
-      console.error("Error fetching fire data:", error);
-    }
-  }
-
-  fetchFireData();
-</script>--->
