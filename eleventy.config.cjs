@@ -218,7 +218,7 @@ module.exports = function (
             dir.replace(path.join(__dirname, "_site"), ""),
             file
           );
-          sitemapContent += `  <url>\n    <loc>${urlPath}</loc>\n  </url>\n`;
+          sitemapContent += `  <url>\n    <loc>${domain}${encodeURI(urlPath)}</loc>\n  </url>\n`;
         });
 
         // Write the sitemap content to the file
