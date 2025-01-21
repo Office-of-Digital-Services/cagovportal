@@ -267,6 +267,12 @@ h2,
   background-color: var(--color-p2-darker) !important;
 }
 
+.no-icon {
+  > span.external-link-icon {
+    display: none;
+  }
+}
+
 /* Feedback */
 cagov-feedback > section > div.feedback-form {
   padding: 0;
