@@ -691,8 +691,8 @@ category3: Public Safety
         <h2 class="header-bg-primary m-t" id="6">Stay informed</h2>
 
         <!-- News list -->
-        <div class="brd-solid-1 brd-gray-200 rounded-4 p-a m-t-lg">
-          <h3>State updates</h2>
+        <div class="brd-solid-1 brd-gray-200 rounded-10 p-a-md m-t-lg bg-white">
+          <h2 class="m-t h3">State updates</h2>
 
           {%- set counter = 0 -%} {%- for story in
           laFiresStories.rss.channel[0].item -%} {%- if counter < 4 and
@@ -714,6 +714,7 @@ category3: Public Safety
             >
           </p>
         </div>
+
         <h3 class="header-bg-primary">Social media</h3>
 
         <h4>LA County</h4>
@@ -721,7 +722,7 @@ category3: Public Safety
           <article
             class="col-lg-5 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b m-r-md m-t-md">
             <div class="p-a-md">
-              LA Office of Emergency Management
+              <strong>LA Office of Emergency Management</strong>
               <ul>
                 <li>
                   X:
@@ -738,7 +739,7 @@ category3: Public Safety
           <article
             class="col-lg-5 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b m-r-md m-t-md">
             <div class="p-a-md">
-              LA County Fire
+              <strong>LA County Fire</strong>
               <ul>
                 <li>
                   X: <a href="https://x.com/LACoFDPIO/?mx=2">@LACoFDPIO</a>
@@ -785,6 +786,131 @@ category3: Public Safety
             </div>
           </article>
         </div>
+
+        <h4>State agencies</h4>
+        <div class="row">
+          <article
+            class="col-lg-5 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b m-r-md m-t-md">
+            <div class="p-a-md">
+              <strong>CAL FIRE</strong>
+              <ul>
+                <li>
+                  X:
+                  <a href="https://twitter.com/CAL_FIRE">@CAL_FIRE</a>
+                </li>
+                <li>
+                  Instagram:
+                  <a href="https://www.instagram.com/calfire/?hl=en"
+                    >@CountyofLA</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article
+            class="col-lg-5 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b m-r-md m-t-md">
+            <div class="p-a-md">
+              <strong>Cal Guard</strong>
+              <ul>
+                <li>X: <a href="https://twitter.com/calguard">@calguard</a></li>
+                <li>
+                  Instagram:
+                  <a href="https://www.instagram.com/thecalguard/"
+                    >@thecalguard</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="row">
+          <article
+            class="col-lg-5 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b m-r-md m-t-md">
+            <div class="p-a-md">
+              <strong>Cal OES</strong>
+              <ul>
+                <li>X: <a href="https://twitter.com/cal_oes">@cal_oes</a></li>
+                <li>
+                  Instagram:
+                  <a href="https://www.instagram.com/cal_OES/">@cal_OES</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-md-10">
+      <h3>Avoiding scams</h3>
+      <p>
+        <a
+          href="https://oag.ca.gov/news/press-releases/attorney-general-bonta-issues-consumer-alert-price-gouging-following-state-13"
+          >Consumer protections against price gouging</a
+        >
+        from the Office of Attorney General
+      </p>
+      <hr class="m-t-lg" />
+      <h3>How you can help</h3>
+      <p>
+        Thank you for donating your time or money. When deciding how to help,
+        rely on trusted sources and beware of scams.
+      </p>
+      <p>
+        Volunteer opportunities: <a
+          href="https://www.californiavolunteers.ca.gov/wildfire-recovery/"
+          >California Volunteers</a
+        >
+      </p>
+      <p>
+        Safe ways to donate: <a
+          href="https://www.philanthropyca.org/2025-california-disaster-response"
+          >Philanthropy California</a
+        >
+      </p>
+      <hr class="m-t-lg" />
+      <h3>Major Disaster Declaration</h3>
+      <p>
+        On January 8, California got a <a
+          href="https://www.whitehouse.gov/briefing-room/presidential-actions/2025/01/08/president-joseph-r-biden-jr-approves-california-major-disaster-declaration/#:~:text=Today%2C%20President%20Joseph%20R.%20Biden%2C%20Jr.%20declared%20that,winds%20beginning%20on%20January%207%2C%202025%2C%20and%20continuing."
+          >Major Disaster Declaration</a
+        > for the California wildfires. This lets federal agencies give aid and
+        resources for recovery in the affected areas.
+      </p>
+      <p>
+        Through this declaration from President Biden, California gets
+        assistance for:
+      </p>
+      <ul>
+        <li>individuals,</li>
+        <li>the public, and</li>
+        <li>small businesses.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="section-primary">
+  <div class="container p-y-lg">
+    <div class="row">
+      <div class="col-md-10">
+        <h3 class="m-t-0">Rebuild - faster</h3>
+        <p>
+          Governor Newsom
+          <a
+            href="https://www.gov.ca.gov/2025/01/12/governor-newsom-signs-executive-order-to-help-los-angeles-rebuild-faster-and-stronger/"
+            >suspended permit and review requirements</a
+          >
+          under the California Environmental Quality Act (CEQA) and the
+          California Coastal Act. This allows victims of the recent fires to
+          restore their homes and businesses faster.
+        </p>
       </div>
     </div>
   </div>
