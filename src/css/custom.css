@@ -259,6 +259,14 @@ h2,
   left: 3px;
 }
 
+.bg-p2-dark {
+  background-color: var(--color-p2-dark, #035376) !important;
+}
+
+.bg-p2-darker {
+  background-color: var(--color-p2-darker) !important;
+}
+
 /* Feedback */
 cagov-feedback > section > div.feedback-form {
   padding: 0;
