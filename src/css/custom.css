@@ -259,6 +259,14 @@ h2,
   left: 3px;
 }
 
+.bg-p2-dark {
+  background-color: var(--color-p2-dark, #035376) !important;
+}
+
+.bg-p2-darker {
+  background-color: var(--color-p2-darker) !important;
+}
+
 /* Feedback */
 cagov-feedback > section > div.feedback-form {
   padding: 0;
@@ -554,4 +562,17 @@ div.image-header {
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
   }
+}
+
+h2.header-bg-primary {
+  border-top-right-radius: var(--bs-border-radius);
+  border-top-left-radius: var(--bs-border-radius);
+  background-color: var(--color-p2);
+  padding: 1.5rem;
+  color: var(--white);
+  border-bottom: 5px solid var(--color-p2-darker);
+}
+
+:root {
+  --bs-border-radius: 10px;
 }
