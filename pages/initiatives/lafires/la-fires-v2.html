@@ -617,102 +617,175 @@ category3: Public Safety
           >
         </li>
       </ul>
+
+      <h2 class="header-bg-primary m-t-lg" id="5">For small businesses</h2>
+      <h3>Find support and assistance for local business recovery</h3>
+
+      <ul>
+        <li class="m-t">
+          <a href="https://www.sba.gov/funding-programs/disaster-assistance"
+            ><strong>Small business support</strong></a
+          >
+          <br />
+          The Small Business Administration (SBA) provides a variety of
+          resources to help small businesses and entrepreneurs including
+          financing, training, and advocacy.
+        </li>
+        <li class="m-t">
+          <a
+            href="https://edd.ca.gov/en/payroll_taxes/emergency_and_disaster_assistance_for_employers"
+            ><strong
+              >Apply for emergency and disaster assistance for employers</strong
+            ></a
+          >
+          <br />
+          The Employment Development Department (EDD) offers services to support
+          employers impacted by disasters including disaster relief payments,
+          request an extension for payment and payroll reports.
+        </li>
+      </ul>
+
+      <h3>Taxes for businesses</h3>
+      <p><strong>Business income taxes</strong> (Franchise Tax Board)</p>
+      <p>
+        Businesses impacted by the wildfires qualify for a postponement to file
+        and pay income taxes until October 15, 2025. Only Los Angeles County was
+        granted postponement. If the principal place of business is outside of
+        Los Angeles County, you must file and pay by the normal due dates.
+      </p>
+      <ul>
+        <li class="m-t">
+          <a
+            href="https://www.ftb.ca.gov/file/when-to-file/los-angeles-county-fires.html"
+            >Los Angeles County fires - 2024 taxable year disaster</a
+          >
+        </li>
+      </ul>
+
+      <p>
+        <strong>Emergency sales tax or fee relief</strong> (CA Department of Tax
+        and Fee Administration)
+      </p>
+      <p>
+        Get relief from penalty, collection cost, and interest. You can also get
+        copies of tax records and up to a 3- month filing extension on your tax
+        returns.
+      </p>
+      <ul>
+        <li class="m-t">
+          <a
+            href="https://www.cdtfa.ca.gov/services/state-of-emergency-tax-relief.htm"
+            >Apply for emergency tax relief</a
+          >
+        </li>
+      </ul>
     </div>
   </div>
 </div>
 
 <!--- OLD CONTENT STARTS HERE-->
 <div class="section-understated p-y-lg">
-  <div class="container m-b-sm">
-    <h3 class="header-bg-primary">Social media</h3>
-
-    <h4>LA County</h4>
+  <div class="container">
     <div class="row">
-      <article
-        class="col-lg-5 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b m-r-md m-t-md">
-        <div class="p-a-md">
-          LA Office of Emergency Management
-          <ul>
-            <li>
-              X:
-              <a href="https://twitter.com/readylacounty">@ReadyLACounty</a>
-            </li>
-            <li>
-              Instagram:
-              <a href="https://www.instagram.com/lausd_oem/">@lausd_oem</a>
-            </li>
-          </ul>
+      <div class="col-lg-10">
+        <h2 class="header-bg-primary m-t" id="6">Stay informed</h2>
+
+        <!-- News list -->
+        <div class="brd-solid-1 brd-gray-200 rounded-4 p-a m-t-lg">
+          <h3>State updates</h2>
+
+          {%- set counter = 0 -%} {%- for story in
+          laFiresStories.rss.channel[0].item -%} {%- if counter < 4 and
+          (category1 in story.category or category2 in story.category or
+          category3 in story.category) -%}
+          <hr class="m-y-md" />
+          <h3 class="lead font-weight-700">
+            <a href="{{ story.link }}">{{ story.title }}</a>
+          </h3>
+          <p>{{ story.pubDate | customDate }}</p>
+          {%- set counter = counter + 1 -%} {%- endif -%} {%- endfor %}
+
+          <hr class="m-y-md" />
+          <!-- End News list  -->
+
+          <p class="m-b-md">
+            <a href="https://www.gov.ca.gov/tag/la-fires/"
+              >View all LA fires news</a
+            >
+          </p>
         </div>
-      </article>
+        <h3 class="header-bg-primary">Social media</h3>
 
-      <article
-        class="col-lg-5 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b m-r-md m-t-md">
-        <div class="p-a-md">
-          LA County Fire
-          <ul>
-            <li>X: <a href="https://x.com/LACoFDPIO/?mx=2">@LACoFDPIO</a></li>
-            <li>
-              Instagram:
-              <a href="https://www.instagram.com/lacountyfd/">@LAacountyfd</a>
-            </li>
-          </ul>
+        <h4>LA County</h4>
+        <div class="row">
+          <article
+            class="col-lg-5 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b m-r-md m-t-md">
+            <div class="p-a-md">
+              LA Office of Emergency Management
+              <ul>
+                <li>
+                  X:
+                  <a href="https://twitter.com/readylacounty">@ReadyLACounty</a>
+                </li>
+                <li>
+                  Instagram:
+                  <a href="https://www.instagram.com/lausd_oem/">@lausd_oem</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article
+            class="col-lg-5 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b m-r-md m-t-md">
+            <div class="p-a-md">
+              LA County Fire
+              <ul>
+                <li>
+                  X: <a href="https://x.com/LACoFDPIO/?mx=2">@LACoFDPIO</a>
+                </li>
+                <li>
+                  Instagram:
+                  <a href="https://www.instagram.com/lacountyfd/"
+                    >@LAacountyfd</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </article>
         </div>
-      </article>
-    </div>
 
-    <div class="row">
-      <article
-        class="col-lg-5 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b m-r-md m-t-md">
-        <div class="p-a-md">
-          LA County Sheriff
-          <ul>
-            <li>X: <a href="https://x.com/LASDHQ">@LASDHQ</a></li>
-            <li>
-              Instagram:
-              <a href="https://www.instagram.com/lasdhq/">@LASDHQ</a>
-            </li>
-          </ul>
+        <div class="row">
+          <article
+            class="col-lg-5 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b m-r-md m-t-md">
+            <div class="p-a-md">
+              LA County Sheriff
+              <ul>
+                <li>X: <a href="https://x.com/LASDHQ">@LASDHQ</a></li>
+                <li>
+                  Instagram:
+                  <a href="https://www.instagram.com/lasdhq/">@LASDHQ</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article
+            class="col-lg-5 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b m-r-md m-t-md">
+            <div class="p-a-md">
+              LA County
+              <ul>
+                <li>X: <a href="https://x.com/CountyofLA">@CountyofLA</a></li>
+                <li>
+                  Instagram:
+                  <a href="https://www.instagram.com/CountyofLA/"
+                    >@CountyofLA</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </article>
         </div>
-      </article>
-
-      <article
-        class="col-lg-5 no-underline d-block bg-white brd-solid-1 brd-gray-200 rounded-10 p-b m-r-md m-t-md">
-        <div class="p-a-md">
-          LA County
-          <ul>
-            <li>X: <a href="https://x.com/CountyofLA">@CountyofLA</a></li>
-            <li>
-              Instagram:
-              <a href="https://www.instagram.com/CountyofLA/">@CountyofLA</a>
-            </li>
-          </ul>
-        </div>
-      </article>
-    </div>
-
-    <!-- News list -->
-    <div class="brd-solid-1 brd-gray-200 rounded-4 p-a m-t-lg">
-      <h2 class="m-t h3">State updates</h2>
-
-      {%- set counter = 0 -%} {%- for story in
-      laFiresStories.rss.channel[0].item -%} {%- if counter < 4 and (category1
-      in story.category or category2 in story.category or category3 in
-      story.category) -%}
-      <hr class="m-y-md" />
-      <h3 class="lead font-weight-700">
-        <a href="{{ story.link }}">{{ story.title }}</a>
-      </h3>
-      <p>{{ story.pubDate | customDate }}</p>
-      {%- set counter = counter + 1 -%} {%- endif -%} {%- endfor %}
-
-      <hr class="m-y-md" />
-      <!-- End News list  -->
-
-      <p class="m-b-md">
-        <a href="https://www.gov.ca.gov/tag/la-fires/"
-          >View all LA fires news</a
-        >
-      </p>
+      </div>
     </div>
   </div>
 </div>
