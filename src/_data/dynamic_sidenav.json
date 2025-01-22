@@ -21,5 +21,39 @@
       "text": "All departments"
     },
     { "href": "/departments/list/", "text": "Departments list" }
+  ],
+  "lafires": [
+    {
+      "href": "/lafires/",
+      "text": "2025 Los Angeles fires"
+    },
+    {
+      "href": "/lafires/get-help-in-person/",
+      "text": "Get help in person"
+    },
+    {
+      "href": "/lafires/plan-your-in-person-visit/",
+      "text": "Plan your in-person visit"
+    },
+    {
+      "href": "/lafires/see-real-time-info/",
+      "text": "See real-time info"
+    },
+    {
+      "href": "/lafires/get-help-online/",
+      "text": "Get help online"
+    },
+    {
+      "href": "/lafires/start-your-recovery/",
+      "text": "Start your recovery"
+    },
+    {
+      "href": "/lafires/help-your-businessy/",
+      "text": "Help your business"
+    },
+    {
+      "href": "/lafires/volunteer/",
+      "text": "Volunteer"
+    }
   ]
 }
