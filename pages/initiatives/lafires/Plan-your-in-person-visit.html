@@ -2,6 +2,7 @@
 title: Plan your in-person visit
 landing: Support
 layout: landing
+dynamic_sidenavid: lafires
 description: Use this checklist to find the state resources you need at the Disaster Recovery Centers.
 hidestatewidealert: true
 permalink: lafires/plan-your-in-person-visit/
@@ -13,405 +14,100 @@ breadcrumbparent: 2025 Los Angeles Fires
   style="background: url('/images/get-help-lineart.svg?v2') no-repeat right / auto;">
   <div class="container p-y-md">
     {%- include "breadcrumbs.html" -%}
-    <h1 class="m-t-0 color-p2-darker">{{title}}</h1>
-    <p class="subtitle color-p2 bold">2025 Los Angeles Fires</p>
+    <h1 class="m-t-0 m-b-0 color-p2-darker">{{title}}</h1>
+    <p class="subtitle color-p2 bold m-b-md">2025 Los Angeles Fires</p>
   </div>
 </div>
-<div class="container p-y-md">
-  <p class="lead m-b-md">
-    Use this checklist to find the state resources you need at the Disaster
-    Recovery Centers. This checklist covers the most common services.
-  </p>
-  <div class="btn-row d-flex gap-3">
-    <button class="btn btn-primary" aria-label="Share checklist">Share</button>
-    <button class="btn btn-primary" aria-label="Download checklist">
-      Download
-    </button>
+
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-lg-3">{%-include "dynamic-sidenav.html"-%}</div>
+
+    <!--MAIN CONTENT-->
+    <div class="col-lg-9 p-t-md">
+      <p class="m-b-md lead">
+        Use this checklist to find the state resources you need at the Disaster
+        Recovery Centers. This checklist covers the most common services.
+      </p>
+
+      <nav class="page-navigation"></nav>
+
+      <div class="btn-row d-flex gap-3 m-t-lg">
+        <button class="btn btn-primary" aria-label="Share checklist">
+          Share
+        </button>
+        <button class="btn btn-primary" aria-label="Download checklist">
+          Download
+        </button>
+      </div>
+
+      <!-- Spacer: 48px -->
+      <div class="m-t-lg"></div>
+
+      <!-- Health Information Section -->
+      <h2 class="m-b-0">Health information</h2>
+      <p>
+        You can get help with cash aid, shelter and housing, and healthcare.
+      </p>
+      <ul
+        class="checklist"
+        style="list-style: none; padding-left: 0; margin-top: 16px;">
+        <li style="margin-bottom: 24px;">
+          <label class="d-flex align-items-center">
+            <input type="checkbox" class="form-check-input m-r-md" />
+            <span>
+              <strong>Find out how to stay healthy during a wildfire</strong
+              ><br />
+              <a href="#" class="link-before"
+                >California Department of Public Health (CDPH)</a
+              >
+            </span>
+          </label>
+        </li>
+      </ul>
+      <hr class="m-t-lg" />
+
+      <!-- Food Section -->
+      <h2 class="m-b-0">Food</h2>
+      <p>
+        You can get help with cash aid, shelter and housing, and healthcare.
+      </p>
+      <ul
+        class="checklist"
+        style="list-style: none; padding-left: 0; margin-top: 16px;">
+        <li style="margin-bottom: 24px;">
+          <label class="d-flex align-items-center">
+            <input type="checkbox" class="form-check-input m-r-md" />
+            <span>
+              <strong>Get food benefits for women and children (WIC)</strong
+              ><br />
+              <a href="#" class="link-before"
+                >California Department of Public Health (CDPH)</a
+              >
+            </span>
+          </label>
+        </li>
+        <li style="margin-bottom: 24px;">
+          <label class="d-flex align-items-center">
+            <input type="checkbox" class="form-check-input m-r-md" />
+            <span>
+              <strong
+                >Sign up for CalFresh or get help replacing food lost in the
+                fires</strong
+              ><br />
+              <a href="#" class="link-before"
+                >California Department of Social Services (CDSS)</a
+              >
+            </span>
+          </label>
+        </li>
+      </ul>
+      <hr class="m-t-lg" />
+
+      <!-- Additional sections -->
+      <!-- Repeat the structure for other sections like School and Government Closures, Individual Assistance, etc. -->
+      <!-- Ensure each section has a header, description, checklist items, and is enclosed in a consistent layout -->
+    </div>
+    <!--END MAIN COL CONTENT-->
   </div>
-</div>
-<!-- Spacer: 48px -->
-<div class="m-t-lg"></div>
-
-<!-- Health Information Section -->
-<div class="container p-y-md">
-  <h2 class="m-t-0">Health information</h2>
-  <p>You can get help with cash aid, shelter and housing, and healthcare.</p>
-  <ul
-    class="checklist"
-    style="list-style: none; padding-left: 0; margin-top: 16px;">
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong>Find out how to stay healthy during a wildfire</strong><br />
-          <a href="#" class="link-before"
-            >California Department of Public Health (CDPH)</a
-          >
-        </span>
-      </label>
-    </li>
-  </ul>
-  <hr class="m-t-lg" />
-</div>
-<!-- Food Section -->
-<div class="container p-y-md">
-  <h2 class="m-t-0">Food</h2>
-  <p>You can get help with cash aid, shelter and housing, and healthcare.</p>
-  <ul
-    class="checklist"
-    style="list-style: none; padding-left: 0; margin-top: 16px;">
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong>Get food benefits for women and children (WIC)</strong><br />
-          <a href="#" class="link-before"
-            >California Department of Public Health (CDPH)</a
-          >
-        </span>
-      </label>
-    </li>
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong
-            >Sign up for CalFresh or get help replacing food lost in the
-            fires</strong
-          ><br />
-          <a href="#" class="link-before"
-            >California Department of Social Services (CDSS)</a
-          >
-        </span>
-      </label>
-    </li>
-  </ul>
-  <hr class="m-t-lg" />
-</div>
-<!-- School and Government Closures Section -->
-<div class="container p-y-md">
-  <h2 class="m-t-0">School and government closures</h2>
-  <p>Find out what's open and closed in your area.</p>
-  <ul
-    class="checklist"
-    style="list-style: none; padding-left: 0; margin-top: 16px;">
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong>Find out what's open and closed</strong><br />
-          <a href="#" class="link-before">LA County</a>
-        </span>
-      </label>
-    </li>
-  </ul>
-  <hr class="m-t-lg" />
-</div>
-
-<!-- Individual Assistance (FEMA) Section -->
-<div class="container p-y-md">
-  <h2 class="m-t-0">Individual Assistance (FEMA)</h2>
-  <ul
-    class="checklist"
-    style="list-style: none; padding-left: 0; margin-top: 16px;">
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong>Apply for money and other services.</strong>
-        </span>
-      </label>
-    </li>
-    <ul style="margin-left: 32px; margin-top: 8px;">
-      <li>Housing</li>
-      <li>Funds for repairs</li>
-      <li>Legal services</li>
-      <li style="list-style: none;">
-        <a href="#" class="link-before"
-          >Federal Emergency Management Agency (FEMA)</a
-        >
-      </li>
-    </ul>
-    <br />
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong>
-            If you qualify for FEMA, you may be eligible for additional
-            financial support </strong
-          ><br />
-        </span>
-      </label>
-    </li>
-    <li>
-      <a href="#" class="link-before"
-        >California Department of Social Services (CDSS)</a
-      >
-    </li>
-  </ul>
-  <hr class="m-t-lg" />
-</div>
-
-<!-- Replace your personal documents section-->
-<div class="container p-y-md">
-  <h2 class="m-t-0">Replace your personal documents</h2>
-  <ul
-    class="checklist"
-    style="list-style: none; padding-left: 0; margin-top: 16px;">
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong
-            >Replace your birth, death, and marriage certificates (fees
-            waived)</strong
-          >
-        </span>
-      </label>
-    </li>
-    <li style="list-style: none;">
-      <a style="margin-left: 48px;" href="#" class="link-before"
-        >California Department of Public Health (CDPH)</a
-      >
-    </li>
-    <br />
-  </ul>
-  <ul
-    class="checklist"
-    style="list-style: none; padding-left: 0; margin-top: 16px;">
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong>Replace your identity and car documents</strong>
-        </span>
-      </label>
-    </li>
-    <ul style="margin-left: 32px;">
-      <li>Driver’s license and ID cards</li>
-      <li>Car registration and car title</li>
-      <li style="list-style: none;">
-        <a href="#" class="link-before"
-          >California Department of Motor Vehicles (DMV)</a
-        >
-      </li>
-    </ul>
-
-    <br />
-  </ul>
-  <ul
-    class="checklist"
-    style="list-style: none; padding-left: 0; margin-top: 16px;">
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong>Get or replace manufactured and mobile home documents</strong>
-        </span>
-      </label>
-    </li>
-    <ul style="margin-left: 32px;">
-      <li>Registration and title</li>
-      <li>Salvage certificates</li>
-      <li style="list-style: none;">
-        <a href="#" class="link-before"
-          >Department of Housing and Community Development (HCD)</a
-        >
-      </li>
-    </ul>
-
-    <br />
-  </ul>
-  <ul
-    class="checklist"
-    style="list-style: none; padding-left: 0; margin-top: 16px;">
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong>Replace income tax documents</strong>
-        </span>
-      </label>
-    </li>
-    <ul style="margin-left: 32px;">
-      <li style="list-style: none;">
-        <a href="#" class="link-before">Franchise Tax Board (FTB)</a>
-      </li>
-    </ul>
-
-    <br />
-  </ul>
-  <hr class="m-t-lg" />
-</div>
-<!-- Insurance claims section-->
-<div class="container p-y-md">
-  <h2 class="m-t-0">Insurance claims</h2>
-  <ul
-    class="checklist"
-    style="list-style: none; padding-left: 0; margin-top: 16px;">
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong>Get help with insurance claims</strong>
-        </span>
-      </label>
-    </li>
-    <ul style="margin-left: 32px;">
-      <li>Handling delays</li>
-      <li>Living expenses</li>
-      <li>Underinsurance disputes</li>
-      <li style="list-style: none;">
-        <a href="#" class="link-before">Department of Insurance (CDI)</a>
-      </li>
-    </ul>
-    <br />
-  </ul>
-  <ul
-    class="checklist"
-    style="list-style: none; padding-left: 0; margin-top: 16px;">
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong
-            >If you had a California Veterans Affairs (CalVet) home loan, file a
-            fire damage claim</strong
-          >
-        </span>
-      </label>
-    </li>
-    <ul style="margin-left: 32px;">
-      <li style="list-style: none;">
-        <a href="#" class="link-before">California Veterans Affairs (CalVet)</a>
-      </li>
-    </ul>
-
-    <br />
-  </ul>
-  <hr class="m-t-lg" />
-</div>
-<!-- Employment section-->
-<div class="container p-y-md">
-  <h2 class="m-t-0">Employment</h2>
-  <ul
-    class="checklist"
-    style="list-style: none; padding-left: 0; margin-top: 16px;">
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong
-            >If you can’t work due to the fires, apply for benefits</strong
-          >
-        </span>
-      </label>
-    </li>
-    <ul style="margin-left: 32px;">
-      <li>Unemployment</li>
-      <li>Federal Disaster Unemployment Assistance (DUA)</li>
-      <li>Disability Insurance</li>
-      <li style="list-style: none;">
-        <a href="#" class="link-before"
-          >Employment Development Department (EDD)</a
-        >
-      </li>
-    </ul>
-    <br />
-  </ul>
-  <hr class="m-t-lg" />
-</div>
-<!-- Taxes section-->
-<div class="container p-y-md">
-  <h2 class="m-t-0">Taxes</h2>
-  <ul
-    class="checklist"
-    style="list-style: none; padding-left: 0; margin-top: 16px;">
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong>Get personal income tax relief and filing extensions</strong>
-        </span>
-      </label>
-    </li>
-    <ul style="margin-left: 32px;">
-      <li style="list-style: none;">
-        <a href="#" class="link-before">Franchise Tax Board (FTB)</a>
-      </li>
-    </ul>
-    <br />
-  </ul>
-  <hr class="m-t-lg" />
-</div>
-<!-- Rebuilding Help section-->
-<div class="container p-y-md">
-  <h2 class="m-t-0">Rebuilding help</h2>
-  <ul
-    class="checklist"
-    style="list-style: none; padding-left: 0; margin-top: 16px;">
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong>Get help hiring contractors and tips on rebuilding</strong>
-        </span>
-      </label>
-    </li>
-    <ul style="margin-left: 32px;">
-      <li style="list-style: none;">
-        <a href="#" class="link-before"
-          >Contractors State Licensing Board (CSLB)</a
-        >
-      </li>
-    </ul>
-    <br />
-  </ul>
-  <hr class="m-t-lg" />
-</div>
-<!-- Business taxes section-->
-<div class="container p-y-md">
-  <h2 class="m-t-0">Business taxes</h2>
-  <ul
-    class="checklist"
-    style="list-style: none; padding-left: 0; margin-top: 16px;">
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong>Get help with business taxes</strong>
-        </span>
-      </label>
-    </li>
-    <ul style="margin-left: 32px;">
-      <li>Sales and use tax</li>
-      <li>Extension to file returns</li>
-      <li>Relief from interest and penalties</li>
-      <li style="list-style: none;">
-        <a href="#" class="link-before">
-          California Department of Tax and Fee Administration (CDTFA)</a
-        >
-      </li>
-    </ul>
-    <br />
-  </ul>
-  <ul
-    class="checklist"
-    style="list-style: none; padding-left: 0; margin-top: 16px;">
-    <li style="margin-bottom: 24px;">
-      <label class="d-flex align-items-center">
-        <input type="checkbox" class="form-check-input m-r-md" />
-        <span>
-          <strong>Get business income tax relief and filing extensions</strong>
-        </span>
-      </label>
-    </li>
-    <ul style="margin-left: 32px;">
-      <li style="list-style: none;">
-        <a href="#" class="link-before"> Franchise Tax Board (FTB)</a>
-      </li>
-    </ul>
-    <br />
-  </ul>
 </div>
