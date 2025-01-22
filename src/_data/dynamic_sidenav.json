@@ -50,7 +50,8 @@
     },
     {
       "href": "/lafires/returning-to-your-home/",
-      "text": "Return to your home safely"
+      "text": "Return to your home safely",
+      "indent": true
     },
     {
       "href": "/lafires/help-your-business/",
