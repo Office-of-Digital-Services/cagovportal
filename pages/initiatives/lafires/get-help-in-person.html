@@ -12,10 +12,10 @@ breadcrumbparent: 2025 Los Angeles Fires
 <div
   class="section-understated lineart bg-s1"
   style="background: url('/images/get-help-lineart.svg?v2') no-repeat right / auto;">
-  <div class="container p-y-md">
+  <div class="container py-4">
     {%- include "breadcrumbs.html" -%}
-    <h1 class="m-t-0 color-p2-darker">{{title}}</h1>
-    <p class="subtitle color-p2 bold">2025 Los Angeles Fires</p>
+    <h1 class="mt-0 text-primary">{{title}}</h1>
+    <p class="subtitle text-primary fw-bold">2025 Los Angeles Fires</p>
   </div>
 </div>
 
@@ -23,237 +23,172 @@ breadcrumbparent: 2025 Los Angeles Fires
 <div class="container p-y-lg">
   <div class="row">
     <!-- Sidebar Navigation -->
-    <div class="col-lg-3">{%-include "dynamic-sidenav.html"-%}</div>
-
-    <!-- <div class="col-lg-3">
-      <nav aria-label="list navigation" class="side-navigation">
-        <ul>
-          <li>
-            <a href="/lafires/" class="landing back"
-              >Back to 2025 Los Angeles Fires</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </div> -->
+    <div class="col-lg-3">{%- include "dynamic-sidenav.html" -%}</div>
 
     <!-- Main Content Area -->
     <div class="col-lg-9">
-      <!-- Top Section -->
-      <div class="container p-y-md">
-        <!-- Top Section -->
-        <div class="container p-y-md">
-          <p class="lead m-b-md">
-            You can get help and advice in person at a Disaster Recovery Center.
-          </p>
-          <nav class="page-navigation"></nav>
-
-          <h3 class="m-t-lg m-b-md">On this page</h3>
-          <div class="row">
-            <div class="col-md-6">
-              <ul
-                class="font-size-16 color-black"
-                style="padding-left: 1.5rem;">
-                <li>
-                  <a href="#find-the-nearest-center"
-                    >Find the nearest Disaster Recovery Center</a
-                  >
-                </li>
-                <li>
-                  <a href="#services-on-site">Services on site</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <ul
-                start="3"
-                class="font-size-16 color-black"
-                style="padding-left: 1.5rem;">
-                <li>
-                  <a href="#before-you-arrive">Before you arrive</a>
-                </li>
-                <li>
-                  <a href="#when-you-get-here">When you get here</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Add a small bottom margin to reduce the gap -->
-        <div class="container p-y-sm"></div>
-
-        <h2 id="find-the-nearest-center" class="m-t-0">
-          Find the nearest Disaster Recovery Center
-        </h2>
-        <p>
-          Use the map below to locate Disaster Recovery Centers near you. These
-          centers are open to help affected individuals and families.
+      <div class="container py-4">
+        <p class="lead mb-4">
+          You can get help and advice in person at a Disaster Recovery Center.
         </p>
+        <a href="/lafires/plan-your-in-person-visit/" class="btn btn-primary"
+          >Plan your in-person visit</a
+        >
+      </div>
+      <nav class="page-navigation"></nav>
 
-        <!-- Map Placeholder -->
-        <div
-          class="map-placeholder"
-          style="height: 600px; background-color: #eee; border: 1px solid #ccc; text-align: center; line-height: 300px; color: #666;">
-          Map placeholder (integrate map later)
-        </div>
+      <h2 id="find-the-nearest-center" class="mt-4">
+        Find the nearest Disaster Recovery Center
+      </h2>
+      <p>
+        Use the map below to locate Disaster Recovery Centers near you. These
+        centers are open to help affected individuals and families.
+      </p>
 
-        <!-- Disaster Recovery Center Cards -->
-        <div class="container p-y-lg">
-          <div class="row">
-            <!-- UCLA Disaster Recovery Center Card -->
-            <div class="col-md-6 mb-4 d-flex">
-              <div
-                class="brd-gray-200 brd-solid-1 rounded-4 p-a-md w-100 d-flex flex-column">
-                <h3 style="margin-top: 0;" class="h5">
-                  UCLA Disaster Recovery Center
-                </h3>
-                <p>
-                  Address: 123 UCLA Drive, Los Angeles, CA<br />
-                  Hours: 9:00 AM - 5:00 PM<br />
-                  Services: Counseling, Financial Assistance, Housing Support
-                </p>
-                <div class="btn-row d-flex flex-wrap gap-2">
-                  <button class="btn btn-primary">Directions</button>
-                </div>
+      <!-- Map Placeholder -->
+      <div
+        class="map-placeholder d-flex align-items-center justify-content-center"
+        style="height: 600px; background-color: #eee; border: 1px solid #ccc; color: #666;">
+        Map placeholder (integrate map later)
+      </div>
+
+      <!-- Disaster Recovery Center Cards -->
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="border border-secondary rounded-4 p-3">
+              <h3 class="h5 mt-0">UCLA Disaster Recovery Center</h3>
+              <p>
+                Address: 123 UCLA Drive, Los Angeles, CA<br />
+                Hours: 9:00 AM - 5:00 PM<br />
+                Services: Counseling, Financial Assistance, Housing Support
+              </p>
+              <div class="d-flex gap-2">
+                <button class="btn btn-primary">Directions</button>
               </div>
             </div>
+          </div>
 
-            <!-- Pasadena Disaster Recovery Center Card -->
-            <div class="col-md-6 mb-4 d-flex">
-              <div
-                class="brd-gray-200 brd-solid-1 rounded-4 p-a-md w-100 d-flex flex-column align-items-start">
-                <h3 style="margin-top: 0;" class="h5">
-                  Pasadena Disaster Recovery Center
-                </h3>
-                <p>
-                  Address: 456 Pasadena Street, Pasadena, CA<br />
-                  Hours: 8:00 AM - 6:00 PM<br />
-                  Services: Insurance Assistance, Legal Support, Community
-                  Resources
-                </p>
-                <div class="btn-row d-flex flex-wrap gap-2">
-                  <button class="btn btn-primary">Directions</button>
-                </div>
+          <div class="col-md-6 mb-4">
+            <div class="border border-secondary rounded-4 p-3">
+              <h3 class="h5 mt-0">Pasadena Disaster Recovery Center</h3>
+              <p>
+                Address: 456 Pasadena Street, Pasadena, CA<br />
+                Hours: 8:00 AM - 6:00 PM<br />
+                Services: Insurance Assistance, Legal Support, Community
+                Resources
+              </p>
+              <div class="d-flex gap-2">
+                <button class="btn btn-primary">Directions</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="container p-y-md">
-          <!-- Hours and wait times Section -->
+      </div>
 
-          <div class="col-lg-12 d-flex flex-wrap align-items-center">
-            <h2 class="m-0 me-2" style="font-size: 18px;">Hours:</h2>
-            <p class="m-0" style="font-size: 18px;">
-              Open Monday - Sunday, 9 am to 8 pm
+      <div class="container py-4">
+        <div class="row align-items-center">
+          <div
+            class="col-lg-12 d-flex align-items-center justify-content-flex-start">
+            <p class="fs-5">
+              <strong>Hours:</strong> Monday - Sunday, 9 am to 8 pm
             </p>
           </div>
-
-          <div class="column align-items-center">
-            <!-- Chart Section -->
-            <div class="col-lg-8 d-flex justify-content-flex-start">
-              <img
-                src="/images/LA-fires-get-help-in-person-wait-times-placeholder.svg"
-                alt="Bar chart showing the busiest times for Los Angeles Disaster Recovery Centers. 12pm is the busiest time with up to 1 hour wait, and 5pm is less busy with no wait."
-                class="img-fluid"
-                style="margin: 24px 0;" />
-            </div>
-
-            <!-- Description Section -->
-            <div class="col-lg-12" style="margin-top: 24px;">
-              <p>
-                The centers are busiest in the middle of the day. Come earlier
-                or later to avoid waiting.
-              </p>
-              <p style="margin-bottom: 0;">
-                More about these centers:
-                <a
-                  href="https://recovery.lacounty.gov/recovery-centers/"
-                  class="link-primary"
-                  >Los Angeles County Disaster Recovery Centers</a
-                >
-              </p>
-            </div>
+          <div class="col-lg-8 mt-4">
+            <img
+              src="/images/LA-fires-get-help-in-person-wait-times-placeholder.svg"
+              alt="Bar chart showing the busiest times for Los Angeles Disaster Recovery Centers. 12pm is the busiest time with up to 1 hour wait, and 5pm is less busy with no wait."
+              class="img-fluid" />
+          </div>
+          <div class="col-lg-12 mt-4">
+            <p>
+              The centers are busiest in the middle of the day. Come earlier or
+              later to avoid waiting.
+            </p>
+            <p class="mb-0">
+              More about these centers:
+              <a
+                href="https://recovery.lacounty.gov/recovery-centers/"
+                class="link-primary"
+                >Los Angeles County Disaster Recovery Centers</a
+              >
+            </p>
           </div>
         </div>
-
-        <hr class="m-t-lg" />
-
-        <!-- Services on Site Section -->
-        <h2 id="services-on-site" class="m-t-lg">Services on Site</h2>
-        <p>Here are the services you can expect at the centers:</p>
-        <ul class="service-list">
-          <li>
-            <strong>State and local services:</strong> Sign in at the door.
-            Services include:
-            <ul>
-              <li>
-                <strong>Food:</strong> There may be food and beverages at the
-                center. You can also sign up for food benefits, like WIC,
-                CalFresh, or food banks.
-              </li>
-              <li>
-                <strong>Health:</strong> Medical services may be onsite. Learn
-                how to stay healthy during a wildfire.
-              </li>
-              <li><strong>Info on closures:</strong> Schools and government</li>
-              <li>
-                <strong>Replacing personal documents:</strong>
-                <ul>
-                  <li>Birth, death, and marriage certificates</li>
-                  <li>Driver’s licenses and ID cards</li>
-                  <li>Car registrations and titles</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Tax help</strong>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <strong>Federal help from FEMA:</strong> They also have a sign-in
-            process.
-          </li>
-        </ul>
-
-        <!-- Before You Arrive Section -->
-        <h2 id="before-you-arrive" class="m-t-lg">Before you arrive</h2>
-        <p>
-          Use this checklist to
-          <a href="/lafires/plan-your-in-person-visit/"
-            >plan your in-person visit</a
-          >.
-        </p>
-        <p>If you can, bring these items with you:</p>
-        <ul class="checklist">
-          <li>Address of the damaged primary home</li>
-          <li>Insurance coverage information</li>
-          <li>Current phone number and mailing address</li>
-          <li>Bank account information</li>
-        </ul>
-        <p>
-          The centers are busiest in the middle of the day. Come earlier or
-          later to avoid waiting.
-        </p>
-        <!-- When You Get Here Section -->
-        <h2 id="when-you-get-here" class="m-t-lg">When you get here</h2>
-        <ul class="checklist">
-          <li>
-            <strong>Parking:</strong> Free parking available. People may be
-            there to direct you.
-          </li>
-          <li>
-            <strong>Sign in:</strong> Sign in at FEMA tents for federal
-            benefits, or go into the building for state and local services.
-          </li>
-          <li>Restrooms and beverages available.</li>
-          <li>
-            Use the
-            <a href="/lafires/plan-your-in-person-visit/">checklist</a>
-            to help you find the services and tables you need.
-          </li>
-        </ul>
       </div>
+
+      <hr class="mt-5" />
+
+      <!-- Services on Site Section -->
+      <h2 id="services-on-site" class="mt-5">Services on Site</h2>
+      <p>Here are the services you can expect at the centers:</p>
+      <ul class="list-unstyled">
+        <li>
+          <h3>State and local services:</h3>
+          <p>Sign in at the door. Services include:</p>
+          <ul class="fw-bold fs-5">
+            <li>Food and food benefits</li>
+            <li>Health services and advice</li>
+            <li>Unemployment</li>
+            <li>Disability benefits</li>
+            <li>Replacing personal documents</li>
+            <li>Tips for hiring contractors</li>
+            <li>Help with insurance claims</li>
+            <li>Tax help and relief</li>
+          </ul>
+        </li>
+      </ul>
+
+      <hr class="mt-5" />
+
+      <!-- Federal services section -->
+      <h2 id="federal-services" class="mt-5">Federal services</h2>
+      <p>Sign in at the FEMA tents. Services include:</p>
+      <p>If you can, bring these items with you:</p>
+      <ul class="fw-bold fs-5">
+        <li>Housing</li>
+        <li>Home Repairs</li>
+        <li>Legal Services</li>
+      </ul>
+
+      <hr class="mt-5" />
+
+      <!-- Before you arrive section -->
+      <h2 id="Before-you-arrive" class="mt-5">Before you arrive</h2>
+      <p>
+        Use this checklist to
+        <a href="/lafires/plan-your-in-person-visit/"
+          >plan your in-person visit.</a
+        >
+      </p>
+
+      <ul class="fs-5">
+        <li>Address of the damaged primary home</li>
+        <li>Insurance coverage information</li>
+        <li>Current phone number and mailing address</li>
+        <li>Bank account information</li>
+      </ul>
+
+      <!-- When you get here section -->
+      <h2 id="When-you-get-here" class="mt-5">When you get here</h2>
+      <ul class="fs-5">
+        <li>
+          <strong>Parking: </strong>Free parking available. People may be there
+          to direct you.
+        </li>
+        <li>
+          <strong>Sign in: </strong>Sign in at FEMA tents for federal benefits,
+          or go into the building for state and local services.
+        </li>
+        <li>Restrooms and beverages available.</li>
+        <li>
+          Use the
+          <a href="/lafires/plan-your-in-person-visit/"
+            >Plan your in-person visit</a
+          >
+          to help you find the services you need.
+        </li>
+      </ul>
     </div>
   </div>
 </div>
