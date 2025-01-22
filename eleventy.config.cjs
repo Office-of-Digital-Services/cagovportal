@@ -5,6 +5,8 @@ const MarkdownIt = require("markdown-it");
 const postcss = require("postcss");
 const postcssNested = require("postcss-nested");
 const { DateTime } = require("luxon");
+const fs = require("node:fs");
+const path = require("node:path");
 
 // canonical domain
 const domain = "https://www.ca.gov";
@@ -193,6 +195,37 @@ module.exports = function (
     "firstDayOfMonth",
     () => `${new Date().toISOString().substring(0, 8)}01`
   );
+
+  // After build hook to create an XML sitemap for PDF files
+  eleventyConfig.on("afterBuild", () => {
+    const pdfDirs = [
+      path.join(__dirname, "_site", "images"),
+      path.join(__dirname, "_site", "docs")
+    ];
+    const outputFilePath = path.join(__dirname, "_site", "sitemaps/pdf.xml");
+
+    let sitemapContent = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    sitemapContent +=
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+
+    pdfDirs.forEach(dir => {
+      fs.readdir(dir, (err, files) => {
+        if (err) throw err;
+
+        const pdfFiles = files.filter(file => path.extname(file) === ".pdf");
+        pdfFiles.forEach(file => {
+          const urlPath = path.join(
+            dir.replace(path.join(__dirname, "_site"), ""),
+            file
+          );
+          sitemapContent += `  <url>\n    <loc>${domain}${encodeURI(urlPath)}</loc>\n    <changefreq>never</changefreq>\n  </url>\n`;
+        });
+
+        // Write the sitemap content to the file
+        fs.writeFileSync(outputFilePath, `${sitemapContent}</urlset>`);
+      });
+    });
+  });
 
   //Start with default config, easier to configure 11ty later
   const config = defaultConfig(eleventyConfig);

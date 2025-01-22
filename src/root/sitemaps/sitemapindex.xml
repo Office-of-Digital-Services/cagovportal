@@ -8,4 +8,7 @@
   <sitemap>
     <loc>https://www.ca.gov/sitemaps/service01.xml</loc>
   </sitemap>
+  <sitemap>
+    <loc>https://www.ca.gov/sitemaps/pdf.xml</loc>
+  </sitemap>
 </sitemapindex>
