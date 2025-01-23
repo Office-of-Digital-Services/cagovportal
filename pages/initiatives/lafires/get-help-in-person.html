@@ -11,11 +11,11 @@ breadcrumbparent: 2025 Los Angeles Fires
 
 <div
   class="section-understated lineart bg-s1"
-  style="background: url('/images/get-help-lineart.svg?v2') no-repeat right / auto;">
-  <div class="container py-4">
+  style="background: url('/images/topic2-lineart.svg?v2') no-repeat right / auto;">
+  <div class="container p-y-md">
     {%- include "breadcrumbs.html" -%}
-    <h1 class="mt-0 text-primary">{{title}}</h1>
-    <p class="subtitle text-primary fw-bold">2025 Los Angeles Fires</p>
+    <h1 class="m-t-0 m-b-0 color-p2-darker">{{title}}</h1>
+    <p class="subtitle color-p2 bold m-b-md">2025 Los Angeles Fires</p>
   </div>
 </div>
 
@@ -27,15 +27,16 @@ breadcrumbparent: 2025 Los Angeles Fires
 
     <!-- Main Content Area -->
     <div class="col-lg-9">
-      <div class="container py-4">
-        <p class="lead mb-4">
-          You can get help and advice in person at a Disaster Recovery Center.
-        </p>
-        <a href="/lafires/plan-your-in-person-visit/" class="btn btn-primary"
-          >Plan your in-person visit</a
-        >
-      </div>
-      <nav class="page-navigation"></nav>
+      <p class="lead mb-4">
+        You can get help and advice in person at a Disaster Recovery Center.
+      </p>
+      <a
+        href="/lafires/plan-your-in-person-visit/"
+        class="btn btn-lg btn-primary rounded-5"
+        >Plan your in-person visit</a
+      >
+
+      <nav class="page-navigation m-t-lg"></nav>
 
       <h2 id="find-the-nearest-center" class="mt-4">
         Find the nearest Disaster Recovery Center
@@ -45,48 +46,51 @@ breadcrumbparent: 2025 Los Angeles Fires
         centers are open to help affected individuals and families.
       </p>
 
-      <!-- Map Placeholder -->
-      <div
-        class="map-placeholder d-flex align-items-center justify-content-center"
-        style="height: 600px; background-color: #eee; border: 1px solid #ccc; color: #666;">
-        Map placeholder (integrate map later)
-      </div>
-
       <!-- Disaster Recovery Center Cards -->
-      <div class="container py-5">
-        <div class="row">
-          <div class="col-md-6 mb-4">
-            <div class="border border-secondary rounded-4 p-3">
-              <h3 class="h5 mt-0">UCLA Disaster Recovery Center</h3>
-              <p>
-                Address: 123 UCLA Drive, Los Angeles, CA<br />
-                Hours: 9:00 AM - 5:00 PM<br />
-                Services: Counseling, Financial Assistance, Housing Support
-              </p>
-              <div class="d-flex gap-2">
-                <button class="btn btn-primary">Directions</button>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-md-6 mb-4">
-            <div class="border border-secondary rounded-4 p-3">
-              <h3 class="h5 mt-0">Pasadena Disaster Recovery Center</h3>
-              <p>
-                Address: 456 Pasadena Street, Pasadena, CA<br />
-                Hours: 8:00 AM - 6:00 PM<br />
-                Services: Insurance Assistance, Legal Support, Community
-                Resources
-              </p>
-              <div class="d-flex gap-2">
-                <button class="btn btn-primary">Directions</button>
-              </div>
-            </div>
+      <div class="row">
+        <div class="col-md-6 m-t-md">
+          <div
+            class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
+            <h3 class="h5 m-t-md">UCLA Disaster Recovery Center</h3>
+            <p>
+              Address: 123 UCLA Drive, Los Angeles, CA<br />
+              Hours: 9:00 AM - 5:00 PM<br />
+              Services: Counseling, Financial Assistance, Housing Support
+            </p>
+
+            <a
+              class="btn btn-primary rounded-5 m-y"
+              id="map-link-1"
+              class="maps-link"
+              href="https://maps.google.com/?q=123+UCLA+Drive,+Los+Angeles,+CA+90095"
+              >Directions</a
+            >
+          </div>
+        </div>
+
+        <div class="col-md-6 m-t-md">
+          <div
+            class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
+            <h3 class="h5 m-t-md">Pasadena Disaster Recovery Center</h3>
+            <p>
+              Address: 456 Pasadena Street, Pasadena, CA<br />
+              Hours: 8:00 AM - 6:00 PM<br />
+              Services: Insurance Assistance, Legal Support, Community Resources
+            </p>
+
+            <a
+              class="btn btn-primary rounded-5 m-y"
+              id="map-link-2"
+              class="maps-link"
+              href="https://maps.google.com/?q=456+Pasadena+Street,+Pasadena,+CA+91107"
+              >Directions</a
+            >
           </div>
         </div>
       </div>
 
-      <div class="container py-4">
+      <div class="container py-5">
         <div class="row align-items-center">
           <div
             class="col-lg-12 d-flex align-items-center justify-content-flex-start">
@@ -100,61 +104,53 @@ breadcrumbparent: 2025 Los Angeles Fires
               alt="Bar chart showing the busiest times for Los Angeles Disaster Recovery Centers. 12pm is the busiest time with up to 1 hour wait, and 5pm is less busy with no wait."
               class="img-fluid" />
           </div>
-          <div class="col-lg-12 mt-4">
-            <p>
-              The centers are busiest in the middle of the day. Come earlier or
-              later to avoid waiting.
-            </p>
-            <p class="mb-0">
-              More about these centers:
-              <a
-                href="https://recovery.lacounty.gov/recovery-centers/"
-                class="link-primary"
-                >Los Angeles County Disaster Recovery Centers</a
-              >
-            </p>
-          </div>
         </div>
       </div>
+
+      <p>
+        The centers are busiest in the middle of the day. Come earlier or later
+        to avoid waiting.
+      </p>
+      <p class="mb-0">
+        More about these centers:
+        <a href="https://recovery.lacounty.gov/recovery-centers/"
+          >Los Angeles County Disaster Recovery Centers</a
+        >
+      </p>
 
       <hr class="mt-5" />
 
       <!-- Services on Site Section -->
-      <h2 id="services-on-site" class="mt-5">Services on Site</h2>
+      <h2>Services on Site</h2>
       <p>Here are the services you can expect at the centers:</p>
-      <ul class="list-unstyled">
-        <li>
-          <h3>State and local services:</h3>
-          <p>Sign in at the door. Services include:</p>
-          <ul class="fw-bold fs-5">
-            <li>Food and food benefits</li>
-            <li>Health services and advice</li>
-            <li>Unemployment</li>
-            <li>Disability benefits</li>
-            <li>Replacing personal documents</li>
-            <li>Tips for hiring contractors</li>
-            <li>Help with insurance claims</li>
-            <li>Tax help and relief</li>
-          </ul>
-        </li>
+
+      <h3>State and local services:</h3>
+      <p>Sign in at the door. Services include:</p>
+      <ul class="fw-bold fs-5">
+        <li class="m-t">Food and food benefits</li>
+        <li class="m-t">Health services and advice</li>
+        <li class="m-t">Unemployment</li>
+        <li class="m-t">Disability benefits</li>
+        <li class="m-t">Replacing personal documents</li>
+        <li class="m-t">Tips for hiring contractors</li>
+        <li class="m-t">Help with insurance claims</li>
+        <li class="m-t">Tax help and relief</li>
       </ul>
 
-      <hr class="mt-5" />
-
       <!-- Federal services section -->
-      <h2 id="federal-services" class="mt-5">Federal services</h2>
+      <h3>Federal services</h3>
       <p>Sign in at the FEMA tents. Services include:</p>
       <p>If you can, bring these items with you:</p>
       <ul class="fw-bold fs-5">
-        <li>Housing</li>
-        <li>Home Repairs</li>
-        <li>Legal Services</li>
+        <li class="m-t">Housing</li>
+        <li class="m-t">Home Repairs</li>
+        <li class="m-t">Legal Services</li>
       </ul>
 
       <hr class="mt-5" />
 
       <!-- Before you arrive section -->
-      <h2 id="Before-you-arrive" class="mt-5">Before you arrive</h2>
+      <h2>Before you arrive</h2>
       <p>
         Use this checklist to
         <a href="/lafires/plan-your-in-person-visit/"
@@ -162,26 +158,26 @@ breadcrumbparent: 2025 Los Angeles Fires
         >
       </p>
 
-      <ul class="fs-5">
-        <li>Address of the damaged primary home</li>
-        <li>Insurance coverage information</li>
-        <li>Current phone number and mailing address</li>
-        <li>Bank account information</li>
+      <ul>
+        <li class="m-t">Address of the damaged primary home</li>
+        <li class="m-t">Insurance coverage information</li>
+        <li class="m-t">Current phone number and mailing address</li>
+        <li class="m-t">Bank account information</li>
       </ul>
 
       <!-- When you get here section -->
-      <h2 id="When-you-get-here" class="mt-5">When you get here</h2>
-      <ul class="fs-5">
-        <li>
+      <h2>When you get here</h2>
+      <ul>
+        <li class="m-t">
           <strong>Parking: </strong>Free parking available. People may be there
           to direct you.
         </li>
-        <li>
+        <li class="m-t">
           <strong>Sign in: </strong>Sign in at FEMA tents for federal benefits,
           or go into the building for state and local services.
         </li>
-        <li>Restrooms and beverages available.</li>
-        <li>
+        <li class="m-t">Restrooms and beverages available.</li>
+        <li class="m-t">
           Use the
           <a href="/lafires/plan-your-in-person-visit/"
             >Plan your in-person visit</a
@@ -192,3 +188,49 @@ breadcrumbparent: 2025 Los Angeles Fires
     </div>
   </div>
 </div>
+
+<script>
+  document.querySelector('#map-link-1').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const address = '10850 West Pico Blvd, Los Angeles, CA 90064';
+    const encodedAddress = encodeURIComponent(address);
+
+    // Detect iOS
+    if (navigator.platform.indexOf('iPhone') !== -1 ||
+        navigator.platform.indexOf('iPad') !== -1 ||
+        navigator.platform.indexOf('iPod') !== -1) {
+        window.location.href = `maps://maps.apple.com/?q=${encodedAddress}`;
+    }
+    // Detect Android
+    else if (/Android/.test(navigator.userAgent)) {
+        window.location.href = `geo:0,0?q=${encodedAddress}`;
+    }
+    // Default to Google Maps in browser
+    else {
+        window.location.href = `https://maps.google.com/?q=${encodedAddress}`;
+    }
+  });
+
+  document.querySelector('#map-link-2').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const address = '3035 E. Foothill Blvd, Pasadena, CA 91107';
+    const encodedAddress = encodeURIComponent(address);
+
+    // Detect iOS
+    if (navigator.platform.indexOf('iPhone') !== -1 ||
+        navigator.platform.indexOf('iPad') !== -1 ||
+        navigator.platform.indexOf('iPod') !== -1) {
+        window.location.href = `maps://maps.apple.com/?q=${encodedAddress}`;
+    }
+    // Detect Android
+    else if (/Android/.test(navigator.userAgent)) {
+        window.location.href = `geo:0,0?q=${encodedAddress}`;
+    }
+    // Default to Google Maps in browser
+    else {
+        window.location.href = `https://maps.google.com/?q=${encodedAddress}`;
+    }
+  });
+</script>
