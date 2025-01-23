@@ -71,6 +71,7 @@ description: Use this checklist to find the resources you need at a Disaster Rec
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
+          name="check1"
           id="check1" />
         <label class="form-check-label cursor-pointer" for="check1"
           ><span class="bold"
@@ -93,6 +94,7 @@ description: Use this checklist to find the resources you need at a Disaster Rec
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
+          name="check2"
           id="check2" />
         <label class="form-check-label cursor-pointer" for="check2"
           ><span class="bold"
@@ -112,6 +114,7 @@ description: Use this checklist to find the resources you need at a Disaster Rec
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
+          name="check3"
           id="check3" />
         <label class="form-check-label cursor-pointer" for="check3"
           ><span class="bold">Find out what’s open and closed</span>
@@ -129,6 +132,7 @@ description: Use this checklist to find the resources you need at a Disaster Rec
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
+          name="check4"
           id="check4" />
         <label class="form-check-label cursor-pointer" for="check4"
           ><span class="bold">Apply for money and other services.</span>
@@ -149,6 +153,7 @@ description: Use this checklist to find the resources you need at a Disaster Rec
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
+          name="check5"
           id="check5" />
         <label class="form-check-label cursor-pointer" for="check5"
           ><span class="bold"
@@ -168,6 +173,7 @@ description: Use this checklist to find the resources you need at a Disaster Rec
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
+          name="check6"
           id="check6" />
         <label class="form-check-label cursor-pointer" for="check6"
           ><span class="bold"
@@ -186,6 +192,7 @@ description: Use this checklist to find the resources you need at a Disaster Rec
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
+          name="check7"
           id="check7" />
         <label class="form-check-label cursor-pointer" for="check7"
           ><span class="bold">Replace your identity and car documents </span>
@@ -204,6 +211,7 @@ description: Use this checklist to find the resources you need at a Disaster Rec
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
+          name="check8"
           id="check8" />
         <label class="form-check-label cursor-pointer" for="check8"
           ><span class="bold"
@@ -225,6 +233,7 @@ description: Use this checklist to find the resources you need at a Disaster Rec
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
+          name="check9"
           id="check9" />
         <label class="form-check-label cursor-pointer" for="check9"
           ><span class="bold">Replace income tax documents</span><br />
@@ -243,6 +252,7 @@ description: Use this checklist to find the resources you need at a Disaster Rec
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
+          name="check10"
           id="check10" />
         <label class="form-check-label cursor-pointer" for="check10"
           ><span class="bold">Get help with insurance claims</span>
@@ -262,6 +272,7 @@ description: Use this checklist to find the resources you need at a Disaster Rec
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
+          name="check11"
           id="check11" />
         <label class="form-check-label cursor-pointer" for="check11"
           ><span class="bold"
@@ -281,6 +292,7 @@ description: Use this checklist to find the resources you need at a Disaster Rec
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
+          name="check12"
           id="check12" />
         <label class="form-check-label cursor-pointer" for="check12"
           ><span class="bold"
@@ -304,6 +316,7 @@ description: Use this checklist to find the resources you need at a Disaster Rec
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
+          name="check13"
           id="check13" />
         <label class="form-check-label cursor-pointer" for="check13"
           ><span class="bold"
@@ -323,6 +336,7 @@ description: Use this checklist to find the resources you need at a Disaster Rec
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
+          name="check14"
           id="check14" />
         <label class="form-check-label  cursor-pointer" for="check14"
           ><span class="bold"
@@ -341,6 +355,7 @@ description: Use this checklist to find the resources you need at a Disaster Rec
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
+          name="check15"
           id="check15" />
         <label class="form-check-label  cursor-pointer" for="check15"
           ><span class="bold">Get help with business taxes</span>
@@ -361,6 +376,7 @@ description: Use this checklist to find the resources you need at a Disaster Rec
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
+          name="check16"
           id="check16" />
         <label class="form-check-label cursor-pointer" for="check16"
           ><span class="bold"
@@ -392,5 +408,30 @@ description: Use this checklist to find the resources you need at a Disaster Rec
       console.error('Share failed:', err.message);
     });
     e.preventDefault();
+  });
+
+
+  //Checkboxes cookies
+  for (let i = 1; i <= 16; i++) {
+    let checkbox = document.getElementById(`check${i}`);
+    checkbox.addEventListener("change", function(e) {
+      if (this.checked) {
+        document.cookie = `check${i}=true; path=/`;
+      } else {
+        document.cookie = `check${i}=false; path=/`;
+      }
+     // console.log(`check${i}`, this.checked);
+    });
+  }
+
+  // load handler -- check cookie and set checkbox
+  document.addEventListener("DOMContentLoaded", function() {
+    for (let i = 1; i <= 16; i++) {
+      let checkbox = document.getElementById(`check${i}`);
+      let cookie = document.cookie.split("; ").find(row => row.startsWith(`check${i}=`));
+      if (cookie) {
+        checkbox.checked = cookie.split("=")[1] === "true";
+      }
+    }
   });
 </script>
