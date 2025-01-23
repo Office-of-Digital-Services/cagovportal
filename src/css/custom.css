@@ -267,12 +267,6 @@ h2,
   background-color: var(--color-p2-darker) !important;
 }
 
-.no-icon {
-  > span.external-link-icon {
-    display: none;
-  }
-}
-
 /* Feedback */
 cagov-feedback > section > div.feedback-form {
   padding: 0;
@@ -581,8 +575,4 @@ h2.header-bg-primary {
 
 :root {
   --bs-border-radius: 10px;
-}
-
-nav.page-navigation > ul > li:last-child {
-  display: none;
 }
