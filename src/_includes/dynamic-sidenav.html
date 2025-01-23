@@ -10,11 +10,11 @@ dynamic_sidenavid: service
 -#} {%-set sidenav = dynamic_sidenav[dynamic_sidenavid]-%}
 
 <!-- Side navigation -->
-<nav class="side-navigation">
+<nav class="side-navigation sticky-6">
   <a href="javascript:;" aria-hidden="true" class="d-none">{{title}}</a>
   <ul class="list-navigation">
     {%- for link in sidenav %} {%- set href = link.href -%} {%- set active =
-    href === page.url -%}
+    href === page.url -%} {% if not link.indent %}
     <li>
       <a
         href="{{-href-}}"
@@ -27,6 +27,23 @@ dynamic_sidenavid: service
         {{-link.text | safe-}}
       </a>
     </li>
-    {%- endfor %}
+    {% else %}
+    <li>
+      <ul>
+        <li>
+          <a
+            href="{{-href-}}"
+            {%-if
+            active%}
+            class="active landing"
+            aria-current="page"
+            tabindex="-1"
+            {%-endif-%}>
+            {{-link.text | safe-}}
+          </a>
+        </li>
+      </ul>
+    </li>
+    {% endif %} {%- endfor %}
   </ul>
 </nav>
