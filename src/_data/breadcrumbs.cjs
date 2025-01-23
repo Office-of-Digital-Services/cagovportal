@@ -22,7 +22,13 @@ const data = [
       },
       {
         key: "2025 Los Angeles Fires",
-        href: "/lafires/"
+        href: "/lafires/",
+        children: [
+          {
+            key: "Get help in person",
+            href: "/lafires/get-help-in-person/"
+          }
+        ]
       }
     ]
   }
