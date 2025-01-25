@@ -9,15 +9,20 @@ breadcrumbparent: 2025 Los Angeles Fires
 socialimage: https://www.ca.gov/images/lafires/la-fires-help.png
 socialimagealt: Five hands converging in the center of the image
 description: Learn when you can return home and what you need to start recovering.
+keywords: LA, Los Angeles, fires, wildfires
 ---
 
 <div
   class="section-understated lineart bg-s1"
-  style="background: url('/images/get-help-lineart.svg?v2') no-repeat right / auto;">
+  style="background: url('/images/recovery-lineart.svg?v2') no-repeat right / auto;">
   <div class="container p-y-md">
     {%- include "breadcrumbs.html" -%}
-    <h1 class="m-t-0 m-b-0 color-p2-darker">{{title}}</h1>
-    <p class="subtitle color-p2 bold m-b-md">2025 Los Angeles Fires</p>
+    <h1 class="m-t-0 m-b-0 color-p2-darker line-height-1em">
+      {{title}}<br />
+      <span class="subtitle color-p2-darker bold m-b-md"
+        >2025 Los Angeles Fires</span
+      >
+    </h1>
   </div>
 </div>
 
@@ -31,9 +36,11 @@ description: Learn when you can return home and what you need to start recoverin
 
       <nav class="page-navigation"></nav>
 
-      <div class="bg-gray-100 p-a-md m-t-sm">
-        <p class="color-p2-darker m-b-0">
+      <div class="bg-gray-100 p-a-md m-t-sm d-flex align-items-top">
+        <div>
           <span class="ca-gov-icon-info-line m-r" aria-hidden="true"></span>
+        </div>
+        <p class="color-p2-darker m-b-0">
           If you need to replace documents like IDs, do that first. See
           <a href="/lafires/get-help-online/#Replacing-your-personal-documents"
             >Replacing your personal documents</a
@@ -45,12 +52,15 @@ description: Learn when you can return home and what you need to start recoverin
       <h3>What you need to know</h3>
       <p>
         Local, state, and federal teams are assessing neighborhoods every day.
-        Find out when you can
-        <a href="/lafires/return-to-your-home-safely/"
-          >return to your home safely</a
-        >.
       </p>
 
+      <p class="m-t-md">
+        <a
+          href="/lafires/return-to-your-home-safely/"
+          class="btn btn-primary rounded-5 btn-lg"
+          >Learn how to return to your home safely</a
+        >
+      </p>
 
       <h2 class="m-t-80">Filing insurance claims</h2>
       <p>If you have insurance, file a claim as soon as possible.</p>
@@ -65,9 +75,7 @@ description: Learn when you can return home and what you need to start recoverin
                 >California protects you from losing your home insurance
               </a>
             </h3>
-            <p class="text-sm font-size-15 text-left gray-600 m-y-md">
-              by California Department of Insurance (CDI)
-            </p>
+
             <p class="m-b text-left">
               State law protects residents. It prevents insurance companies from
               canceling or not renewing home insurance polices for one year in
@@ -86,27 +94,46 @@ description: Learn when you can return home and what you need to start recoverin
                 >Get help with your claim
               </a>
             </h3>
-            <p class="text-sm font-size-15 text-left gray-600 m-y-md">
-              by California Department of Insurance
-            </p>
+
             <p class="m-b text-left">
-              CDI gives help in many
+              California Department of Insurance (CDI) gives help in many
               languages.
             </p>
             <ul class="m-b-0">
               <li class="m-t">
-                <a href="https://www.insurance.ca.gov/01-consumers/140-catastrophes/WildfireResources.cfm">Resources to help recent wildfire victims</a>
+                <a
+                  href="https://www.insurance.ca.gov/01-consumers/140-catastrophes/WildfireResources.cfm"
+                  >Resources to help recent wildfire victims</a
+                >
               </li>
-              <li class="m-t"><a href="https://www.insurance.ca.gov/01-consumers/140-catastrophes/TopTenTips_WildfireClaimants.cfm">Top ten tips for wildfire claims</a></li>
-              <li class="m-t"><a href="https://www2.cslb.ca.gov/Consumer.aspx">Working with contractors</a></li>
-              <li class="m-t"><a href="https://www.calvet.ca.gov/HomeLoans/Pages/How-to-submit-a-claim.aspx">Help with CalVet claims</a></li>
-              <li class="m-t">On the phone: Call 1-800-927-4357 (HELP) or TTY: 1-800-482-4833 for assistance</a></li>
-              <li class="m-t">In-person insurance workshops will be offered on the weekend of January 25</a></li>
+              <li class="m-t">
+                <a
+                  href="https://www.insurance.ca.gov/01-consumers/140-catastrophes/TopTenTips_WildfireClaimants.cfm"
+                  >Top ten tips for wildfire claims</a
+                >
+              </li>
+              <li class="m-t">
+                <a href="https://www2.cslb.ca.gov/Consumer.aspx"
+                  >Working with contractors</a
+                >
+              </li>
+              <li class="m-t">
+                <a
+                  href="https://www.calvet.ca.gov/HomeLoans/Pages/How-to-submit-a-claim.aspx"
+                  >Help with CalVet claims</a
+                >
+              </li>
+              <li class="m-t">
+                On the phone: Call 1-800-927-4357 (HELP) or TTY: 1-800-482-4833
+                for assistance
+              </li>
+              <li class="m-t">
+                In-person insurance workshops will be offered on the weekend of
+                January 25
+              </li>
             </ul>
           </div>
         </div>
-
-
       </div>
 
       <h2 class="m-t-80">Employment</h2>
@@ -115,9 +142,7 @@ description: Learn when you can return home and what you need to start recoverin
         <div class="col-lg-12 m-t-md">
           <div class="bg-white p-x-md p-b-md brd-solid-1 brd-gray-200 rounded">
             <h3 class="h5 m-t-md m-b">If you can’t work</h3>
-            <p class="text-sm font-size-15 text-left gray-600 m-y-md">
-              by California Employment Development Department
-            </p>
+
             <p>
               You may not be able to work for many reasons. Here’s how to
               receive wage replacement during this time.
@@ -144,33 +169,20 @@ description: Learn when you can return home and what you need to start recoverin
                 <a href="https://edd.ca.gov/en/disability/paid-family-leave/"
                   >Paid Family Leave</a
                 >
-                <br />
-                Apply if you need time off to care for family and can’t work.
               </li>
             </ul>
-
-            <p>
-              Learn about
-              <a
-                href="https://edd.ca.gov/en/unemployment/Disaster_Unemployment_Assistance/"
-                >Disaster Unemployment Assistance</a
-              >
-              for the LA Fires.
-            </p>
           </div>
         </div>
 
         <div class="col-lg-12 m-t-md">
           <div class="bg-white p-x-md p-b-md brd-solid-1 brd-gray-200 rounded">
             <h3 class="h5 m-t-md m-b">If you’re looking for new work</h3>
-            <p class="text-sm font-size-15 text-left gray-600 m-y-md">
-              by California Employment Development Department
-            </p>
+
             <p>
               We have resources to assist you in finding employment after the
               wildfire. You may qualify for job placement services, training
-              programs, or other help. The Employment Development
-              Department (EDD) offers this support.
+              programs, or other help. The Employment Development Department
+              (EDD) offers this support.
             </p>
 
             <ul>
@@ -190,7 +202,6 @@ description: Learn when you can return home and what you need to start recoverin
         </div>
       </div>
 
-
       <h2 class="m-t-80">Taxes for individuals</h2>
 
       <div class="row">
@@ -202,12 +213,11 @@ description: Learn when you can return home and what you need to start recoverin
               by Franchise Tax Board
             </p>
             <p>
-              People in Los Angeles County affected by the fires may qualify for
-              a
+              People in Los Angeles County affected by the fires may
               <a
                 href="https://www.ftb.ca.gov/file/when-to-file/los-angeles-county-fires.html"
-                >postponement to file, and pay taxes until October 15, 2025</a
-              >.
+                >postpone filing and paying taxes</a
+              >. Their new deadline is October 15, 2025.
             </p>
           </div>
         </div>
@@ -224,8 +234,8 @@ description: Learn when you can return home and what you need to start recoverin
                 href="https://www.gov.ca.gov/2025/01/16/governor-newsom-extends-state-property-tax-deadlines-for-la-firestorm-communities-until-april-2026/"
                 >extended the property tax deadline</a
               >
-              for people in communities affected by the LA fires. You can apply
-              for property tax reassessment with the
+              for people affected by the LA fires. You can apply for property
+              tax reassessment with the
               <a href="https://assessor.lacounty.gov/tax-relief/disaster-relief"
                 >Los Angeles County Assessor</a
               >.
@@ -237,5 +247,3 @@ description: Learn when you can return home and what you need to start recoverin
     <!--END MAIN COL CONTENT-->
   </div>
 </div>
-
-

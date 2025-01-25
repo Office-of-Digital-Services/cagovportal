@@ -9,15 +9,20 @@ breadcrumbparent: 2025 Los Angeles Fires
 socialimage: https://www.ca.gov/images/lafires/la-fires-help.png
 socialimagealt: Five hands converging in the center of the image
 description: Find support and assistance for local business recovery.
+keywords: LA, Los Angeles, fires, wildfires
 ---
 
 <div
   class="section-understated lineart bg-s1"
-  style="background: url('/images/get-help-lineart.svg?v2') no-repeat right / auto;">
+  style="background: url('/images/topic9-lineart.svg?v2') no-repeat right / auto;">
   <div class="container p-y-md">
     {%- include "breadcrumbs.html" -%}
-    <h1 class="m-t-0 m-b-0 color-p2-darker">{{title}}</h1>
-    <p class="subtitle color-p2 bold m-b-md">2025 Los Angeles Fires</p>
+    <h1 class="m-t-0 m-b-0 color-p2-darker line-height-1em">
+      {{title}}<br />
+      <span class="subtitle color-p2-darker bold m-b-md"
+        >2025 Los Angeles Fires</span
+      >
+    </h1>
   </div>
 </div>
 
@@ -31,7 +36,91 @@ description: Find support and assistance for local business recovery.
 
       <nav class="page-navigation"></nav>
 
-      <h2 class="m-b-0">Support for businesses</h2>
+      <h2 class="m-b-0">Find the nearest Business Recovery Center</h2>
+      <p>Businesses can get in-person help.</p>
+
+      <div class="row">
+        <div class="col-lg-6 m-t-md">
+          <div
+            class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
+            <h3 class="h5 m-t-md m-b">West Hollywood Chamber of Commerce</h3>
+
+            <p class="m-b text-left">
+              8272 Santa Monica Blvd.<br />West Hollywood, CA 90046
+            </p>
+
+            <p class="m-b text-left">
+              <strong>Hours open:</strong> Thursday - Saturday, 9 am. to 5:30 pm
+            </p>
+
+            <a
+              class="btn btn-primary rounded-5 m-y"
+              id="map-link-1"
+              class="maps-link"
+              href="https://maps.google.com/?q=8272+Santa+Monica+Blvd,+West+Hollywood,+CA+90046"
+              >Directions<span class="sr-only">
+                West Hollywood Chamber of Commerce</span
+              ></a
+            >
+          </div>
+        </div>
+
+        <div class="col-lg-6 m-t-md">
+          <div
+            class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
+            <h3 class="h5 m-t-md m-b">Women’s Business Center</h3>
+
+            <p class="m-b text-left">
+              18700 Sherman Way, Suite # 112<br />
+              Reseda, CA 91335
+            </p>
+
+            <p class="m-b text-left">
+              <strong>Hours open:</strong> Monday - Wednesday, 8:30 am. to 5:30
+              pm
+            </p>
+            <p><strong>Parking:</strong> Back of building on Yolanda Ave.</p>
+
+            <a
+              class="btn btn-primary rounded-5 m-y"
+              id="map-link-2"
+              class="maps-link"
+              href="https://maps.google.com/?q=18700+Sherman+Way,+Reseda,+CA+91335"
+              >Directions<span class="sr-only">
+                Women’s Business Center</span
+              ></a
+            >
+          </div>
+        </div>
+
+        <div class="col-lg-6 m-t-md">
+          <div
+            class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
+            <h3 class="h5 m-t-md m-b">Santa Monica Chamber of Commerce</h3>
+
+            <p class="m-b text-left">
+              2525 Main Street, Suite #103<br />
+              Santa Monica, CA 90405
+            </p>
+
+            <p class="m-b text-left">
+              <strong>Hours open:</strong> Monday - Wednesday, 9 am. to 5 pm
+            </p>
+
+            <a
+              class="btn btn-primary rounded-5 m-y"
+              id="map-link-2"
+              class="maps-link"
+              href="https://maps.google.com/?q=2525+Main+Street,+Santa+Monica,+CA+90405"
+              >Directions<span class="sr-only">
+                Women’s Business Center</span
+              ></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <h2>Support for businesses</h2>
 
       <div class="row">
         <div class="col-lg-6 m-t-md">
@@ -71,6 +160,27 @@ description: Find support and assistance for local business recovery.
               EDD offers services to support employers impacted by disasters.
               This includes disaster relief payments, extensions for payments,
               and payroll reports.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-6 m-t-md">
+          <div
+            class="bg-white text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
+            <h3 class="h5 m-t-md m-b">
+              <a
+                href="https://outsmartdisaster.calosba.ca.gov/support-and-resources-for-los-angeles-area-wildfire-recovery/"
+                class="color-p2 text-left d-block"
+                >Resources and steps for business recovery</a
+              >
+            </h3>
+            <p class="text-sm font-size-15 text-left gray-600 m-y-md">
+              by California Office of the Small Business Advocate (CalOSBA)
+            </p>
+            <p class="m-b text-left">
+              CalOSBA offers resources and support for businesses and workers
+              impacted by the wildfires. This includes financial help, recovery
+              programs, and workforce support.
             </p>
           </div>
         </div>
@@ -128,3 +238,34 @@ description: Find support and assistance for local business recovery.
     </div>
   </div>
 </div>
+
+<script>
+  const locations = [
+    { id: 'map-link-1', address: '8272 Santa Monica Blvd, West Hollywood, CA 90046' },
+    { id: 'map-link-2', address: '18700 Sherman Way, Reseda, CA 91335' },
+    { id: 'map-link-3', address: '2525 Main Street, Santa Monica, CA 90405' }
+  ];
+
+  locations.forEach(location => {
+    document.querySelector(`#${location.id}`).addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const encodedAddress = encodeURIComponent(location.address);
+
+      // Detect iOS
+      if (navigator.platform.indexOf('iPhone') !== -1 ||
+          navigator.platform.indexOf('iPad') !== -1 ||
+          navigator.platform.indexOf('iPod') !== -1) {
+          window.location.href = `maps://maps.apple.com/?q=${encodedAddress}`;
+      }
+      // Detect Android
+      else if (/Android/.test(navigator.userAgent)) {
+          window.location.href = `geo:0,0?q=${encodedAddress}`;
+      }
+      // Default to Google Maps in browser
+      else {
+          window.location.href = `https://maps.google.com/?q=${encodedAddress}`;
+      }
+    });
+  });
+</script>

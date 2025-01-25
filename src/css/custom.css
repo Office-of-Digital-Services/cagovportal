@@ -273,6 +273,23 @@ h2,
   }
 }
 
+.link-grid:focus,
+a:focus {
+  outline: solid 2px #0f90e6 !important;
+}
+
+.section-primary,
+.section-overstated,
+.section-impact {
+  a:focus {
+    outline: 2px solid #77c5f9 !important;
+  }
+}
+
+.color-p2-darker {
+  color: var(--color-p2-darker, #214a68) !important;
+}
+
 /* Feedback */
 cagov-feedback > section > div.feedback-form {
   padding: 0;
@@ -585,4 +602,23 @@ h2.header-bg-primary {
 
 nav.page-navigation > ul > li:last-child {
   display: none;
+}
+
+/* breadcrumbs */
+.breadcrumbs ul,
+.breadcrumbs ol,
+.page-navigation ul li {
+  font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+  .breadcrumbs ul,
+  .breadcrumbs ol,
+  .page-navigation ul li {
+    font-size: calc(0.92rem + 0.1vw);
+  }
+}
+
+.search-container #Search .gsc-search-button {
+  color: #fff;
 }
