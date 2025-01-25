@@ -9,6 +9,7 @@ breadcrumbparent: 2025 Los Angeles Fires
 socialimage: https://www.ca.gov/images/lafires/la-fires-help.png
 socialimagealt: Five hands converging in the center of the image
 description: You can get help and advice in person at a Disaster Recovery Center.
+keywords: LA, Los Angeles, fires, wildfires
 ---
 
 <div
@@ -16,8 +17,12 @@ description: You can get help and advice in person at a Disaster Recovery Center
   style="background: url('/images/topic2-lineart.svg?v3vehrb') no-repeat right / auto;">
   <div class="container p-y-md">
     {%- include "breadcrumbs.html" -%}
-    <h1 class="m-t-0 m-b-0 color-p2-darker">{{title}}</h1>
-    <p class="subtitle color-p2 bold m-b-md">2025 Los Angeles Fires</p>
+    <h1 class="m-t-0 m-b-0 color-p2-darker line-height-1em">
+      {{title}}<br />
+      <span class="subtitle color-p2-darker bold m-b-md"
+        >2025 Los Angeles Fires</span
+      >
+    </h1>
   </div>
 </div>
 
@@ -57,7 +62,9 @@ description: You can get help and advice in person at a Disaster Recovery Center
               id="map-link-1"
               class="maps-link"
               href="https://maps.google.com/?q=123+UCLA+Drive,+Los+Angeles,+CA+90095"
-              >Directions</a
+              >Directions<span class="sr-only">
+                to UCLA Disaster Recovery Center</span
+              ></a
             >
           </div>
         </div>
@@ -72,12 +79,44 @@ description: You can get help and advice in person at a Disaster Recovery Center
               91107
             </p>
 
+            <p>
+              <strong>Note</strong>: This location will close after Friday,
+              January 31, 2025
+            </p>
+
             <a
               class="btn btn-primary rounded-5 m-y"
               id="map-link-2"
               class="maps-link"
               href="https://maps.google.com/?q=456+Pasadena+Street,+Pasadena,+CA+91107"
-              >Directions</a
+              >Directions<span class="sr-only">
+                to Pasadena Disaster Recovery Center</span
+              ></a
+            >
+          </div>
+        </div>
+
+        <div class="col-md-6 m-t-md">
+          <div
+            class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
+            <p class="m-t-md">
+              <strong>New:</strong> The Altadena location will open Monday, Jan.
+              27, 2025 at 9:00 am PST.
+            </p>
+            <h3 class="h5 m-t-md">Altadena Disaster Recovery Center</h3>
+            <p>
+              540 W. Woodbury Rd.<br />
+              Altadena, CA 91001
+            </p>
+
+            <a
+              class="btn btn-primary rounded-5 m-y"
+              id="map-link-3"
+              class="maps-link"
+              href="https://maps.google.com/?q=540+W.+Woodbury+Road,+Altadena,+CA+91001"
+              >Directions<span class="sr-only">
+                to Altadena Disaster Recovery Center</span
+              ></a
             >
           </div>
         </div>
@@ -95,7 +134,7 @@ description: You can get help and advice in person at a Disaster Recovery Center
             <img
               src="/images/LA-fires-get-help-in-person-wait-times-placeholder.svg?v2efkhbe"
               style="aspect-ratio:79/50"
-              alt="Bar chart showing the busiest times for Los Angeles Disaster Recovery Centers. 12pm is the busiest time with up to 1 hour wait, and 5pm is less busy with no wait."
+              alt="Bar chart showing the wait times for Los Angeles Disaster Recovery Centers. 12 pm to 3 pm are the busiest time with up to a 1 hour wait. 9 am, 5pm, and 6 pm are less busy. 7 pm to 8 pm tends not to have any wait."
               class="img-fluid w-100" />
           </div>
         </div>
@@ -120,14 +159,14 @@ description: You can get help and advice in person at a Disaster Recovery Center
       <p>
         Here are the services you can expect at the centers. See a full list at
         <a href="/lafires/plan-your-in-person-visit/"
-          >Plan your in-person visit.</a
-        >
+          >Plan your in-person visit</a
+        >.
       </p>
 
       <h3>State and local services:</h3>
       <p>Sign in at the door. Services include:</p>
       <ul class="fw-bold fs-5">
-        <li class="m-t">Food and food benefits</li>
+        <li class="m-t">Food benefits</li>
         <li class="m-t">Health services and advice</li>
         <li class="m-t">Unemployment</li>
         <li class="m-t">Disability benefits</li>
@@ -142,8 +181,8 @@ description: You can get help and advice in person at a Disaster Recovery Center
       <p>Sign in at the FEMA tents. Services include:</p>
       <ul class="fw-bold fs-5">
         <li class="m-t">Housing</li>
-        <li class="m-t">Home Repairs</li>
-        <li class="m-t">Legal Services</li>
+        <li class="m-t">Home repairs</li>
+        <li class="m-t">Legal services</li>
       </ul>
 
       <hr class="mt-5" />
@@ -153,8 +192,8 @@ description: You can get help and advice in person at a Disaster Recovery Center
       <p>
         Use our checklist to
         <a href="/lafires/plan-your-in-person-visit/"
-          >plan your in-person visit.</a
-        >
+          >plan your in-person visit</a
+        >.
       </p>
 
       <p>If you can, bring these items with you:</p>
@@ -190,47 +229,32 @@ description: You can get help and advice in person at a Disaster Recovery Center
 </div>
 
 <script>
-  document.querySelector('#map-link-1').addEventListener('click', function(e) {
-    e.preventDefault();
+    const locations = [
+    { id: 'map-link-1', address: '10850 West Pico Blvd, Los Angeles, CA 90064' },
+    { id: 'map-link-2', address: '3035 E. Foothill Blvd, Pasadena, CA 91107' },
+    { id: 'map-link-3', address: '540 W. Woodbury Road, Altadena, CA 91001' }
+  ];
 
-    const address = '10850 West Pico Blvd, Los Angeles, CA 90064';
-    const encodedAddress = encodeURIComponent(address);
+    locations.forEach(location => {
+    document.querySelector(`#${location.id}`).addEventListener('click', function(e) {
+      e.preventDefault();
 
-    // Detect iOS
-    if (navigator.platform.indexOf('iPhone') !== -1 ||
-        navigator.platform.indexOf('iPad') !== -1 ||
-        navigator.platform.indexOf('iPod') !== -1) {
-        window.location.href = `maps://maps.apple.com/?q=${encodedAddress}`;
-    }
-    // Detect Android
-    else if (/Android/.test(navigator.userAgent)) {
-        window.location.href = `geo:0,0?q=${encodedAddress}`;
-    }
-    // Default to Google Maps in browser
-    else {
-        window.location.href = `https://maps.google.com/?q=${encodedAddress}`;
-    }
-  });
+      const encodedAddress = encodeURIComponent(location.address);
 
-  document.querySelector('#map-link-2').addEventListener('click', function(e) {
-    e.preventDefault();
-
-    const address = '3035 E. Foothill Blvd, Pasadena, CA 91107';
-    const encodedAddress = encodeURIComponent(address);
-
-    // Detect iOS
-    if (navigator.platform.indexOf('iPhone') !== -1 ||
-        navigator.platform.indexOf('iPad') !== -1 ||
-        navigator.platform.indexOf('iPod') !== -1) {
-        window.location.href = `maps://maps.apple.com/?q=${encodedAddress}`;
-    }
-    // Detect Android
-    else if (/Android/.test(navigator.userAgent)) {
-        window.location.href = `geo:0,0?q=${encodedAddress}`;
-    }
-    // Default to Google Maps in browser
-    else {
-        window.location.href = `https://maps.google.com/?q=${encodedAddress}`;
-    }
+      // Detect iOS
+      if (navigator.platform.indexOf('iPhone') !== -1 ||
+          navigator.platform.indexOf('iPad') !== -1 ||
+          navigator.platform.indexOf('iPod') !== -1) {
+          window.location.href = `maps://maps.apple.com/?q=${encodedAddress}`;
+      }
+      // Detect Android
+      else if (/Android/.test(navigator.userAgent)) {
+          window.location.href = `geo:0,0?q=${encodedAddress}`;
+      }
+      // Default to Google Maps in browser
+      else {
+          window.location.href = `https://maps.google.com/?q=${encodedAddress}`;
+      }
+    });
   });
 </script>

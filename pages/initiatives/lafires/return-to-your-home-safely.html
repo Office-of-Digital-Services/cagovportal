@@ -9,6 +9,7 @@ breadcrumbparent: 2025 Los Angeles Fires
 socialimage: https://www.ca.gov/images/lafires/la-fires-help.png
 socialimagealt: Five hands converging in the center of the image
 description: Here’s what you need to know before you return to your home.
+keywords: LA, Los Angeles, fires, wildfires
 ---
 
 <div
@@ -16,8 +17,12 @@ description: Here’s what you need to know before you return to your home.
   style="background: url('/images/topic6-lineart.svg?v2') no-repeat right / auto;">
   <div class="container p-y-md">
     {%- include "breadcrumbs.html" -%}
-    <h1 class="m-t-0 m-b-0 color-p2-darker">{{title}}</h1>
-    <p class="subtitle color-p2 bold m-b-md">2025 Los Angeles Fires</p>
+    <h1 class="m-t-0 m-b-0 color-p2-darker line-height-1em">
+      {{title}}<br />
+      <span class="subtitle color-p2-darker bold m-b-md"
+        >2025 Los Angeles Fires</span
+      >
+    </h1>
   </div>
 </div>
 
@@ -53,7 +58,7 @@ description: Here’s what you need to know before you return to your home.
               <a
                 href="https://arcg.is/1vnjra1"
                 class="btn btn-primary btn-sm m-t-md m-r">
-                View the Palisades Fire damage map
+                View <span class="sr-only">the Palisades Fire</span> damage map
               </a>
             </div>
           </article>
@@ -74,7 +79,7 @@ description: Here’s what you need to know before you return to your home.
               <a
                 href="https://arcg.is/nqWXD0"
                 class="btn btn-primary btn-sm m-t-md m-r">
-                View the Eaton Fire damage map
+                View <span class="sr-only">the Eaton Fire</span> damage map
               </a>
             </div>
           </article>
@@ -192,7 +197,7 @@ description: Here’s what you need to know before you return to your home.
 
       <h2>More information</h2>
       <p>
-        Los Angeles County has frequently asked questions about
+        Los Angeles County has information on
         <a href="https://recovery.lacounty.gov/returning-after-fire-faq/"
           >preparing to return home after the fires</a
         >.
