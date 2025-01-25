@@ -90,6 +90,31 @@ keywords: LA, Los Angeles, fires, wildfires
             >
           </div>
         </div>
+
+        <div class="col-md-6 m-t-md">
+          <div
+            class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
+            <p class="m-t-md">
+              <strong>New:</strong> The Altadena location will open Monday, Jan.
+              27, 2025 at 9:00 a.m. PST.
+            </p>
+            <h3 class="h5 m-t-md">Altadena Disaster Recovery Center</h3>
+            <p>
+              540 W. Woodbury Rd.<br />
+              Altadena, CA 91001
+            </p>
+
+            <a
+              class="btn btn-primary rounded-5 m-y"
+              id="map-link-3"
+              class="maps-link"
+              href="https://maps.google.com/?q=540+W.+Woodbury+Road,+Altadena,+CA+91001"
+              >Directions<span class="sr-only">
+                to Altadena Disaster Recovery Center</span
+              ></a
+            >
+          </div>
+        </div>
       </div>
 
       <div class="container py-5">
@@ -198,47 +223,32 @@ keywords: LA, Los Angeles, fires, wildfires
 </div>
 
 <script>
-  document.querySelector('#map-link-1').addEventListener('click', function(e) {
-    e.preventDefault();
+    const locations = [
+    { id: 'map-link-1', address: '10850 West Pico Blvd, Los Angeles, CA 90064' },
+    { id: 'map-link-2', address: '3035 E. Foothill Blvd, Pasadena, CA 91107' },
+    { id: 'map-link-3', address: '540 W. Woodbury Road, Altadena, CA 91001' }
+  ];
 
-    const address = '10850 West Pico Blvd, Los Angeles, CA 90064';
-    const encodedAddress = encodeURIComponent(address);
+    locations.forEach(location => {
+    document.querySelector(`#${location.id}`).addEventListener('click', function(e) {
+      e.preventDefault();
 
-    // Detect iOS
-    if (navigator.platform.indexOf('iPhone') !== -1 ||
-        navigator.platform.indexOf('iPad') !== -1 ||
-        navigator.platform.indexOf('iPod') !== -1) {
-        window.location.href = `maps://maps.apple.com/?q=${encodedAddress}`;
-    }
-    // Detect Android
-    else if (/Android/.test(navigator.userAgent)) {
-        window.location.href = `geo:0,0?q=${encodedAddress}`;
-    }
-    // Default to Google Maps in browser
-    else {
-        window.location.href = `https://maps.google.com/?q=${encodedAddress}`;
-    }
-  });
+      const encodedAddress = encodeURIComponent(location.address);
 
-  document.querySelector('#map-link-2').addEventListener('click', function(e) {
-    e.preventDefault();
-
-    const address = '3035 E. Foothill Blvd, Pasadena, CA 91107';
-    const encodedAddress = encodeURIComponent(address);
-
-    // Detect iOS
-    if (navigator.platform.indexOf('iPhone') !== -1 ||
-        navigator.platform.indexOf('iPad') !== -1 ||
-        navigator.platform.indexOf('iPod') !== -1) {
-        window.location.href = `maps://maps.apple.com/?q=${encodedAddress}`;
-    }
-    // Detect Android
-    else if (/Android/.test(navigator.userAgent)) {
-        window.location.href = `geo:0,0?q=${encodedAddress}`;
-    }
-    // Default to Google Maps in browser
-    else {
-        window.location.href = `https://maps.google.com/?q=${encodedAddress}`;
-    }
+      // Detect iOS
+      if (navigator.platform.indexOf('iPhone') !== -1 ||
+          navigator.platform.indexOf('iPad') !== -1 ||
+          navigator.platform.indexOf('iPod') !== -1) {
+          window.location.href = `maps://maps.apple.com/?q=${encodedAddress}`;
+      }
+      // Detect Android
+      else if (/Android/.test(navigator.userAgent)) {
+          window.location.href = `geo:0,0?q=${encodedAddress}`;
+      }
+      // Default to Google Maps in browser
+      else {
+          window.location.href = `https://maps.google.com/?q=${encodedAddress}`;
+      }
+    });
   });
 </script>
