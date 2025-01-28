@@ -18,9 +18,11 @@ crossorigin=""/>
 integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
 crossorigin=""></script>
 <style>
+  .cagov-map-and-tiles {
+    position: relative;
+  }
   #map {
-    height: 512px; // 720px;
-    // width: 660px;
+    height: 512px;
     width: 100%;
     z-index: 0;
   }
@@ -46,6 +48,99 @@ crossorigin=""></script>
   .leaflet-left {
     background-color: transparent;
   }
+  .provider-card {
+    padding: 1rem;
+    background: #fff;
+    border-radius: .33rem;
+  }
+  .provider-card.popup {
+    display: none;
+    float: right;
+    position: absolute;
+    width: 50%;
+    max-height: 512px;
+    overflow-y: auto;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    background: white;
+    margin: 0;
+  } 
+
+  @media only screen and (max-width: 768px) {
+    div.with-popup#map-results {
+      margin-top: 256px;
+    }
+    .provider-card.popup {
+      width: 100%;
+      top: 512px;
+      max-height: 512px;
+    }
+   }
+   .provider-info div {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-column-gap: 0.5rem;
+      margin-bottom: 0.5rem;
+   }
+   .provider-info a {
+      font-size: 1.0rem;
+      text-decoration: none;
+   }
+   .provider-info a:hover {
+      text-decoration: underline;
+   }
+  .provider-card-container .h4 {
+    margin: 0.5rem 0 1rem 0;
+    font-size: 1.5rem;
+  }
+  .provider-subcard-item:hover {
+    cursor:pointer;
+    box-shadow: 0px 0px 10px 0px #7167A8BF;
+  }
+  .services {
+    position: relative;
+    font-size: 0.95rem;
+  }
+
+  .services-list-label {
+    position: absolute;
+    top: -11px;
+    left: 0;
+    font-size: 0.9rem;
+    background: #ffffff;
+    padding: 0 0.5rem 0 0;
+    margin-bottom: 0.5rem;
+  }
+  .distance-indicator {
+    font-family: 'Public Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+  }
+  button.close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    outline: none;  
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+    opacity: 0.5;
+  }
+  button.close-button:hover,button.close-button:focus, button.close-button:active
+  {
+    background-color: #EEEEEE;
+    opacity: 1.0;
+    border: none;
+  }
+
+
 </style>
 
 <div
@@ -81,7 +176,9 @@ crossorigin=""></script>
 
       <h2 class="mt-4">Find the nearest Disaster Recovery Center</h2>
 
-      <cagov-lafires-map></cagov-lafires-map>
+      <div class="cagov-map-and-tiles">
+        <cagov-lafires-map></cagov-lafires-map>
+      </div>
 
       <!-- Disaster Recovery Center Cards -->
 

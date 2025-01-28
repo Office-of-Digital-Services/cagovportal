@@ -18,13 +18,13 @@ const northWest = L.latLng(43, -130),
     southEast = L.latLng(32, -109),
     calif_bounds = L.latLngBounds(northWest, southEast);
 
-// add Los Angeles county bounds
-let los_angeles_bounds = L.latLngBounds([33.741, -118.696], [34.337, -118.155]);
+// Los Angeles county bounds for reference
+// let los_angeles_bounds = L.latLngBounds([33.741, -118.696], [34.337, -118.155]);
 
 let displayData = [
-  {'lat':34.0395943,'lng':-118.4314774}, // UCLA Research Park West
-  {'lat':34.1504734,'lng':-118.0890183}, // Pasadena City College – Community Education Center
-  {'lat':34.1825977,'lng':-118.1646802}, // Altadena Disaster Recovery Center
+  {'lat':34.0395943,'lng':-118.4314774, 'drc_name':'UCLA Disaster Recovery Center', 'loc_name':'UCLA Research Park West', 'locaddress':'10850 West Pico Blvd., Los Angeles, CA 90064'}, // UCLA Research Park West
+  {'lat':34.1504734,'lng':-118.0890183, 'drc_name': 'Pasadena Disaster Recovery Center', 'loc_name':'Pasadena City College – Community Education Center', 'locaddress':'1570 E. Colorado Blvd., Pasadena, CA 91106'}, // Pasadena City College – Community Education Center
+  {'lat':34.1825977,'lng':-118.1646802, 'drc_name': 'Altadena Disaster Recovery Center', 'loc_name':'', 'locaddress':'540 W. Woodbury Rd., Altadena, CA 91001'}, // Altadena Disaster Recovery Center
 ];
 
 // https://leafletjs.com/reference-1.8.0.html#map
@@ -136,11 +136,28 @@ export class CaGovLAFiresMap extends window.HTMLElement {
 
     this.innerHTML = `<h3>${this.mapTitle}</h3>
       <!-- <p>${this.moveMapLabel}</p> -->
+
       <div id="map-popup" class="provider-card popup">
-        <!-- begin placeholder -->
         <div class="provider-card-container">
+          <div class="provider-card-close">
+            <button class="close-button" aria-label="Close button" type="button">
+              <span aria-hidden="true">&nbsp;×&nbsp;</span>
+            </button>
+          </div>
+          <div class="distance-indicator"><!-- 13.5 miles away --></div>
+          
+          <h2 class="h4">Disaster Recovery Center - Altadena</h2>
+          <div class="services">    </div>
+          <div class="provider-info">
+            <div class="provider-address">
+              <span class="provider-icon">
+                <img src="/images/location_v2.svg" width="28px" alt="Address">
+              </span>
+              <span class="provider-address-line"><a target="_blank" href="https://maps.google.com/?q=540 W. Woodbury Rd., Altadena, CA 91001">540 W. Woodbury Rd., Altadena, CA 91001</a></span>
+            </div>
+            <!-- phone and website would go here -->
+          </div>
         </div>
-        <!-- end placeholder -->
       </div>
       <div id="map"></div>
       <div id="map-credits"><a id="map-credits-a" href="#" title="${this.textAttribution}">${this.mapCredits}</a></div>
@@ -158,7 +175,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
     });
     this.map.on('click',e => {
       console.log("map click", e);
-      // this.closePopup();
+      this.closePopup();
     });
 
     window.L.tileLayer(tile_template.replace("{r}", ""), {
@@ -183,7 +200,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
     this.map.on("movestart", e => {
       console.log("moveend", e,this.map.getCenter(), this.map.getZoom());
       if (!this.marker_started) {
-        // this.closePopup();
+        this.closePopup();
       }
       this.marker_started = false;
   });
@@ -259,6 +276,88 @@ export class CaGovLAFiresMap extends window.HTMLElement {
 
   }
 
+  closePopup() {
+    document.querySelector('#map-popup').style.display = 'none';
+    // let map_result_elem = document.querySelector('#map-results');
+    // if (map_result_elem) {
+    //    map_result_elem.classList.remove('with-popup');
+    // }
+    this.marker_is_showing = false;
+    this.marker_item = undefined;
+    if (this.open_marker) {
+      this.open_marker.setIcon(this.regIcon);
+      this.open_marker = undefined;
+    }
+  }
+  
+  get_DRC_Card(item) {
+    return `
+        <div class="provider-card-container">
+          <div class="provider-card-close">
+            <button class="close-button" aria-label="Close button" type="button">
+              <span aria-hidden="true">&nbsp;×&nbsp;</span>
+            </button>
+          </div>
+          <div class="distance-indicator"><!-- 13.5 miles away --></div>
+          
+          <h2 class="h4">${item.drc_name}</h2>
+          ${item.loc_name ? `<h3 class="h5">${item.loc_name}</h3>` : ''}
+          <div class="services">  <!-- services go here -->  </div>
+          <div class="provider-info">
+            <div class="provider-address">
+              <span class="provider-icon">
+                <img src="/images/location_v2.svg" width="28px" alt="Address">
+              </span>
+              <span class="provider-address-line"><a target="_blank" href="https://maps.google.com/?q=${item.locaddress}">${item.locaddress}</a></span>
+            </div>
+            <!-- phone and website would go here -->
+          </div>
+        </div>`;
+  }
+
+
+  openPopup(item, marker) {
+    this.marker_item = item;
+
+    if (this.open_marker != undefined) {  // close any open marker
+      this.open_marker.setIcon(this.regIcon);
+    }
+
+    this.open_marker = marker;
+    this.open_marker.setIcon(this.selIcon);
+    const markup = this.get_DRC_Card(item);
+    let map_popup = document.querySelector('#map-popup');
+    map_popup.innerHTML = markup;
+    let cbutton = map_popup.querySelector('.close-button');
+    if (cbutton) {
+      cbutton.addEventListener('click', (e) => {
+        this.closePopup();
+      });
+    }
+
+    document.querySelector('#map-popup').style.display = 'block';
+    let map_result_elem = document.querySelector('#map-results');
+    if (map_result_elem) {
+       map_result_elem.classList.add('with-popup');
+    }
+    this.marker_is_showing = true;
+    // check if lng is > map centers
+    const cur_center = this.map.getCenter();
+    const cur_bounds = this.map.getBounds();
+    if (window.innerWidth > 768 ) {
+    //   if (item.lat < cur_center.lat) {
+    //     const new_center = L.latLng(cur_center.lat + (cur_bounds.getSouth() - cur_bounds.getNorth())/4, cur_center.lng);
+    //     this.map.panTo(new_center, {animate: true, duration: 1.0});
+    //   }
+    //  } else {
+      if (item.lng > cur_center.lng) {
+        // reposition marker half way between center and left edge of map
+        const new_center = L.latLng(cur_center.lat,cur_center.lng + (cur_bounds.getEast() - cur_bounds.getWest())/4);
+        this.marker_started = true; // used to skip closing marker at end of movement
+        this.map.panTo(new_center, {animate: true, duration: 1.0});
+      }
+    }
+  }
 
   displayPins() {
     console.log("Making display pins");
@@ -280,11 +379,11 @@ export class CaGovLAFiresMap extends window.HTMLElement {
         // marker.bindPopup(cardContent);
         marker.on('click',e => {
           console.log("Marker click",e);
-          // if (this.marker_is_showing && this.marker_item === item) {
-          //   this.closePopup();
-          // } else {
-          //   this.openPopup(item, e.target);
-          // }
+          if (this.marker_is_showing && this.marker_item === item) {
+            this.closePopup();
+          } else {
+            this.openPopup(item, e.target);
+          }
         });
         this.allMarkers.push(marker);
         item.itsMarker = marker;
