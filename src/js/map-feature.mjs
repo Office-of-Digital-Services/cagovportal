@@ -11,15 +11,21 @@ const tile_template =
 const max_zoom = 15;
 const poi_near_max_zoom = 15;
 const poi_far_max_zoom = 8; // 6.5;
-const initial_center = [37.561997, -120.629879];
-const initial_zoom = 8;
-let northWest = L.latLng(43, -130),
+const initial_center = [34.1063498,-118.3132151]; // 34.1279264,-118.5711749
+const initial_zoom = 10;
+
+const northWest = L.latLng(43, -130),
     southEast = L.latLng(32, -109),
     calif_bounds = L.latLngBounds(northWest, southEast);
 
 // add Los Angeles county bounds
 let los_angeles_bounds = L.latLngBounds([33.741, -118.696], [34.337, -118.155]);
 
+let displayData = [
+  {'lat':34.0395943,'lng':-118.4314774}, // UCLA Research Park West
+  {'lat':34.1504734,'lng':-118.0890183}, // Pasadena City College – Community Education Center
+  {'lat':34.1825977,'lng':-118.1646802}, // Altadena Disaster Recovery Center
+];
 
 // https://leafletjs.com/reference-1.8.0.html#map
 export class CaGovLAFiresMap extends window.HTMLElement {
@@ -138,12 +144,12 @@ export class CaGovLAFiresMap extends window.HTMLElement {
       </div>
       <div id="map"></div>
       <div id="map-credits"><a id="map-credits-a" href="#" title="${this.textAttribution}">${this.mapCredits}</a></div>
-      <div id="credits-tooltip" style="display:none;">${this.mapAttribution} ${this.tileAttribution}</div>
+      <div id="credits-tooltip" style="display:none;">${this.mapAttribution} ${this.tileAttribution} credits tooltip</div>
       `;
 
     // leaflet creates the L object on window
     this.map = window.L.map("map", {
-      maxBounds: los_angeles_bounds,
+      maxBounds: calif_bounds,
       center: initial_center,
       zoom: initial_zoom,
       dragging: !L.Browser.mobile,
@@ -169,7 +175,8 @@ export class CaGovLAFiresMap extends window.HTMLElement {
     // if (this.data) {
     //   this.displayPins();
     // }
-
+    this.data = displayData;
+    this.displayPins();
     // this.listenForData();
     // this.listenForRecenter();
 
@@ -252,8 +259,9 @@ export class CaGovLAFiresMap extends window.HTMLElement {
 
   }
 
+
   displayPins() {
-    // console.log("Making display pins");
+    console.log("Making display pins");
     this.allMarkers = [];
 
     // Used to filter out markers that outside of the State's bounding rectangle
@@ -288,16 +296,17 @@ export class CaGovLAFiresMap extends window.HTMLElement {
 
   handleMapCredits() {
     // not yet working...
-      let map_credit_elem = this.querySelector("#map-credits-a");
-      map_credit_elem.addEventListener("click", event => {
-        event.preventDefault();
-        let credits_tooltip = this.querySelector('#credits-tooltip');
-        if (credits_tooltip.style.display === "none") {
-          credits_tooltip.style.display = "block";
-        } else {
-          credits_tooltip.style.display = "none";
-        }
-      });
+    console.log("handle map credits handler");
+    let map_credit_elem = this.querySelector("#map-credits-a");
+    map_credit_elem.addEventListener("click", event => {
+      event.preventDefault();
+      let credits_tooltip = this.querySelector('#credits-tooltip');
+      if (credits_tooltip.style.display === "none") {
+        credits_tooltip.style.display = "block";
+      } else {
+        credits_tooltip.style.display = "none";
+      }
+    });
   }
 }
 window.customElements.define(
