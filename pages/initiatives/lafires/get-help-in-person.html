@@ -371,15 +371,14 @@ crossorigin=""></script>
       e.preventDefault();
 
       const encodedAddress = encodeURIComponent(location.address);
-
-      // Detect iOS
-      if (navigator.platform.indexOf('iPhone') !== -1 ||
-          navigator.platform.indexOf('iPad') !== -1 ||
-          navigator.platform.indexOf('iPod') !== -1) {
+      const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || 
+                    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      const isAndroid = /Android/.test(navigator.userAgent);
+      
+      if (isIOS) {
           window.location.href = `maps://maps.apple.com/?q=${encodedAddress}`;
       }
-      // Detect Android
-      else if (/Android/.test(navigator.userAgent)) {
+      else if (isAndroid) {
           window.location.href = `geo:0,0?q=${encodedAddress}`;
       }
       // Default to Google Maps in browser

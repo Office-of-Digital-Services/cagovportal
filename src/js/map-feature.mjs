@@ -307,12 +307,12 @@ export class CaGovLAFiresMap extends window.HTMLElement {
       // Modern platform detection for iOS
       const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || 
                     (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      const isAndroid = /Android/.test(navigator.userAgent);
       
       if (isIOS) {
           window.location.href = `maps://maps.apple.com/?q=${encodedAddress}`;
       }
-      // Detect Android
-      else if (/Android/.test(navigator.userAgent)) {
+      else if (isAndroid) {
           window.location.href = `geo:0,0?q=${encodedAddress}`;
       }
       // Default to Google Maps in browser
