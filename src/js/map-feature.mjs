@@ -1,13 +1,11 @@
+let displayData = [
+  {'lat':34.0395943,'lng':-118.4314774, 'drc_name':'UCLA Disaster Recovery Center', 'loc_name':'UCLA Research Park West', 'locaddress':'10850 West Pico Blvd., Los Angeles, CA 90064'}, // UCLA Research Park West
+  {'lat':34.1504734,'lng':-118.0890183, 'drc_name': 'Pasadena Disaster Recovery Center', 'loc_name':'Pasadena City College – Community Education Center', 'locaddress':'1570 E. Colorado Blvd., Pasadena, CA 91106'}, // Pasadena City College – Community Education Center
+  {'lat':34.1825977,'lng':-118.1646802, 'drc_name': 'Altadena Disaster Recovery Center', 'loc_name':'', 'locaddress':'540 W. Woodbury Rd., Altadena, CA 91001'}, // Altadena Disaster Recovery Center
+];
 
-// import L from leaflet
-
-// import 'leaflet/dist/leaflet.css';
-// import 'leaflet/dist/leaflet.js';
 const tile_template =
   "https://d1436ootlg562q.cloudfront.net/tiles/calstamen/{z}/{x}/{y}{r}.png";
-// use for debugging
-// const tile_template = "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.png";
-// Will need to use the two attributions for the Map Credits pop-up
 const max_zoom = 15;
 const poi_near_max_zoom = 15;
 const poi_far_max_zoom = 8; // 6.5;
@@ -21,18 +19,8 @@ const northWest = L.latLng(43, -130),
 // Los Angeles county bounds for reference
 // let los_angeles_bounds = L.latLngBounds([33.741, -118.696], [34.337, -118.155]);
 
-let displayData = [
-  {'lat':34.0395943,'lng':-118.4314774, 'drc_name':'UCLA Disaster Recovery Center', 'loc_name':'UCLA Research Park West', 'locaddress':'10850 West Pico Blvd., Los Angeles, CA 90064'}, // UCLA Research Park West
-  {'lat':34.1504734,'lng':-118.0890183, 'drc_name': 'Pasadena Disaster Recovery Center', 'loc_name':'Pasadena City College – Community Education Center', 'locaddress':'1570 E. Colorado Blvd., Pasadena, CA 91106'}, // Pasadena City College – Community Education Center
-  {'lat':34.1825977,'lng':-118.1646802, 'drc_name': 'Altadena Disaster Recovery Center', 'loc_name':'', 'locaddress':'540 W. Woodbury Rd., Altadena, CA 91001'}, // Altadena Disaster Recovery Center
-];
-
-// https://leafletjs.com/reference-1.8.0.html#map
 export class CaGovLAFiresMap extends window.HTMLElement {
   connectedCallback() {
-    // console.log("Init map");
-    // UNUSED as of yet
-    // let translationKeys = ['mapTitle','mapCredits','allProvidersNear','phoneLabel', 'moveMapLabel', 'mapAttribution', 'tileAttribution', 'textAttribution'];
     this.mapTitle = 'Provider map';
     this.mapCredits = 'Map credits';
     this.allProvidersNear = 'All providers near';
@@ -45,7 +33,6 @@ export class CaGovLAFiresMap extends window.HTMLElement {
     this.textAttribution =
     "Map by Leaflet, Map tiles by Stamen Design, CC BY 3.0, Map data by OpenStreetMap contributors";
 
-    // this.searchfilters = {'telehealth':false,'pill':false,'procedure':false};
     this.marker_is_showing = false;
     this.marker_started = true;
     this.marker_item = undefined;
@@ -94,8 +81,6 @@ export class CaGovLAFiresMap extends window.HTMLElement {
       _onTouchEvent: function (e, type) {
         if (!this._map._loaded) { return; }
 
-        // alert("GTS");
-
         let touch = e.touches[0];
         let containerPoint = window.L.point(touch.clientX, touch.clientY);
         let layerPoint = this._map.containerPointToLayerPoint(containerPoint);
@@ -122,17 +107,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
       },
     });
     window.L.Map.addInitHook('addHandler', 'touchExtend', window.L.Map.TouchExtend);
-    
-    // The map component is written into the page dynamically so custom element isn't in an 11ty HTML file, hence using document. instead of this. to get the translated values here
-    // translationKeys.forEach(key => {
-    //   if(document.querySelector(`[data-name="${key}"]`)){
-    //     this[key] = document.querySelector(`[data-name="${key}"]`).innerHTML;
-    //   }
-    // })
-
-    // this.searchComponent = document.querySelector(
-    //   "cagov-abortion-provider-lookup"
-    // );
+   
 
     this.innerHTML = `<h3>${this.mapTitle}</h3>
       <!-- <p>${this.moveMapLabel}</p> -->
@@ -186,6 +161,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
       // attribution: this.tileAttribution,
     }).addTo(this.map);
 
+    // ORIGINALLY data was loaded from a json file, but now it's hardcoded at the top of this file
     // if (this.searchComponent.data) {
     //   this.data = this.searchComponent.data;
     // }
@@ -194,8 +170,6 @@ export class CaGovLAFiresMap extends window.HTMLElement {
     // }
     this.data = displayData;
     this.displayPins();
-    // this.listenForData();
-    // this.listenForRecenter();
 
     this.map.on("movestart", e => {
       console.log("moveend", e,this.map.getCenter(), this.map.getZoom());
@@ -203,7 +177,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
         this.closePopup();
       }
       this.marker_started = false;
-  });
+    });
 
     this.map.on("moveend", e => {
       console.log("moveend", e);
@@ -278,10 +252,6 @@ export class CaGovLAFiresMap extends window.HTMLElement {
 
   closePopup() {
     document.querySelector('#map-popup').style.display = 'none';
-    // let map_result_elem = document.querySelector('#map-results');
-    // if (map_result_elem) {
-    //    map_result_elem.classList.remove('with-popup');
-    // }
     this.marker_is_showing = false;
     this.marker_item = undefined;
     if (this.open_marker) {
@@ -330,7 +300,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
     map_popup.innerHTML = markup;
     let cbutton = map_popup.querySelector('.close-button');
     if (cbutton) {
-      cbutton.addEventListener('click', (e) => {
+      cbutton.addEventListener('click', e => {
         this.closePopup();
       });
     }
@@ -345,11 +315,6 @@ export class CaGovLAFiresMap extends window.HTMLElement {
     const cur_center = this.map.getCenter();
     const cur_bounds = this.map.getBounds();
     if (window.innerWidth > 768 ) {
-    //   if (item.lat < cur_center.lat) {
-    //     const new_center = L.latLng(cur_center.lat + (cur_bounds.getSouth() - cur_bounds.getNorth())/4, cur_center.lng);
-    //     this.map.panTo(new_center, {animate: true, duration: 1.0});
-    //   }
-    //  } else {
       if (item.lng > cur_center.lng) {
         // reposition marker half way between center and left edge of map
         const new_center = L.latLng(cur_center.lat,cur_center.lng + (cur_bounds.getEast() - cur_bounds.getWest())/4);
@@ -372,11 +337,6 @@ export class CaGovLAFiresMap extends window.HTMLElement {
       if (cal_bounds.contains(latlng)) {
         let marker = L.marker([item.lat, item.lng],{icon:this.regIcon, keyboard:false,riseOnHover:true,highlight: 'temporary'}).addTo(this.map);
 
-        // let cardContent = `<p><a href="${item.formatted_url}">${item.formatted_name}</a><br>
-        // ${item.full_address}</p>
-        // <p>${this.phoneLabel}: <a href="tel:${item.formatted_phone}">${item.formatted_phone}</a></p>`;
-
-        // marker.bindPopup(cardContent);
         marker.on('click',e => {
           console.log("Marker click",e);
           if (this.marker_is_showing && this.marker_item === item) {
@@ -389,13 +349,10 @@ export class CaGovLAFiresMap extends window.HTMLElement {
         item.itsMarker = marker;
       }
     });
-    // this.populateCardList();
     this.handleMapCredits();
   }
 
   handleMapCredits() {
-    // not yet working...
-    console.log("handle map credits handler");
     let map_credit_elem = this.querySelector("#map-credits-a");
     map_credit_elem.addEventListener("click", event => {
       event.preventDefault();
