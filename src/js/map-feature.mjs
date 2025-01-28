@@ -274,7 +274,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
           ${item.loc_name ? `<h3 class="h5">${item.loc_name}</h3>` : ''}
           <div class="services">  <!-- services go here -->  </div>
           <div class="provider-info">
-            <div class="provider-address">
+            <div class="provider-address" id="provider-address-div">
               <span class="provider-icon">
                 <img src="/images/location_v2.svg" width="28px" alt="Address">
               </span>
@@ -298,6 +298,29 @@ export class CaGovLAFiresMap extends window.HTMLElement {
     const markup = this.get_DRC_Card(item);
     let map_popup = document.querySelector('#map-popup');
     map_popup.innerHTML = markup;
+
+    document.querySelector(`#provider-address-div`).addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const encodedAddress = encodeURIComponent(item.locaddress);
+
+      // Modern platform detection for iOS
+      const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || 
+                    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      
+      if (isIOS) {
+          window.location.href = `maps://maps.apple.com/?q=${encodedAddress}`;
+      }
+      // Detect Android
+      else if (/Android/.test(navigator.userAgent)) {
+          window.location.href = `geo:0,0?q=${encodedAddress}`;
+      }
+      // Default to Google Maps in browser
+      else {
+          window.location.href = `https://maps.google.com/?q=${encodedAddress}`;
+      }
+    });
+
     let cbutton = map_popup.querySelector('.close-button');
     if (cbutton) {
       cbutton.addEventListener('click', e => {
