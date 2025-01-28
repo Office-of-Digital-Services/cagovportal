@@ -1,7 +1,27 @@
 let displayData = [
-  {'lat':34.0395943,'lng':-118.4314774, 'drc_name':'UCLA Disaster Recovery Center', 'loc_name':'UCLA Research Park West', 'locaddress':'10850 West Pico Blvd., Los Angeles, CA 90064'}, // UCLA Research Park West
-  {'lat':34.1504734,'lng':-118.0890183, 'drc_name': 'Pasadena Disaster Recovery Center', 'loc_name':'Pasadena City College – Community Education Center', 'locaddress':'1570 E. Colorado Blvd., Pasadena, CA 91106'}, // Pasadena City College – Community Education Center
-  {'lat':34.1825977,'lng':-118.1646802, 'drc_name': 'Altadena Disaster Recovery Center', 'loc_name':'', 'locaddress':'540 W. Woodbury Rd., Altadena, CA 91001'}, // Altadena Disaster Recovery Center
+  {'lat':34.0395943,'lng':-118.4314774, 
+    'drc_name':'UCLA Disaster Recovery Center', 
+    'loc_name':'UCLA Research Park West', 
+    'loc_address':'10850 West Pico Blvd., Los Angeles, CA 90064', 
+    'tooltip':'UCLA Disaster Recovery Center', 
+    'tooltip_dir':'bottom',
+    'tooltip_offset': [6, 0]
+  }, 
+  {'lat':34.1504734,'lng':-118.0890183,
+     'drc_name': 'Pasadena Disaster Recovery Center', 
+     'loc_name':'Pasadena City College – Community Education Center', 
+     'loc_address':'1570 E. Colorado Blvd., Pasadena, CA 91106', 
+     'tooltip':'Pasadena Disaster Recovery Center', 
+     'tooltip_dir':'bottom', 
+     'tooltip_offset': [72, 6]  },
+  {'lat':34.1825977,'lng':-118.1646802, 
+    'drc_name': 'Altadena Disaster Recovery Center', 
+    'loc_name':'', 
+    'loc_address':'540 W. Woodbury Rd., Altadena, CA 91001', 
+    'tooltip':'Altadena Disaster Recovery Center', 
+    'tooltip_dir':'bottom', 
+    'tooltip_offset': [-72, 6] 
+  }, 
 ];
 
 const tile_template =
@@ -37,6 +57,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
     this.marker_started = true;
     this.marker_item = undefined;
     this.open_marker = undefined;
+    this.last_pop_open = new Date().getTime();
 
     this.selIcon = new L.Icon({
       iconUrl: '/images/marker-icon-sel-2x.png',
@@ -150,8 +171,11 @@ export class CaGovLAFiresMap extends window.HTMLElement {
       attributionControl: false,
     });
     this.map.on('click',e => {
-      console.log("map click", e);
-      this.closePopup();
+      let elapsed = new Date().getTime() - this.last_pop_open;
+      // console.log("map click", e, elapsed);
+      if (elapsed > 100) {
+        this.closePopup();
+      }
     });
 
     window.L.tileLayer(tile_template.replace("{r}", ""), {
@@ -173,7 +197,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
     this.displayPins();
 
     this.map.on("movestart", e => {
-      console.log("moveend", e,this.map.getCenter(), this.map.getZoom());
+      // console.log("moveend", e,this.map.getCenter(), this.map.getZoom());
       if (!this.marker_started) {
         this.closePopup();
       }
@@ -236,7 +260,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
           this.note_popup = undefined;
         }
         // display map center and zoom
-        console.log("touchmove", e, this.map.getCenter(), this.map.getZoom());
+        // console.log("touchmove", e, this.map.getCenter(), this.map.getZoom());
       }
     );
 
@@ -279,7 +303,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
               <span class="provider-icon">
                 <img src="/images/location_v2.svg" width="28px" alt="Address">
               </span>
-              <span class="provider-address-line"><a target="_blank" href="https://maps.google.com/?q=${item.locaddress}">${item.locaddress}</a></span>
+              <span class="provider-address-line"><a target="_blank" href="https://maps.google.com/?q=${item.loc_address}">${item.loc_address}</a></span>
             </div>
             <!-- phone and website would go here -->
           </div>
@@ -288,6 +312,8 @@ export class CaGovLAFiresMap extends window.HTMLElement {
 
 
   openPopup(item, marker) {
+    this.last_pop_open = new Date().getTime();
+
     this.marker_item = item;
 
     if (this.open_marker != undefined) {  // close any open marker
@@ -303,7 +329,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
     document.querySelector(`#provider-address-div`).addEventListener('click', (e) => {
       e.preventDefault();
 
-      const encodedAddress = encodeURIComponent(item.locaddress);
+      const encodedAddress = encodeURIComponent(item.loc_address);
 
       // Modern platform detection for iOS
       const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || 
@@ -349,7 +375,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
   }
 
   displayPins() {
-    console.log("Making display pins");
+    // console.log("Making display pins");
     this.allMarkers = [];
 
     // Used to filter out markers that outside of the State's bounding rectangle
@@ -360,15 +386,26 @@ export class CaGovLAFiresMap extends window.HTMLElement {
       const latlng = L.latLng(item.lat, item.lng);
       if (cal_bounds.contains(latlng)) {
         let marker = L.marker([item.lat, item.lng],{icon:this.regIcon, keyboard:false,riseOnHover:true,highlight: 'temporary'}).addTo(this.map);
+        marker.bindTooltip(item.tooltip || item.drc_name, {permanent: true, direction: item.tooltip_dir, interactive: true, offset: item.tooltip_offset}).openTooltip();
+        marker._tooltip.parent_marker = marker;
+        // console.log("marker", marker);
 
-        marker.on('click',e => {
-          console.log("Marker click",e);
+        let clickFunc = e => {
+          // console.log("Marker click",e);
+          e.originalEvent.stopPropagation();
+          e.originalEvent.preventDefault();
+          let target = marker;
           if (this.marker_is_showing && this.marker_item === item) {
             this.closePopup();
           } else {
-            this.openPopup(item, e.target);
+            this.openPopup(item, target);
           }
-        });
+        };
+
+        marker.on('click', clickFunc);
+        // marker._tooltip.on('click', clickFunc);
+        // console.log("marker", marker);
+        // marker.tooltip.on('click', clickFunc);
         this.allMarkers.push(marker);
         item.itsMarker = marker;
       }
