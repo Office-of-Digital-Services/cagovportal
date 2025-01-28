@@ -11,6 +11,42 @@ socialimagealt: Five hands converging in the center of the image
 description: You can get help and advice in person at a Disaster Recovery Center.
 keywords: LA, Los Angeles, fires, wildfires
 ---
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+crossorigin=""></script>
+<style>
+  #map {
+    height: 512px; // 720px;
+    // width: 660px;
+    width: 100%;
+    z-index: 0;
+  }
+  #map-credits {
+    text-align: right;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+  }
+
+  #credits-tooltip {
+    font-size: 0.8rem;
+    text-align: right;
+  }
+
+  .leaflet-container .leaflet-marker-pane img,
+  .leaflet-container .leaflet-shadow-pane img,
+  .leaflet-container .leaflet-tile-pane img,
+  .leaflet-container img.leaflet-image-layer,
+  .leaflet-container .leaflet-tile {
+    background-color: transparent;
+  }
+  .leaflet-popup-tip-container,
+  .leaflet-left {
+    background-color: transparent;
+  }
+</style>
 
 <div
   class="section-understated lineart bg-s1"
@@ -44,6 +80,8 @@ keywords: LA, Los Angeles, fires, wildfires
       <nav class="page-navigation m-t-lg"></nav>
 
       <h2 class="mt-4">Find the nearest Disaster Recovery Center</h2>
+
+      <cagov-lafires-map></cagov-lafires-map>
 
       <!-- Disaster Recovery Center Cards -->
 
