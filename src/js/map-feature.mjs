@@ -386,9 +386,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
       const latlng = L.latLng(item.lat, item.lng);
       if (cal_bounds.contains(latlng)) {
         let marker = L.marker([item.lat, item.lng],{icon:this.regIcon, keyboard:false,riseOnHover:true,highlight: 'temporary'}).addTo(this.map);
-        marker.bindTooltip(item.tooltip || item.drc_name, {permanent: true, direction: item.tooltip_dir, interactive: true, offset: item.tooltip_offset}).openTooltip();
-        marker._tooltip.parent_marker = marker;
-        // console.log("marker", marker);
+        // marker.bindTooltip(item.tooltip || item.drc_name, {permanent: true, direction: item.tooltip_dir, interactive: true, offset: item.tooltip_offset}).openTooltip();
 
         let clickFunc = e => {
           // console.log("Marker click",e);
