@@ -13,7 +13,8 @@ let displayData = [
      'loc_address':'1570 E. Colorado Blvd., Pasadena, CA 91106', 
      'tooltip':'Pasadena Disaster Recovery Center', 
      'tooltip_dir':'bottom', 
-     'tooltip_offset': [72, 6]  },
+     'tooltip_offset': [72, 6],
+     'special_note': '<em><strong>Note:</strong> This location will close after Friday, January 31, 2025</em>'  },
   {'lat':34.1825977,'lng':-118.1646802, 
     'drc_name': 'Altadena Disaster Recovery Center', 
     'loc_name':'', 
@@ -296,6 +297,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
           <div class="distance-indicator"><!-- 13.5 miles away --></div>
           
           <h2 class="h4">${item.drc_name}</h2>
+          ${item.special_note ? `<div class="special-note">${item.special_note}</div>` : ''}
           ${item.loc_name ? `<h3 class="h5">${item.loc_name}</h3>` : ''}
           <div class="services">  <!-- services go here -->  </div>
           <div class="provider-info">
