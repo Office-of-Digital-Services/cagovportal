@@ -21,7 +21,7 @@ const northWest = L.latLng(43, -130),
 
 export class CaGovLAFiresMap extends window.HTMLElement {
   connectedCallback() {
-    this.mapTitle = 'Provider map';
+    // this.mapTitle = 'DRC map'; // unused at the moment
     this.mapCredits = 'Map credits';
     this.allProvidersNear = 'All providers near';
     this.phoneLabel = 'Phone';
@@ -109,7 +109,8 @@ export class CaGovLAFiresMap extends window.HTMLElement {
     window.L.Map.addInitHook('addHandler', 'touchExtend', window.L.Map.TouchExtend);
    
 
-    this.innerHTML = `<h3>${this.mapTitle}</h3>
+    this.innerHTML = `
+      <!-- <h3>${this.mapTitle}</h3> -->
       <!-- <p>${this.moveMapLabel}</p> -->
 
       <div id="map-popup" class="provider-card popup">
