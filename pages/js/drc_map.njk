@@ -1,0 +1,10 @@
+---
+layout: null
+permalink: "js/drc-map.min.js"
+eleventyExcludeFromCollections: true
+---
+
+{%- set js -%}
+{%- include "../../src/js/map-feature.mjs" -%}
+{%- endset -%}
+{{- js | jsmin | safe -}}
