@@ -15,12 +15,14 @@
   integrity="sha256-e675J/VKorpekjw24pAfI7kxIF5TwFmKBfDOyX1PI10="
   crossorigin="anonymous"
   defer></script>
-<script src="/js/custom.min.js?v2Fwd" type="module" defer></script>
+<script src="/js/custom.min.js?v3jan" type="module" defer></script>
 {%- if data_agency %}
 <script src="/js/data_agency.min.js?dv{% DateHex %}"></script>
 {%- endif -%} {%- if data_service %}
 <script src="/js/data_service.min.js?dv{% DateHex %}"></script>
-{%- endif -%}
+{%- endif -%} {% if drc_map -%}
+<script src="/js/drc-map.min.js" type="module" defer></script>
+{% endif -%}
 
 <!-- Site icons -->
 <link
