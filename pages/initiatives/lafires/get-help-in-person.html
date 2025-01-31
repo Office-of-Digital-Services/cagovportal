@@ -12,12 +12,16 @@ description: You can get help and advice in person at a Disaster Recovery Center
 keywords: LA, Los Angeles, fires, wildfires
 drc_map: true
 ---
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-crossorigin=""></script>
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin="" />
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
 <style>
   .cagov-map-and-tiles {
     position: relative;
@@ -66,7 +70,7 @@ crossorigin=""></script>
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
     background: white;
     margin: 0;
-  } 
+  }
 
   @media only screen and (max-width: 768px) {
     div.with-popup#map-results {
@@ -127,7 +131,7 @@ crossorigin=""></script>
     padding: 0.5rem;
     background: none;
     border: none;
-    outline: none;  
+    outline: none;
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: bold;
@@ -145,7 +149,6 @@ crossorigin=""></script>
     font-weight: 700;
     color: #207AC9 !important;
   }
-
 </style>
 
 <div
@@ -170,7 +173,7 @@ crossorigin=""></script>
 
     <!-- Main Content Area -->
     <div class="col-lg-9 pt-lg-3">
-      <p class="lead mb-4 m-t-md">{{description}}</p>
+      <p class="m-b-md lead">{{description}}</p>
       <a
         href="/lafires/plan-your-in-person-visit/"
         class="btn btn-lg btn-primary rounded-5"
@@ -376,10 +379,10 @@ crossorigin=""></script>
       e.preventDefault();
 
       const encodedAddress = encodeURIComponent(location.address);
-      const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || 
+      const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) ||
                     (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
       const isAndroid = /Android/.test(navigator.userAgent);
-      
+
       if (isIOS) {
           window.location.href = `maps://maps.apple.com/?q=${encodedAddress}`;
       }
