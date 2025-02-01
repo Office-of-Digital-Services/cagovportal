@@ -605,20 +605,29 @@ nav.page-navigation > ul > li:last-child {
 }
 
 /* breadcrumbs */
-.breadcrumbs ul,
-.breadcrumbs ol,
-.page-navigation ul li {
+nav.breadcrumbs > ul,
+nav.breadcrumbs > ol,
+nav.page-navigation > ul > li {
   font-size: 1rem;
 }
 
-@media (min-width: 576px) {
-  .breadcrumbs ul,
-  .breadcrumbs ol,
-  .page-navigation ul li {
+@media (width >= 576px) {
+  nav.breadcrumbs > ul,
+  nav.breadcrumbs > ol,
+  nav.page-navigation > ul > li {
     font-size: calc(0.92rem + 0.1vw);
   }
 }
 
-.search-container #Search .gsc-search-button {
+div.search-container > form#Search > button.gsc-search-button {
   color: #fff;
+}
+
+/* Side nav second level active styles */
+
+@media (width <= 991px) {
+  /* stylelint-disable-next-line selector-combinator-allowed-list */
+  aside.mobile-sidenav .side-navigation ul.list-navigation li ul li a.active {
+    color: var(--white);
+  }
 }
