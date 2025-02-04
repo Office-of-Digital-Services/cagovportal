@@ -155,7 +155,7 @@ header {
       outline-offset: -3px;
 
       > img.drawer-logo {
-        width: 232px;
+        width: 200px;
         filter: brightness(0) invert(1);
         aspect-ratio: 18/5;
       }
