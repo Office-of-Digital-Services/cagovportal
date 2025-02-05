@@ -159,7 +159,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
       </div>
       <div id="map"></div>
       <div id="map-credits"><a id="map-credits-a" href="#" title="${this.textAttribution}">${this.mapCredits}</a></div>
-      <div id="credits-tooltip" style="display:none;">${this.mapAttribution} ${this.tileAttribution} credits tooltip</div>
+      <div id="credits-tooltip" style="display:none;">${this.mapAttribution} ${this.tileAttribution} </div>
       `;
 
     // leaflet creates the L object on window
