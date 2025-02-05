@@ -24,6 +24,11 @@ lafires: true
   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
   crossorigin=""></script>
 <style>
+  .non-english-only:lang(en),
+  .english-only:not(:lang(en)) {
+    display: none;
+  }
+  
   .cagov-map-and-tiles {
     position: relative;
   }
@@ -206,7 +211,8 @@ lafires: true
               id="map-link-1"
               class="maps-link"
               href="https://maps.google.com/?q=123+UCLA+Drive,+Los+Angeles,+CA+90095"
-              >Directions<span class="sr-only">
+              ><span class="non-english-only">Driving </span>Directions<span
+                class="sr-only">
                 to UCLA Disaster Recovery Center</span
               ></a
             >
