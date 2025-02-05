@@ -918,22 +918,24 @@ lafires: true
 </div>
 
 <script>
-        document.getElementById("share-this-page").addEventListener("click", function(e) {
-          // get page url
-          let page_url = window.location.href;
-          // convert to shareable url
-          let share_url = page_url + "?share=true";
-          // Create proper ShareData object
-          navigator.share({
-            title: 'LA Fires Map',
-            text: 'Check out these LA Fires resources',
-            url: share_url
-          }).catch(err => {
-            console.error('Share failed:', err.message);
-          });
-          e.preventDefault();
-        });
-        document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("share-this-page").addEventListener("click", function(e) {
+    // get page url
+    let page_url = window.location.href;
+    // convert to shareable url
+    let share_url = page_url + "?share=true";
+    // Create proper ShareData object
+    navigator.share({
+      title: 'LA Fires Map',
+      text: 'Check out these LA Fires resources',
+      url: share_url
+    }).catch(err => {
+      console.error('Share failed:', err.message);
+    });
+    e.preventDefault();
+  });
+
+  // Save checkbox state to local storage
+  document.addEventListener("DOMContentLoaded", () => {
     const storageId = "plan-your-in-person-visit-checkboxStates";
     /** @type {NodeListOf<HTMLInputElement>} */
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
