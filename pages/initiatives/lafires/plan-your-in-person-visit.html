@@ -881,9 +881,9 @@ lafires: true
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3"
           type="checkbox"
           value=""
-          name="check39"
-          id="check39" />
-        <label class="form-check-label cursor-pointer" for="check39"
+          name="checkbox100"
+          id="checkbox100" />
+        <label class="form-check-label cursor-pointer" for="checkbox100"
           ><span class="bold">Replace your business records</span><br />
           <div
             class="font-weight-400 italic section-understated brd-solid-1 brd-gray-200 p-x py-1 rounded-10 font-size-14 m-t d-inline-block">
@@ -936,26 +936,25 @@ lafires: true
 
 
   //Checkboxes cookies
-  for (let i = 1; i <= 40; i++) {
-    let checkbox = document.getElementById(`check${i}`);
+  document.querySelectorAll(".form-check-input").forEach(checkbox => {
     checkbox.addEventListener("change", function(e) {
+      let checkboxId = this.id;
       if (this.checked) {
-        document.cookie = `check${i}=true; path=/`;
+        document.cookie = `${checkboxId}=true; path=/`;
       } else {
-        document.cookie = `check${i}=false; path=/`;
+        document.cookie = `${checkboxId}=false; path=/`;
       }
-     // console.log(`check${i}`, this.checked);
     });
-  }
+  });
 
   // load handler -- check cookie and set checkbox
   document.addEventListener("DOMContentLoaded", function() {
-    for (let i = 1; i <= 40; i++) {
-      let checkbox = document.getElementById(`check${i}`);
-      let cookie = document.cookie.split("; ").find(row => row.startsWith(`check${i}=`));
+    document.querySelectorAll(".form-check-input").forEach(checkbox => {
+      let checkboxId = checkbox.id;
+      let cookie = document.cookie.split("; ").find(row => row.startsWith(`${checkboxId}=`));
       if (cookie) {
         checkbox.checked = cookie.split("=")[1] === "true";
       }
-    }
+    });
   });
 </script>
