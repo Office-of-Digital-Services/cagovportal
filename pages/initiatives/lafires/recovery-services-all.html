@@ -30,29 +30,112 @@ keywords: LA, Los Angeles, fires, wildfires
 <div class="container p-y-lg">
   <div class="row">
     <!-- Sidebar Navigation -->
-    <div class="col-lg-3">{%- include "dynamic-sidenav.html" -%}</div>
 
     <!-- Main Content Area -->
-    <div class="col-lg-9 pt-lg-3">
-      <h2 class="mt-lg-0">Content based in what was chosen</h2>
+    <div class="col-lg-10 pt-lg-3">
+      <p class="lead">
+        Here are the services that meet your needs. We provides direct links or
+        information on how to get these services. You can also start over.
+      </p>
 
-      <div class="service" style="display: none;" id="inperson">
-        <h3>In-person support</h3>
+      <!--Short term section-->
+      <div id="Short-term" class="d-block">
+        <h2 class="color-p2-darker">Essential help</h2>
+
+        <div id="Replacing-your-personal-documents">
+          <h3>Replacing your personal documents</h3>
+
+          <div class="row">
+            <div class="col-lg-6 m-t-md">
+              <div
+                class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
+                <h4>Driver’s license and ID cards</h4>
+                <p class="department font-size-15 gray-600">
+                  Department of Motor Vehicles
+                </p>
+                <p>Fees are waived for licenses or IDs lost in the fires.</p>
+
+                <p>How to get this service:</p>
+
+                <ul>
+                  <li><a href="#">Online</a></li>
+                  <li><a href="#">In-person (kiosk)</a></li>
+                  <li><a href="#">Phone: 1-800-777-0133</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="service" style="display: none;" id="food">
-        <h3>Food</h3>
+      <!--Long term section-->
+
+      <div id="Long-term" class="d-block">
+        <h2 class="color-p2-darker">Start recovering</h2>
+
+        <div id="recovering-category">
+          <h3>Recovring category</h3>
+
+          <div class="row">
+            <div class="col-lg-6 m-t-md">
+              <div
+                class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
+                <h4>Driver’s license and ID cards</h4>
+                <p class="department font-size-15 gray-600">
+                  Department of Motor Vehicles
+                </p>
+                <p>Fees are waived for licenses or IDs lost in the fires.</p>
+
+                <p>How to get this service:</p>
+
+                <ul>
+                  <li><a href="#">Online</a></li>
+                  <li><a href="#">In-person (kiosk)</a></li>
+                  <li><a href="#">Phone: 1-800-777-0133</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-6 m-t-md">
+              <div
+                class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
+                <h4>Driver’s license and ID cards</h4>
+                <p class="department font-size-15 gray-600">
+                  Department of Motor Vehicles
+                </p>
+                <p>Fees are waived for licenses or IDs lost in the fires.</p>
+
+                <p>How to get this service:</p>
+
+                <ul>
+                  <li><a href="#">Online</a></li>
+                  <li><a href="#">In-person (kiosk)</a></li>
+                  <li><a href="#">Phone: 1-800-777-0133</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-6 m-t-md">
+              <div
+                class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
+                <h4>Driver’s license and ID cards</h4>
+                <p class="department font-size-15 gray-600">
+                  Department of Motor Vehicles
+                </p>
+                <p>Fees are waived for licenses or IDs lost in the fires.</p>
+
+                <p>How to get this service:</p>
+
+                <ul>
+                  <li><a href="#">Online</a></li>
+                  <li><a href="#">In-person (kiosk)</a></li>
+                  <li><a href="#">Phone: 1-800-777-0133</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const services = document.querySelectorAll(".service");
-    services.forEach(function(service) {
-      if (sessionStorage.getItem(service.id)) {
-        service.style.display = "block";
-      }
-    });
-  });
-</script>
