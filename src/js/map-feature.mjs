@@ -332,6 +332,13 @@ export class CaGovLAFiresMap extends window.HTMLElement {
       });
     }
 
+    // Add keyboard handler for ESC key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        this.closePopup();
+      }
+    });
+
     document.querySelector('#map-popup').style.display = 'block';
     let map_result_elem = document.querySelector('#map-results');
     if (map_result_elem) {
