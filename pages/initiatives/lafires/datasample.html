@@ -3,8 +3,9 @@ title: test data
 landing: Support
 layout: landing
 hidestatewidealert: true
-permalink: lafires/delme
+permalink: lafires/datasample
 lafires: true
+noindex: true
 ---
 
 <nav>
@@ -35,35 +36,25 @@ lafires: true
       <legend class="font-size-20 m-b-md">
         Select the types of services you’re looking for. Check all that apply.
       </legend>
-      <div class="form-check m-b p-l-0">
-        <input
-          class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
-          type="checkbox"
-          value=""
-          name="Short"
-          id="Short" />
-        <label class="form-check-label cursor-pointer lead m-l" for="Short"
-          ><span class="d-block"
-            ><span class="bold">Essential help:</span> Food, expenses, shelter,
-            and more.</span
-          >
-        </label>
-      </div>
+      {%- for item in lafires.recovery_services_finder |
+      pluck("Type_of_Service","Essential Help") -%}
 
       <div class="form-check m-b p-l-0">
         <input
           class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
           type="checkbox"
-          value=""
-          name="Long"
-          id="Long" />
-        <label class="form-check-label cursor-pointer lead m-l" for="Long"
+          id="check{{item.ID}}" />
+        <label
+          class="form-check-label cursor-pointer lead m-l"
+          for="check{{item.ID}}"
           ><span class="d-block"
-            ><span class="bold">Start recovering: </span> Insurance claims,
-            rebuilding. employment, and more.</span
+            ><span class="bold">{{item.Specific_Service}}:</span>
+            {{item.Entity}}</span
           >
         </label>
       </div>
+      {%- endfor -%}
+
       <a
         class="btn btn-outline-primary mt-2 btn-lg m-r-sm"
         href="/lafires/recovery-services-finder/">
@@ -79,7 +70,11 @@ lafires: true
   </form>
 </div>
 
-{%- set js -%}{%- include "./delme.html.mjs" -%}{%- endset -%}
+{%- set js -%}{%- include "./datasample.html.mjs" -%}{%- endset -%}
 <script type="module">
   {{- js | jsmin | safe }}
 </script>
+
+<pre>
+  {{lafires.recovery_services_finder | dump(2) | safe}}
+</pre>

@@ -230,7 +230,7 @@ module.exports = function (
 
   eleventyConfig.addDataExtension("csv", (/** @type {string} */ contents) =>
     parse(contents, {
-      columns: true,
+      columns: header => header.map(col => col.replace(/\s+/g, "_")),
       skip_empty_lines: true,
       cast: value =>
         ["true", "false"].includes(value) ? value === "true" : value //Boolean value parsing
