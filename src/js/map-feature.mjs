@@ -159,7 +159,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
       </div>
       <div id="map"></div>
       <div id="map-credits"><a id="map-credits-a" href="#" title="${this.textAttribution}">${this.mapCredits}</a></div>
-      <div id="credits-tooltip" style="display:none;">${this.mapAttribution} ${this.tileAttribution} credits tooltip</div>
+      <div id="credits-tooltip" style="display:none;">${this.mapAttribution} ${this.tileAttribution} </div>
       `;
 
     // leaflet creates the L object on window
@@ -387,7 +387,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
     this.data.forEach(item => {
       const latlng = L.latLng(item.lat, item.lng);
       if (cal_bounds.contains(latlng)) {
-        let marker = L.marker([item.lat, item.lng],{icon:this.regIcon, keyboard:false,riseOnHover:true,highlight: 'temporary'}).addTo(this.map);
+        let marker = L.marker([item.lat, item.lng],{icon:this.regIcon, keyboard:false,riseOnHover:true,highlight: 'temporary',alt:item.drc_name}).addTo(this.map);
         // marker.bindTooltip(item.tooltip || item.drc_name, {permanent: true, direction: item.tooltip_dir, interactive: true, offset: item.tooltip_offset}).openTooltip();
 
         let clickFunc = e => {

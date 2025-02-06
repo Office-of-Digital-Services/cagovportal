@@ -773,7 +773,7 @@ lafires: true
           </ul>
           <div
             class="font-weight-400 italic section-understated brd-solid-1 brd-gray-200 p-x py-1 rounded-10 font-size-14 m-t d-inline-block">
-            LA County Assessors Office
+            LA County Assessor's Office
           </div>
         </label>
       </div>
@@ -934,28 +934,36 @@ lafires: true
     e.preventDefault();
   });
 
+  // Save checkbox state to local storage
+  document.addEventListener("DOMContentLoaded", () => {
+    const storageId = "plan-your-in-person-visit-checkboxStates";
+    /** @type {NodeListOf<HTMLInputElement>} */
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
-  //Checkboxes cookies
-  for (let i = 1; i <= 40; i++) {
-    let checkbox = document.getElementById(`check${i}`);
-    checkbox.addEventListener("change", function(e) {
-      if (this.checked) {
-        document.cookie = `check${i}=true; path=/`;
-      } else {
-        document.cookie = `check${i}=false; path=/`;
-      }
-     // console.log(`check${i}`, this.checked);
-    });
-  }
+    function saveCheckboxState() {
+      const checkedIds = [...checkboxes]
+        .filter(checkbox => checkbox.checked)
+        .map(x => x.id);
 
-  // load handler -- check cookie and set checkbox
-  document.addEventListener("DOMContentLoaded", function() {
-    for (let i = 1; i <= 40; i++) {
-      let checkbox = document.getElementById(`check${i}`);
-      let cookie = document.cookie.split("; ").find(row => row.startsWith(`check${i}=`));
-      if (cookie) {
-        checkbox.checked = cookie.split("=")[1] === "true";
-      }
+      localStorage.setItem(storageId, JSON.stringify(checkedIds));
     }
+
+    function loadCheckboxState() {
+      /** @type {string[]} */
+      const checkedIds = JSON.parse(localStorage.getItem(storageId)) || [];
+
+      checkboxes.forEach(checkbox => {
+        const checked = checkedIds.includes(checkbox.id);
+
+        if (checkbox.checked !== checked) {
+          checkbox.checked = checked;
+        }
+      });
+    }
+    loadCheckboxState();
+
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener("change", saveCheckboxState);
+    });
   });
 </script>
