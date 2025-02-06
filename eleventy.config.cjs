@@ -1,6 +1,7 @@
 //@ts-check
 const defaultConfig = require("@11ty/eleventy/src/defaultConfig");
 const { minify } = require("terser");
+const { parse } = require("csv-parse/sync");
 const MarkdownIt = require("markdown-it");
 const postcss = require("postcss");
 const postcssNested = require("postcss-nested");
@@ -226,6 +227,15 @@ module.exports = function (
       });
     });
   });
+
+  eleventyConfig.addDataExtension("csv", (/** @type {string} */ contents) =>
+    parse(contents, {
+      columns: true,
+      skip_empty_lines: true,
+      cast: value =>
+        ["true", "false"].includes(value) ? value === "true" : value //Boolean value parsing
+    })
+  );
 
   //Start with default config, easier to configure 11ty later
   const config = defaultConfig(eleventyConfig);
