@@ -1,0 +1,58 @@
+---
+title: Get help in person
+landing: Support
+layout: landing
+dynamic_sidenavid: lafires
+hidestatewidealert: true
+permalink: /lafires/content/
+breadcrumbparent: 2025 Los Angeles Fires
+socialimage: https://www.ca.gov/images/lafires/la-fires-help.png
+socialimagealt: Five hands converging in the center of the image
+description: You can get help and advice in person at a Disaster Recovery Center.
+keywords: LA, Los Angeles, fires, wildfires
+---
+
+<div
+  class="section-understated lineart bg-s1"
+  style="background: url('/images/topic2-lineart.svg?v3vehrb') no-repeat right / auto;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0 m-b-0 color-p2-darker line-height-1em">
+      {{title}}<br />
+      <span class="subtitle color-p2-darker bold m-b-md"
+        >2025 Los Angeles Fires</span
+      >
+    </h1>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="container p-y-lg">
+  <div class="row">
+    <!-- Sidebar Navigation -->
+    <div class="col-lg-3">{%- include "dynamic-sidenav.html" -%}</div>
+
+    <!-- Main Content Area -->
+    <div class="col-lg-9 pt-lg-3">
+      <h2 class="mt-lg-0">Content based in what was chosen</h2>
+
+      <div class="service" style="display: none;" id="inperson">
+        <h3>In-person support</h3>
+      </div>
+
+      <div class="service" style="display: none;" id="food">
+        <h3>Food</h3>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const services = document.querySelectorAll(".service");
+    services.forEach(function(service) {
+      if (sessionStorage.getItem(service.id)) {
+        service.style.display = "block";
+      }
+    });
+  });
+</script>
