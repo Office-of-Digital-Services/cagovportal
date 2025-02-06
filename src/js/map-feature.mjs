@@ -362,7 +362,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
     this.data.forEach(item => {
       const latlng = L.latLng(item.lat, item.lng);
       if (cal_bounds.contains(latlng)) {
-        let marker = L.marker([item.lat, item.lng],{icon:this.regIcon, keyboard:false,riseOnHover:true,highlight: 'temporary',alt:item.drc_name}).addTo(this.map);
+        let marker = L.marker([item.lat, item.lng],{icon:this.regIcon, keyboard:true,riseOnHover:true,highlight: 'temporary',alt:item.drc_name}).addTo(this.map);
         // marker.bindTooltip(item.tooltip || item.drc_name, {permanent: true, direction: item.tooltip_dir, interactive: true, offset: item.tooltip_offset}).openTooltip();
 
         let clickFunc = e => {
@@ -378,6 +378,14 @@ export class CaGovLAFiresMap extends window.HTMLElement {
         };
 
         marker.on('click', clickFunc);
+        marker.on('keydown', e => {
+          let oe = e.originalEvent;
+          console.log("keydown", oe);
+          if (oe.key === 'Enter' || oe.key === 'Return') {
+            console.log("Enter or Return");
+            clickFunc(e);
+          }
+        });
         // marker._tooltip.on('click', clickFunc);
         // console.log("marker", marker);
         // marker.tooltip.on('click', clickFunc);
