@@ -1,7 +1,7 @@
 //@ts-check
 // Save checkbox state to local storage
 document.addEventListener("DOMContentLoaded", () => {
-  const storageId = "recovery-services-finder-checkboxStates";
+  const storageId = "recovery-services-finder-landing-checkboxStates";
   /** @type {NodeListOf<HTMLInputElement>} */
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
   const redirectButton = document.getElementById("redirect");
@@ -46,9 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function redirectToContent() {
     const individualCheckbox = document.getElementById("Individual");
     if (individualCheckbox.checked) {
-      window.location.href = "/lafires/recovery-services-finder/individual/";
+      window.location.href = "/lafires/recovery-services-individual/";
     } else {
-      window.location.href = "/lafires/recovery-services/";
+      window.location.href = "/lafires/recovery-services-business/";
     }
   }
 
