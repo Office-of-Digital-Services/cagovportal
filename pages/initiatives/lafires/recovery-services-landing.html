@@ -94,8 +94,8 @@ keywords: LA, Los Angeles, fires, wildfires
   </div>
 </div>
 
-{%- set js -%}{%- include "./recovery-services-landing.html.mjs" -%}{%- endset
--%}
+{%- set js -%}{%- include "./recovery-services-shared.mjs" -%}{%- include
+"./recovery-services-landing.html.mjs" -%}{%- endset -%}
 <script type="module">
   {{- js | jsmin | safe }}
 </script>
