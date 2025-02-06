@@ -38,99 +38,25 @@ keywords: LA, Los Angeles, fires, wildfires
             <legend class="font-size-20 m-b-md">
               Select all the items you need.
             </legend>
+
+            {%- for category in lafires.recovery_services_categories |
+            pluck("Type_of_service","Essential help") -%}
             <div class="d-flex m-b p-l-0">
               <input
                 class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
                 type="checkbox"
                 value=""
-                name="Housing"
-                id="Housing" />
+                id="Category_{{category.ID}}" />
               <label
                 class="form-check-label cursor-pointer lead m-l"
-                for="Housing"
+                for="Category_{{category.ID}}"
                 ><span class="d-block"
-                  ><span class="bold">Housing:</span> Shelters, temporary
-                  housing, mortgage relief</span
+                  ><span class="bold">{{category.Category}}:</span>
+                  {{category.Category_Description}}</span
                 >
               </label>
             </div>
-
-            <div class="d-flex m-b p-l-0">
-              <input
-                class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
-                type="checkbox"
-                value=""
-                name="Food"
-                id="Food" />
-              <label class="form-check-label cursor-pointer lead m-l" for="Food"
-                ><span class="d-block"
-                  ><span class="bold">Food: </span> Food or food benefits</span
-                >
-              </label>
-            </div>
-
-            <div class="d-flex m-b p-l-0">
-              <input
-                class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
-                type="checkbox"
-                value=""
-                name="Pets"
-                id="Pets" />
-              <label class="form-check-label cursor-pointer lead m-l" for="Pets"
-                ><span class="d-block"
-                  ><span class="bold">Pets: </span> Lost or found a pet, and
-                  more</span
-                >
-              </label>
-            </div>
-
-            <div class="d-flex m-b p-l-0">
-              <input
-                class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
-                type="checkbox"
-                value=""
-                name="Health"
-                id="Health" />
-              <label
-                class="form-check-label cursor-pointer lead m-l"
-                for="Health"
-                ><span class="d-block"
-                  ><span class="bold">Health: </span> Staying healthy</span
-                >
-              </label>
-            </div>
-
-            <div class="d-flex m-b p-l-0">
-              <input
-                class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
-                type="checkbox"
-                value=""
-                name="help"
-                id="help" />
-              <label class="form-check-label cursor-pointer lead m-l" for="help"
-                ><span class="d-block"
-                  ><span class="bold">Individual help: </span> State and federal
-                  (FEMA) programs that help disaster survivors</span
-                >
-              </label>
-            </div>
-
-            <div class="d-flex m-b p-l-0">
-              <input
-                class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
-                type="checkbox"
-                value=""
-                name="Personal"
-                id="Personal" />
-              <label
-                class="form-check-label cursor-pointer lead m-l"
-                for="Personal"
-                ><span class="d-block"
-                  ><span class="bold">Personal documents: </span> Driver’s
-                  license, birth, death, and marriage records</span
-                >
-              </label>
-            </div>
+            {%-endfor-%}
 
             <a
               class="btn btn-outline-primary mt-2 btn-lg m-r-sm"
@@ -150,7 +76,8 @@ keywords: LA, Los Angeles, fires, wildfires
   </div>
 </div>
 
-{%- set js -%}{%- include "./recovery-services-short.html.mjs" -%}{%- endset -%}
+{%- set js -%}{%- include "./recovery-services-shared.mjs" -%}{%- include
+"./recovery-services-short.html.mjs" -%}{%- endset -%}
 <script type="module">
   {{- js | jsmin | safe }}
 </script>
