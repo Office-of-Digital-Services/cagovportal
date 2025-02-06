@@ -1,0 +1,20 @@
+ID,Audience,Term,Type of Service,Category,Specific Service,Entity Type,Entity,Entity Acronym
+1,Business,Long-Term,Start Recovering,Personal Documents,Replace Business Records,County,LA County Registrar Recorder / County Clerk,LA RR/CC
+2,Business,Long-Term,Start Recovering,Business Help,Help for Businesses,County,LA County Department of Economic Opportunity,LA DEO
+3,Individual,Both,Essential Help,Food,Food Benefits,County,LA County Department of Public Social Services,LA DPSS
+4,Individual,Short-Term,Essential Help,Health,N95s and Public Health Info,County,LA County Department of Public Health,LA DPH
+5,Individual,Short-Term,Essential Help,Health,Access Medical Services,County,LA County Department of Public Health,LA DPH
+6,Individual,Both,Essential Help,Health,Medi-Cal,County,LA County Department of Public Social Services,LA DPSS
+7,Individual,Both,Essential Help,Health,Mental Health Resources,County,LA County Department of Mental Health,LA DMH
+8,Individual,Both,Essential Help,Health,Elderly and Disabled Care,County,LA County Aging & Disabilities Department,LA AD
+9,Individual,Short-Term,Essential Help,Housing,Help with housing,County,Los Angeles County 211,LA County
+10,Individual,Short-Term,Essential Help,Housing,Temporary Housing,County,LA County Department of Public Social Services,LA DPSS
+11,Individual,Both,Essential Help,Housing,Housing Protections,County,LA County Department of Consumer & Business Affairs,LA DCBA
+12,Individual,Short-Term,Essential Help,Personal Documents,Vital Documents,County,LA County Registrar Recorder / County Clerk,LA RR/CC
+13,Both,Short-Term,Essential Help,Personal Documents,Replace Property Records,County,LA County Registrar Recorder / County Clerk,LA RR/CC
+14,Both,Long-Term,Start Recovering,Rebuilding Help,Property Clearing,County,LA County Public Works,LA DPW
+15,Both,Long-Term,Start Recovering,Rebuilding Help,"Start Rebuilding, Intake & Zoning",County,LA County Department of Regional Planning,LA DRP
+16,Both,Long-Term,Start Recovering,Rebuilding Help,Rebuilding Permits,County,LA County Public Works,LA DPW
+17,,Long-Term,Start Recovering,Rebuilding Help,Case Management and Referrals,County,Los Angeles County 211,LA County
+18,Both,Long-Term,Start Recovering,Taxes,Property Reassessment,County,LA County Assessor's Office,LA Assessor
+19,Individual,Short-Term,Essential Help,Social Services,Child Support Questions,County,LA County Child Support Services,LA CSSD
