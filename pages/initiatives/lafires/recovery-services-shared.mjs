@@ -12,6 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
     ...document.querySelectorAll('input[type="checkbox"]')
   ]);
 
+  function updateButtonState() {
+    const redirectButton = document.getElementById("redirect");
+    if (!redirectButton) return;
+    const anyChecked = checkboxes.some(cb => cb.checked);
+    if (anyChecked) {
+      redirectButton.classList.remove("disabled");
+    } else {
+      redirectButton.classList.add("disabled");
+    }
+  }
+
   function saveCheckboxState() {
     const pageCheckIds = checkboxes.map(chk => chk.id);
 
@@ -36,10 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   applyCheckboxStates();
+  updateButtonState();
 
   checkboxes.forEach(checkbox => {
     checkbox.addEventListener("change", () => {
       saveCheckboxState();
+      updateButtonState();
     });
   });
 });

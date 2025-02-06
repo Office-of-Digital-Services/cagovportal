@@ -75,6 +75,8 @@ keywords: LA, Los Angeles, fires, wildfires
             <button
               class="btn btn-primary disabled mt-2 btn-lg"
               role="button"
+              type="button"
+              onclick="customClick()"
               id="redirect">
               Continue
             </button>
@@ -94,8 +96,18 @@ keywords: LA, Los Angeles, fires, wildfires
   </div>
 </div>
 
-{%- set js -%}{%- include "./recovery-services-shared.mjs" -%}{%- include
-"./recovery-services-landing.html.mjs" -%}{%- endset -%}
+{%- set js -%}{%- include "./recovery-services-shared.mjs" -%}{%- endset -%}
 <script type="module">
   {{- js | jsmin | safe }}
+</script>
+
+<script>
+  function customClick() {
+    const individualCheckbox = document.getElementById("Individual");
+    if (individualCheckbox.checked) {
+      window.location.href = "/lafires/recovery-services-individual/";
+    } else {
+      window.location.href = "/lafires/recovery-services-business/";
+    }
+  }
 </script>
