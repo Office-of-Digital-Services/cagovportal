@@ -157,7 +157,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
           </div>
         </div>
       </div>
-      <div id="map"></div>
+      <div id="map" aria-label="Los Angeles area map"></div>
       <div id="map-credits"><a id="map-credits-a" href="#" title="${this.textAttribution}">${this.mapCredits}</a></div>
       <div id="credits-tooltip" style="display:none;">${this.mapAttribution} ${this.tileAttribution} </div>
       `;
