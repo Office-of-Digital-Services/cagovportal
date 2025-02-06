@@ -13,28 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function saveCheckboxState() {
-    const existingStates = getCheckboxStates();
-    const uncheckedIds = checkboxes
-      .filter(chk => !chk.checked)
-      .map(chk => chk.id);
-    const checkedIds = checkboxes.filter(chk => chk.checked).map(chk => chk.id);
+    const pageCheckIds = checkboxes.map(chk => chk.id);
 
-    // Remove uncheckedIds from existingStates
-    uncheckedIds.forEach(id => {
-      const index = existingStates.indexOf(id);
-      if (index !== -1) {
-        existingStates.splice(index, 1);
-      }
-    });
+    const newStates = [
+      ...checkboxes.filter(chk => chk.checked).map(chk => chk.id),
+      ...getCheckboxStates().filter(id => !pageCheckIds.includes(id))
+    ].sort();
 
-    // Add any missing checkedIds to existingStates
-    checkedIds.forEach(id => {
-      if (!existingStates.includes(id)) {
-        existingStates.push(id);
-      }
-    });
-
-    sessionStorage?.setItem(storageId, JSON.stringify(existingStates));
+    sessionStorage?.setItem(storageId, JSON.stringify(newStates));
   }
 
   function applyCheckboxStates() {
@@ -50,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   applyCheckboxStates();
-  console.log("here 2");
+
   checkboxes.forEach(checkbox => {
     checkbox.addEventListener("change", () => {
       saveCheckboxState();
