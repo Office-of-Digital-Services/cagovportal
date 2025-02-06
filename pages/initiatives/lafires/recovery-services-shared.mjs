@@ -1,16 +1,16 @@
 //@ts-check
+const checkboxStateStorageId = "recovery-services-finder-checkboxStates";
+function getCheckboxStates() {
+  return /** @type {string[]} */ (
+    JSON.parse(sessionStorage?.getItem(checkboxStateStorageId) || "[]") || []
+  );
+}
+
 // Save checkbox state to local storage
 document.addEventListener("DOMContentLoaded", () => {
-  const storageId = "recovery-services-finder-checkboxStates";
   const checkboxes = /** @type {HTMLInputElement[]} */ ([
     ...document.querySelectorAll('input[type="checkbox"]')
   ]);
-
-  function getCheckboxStates() {
-    return /** @type {string[]} */ (
-      JSON.parse(sessionStorage?.getItem(storageId) || "[]") || []
-    );
-  }
 
   function saveCheckboxState() {
     const pageCheckIds = checkboxes.map(chk => chk.id);
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ...getCheckboxStates().filter(id => !pageCheckIds.includes(id))
     ].sort();
 
-    sessionStorage?.setItem(storageId, JSON.stringify(newStates));
+    sessionStorage?.setItem(checkboxStateStorageId, JSON.stringify(newStates));
   }
 
   function applyCheckboxStates() {
