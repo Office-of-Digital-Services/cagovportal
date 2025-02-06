@@ -17,7 +17,12 @@ keywords: LA, Los Angeles, fires, wildfires
   style="background: url('/images/lafires/recovery-finder-lineart.svg?v2') no-repeat right / auto;">
   <div class="container p-y-md">
     {%- include "breadcrumbs.html" -%}
-    <h1 class="m-t-0 m-b-md color-white line-height-1em">{{title}}<br /></h1>
+    <h1 class="m-t-0 m-b-md color-white">
+      Recovery services finder<br />
+      <span class="font-size-30 color-white font-weight-400 m-b-md"
+        >Your customized services plans</span
+      >
+    </h1>
 
     <a href="/lafires/get-help-online/" class="color-white"
       ><span
@@ -37,7 +42,16 @@ keywords: LA, Los Angeles, fires, wildfires
     <div class="col-lg-10 pt-lg-3">
       <p class="lead">
         Here are the services that meet your needs. We provides direct links or
-        information on how to get these services. You can also start over.
+        information on how to get these services. You can also
+        <a href="/lafires/recovery-services-finder/">start over</a>.
+      </p>
+
+      <p>
+        <a
+          class="btn btn-outline-primary rounded-4 brd-solid-2 p-x-lg"
+          onclick="window.print(); return false;"
+          >Print your plan</a
+        >
       </p>
 
       {%- for category in lafires.recovery_services_types -%}
@@ -78,7 +92,7 @@ keywords: LA, Los Angeles, fires, wildfires
           Check out the
           <a href="https://wildfires.betterangels.la/"
             >LA Disaster Relief Navigator tool</a
-          >, a user-friendly community resource hub
+          >, a user-friendly community resource hub.
         </p>
       </div>
     </div>
