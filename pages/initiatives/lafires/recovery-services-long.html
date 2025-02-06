@@ -38,90 +38,27 @@ keywords: LA, Los Angeles, fires, wildfires
             <legend class="font-size-20 m-b-md">
               Select all the items you need.
             </legend>
-            <div class="d-flex m-b p-l-0">
-              <input
-                class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
-                type="checkbox"
-                value=""
-                name="Returning"
-                id="Returning" />
-              <label
-                class="form-check-label cursor-pointer lead m-l"
-                for="Returning"
-                ><span class="d-block"
-                  ><span class="bold">Returning home:</span> Assessments,
-                  cleanup, debris removal</span
-                >
-              </label>
-            </div>
+
+            {%- for category in lafires.recovery_services_categories |
+            pluck("Type_of_service","Start recovering") -%}
 
             <div class="d-flex m-b p-l-0">
               <input
                 class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
                 type="checkbox"
                 value=""
-                name="Insurance"
-                id="Insurance" />
+                id="category_{{category.ID}}" />
               <label
                 class="form-check-label cursor-pointer lead m-l"
-                for="Insurance"
+                for="category_{{category.ID}}"
                 ><span class="d-block"
-                  ><span class="bold">Insurance: </span> Home insurance and
-                  insurance claims</span
+                  ><span class="bold">{{category.Category}}:</span>
+                  {{category.Category_Description}}</span
                 >
               </label>
             </div>
 
-            <div class="d-flex m-b p-l-0">
-              <input
-                class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
-                type="checkbox"
-                value=""
-                name="Rebuilding"
-                id="Rebuilding" />
-              <label
-                class="form-check-label cursor-pointer lead m-l"
-                for="Rebuilding"
-                ><span class="d-block"
-                  ><span class="bold">Rebuilding: </span> Find a contractor,
-                  verify a professional license</span
-                >
-              </label>
-            </div>
-
-            <div class="d-flex m-b p-l-0">
-              <input
-                class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
-                type="checkbox"
-                value=""
-                name="Employment"
-                id="Employment" />
-              <label
-                class="form-check-label cursor-pointer lead m-l"
-                for="Employment"
-                ><span class="d-block"
-                  ><span class="bold">Employment: </span> Unemployment,
-                  disability, find a job</span
-                >
-              </label>
-            </div>
-
-            <div class="d-flex m-b p-l-0">
-              <input
-                class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
-                type="checkbox"
-                value=""
-                name="Employment"
-                id="Employment" />
-              <label
-                class="form-check-label cursor-pointer lead m-l"
-                for="Employment"
-                ><span class="d-block"
-                  ><span class="bold">Taxes: </span> Relief for income and
-                  property taxes</span
-                >
-              </label>
-            </div>
+            {%-endfor-%}
             <a
               class="btn btn-outline-primary mt-2 btn-lg m-r-sm"
               href="/lafires/recovery-services-individual/">
@@ -139,3 +76,8 @@ keywords: LA, Los Angeles, fires, wildfires
     </div>
   </div>
 </div>
+
+{%- set js -%}{%- include "./recovery-services-shared.mjs" -%}{%- endset -%}
+<script type="module">
+  {{- js | jsmin | safe }}
+</script>
