@@ -38,21 +38,22 @@ keywords: LA, Los Angeles, fires, wildfires
         information on how to get these services. You can also start over.
       </p>
 
-      <!--Short term section-->
-      <div id="Short-term" class="d-block">
-        <h2 class="color-p2-darker">Essential help</h2>
+      {%- for category in lafires.recovery_services_types -%}
+
+      <div class="d-block">
+        <h2 class="color-p2-darker">{{category.Type_of_Service}}</h2>
 
         <div id="Replacing-your-personal-documents">
-          <h3>Replacing your personal documents</h3>
+          <h3>{{category.Description}}</h3>
 
           <div class="row">
+            {%- for item in lafires.recovery_services_finder |
+            pluck("Type_of_Service",category.Type_of_Service) -%}
             <div class="col-lg-6 m-t-md">
               <div
                 class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
-                <h4>Driver’s license and ID cards</h4>
-                <p class="department font-size-15 gray-600">
-                  Department of Motor Vehicles
-                </p>
+                <h4>{{item.Specific_Service}}</h4>
+                <p class="department font-size-15 gray-600">{{item.Entity}}</p>
                 <p>Fees are waived for licenses or IDs lost in the fires.</p>
 
                 <p>How to get this service:</p>
@@ -64,78 +65,19 @@ keywords: LA, Los Angeles, fires, wildfires
                 </ul>
               </div>
             </div>
+            {%- endfor -%}
           </div>
         </div>
       </div>
-
-      <!--Long term section-->
-
-      <div id="Long-term" class="d-block">
-        <h2 class="color-p2-darker">Start recovering</h2>
-
-        <div id="recovering-category">
-          <h3>Recovring category</h3>
-
-          <div class="row">
-            <div class="col-lg-6 m-t-md">
-              <div
-                class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
-                <h4>Driver’s license and ID cards</h4>
-                <p class="department font-size-15 gray-600">
-                  Department of Motor Vehicles
-                </p>
-                <p>Fees are waived for licenses or IDs lost in the fires.</p>
-
-                <p>How to get this service:</p>
-
-                <ul>
-                  <li><a href="#">Online</a></li>
-                  <li><a href="#">In-person (kiosk)</a></li>
-                  <li><a href="#">Phone: 1-800-777-0133</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-6 m-t-md">
-              <div
-                class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
-                <h4>Driver’s license and ID cards</h4>
-                <p class="department font-size-15 gray-600">
-                  Department of Motor Vehicles
-                </p>
-                <p>Fees are waived for licenses or IDs lost in the fires.</p>
-
-                <p>How to get this service:</p>
-
-                <ul>
-                  <li><a href="#">Online</a></li>
-                  <li><a href="#">In-person (kiosk)</a></li>
-                  <li><a href="#">Phone: 1-800-777-0133</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-6 m-t-md">
-              <div
-                class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
-                <h4>Driver’s license and ID cards</h4>
-                <p class="department font-size-15 gray-600">
-                  Department of Motor Vehicles
-                </p>
-                <p>Fees are waived for licenses or IDs lost in the fires.</p>
-
-                <p>How to get this service:</p>
-
-                <ul>
-                  <li><a href="#">Online</a></li>
-                  <li><a href="#">In-person (kiosk)</a></li>
-                  <li><a href="#">Phone: 1-800-777-0133</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {%- endfor -%}
     </div>
   </div>
 </div>
+
+<pre>
+  {{lafires.recovery_services_types | dump(2) | safe}}
+</pre>
+
+<pre>
+  {{lafires.recovery_services_finder | dump(2) | safe}}
+</pre>
