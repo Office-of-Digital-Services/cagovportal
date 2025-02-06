@@ -1,7 +1,7 @@
 ---
 title: Recovery services finder short-term
 landing: Support
-layout: page
+layout: landing
 dynamic_sidenavid: lafires
 hidestatewidealert: true
 permalink: /lafires/recovery-services-short-term/
@@ -12,76 +12,87 @@ description: You can get help and advice in person at a Disaster Recovery Center
 keywords: LA, Los Angeles, fires, wildfires
 ---
 
-<nav>
-  <a href="javascript:;" aria-hidden="true" class="d-none"
-    >Recovery services finder</a
-  >
-  <ul class="list-navigation">
-    <li>
-      <a href="/lafires/get-help-online/" class="landing back"
-        >Back to Get help online</a
-      >
-    </li>
-  </ul>
-</nav>
-<h1 class="color-p2-darker">Recovery services finder</h1>
-<p class="lead">
-  Recovering after a disaster can be confusing. Use this to get a personalized
-  list of services you need. Just take 2 minutes and answer a few questions.
-</p>
-
 <div
-  class="bg-white mt-5 px-4 p-b-md pos-rel h-100 brd-solid-4 brd-gray-200 rounded">
-  <h2 class="h3 color-p2-darker mt-4">
-    What type of services are you looking for?
-  </h2>
-  <form>
-    <fieldset class="p-a-sm">
-      <legend class="font-size-20 m-b-md">
-        Select the types of services you’re looking for. Check all that apply.
-      </legend>
-      <div class="form-check m-b p-l-0">
-        <input
-          class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
-          type="checkbox"
-          value=""
-          name="Short"
-          id="Short" />
-        <label class="form-check-label cursor-pointer lead m-l" for="Short"
-          ><span class="d-block"
-            ><span class="bold">Essential help:</span> Food, expenses, shelter,
-            and more.</span
-          >
-        </label>
-      </div>
+  class="section-primary lineart bg-p2"
+  style="background: url('/images/lafires/recovery-finder-lineart.svg?v2') no-repeat right / auto;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0 m-b-md color-white line-height-1em">{{title}}<br /></h1>
 
-      <div class="form-check m-b p-l-0">
-        <input
-          class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
-          type="checkbox"
-          value=""
-          name="Long"
-          id="Long" />
-        <label class="form-check-label cursor-pointer lead m-l" for="Long"
-          ><span class="d-block"
-            ><span class="bold">Start recovering: </span> Insurance claims,
-            rebuilding. employment, and more.</span
-          >
-        </label>
+    <a href="/lafires/get-help-online/" class="color-white"
+      ><span
+        class="ca-gov-icon-caret-left d-inline-block no-underline font-size-20"
+        aria-hidden="true"></span
+      >Back to Get help online</a
+    >
+  </div>
+</div>
+
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-lg-10">
+      <p class="lead">
+        Recovering after a disaster can be confusing. Use this to get a
+        personalized list of services you need. Just take 2 minutes and answer a
+        few questions.
+      </p>
+      <div class="bg-white mt-5 px-4 p-b-md brd-solid-4 brd-gray-200 rounded">
+        <h2 class="h3 color-p2-darker mt-4">
+          What type of services are you looking for?
+        </h2>
+        <form>
+          <fieldset class="p-a-sm">
+            <legend class="font-size-20 m-b-md">
+              Select the types of services you’re looking for. Check all that
+              apply.
+            </legend>
+            <div class="form-check m-b p-l-0">
+              <input
+                class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
+                type="checkbox"
+                value=""
+                name="Short"
+                id="Short" />
+              <label
+                class="form-check-label cursor-pointer lead m-l"
+                for="Short"
+                ><span class="d-block"
+                  ><span class="bold">Essential help:</span> Food, expenses,
+                  shelter, and more.</span
+                >
+              </label>
+            </div>
+
+            <div class="form-check m-b p-l-0">
+              <input
+                class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
+                type="checkbox"
+                value=""
+                name="Long"
+                id="Long" />
+              <label class="form-check-label cursor-pointer lead m-l" for="Long"
+                ><span class="d-block"
+                  ><span class="bold">Start recovering: </span> Insurance
+                  claims, rebuilding. employment, and more.</span
+                >
+              </label>
+            </div>
+            <a
+              class="btn btn-outline-primary mt-2 btn-lg m-r-sm"
+              href="/lafires/recovery-services-finder/">
+              Back
+            </a>
+            <button
+              class="btn btn-primary disabled mt-2 btn-lg"
+              role="button"
+              id="redirect">
+              Continue
+            </button>
+          </fieldset>
+        </form>
       </div>
-      <a
-        class="btn btn-outline-primary mt-2 btn-lg m-r-sm"
-        href="/lafires/recovery-services-finder/">
-        Back
-      </a>
-      <button
-        class="btn btn-primary disabled mt-2 btn-lg"
-        role="button"
-        id="redirect">
-        Continue
-      </button>
-    </fieldset>
-  </form>
+    </div>
+  </div>
 </div>
 
 {%- set js -%}{%- include "./recovery-services-short.html.mjs" -%}{%- endset -%}
