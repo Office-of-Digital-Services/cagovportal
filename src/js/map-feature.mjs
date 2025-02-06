@@ -27,9 +27,9 @@ let displayData = [
 
 const tile_template =
   "https://d1436ootlg562q.cloudfront.net/tiles/calstamen/{z}/{x}/{y}{r}.png";
-const max_zoom = 15;
-const poi_near_max_zoom = 15;
-const poi_far_max_zoom = 8; // 6.5;
+const max_zoom = 14.9; // was 15
+// const poi_near_max_zoom = 14; // was 15
+// const poi_far_max_zoom = 8; // 6.5;
 const initial_center = [34.1063498,-118.3132151]; // 34.1279264,-118.5711749
 const initial_zoom = 10;
 
@@ -214,36 +214,11 @@ export class CaGovLAFiresMap extends window.HTMLElement {
     this.note_popup = undefined;
 
     // dynamic map zoom to prevent zooming into areas for with no POIs, where we have no tiles.
-    this.map.on(
-      "moveend",
-      () => {
-        // leave in for future debugging
-        // console.log(
-        //   "center",
-        //   this.map.getCenter().toString(),
-        //   "zoom",
-        //   this.map.getZoom()
-        // );
-        if (this.data == undefined) {
-          // early return if this.data not yet loaded
-          return;
-        }
-        let poi_is_near = false;
-        const bbox = this.map.getBounds().pad(0.3); // padding provides some slack...
-        for (let i = 0; i < this.data.length; ++i) {
-          // using a loop to benefit from early break
-          const latlng = L.latLng(this.data[i].lat, this.data[i].lng);
-          // if lat,lng is onscreen
-          if (bbox.contains(latlng)) {
-            poi_is_near = true;
-            break;
-          }
-        }
-        const mz = poi_is_near ? poi_near_max_zoom : poi_far_max_zoom;
-        this.map.setMaxZoom(mz);
-        console.log("map set max zoom", mz);
-      }
-    );
+    // this.map.on(
+    //   "moveend",
+    //   () => {
+    //   }
+    // );
 
 
     this.map.on('touchmove',
