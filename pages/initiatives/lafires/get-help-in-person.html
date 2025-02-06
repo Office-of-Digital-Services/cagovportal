@@ -155,9 +155,16 @@ lafires: true
     font-weight: 700;
     color: #207AC9 !important;
   }
-  .skip-map {
-    margin-bottom: 2rem;
-    display: block;
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 </style>
 
@@ -193,7 +200,7 @@ lafires: true
       <nav class="page-navigation m-t-lg"></nav>
 
       <h3 class="mt-4">Find the nearest Disaster Recovery Center</h3>
-      <a class="skip-map" href="#recovery-center-cards">(skip map)</a>
+      <a class="sr-only skip-map" href="#recovery-center-cards">(skip map)</a>
 
       <div class="cagov-map-and-tiles">
         <cagov-lafires-map></cagov-lafires-map>
