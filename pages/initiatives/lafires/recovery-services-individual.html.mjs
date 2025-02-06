@@ -44,11 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function redirectToContent() {
-    const individualCheckbox = document.getElementById("Individual");
+    const individualCheckbox = document.getElementById("Short");
     if (individualCheckbox.checked) {
-      window.location.href = "/lafires/recovery-services-individual/";
+      window.location.href = "/lafires/recovery-services-short-term/";
     } else {
-      window.location.href = "/lafires/recovery-services-business/";
+      window.location.href = "/lafires/recovery-services-long-term/";
     }
   }
 
