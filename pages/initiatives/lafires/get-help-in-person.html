@@ -39,12 +39,12 @@ lafires: true
   }
   #map-credits {
     text-align: right;
-    font-size: 0.8rem;
+    font-size: 16px; /* 0.8rem; */
     margin-top: 0.25rem;
   }
 
   #credits-tooltip {
-    font-size: 0.8rem;
+    font-size: 16px; /* 0.8rem; */
     text-align: right;
   }
 
@@ -84,8 +84,8 @@ lafires: true
     }
     .provider-card.popup {
       width: 100%;
-      top: 512px;
-      max-height: 512px;
+      /* top: 512px;
+      max-height: 512px; */
     }
    }
    .provider-info div {
@@ -188,7 +188,7 @@ lafires: true
 
       <nav class="page-navigation m-t-lg"></nav>
 
-      <h2 class="mt-4">Find the nearest Disaster Recovery Center</h2>
+      <h3 class="mt-4">Find the nearest Disaster Recovery Center</h3>
 
       <div class="cagov-map-and-tiles">
         <cagov-lafires-map></cagov-lafires-map>
@@ -350,7 +350,7 @@ lafires: true
 <script>
     const locations = [
     { id: 'map-link-1', address: '10850 West Pico Blvd, Los Angeles, CA 90064' },
-    { id: 'map-link-2', address: '3035 E. Foothill Blvd, Pasadena, CA 91107' },
+    // { id: 'map-link-2', address: '3035 E. Foothill Blvd, Pasadena, CA 91107' },
     { id: 'map-link-3', address: '540 W. Woodbury Road, Altadena, CA 91001' }
   ];
 
