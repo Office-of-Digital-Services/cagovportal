@@ -87,7 +87,7 @@ keywords: LA, Los Angeles, fires, wildfires
 
 <script>
   const next = "/lafires/recovery-services-all/";
-  const data = getCheckboxStates();
+  const data = window.getCheckboxStates();
 
   if (!data.includes("Business")) {
     window.location.replace(next);

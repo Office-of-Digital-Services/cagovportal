@@ -8,3 +8,8 @@ if (clearVarsButton) {
     window.location.href = "/lafires/recovery-services-finder/";
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const data = /** @type {string[]} */ (window["getCheckboxStates"]());
+  console.log("yo", data);
+});
