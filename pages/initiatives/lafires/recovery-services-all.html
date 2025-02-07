@@ -56,17 +56,21 @@ keywords: LA, Los Angeles, fires, wildfires
         >
       </p>
 
-      {%- for serice_type in lafires.recovery_services_types -%}
+      {%- for service_type in lafires.recovery_services_types -%}
 
       <div class="d-block">
-        <h2 class="color-p2-darker">{{serice_type.Type_of_Service}}</h2>
+        <h2 class="color-p2-darker">{{service_type.Type_of_Service}}</h2>
+
+        {%- for service_category in lafires.recovery_services_categories |
+        pluck("Type_of_Service",service_type.Type_of_Service) -%}
 
         <div id="Replacing-your-personal-documents">
-          <h3>{{serice_type.Description}}</h3>
+          <h3>{{service_category.Category}}</h3>
+          <p>{{service_category.Category_Description}}</p>
 
           <div class="row">
             {%- for item in lafires.recovery_services_finder |
-            pluck("Type_of_Service",serice_type.Type_of_Service) -%}
+            pluck("Category",service_category.Category) -%}
             <div class="col-lg-6 m-t-md">
               <div
                 class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
@@ -102,6 +106,7 @@ keywords: LA, Los Angeles, fires, wildfires
             {%- endfor -%}
           </div>
         </div>
+        {%- endfor -%}
       </div>
       {%- endfor -%}
 
@@ -126,11 +131,7 @@ keywords: LA, Los Angeles, fires, wildfires
   {{lafires.recovery_services_finder | dump(2) | safe}}
 </pre>
 
+{%- set js -%}{%- include "./recovery-services-all.html.js" -%}{%- endset -%}
 <script>
-  document.querySelector('.clearVars').addEventListener('click', function(event) {
-    event.preventDefault();
-    sessionStorage.clear();
-    localStorage.clear();
-    window.location.href = '/lafires/recovery-services-finder/';
-  });
+  {{- js | jsmin | safe }}
 </script>
