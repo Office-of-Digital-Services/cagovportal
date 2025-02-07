@@ -74,11 +74,12 @@ keywords: LA, Los Angeles, fires, wildfires
                 >
               </label>
             </div>
-            <a
-              class="btn btn-outline-primary mt-4 btn-lg px-5 m-r-sm "
-              href="/lafires/recovery-services-finder/">
+            <button
+              class="btn btn-outline-primary mt-4 btn-lg px-5 m-r-sm"
+              type="button"
+              onclick="window.history.back()">
               Back
-            </a>
+            </button>
             <button
               class="btn btn-primary disabled mt-4 btn-lg px-5"
               role="button"
@@ -95,17 +96,18 @@ keywords: LA, Los Angeles, fires, wildfires
 </div>
 
 {%- set js -%}{%- include "./recovery-services-shared.mjs" -%}{%- endset -%}
-<script type="module">
+<script>
   {{- js | jsmin | safe }}
 </script>
 
 <script>
+  const next = "/lafires/recovery-services-short-term/";
+  const data = getCheckboxStates();
+  if (!data.includes("Individual")) {
+    window.location.replace(next);
+  }
+
   function customClick() {
-    const individualCheckbox = document.getElementById("Short");
-    if (individualCheckbox.checked) {
-      window.location.href = "/lafires/recovery-services-short-term/";
-    } else {
-      window.location.href = "/lafires/recovery-services-long-term/";
-    }
+    window.location.href = next;
   }
 </script>
