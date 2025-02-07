@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     clearVarsButton.addEventListener("click", event => {
       event.preventDefault();
       sessionStorage.clear();
-      localStorage.clear();
       window.location.href = "/lafires/recovery-services-finder/";
     });
   }
@@ -20,5 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ...document.querySelectorAll(classes)
   ]).forEach(el => {
     el.style.display = "block";
+    el.ariaHidden = null;
+    el.hidden = false;
   });
 });
