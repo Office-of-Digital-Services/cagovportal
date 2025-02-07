@@ -1,15 +1,24 @@
 //@ts-check
-const clearVarsButton = document.querySelector(".clearVars");
-if (clearVarsButton) {
-  clearVarsButton.addEventListener("click", event => {
-    event.preventDefault();
-    sessionStorage.clear();
-    localStorage.clear();
-    window.location.href = "/lafires/recovery-services-finder/";
-  });
-}
 
 document.addEventListener("DOMContentLoaded", () => {
-  const data = /** @type {string[]} */ (window["getCheckboxStates"]());
-  console.log("yo", data);
+  const clearVarsButton = document.querySelector(".clearVars");
+  if (clearVarsButton) {
+    clearVarsButton.addEventListener("click", event => {
+      event.preventDefault();
+      sessionStorage.clear();
+      localStorage.clear();
+      window.location.href = "/lafires/recovery-services-finder/";
+    });
+  }
+
+  const classes = /** @type {string[]} */ (window["getCheckboxStates"]())
+    .filter(item => item.startsWith("category_"))
+    .map(x => `.${x}`)
+    .join(",");
+
+  /** @type {HTMLElement[]} */ ([
+    ...document.querySelectorAll(classes)
+  ]).forEach(el => {
+    el.style.display = "block";
+  });
 });
