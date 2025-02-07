@@ -10,6 +10,7 @@ socialimage: https://www.ca.gov/images/lafires/la-fires-help.png
 socialimagealt: Five hands converging in the center of the image
 description: You can get help and advice in person at a Disaster Recovery Center.
 keywords: LA, Los Angeles, fires, wildfires
+noindex: true
 ---
 
 <div
@@ -55,9 +56,7 @@ keywords: LA, Los Angeles, fires, wildfires
           >Print your plan</a
         >
       </p>
-      {%- set service_types = lafires.recovery_services_types -%}
-      <!---->
-      {%- for service_type in service_types -%}
+      {%- for service_type in lafires.recovery_services_types -%}
       <!---->
       {%- set categories = lafires.recovery_services_categories |
       pluck("Type_of_Service",service_type.Type_of_Service) -%}
@@ -70,12 +69,12 @@ keywords: LA, Los Angeles, fires, wildfires
       <!---->
       {%- endfor -%}
 
-      <div class="{{classlist}}">
+      <div class="{{classlist}}" aria-hidden="true" hidden>
         <h2 class="color-p2-darker">{{service_type.Type_of_Service}}</h2>
 
         {%- for service_category in categories -%}
 
-        <div class="category_{{service_category.ID}}">
+        <div class="category_{{service_category.ID}}" aria-hidden="true" hidden>
           <h3>{{service_category.Category}}</h3>
           <p>{{service_category.Category_Description}}</p>
 
