@@ -49,9 +49,9 @@ noindex: true
         >.
       </p>
 
-      <p>
+      <p class="d-print-none">
         <a
-          class="btn btn-outline-primary rounded-4 brd-solid-2 p-x-lg d-print-none"
+          class="btn btn-outline-primary rounded-4 brd-solid-2 p-x-lg mb-5"
           onclick="window.print(); return false;"
           >Print your plan</a
         >
@@ -70,13 +70,12 @@ noindex: true
       {%- endfor -%}
 
       <div class="{{classlist}}" aria-hidden="true" hidden>
-        <h2 class="color-p2-darker">{{service_type.Type_of_Service}}</h2>
+        <h2 class="color-p2-darker">{{service_type.Title}}</h2>
 
         {%- for service_category in categories -%}
 
         <div class="category_{{service_category.ID}}" aria-hidden="true" hidden>
           <h3>{{service_category.Category}}</h3>
-          <p>{{service_category.Category_Description}}</p>
 
           <div class="row">
             {%- for item in lafires.recovery_services_finder |
