@@ -17,7 +17,7 @@ keywords: LA, Los Angeles, fires, wildfires
   style="background: url('/images/lafires/recovery-finder-lineart.svg?v2') no-repeat right / auto;">
   <div class="container p-y-md">
     {%- include "breadcrumbs.html" -%}
-    <h1 class="m-t-0 m-b-md color-white line-height-1em">{{title}}<br /></h1>
+    <h1 class="m-t-0 m-b-md color-white">Recovery services finder</h1>
 
     <a href="/lafires/get-help-online/" class="color-white"
       ><span
@@ -31,27 +31,22 @@ keywords: LA, Los Angeles, fires, wildfires
 <div class="container p-y-lg">
   <div class="row">
     <div class="col-lg-10">
-      <p class="lead">
-        Recovering after a disaster can be confusing. Use this to get a
-        personalized list of services you need. Just take 2 minutes and answer a
-        few questions.
-      </p>
       <div class="bg-white mt-5 px-4 p-b-md brd-solid-4 brd-gray-200 rounded">
         <h2 class="h3 color-p2-darker mt-4">Business help</h2>
         <form>
           <fieldset class="p-a-sm">
-            <legend class="font-size-20 m-b-md">
+            <legend class="h5 font-weight-400 m-b-md">
               Select all the items you need.
             </legend>
-            <div class="d-flex m-b p-l-0">
+            <div class="d-flex align-items-center m-b p-l-0">
               <input
-                class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
+                class="form-check-input brd-gray-700 brd-solid-2 rounded-3 font-size-30 m-l-0 m-a-0"
                 type="checkbox"
                 value=""
                 name="Short"
                 id="Short" />
               <label
-                class="form-check-label cursor-pointer lead m-l"
+                class="form-check-label cursor-pointer m-l m-a-0"
                 for="Short"
                 ><span class="d-block"
                   ><span class="bold">Essential help:</span> Food, expenses,
@@ -60,14 +55,16 @@ keywords: LA, Los Angeles, fires, wildfires
               </label>
             </div>
 
-            <div class="d-flex m-b p-l-0">
+            <div class="d-flex align-items-center m-b p-l-0">
               <input
-                class="form-check-input brd-gray-700 brd-solid-2 rounded-3 lead m-l-0"
+                class="form-check-input brd-gray-700 brd-solid-2 rounded-3 font-size-30 m-l-0 m-a-0"
                 type="checkbox"
                 value=""
                 name="Long"
                 id="Long" />
-              <label class="form-check-label cursor-pointer lead m-l" for="Long"
+              <label
+                class="form-check-label cursor-pointer m-l m-a-0"
+                for="Long"
                 ><span class="d-block"
                   ><span class="bold">Start recovering: </span> Insurance
                   claims, rebuilding. employment, and more.</span
@@ -75,12 +72,12 @@ keywords: LA, Los Angeles, fires, wildfires
               </label>
             </div>
             <a
-              class="btn btn-outline-primary mt-2 btn-lg m-r-sm"
+              class="btn btn-outline-primary mt-4 btn-lg px-5 m-r-sm"
               href="/lafires/recovery-services-finder/">
               Back
             </a>
             <button
-              class="btn btn-primary disabled mt-2 btn-lg"
+              class="btn btn-primary disabled mt-4 btn-lg px-5"
               role="button"
               id="redirect">
               Continue
