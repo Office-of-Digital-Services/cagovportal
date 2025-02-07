@@ -68,6 +68,7 @@ keywords: LA, Los Angeles, fires, wildfires
               class="btn btn-primary disabled mt-4 btn-lg px-5"
               role="button"
               type="button"
+              onclick="customClick()"
               id="redirect">
               Continue
             </button>
@@ -81,4 +82,10 @@ keywords: LA, Los Angeles, fires, wildfires
 {%- set js -%}{%- include "./recovery-services-shared.mjs" -%}{%- endset -%}
 <script type="module">
   {{- js | jsmin | safe }}
+</script>
+
+<script>
+  function customClick() {
+      window.location.href = "/lafires/recovery-services-all/";
+  }
 </script>
