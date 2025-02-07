@@ -40,7 +40,7 @@ keywords: LA, Los Angeles, fires, wildfires
             </legend>
 
             {%- for category in lafires.recovery_services_categories |
-            pluck("Type_of_service","Essential help") -%}
+            pluck("Type_of_service","Essential Help") -%}
             <div class="d-flex align-items-center m-b p-l-0">
               <input
                 class="form-check-input brd-gray-700 brd-solid-2 rounded-3 font-size-30 m-l-0 m-a-0"
@@ -58,11 +58,12 @@ keywords: LA, Los Angeles, fires, wildfires
             </div>
             {%-endfor-%}
 
-            <a
+            <button
               class="btn btn-outline-primary mt-4 btn-lg px-5 m-r-sm"
-              href="/lafires/recovery-services-individual/">
+              type="button"
+              onclick="window.history.back()">
               Back
-            </a>
+            </button>
             <button
               class="btn btn-primary disabled mt-4 px-5 btn-lg"
               role="button"
@@ -84,7 +85,12 @@ keywords: LA, Los Angeles, fires, wildfires
 </script>
 
 <script>
+  const data = getCheckboxStates();
+  if (!data.includes("Short")) {
+    window.location.replace("/lafires/recovery-services-long-term/");
+  }
+
   function customClick() {
-      window.location.href = "/lafires/recovery-services-all/";
+      window.location.href = "/lafires/recovery-services-long-term/";
   }
 </script>
