@@ -10,6 +10,7 @@ socialimage: https://www.ca.gov/images/lafires/la-fires-help.png
 socialimagealt: Five hands converging in the center of the image
 description: You can get help and advice in person at a Disaster Recovery Center.
 keywords: LA, Los Angeles, fires, wildfires
+noindex: true
 ---
 
 <div
@@ -24,7 +25,7 @@ keywords: LA, Los Angeles, fires, wildfires
       >
     </h1>
 
-    <a href="/lafires/get-help-online/" class="color-white"
+    <a href="/lafires/get-help-online/" class="color-white d-print-none"
       ><span
         class="ca-gov-icon-caret-left d-inline-block no-underline font-size-20"
         aria-hidden="true"></span
@@ -50,23 +51,36 @@ keywords: LA, Los Angeles, fires, wildfires
 
       <p>
         <a
-          class="btn btn-outline-primary rounded-4 brd-solid-2 p-x-lg"
+          class="btn btn-outline-primary rounded-4 brd-solid-2 p-x-lg d-print-none"
           onclick="window.print(); return false;"
           >Print your plan</a
         >
       </p>
+      {%- for service_type in lafires.recovery_services_types -%}
+      <!---->
+      {%- set categories = lafires.recovery_services_categories |
+      pluck("Type_of_Service",service_type.Type_of_Service) -%}
+      <!---->
+      {%- set classlist = "" -%}
+      <!---->
+      {%- for service_category in categories -%}
+      <!---->
+      {%-set classlist = classlist + " category_" + service_category.ID -%}
+      <!---->
+      {%- endfor -%}
 
-      {%- for serice_type in lafires.recovery_services_types -%}
+      <div class="{{classlist}}" aria-hidden="true" hidden>
+        <h2 class="color-p2-darker">{{service_type.Type_of_Service}}</h2>
 
-      <div class="d-block">
-        <h2 class="color-p2-darker">{{serice_type.Type_of_Service}}</h2>
+        {%- for service_category in categories -%}
 
-        <div id="Replacing-your-personal-documents">
-          <h3>{{serice_type.Description}}</h3>
+        <div class="category_{{service_category.ID}}" aria-hidden="true" hidden>
+          <h3>{{service_category.Category}}</h3>
+          <p>{{service_category.Category_Description}}</p>
 
           <div class="row">
             {%- for item in lafires.recovery_services_finder |
-            pluck("Type_of_Service",serice_type.Type_of_Service) -%}
+            pluck("Category",service_category.Category) -%}
             <div class="col-lg-6 m-t-md">
               <div
                 class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
@@ -87,7 +101,7 @@ keywords: LA, Los Angeles, fires, wildfires
                   </li>
                   {%- endif -%}{%- if item.Phone -%}
                   <li>
-                    <a href="tel:{{item.Phone}}">{{item.Phone}}</a>
+                    <a href="tel:{{item.Phone}}">Phone: {{item.Phone}}</a>
                   </li>
                   {%- endif -%}{%- if item.Email -%}
                   <li>
@@ -102,6 +116,7 @@ keywords: LA, Los Angeles, fires, wildfires
             {%- endfor -%}
           </div>
         </div>
+        {%- endfor -%}
       </div>
       {%- endfor -%}
 
@@ -118,19 +133,14 @@ keywords: LA, Los Angeles, fires, wildfires
   </div>
 </div>
 
-<pre>
-  {{lafires.recovery_services_types | dump(2) | safe}}
-</pre>
-
-<pre>
-  {{lafires.recovery_services_finder | dump(2) | safe}}
-</pre>
-
+{%- set js -%}{%- include "./recovery-services-shared.mjs" -%}{%- include
+"./recovery-services-all.html.js" -%}{%- endset -%}
 <script>
-  document.querySelector('.clearVars').addEventListener('click', function(event) {
-    event.preventDefault();
-    sessionStorage.clear();
-    localStorage.clear();
-    window.location.href = '/lafires/recovery-services-finder/';
-  });
+  {{- js | jsmin | safe }}
 </script>
+
+<style>
+  [class*="category_"] {
+    display: none;
+  }
+</style>

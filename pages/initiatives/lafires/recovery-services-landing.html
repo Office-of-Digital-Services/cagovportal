@@ -43,8 +43,8 @@ keywords: LA, Los Angeles, fires, wildfires
         </h2>
         <form>
           <fieldset class="p-a-sm">
-            <legend class="h5 font-weight-400 m-b-md">
-              Check all that apply
+            <legend class="p font-size-16 font-weight-500  m-b-md">
+              Select all that apply
             </legend>
             <div class="d-flex align-items-center m-b p-l-0">
               <input
@@ -56,7 +56,7 @@ keywords: LA, Los Angeles, fires, wildfires
               <label
                 class="form-check-label cursor-pointer m-l m-a-0"
                 for="Individual"
-                ><span class="bold d-block">Individual</span>
+                ><span class="font-weight-500 d-block">Individual</span>
               </label>
             </div>
 
@@ -70,24 +70,25 @@ keywords: LA, Los Angeles, fires, wildfires
               <label
                 class="form-check-label cursor-pointer m-l m-a-0"
                 for="Business"
-                ><span class="bold d-block">Business</span>
+                ><span class="font-weight-500 d-block">Business</span>
               </label>
             </div>
-
             <button
-              class="btn btn-primary disabled mt-4 btn-lg px-5"
+              class="btn btn-primary disabled mt-4 btn-lg px-5 d-flex align-items-center justify-content-between"
               role="button"
               type="button"
               onclick="customClick()"
               id="redirect">
-              Next
+              Next<span
+                class="ca-gov-icon-caret-right d-inline-block no-underline font-size-20 ml-2"
+                aria-hidden="true"></span>
             </button>
           </fieldset>
         </form>
       </div>
 
-      <div class="bg-gray-100 mt-5 px-4 p-b brd-solid-1 brd-gray-200 p-t-md">
-        <p>
+      <div class="bg-gray-100 mt-5 px-4 p-b p-t-md">
+        <p class="color-primary">
           Check out the
           <a href="https://wildfires.betterangels.la/"
             >LA Disaster Relief Navigator</a
