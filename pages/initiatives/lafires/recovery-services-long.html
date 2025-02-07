@@ -10,6 +10,7 @@ socialimage: https://www.ca.gov/images/lafires/la-fires-help.png
 socialimagealt: Five hands converging in the center of the image
 description: You can get help and advice in person at a Disaster Recovery Center.
 keywords: LA, Los Angeles, fires, wildfires
+noindex: true
 ---
 
 <div
@@ -40,7 +41,7 @@ keywords: LA, Los Angeles, fires, wildfires
             </legend>
 
             {%- for category in lafires.recovery_services_categories |
-            pluck("Type_of_service","Start recovering") -%}
+            pluck("Type_of_Service","Start recovering") -%}
 
             <div class="d-flex align-items-center m-b p-l-0">
               <input
@@ -59,22 +60,28 @@ keywords: LA, Los Angeles, fires, wildfires
             </div>
 
             {%-endfor-%}
-            <button
-              class="btn btn-outline-primary mt-4 btn-lg px-5 m-r-sm"
-              type="button"
-              onclick="window.history.back()">
-              Back
-            </button>
-            <button
-              class="btn btn-primary disabled mt-4 btn-lg px-5 d-flex align-items-center justify-content-between"
-              role="button"
-              type="button"
-              onclick="customClick()"
-              id="redirect">
-              Next<span
-                class="ca-gov-icon-caret-right d-inline-block no-underline font-size-20 ml-2"
-                aria-hidden="true"></span>
-            </button>
+            <div class="d-flex gap-3 flex-wrap mt-4">
+              <button
+                class="btn btn-outline-primary btn-lg px-5 d-flex align-items-center gap-2"
+                type="button"
+                onclick="window.history.back()">
+                <span
+                  class="ca-gov-icon-caret-left d-inline-block font-size-20"
+                  aria-hidden="true"></span
+                >Back
+              </button>
+              <button
+                class="btn btn-primary disabled btn-lg px-5 d-flex align-items-center gap-2"
+                role="button"
+                type="button"
+                onclick="customClick()"
+                id="redirect">
+                Next
+                <span
+                  class="ca-gov-icon-caret-right d-inline-block font-size-20"
+                  aria-hidden="true"></span>
+              </button>
+            </div>
           </fieldset>
         </form>
       </div>
@@ -89,7 +96,7 @@ keywords: LA, Los Angeles, fires, wildfires
 
 <script>
   const next = "/lafires/recovery-services-business/";
-  const data = getCheckboxStates();
+  const data = window.getCheckboxStates();
 
   if (!data.includes("Long")) {
     window.location.replace(next);
