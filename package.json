@@ -24,6 +24,7 @@
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-fetch": "^4.0.0",
+    "csv-parse": "^5.6.0",
     "markdown-it": "^14.1.0",
     "postcss": "^8.4.47",
     "postcss-nested": "^6.2.0",
