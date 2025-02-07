@@ -101,23 +101,13 @@ keywords: LA, Los Angeles, fires, wildfires
 </script>
 
 <script>
-
+  const next = "/lafires/recovery-services-short-term/";
   const data = getCheckboxStates();
   if (!data.includes("Individual")) {
-
-    if (data.includes("Short")) {
-      window.location.replace("/lafires/recovery-services-short-term/");
-    } else {
-      window.location.replace("/lafires/recovery-services-long-term/");
-    }
+    window.location.replace(next);
   }
 
   function customClick() {
-    const individualCheckbox = document.getElementById("Short");
-    if (individualCheckbox.checked) {
-      window.location.href = "/lafires/recovery-services-short-term/";
-    } else {
-      window.location.href = "/lafires/recovery-services-long-term/";
-    }
+    window.location.href = next;
   }
 </script>

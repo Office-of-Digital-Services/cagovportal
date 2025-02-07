@@ -80,17 +80,18 @@ keywords: LA, Los Angeles, fires, wildfires
 </div>
 
 {%- set js -%}{%- include "./recovery-services-shared.mjs" -%}{%- endset -%}
-<script type="module">
+<script>
   {{- js | jsmin | safe }}
 </script>
 
 <script>
+  const next = "/lafires/recovery-services-long-term/";
   const data = getCheckboxStates();
   if (!data.includes("Short")) {
-    window.location.replace("/lafires/recovery-services-long-term/");
+    window.location.replace(next);
   }
 
   function customClick() {
-      window.location.href = "/lafires/recovery-services-long-term/";
+      window.location.href = next;
   }
 </script>

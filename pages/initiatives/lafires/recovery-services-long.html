@@ -86,14 +86,14 @@ keywords: LA, Los Angeles, fires, wildfires
 </script>
 
 <script>
-
+  const next = "/lafires/recovery-services-all/";
   const data = getCheckboxStates();
+
   if (!data.includes("Long")) {
-    window.location.replace("/lafires/recovery-services-all/");
+    window.location.replace(next);
   }
 
-
   function customClick() {
-      window.location.href = "/lafires/recovery-services-all/";
+      window.location.href = next;
   }
 </script>
