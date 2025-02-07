@@ -24,6 +24,11 @@ lafires: true
   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
   crossorigin=""></script>
 <style>
+  .non-english-only:lang(en),
+  .english-only:not(:lang(en)) {
+    display: none;
+  }
+
   .cagov-map-and-tiles {
     position: relative;
   }
@@ -34,12 +39,12 @@ lafires: true
   }
   #map-credits {
     text-align: right;
-    font-size: 0.8rem;
+    font-size: 16px; /* 0.8rem; */
     margin-top: 0.25rem;
   }
 
   #credits-tooltip {
-    font-size: 0.8rem;
+    font-size: 16px; /* 0.8rem; */
     text-align: right;
   }
 
@@ -79,8 +84,8 @@ lafires: true
     }
     .provider-card.popup {
       width: 100%;
-      top: 512px;
-      max-height: 512px;
+      /* top: 512px;
+      max-height: 512px; */
     }
    }
    .provider-info div {
@@ -183,7 +188,10 @@ lafires: true
 
       <nav class="page-navigation m-t-lg"></nav>
 
-      <h2 class="mt-4">Find the nearest Disaster Recovery Center</h2>
+
+      <h3 class="mt-4">Find the nearest Disaster Recovery Center</h3>
+      <a class="sr-only skip-map" href="#recovery-center-cards">(skip map)</a>
+
 
       <div class="cagov-map-and-tiles">
         <cagov-lafires-map></cagov-lafires-map>
@@ -191,7 +199,7 @@ lafires: true
 
       <!-- Disaster Recovery Center Cards -->
 
-      <div class="row">
+      <div class="row" id="recovery-center-cards">
         <div class="col-md-6 m-t-md">
           <div
             class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
@@ -206,7 +214,8 @@ lafires: true
               id="map-link-1"
               class="maps-link"
               href="https://maps.google.com/?q=123+UCLA+Drive,+Los+Angeles,+CA+90095"
-              >Directions<span class="sr-only">
+              ><span class="non-english-only">Driving </span>Directions<span
+                class="sr-only">
                 to UCLA Disaster Recovery Center</span
               ></a
             >
@@ -240,7 +249,10 @@ lafires: true
           <div
             class="col-lg-12 d-flex align-items-center justify-content-flex-start">
             <p class="fs-5">
-              <strong>Hours open:</strong> Monday - Sunday, 9 am to 8 pm
+              <strong>Hours open through February 9</strong>: Monday - Sunday, 9
+              am to 8 pm<br />
+              <strong>Hours starting February 10</strong>: Monday - Sunday, 9 am
+              to 7 pm
             </p>
           </div>
           <div class="col-lg-8 mt-4">
@@ -344,7 +356,7 @@ lafires: true
 <script>
     const locations = [
     { id: 'map-link-1', address: '10850 West Pico Blvd, Los Angeles, CA 90064' },
-    { id: 'map-link-2', address: '3035 E. Foothill Blvd, Pasadena, CA 91107' },
+    // { id: 'map-link-2', address: '3035 E. Foothill Blvd, Pasadena, CA 91107' },
     { id: 'map-link-3', address: '540 W. Woodbury Road, Altadena, CA 91001' }
   ];
 

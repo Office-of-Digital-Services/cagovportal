@@ -32,6 +32,11 @@
       "text": "Get help online"
     },
     {
+      "href": "/lafires/recovery-services-finder/",
+      "text": "Recovery services finder",
+      "indent": true
+    },
+    {
       "href": "/lafires/get-help-in-person/",
       "text": "Get help in person"
     },
