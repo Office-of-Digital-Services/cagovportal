@@ -57,24 +57,25 @@ keywords: LA, Los Angeles, fires, wildfires
               </label>
             </div>
             {%-endfor-%}
-
-            <button
-              class="btn btn-outline-primary mt-4 btn-lg px-5 m-r-sm"
-              type="button"
-              onclick="window.history.back()">
-              Back
-            </button>
-            <button
-              class="btn btn-primary disabled mt-4 btn-lg px-5 d-flex align-items-center justify-content-between"
-              role="button"
-              type="button"
-              onclick="customClick()"
-              id="redirect">
-              Next<span
-                class="ca-gov-icon-caret-right d-inline-block no-underline font-size-20 ml-2"
-                aria-hidden="true"></span>
-            </button>
-            </button>
+            <div class="d-flex gap-3 flex-wrap mt-4">
+              <button
+                class="btn btn-outline-primary btn-lg px-5"
+                type="button"
+                onclick="window.history.back()">
+                Back
+              </button>
+              <button
+                class="btn btn-primary disabled btn-lg px-5 d-flex align-items-center gap-2"
+                role="button"
+                type="button"
+                onclick="customClick()"
+                id="redirect">
+                Next
+                <span
+                  class="ca-gov-icon-caret-right d-inline-block font-size-20"
+                  aria-hidden="true"></span>
+              </button>
+            </div>
           </fieldset>
         </form>
       </div>
