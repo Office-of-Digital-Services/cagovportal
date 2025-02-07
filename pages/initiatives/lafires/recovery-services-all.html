@@ -54,30 +54,46 @@ keywords: LA, Los Angeles, fires, wildfires
         >
       </p>
 
-      {%- for category in lafires.recovery_services_types -%}
+      {%- for serice_type in lafires.recovery_services_types -%}
 
       <div class="d-block">
-        <h2 class="color-p2-darker">{{category.Type_of_Service}}</h2>
+        <h2 class="color-p2-darker">{{serice_type.Type_of_Service}}</h2>
 
         <div id="Replacing-your-personal-documents">
-          <h3>{{category.Description}}</h3>
+          <h3>{{serice_type.Description}}</h3>
 
           <div class="row">
             {%- for item in lafires.recovery_services_finder |
-            pluck("Type_of_Service",category.Type_of_Service) -%}
+            pluck("Type_of_Service",serice_type.Type_of_Service) -%}
             <div class="col-lg-6 m-t-md">
               <div
                 class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
                 <h4>{{item.Service_name}}</h4>
                 <p class="department font-size-15 gray-600">{{item.Entity}}</p>
-                <p>Fees are waived for licenses or IDs lost in the fires.</p>
+                <p>{{item.Description}}</p>
 
                 <p>How to get this service:</p>
 
                 <ul>
-                  <li><a href="#">Online</a></li>
-                  <li><a href="#">In-person (kiosk)</a></li>
-                  <li><a href="#">Phone: 1-800-777-0133</a></li>
+                  {%- if item.Info_link -%}
+                  <li><a href="{{item.Info_link}}">Learn more</a></li>
+                  {%- endif -%} {%- if item.Service_link -%}
+                  <li><a href="{{item.Service_link}}">Online</a></li>
+                  {%- endif -%}{%- if item.In_person_kiosk_ -%}
+                  <li>
+                    <a href="{{item.In_person_kiosk_}}">In person (kiosk)</a>
+                  </li>
+                  {%- endif -%}{%- if item.Phone -%}
+                  <li>
+                    <a href="tel:{{item.Phone}}">{{item.Phone}}</a>
+                  </li>
+                  {%- endif -%}{%- if item.Email -%}
+                  <li>
+                    <a href="mailto:{{item.Email}}">Email</a>
+                  </li>
+                  {%- endif -%}{%- if item.Mail -%}
+                  <li><pre>{{item.Mail}}</pre></li>
+                  {%- endif -%}
                 </ul>
               </div>
             </div>
