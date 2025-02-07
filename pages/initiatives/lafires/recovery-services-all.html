@@ -43,7 +43,9 @@ keywords: LA, Los Angeles, fires, wildfires
       <p class="lead">
         Here are the services that meet your needs. We provides direct links or
         information on how to get these services. You can also
-        <a href="/lafires/recovery-services-finder/">start over</a>.
+        <a href="/lafires/recovery-services-finder/" class="clearVars"
+          >start over</a
+        >.
       </p>
 
       <p>
@@ -123,3 +125,12 @@ keywords: LA, Los Angeles, fires, wildfires
 <pre>
   {{lafires.recovery_services_finder | dump(2) | safe}}
 </pre>
+
+<script>
+  document.querySelector('.clearVars').addEventListener('click', function(event) {
+    event.preventDefault();
+    sessionStorage.clear();
+    localStorage.clear();
+    window.location.href = '/lafires/recovery-services-finder/';
+  });
+</script>
