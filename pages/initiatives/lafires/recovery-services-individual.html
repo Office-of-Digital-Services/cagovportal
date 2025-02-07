@@ -104,7 +104,7 @@ keywords: LA, Los Angeles, fires, wildfires
 
 <script>
   const next = "/lafires/recovery-services-short-term/";
-  const data = getCheckboxStates();
+  const data = window.getCheckboxStates();
   if (!data.includes("Individual")) {
     window.location.replace(next);
   }
