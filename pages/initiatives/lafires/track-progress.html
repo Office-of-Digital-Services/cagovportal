@@ -1,0 +1,543 @@
+---
+title: Track LA's progress
+landing: Support
+layout: landing
+dynamic_sidenavid: lafires
+hidestatewidealert: true
+permalink: lafires/track-progress/
+breadcrumbparent: 2025 Los Angeles Fires
+socialimage: https://www.ca.gov/images/lafires/la-fires-help.png
+socialimagealt: Five hands converging in the center of the image
+description: Stay safe and informed. These trusted sources of info can help.
+keywords: LA, Los Angeles, fires, wildfires
+lafires: true
+---
+<style>
+  .dashboard-card {
+    & > :first-child {
+      border-top-left-radius: var(--bs-border-radius);
+      border-top-right-radius: var(--bs-border-radius);
+    }
+    & > :last-child {
+      border-bottom-left-radius: var(--bs-border-radius);
+      border-bottom-right-radius: var(--bs-border-radius);
+    }
+  }
+  .dashboard-card-heading {
+    font-weight: 400;
+  }
+  .dashboard-card-grid {
+    display: grid;
+    grid-template-columns: 3rem auto;
+    grid-template-rows: min-content;
+    align-items: start;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .dashboard-stat {
+    letter-spacing: -0.05em;
+    font-size: 1.42857rem;
+  }
+
+  .dashboard-row {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 768px) {
+    .dashboard-stat {
+      font-size: 1.78571rem;
+    }
+
+    .dashboard-row {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .dashboard-stat {
+      font-size: 2.14286rem;
+    }
+
+    .dashboard-row.air-monitoring-row {
+      max-width: 28%;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .dashboard-water-container {
+    container: dashboard-water / inline-size;
+  }
+  .dashboard-water {
+    flex-direction: column;
+    row-gap: .5rem;
+  }
+  @container dashboard-water (min-width: 500px) {
+    .dashboard-water {
+      row-gap: 0;
+      flex-direction: row;
+    }
+  }
+
+  .dashboard-progress {
+    display: flex;
+    --radius: 3px;
+    flex-direction: row;
+  }
+
+  .dashboard-progress span {
+    display: block;
+    height: 1.25rem;
+  }
+
+  .dashboard-progress span:first-child {
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+  }
+
+  .dashboard-progress span:last-child {
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+  }
+
+  .dashboard-progress [data-fill="white"] {
+    background: #fff;
+  }
+
+  .dashboard-progress [data-fill="light"] {
+    background: #6EA9C4;
+  }
+
+  .dashboard-progress [data-fill="dark"] {
+    background: #3B3A48;
+  }
+</style>
+
+<div
+  class="section-understated lineart bg-s1"
+  style="background: url('/images/lafires/bar-graph-lineart.svg') no-repeat right / auto;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0 m-b-0 color-p2-darker line-height-1em">
+      {{title}}<br />
+      <span class="subtitle color-p2-darker bold m-b-md"
+        >2025 Los Angeles Fires</span
+      >
+    </h1>
+  </div>
+</div>
+
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-lg-3">{%-include "dynamic-sidenav.html"-%}</div>
+
+    <!--MAIN CONTENT-->
+    <div class="col-lg-9 pt-lg-3">
+
+      <nav class="page-navigation"></nav>
+
+      <p class="font-size-15 gray-600 m-y-lg">Last updated 2/7/2025</p>
+
+      <p>LA's recovery is Governor Newsom's top priority. See all state actions to support recovery and rebuilding on <a href="https://www.gov.ca.gov/2025/01/24/heres-all-the-actions-governor-newsom-has-taken-in-response-to-the-los-angeles-fires/">the Governor's website</a>.</p>
+
+      <!--People helped-->
+      <div class="row m-b-lg">
+        <h2 class="m-b-md">People helped</h2>
+        <p>Local, state, and federal governments offer in-person help at disaster recovery centers.</p>
+
+        <div class="col-lg-6 m-t-md">
+          <div class="dashboard-card rounded h-100 d-flex flex-column">
+            <h3 class="dashboard-card-heading font-size-20 line-height-1-2em m-0 p-x-md p-t-md p-b-sm bg-primary">
+              At disaster recovery centers
+            </h3>
+
+            <div class="dashboard-card-grid bg-primary h-100 p-x-md p-b-md p-t-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none" aria-hidden="true">
+                <g clip-path="url(#clip0_4843_9257)">
+                  <path d="M1.74219 42.4824H46.7422" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M29.0647 42.4831V29.626H19.4219V42.4831" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6.5625 22.5322V42.4829" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M41.9219 42.4829V22.5322" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3.34766 25.7467L23.1035 5.98893C23.2527 5.83951 23.43 5.72096 23.6251 5.64009C23.8202 5.55921 24.0293 5.51758 24.2405 5.51758C24.4517 5.51758 24.6608 5.55921 24.856 5.64009C25.0511 5.72096 25.2283 5.83951 25.3776 5.98893L45.1334 25.7467" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_4843_9257">
+                    <rect width="48" height="48" fill="white" transform="translate(0 0.5)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+              <div class="dashboard-row font-size-12 d-flex">
+                <span class="dashboard-stat">18,273</span>
+                <span>visits</span>
+              </div>
+            </div>
+
+            <p class="font-size-12 bg-s1 p-a"><i>Reported by California Governor's Office of Emergency Services</i></p>
+          </div>
+        </div>
+
+        <div class="col-lg-6 m-t-md">
+          <div class="dashboard-card rounded h-100 d-flex flex-column">
+            <h3 class="dashboard-card-heading font-size-20 line-height-1-2em m-0 p-x-md p-t-md p-b-sm bg-primary">
+              By FEMA assistance
+            </h3>
+
+            <div class="dashboard-card-grid bg-primary h-100 p-x-md p-b-md p-t-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none" aria-hidden="true">
+                <g clip-path="url(#clip0_4843_9275)">
+                  <path d="M36.8555 21.3311C38.727 21.3297 40.573 21.7647 42.2469 22.6017C43.9209 23.4386 45.3765 24.6544 46.4983 26.1525" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1.5 26.1525C2.62178 24.6544 4.07745 23.4386 5.75138 22.6017C7.42531 21.7647 9.27135 21.3297 11.1429 21.3311" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M24.0006 34.1876C28.4386 34.1876 32.0363 30.5899 32.0363 26.1519C32.0363 21.7139 28.4386 18.1162 24.0006 18.1162C19.5626 18.1162 15.9648 21.7139 15.9648 26.1519C15.9648 30.5899 19.5626 34.1876 24.0006 34.1876Z" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12.75 40.617C13.9037 38.6592 15.5484 37.0364 17.5214 35.909C19.4944 34.7815 21.7275 34.1885 24 34.1885C26.2724 34.1885 28.5056 34.7815 30.4786 35.909C32.4516 37.0364 34.0963 38.6592 35.25 40.617" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M30.6289 13.2951C30.9295 12.131 31.5504 11.0746 32.4212 10.2457C33.2921 9.41686 34.3778 8.84879 35.5553 8.60605C36.7328 8.3633 37.9547 8.45559 39.0823 8.87244C40.21 9.28929 41.1981 10.014 41.9346 10.9642C42.671 11.9145 43.1263 13.0522 43.2486 14.2482C43.3709 15.4442 43.1554 16.6505 42.6265 17.7302C42.0976 18.8098 41.2766 19.7195 40.2567 20.356C39.2368 20.9925 38.0588 21.3302 36.8566 21.3308" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M11.1441 21.3308C9.94186 21.3302 8.7639 20.9925 7.74398 20.356C6.72405 19.7195 5.90304 18.8098 5.37418 17.7302C4.84532 16.6505 4.6298 15.4442 4.75211 14.2482C4.87441 13.0522 5.32964 11.9145 6.06608 10.9642C6.80253 10.014 7.79069 9.28929 8.91833 8.87244C10.046 8.45559 11.2679 8.3633 12.4454 8.60605C13.6228 8.84879 14.7086 9.41686 15.5794 10.2457C16.4503 11.0746 17.0712 12.131 17.3718 13.2951" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_4843_9275">
+                    <rect width="48" height="48" fill="white" transform="translate(0 0.5)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+              <div class="dashboard-row font-size-12 d-flex">
+                <span class="dashboard-stat">27,211</span>
+                <span>people helped</span>
+              </div>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none" aria-hidden="true">
+                <g clip-path="url(#clip0_4843_9286)">
+                  <path d="M46.5 36.3556C28.0902 45.3496 19.9098 27.8478 1.5 36.8418V12.7346C19.9098 3.74067 28.0902 21.2425 46.5 12.2485V36.3556Z" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M24.0011 29.3665C26.6639 29.3665 28.8225 27.2079 28.8225 24.5451C28.8225 21.8823 26.6639 19.7236 24.0011 19.7236C21.3383 19.7236 19.1797 21.8823 19.1797 24.5451C19.1797 27.2079 21.3383 29.3665 24.0011 29.3665Z" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M7.92969 18.1162V27.7591" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M40.0703 21.3311V30.9739" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_4843_9286">
+                    <rect width="48" height="48" fill="white" transform="translate(0 0.5)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+              <div class="dashboard-row font-size-12 d-flex">
+                <span class="dashboard-stat">$64M</span>
+                <span>distributed to individuals</span>
+              </div>
+            </div>
+
+            <p class="font-size-12 bg-s1 p-a"><i>Reported by Federal Emergency Management Agency</i></p>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Schools reopened-->
+      <div class="row m-b-lg">
+        <h2 class="m-b-md">Schools reopened</h2>
+        <p>Many public schools operating in fire affected areas were damaged or destroyed. Federal, state, and local government is coordinating to help schools resume instruction for students.</p>
+        <div class="col-lg-6 m-t-md">
+          <div class="dashboard-card rounded h-100 d-flex flex-column">
+            <h3 class="dashboard-card-heading font-size-20 line-height-1-2em m-0 p-x-md p-t-md p-b-sm bg-primary">
+              Damaged or destroyed public schools
+            </h3>
+
+            <div class="h-100 bg-primary">
+              <div class="dashboard-card-grid p-x-md p-b-md p-t-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none" aria-hidden="true" style="grid-row: 1 / 4;">
+                  <g clip-path="url(#clip0_74_2503)">
+                    <path d="M17.6698 9.42285H31.5159C34.2701 9.42285 36.9115 10.5169 38.859 12.4644C40.8065 14.4119 41.9005 17.0533 41.9005 19.8075V45.769C41.9005 46.228 41.7182 46.6683 41.3936 46.9928C41.069 47.3174 40.6288 47.4998 40.1698 47.4998H9.01593C8.5569 47.4998 8.11667 47.3174 7.79209 46.9928C7.4675 46.6683 7.28516 46.228 7.28516 45.769V19.8075C7.28516 17.0533 8.37925 14.4119 10.3267 12.4644C12.2742 10.5169 14.9156 9.42285 17.6698 9.42285Z" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14.208 47.4999V31.923C14.208 31.0049 14.5727 30.1245 15.2219 29.4753C15.871 28.8261 16.7515 28.4614 17.6695 28.4614H31.5157C32.4338 28.4614 33.3142 28.8261 33.9634 29.4753C34.6125 30.1245 34.9772 31.0049 34.9772 31.923V47.4999" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17.6699 9.42308V5.96154C17.6699 5.04348 18.0346 4.16303 18.6838 3.51386C19.3329 2.8647 20.2134 2.5 21.1315 2.5H28.0545C28.9726 2.5 29.853 2.8647 30.5022 3.51386C31.1514 4.16303 31.5161 5.04348 31.5161 5.96154V9.42308" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21.1313 18.0771H28.0544" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14.208 35.3848H34.9772" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M28.0542 35.3848V38.8463" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_74_2503">
+                      <rect width="48" height="48" fill="white" transform="translate(0.5 0.5)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+                <div class="dashboard-row font-size-12 d-flex">
+                  <div class="d-flex gap-1 align-items-center">
+                    <span class="dashboard-stat">7</span>
+                    <span>of</span>
+                    <span class="dashboard-stat">8</span>
+                  </div>
+                  <span>have resumed instruction</span>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M11.2812 4.77224C11.2812 3.95618 11.6054 3.17356 12.1825 2.59652C12.7595 2.01949 13.5421 1.69531 14.3582 1.69531H21.2813V15.5415H14.3582C13.5421 15.5415 12.7595 15.8656 12.1825 16.4427C11.6054 17.0197 11.2813 17.8023 11.2812 18.6184" stroke="#EEF8FB" stroke-width="1.53846" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1.28125 15.5415H8.20433C9.02038 15.5415 9.80301 15.8656 10.38 16.4427C10.9571 17.0197 11.2813 17.8023 11.2813 18.6184V4.77224C11.2813 3.95618 10.9571 3.17356 10.38 2.59652C9.80301 2.01949 9.02038 1.69531 8.20433 1.69531H1.28125V15.5415Z" stroke="#EEF8FB" stroke-width="1.53846" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14.3594 5.54102H18.2055" stroke="#EEF8FB" stroke-width="1.53846" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14.3594 8.61914H18.2055" stroke="#EEF8FB" stroke-width="1.53846" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14.3594 11.6953H18.2055" stroke="#EEF8FB" stroke-width="1.53846" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <p class="m-0 font-size-12">Teaching in-person: 6</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M11.8249 17.8295C12.5027 17.8295 13.0522 17.2801 13.0522 16.6023C13.0522 15.9245 12.5027 15.375 11.8249 15.375C11.1471 15.375 10.5977 15.9245 10.5977 16.6023C10.5977 17.2801 11.1471 17.8295 11.8249 17.8295Z" fill="white"/>
+                    <path d="M22.4602 5.26966C19.4612 2.81004 15.7025 1.46582 11.8239 1.46582C7.94524 1.46582 4.1865 2.81004 1.1875 5.26966" stroke="#EEF8FB" stroke-width="1.63636" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.1882 8.93199C17.0924 7.27285 14.4976 6.37012 11.8246 6.37012C9.15151 6.37012 6.55677 7.27285 4.46094 8.93199" stroke="#EEF8FB" stroke-width="1.63636" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.9162 12.6137C14.7274 11.749 13.2953 11.2832 11.8253 11.2832C10.3553 11.2832 8.92313 11.749 7.73438 12.6137" stroke="#EEF8FB" stroke-width="1.63636" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <p class="m-0 font-size-12">Teaching online: 1</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="font-size-12 bg-s1 p-a"><i>Reported to Schools Task Force</i></p>
+          </div>
+        </div>
+      </div>
+
+      <!--Properties cleaned up-->
+      <div class="row m-b-lg">
+        <h2 class="m-b-md">Properties cleaned up</h2>
+        <p>There are 2 phases of cleanup: </p>
+        <ul class="m-l-md p-r-md">
+          <li><strong>Phase 1</strong>: U.S. Environmental Protection Agency clears household hazardous waste</li>
+          <li><strong>Phase 2</strong>: U.S. Army Corps of Engineers clears structural debris</li>
+        </ul>
+        <p>Currently, LA County is <a href="https://recovery.lacounty.gov/debris-removal/roe/#1738023329409-58c2a679-5f63">accepting Right of Entry forms</a> for Phase 2. Once validated by the county, the U.S. Army Corps of Engineers assesses properties and begins debris removal.</p>
+        <div class="col-lg-6 m-t-md">
+          <div class="dashboard-card rounded h-100 d-flex flex-column">
+            <h3 class="dashboard-card-heading font-size-20 line-height-1-2em m-0 p-x-md p-t-md p-b-sm bg-primary d-flex flex-column">
+              <strong class="font-size-14">Phase 1</strong>
+              <span>Hazardous household waste cleanup</span>
+            </h3>
+
+            <div class="dashboard-card-grid bg-primary h-100 p-x-md p-b-md p-t-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none" aria-hidden="true">
+                <path d="M3.91406 44.9961H44.0866V23.0838C44.0868 22.8439 44.0397 22.6064 43.9481 22.3847C43.8564 22.163 43.722 21.9616 43.5525 21.7919L25.2922 3.53164C25.1227 3.36186 24.9213 3.22718 24.6996 3.13529C24.4779 3.04339 24.2403 2.99609 24.0003 2.99609C23.7604 2.99609 23.5227 3.04339 23.3011 3.13529C23.0794 3.22718 22.878 3.36186 22.7084 3.53164L4.44818 21.7919C4.27866 21.9616 4.14424 22.163 4.05259 22.3847C3.96095 22.6064 3.91387 22.8439 3.91406 23.0838V44.9961Z" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="dashboard-row font-size-12 d-flex">
+                <span class="dashboard-stat">8,148</span>
+                <span>parcels assessed</span>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none" aria-hidden="true">
+                <path d="M3.91406 44.9961H44.0866V23.0838C44.0868 22.8439 44.0397 22.6064 43.9481 22.3847C43.8564 22.163 43.722 21.9616 43.5525 21.7919L25.2922 3.53164C25.1227 3.36186 24.9213 3.22718 24.6996 3.13529C24.4779 3.04339 24.2403 2.99609 24.0003 2.99609C23.7604 2.99609 23.5227 3.04339 23.3011 3.13529C23.0794 3.22718 22.878 3.36186 22.7084 3.53164L4.44818 21.7919C4.27866 21.9616 4.14424 22.163 4.05259 22.3847C3.96095 22.6064 3.91387 22.8439 3.91406 23.0838V44.9961Z" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.8711 29.0928L20.3492 34.5709L31.7873 22.7295" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="dashboard-row font-size-12 d-flex">
+                <span class="dashboard-stat">1,639</span>
+                <span>cleanups completed</span>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none" aria-hidden="true">
+                <g clip-path="url(#clip0_4843_9275)">
+                  <path d="M36.8555 21.3311C38.727 21.3297 40.573 21.7647 42.2469 22.6017C43.9209 23.4386 45.3765 24.6544 46.4983 26.1525" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1.5 26.1525C2.62178 24.6544 4.07745 23.4386 5.75138 22.6017C7.42531 21.7647 9.27135 21.3297 11.1429 21.3311" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M24.0006 34.1876C28.4386 34.1876 32.0363 30.5899 32.0363 26.1519C32.0363 21.7139 28.4386 18.1162 24.0006 18.1162C19.5626 18.1162 15.9648 21.7139 15.9648 26.1519C15.9648 30.5899 19.5626 34.1876 24.0006 34.1876Z" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12.75 40.617C13.9037 38.6592 15.5484 37.0364 17.5214 35.909C19.4944 34.7815 21.7275 34.1885 24 34.1885C26.2724 34.1885 28.5056 34.7815 30.4786 35.909C32.4516 37.0364 34.0963 38.6592 35.25 40.617" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M30.6289 13.2951C30.9295 12.131 31.5504 11.0746 32.4212 10.2457C33.2921 9.41686 34.3778 8.84879 35.5553 8.60605C36.7328 8.3633 37.9547 8.45559 39.0823 8.87244C40.21 9.28929 41.1981 10.014 41.9346 10.9642C42.671 11.9145 43.1263 13.0522 43.2486 14.2482C43.3709 15.4442 43.1554 16.6505 42.6265 17.7302C42.0976 18.8098 41.2766 19.7195 40.2567 20.356C39.2368 20.9925 38.0588 21.3302 36.8566 21.3308" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M11.1441 21.3308C9.94186 21.3302 8.7639 20.9925 7.74398 20.356C6.72405 19.7195 5.90304 18.8098 5.37418 17.7302C4.84532 16.6505 4.6298 15.4442 4.75211 14.2482C4.87441 13.0522 5.32964 11.9145 6.06608 10.9642C6.80253 10.014 7.79069 9.28929 8.91833 8.87244C10.046 8.45559 11.2679 8.3633 12.4454 8.60605C13.6228 8.84879 14.7086 9.41686 15.5794 10.2457C16.4503 11.0746 17.0712 12.131 17.3718 13.2951" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_4843_9275">
+                    <rect width="48" height="48" fill="white" transform="translate(0 0.5)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+              <div class="dashboard-row font-size-12 d-flex">
+                <span class="dashboard-stat">1,201</span>
+                <span>personnel in field</span>
+              </div>
+            </div>
+
+            <p class="font-size-12 bg-s1 p-a"><i>Reported by U.S. Environmental Protection Agency and California Governor's Office of Emergency Services</i></p>
+          </div>
+        </div>
+
+        <div class="col-lg-6 m-t-md">
+          <div class="dashboard-card rounded h-100 d-flex flex-column">
+            <h3 class="dashboard-card-heading font-size-20 line-height-1-2em m-0 p-x-md p-t-md p-b-sm bg-primary d-flex flex-column">
+              <strong class="font-size-14 font-bold">Phase 2</strong>
+              <span>Structural debris removal</span>
+            </h3>
+
+            <div class="h-100 bg-primary">
+              <div class="dashboard-card-grid p-x-md p-b-md p-t-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none" aria-hidden="true" style="grid-row: 1 / 4;">
+                  <g clip-path="url(#clip0_4843_9873)">
+                    <path d="M40.875 47.5H7.125C6.62772 47.5 6.15081 47.3025 5.79918 46.9508C5.44754 46.5992 5.25 46.1223 5.25 45.625V4.375C5.25 3.87772 5.44754 3.40081 5.79918 3.04918C6.15081 2.69754 6.62772 2.5 7.125 2.5H29.625L42.75 15.625V45.625C42.75 46.1223 42.5525 46.5992 42.2008 46.9508C41.8492 47.3025 41.3723 47.5 40.875 47.5Z" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M29.625 2.5V15.625H42.75" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.543 30.3634L21.021 35.8414L32.4591 24" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_4843_9873">
+                      <rect width="48" height="48" fill="white" transform="translate(0 0.5)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+                <div class="dashboard-row font-size-12 d-flex">
+                  <span class="dashboard-stat">7,128</span>
+                  <span>Right of Entry forms submitted to LA County</span>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.04443 12.4788L9.54443 14.9788L15.3778 9.14551" stroke="#EEF8FB" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.2109 21.6455C16.7338 21.6455 21.2109 17.1684 21.2109 11.6455C21.2109 6.12266 16.7338 1.64551 11.2109 1.64551C5.68809 1.64551 1.21094 6.12266 1.21094 11.6455C1.21094 17.1684 5.68809 21.6455 11.2109 21.6455Z" stroke="#EEF8FB" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                  
+                  <p class="m-0 font-size-12">Opt-in: 6,861</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.1924 7.87354L8.38574 14.6802" stroke="#EEF8FB" stroke-width="1.70167" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.38574 7.87354L15.1924 14.6802" stroke="#EEF8FB" stroke-width="1.70167" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.7891 21.4869C17.4279 21.4869 21.9991 16.9157 21.9991 11.2769C21.9991 5.63807 17.4279 1.06689 11.7891 1.06689C6.15027 1.06689 1.5791 5.63807 1.5791 11.2769C1.5791 16.9157 6.15027 21.4869 11.7891 21.4869Z" stroke="#EEF8FB" stroke-width="1.70167" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                  
+                  <p class="m-0 font-size-12">Opt-out: 267</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="font-size-12 bg-s1 p-a"><i>Reported by California Governor's Office of Emergency Services</i></p>
+          </div>
+        </div>
+      </div>
+
+      <!--Water restored-->
+      <div class="row m-b-lg">
+        <h2 class="m-b-md">Water restored</h2>
+        <p>The California State Water Resources Control Board is working with local water systems impacted by the fires to restore safe drinking water for residents.</p>
+        <div class="col-lg-12 m-t-md">
+          <div class="dashboard-card rounded h-100 d-flex flex-column">
+            <h3 class="dashboard-card-heading font-size-20 line-height-1-2em m-0 p-x-md p-t-md p-b-sm bg-primary d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <path d="M41.1554 29.8462C41.1554 15.3077 25.0015 4 25.0015 4C25.0015 4 8.84766 15.3077 8.84766 29.8462C8.84766 34.1304 10.5496 38.2392 13.579 41.2686C16.6084 44.2981 20.7172 46 25.0015 46C29.2858 46 33.3946 44.2981 36.424 41.2686C39.4534 38.2392 41.1554 34.1304 41.1554 29.8462Z" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M32.7101 32.2695C32.3184 33.51 31.6337 34.6378 30.7139 35.5576C29.794 36.4774 28.6662 37.1621 27.4258 37.5539" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="m-l-sm">Water systems status</span>
+            </h3>
+
+            <div class="bg-primary h-100 p-x-md p-b-md p-t-sm dashboard-water-container">
+                <div class="dashboard-progress">
+                  <span data-fill="white" style="width: 55%"></span>
+                  <span data-fill="light" style="width: 45%"></span>
+                </div>
+              <div class="d-flex flex-wrap w-auto dashboard-water">
+                <div class="m-0 p-t-sm font-size-12 d-flex flex-row align-items-center gap-2" style="width:55%">
+                  <span class="dashboard-stat">5</span>
+                  <span>systems safe to drink</span>
+                </div>
+                <div class="m-0 p-t-sm font-size-12 d-flex flex-row align-items-center gap-2" style="width:45%">
+                  <span class="dashboard-stat">4</span>
+                  <span>systems in progress</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="font-size-12 bg-s1 p-a"><i>Reported by State Water Resources Control Board</i></p>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Air monitoring-->
+      <div class="row m-b-md">
+        <h2 class="m-b-md">Air quality</h2>
+        <p>South Coast Air Quality Management District and the California Air Resources Board are working together to measure air quality in your area.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 m-b-md">
+          <div class="dashboard-card rounded h-100 d-flex flex-column">
+            <h3 class="dashboard-card-heading font-size-20 line-height-1-2em m-0 p-x-md p-t-md p-b-sm bg-primary d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
+                <path d="M23.9999 37.8464C24.7333 39.826 26.9573 41.308 29.1922 41.308C30.5693 41.308 31.89 40.7609 32.8637 39.7872C33.8375 38.8134 34.3845 37.4927 34.3845 36.1156C34.3845 34.7386 33.8375 33.4179 32.8637 32.4441C31.89 31.4704 30.5693 30.9233 29.1922 30.9233H4.96143" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.0769 10.1542C17.8103 8.1746 20.0344 6.69263 22.2692 6.69263C23.6463 6.69263 24.967 7.23967 25.9407 8.21342C26.9145 9.18717 27.4615 10.5078 27.4615 11.8849C27.4615 13.262 26.9145 14.5827 25.9407 15.5565C24.967 16.5302 23.6463 17.0772 22.2692 17.0772H1.5" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M36.1156 17.0773C36.849 15.0977 39.073 13.6157 41.3079 13.6157C42.685 13.6157 44.0056 14.1628 44.9794 15.1365C45.9531 16.1103 46.5002 17.4309 46.5002 18.808C46.5002 20.1851 45.9531 21.5058 44.9794 22.4795C44.0056 23.4533 42.685 24.0003 41.3079 24.0003H3.23096" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="m-l-sm">Eaton fire area</span>
+            </h3>
+
+            <div class="bg-primary font-size-12 h-100 p-x-md p-b-md p-t-sm">
+              <p>Mobile monitoring survey #1 was completed on January 31, 2025.</p>
+              <p>Overall, results show <strong>no elevated</strong> levels of: </p>
+              <ul>
+                <li>Air toxic metals including lead and arsenic </li>
+                <li>Volatile Organic Compounds including benzene</li>
+              </ul>
+              <p>Some elevated levels of methane, possibly from gas leaks, were detected. These results were reported to utilities and public health agencies for further investigation.</p>
+            </div>
+
+            <p class="font-size-12 bg-s1 p-a"><i>Reported by South Coast Air Quality Management District</i></p>
+          </div>
+        </div>
+
+        <div class="col-lg-6 m-b-md">
+          <div class="dashboard-card rounded h-100 d-flex flex-column">
+            <h3 class="dashboard-card-heading font-size-20 line-height-1-2em m-0 p-x-md p-t-md p-b-sm bg-primary d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
+                <path d="M23.9999 37.8464C24.7333 39.826 26.9573 41.308 29.1922 41.308C30.5693 41.308 31.89 40.7609 32.8637 39.7872C33.8375 38.8134 34.3845 37.4927 34.3845 36.1156C34.3845 34.7386 33.8375 33.4179 32.8637 32.4441C31.89 31.4704 30.5693 30.9233 29.1922 30.9233H4.96143" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.0769 10.1542C17.8103 8.1746 20.0344 6.69263 22.2692 6.69263C23.6463 6.69263 24.967 7.23967 25.9407 8.21342C26.9145 9.18717 27.4615 10.5078 27.4615 11.8849C27.4615 13.262 26.9145 14.5827 25.9407 15.5565C24.967 16.5302 23.6463 17.0772 22.2692 17.0772H1.5" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M36.1156 17.0773C36.849 15.0977 39.073 13.6157 41.3079 13.6157C42.685 13.6157 44.0056 14.1628 44.9794 15.1365C45.9531 16.1103 46.5002 17.4309 46.5002 18.808C46.5002 20.1851 45.9531 21.5058 44.9794 22.4795C44.0056 23.4533 42.685 24.0003 41.3079 24.0003H3.23096" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="m-l-sm">Palisades fire area</span>
+            </h3>
+
+            <div class="bg-primary font-size-12 h-100 p-x-md p-b-md p-t-sm">
+              <p>2 mobile monitoring surveys are planned</p>
+            </div>
+
+            <p class="font-size-12 bg-s1 p-a"><i>Reported by South Coast Air Quality Management District</i></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 m-b-md">
+          <div class="dashboard-card rounded h-100 d-flex flex-column">
+            <h3 class="dashboard-card-heading font-size-20 line-height-1-2em m-0 p-x-md p-t-md p-b-sm bg-primary d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
+                <path d="M23.9999 37.8464C24.7333 39.826 26.9573 41.308 29.1922 41.308C30.5693 41.308 31.89 40.7609 32.8637 39.7872C33.8375 38.8134 34.3845 37.4927 34.3845 36.1156C34.3845 34.7386 33.8375 33.4179 32.8637 32.4441C31.89 31.4704 30.5693 30.9233 29.1922 30.9233H4.96143" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.0769 10.1542C17.8103 8.1746 20.0344 6.69263 22.2692 6.69263C23.6463 6.69263 24.967 7.23967 25.9407 8.21342C26.9145 9.18717 27.4615 10.5078 27.4615 11.8849C27.4615 13.262 26.9145 14.5827 25.9407 15.5565C24.967 16.5302 23.6463 17.0772 22.2692 17.0772H1.5" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M36.1156 17.0773C36.849 15.0977 39.073 13.6157 41.3079 13.6157C42.685 13.6157 44.0056 14.1628 44.9794 15.1365C45.9531 16.1103 46.5002 17.4309 46.5002 18.808C46.5002 20.1851 45.9531 21.5058 44.9794 22.4795C44.0056 23.4533 42.685 24.0003 41.3079 24.0003H3.23096" stroke="#EEF8FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="m-l-sm">How we are monitoring</span>
+            </h3>
+
+            <div class="bg-primary h-100 p-x-md p-b-md p-t-sm">
+              <div class="dashboard-progress m-b-sm">
+                <span data-fill="white" style="width: calc(100% * 1/9)"></span>
+                <span data-fill="light" style="width: calc(100% * 3/9)"></span>
+                <span data-fill="dark" style="width: calc(100% * 5/9)"></span>
+              </div>
+
+              <div class="d-flex flex-wrap column-gap-3">
+                <div class="m-0 font-size-12 d-flex dashboard-row air-monitoring-row">
+                  <span class="dashboard-stat">1</span>
+                  <span>mobile monitoring survey completed in Eaton fire area</span>
+                </div>
+                <div class="m-0 font-size-12 d-flex dashboard-row air-monitoring-row">
+                  <span class="dashboard-stat">3</span>
+                  <span>additional mobile monitoring surveys planned</span>
+                </div>
+                <div class="m-0 font-size-12 d-flex dashboard-row air-monitoring-row">
+                  <span class="dashboard-stat">5</span>
+                  <span>stationary air quality monitoring sites planned for Eaton and Palisades areas</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="font-size-12 bg-s1 p-a"><i>Reported by South Coast Air Quality Management District</i></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <p>Monitoring occurs in two stages: mobile monitoring surveys and stationary monitoring.</p>
+        <ul class="m-l-md p-r-md">
+          <li><strong>Stage 1</strong>: Mobile monitoring surveys: These capture a snapshot in time of toxic metals and volatile organic compounds (VOCs). This will help identify locations for stationary air quality monitoring sites. There will be 4 mobile monitoring surveys: 2 in the Eaton Fire area and 2 in the Palisades Fire area.</li>
+          <li><strong>Stage 2</strong>: Stationary air quality monitors: They measure pollutants in the air. This includes particulates (PM2.5 and PM10), lead, arsenic, other toxic metals, and asbestos. </li>
+        </ul>
+
+        <p>For more information, visit South Coast Air Quality Management District's <a href="https://www.aqmd.gov/2025-wildfire-response">2025 Wildfire Response page</a>.</p>
+      </div>
+    </div>
+    <!--END MAIN COL CONTENT-->
+  </div>
+</div>
