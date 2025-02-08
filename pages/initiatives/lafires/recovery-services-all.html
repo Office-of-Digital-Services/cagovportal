@@ -69,12 +69,15 @@ noindex: true
       <!---->
       {%- endfor -%}
 
-      <div class="{{classlist}}" aria-hidden="true" hidden>
+      <div class="d-none{{classlist}}" aria-hidden="true" hidden>
         <h2 class="color-p2-darker">{{service_type.Title}}</h2>
 
         {%- for service_category in categories -%}
 
-        <div class="category_{{service_category.ID}}" aria-hidden="true" hidden>
+        <div
+          class="d-none category_{{service_category.ID}}"
+          aria-hidden="true"
+          hidden>
           <h3>{{service_category.Category}}</h3>
 
           <div class="row">
@@ -136,9 +139,3 @@ noindex: true
 <script>
   {{- js | jsmin | safe }}
 </script>
-
-<style>
-  [class*="category_"] {
-    display: none;
-  }
-</style>
