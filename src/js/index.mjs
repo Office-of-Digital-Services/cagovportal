@@ -188,12 +188,13 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   );
 
-  if (window.location.hash) {
+  const location = window.location;
+  if (location.hash) {
     // Trigger a hashchange to ensure hash scrolling works
     setTimeout(() => {
-      const currentHash = window.location.hash;
-      window.location.hash += "_"; // Remove the hash temporarily
-      window.location.hash = currentHash; // Reapply the hash
+      const currentHash = location.hash;
+      location.hash += "_"; // Remove the hash temporarily
+      location.hash = currentHash; // Reapply the hash
     }, 500);
   }
 });
