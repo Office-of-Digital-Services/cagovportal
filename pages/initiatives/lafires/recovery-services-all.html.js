@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /** @type {HTMLElement[]} */ ([
     ...document.querySelectorAll(classes)
   ]).forEach(el => {
-    el.style.display = "block";
+    el.classList.remove("d-none");
     el.ariaHidden = null;
     el.hidden = false;
   });
