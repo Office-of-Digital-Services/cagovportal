@@ -144,7 +144,7 @@ export class CaGovLAFiresMap extends window.HTMLElement {
           </div>
           <div class="distance-indicator"><!-- 13.5 miles away --></div>
           
-          <h2 class="h4">Disaster Recovery Center - Altadena</h2>
+          <h3 class="h4">Disaster Recovery Center - Altadena</h3>
           <div class="services">    </div>
           <div class="provider-info">
             <div class="provider-address">
@@ -271,9 +271,9 @@ export class CaGovLAFiresMap extends window.HTMLElement {
           </div>
           <div class="distance-indicator"><!-- 13.5 miles away --></div>
           
-          <h2 class="h4">${item.drc_name}</h2>
+          <h3 class="h4">${item.drc_name}</h3>
           ${item.special_note ? `<div class="special-note">${item.special_note}</div>` : ''}
-          ${item.loc_name ? `<h3 class="h5">${item.loc_name}</h3>` : ''}
+          ${item.loc_name ? `<h4 class="h5">${item.loc_name}</h4>` : ''}
           <div class="services">  <!-- services go here -->  </div>
           <div class="provider-info">
             <div class="provider-address" id="provider-address-div">
