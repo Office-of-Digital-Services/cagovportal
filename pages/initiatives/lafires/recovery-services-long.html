@@ -33,7 +33,7 @@ noindex: true
   <div class="row">
     <div class="col-lg-10">
       <div class="bg-white mt-5 px-4 p-b-md brd-solid-4 brd-gray-200 rounded">
-        <h2 class="h3 color-p2-darker mt-4">Start recovering</h2>
+        <h2 class="h3 color-p2-darker mt-4 mb-0">Start recovering</h2>
         <form>
           <fieldset class="p-a-sm">
             <legend class="h5 font-weight-400 m-b-md">
@@ -43,9 +43,9 @@ noindex: true
             {%- for category in lafires.recovery_services_categories |
             pluck("Type_of_Service","Start recovering") -%}
 
-            <div class="d-flex align-items-center m-b p-l-0">
+            <div class="d-flex align-items-center m-b-md p-l-0">
               <input
-                class="form-check-input brd-gray-700 brd-solid-2 rounded-3 font-size-30 m-l-0 m-a-0"
+                class="form-check-input brd-gray-300 brd-solid-2 rounded-3 font-size-30 m-l-0 m-a-0"
                 type="checkbox"
                 value=""
                 id="category_{{category.ID}}" />
@@ -60,7 +60,7 @@ noindex: true
             </div>
 
             {%-endfor-%}
-            <div class="d-flex gap-3 flex-wrap mt-4">
+            <div class="d-flex gap-3 flex-wrap mt-5">
               <button
                 class="btn btn-outline-primary btn-lg d-flex align-items-center gap-2"
                 type="button"
