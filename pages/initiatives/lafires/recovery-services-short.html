@@ -43,9 +43,9 @@ lafires_header: true
 
             {%- for category in lafires.recovery_services_categories |
             pluck("Type_of_Service","Essential help") -%}
-            <div class="d-flex align-items-center m-b-md p-l-0">
+            <div class="d-flex align-items-top m-b-md p-l-0">
               <input
-                class="form-check-input brd-gray-300 brd-solid-2 rounded-3 font-size-30 m-l-0 m-a-0"
+                class="form-check-input brd-gray-200 brd-solid-2 rounded-0 font-size-30 m-l-0 m-a-0 pos-rel top-minus-2"
                 type="checkbox"
                 value=""
                 id="category_{{category.ID}}" />
@@ -59,9 +59,9 @@ lafires_header: true
               </label>
             </div>
             {%-endfor-%}
-            <div class="d-flex gap-3 flex-wrap mt-5">
+            <div class="d-flex gap-4 flex-wrap mt-5">
               <button
-                class="btn btn-outline-primary btn-lg d-flex align-items-center gap-2"
+                class="btn btn-outline-primary btn-lg rounded-4 px-4 d-flex align-items-center gap-2"
                 type="button"
                 onclick="window.history.back()">
                 <span
@@ -70,7 +70,7 @@ lafires_header: true
                 >Back
               </button>
               <button
-                class="btn btn-primary disabled btn-lg d-flex align-items-center gap-2"
+                class="btn btn-primary disabled btn-lg rounded-4 px-4 d-flex align-items-center gap-2"
                 type="button"
                 onclick="customClick()"
                 id="redirect">
