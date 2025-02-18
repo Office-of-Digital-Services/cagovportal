@@ -66,7 +66,8 @@ lafires_header: true
       <!---->
       {%- for service_category in categories -%}
       <!---->
-      {%-set classlist = classlist + " category_" + service_category.ID -%}
+      {%-set classlist = classlist + " category_" + service_type.Section + "_" +
+      service_category.ID -%}
       <!---->
       {%- endfor -%}
 
@@ -76,7 +77,7 @@ lafires_header: true
         {%- for service_category in categories -%}
 
         <div
-          class="d-none category_{{service_category.ID}}"
+          class="d-none category_{{service_type.Section}}_{{service_category.ID}}"
           aria-hidden="true"
           hidden>
           <h3>{{service_category.Category}}</h3>
