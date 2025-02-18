@@ -14,6 +14,11 @@ noindex: true
 lafires_header: true
 ---
 
+<style>
+  .list-unstyled li:last-child {
+    border-bottom: none !important;
+  }
+</style>
 <div
   class="section-primary lineart bg-p2"
   style="background: url('/images/lafires/recovery-finder-lineart.svg?v2') no-repeat right / auto;">
@@ -44,17 +49,18 @@ lafires_header: true
     <div class="col-lg-10 pt-lg-3">
       <p class="lead">
         Here are the services that meet your needs. We provide direct links or
-        information on how to get these services. You can also
-        <a href="/lafires/recovery-services-finder/" class="clearVars"
-          >start over</a
-        >.
+        information on how to get these services.
       </p>
 
-      <p class="d-print-none">
+      <p class="mb-5 d-flex gap-4 align-items-center">
         <a
-          class="btn btn-outline-primary rounded-4 brd-solid-2 p-x-lg mb-5"
+          class="d-print-none btn btn-outline-primary rounded-4 brd-solid-2 p-x-md m-r"
           onclick="window.print(); return false;"
           >Print your plan</a
+        >
+
+        <a href="/lafires/recovery-services-finder/" class="clearVars"
+          >Create new plan</a
         >
       </p>
       {%- for service_type in lafires.recovery_services_types -%}
@@ -88,28 +94,54 @@ lafires_header: true
             <div class="col-lg-6 m-t-md">
               <div
                 class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
-                <h4>{{item.Service_name}}</h4>
-                <p class="department font-size-15 gray-600">{{item.Entity}}</p>
+                <h4 class="m-b-sm">{{item.Service_name}}</h4>
+                <p class="department font-size-14 color-p2 font-weight-600">
+                  {{item.Entity}}
+                </p>
                 <p>{{item.Description}}</p>
 
-                <p>How to get this service:</p>
+                <h5 class="m-t-0">How to get this service</h5>
 
-                <ul>
-                  {%- if item.Info_link -%}
-                  <li><a href="{{item.Info_link}}">Learn more</a></li>
-                  {%- endif -%} {%- if item.Service_link -%}
-                  <li><a href="{{item.Service_link}}">Online</a></li>
-                  {%- endif -%}{%- if item.In_person_kiosk_ -%}
+                <ul class="list-unstyled">
+                  {%- if item.Service_link -%}
                   <li>
-                    <a href="{{item.In_person_kiosk_}}">In person (kiosk)</a>
+                    <a
+                      href="{{item.Service_link}}"
+                      class="p-a-sm d-flex bg-gray-75 bg-gray-100-hover w-100"
+                      >Online<img
+                        src="/images/lafires/laptop-icon.svg"
+                        alt=""
+                        class="img-fluid ms-auto width-30"
+                        aria-hidden="true"
+                    /></a>
+                  </li>
+                  {%- endif -%} {%- if item.Info_link -%}
+                  <li class="border-bottom brd-gray-200">
+                    <a href="{{item.Info_link}}" class="p-a-sm d-inline-block"
+                      >Learn more</a
+                    >
+                  </li>
+                  {%- endif -%} {%- if item.In_person_kiosk_ -%}
+                  <li class="border-bottom brd-gray-200">
+                    <a
+                      href="{{item.In_person_kiosk_}}"
+                      class="p-a-sm d-inline-block"
+                      >In person (kiosk)</a
+                    >
                   </li>
                   {%- endif -%}{%- if item.Phone -%}
-                  <li>
-                    <a href="tel:{{item.Phone}}">Phone: {{item.Phone}}</a>
+                  <li class="border-bottom brd-gray-200">
+                    <a href="tel:{{item.Phone}}" class="p-a-sm d-inline-block"
+                      >Phone: {{item.Phone}}</a
+                    >
                   </li>
                   {%- endif -%}{%- if item.Email -%}
-                  <li>
-                    <a href="mailto:{{item.Email}}">Email</a>
+                  <li class="border-bottom brd-gray-200">
+                    <a
+                      href="mailto:{{item.Email}}"
+                      class="p-a-sm d-inline-block"
+                      >Email</a
+                    >
                   </li>
                   {%- endif -%}{%- if item.Mail -%}
                   <li><pre>{{item.Mail}}</pre></li>
