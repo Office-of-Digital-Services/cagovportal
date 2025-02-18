@@ -12,9 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const checks = /** @type {string[]} */ (window["getCheckboxStates"]());
 
-  const cats = ["long", "short"];
-
-  let categories = ["business", ...cats.filter(cat => checks.includes(cat))];
+  const categories = [
+    "business",
+    ...["long", "short"].filter(cat => checks.includes(cat))
+  ];
 
   const classes = checks
     .filter(item => categories.some(cat => item.startsWith(`category_${cat}`)))
