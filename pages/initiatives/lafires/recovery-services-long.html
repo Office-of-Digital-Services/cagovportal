@@ -49,10 +49,10 @@ lafires_header: true
                 class="form-check-input brd-gray-200 brd-solid-2 rounded-0 font-size-30 m-l-0 m-a-0 pos-rel top-minus-2"
                 type="checkbox"
                 value=""
-                id="category_{{category.ID}}" />
+                id="category_long_{{category.ID}}" />
               <label
                 class="form-check-label cursor-pointer m-l m-a-0"
-                for="category_{{category.ID}}"
+                for="category_long_{{category.ID}}"
                 ><span class="d-block font-weight-400"
                   ><span class="bold">{{category.Category}}:</span>
                   {{category.Category_Description}}</span
@@ -98,7 +98,7 @@ lafires_header: true
   const next = "/lafires/recovery-services-all/";
   const data = window.getCheckboxStates();
 
-  if (!data.includes("Long")) {
+  if (!data.includes("long")) {
     window.location.replace(next);
   }
 
