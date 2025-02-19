@@ -98,13 +98,13 @@ lafires_header: true
                 <p class="department font-size-14 color-p2 font-weight-600">
                   {{item.Entity}}
                 </p>
-                <p>{{item.Description}}</p>
+                <p class="small">{{item.Description}}</p>
 
                 <h5 class="m-t-0">How to get this service</h5>
 
-                <ul class="list-unstyled">
+                <ul class="list-unstyled m-b-0">
                   {%- if item.Service_link -%}
-                  <li>
+                  <li class="h6 font-weight-400 m-a-0">
                     <a
                       href="{{item.Service_link}}"
                       class="p-a-sm d-flex bg-gray-75 bg-gray-100-hover w-100"
@@ -116,13 +116,15 @@ lafires_header: true
                     /></a>
                   </li>
                   {%- endif -%} {%- if item.Info_link -%}
-                  <li class="border-bottom brd-gray-200">
+                  <li
+                    class="border-bottom brd-gray-200 h6 font-weight-400 m-a-0">
                     <a href="{{item.Info_link}}" class="p-a-sm d-inline-block"
                       >Learn more</a
                     >
                   </li>
                   {%- endif -%} {%- if item.In_person_kiosk_ -%}
-                  <li class="border-bottom brd-gray-200">
+                  <li
+                    class="border-bottom brd-gray-200 h6 font-weight-400 m-a-0">
                     <a
                       href="{{item.In_person_kiosk_}}"
                       class="p-a-sm d-inline-block"
@@ -130,13 +132,15 @@ lafires_header: true
                     >
                   </li>
                   {%- endif -%}{%- if item.Phone -%}
-                  <li class="border-bottom brd-gray-200">
+                  <li
+                    class="border-bottom brd-gray-200 h6 font-weight-400 m-a-0">
                     <a href="tel:{{item.Phone}}" class="p-a-sm d-inline-block"
                       >Phone: {{item.Phone}}</a
                     >
                   </li>
                   {%- endif -%}{%- if item.Email -%}
-                  <li class="border-bottom brd-gray-200">
+                  <li
+                    class="border-bottom brd-gray-200 h6 font-weight-400 m-a-0">
                     <a
                       href="mailto:{{item.Email}}"
                       class="p-a-sm d-inline-block"
@@ -144,7 +148,12 @@ lafires_header: true
                     >
                   </li>
                   {%- endif -%}{%- if item.Mail -%}
-                  <li><pre>{{item.Mail}}</pre></li>
+                  <li class="m-a-0">
+                    <pre
+                      class="bg-white heading border-0 p-a-sm h6 font-weight-400 m-a-0">
+{{item.Mail}}</pre
+                    >
+                  </li>
                   {%- endif -%}
                 </ul>
               </div>
