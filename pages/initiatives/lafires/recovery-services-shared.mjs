@@ -40,10 +40,15 @@
     function saveCheckboxState() {
       const pageCheckIds = checkboxes.map(chk => chk.id);
 
-      const newStates = [
+      let newStates = [
         ...checkboxes.filter(chk => chk.checked).map(chk => chk.id),
         ...getCheckboxStates().filter(id => !pageCheckIds.includes(id))
       ].sort();
+
+      if (!Array.isArray(newStates)) {
+        console.warn("Unexpected non-array state detected, resetting.");
+        newStates = [];
+      }
 
       sessionStorage?.setItem(
         checkboxStateStorageId,
