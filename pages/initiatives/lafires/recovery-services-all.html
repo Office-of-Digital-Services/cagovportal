@@ -90,7 +90,8 @@ lafires_header: true
 
           <div class="row">
             {%- for item in lafires.recovery_services_finder |
-            pluck("Category",service_category.Category) -%}
+            pluck("Category",service_category.Category) | sortBy("Service_name")
+            | sortBy("Entity") -%}
             <div class="col-lg-6 m-t-md">
               <div
                 class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">

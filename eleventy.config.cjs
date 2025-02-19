@@ -90,7 +90,7 @@ module.exports = function (
     /**
      * @param {[]} arr
      * @param {string} prop
-     */ (arr, prop) => [...arr].sort((a, b) => (a[prop] > b[prop] ? 1 : -1))
+     */ (arr, prop) => [...arr].sort((a, b) => (a[prop] < b[prop] ? -1 : 1))
   );
 
   eleventyConfig.addNunjucksAsyncFilter(
