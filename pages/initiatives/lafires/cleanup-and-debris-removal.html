@@ -27,6 +27,19 @@ lafires_header: true
   hr + .debris-step {
     margin-block-start: 3rem;
   }
+  .debris-phase-map {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 100%;
+  }
+  .debris-phase-map > img {
+    max-width: 100%;
+    height: auto;
+  }
+  .debris-phase-map-2-horizontal {
+    display: none;
+  }
   .phase-header {
     display: flex;
     flex-direction: column;
@@ -124,6 +137,24 @@ lafires_header: true
     border-color: #7BB0DA;
   }
   @container debris-step (width > 800px) {
+    .debris-phase-map {
+      display: flex;
+      flex-direction: row;
+      gap: 0;
+    }
+    .debris-phase-map-2-horizontal {
+      display: unset;
+    }
+    .debris-phase-map-2-vertical {
+      display: none;
+    }
+    .debris-phase-map > img {
+      max-width: 50%;
+    }
+    .phase-header {
+      align-items: center;
+      flex-direction: row;
+    }
     .debris-removal-viz {
       grid-template-columns: calc(50% - 3rem) 6rem calc(50% - 3rem);
       grid-template-rows: auto;
@@ -156,7 +187,7 @@ lafires_header: true
 
     <!--MAIN CONTENT-->
     <div class="col-lg-9 pt-lg-3">
-      <p>
+      <p class="m-b-md lead">
         Cleanup and debris removal after wildfires is a 2-phase process. You can
         have it done at no cost to you.
       </p>
@@ -164,12 +195,25 @@ lafires_header: true
       <nav class="page-navigation"></nav>
 
       <div class="debris-step m-t-lg">
-        <img
-          src="/images/lafires/cleanup-phase-map.svg"
-          width="876"
-          height="90"
-          class="w-100 m-b"
-          alt="There are two phases: phase 1 and phase 2." />
+        <div class="debris-phase-map">
+          <img
+            src="/images/lafires/cleanup-phase-1-map.svg"
+            width="445"
+            height="90"
+            alt="Phase 1: Hazardous waste cleanup" />
+          <img
+            src="/images/lafires/cleanup-phase-2-map-vertical.svg"
+            width="445"
+            height="91"
+            class="debris-phase-map-2-vertical"
+            alt="Phase 2: Debris removal" />
+          <img
+            src="/images/lafires/cleanup-phase-2-map-horizontal.svg"
+            width="433"
+            height="90"
+            class="debris-phase-map-2-horizontal"
+            alt="Phase 2: Debris removal" />
+        </div>
         <p class="m-t-md">
           We will explain these phases. When they are complete, your property is
           ready for rebuilding.
@@ -183,10 +227,10 @@ lafires_header: true
         <div class="phase-header">
           <img
             src="/images/lafires/cleanup-phase-1-header.svg"
-            width="274"
-            height="90"
+            width="173"
+            height="72"
             alt="Phase 1" />
-          <h2>Phase 1: Hazardous waste cleanup</h2>
+          <h2>Hazardous waste cleanup</h2>
         </div>
         <p class="m-b-md">
           In Phase 1, the U.S. EPA cleans up everyday products that were in your
@@ -251,6 +295,12 @@ lafires_header: true
         </div>
       </div>
 
+      <p class="m-b-lg">
+        <a href="/lafires/track-progress/#card-cleanup-phase-1"
+          >Track Phase 1 progress</a
+        >
+      </p>
+
       <hr />
 
       <!-- Step 3 -->
@@ -258,10 +308,10 @@ lafires_header: true
         <div class="phase-header">
           <img
             src="/images/lafires/cleanup-phase-2-header.svg"
-            width="274"
-            height="90"
+            width="183"
+            height="73"
             alt="Phase 2" />
-          <h2>Phase 2: Debris removal</h2>
+          <h2>Debris removal</h2>
         </div>
 
         <p class="m-b-md">In Phase 2, workers remove structural debris.</p>
