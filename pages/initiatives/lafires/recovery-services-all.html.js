@@ -10,8 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const classes = /** @type {string[]} */ (window["getCheckboxStates"]())
-    .filter(item => item.startsWith("category_"))
+  const checks = /** @type {string[]} */ (window["getCheckboxStates"]());
+
+  const categories = [
+    "business",
+    ...["long", "short"].filter(cat => checks.includes(cat))
+  ];
+
+  const classes = checks
+    .filter(item => categories.some(cat => item.startsWith(`category_${cat}`)))
     .map(x => `.${x}`)
     .join(",");
 

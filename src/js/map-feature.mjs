@@ -2,6 +2,7 @@ let displayData = [
   {'lat':34.0395943,'lng':-118.4314774, 
     'drc_name':'UCLA Disaster Recovery Center', 
     'loc_name':'UCLA Research Park West', 
+    'id':'drc-ucla',
     'loc_address':'10850 West Pico Blvd., Los Angeles, CA 90064', 
     'tooltip':'UCLA Disaster Recovery Center', 
     'tooltip_dir':'bottom',
@@ -18,6 +19,7 @@ let displayData = [
   {'lat':34.1825977,'lng':-118.1646802, 
     'drc_name': 'Altadena Disaster Recovery Center', 
     'loc_name':'', 
+    'id':'drc-altadena',
     'loc_address':'540 W. Woodbury Rd., Altadena, CA 91001', 
     'tooltip':'Altadena Disaster Recovery Center', 
     'tooltip_dir':'bottom', 
@@ -178,6 +180,13 @@ export class CaGovLAFiresMap extends window.HTMLElement {
         this.closePopup();
       }
     });
+
+    // find first element in map with class leaflet-control-zoom-in and assign it the id of leaflet-control-zoom-in
+    let zoomIn = this.getElementsByClassName('leaflet-control-zoom-in')[0];
+    zoomIn.id = 'leaflet-control-zoom-in';
+
+    let zoomOut = this.getElementsByClassName('leaflet-control-zoom-out')[0];
+    zoomOut.id = 'leaflet-control-zoom-out';
 
     window.L.tileLayer(tile_template.replace("{r}", ""), {
       // retina tiles
@@ -371,7 +380,8 @@ export class CaGovLAFiresMap extends window.HTMLElement {
       if (cal_bounds.contains(latlng)) {
         let marker = L.marker([item.lat, item.lng],{icon:this.regIcon, keyboard:true,riseOnHover:true,highlight: 'temporary',alt:item.drc_name}).addTo(this.map);
         // marker.bindTooltip(item.tooltip || item.drc_name, {permanent: true, direction: item.tooltip_dir, interactive: true, offset: item.tooltip_offset}).openTooltip();
-
+        marker._icon.id = item.id;
+        marker._icon.setAttribute('aria-live', 'polite');
         let clickFunc = e => {
           // console.log("Marker click",e);
           e.originalEvent.stopPropagation();

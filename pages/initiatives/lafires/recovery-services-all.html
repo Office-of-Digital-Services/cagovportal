@@ -14,6 +14,11 @@ noindex: true
 lafires_header: true
 ---
 
+<style>
+  .list-unstyled li:last-child {
+    border-bottom: none !important;
+  }
+</style>
 <div
   class="section-primary lineart bg-p2"
   style="background: url('/images/lafires/recovery-finder-lineart.svg?v2') no-repeat right / auto;">
@@ -44,17 +49,18 @@ lafires_header: true
     <div class="col-lg-10 pt-lg-3">
       <p class="lead">
         Here are the services that meet your needs. We provide direct links or
-        information on how to get these services. You can also
-        <a href="/lafires/recovery-services-finder/" class="clearVars"
-          >start over</a
-        >.
+        information on how to get these services.
       </p>
 
-      <p class="d-print-none">
+      <p class="mb-5 d-flex gap-4 align-items-center">
         <a
-          class="btn btn-outline-primary rounded-4 brd-solid-2 p-x-lg mb-5"
+          class="d-print-none btn btn-outline-primary rounded-4 brd-solid-2 p-x-md m-r"
           onclick="window.print(); return false;"
           >Print your plan</a
+        >
+
+        <a href="/lafires/recovery-services-finder/" class="clearVars"
+          >Create new plan</a
         >
       </p>
       {%- for service_type in lafires.recovery_services_types -%}
@@ -66,7 +72,8 @@ lafires_header: true
       <!---->
       {%- for service_category in categories -%}
       <!---->
-      {%-set classlist = classlist + " category_" + service_category.ID -%}
+      {%-set classlist = classlist + " category_" + service_type.Section + "_" +
+      service_category.ID -%}
       <!---->
       {%- endfor -%}
 
@@ -76,42 +83,78 @@ lafires_header: true
         {%- for service_category in categories -%}
 
         <div
-          class="d-none category_{{service_category.ID}}"
+          class="d-none category_{{service_type.Section}}_{{service_category.ID}}"
           aria-hidden="true"
           hidden>
           <h3>{{service_category.Category}}</h3>
 
           <div class="row">
             {%- for item in lafires.recovery_services_finder |
-            pluck("Category",service_category.Category) -%}
+            pluck("Category",service_category.Category) | sortBy("Service_name")
+            | sortBy("Entity") -%}
             <div class="col-lg-6 m-t-md">
               <div
                 class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
-                <h4>{{item.Service_name}}</h4>
-                <p class="department font-size-15 gray-600">{{item.Entity}}</p>
-                <p>{{item.Description}}</p>
+                <h4 class="m-b-sm">{{item.Service_name}}</h4>
+                <p class="department font-size-14 color-p2 font-weight-600">
+                  {{item.Entity}}
+                </p>
+                <p class="small">{{item.Description}}</p>
 
-                <p>How to get this service:</p>
+                <h5 class="m-t-0">How to get this service</h5>
 
-                <ul>
-                  {%- if item.Info_link -%}
-                  <li><a href="{{item.Info_link}}">Learn more</a></li>
-                  {%- endif -%} {%- if item.Service_link -%}
-                  <li><a href="{{item.Service_link}}">Online</a></li>
-                  {%- endif -%}{%- if item.In_person_kiosk_ -%}
-                  <li>
-                    <a href="{{item.In_person_kiosk_}}">In person (kiosk)</a>
+                <ul class="list-unstyled m-b-0">
+                  {%- if item.Service_link -%}
+                  <li class="h6 font-weight-400 m-a-0">
+                    <a
+                      href="{{item.Service_link}}"
+                      class="p-a-sm d-flex bg-gray-75 bg-gray-100-hover w-100"
+                      >Online<img
+                        src="/images/lafires/laptop-icon.svg"
+                        alt=""
+                        class="img-fluid ms-auto width-30"
+                        aria-hidden="true"
+                    /></a>
+                  </li>
+                  {%- endif -%} {%- if item.Info_link -%}
+                  <li
+                    class="border-bottom brd-gray-200 h6 font-weight-400 m-a-0">
+                    <a href="{{item.Info_link}}" class="p-a-sm d-inline-block"
+                      >Learn more</a
+                    >
+                  </li>
+                  {%- endif -%} {%- if item.In_person_kiosk_ -%}
+                  <li
+                    class="border-bottom brd-gray-200 h6 font-weight-400 m-a-0">
+                    <a
+                      href="{{item.In_person_kiosk_}}"
+                      class="p-a-sm d-inline-block"
+                      >In person (kiosk)</a
+                    >
                   </li>
                   {%- endif -%}{%- if item.Phone -%}
-                  <li>
-                    <a href="tel:{{item.Phone}}">Phone: {{item.Phone}}</a>
+                  <li
+                    class="border-bottom brd-gray-200 h6 font-weight-400 m-a-0">
+                    <a href="tel:{{item.Phone}}" class="p-a-sm d-inline-block"
+                      >{{item.Phone}}</a
+                    >
                   </li>
                   {%- endif -%}{%- if item.Email -%}
-                  <li>
-                    <a href="mailto:{{item.Email}}">Email</a>
+                  <li
+                    class="border-bottom brd-gray-200 h6 font-weight-400 m-a-0">
+                    <a
+                      href="mailto:{{item.Email}}"
+                      class="p-a-sm d-inline-block"
+                      >Email</a
+                    >
                   </li>
                   {%- endif -%}{%- if item.Mail -%}
-                  <li><pre>{{item.Mail}}</pre></li>
+                  <li class="m-a-0">
+                    <pre
+                      class="bg-white heading border-0 p-a-sm h6 font-weight-400 m-a-0">
+{{item.Mail}}</pre
+                    >
+                  </li>
                   {%- endif -%}
                 </ul>
               </div>
