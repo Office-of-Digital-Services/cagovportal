@@ -1,0 +1,198 @@
+---
+title: Track LA's progress
+landing: Support
+layout: landing
+dynamic_sidenavid: lafires
+hidestatewidealert: true
+permalink: lafires/track-progress-test/
+breadcrumbparent: 2025 Los Angeles Fires
+socialimage: https://www.ca.gov/images/lafires/la-fires-help.png
+socialimagealt: Five hands converging in the center of the image
+description: Stay safe and informed. These trusted sources of info can help.
+keywords: LA, Los Angeles, fires, wildfires
+lafires_header: true
+noindex: true
+eleventyExcludeFromCollections: true
+---
+
+<style>
+  .dashboard-card {
+    scroll-margin-top: 180px;
+
+    & > :first-child {
+      border-top-left-radius: var(--bs-border-radius);
+      border-top-right-radius: var(--bs-border-radius);
+    }
+    & > :last-child {
+      border-bottom-left-radius: var(--bs-border-radius);
+      border-bottom-right-radius: var(--bs-border-radius);
+    }
+  }
+  .dashboard-card-heading {
+    font-weight: 400;
+  }
+  .dashboard-card-grid {
+    display: grid;
+    grid-template-columns: 3rem auto;
+    grid-template-rows: min-content;
+    align-items: start;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .dashboard-stat {
+    letter-spacing: -0.05em;
+    font-size: 1.42857rem;
+  }
+
+  .dashboard-row {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 768px) {
+    .dashboard-stat {
+      font-size: 1.78571rem;
+    }
+
+    .dashboard-row {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .dashboard-stat {
+      font-size: 2.14286rem;
+    }
+
+    .dashboard-row.air-monitoring-row {
+      max-width: 28%;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .dashboard-water-container {
+    container: dashboard-water / inline-size;
+  }
+  .dashboard-water {
+    flex-direction: column;
+    row-gap: .5rem;
+  }
+  @container dashboard-water (min-width: 500px) {
+    .dashboard-water {
+      row-gap: 0;
+      flex-direction: row;
+    }
+  }
+
+  .dashboard-progress {
+    display: flex;
+    --radius: 3px;
+    flex-direction: row;
+  }
+
+  .dashboard-progress span {
+    display: block;
+    height: 1.25rem;
+  }
+
+  .dashboard-progress span:first-child {
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+  }
+
+  .dashboard-progress span:last-child {
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+  }
+
+  .dashboard-progress [data-fill="white"] {
+    background: #fff;
+  }
+
+  .dashboard-progress [data-fill="light"] {
+    background: #6EA9C4;
+  }
+
+  .dashboard-progress [data-fill="dark"] {
+    background: #3B3A48;
+  }
+</style>
+
+<div
+  class="section-understated lineart bg-s1"
+  style="background: url('/images/lafires/bar-graph-lineart.svg') no-repeat right / auto;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0 m-b-0 color-p2-darker line-height-1em">
+      {{title}}<br />
+      <span class="subtitle color-p2-darker bold m-b-md"
+        >2025 Los Angeles Fires</span
+      >
+    </h1>
+  </div>
+</div>
+
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-lg-3">{%-include "dynamic-sidenav.html"-%}</div>
+
+    <!--MAIN CONTENT-->
+    <div class="col-lg-9 pt-lg-3">
+      <p class="m-b-md lead">
+        LA's recovery is Governor Newsom's top priority. See all state actions
+        to support recovery and rebuilding on
+        <a
+          href="https://www.gov.ca.gov/2025/01/24/heres-all-the-actions-governor-newsom-has-taken-in-response-to-the-los-angeles-fires/"
+          >the Governor's website</a
+        >.
+      </p>
+      <nav class="page-navigation"></nav>
+
+      <p class="font-size-15 gray-600 m-y-lg" id="lastUpdated"></p>
+
+      <!--Properties cleaned up-->
+      <div class="row m-b-lg">
+        <div class="col-lg-6 m-t-md">
+          <div
+            id="card-cleanup-phase-2"
+            class="dashboard-card rounded h-100 d-flex flex-column">
+            <h3
+              class="dashboard-card-heading font-size-20 line-height-1-2em m-0 p-x-md p-t-md p-b-sm bg-primary d-flex flex-column">
+              <strong class="font-size-14 font-bold">Phase 2</strong>
+              <span>Structural debris removal</span>
+            </h3>
+
+            <div class="h-100 bg-primary">
+              <div class="dashboard-card-grid p-x-md p-b-md p-t-sm">
+                <img
+                  src="/images/lafires/dashboard-file-check.svg"
+                  width="48"
+                  height="49"
+                  aria-hidden="true"
+                  style="grid-row: 1 / 4;" />
+                <div class="dashboard-row font-size-12 d-flex">
+                  <span class="dashboard-stat" id="metricValue"></span>
+                  <span>Right of Entry forms submitted to LA County</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="font-size-12 bg-s1 p-a">
+              <em>Reported by LA County</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--END MAIN COL CONTENT-->
+  </div>
+</div>
+
+{%- set js -%}{%- include "./track-progress.mjs" -%}{%- endset -%}
+<script type="module">
+  {{- js | jsmin | safe }}
+</script>
