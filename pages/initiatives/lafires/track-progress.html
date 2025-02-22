@@ -31,19 +31,39 @@ lafires_header: true
     margin-top: 0.5em;
   }
 
+ details {
+   position: relative;
+ }
+
   details > summary {
-    list-style-type: '›';
+    display: block;
+    padding-right: 14px;
 
     &:hover {
       color: var(--bs-primary-bg-subtle);
     }
-    &::marker {
+
+    .data-notes-chevron {
+      display: block;
       font-size: 24px;
+      line-height: .25;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: rotate .2s;
+      width: 14px;
+    }
+    .data-notes,
+    .accordion-body{
+      display: block;
+      padding-left: 18px;
     }
   }
 
-  details[open] > summary {
-    list-style-type: '⌄'
+  details[open]  .data-notes-chevron {
+    left: -10px;
+    rotate: -90deg;
+    top: 7px;
   }
 
   .dashboard-card-heading {
@@ -374,7 +394,7 @@ lafires_header: true
             </div>
             <details class="font-size-12 m-t-md">
               <summary>
-                Data notes
+                <span class="data-notes-chevron">⌄</span><span class="data-notes">Data notes</span>
               </summary>
               <div class="accordion-body">
                 <ul>
