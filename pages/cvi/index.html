@@ -287,19 +287,32 @@ const countyData = countyEmails[destinationCounty];
         return;
     }
  
-    // Build the mailto link with optional CC
-    let mailtoLink = `mailto:${countyData.to}`;
- 
-    mailtoLink += `?subject=${encodeURIComponent(`CVI Submission for ${destinationCounty}`)}`;
-    mailtoLink += `&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nDestination County: ${destinationCounty}`)}`;
- 
-    if (countyData.cc) {
-        mailtoLink += `&cc=${countyData.cc}`;
+    // Detect if the user is using Gmail
+    const isGmailUser = email.endsWith("@gmail.com");
+
+    let emailLink;
+    if (isGmailUser) {
+        // Construct a Gmail-specific link
+        emailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(countyData.to)}`;
+        if (countyData.cc) {
+            emailLink += `&cc=${encodeURIComponent(countyData.cc)}`;
+        }
+        emailLink += `&su=${encodeURIComponent(`CVI Submission for ${destinationCounty}`)}`;
+        emailLink += `&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nDestination County: ${destinationCounty}`)}`;
+    } else {
+        // Use the default mailto link
+        emailLink = `mailto:${countyData.to}`;
+        emailLink += `?subject=${encodeURIComponent(`CVI Submission for ${destinationCounty}`)}`;
+        emailLink += `&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nDestination County: ${destinationCounty}`)}`;
+        if (countyData.cc) {
+            emailLink += `&cc=${countyData.cc}`;
+        }
     }
 
-    window.location.href = mailtoLink;
+    // Open the email client
+    window.open(emailLink, "_blank");
 
+    alert('Redirecting to your email client to send the CVI.');
 
-      alert('Redirecting to your email client to send the CVI.');
   });
 </script>
