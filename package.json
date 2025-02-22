@@ -3,8 +3,8 @@
   "version": "6.4.1",
   "description": "www.ca.gov",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "start": "cross-env MY_ENVIRONMENT=development npx @11ty/eleventy --serve",
+    "build": "cross-env MY_ENVIRONMENT=production npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,9 @@
     "prettier": "^3.3.2",
     "stylelint": "^16.2.1",
     "stylelint-config-standard": "^35.0.0",
-    "stylelint-use-nesting": "^5.1.1"
+    "stylelint-use-nesting": "^5.1.1",
+    "chalk": "^4.1.2",
+    "cross-env": "^7.0.3"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",

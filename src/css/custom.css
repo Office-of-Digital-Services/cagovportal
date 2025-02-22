@@ -43,7 +43,7 @@ header {
       @media (width <= 770px) {
         flex-direction: column !important;
 
-        > div.settings-links {
+        > div.settings-links, div.settings-links-ng {
           margin-left: 0 !important;
           justify-content: flex-start;
 

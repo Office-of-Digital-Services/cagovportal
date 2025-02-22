@@ -1,0 +1,175 @@
+---
+title: "Recovery services finder: Your customized services plan"
+landing: Support
+layout: landing-lafires
+dynamic_sidenavid: lafires
+hidestatewidealert: true
+permalink: /lafires/zh-hans/recovery-services-all/
+breadcrumbparent: 2025 Los Angeles Fires
+socialimage: https://www.ca.gov/images/lafires/la-fires-help.png
+socialimagealt: Five hands converging in the center of the image
+description: Here is a customized services plan for you. We provides direct links or information on how to get these services.
+keywords: LA, Los Angeles, fires, wildfires
+noindex: true
+lafires_header: true
+---
+
+<style>
+  .list-unstyled li:last-child {
+    border-bottom: none !important;
+  }
+</style>
+<div
+  class="section-primary lineart bg-p2"
+  style="background: url('/images/lafires/recovery-finder-lineart.svg?v2') no-repeat right / auto;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0 m-b-md color-white">
+      Recovery services finder<br />
+      <span class="font-size-30 color-white font-weight-400 m-b-md"
+        >Your customized services plans</span
+      >
+    </h1>
+
+    <a href="/lafires/get-help-online/" class="color-white d-print-none"
+      ><span
+        class="ca-gov-icon-caret-left d-inline-block no-underline font-size-20"
+        aria-hidden="true"></span
+      >Back to Get help online</a
+    >
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="container p-y-lg">
+  <div class="row">
+    <!-- Sidebar Navigation -->
+
+    <!-- Main Content Area -->
+    <div class="col-lg-10 pt-lg-3">
+      <p class="lead">
+        Here are the services that meet your needs. We provide direct links or
+        information on how to get these services.
+      </p>
+
+      <p class="mb-5 d-flex gap-4 align-items-center">
+        <a
+          class="d-print-none btn btn-outline-primary rounded-4 brd-solid-2 p-x-md m-r"
+          onclick="window.print(); return false;"
+          >Print your plan</a
+        >
+
+        <a href="/lafires/recovery-services-finder/" class="clearVars"
+          >Create new plan</a
+        >
+      </p>
+      {%- for service_type in lafires.recovery_services_types -%}
+      <!---->
+      {%- set categories = lafires.recovery_services_categories |
+      pluck("Type_of_Service",service_type.Type_of_Service) -%}
+      <!---->
+      {%- set classlist = "" -%}
+      <!---->
+      {%- for service_category in categories -%}
+      <!---->
+      {%-set classlist = classlist + " category_" + service_type.Section + "_" +
+      service_category.ID -%}
+      <!---->
+      {%- endfor -%}
+
+      <div class="d-none{{classlist}}" aria-hidden="true" hidden>
+        <h2 class="color-p2-darker">{{service_type.Title}}</h2>
+
+        {%- for service_category in categories -%}
+
+        <div
+          class="d-none category_{{service_type.Section}}_{{service_category.ID}}"
+          aria-hidden="true"
+          hidden>
+          <h3>{{service_category.Category}}</h3>
+
+          <div class="row">
+            {%- for item in lafires.recovery_services_finder |
+            pluck("Category",service_category.Category) -%}
+            <div class="col-lg-6 m-t-md">
+              <div
+                class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
+                <h4 class="m-b-sm">{{item.Service_name}}</h4>
+                <p class="department font-size-14 color-p2 font-weight-600">
+                  {{item.Entity}}
+                </p>
+                <p>{{item.Description}}</p>
+
+                <h5 class="m-t-0">How to get this service</h5>
+
+                <ul class="list-unstyled">
+                  {%- if item.Service_link -%}
+                  <li>
+                    <a
+                      href="{{item.Service_link}}"
+                      class="p-a-sm d-flex bg-gray-75 bg-gray-100-hover w-100"
+                      >Online<img
+                        src="/images/lafires/laptop-icon.svg"
+                        alt=""
+                        class="img-fluid ms-auto width-30"
+                        aria-hidden="true"
+                    /></a>
+                  </li>
+                  {%- endif -%} {%- if item.Info_link -%}
+                  <li class="border-bottom brd-gray-200">
+                    <a href="{{item.Info_link}}" class="p-a-sm d-inline-block"
+                      >Learn more</a
+                    >
+                  </li>
+                  {%- endif -%} {%- if item.In_person_kiosk_ -%}
+                  <li class="border-bottom brd-gray-200">
+                    <a
+                      href="{{item.In_person_kiosk_}}"
+                      class="p-a-sm d-inline-block"
+                      >In person (kiosk)</a
+                    >
+                  </li>
+                  {%- endif -%}{%- if item.Phone -%}
+                  <li class="border-bottom brd-gray-200">
+                    <a href="tel:{{item.Phone}}" class="p-a-sm d-inline-block"
+                      >Phone: {{item.Phone}}</a
+                    >
+                  </li>
+                  {%- endif -%}{%- if item.Email -%}
+                  <li class="border-bottom brd-gray-200">
+                    <a
+                      href="mailto:{{item.Email}}"
+                      class="p-a-sm d-inline-block"
+                      >Email</a
+                    >
+                  </li>
+                  {%- endif -%}{%- if item.Mail -%}
+                  <li><pre>{{item.Mail}}</pre></li>
+                  {%- endif -%}
+                </ul>
+              </div>
+            </div>
+            {%- endfor -%}
+          </div>
+        </div>
+        {%- endfor -%}
+      </div>
+      {%- endfor -%}
+
+      <div class="bg-gray-100 mt-5 px-4 p-b brd-solid-1 brd-gray-200 p-t-md">
+        <p class="color-primary">
+          To find local services, check out the
+          <a href="https://wildfires.betterangels.la/"
+            >LA Disaster Relief Navigator</a
+          >, a user-friendly community resource hub.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- set js -%}{%- include "../recovery-services-shared.mjs" -%}{%- include
+"../recovery-services-all.html.js" -%}{%- endset -%}
+<script>
+  {{- js | jsmin | safe }}
+</script>

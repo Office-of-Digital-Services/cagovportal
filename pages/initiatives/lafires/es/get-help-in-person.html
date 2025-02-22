@@ -1,0 +1,382 @@
+---
+title: Get help in person
+landing: Support
+layout: landing-lafires
+dynamic_sidenavid: lafires
+hidestatewidealert: true
+permalink: /lafires/es/get-help-in-person/
+breadcrumbparent: 2025 Los Angeles Fires
+socialimage: https://www.ca.gov/images/lafires/la-fires-help.png
+socialimagealt: Five hands converging in the center of the image
+description: You can get help and advice in person at a Disaster Recovery Center.
+keywords: LA, Los Angeles, fires, wildfires
+drc_map: true
+lafires_header: true
+---
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin="" />
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+<style>
+  .non-english-only:lang(en),
+  .english-only:not(:lang(en)) {
+    display: none;
+  }
+
+  .cagov-map-and-tiles {
+    position: relative;
+  }
+  #map {
+    height: 512px;
+    width: 100%;
+    z-index: 0;
+  }
+  #map-credits {
+    text-align: right;
+    font-size: 16px; /* 0.8rem; */
+    margin-top: 0.25rem;
+  }
+
+  #credits-tooltip {
+    font-size: 16px; /* 0.8rem; */
+    text-align: right;
+  }
+
+  .leaflet-container .leaflet-marker-pane img,
+  .leaflet-container .leaflet-shadow-pane img,
+  .leaflet-container .leaflet-tile-pane img,
+  .leaflet-container img.leaflet-image-layer,
+  .leaflet-container .leaflet-tile {
+    background-color: transparent;
+  }
+  .leaflet-popup-tip-container,
+  .leaflet-left {
+    background-color: transparent;
+  }
+  .provider-card {
+    padding: 1rem;
+    background: #fff;
+    border-radius: .33rem;
+  }
+  .provider-card.popup {
+    display: none;
+    float: right;
+    position: absolute;
+    width: 50%;
+    max-height: 512px;
+    overflow-y: auto;
+    right: 0;
+    z-index: 1;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    background: white;
+    margin: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    div.with-popup#map-results {
+      margin-top: 256px;
+    }
+    .provider-card.popup {
+      width: 100%;
+      /* top: 512px;
+      max-height: 512px; */
+    }
+   }
+   .provider-info div {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-column-gap: 0.5rem;
+      margin-bottom: 0.5rem;
+   }
+   .provider-info a {
+      font-size: 1.0rem;
+      text-decoration: none;
+   }
+   .provider-info a:hover {
+      text-decoration: underline;
+   }
+  .provider-card-container .h4 {
+    margin: 0.5rem 0 1rem 0;
+    font-size: 1.5rem;
+  }
+  .provider-subcard-item:hover {
+    cursor:pointer;
+    box-shadow: 0px 0px 10px 0px #7167A8BF;
+  }
+  .services {
+    position: relative;
+    font-size: 0.95rem;
+  }
+
+  .services-list-label {
+    position: absolute;
+    top: -11px;
+    left: 0;
+    font-size: 0.9rem;
+    background: #ffffff;
+    padding: 0 0.5rem 0 0;
+    margin-bottom: 0.5rem;
+  }
+  .distance-indicator {
+    font-family: 'Public Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+  }
+  button.close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+    opacity: 0.5;
+  }
+  button.close-button:hover,button.close-button:focus, button.close-button:active
+  {
+    background-color: #EEEEEE;
+    opacity: 1.0;
+    border: none;
+  }
+
+  .leaflet-tooltip {
+    font-weight: 700;
+    color: #207AC9 !important;
+  } 
+  .skip-map {
+    margin-bottom: 1rem;
+  }
+</style>
+
+<div
+  class="section-understated lineart bg-s1"
+  style="background: url('/images/topic2-lineart.svg?v3vehrb') no-repeat right / auto;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0 m-b-0 color-p2-darker line-height-1em">
+      {{title}}<br />
+      <span class="subtitle color-p2-darker bold m-b-md"
+        >2025 Los Angeles Fires</span
+      >
+    </h1>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="container p-y-lg">
+  <div class="row">
+    <!-- Sidebar Navigation -->
+    <div class="col-lg-3">{%- include "dynamic-sidenav.html" -%}</div>
+
+    <!-- Main Content Area -->
+    <div class="col-lg-9 pt-lg-3">
+      <p class="m-b-md lead">{{description}}</p>
+      <a
+        href="/lafires/plan-your-in-person-visit/"
+        class="btn btn-lg btn-primary rounded-5"
+        >Plan your in-person visit</a
+      >
+
+      <nav class="page-navigation m-t-lg"></nav>
+
+      <h2 class="mt-4">Find the nearest Disaster Recovery Center</h2>
+      <a class="skip-map btn btn-primary rounded-5" href="#recovery-center-cards">Skip map</a>
+
+      <div class="cagov-map-and-tiles">
+        <cagov-lafires-map></cagov-lafires-map>
+      </div>
+
+      <!-- Disaster Recovery Center Cards -->
+
+      <div class="row" id="recovery-center-cards">
+        <div class="col-md-6 m-t-md">
+          <div
+            class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
+            <h3 class="h5 m-t-md">UCLA Disaster Recovery Center</h3>
+            <p>
+              UCLA Research Park West<br />10850 West Pico Blvd.<br />Los
+              Angeles, CA 90064
+            </p>
+
+            <a
+              class="btn btn-primary rounded-5 m-y"
+              id="map-link-1"
+              class="maps-link"
+              href="https://maps.google.com/?q=123+UCLA+Drive,+Los+Angeles,+CA+90095"
+              ><span class="non-english-only">Driving </span>Directions<span
+                class="sr-only">
+                to UCLA Disaster Recovery Center</span
+              ></a
+            >
+          </div>
+        </div>
+
+        <div class="col-md-6 m-t-md">
+          <div
+            class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
+            <h3 class="h5 m-t-md">Altadena Disaster Recovery Center</h3>
+            <p>
+              540 W. Woodbury Rd.<br />
+              Altadena, CA 91001
+            </p>
+
+            <a
+              class="btn btn-primary rounded-5 m-y"
+              id="map-link-3"
+              class="maps-link"
+              href="https://maps.google.com/?q=540+W.+Woodbury+Road,+Altadena,+CA+91001"
+              >Directions<span class="sr-only">
+                to Altadena Disaster Recovery Center</span
+              ></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div
+            class="col-lg-12 d-flex align-items-center justify-content-flex-start">
+            <p class="fs-5">
+              <strong>Hours open</strong>: Monday - Sunday, 9 am to 7 pm
+            </p>
+          </div>
+          <div class="col-lg-8 mt-4">
+            <img
+              src="/images/LA-fires-get-help-in-person-wait-times-placeholder.svg?v3efkheb"
+              style="aspect-ratio:79/50"
+              alt="Bar chart showing the wait times for Los Angeles Disaster Recovery Centers. 12 pm to 3 pm are the busiest time with up to a 1 hour wait. 9 am, 5pm, and 6 pm are less busy. 7 pm to 8 pm tends not to have any wait."
+              class="img-fluid w-100" />
+          </div>
+        </div>
+      </div>
+
+      <p>Wait times are approximate and can change quickly.</p>
+      <p>
+        The centers are busiest in the middle of the day. Come earlier or later
+        to avoid waiting.
+      </p>
+      <p class="mb-0">
+        More about these centers:
+        <a href="https://recovery.lacounty.gov/recovery-centers/"
+          >Los Angeles County Disaster Recovery Centers</a
+        >
+      </p>
+
+      <hr class="mt-5" />
+
+      <!-- Services on Site Section -->
+      <h2>Services on site</h2>
+      <p>
+        Here are the services you can expect at the centers. See a full list at
+        <a href="/lafires/plan-your-in-person-visit/"
+          >Plan your in-person visit</a
+        >.
+      </p>
+
+      <h3>State and local services:</h3>
+      <p>Sign in at the door. Services include:</p>
+      <ul class="fw-bold fs-5">
+        <li class="m-t">Food benefits</li>
+        <li class="m-t">Health services and advice</li>
+        <li class="m-t">Unemployment</li>
+        <li class="m-t">Disability benefits</li>
+        <li class="m-t">Replacing personal documents</li>
+        <li class="m-t">Tips for hiring contractors</li>
+        <li class="m-t">Help with insurance claims</li>
+        <li class="m-t">Tax help and relief</li>
+      </ul>
+
+      <!-- Federal services section -->
+      <h3>Federal services</h3>
+      <p>Sign in at the FEMA tents. Services include:</p>
+      <ul class="fw-bold fs-5">
+        <li class="m-t">Housing</li>
+        <li class="m-t">Home repairs</li>
+        <li class="m-t">Legal services</li>
+      </ul>
+
+      <hr class="mt-5" />
+
+      <!-- Before you arrive section -->
+      <h2>Before you arrive</h2>
+      <p>
+        Use our checklist to
+        <a href="/lafires/plan-your-in-person-visit/"
+          >plan your in-person visit</a
+        >.
+      </p>
+
+      <p>If you can, bring these items with you:</p>
+      <ul>
+        <li class="m-t">Address of the damaged primary home</li>
+        <li class="m-t">Insurance coverage information</li>
+        <li class="m-t">Current phone number and mailing address</li>
+        <li class="m-t">Bank account information</li>
+      </ul>
+      <hr class="mt-5" />
+      <!-- When you get here section -->
+      <h2>When you get here</h2>
+      <ul>
+        <li class="m-t">
+          <strong>Parking: </strong>Free parking available. People may be there
+          to direct you.
+        </li>
+        <li class="m-t">
+          <strong>Sign in: </strong>Sign in at FEMA tents for federal benefits,
+          or go into the building for state and local services.
+        </li>
+        <li class="m-t">Restrooms and beverages available.</li>
+        <li class="m-t">
+          Use
+          <a href="/lafires/plan-your-in-person-visit/"
+            >Plan your in-person visit</a
+          >
+          to help you find the services you need.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+    const locations = [
+    { id: 'map-link-1', address: '10850 West Pico Blvd, Los Angeles, CA 90064' },
+    // { id: 'map-link-2', address: '3035 E. Foothill Blvd, Pasadena, CA 91107' },
+    { id: 'map-link-3', address: '540 W. Woodbury Road, Altadena, CA 91001' }
+  ];
+
+    locations.forEach(location => {
+    document.querySelector(`#${location.id}`).addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const encodedAddress = encodeURIComponent(location.address);
+      const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) ||
+                    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      const isAndroid = /Android/.test(navigator.userAgent);
+
+      if (isIOS) {
+          window.location.href = `maps://maps.apple.com/?q=${encodedAddress}`;
+      }
+      else if (isAndroid) {
+          window.location.href = `geo:0,0?q=${encodedAddress}`;
+      }
+      // Default to Google Maps in browser
+      else {
+          window.location.href = `https://maps.google.com/?q=${encodedAddress}`;
+      }
+    });
+  });
+</script>

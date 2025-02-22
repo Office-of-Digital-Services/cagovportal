@@ -1,0 +1,108 @@
+---
+title: "Recovery services finder: Start recovering"
+landing: Support
+layout: landing-lafires
+dynamic_sidenavid: lafires
+hidestatewidealert: true
+permalink: /lafires/zh-hant/recovery-services-long-term/
+breadcrumbparent: 2025 Los Angeles Fires
+socialimage: https://www.ca.gov/images/lafires/la-fires-help.png
+socialimagealt: Five hands converging in the center of the image
+description: Select all the items you need to start recovering.
+keywords: LA, Los Angeles, fires, wildfires
+noindex: true
+lafires_header: true
+---
+
+<div
+  class="section-primary lineart bg-p2"
+  style="background: url('/images/lafires/recovery-finder-lineart.svg?v2') no-repeat right / auto;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0 m-b-md color-white">Recovery services finder</h1>
+
+    <a href="/lafires/get-help-online/" class="color-white"
+      ><span
+        class="ca-gov-icon-caret-left d-inline-block no-underline font-size-20"
+        aria-hidden="true"></span
+      >Back to Get help online</a
+    >
+  </div>
+</div>
+
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-lg-10">
+      <div class="bg-white mt-5 px-4 p-b-md brd-solid-4 brd-gray-200 rounded">
+        <h2 class="h3 color-p2-darker mt-4 mb-0">Start recovering</h2>
+        <form>
+          <fieldset class="p-a-sm">
+            <legend class="h5 font-weight-400 m-b-md">
+              Select all the items you need.
+            </legend>
+
+            {%- for category in lafires.recovery_services_categories |
+            pluck("Type_of_Service","Start recovering") -%}
+
+            <div class="d-flex align-items-top m-b-md p-l-0">
+              <input
+                class="form-check-input brd-gray-200 brd-solid-2 rounded-0 font-size-30 m-l-0 m-a-0 pos-rel top-minus-2"
+                type="checkbox"
+                value=""
+                id="category_long_{{category.ID}}" />
+              <label
+                class="form-check-label cursor-pointer m-l m-a-0"
+                for="category_long_{{category.ID}}"
+                ><span class="d-block font-weight-400"
+                  ><span class="bold">{{category.Category}}:</span>
+                  {{category.Category_Description}}</span
+                >
+              </label>
+            </div>
+
+            {%-endfor-%}
+            <div class="d-flex gap-4 flex-wrap mt-5">
+              <button
+                class="btn btn-outline-primary btn-lg px-4 rounded-4 d-flex align-items-center gap-2"
+                type="button"
+                onclick="window.history.back()">
+                <span
+                  class="ca-gov-icon-caret-left d-inline-block font-size-20"
+                  aria-hidden="true"></span
+                >Back
+              </button>
+              <button
+                class="btn btn-primary disabled btn-lg px-4 rounded-4 d-flex align-items-center gap-2"
+                type="button"
+                onclick="customClick()"
+                id="redirect">
+                Next
+                <span
+                  class="ca-gov-icon-caret-right d-inline-block font-size-20"
+                  aria-hidden="true"></span>
+              </button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- set js -%}{%- include "../recovery-services-shared.mjs" -%}{%- endset -%}
+<script>
+  {{- js | jsmin | safe }}
+</script>
+
+<script>
+  const next = "/lafires/recovery-services-all/";
+  const data = window.getCheckboxStates();
+
+  if (!data.includes("long")) {
+    window.location.replace(next);
+  }
+
+  function customClick() {
+      window.location.href = next;
+  }
+</script>

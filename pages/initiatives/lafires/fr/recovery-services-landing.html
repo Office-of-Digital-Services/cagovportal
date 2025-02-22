@@ -1,0 +1,136 @@
+---
+title: Recherche de services de rétablissement
+landing: Support
+layout: landing-lafires
+dynamic_sidenavid: lafires
+hidestatewidealert: true
+permalink: /lafires/fr/recovery-services-finder/
+breadcrumbparent: 2025 Los Angeles Fires
+socialimage: https://www.ca.gov/images/lafires/la-fires-help.png
+socialimagealt: Cinq mains convergent vers le centre de l'image
+description: Utilisez cet outil pour obtenir une liste personnalisée des services étatiques et fédéraux.
+keywords: LA, Los Angeles, fires, wildfires, incendies, feux de forêt, aide, assistance, secours
+lafires_header: true
+---
+
+<div
+  class="section-primary lineart bg-p2"
+  style="background: url('/images/lafires/recovery-finder-lineart.svg?v2') no-repeat right / auto;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0 m-b-md color-white line-height-1em">{{title}}<br /></h1>
+
+    <a href="/lafires/get-help-online/" class="color-white"
+      ><span
+        class="ca-gov-icon-caret-left d-inline-block no-underline font-size-20"
+        aria-hidden="true"></span
+      >Retour à Obtenir de l'aide en ligne</a
+    >
+  </div>
+</div>
+
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-lg-10">
+      <p class="lead">
+        Le rétablissement après une catastrophe peut être déroutant. Utilisez cet outil pour obtenir une liste personnalisée des services étatiques et fédéraux. Prenez simplement 2 minutes pour répondre à quelques questions.
+      </p>
+
+      <div class="bg-white mt-5 px-4 p-b-md brd-solid-4 brd-gray-200 rounded">
+        <h2 class="h3 color-p2-darker mt-4 mb-0">
+          Quel type de services recherchez-vous ?
+        </h2>
+        <form>
+          <fieldset class="p-a-sm">
+            <legend class="h5 font-weight-400 m-b-md">
+              Sélectionnez tout ce qui s'applique.
+            </legend>
+            <h3>Particulier</h3>
+            <div class="d-flex align-items-top m-b-md p-l-0">
+              <input
+                class="form-check-input brd-gray-200 brd-solid-2 rounded-0 font-size-30 m-l-0 m-a-0 pos-rel top-minus-2"
+                type="checkbox"
+                value=""
+                id="short" />
+              <label
+                class="form-check-label cursor-pointer m-l m-a-0"
+                for="short"
+                ><span class="d-block font-weight-400"
+                  ><span class="bold">Aide essentielle :</span> Nourriture, dépenses,
+                  hébergement, remplacement de documents, et plus</span
+                >
+              </label>
+            </div>
+
+            <div class="d-flex align-items-top m-b-md p-l-0">
+              <input
+                class="form-check-input brd-gray-200 brd-solid-2 rounded-0 font-size-30 m-l-0 m-a-0 pos-rel top-minus-2"
+                type="checkbox"
+                value=""
+                id="long" />
+              <label
+                class="form-check-label cursor-pointer m-l m-a-0"
+                for="long"
+                ><span class="d-block font-weight-400"
+                  ><span class="bold">Commencer à se rétablir : </span> Réclamations d'assurance,
+                  reconstruction, emploi, et plus</span
+                >
+              </label>
+            </div>
+            <h3>Entreprise</h3>
+            {%- for category in lafires.recovery_services_categories |
+            pluck("Type_of_Service","Business help") -%}
+
+            <div class="d-flex align-items-top m-b-md p-l-0">
+              <input
+                class="form-check-input brd-gray-200 brd-solid-2 rounded-0 font-size-30 m-l-0 m-a-0 pos-rel top-minus-2"
+                type="checkbox"
+                value=""
+                id="category_business_{{category.ID}}" />
+              <label
+                class="form-check-label cursor-pointer m-l m-a-0"
+                for="category_business_{{category.ID}}"
+                ><span class="d-block font-weight-400"
+                  ><span class="bold">{{category.Category}}:</span>
+                  {{category.Category_Description}}</span
+                >
+              </label>
+            </div>
+
+            {%-endfor-%}
+
+            <button
+              class="btn btn-primary disabled mt-5 px-4 btn-lg rounded-4 d-flex align-items-center justify-content-between"
+              type="button"
+              onclick="customClick()"
+              id="redirect">
+              Suivant<span
+                class="ca-gov-icon-caret-right d-inline-block no-underline font-size-20 ml-2"
+                aria-hidden="true"></span>
+            </button>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="bg-gray-100 mt-5 px-4 p-b p-t-md">
+        <p class="color-primary">
+          Pour trouver des services locaux, consultez le
+          <a href="https://wildfires.betterangels.la/"
+            >Navigateur d'aide aux sinistrés de LA</a
+          >, un centre de ressources communautaires convivial.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- set js -%}{%- include "../recovery-services-shared.mjs" -%}{%- endset -%}
+<script type="module">
+  {{- js | jsmin | safe }}
+</script>
+
+<script>
+  function customClick() {
+    window.location.href = "/lafires/recovery-services-short-term/";
+  }
+</script>

@@ -4,7 +4,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   // // trigger a refresh after the translate link changes the page hash
   document
-    .querySelectorAll(".settings-links > a:not(.translate)")
+    .querySelectorAll(".settings-links-google > a:not(.translate)")
     .forEach(l =>
       l.addEventListener("click", () =>
         window.setTimeout(() => window.location.reload())

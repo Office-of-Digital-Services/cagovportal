@@ -11,16 +11,16 @@
       </a>
       <ul class="footer-links d-print-none">
         <li>
-          <a href="/legal/conditions-of-use/">Conditions of use</a>
+          <a href="/legal/conditions-of-use/">{{ 'conditions_of_use' | i18n }}</a>
         </li>
         <li>
-          <a href="/legal/privacy-policy/">Privacy policy</a>
+          <a href="/legal/privacy-policy/">{{ 'privacy_policy' | i18n }}</a>
         </li>
         <li>
-          <a href="/legal/accessibility/"> Accessibility</a>
+          <a href="/legal/accessibility/">{{ 'accessibility' | i18n }}</a>
         </li>
         <li>
-          <a href="/about/sitemap/">Sitemap</a>
+          <a href="/about/sitemap/">{{ 'sitemap' | i18n }}</a>
         </li>
       </ul>
 
@@ -31,11 +31,11 @@
             document.getElementById('thisyear').appendChild(document.createTextNode(new Date().getFullYear()))
           </script>
         </span>
-        State of California
+        {{ 'state_of_california' | i18n }}
       </p>
     </div>
   </div>
   <button class="return-top">
-    <span class="sr-only">Back to top</span>
+    <span class="sr-only">{{ 'back_to_top' | i18n }}</span>
   </button>
 </footer>
