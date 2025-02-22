@@ -1,10 +1,13 @@
 //@ts-check
 const defaultConfig = require("@11ty/eleventy/src/defaultConfig");
 const { minify } = require("terser");
+const { parse } = require("csv-parse/sync");
 const MarkdownIt = require("markdown-it");
 const postcss = require("postcss");
 const postcssNested = require("postcss-nested");
 const { DateTime } = require("luxon");
+const fs = require("node:fs");
+const path = require("node:path");
 
 // canonical domain
 const domain = "https://www.ca.gov";
@@ -18,6 +21,7 @@ module.exports = function (
   // Copy state tempate code files from NPM
   eleventyConfig.addPassthroughCopy({
     "src/images": "images",
+    "src/docs": "docs",
     "src/root": "/"
   });
 
@@ -44,7 +48,7 @@ module.exports = function (
      * @param {*[]} arr
      * @param {string} attr
      * @param {*} value
-     * @param {"includes" | "not"} [operator]
+     * @param {"includes" | "not" | "match" | "startswith"} [operator]
      * @example
      * {%- for tag in topics | pluck("featured", true) | sortBy("featureOrder") -%}
      * {%- for tag in pluck("ServiceId",item.ServiceId,"not") -%}
@@ -57,11 +61,23 @@ module.exports = function (
 
         switch (operator?.toLowerCase()) {
           case "includes":
-            return itemval.includes(value);
+            return itemval
+              .toString()
+              .toLowerCase()
+              .includes(value.toString().toLowerCase());
+          case "match":
+            // Expects value to be an array
+            // set topicsToDisplay = topics | pluck("name",item.AgencyTags.split("|"),"match")
+            return /** @type {string[]} */ (value)
+              .map(x => x.toLowerCase())
+              .includes(itemval.toLowerCase());
           case "not":
             return itemval !== value;
           case "startswith":
-            return itemval.startsWith(value);
+            return itemval
+              .toString()
+              .toLowerCase()
+              .startsWith(value.toString().toLowerCase());
           default:
             return itemval === value;
         }
@@ -74,7 +90,7 @@ module.exports = function (
     /**
      * @param {[]} arr
      * @param {string} prop
-     */ (arr, prop) => [...arr].sort((a, b) => (a[prop] > b[prop] ? 1 : -1))
+     */ (arr, prop) => [...arr].sort((a, b) => (a[prop] < b[prop] ? -1 : 1))
   );
 
   eleventyConfig.addNunjucksAsyncFilter(
@@ -179,6 +195,46 @@ module.exports = function (
   eleventyConfig.addShortcode(
     "firstDayOfMonth",
     () => `${new Date().toISOString().substring(0, 8)}01`
+  );
+
+  // After build hook to create an XML sitemap for PDF files
+  eleventyConfig.on("afterBuild", () => {
+    const pdfDirs = [
+      path.join(__dirname, "_site", "images"),
+      path.join(__dirname, "_site", "docs")
+    ];
+    const outputFilePath = path.join(__dirname, "_site", "sitemaps/pdf.xml");
+
+    let sitemapContent = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    sitemapContent +=
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+
+    pdfDirs.forEach(dir => {
+      fs.readdir(dir, (err, files) => {
+        if (err) throw err;
+
+        const pdfFiles = files.filter(file => path.extname(file) === ".pdf");
+        pdfFiles.forEach(file => {
+          const urlPath = path.join(
+            dir.replace(path.join(__dirname, "_site"), ""),
+            file
+          );
+          sitemapContent += `  <url>\n    <loc>${domain}${encodeURI(urlPath)}</loc>\n    <changefreq>never</changefreq>\n  </url>\n`;
+        });
+
+        // Write the sitemap content to the file
+        fs.writeFileSync(outputFilePath, `${sitemapContent}</urlset>`);
+      });
+    });
+  });
+
+  eleventyConfig.addDataExtension("csv", (/** @type {string} */ contents) =>
+    parse(contents, {
+      columns: header => header.map(col => col.replace(/\W+/g, "_")),
+      skip_empty_lines: true,
+      cast: value =>
+        ["true", "false"].includes(value) ? value === "true" : value //Boolean value parsing
+    })
   );
 
   //Start with default config, easier to configure 11ty later

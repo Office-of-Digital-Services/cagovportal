@@ -2,13 +2,14 @@
 landing: Services
 layout: landing
 breadcrumbparent: Services
+sitemap: service
 pagination:
     data: state_entity.services
     size: 1
     alias: item
     addAllPagesToCollections : true
 permalink: "departments/{{ item.AgencyId }}/services/{{ item.ServiceId }}/"
-eleventyComputed: 
+eleventyComputed:
   description: "{{ item.Description | safe }}"
   keywords: "{{ item.Keywords | safe }}"
   title: "{{ item.ServiceName | safe }}"
@@ -30,6 +31,9 @@ eleventyComputed:
         <p>
           <a href="../../">{{item.FriendlyName}}</a>
         </p>
+        <p class="m-t-md font-size-13">
+          <em>Last updated {{ item.Updated | formatDate }}</em>
+        </p>
       </div>
       <div class="col-lg-5">
         {% if item.ImageUrl %}
@@ -37,6 +41,7 @@ eleventyComputed:
           <img
             src="https://stateentityprofile.ca.gov/Uploads/{{item.ImageUrl}}"
             loading="lazy"
+            crossorigin="anonymous"
             class="rounded-circle service-img width-300 height-300 pos-abs right-sm d-none d-lg-block"
             alt=""
             aria-hidden="true" />
@@ -100,15 +105,18 @@ eleventyComputed:
           >{{-related.ServiceName-}}</a
         >{%- endfor %}
       </p>
-      {%- endif %} {%- if item.AgencyTags.includes(topic.name) %}
+      {%- endif %} {%- set topicsToDisplay = topics | sortBy("featureOrder") |
+      pluck("name",item.AgencyTags.split("|"),"match")-%} {%- if
+      topicsToDisplay.length > 0 %}
       <h3 class="m-t-md">Topics</h3>
       <p class="keywords">
-        {%- for topic in topics | sortBy("featureOrder") %}
+        {%- for topic in topicsToDisplay %}
         <a href="/topics/{{topic.slug}}/"> {{- topic.name | trim -}} </a
         ><span class="m-r-sm">, </span>
         {%- endfor %}
       </p>
-      {%- endif -%}
+      {%- endif %}
+
       <h3>Keywords</h3>
       <p class="keywords">
         {%- for keyword in item.Keywords.split(",") | sort %} {%- if

@@ -10,7 +10,7 @@ async function getTopStories() {
 
   try {
     const response = await EleventyFetch(url, {
-      duration: "1d",
+      duration: "4h",
       type: "xml"
     });
 

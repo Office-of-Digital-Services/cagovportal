@@ -1,5 +1,5 @@
 <!-- Utility header structural component -->
-<div class="utility-header" data-nosnippet>
+<div class="utility-header d-print-none" data-nosnippet>
   <div class="container">
     <div class="flex-row">
       <div class="social-media-links align-items-start">
@@ -24,7 +24,8 @@
           </div>
         </div>
       </div>
-      <div class="settings-links ms-auto align-items-start pt-2">
+      <div
+        class="settings-links ms-auto align-items-start pt-2 line-height-1-6em">
         <a
           href="#googtrans(en|es)"
           class="m-l-0 underline cursor-pointer"
@@ -71,6 +72,17 @@
           class="underline cursor-pointer"
           >繁體中文</a
         >
+        {% if lafires_header %}
+        <a
+          href="#googtrans(en|hy)"
+          lang="hy"
+          hreflang="hy"
+          translate="no"
+          rel="alternate"
+          class="underline cursor-pointer"
+          >Հայերեն</a
+        >
+        {% endif %}
         <a class="translate notranslate pos-rel top-minus-2" href="/translate/"
           ><span class="ca-gov-icon-globe" aria-hidden="true"></span
           ><span class="sr-only">Translate</span></a

@@ -1,0 +1,14 @@
+ID,Type of Service,Category,Category Description
+1,Essential help,Housing,"Shelters, temporary housing, mortgage relief"
+2,Essential help,Food,Food or food benefits
+3,Essential help,Pets,"Lost or found a pet, and more"
+4,Essential help,Health,Staying healthy
+5,Essential help,Individual help,State and federal (FEMA) programs that help disaster survivors
+6,Essential help,Personal documents,"Driver's license, birth, death, and marriage records"
+7,Start recovering,Returning home,"Assessments, cleanup, debris removal"
+8,Start recovering,Insurance,Home insurance and insurance claims
+9,Start recovering,Rebuilding,"Find a contractor, verify a professional license"
+10,Start recovering,Employment,"Unemployment, disability, find a job"
+11,Start recovering,Taxes,Relief for income and property taxes
+12,Business help,Support,"Financial help, recovery, disaster relief payments, small businesses"
+13,Business help,Tax help and relief,"Income taxes, sales tax, payroll taxes"

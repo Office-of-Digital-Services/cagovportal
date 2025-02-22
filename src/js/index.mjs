@@ -67,18 +67,15 @@ window.addEventListener("DOMContentLoaded", () => {
         const keyProperty = this.dataset.rowFilterKey;
         if (!keyProperty) throw new Error("missing data-row-filter-key");
 
-        const sessionStorageKey = this.dataset.filterStorageKey;
-        if (!sessionStorageKey)
-          throw new Error("missing data-filter-storage-key");
-
-        const datasetstring = sessionStorage[sessionStorageKey];
-
-        if (!datasetstring) {
-          throw new Error(`can't find ${sessionStorageKey} in sessionStorage`);
-        }
+        const windowVarName = this.dataset.filterStorageKey;
+        if (!windowVarName) throw new Error("missing data-filter-storage-key");
 
         /** @type {*[]} */
-        const storageData = JSON.parse(datasetstring);
+        const storageData = window[windowVarName];
+
+        if (!storageData) {
+          throw new Error(`can't find ${windowVarName} in window object`);
+        }
 
         const elementRows = /** @type {HTMLElement[]} */ ([
           ...this.querySelectorAll("[data-row-key]")
@@ -171,6 +168,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
             rowElement.style.display = bShow ? "" : "none";
             rowElement.ariaHidden = bShow ? null : "true";
+            rowElement.hidden = !bShow;
           });
         };
         if (inputBox) inputBox.addEventListener("input", checkme);
@@ -189,6 +187,16 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     }
   );
+
+  const location = window.location;
+  if (location.hash) {
+    // Trigger a hashchange to ensure hash scrolling works
+    setTimeout(() => {
+      const currentHash = location.hash;
+      location.hash += "_"; // Remove the hash temporarily
+      location.hash = currentHash; // Reapply the hash
+    }, 500);
+  }
 });
 
 /* -----------------------------------------

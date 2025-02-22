@@ -7,7 +7,7 @@
     "cardDescription": "Update your personal records, which make it easier to access services.",
     "featureOrder": 8,
     "slug": "personal-records",
-    "topicImg": "/images/topic1-lineart.svg",
+    "topicImg": "/images/topic1-lineart.svg?v2efjhb",
     "popularServices": [
       {
         "DepartmentId": 176,
@@ -51,7 +51,7 @@
     "cardDescription": "Grow your business through licensing, permitting, and other resources.",
     "featureOrder": 2,
     "slug": "businesses",
-    "topicImg": "/images/topic2-lineart.svg",
+    "topicImg": "/images/topic2-lineart.svg?v3vehrb",
     "popularServices": [
       {
         "DepartmentId": 287,

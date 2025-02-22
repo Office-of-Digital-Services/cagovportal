@@ -6,6 +6,7 @@ layout: landing
 dynamic_sidenavid: service
 side_filter_data: services
 noindex_follow: true
+data_service: true
 ---
 
 <div
@@ -48,7 +49,7 @@ noindex_follow: true
         data-row-filter-key="ServiceId"
         data-filter-trigger-selector='input[name="AgencyTags"]'
         role="list">
-        {%- for service in state_entity.services -%}
+        {%- for service in state_entity.services %}
         <div
           data-row-key="{{service.ServiceId}}"
           class="pos-rel"
@@ -61,20 +62,27 @@ noindex_follow: true
           </h2>
           <p class="font-size-14 bold m-t-sm">by {{service.FriendlyName}}</p>
           <p class="service-description">{{service.Description}}</p>
-          <a
-            class="btn btn-outline-primary btn-lg"
-            href="{{ service.ServiceUrl }}">
-            Launch service
-            <span class="sr-only">: {{service.ServiceName}}</span></a
-          >
+          <div
+            class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3">
+            <a
+              class="btn btn-outline-primary btn-lg m-r-sm"
+              href="{{ service.ServiceUrl }}">
+              Launch service<span class="sr-only"
+                >: {{service.ServiceName}}</span
+              ></a
+            >
+            <p class="font-size-13 ms-sm-auto">
+              <em>Last updated {{ service.Updated | formatDate }}</em>
+            </p>
+          </div>
 
-          {%-set topicResults=[]%}{%for topic in
-          topics|sortBy("featureOrder")%}{%if topic.name in
-          service.AgencyTags%}{%set _=topicResults.push('<a
+          {%-set topicResults=[]-%}{%-for topic in
+          topics|sortBy("featureOrder")-%}{%-if topic.name in
+          service.AgencyTags-%}{%-set _=topicResults.push('<a
             href="/topics/'+topic.slug+'/"
             class="py-1"
             >'+topic.name+'</a
-          >')%}{%endif%}{%endfor%}{%if topicResults.length%}
+          >')-%}{%-endif-%}{%-endfor-%}{%-if topicResults.length%}
           <p class="font-size-14 m-t-md">
             Topics: {{topicResults.join(", ") | safe}}
           </p>

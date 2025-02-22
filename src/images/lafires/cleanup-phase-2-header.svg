@@ -1,0 +1,12 @@
+<svg width="183" height="73" viewBox="0 0 183 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      fill: #3B3A48;
+      font-weight: 700;
+      dominant-baseline: middle;
+      font-family: "Public Sans",system-ui,-apple-system,"Segoe UI","Roboto","Helvetica Neue","Noto Sans",sans-serif;
+    }
+  </style>
+  <path d="M0.5 3.84199C0.5 2.20175 1.82968 0.87207 3.46992 0.87207H156.022C156.993 0.87207 157.902 1.34621 158.457 2.14194L181.471 35.1081C182.184 36.1293 182.184 37.4869 181.471 38.5081L158.457 71.4743C157.902 72.27 156.993 72.7441 156.022 72.7441H3.46991C1.82967 72.7441 0.5 71.4145 0.5 69.7742V3.84199Z" fill="#7BB0DA" />
+  <text x="14" y="40" style="font-size: 37px;" fill="#3B3A48">Phase 2</text>
+</svg>

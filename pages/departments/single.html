@@ -2,13 +2,14 @@
 landing: Departments
 layout: landing
 breadcrumbparent: Departments
+sitemap: agency
 pagination:
     data: state_entity.agencies
     size: 1
     alias: item
     addAllPagesToCollections : true
 permalink: "departments/{{ item.AgencyId }}/"
-eleventyComputed: 
+eleventyComputed:
   description: "{{ item.Description | safe }}"
   title: "{{ item.FriendlyName | safe }} ({{ item.Acronym | safe }})"
   keywords: "{{ item.Keywords | safe }}"
@@ -30,12 +31,15 @@ endfor %} {%- endfor -%}
 
 <div
   class="section-understated lineart bg-s1"
-  style="background: url('/images/departments-lineart.svg') no-repeat right / auto;">
+  style="background: url('/images/departments-lineart.svg?v2evjhb') no-repeat right / auto;">
   <div class="container p-y-md">
     <div class="row">
       <div class="col-xl-8">
         {%- include "breadcrumbs.html" -%}
         <h1 class="m-t-0 color-p2-darker">{{title}}</h1>
+        <p class="m-t-md font-size-13">
+          <em>Last updated {{ item.Updated | formatDate }}</em>
+        </p>
       </div>
     </div>
   </div>
@@ -48,6 +52,7 @@ endfor %} {%- endfor -%}
       <img
         src="{{item.structuredData.logo}}"
         class="img-fluid sticky-6 square"
+        crossorigin="anonymous"
         style="object-fit: contain;"
         alt="'{{item.FriendlyName}}' logo" />
       {% endif %}
@@ -94,11 +99,20 @@ endfor %} {%- endfor -%}
         >
       </h3>
       <p>{{service.Description}}</p>
-      <a
-        class="btn btn-outline-primary btn-lg m-r-sm"
-        href="{{ service.ServiceUrl }}">
-        Launch service<span class="sr-only">: {{service.ServiceName}}</span></a
-      >
+      <div
+        class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3">
+        <a
+          class="btn btn-outline-primary btn-lg m-r-sm"
+          href="{{ service.ServiceUrl }}">
+          Launch service<span class="sr-only"
+            >: {{service.ServiceName}}</span
+          ></a
+        >
+        <p class="font-size-13 ms-sm-auto">
+          <em>Last updated {{ service.Updated | formatDate }}</em>
+        </p>
+      </div>
+
       {%- if not loop.last -%}
       <hr class="m-b-lg m-t-md" />
       {%- endif -%} {% endfor %} {%- for x in QAs -%} {%- if loop.first %}

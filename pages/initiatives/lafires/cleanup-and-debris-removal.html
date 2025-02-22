@@ -1,0 +1,504 @@
+---
+title: Cleanup and debris removal
+landing: Support
+layout: landing
+dynamic_sidenavid: lafires
+hidestatewidealert: true
+permalink: lafires/cleanup-and-debris-removal/
+breadcrumbparent: 2025 Los Angeles Fires
+socialimage: https://www.ca.gov/images/lafires/la-fires-help.png
+socialimagealt: Five hands converging in the center of the image
+description: Here we explain cleanup and debris removal phases after the LA fires. Learn how to get your property clean, safe, and cleared for rebuilding.
+keywords: California, government, LA, Los Angeles, fires, wildfires, cleanup, debris removal, Phase 1, Phase 2
+lafires_header: true
+---
+
+<style>
+  :is(.debris-step, .debris-boxed-content) > :first-child {
+    margin-block-start: 0;
+  }
+  :is(.debris-step, .debris-boxed-content) > :last-child {
+    margin-block-end: 0;
+  }
+  .debris-step {
+    container: debris-step / inline-size;
+    margin-block-end: 3rem;
+  }
+  hr + .debris-step {
+    margin-block-start: 3rem;
+  }
+  .debris-phase-map {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 100%;
+  }
+  .debris-phase-map > img {
+    max-width: 100%;
+    height: auto;
+  }
+  .debris-phase-map-2-horizontal {
+    display: none;
+  }
+  .phase-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-block-end: 1.5rem;
+  }
+  .phase-header > h2 {
+    margin: 0;
+  }
+  ul.debris-list-grid {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-template-rows: auto;
+  }
+  ul.debris-list-grid > li {
+    padding: 1rem;
+    border-radius: 0.3125rem;
+    background: gray;
+  }
+  ul.debris-list-grid > li:nth-child(odd):last-child {
+    grid-column: 1 / -1;
+  }
+  ul.debris-list-grid.phase-1-debris-list-grid > li {
+    background-color: #FBF0E7;
+  }
+  ul.debris-list-grid.phase-2-debris-list-grid > li {
+    background-color: #EEF8FB;
+  }
+  .debris-boxed-content {
+    padding: 1rem 1.5rem;
+    margin-block: 1.5rem 2.5rem;
+    border-radius: 0.3125rem;
+    border: 3px solid;
+  }
+  .phase-1-border-color {
+    border-color: #FDB81E;
+  }
+  .phase-2-border-color {
+    border-color: #7BB0DA;
+  }
+  .neutral-border-color {
+    border-color: #D4D4D7;
+  }
+  .debris-removal-viz {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 6rem auto;
+    margin-block: 1.5rem;
+  }
+  .debris-removal-viz > span:nth-child(2) {
+    transform: translateY(-.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    width: 7rem;
+    height: 7rem;
+    font-size: 2.60838rem;
+    font-weight: 900;
+    border-radius: 50%;
+    overflow: visible;
+    z-index: 5;
+  }
+  .debris-removal-viz > :is(span:first-child, span:last-child) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+    padding: 1rem;
+    font-size: 1.4375rem;
+    font-weight: 700;
+    line-height: 2.4375rem;
+    text-align: center;
+    border-radius: 0.3125rem;
+    border: 3px solid;
+  }
+  .debris-removal-viz > :is(div:first-child, div:last-child) {
+    padding: 1rem 1.5rem;
+    border-radius: 0.3125rem;
+    border: 3px solid;
+  }
+  .debris-removal-viz.phase-1-debris-removal-viz > span:nth-child(2) {
+    background-color: #FDB81E;
+  }
+  .debris-removal-viz.phase-1-debris-removal-viz > :is(:first-child, :last-child) {
+    border-color: #FDB81E;
+  }
+  .debris-removal-viz.phase-2-debris-removal-viz > span:nth-child(2) {
+    background-color: #7BB0DA;
+  }
+  .debris-removal-viz.phase-2-debris-removal-viz > :is(:first-child, :last-child) {
+    border-color: #7BB0DA;
+  }
+  @container debris-step (width > 800px) {
+    .debris-phase-map {
+      display: flex;
+      flex-direction: row;
+      gap: 0;
+    }
+    .debris-phase-map-2-horizontal {
+      display: unset;
+    }
+    .debris-phase-map-2-vertical {
+      display: none;
+    }
+    .debris-phase-map > img {
+      max-width: 50%;
+    }
+    .phase-header {
+      align-items: center;
+      flex-direction: row;
+    }
+    .debris-removal-viz {
+      grid-template-columns: calc(50% - 3rem) 6rem calc(50% - 3rem);
+      grid-template-rows: auto;
+    }
+    .debris-removal-viz > span:nth-child(2) {
+      transform: unset;
+      align-self: center;
+    }
+  }
+</style>
+<script></script>
+
+<div
+  class="section-understated lineart bg-s1"
+  style="background: url('/images/lafires/tractor-lineart.svg') no-repeat right / auto;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0 m-b-0 color-p2-darker line-height-1em">
+      {{title}}<br />
+      <span class="subtitle color-p2-darker bold m-b-md"
+        >2025 Los Angeles Fires</span
+      >
+    </h1>
+  </div>
+</div>
+
+<div class="container p-y-lg">
+  <div class="row">
+    <div class="col-lg-3">{%-include "dynamic-sidenav.html"-%}</div>
+
+    <!--MAIN CONTENT-->
+    <div class="col-lg-9 pt-lg-3">
+      <p class="m-b-md lead">
+        Cleanup and debris removal after wildfires is a 2-phase process. You can
+        have it done at no cost to you.
+      </p>
+
+      <nav class="page-navigation"></nav>
+
+      <div class="debris-step m-t-lg">
+        <div class="debris-phase-map">
+          <img
+            src="/images/lafires/cleanup-phase-1-map.svg"
+            width="445"
+            height="90"
+            alt="Phase 1: Hazardous waste cleanup" />
+          <img
+            src="/images/lafires/cleanup-phase-2-map-vertical.svg"
+            width="445"
+            height="90"
+            class="debris-phase-map-2-vertical"
+            alt="Phase 2: Debris removal" />
+          <img
+            src="/images/lafires/cleanup-phase-2-map-horizontal.svg"
+            width="433"
+            height="90"
+            class="debris-phase-map-2-horizontal"
+            alt="Phase 2: Debris removal" />
+        </div>
+        <p class="m-t-md">
+          We will explain these phases. When they are complete, your property is
+          ready for rebuilding.
+        </p>
+      </div>
+
+      <hr />
+
+      <!-- Step 2 -->
+      <div class="debris-step">
+        <div class="phase-header">
+          <img
+            src="/images/lafires/cleanup-phase-1-header.svg"
+            width="173"
+            height="72"
+            alt="Phase 1" />
+          <h2>Hazardous waste cleanup</h2>
+        </div>
+        <p class="m-b-md">
+          In Phase 1, the U.S. EPA cleans up everyday products that were in your
+          home and can be dangerous.
+        </p>
+        <p>These include:</p>
+        <ul class="debris-list-grid phase-1-debris-list-grid">
+          <li>Batteries</li>
+          <li>Cleaners and solvents</li>
+          <li>Fertilizers and pesticides</li>
+          <li>Paints and oils</li>
+          <li>Propane tanks and other pressurized products</li>
+        </ul>
+      </div>
+
+      <div class="debris-step">
+        <h2>How to get cleanup</h2>
+        <p>Phase 1 is automatic for all residential properties.</p>
+        <p>There's no cost to you for this cleanup.</p>
+        <p>You don't need to do anything for Phase 1 cleanup to begin.</p>
+      </div>
+
+      <div class="debris-step">
+        <h2>Cleanup statuses explained</h2>
+        <p>Properties are being assessed and cleaned up by the EPA now.</p>
+        <p>
+          Once your property has been assessed by the EPA, it will have a
+          status.
+        </p>
+        <p>The status will be posted in a sign on your property.</p>
+        <p>
+          You can also check this
+          <a
+            href="https://storymaps.arcgis.com/collections/13a8b227ac104bb1b1fa9592c92debe3?item=2"
+            >EPA map</a
+          >
+          for the cleanup status of your property.
+        </p>
+
+        <div class="debris-removal-viz phase-1-debris-removal-viz">
+          <div>
+            <h3 class="m-t-0 font-size-20">Phase 1 Complete</h3>
+            <p>This status means the EPA has finished their cleanup work.</p>
+            <p>
+              Your property <strong>may not be</strong> safe yet. There can
+              still be:
+            </p>
+            <ul>
+              <li>Hazardous waste that's buried</li>
+              <li>Health hazards like ash and asbestos</li>
+            </ul>
+          </div>
+          <span>OR</span>
+          <div>
+            <h3 class="m-t-0 font-size-20">Deferred to Phase 2</h3>
+            <p>
+              This status means the EPA can't safely clean your property until
+              debris has been removed.
+            </p>
+            <p>It will be cleaned in Phase 2.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="m-b-lg">
+        <a href="/lafires/track-progress/#card-cleanup-phase-1"
+          >Track Phase 1 progress</a
+        >
+      </p>
+
+      <hr />
+
+      <!-- Step 3 -->
+      <div class="debris-step">
+        <div class="phase-header">
+          <img
+            src="/images/lafires/cleanup-phase-2-header.svg"
+            width="183"
+            height="73"
+            alt="Phase 2" />
+          <h2>Debris removal</h2>
+        </div>
+
+        <p class="m-b-md">In Phase 2, workers remove structural debris.</p>
+        <p>This includes:</p>
+        <ul class="debris-list-grid phase-2-debris-list-grid">
+          <li>Damaged foundations</li>
+          <li>Destroyed vehicles</li>
+          <li>Dead trees</li>
+          <li>Contaminated soil</li>
+          <li>Asbestos</li>
+          <li>Ash</li>
+        </ul>
+        <p class="m-t-md">Experts also:</p>
+        <ul>
+          <li>Test the remaining soil to make sure it's safe</li>
+          <li>Place mulch to prevent erosion</li>
+        </ul>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="debris-step">
+        <h2>How to get debris removed</h2>
+        <p>To get debris removed, you must choose to:</p>
+
+        <div class="debris-removal-viz phase-2-debris-removal-viz">
+          <span>Opt in for free removal</span>
+          <span>OR</span>
+          <span>Opt out to arrange and pay for removal yourself</span>
+        </div>
+
+        <p>
+          There are no out-of-pocket costs for this service. If you have
+          insurance, your insurer will be billed.
+        </p>
+        <p>
+          Debris removal cannot start until Phase 1 cleanup is completed or
+          deferred by the EPA.
+        </p>
+      </div>
+
+      <!-- Step 7 -->
+      <div class="debris-step">
+        <h2>Opt in by the deadline</h2>
+        <p>
+          To get free debris removal, you must
+          <strong>opt in by March 31, 2025</strong>.
+        </p>
+        <a
+          class="btn btn-primary m-y-sm"
+          href="https://recovery.lacounty.gov/debris-removal/roe/"
+          >Opt in for free removal</a
+        >
+
+        <div class="debris-boxed-content phase-2-border-color">
+          <p>To complete the opt-in form, you'll need:</p>
+
+          <ul>
+            <li>Contact info and signatures of all owners of the property</li>
+            <li>
+              Assessor's information number, or AIN
+              <ul>
+                <li>
+                  <a
+                    href="https://assessor.lacounty.gov/homeowners/property-search"
+                    >Find your AIN</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>Homeowners insurance information (if you're insured)</li>
+            <li>
+              Vehicle information for any destroyed vehicles on the property
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Step 8 -->
+      <div class="debris-step">
+        <h2>Opt out at your own expense</h2>
+        <p>
+          If you opt out of free debris removal, you'll arrange for and pay for
+          this service yourself.
+        </p>
+
+        <div class="debris-boxed-content phase-2-border-color">
+          <p>This process is complicated and expensive. You must:</p>
+          <ul>
+            <li>Hire a licensed, specialized contractor</li>
+            <li>Get approval and a permit from LA County</li>
+            <li>
+              Hire a certified consultant to check your property for asbestos
+            </li>
+            <li>
+              Make sure your contractor follows all government rules for safe
+              debris removal
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Step 9 -->
+      <div class="debris-step">
+        <h2>How to opt out</h2>
+        <p>
+          If you choose to opt out, submit an
+          <a
+            href="https://recovery.lacounty.gov/debris-removal/roe/#1738023329423-9c1c25a7-71e8"
+            >opt-out form</a
+          >
+          to LA County right away.
+        </p>
+        <p>
+          It's important to submit this form so that the county can start free
+          debris removal for your neighbors.
+        </p>
+
+        <div class="debris-boxed-content phase-2-border-color">
+          <p>You will need:</p>
+          <ul>
+            <li>Name and license number of your contractor</li>
+            <li>Description of the debris you need to remove</li>
+            <li>
+              Assessor's information number, or AIN
+              <ul>
+                <li>
+                  <a
+                    href="https://assessor.lacounty.gov/homeowners/property-search"
+                    >Find your AIN</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Step 10 -->
+      <div id="debris-step-10" class="debris-step">
+        <h2 class="m-b-lg">If you need help</h2>
+        <div class="debris-boxed-content phase-1-border-color">
+          <h3 class="font-size-20">Questions about Phase 1 cleanup</h3>
+          <p>
+            Call the EPA at <a href="tel:833-798-7372">833-798-7372</a> (TTY:
+            711)
+          </p>
+        </div>
+        <div class="debris-boxed-content phase-2-border-color">
+          <h3 class="font-size-20">Help filling out the opt-in form</h3>
+          <ul>
+            <li>
+              Call the LA County Public Works Debris Removal Hotline at
+              <a href="tel:844-347-3332">844-347-3332</a> (TTY: 711)
+            </li>
+            <li>
+              Email
+              <a href="mailto:PalisadesFire@dpw.lacounty.gov"
+                >PalisadesFire@dpw.lacounty.gov</a
+              >
+              or
+              <a href="mailto:EatonFire@dpw.lacounty.gov"
+                >EatonFire@dpw.lacounty.gov</a
+              >
+            </li>
+            <li>
+              Get help in person at a
+              <a href="/lafires/get-help-in-person/"
+                >Disaster Recovery Center</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="debris-boxed-content neutral-border-color">
+          <h3 class="font-size-20">
+            More info about cleanup and debris removal
+          </h3>
+          <p>
+            <a href="https://recovery.lacounty.gov/debris-removal/"
+              >LA County Recovers</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <!--END MAIN COL CONTENT-->
+    </div>
+  </div>
+</div>

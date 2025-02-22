@@ -155,7 +155,7 @@ header {
       outline-offset: -3px;
 
       > img.drawer-logo {
-        width: 232px;
+        width: 200px;
         filter: brightness(0) invert(1);
         aspect-ratio: 18/5;
       }
@@ -253,6 +253,41 @@ h2,
 .p-t-xxl {
   /* stylelint-disable-next-line declaration-property-unit-allowed-list */
   padding-top: 59%;
+}
+
+.left-3px {
+  left: 3px;
+}
+
+.bg-p2-dark {
+  background-color: var(--color-p2-dark, #035376) !important;
+}
+
+.bg-p2-darker {
+  background-color: var(--color-p2-darker) !important;
+}
+
+.no-icon {
+  > span.external-link-icon {
+    display: none;
+  }
+}
+
+.link-grid:focus,
+a:focus {
+  outline: solid 2px #0f90e6 !important;
+}
+
+.section-primary,
+.section-overstated,
+.section-impact {
+  a:focus {
+    outline: 2px solid #77c5f9 !important;
+  }
+}
+
+.color-p2-darker {
+  color: var(--color-p2-darker, #214a68) !important;
 }
 
 /* Feedback */
@@ -527,4 +562,72 @@ div.gsc-control-cse
 
 img.square {
   aspect-ratio: 1;
+}
+
+div.image-header {
+  border-radius: 16px;
+
+  > img {
+    aspect-ratio: 1 / 1;
+    max-height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+
+    @media (width >= 992px) {
+      height: 200px;
+      width: 200px;
+      border-radius: 100px;
+    }
+  }
+
+  @media (width >= 992px) {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
+}
+
+h2.header-bg-primary {
+  border-top-right-radius: var(--bs-border-radius);
+  border-top-left-radius: var(--bs-border-radius);
+  background-color: var(--color-p2);
+  padding: 1.5rem;
+  color: var(--white);
+  border-bottom: 5px solid var(--color-p2-darker);
+}
+
+:root {
+  --bs-border-radius: 10px;
+}
+
+nav.page-navigation > ul > li:last-child {
+  display: none;
+}
+
+/* breadcrumbs */
+nav.breadcrumbs > ul,
+nav.breadcrumbs > ol,
+nav.page-navigation > ul > li {
+  font-size: 1rem;
+}
+
+@media (width >= 576px) {
+  nav.breadcrumbs > ul,
+  nav.breadcrumbs > ol,
+  nav.page-navigation > ul > li {
+    font-size: calc(0.92rem + 0.1vw);
+  }
+}
+
+div.search-container > form#Search > button.gsc-search-button {
+  color: #fff;
+}
+
+/* Side nav second level active styles */
+
+@media (width <= 991px) {
+  /* stylelint-disable-next-line selector-combinator-allowed-list */
+  aside.mobile-sidenav .side-navigation ul.list-navigation li ul li a.active {
+    color: var(--white);
+  }
 }

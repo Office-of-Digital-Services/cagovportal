@@ -1,0 +1,14 @@
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://www.ca.gov/sitemaps/static.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.ca.gov/sitemaps/agency01.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.ca.gov/sitemaps/service01.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.ca.gov/sitemaps/pdf.xml</loc>
+  </sitemap>
+</sitemapindex>
