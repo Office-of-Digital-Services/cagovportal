@@ -8,10 +8,15 @@ const postcssNested = require("postcss-nested");
 const { DateTime } = require("luxon");
 const fs = require("node:fs");
 const path = require("node:path");
+const translations = require("./src/_data/i18n.cjs");
+const chalk = require("chalk");
 
 // canonical domain
 const domain = "https://www.ca.gov";
 const metatitlepostfix = " | CA.gov";
+
+// use console.log to reporet complete list of process.env variables
+const is_development = process.env.MY_ENVIRONMENT ? process.env.MY_ENVIRONMENT === "development" : false;
 
 module.exports = function (
   /** @type {import("@11ty/eleventy").UserConfig} **/ eleventyConfig
@@ -26,8 +31,11 @@ module.exports = function (
   });
 
   eleventyConfig.addWatchTarget("./src/js/");
-
+  eleventyConfig.addWatchTarget("./src/_data/");
   eleventyConfig.addWatchTarget("./src/css/");
+
+
+  eleventyConfig.addGlobalData("is_development", is_development);
 
   // canonical shortcode
   // Usage <link href="{% canonical %}" rel="canonical" />
@@ -236,6 +244,98 @@ module.exports = function (
         ["true", "false"].includes(value) ? value === "true" : value //Boolean value parsing
     })
   );
+
+  eleventyConfig.addFilter('localizedPath', (pathString, locale) => {
+    // not /lafires in path, just return pathString
+    if (!pathString.includes('/lafires')) {
+      return pathString;
+    }
+
+    // Remove /en prefix if present
+    if (pathString.startsWith('/lafires/en')) {
+      pathString = pathString.replace('/en/', '/');
+    }
+
+    // Construct localized path
+    let currentPath = pathString.replace('/lafires/', `/lafires/${locale}/`);
+
+    // Add trailing slash if needed
+    if (!currentPath.endsWith('/') && !currentPath.includes('#')) {
+      currentPath += '/';
+    }
+
+    // Clean up special paths
+    currentPath = currentPath
+    .replace('/en/', '/')
+    // .replace('/homepage/', '/')
+    ;
+
+    return currentPath;
+  });
+
+  eleventyConfig.addFilter("langPathActive", (page, lang, locale) => {
+    if (lang === locale) {
+      return false;
+    }
+    return true;
+  });
+
+  eleventyConfig.addFilter("pagePath", (page, langPath) => {
+    console.log(chalk.green(`[pagePath] Testing *${page.filePathStem}* page: ${page.url} langPath: ${langPath}`));
+    let currentPath = `${page.filePathStem}/index.html`; // Relative to base dir, localized path, with folder + /index.html.
+
+    // remove /lafires/ from currentPath
+    currentPath = currentPath.replace('/lafires/', '/');  
+    // remove /initiatives/ from currentPath
+    currentPath = currentPath.replace('/initiatives/', '/');  
+
+    let languages = ["/en/","/es/","/fr/","/ko/","/tl/","/vi/","/zh-hans/","/zh-hant/","/hy/"]; // Localized folder paths, '/es/', '/vi', etc.
+    
+    languages.map(language => {
+      currentPath = currentPath.replace(language, "/"); // Remove existing localized paths to get root.
+    });
+
+    // Remove /home/ path slug from filePathStem variable
+    if (currentPath.startsWith('/')) {
+      currentPath = currentPath.slice(1);
+    }
+    currentPath = `${langPath}${currentPath}`;
+    // Return a path with no localization and index.html
+    // currentPath = currentPath.replace('/homepage/', '/');
+    currentPath = currentPath.replace('/en/', '/');
+    currentPath = currentPath.replace('/index/index', '/index');
+    console.log(chalk.green(`  [pagePath]  output *${currentPath}*`));
+    return currentPath;
+  });
+
+  eleventyConfig.addFilter('i18n', function(key, localeOverride) {
+    const page = this.page;
+    const locale = localeOverride || this.ctx.locale || this.ctx.lang;
+    const contentGroup = translations[key];
+
+    if (is_development && key === 'i18y_test_phrase') {
+      console.log(chalk.green(`[i18n] Testing *${key}* in locale *${locale}*  page.locale *${page.locale}*`));
+      console.log(chalk.green(`[i18n] Testing *${key}* permalink *${page.permalink}*`));
+      console.log(chalk.green(`[i18n] Testing *${key}* ctx *${this.ctx.permalink}*`));
+    }
+
+    // Check if the requested content key exists.
+    if (!contentGroup) {
+      console.log(chalk.yellow(`[i18n] Could not find content group for *${key}* in translations table.`));
+      return "";
+    }
+
+    // Get content in desired language.
+    const idealContentString = contentGroup[locale];
+
+    // English fallback if needed.
+    if (!idealContentString) {
+      //console.log(chalk.yellow(`[i18n] Could not find locale= *${locale}* content for *${key}* in translations table. Falling back to English.`));
+      return contentGroup.en;
+    }
+
+    return idealContentString;
+  });
 
   //Start with default config, easier to configure 11ty later
   const config = defaultConfig(eleventyConfig);
