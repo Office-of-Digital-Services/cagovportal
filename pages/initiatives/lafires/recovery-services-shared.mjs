@@ -3,10 +3,21 @@
 (function () {
   const checkboxStateStorageId = "recovery-services-finder-checkboxStates";
   function getCheckboxStates() {
-    return /** @type {string[]} */ (
-      JSON.parse(sessionStorage?.getItem(checkboxStateStorageId) || "[]") || []
-    );
+    try {
+      const storedData = sessionStorage?.getItem(checkboxStateStorageId);
+      if (!storedData) return []; // If no data is found, return an empty array
+
+      const parsedData = JSON.parse(storedData);
+      if (!Array.isArray(parsedData)) throw new Error(); // Ensure it's an array
+
+      return parsedData;
+    } catch (e) {
+      console.warn("Invalid checkbox state found, resetting storage.");
+      sessionStorage?.setItem(checkboxStateStorageId, JSON.stringify([])); // Reset if corrupted
+      return [];
+    }
   }
+
   window["getCheckboxStates"] = getCheckboxStates;
 
   // Save checkbox state to local storage
@@ -29,10 +40,15 @@
     function saveCheckboxState() {
       const pageCheckIds = checkboxes.map(chk => chk.id);
 
-      const newStates = [
+      let newStates = [
         ...checkboxes.filter(chk => chk.checked).map(chk => chk.id),
         ...getCheckboxStates().filter(id => !pageCheckIds.includes(id))
       ].sort();
+
+      if (!Array.isArray(newStates)) {
+        console.warn("Unexpected non-array state detected, resetting.");
+        newStates = [];
+      }
 
       sessionStorage?.setItem(
         checkboxStateStorageId,
