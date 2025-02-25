@@ -340,22 +340,23 @@ lafires_header: true
           Engineers assesses properties and begins debris removal.
         </p>
 
+        <h3 class="m-t-md m-b d-flex flex-column">
+          <span class="font-size-20">Phase 1</span>
+          <span class="font-size-25">Hazardous household waste cleanup</span>
+        </h3>
+
         <div
           id="card-cleanup-phase-1"
           class="dashboard-card rounded h-100 d-flex flex-column m-b-md">
-          <h3
-            class="dashboard-card-heading font-size-20 line-height-1-2em m-0 p-x-md p-t-md p-b-sm bg-primary d-flex">
+          <h4
+            class="dashboard-card-heading font-size-20 line-height-1-2em m-0 p-x-md p-t-md p-b-sm bg-primary d-flex align-items-center gap-2">
             <img
               src="/images/lafires/dashboard-biohazard.svg"
               width="49"
               height="48"
               aria-hidden="true" />
-
-            <div class="d-flex flex-column m-l-sm">
-              <strong class="font-size-14">Phase 1</strong>
-              <span>Hazardous household waste cleanup</span>
-            </div>
-          </h3>
+            <span>Hazardous household waste cleanup progress</span>
+          </h4>
 
           <div class="bg-primary h-100 p-x-md p-b-md p-t-sm">
             <div class="dashboard-row font-size-12 d-flex">
@@ -401,7 +402,7 @@ lafires_header: true
                     cleanup, or could not gain access to the property.
                   </li>
                   <li>
-                    U.S. Army Corps of Engineers will clear any unsafe
+                    The U.S. Army Corps of Engineers will clear any unsafe
                     properties in phase 2.
                   </li>
                 </ul>
@@ -413,33 +414,72 @@ lafires_header: true
           </p>
         </div>
 
+        <h3 class="m-t-md m-b d-flex flex-column">
+          <span class="font-size-20">Phase 2</span>
+          <span class="font-size-25">Structural debris removal</span>
+        </h3>
+
         <div
           id="card-cleanup-phase-2"
-          class="dashboard-card rounded h-100 d-flex flex-column">
-          <h3
-            class="dashboard-card-heading font-size-20 line-height-1-2em m-0 p-x-md p-t-md p-b-sm bg-primary d-flex">
+          class="dashboard-card rounded h-100 d-flex flex-column m-b">
+          <h4
+            class="dashboard-card-heading font-size-20 line-height-1-2em m-0 p-x-md p-t-md p-b-sm bg-primary d-flex align-items-center gap-2">
             <img
-              src="/images/lafires/dashboard-debris-can.svg"
-              width="49"
+              src="/images/lafires/dashboard-file-check.svg"
+              width="48"
               height="49"
               aria-hidden="true" />
 
-            <div class="d-flex flex-column m-l-sm">
-              <strong class="font-size-14">Phase 2</strong>
-              <span>Structural debris removal</span>
-            </div>
-          </h3>
+            <span>Right of Entry forms</span>
+          </h4>
 
           <div class="bg-primary h-100 p-x-md p-b-md p-t-sm">
-            <div class="dashboard-row font-size-12 d-flex m-b">
+            <div class="dashboard-row font-size-12 d-flex">
               <span class="dashboard-stat">9,417</span>
-              <!-- Adding basis here because this line is too long, and we don't want it to wrap on desktop. -->
-              <span style="flex-grow: 1; flex-basis: 75%;"
-                >Right of Entry forms submitted to LA County. 9,286 have opted
-                in and 131 have opted out of US Army Corps debris removal
-                services.</span
-              >
+              <span>Right of Entry forms submitted to LA County</span>
             </div>
+
+            <div
+              class="m-l-lg m-t d-flex flex-column gap-3"
+              style="font-variant-numeric: tabular-nums;">
+              <div class="d-flex align-items-center gap-2">
+                <img
+                  src="/images/lafires/dashboard-opt-in.svg"
+                  width="23"
+                  height="23"
+                  aria-hidden="true" />
+                <span class="font-size-12">Opt-in: 9,286</span>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <img
+                  src="/images/lafires/dashboard-opt-out.svg"
+                  width="23"
+                  height="23"
+                  aria-hidden="true" />
+                <span class="font-size-12">Opt-out: 131</span>
+              </div>
+            </div>
+          </div>
+          <p class="font-size-12 bg-s1 p-a">
+            <em>Reported by LA County</em>
+          </p>
+        </div>
+
+        <div
+          id="card-cleanup-phase-2-b"
+          class="dashboard-card rounded h-100 d-flex flex-column">
+          <h4
+            class="dashboard-card-heading font-size-20 line-height-1-2em m-0 p-x-md p-t-md p-b-sm bg-primary d-flex align-items-center gap-2">
+            <img
+              src="/images/lafires/dashboard-shovel.svg"
+              width="47"
+              height="46"
+              aria-hidden="true" />
+
+            <span>Structural debris removal progress</span>
+          </h4>
+
+          <div class="bg-primary h-100 p-x-md p-b-md p-t-sm">
             <div class="dashboard-row font-size-12 d-flex">
               <span class="dashboard-stat">1,415</span>
               <span>parcels have been accepted for Phase 2 debris removal</span>
@@ -468,15 +508,18 @@ lafires_header: true
               <div class="p-l-sm">
                 <ul>
                   <li>
-                    Property owners must submit opt-in Right of Entry forms for
-                    the US Army Corps to complete Phase 2. Property owners that
-                    opt out of this process must cover debris removal expenses
-                    and work.
+                    For a detailed breakdown of the Phase 2 process and current
+                    status, see the
+                    <a
+                      href="https://www.spl.usace.army.mil/Missions/Emergency-Management/Los-Angeles-County-Wildfire-Debris-Removal-Mission/"
+                      >U.S. Army Corps of Engineers' progress dashboard</a
+                    >.
                   </li>
                   <li>
-                    The estimated number of eligible parcels for Phase 2 are
-                    properties that have completed Phase 1 and have given the US
-                    Army Corps of Engineers right of entry.
+                    Property owners must submit opt-in Right of Entry forms for
+                    the U.S. Army Corps of Engineers to complete Phase 2.
+                    Property owners that opt out of this process must cover
+                    debris removal expenses and work.
                   </li>
                   <li>
                     The progress bar measures the number of parcels that have
@@ -484,30 +527,16 @@ lafires_header: true
                     eligible parcels.
                   </li>
                   <li>
-                    Parcels currently in progress for debris removal means that
-                    parcels are currently in queue or are currently going
-                    through debris removal work with US Army Corps of Engineers
-                    contractors.
-                  </li>
-                  <li>
                     Complete means that structural debris has been removed from
                     the property and the parcel has been returned back to the
                     owner.
-                  </li>
-                  <li>
-                    For a detailed breakdown of the Phase 2 process and current
-                    status, see the
-                    <a
-                      href="https://www.spl.usace.army.mil/Missions/Emergency-Management/Los-Angeles-County-Wildfire-Debris-Removal-Mission/"
-                      >US Army Corps of Engineer's progress dashboard</a
-                    >.
                   </li>
                 </ul>
               </div>
             </details>
           </div>
           <p class="font-size-12 bg-s1 p-a">
-            <em>Reported by U.S. Environmental Protection Agency</em>
+            <em>Reported by U.S. Army Corps of Engineers</em>
           </p>
         </div>
       </div>
