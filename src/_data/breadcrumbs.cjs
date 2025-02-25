@@ -29,6 +29,16 @@ const data = [
             href: "/lafires/get-help-in-person/"
           }
         ]
+      },
+      {
+        key: "Incendies de Los Angeles 2025",
+        href: "/lafires/fr/",
+        children: [
+          {
+            key: "Obtenir de l'aide en personne",
+            href: "/lafires/fr/get-help-in-person/"
+          }
+        ]
       }
     ]
   }
