@@ -8,7 +8,7 @@ const postcssNested = require("postcss-nested");
 const { DateTime } = require("luxon");
 const fs = require("node:fs");
 const path = require("node:path");
-const translations = require("./src/_data/i18n.cjs");
+let translationsModule = { translations: require("./src/_data/i18n.cjs") }; // Change to an object that holds the translations
 const chalk = require("chalk");
 
 // canonical domain
@@ -34,6 +34,14 @@ module.exports = function (
   eleventyConfig.addWatchTarget("./src/_data/");
   eleventyConfig.addWatchTarget("./src/css/");
 
+  // Add watch target specifically for i18n file and clear require cache when it changes
+  eleventyConfig.addWatchTarget("./src/_data/i18n.cjs");
+  eleventyConfig.on("beforeWatch", changedFiles => { // support changing i18n.cjs during development without quitting the server
+    if (changedFiles.some(file => file.endsWith("i18n.cjs"))) {
+      delete require.cache[require.resolve("./src/_data/i18n.cjs")];
+      translationsModule.translations = require("./src/_data/i18n.cjs");
+    }
+  });
 
   eleventyConfig.addGlobalData("is_development", is_development);
 
@@ -281,7 +289,7 @@ module.exports = function (
   });
 
   eleventyConfig.addFilter("pagePath", (page, langPath) => {
-    console.log(chalk.green(`[pagePath] Testing *${page.filePathStem}* page: ${page.url} langPath: ${langPath}`));
+    // console.log(chalk.green(`[pagePath] Testing *${page.filePathStem}* page: ${page.url} langPath: ${langPath}`));
     let currentPath = `${page.filePathStem}/index.html`; // Relative to base dir, localized path, with folder + /index.html.
 
     // remove /lafires/ from currentPath
@@ -304,19 +312,18 @@ module.exports = function (
     // currentPath = currentPath.replace('/homepage/', '/');
     currentPath = currentPath.replace('/en/', '/');
     currentPath = currentPath.replace('/index/index', '/index');
-    console.log(chalk.green(`  [pagePath]  output *${currentPath}*`));
+    // console.log(chalk.green(`  [pagePath]  output *${currentPath}*`));
     return currentPath;
   });
 
   eleventyConfig.addFilter('i18n', function(key, localeOverride) {
-    const page = this.page;
     const locale = localeOverride || this.ctx.locale || this.ctx.lang;
-    const contentGroup = translations[key];
+    const contentGroup = translationsModule.translations[key];
 
     if (is_development && key === 'i18y_test_phrase') {
-      console.log(chalk.green(`[i18n] Testing *${key}* in locale *${locale}*  page.locale *${page.locale}*`));
-      console.log(chalk.green(`[i18n] Testing *${key}* permalink *${page.permalink}*`));
-      console.log(chalk.green(`[i18n] Testing *${key}* ctx *${this.ctx.permalink}*`));
+      // console.log(chalk.green(`[i18n] Testing *${key}* in locale *${locale}*  page.locale *${page.locale}*`));
+      // console.log(chalk.green(`[i18n] Testing *${key}* permalink *${page.permalink}*`));
+      // console.log(chalk.green(`[i18n] Testing *${key}* ctx *${this.ctx.permalink}*`));
     }
 
     // Check if the requested content key exists.

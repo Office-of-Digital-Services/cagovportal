@@ -302,7 +302,7 @@ module.exports = {
   my_hazards: {
     src_file: "src/_includes/site-footer.html",
     en: "My hazards",
-    es: "Mis peligros",
+    es: "Mis peligros", 
     fr: "Mes dangers",
     tl: "Aking mga Panganib",
     ko: "내 위험요소",
