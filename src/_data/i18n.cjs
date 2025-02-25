@@ -394,5 +394,18 @@ module.exports = {
     "zh-hans": "返回顶部",
     "zh-hant": "返回頂部",
     hy: "Վերադառնալ վերև"
+  },
+  homepage_name: {
+    src_file: "src/_includes/global-footer.html",
+    comment: "Home as in home page, used for web navigation",
+    en: "Home",
+    es: "Inicio",
+    fr: "Accueil", 
+    tl: "Home",
+    ko: "홈",
+    vi: "Trang chủ",
+    "zh-hans": "首页",
+    "zh-hant": "首頁",
+    hy: "Գլխավոր էջ"
   }
 };

@@ -4,7 +4,11 @@
   {%- set node = breadcrumbs | pluck("key",breadcrumbparent) | first %}
   <ol>
     {%- for link in node.links %}
+    {%- if link.title == "Home" %}
+    <li><a href="{{link.href}}">{{'homepage_name' | i18n }}</a></li>
+    {%- else %}
     <li><a href="{{link.href}}">{{link.title}}</a></li>
+    {%- endif %}
     {%- endfor %}
     <li class="active">{{title}}</li>
   </ol>
