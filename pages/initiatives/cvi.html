@@ -321,7 +321,7 @@ permalink: cvi/
 
  
     // Detect if the user is using Gmail
-    const isGmailUser = email.endsWith("@gmail.com");
+    const isGmailUser = email.toLowerCase().endsWith("@gmail.com");
 
     let emailLink;
     if (isGmailUser) {

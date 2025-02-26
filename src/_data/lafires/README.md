@@ -4,7 +4,7 @@ In this folder, we add data from an [Excel workbook in SharePoint](https://state
 
 1. Save the spreadsheet to your desktop because the web app version of Excel on Sharepoint does not give the standard export menu options you need to export the data in the correct format.
 2. Open the local save of the workbook on your PC in MS Excel **desktop version**, navigate to the worksheet (currently using Shalica's worksheet for service finder data)
-3. Copy and paste the entire table of data to a new sheet so that the hidden rows don't get exported (**ensure the hidden rows don't get copied**).
+3. Copy and paste the entire table of data to a new sheet so that the hidden rows don't get exported (**double check that the hidden rows don't get copied**). Ensure that the table **headers** (id, audience, type of service, etc) also get copied over to the new sheet because they are needed in the repository file.
 4. Export the data that we will add to the repo in this folder by selecting **File > Save as UTF-encoded CSV** file type so that Spanish and other special characters get rendered correctly on the website.
 5. Rename the file to `recovery_services_finder.csv` (same as currently in the repo, pay attention to the extension name).
 6. Copy and paste the file to `cagovportal\src_data\lafires` to **replace the current CSV file**.
