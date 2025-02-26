@@ -29,6 +29,9 @@ module.exports = function (
 
   eleventyConfig.addWatchTarget("./src/css/");
 
+  // Add watch target for .mjs files inside the pages directory
+  eleventyConfig.addWatchTarget("./pages/");
+
   // canonical shortcode
   // Usage <link href="{% canonical %}" rel="canonical" />
   eleventyConfig.addShortcode("canonical", function () {
@@ -208,7 +211,6 @@ module.exports = function (
     let sitemapContent = '<?xml version="1.0" encoding="UTF-8"?>\n';
     sitemapContent +=
       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-
     pdfDirs.forEach(dir => {
       fs.readdir(dir, (err, files) => {
         if (err) throw err;
