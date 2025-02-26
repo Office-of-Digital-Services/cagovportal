@@ -6,13 +6,13 @@
 <!-- State Web template required CSS -->
 <link
   rel="stylesheet"
-  href="https://cdn.cdt.ca.gov/cdt/statetemplate/6.4.1/css/cagov.core.min.css"
-  integrity="sha256-ZBxc9vOxgmVhJsrXWWcvEN6iGIZgEXXS0Ir1i2ZWeLU="
+  href="https://cdn.cdt.ca.gov/cdt/statetemplate/6.4.2/css/cagov.core.min.css"
+  integrity="sha256-Uo2m6WvNHReBj5GgNstMKvDhnWVfROD7quu8/rcNIdU="
   crossorigin="anonymous" />
-<link rel="stylesheet" href="/css/custom.min.css?vjan25" id="main-stylesheet" />
+<link rel="stylesheet" href="/css/custom.min.css?vfeb25" id="main-stylesheet" />
 <script
-  src="https://cdn.cdt.ca.gov/cdt/statetemplate/6.4.1/js/cagov.core.min.js"
-  integrity="sha256-e675J/VKorpekjw24pAfI7kxIF5TwFmKBfDOyX1PI10="
+  src="https://cdn.cdt.ca.gov/cdt/statetemplate/6.4.2/js/cagov.core.min.js"
+  integrity="sha256-j4/X9fIgODo6Em7lfrvjTzS4X/DLlrwhewhDz1D+8/w="
   crossorigin="anonymous"
   defer></script>
 <script src="/js/custom.min.js?vHashCode" type="module" defer></script>
@@ -23,8 +23,13 @@
 {% endif -%} {%- if drc_map %}
 <script src="/js/drc-map.min.js?dv{% DateHex %}" type="module" defer></script>
 {% endif -%} {%- if not lafires_header %}
-<!-- Ethnio Activation Code --> 
-<script type="text/javascript" language="javascript" src="//ethn.io/60011.js" async="true" charset="utf-8"></script> 
+<!-- Ethnio Activation Code -->
+<script
+  type="text/javascript"
+  language="javascript"
+  src="//ethn.io/60011.js"
+  async="true"
+  charset="utf-8"></script>
 {% endif %}
 
 <!-- Site icons -->
