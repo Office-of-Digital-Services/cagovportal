@@ -241,7 +241,8 @@ main {
 
 /* GLOBAL */
 h2,
-.h2 {
+.h2,
+.scroll-section {
   scroll-margin-top: 95px;
 
   @media (width >= 992px) {
