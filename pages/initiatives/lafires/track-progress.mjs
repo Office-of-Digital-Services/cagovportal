@@ -423,7 +423,22 @@ document.addEventListener("DOMContentLoaded", () => {
             : "N/A";
       }
 
-      /* Air survey mobile planned */
+      /* Air deployed */
+      const air_stationary_deployed_Element = document.getElementById(
+        "air_stationary_deployed"
+      );
+
+      if (air_stationary_deployed_Element) {
+        const air_stationary_deployed_Value = getMetricValue(
+          "air_stationary_deployed"
+        );
+        air_stationary_deployed_Element.textContent =
+          air_stationary_deployed_Value !== null
+            ? air_stationary_deployed_Value.toLocaleString()
+            : "N/A";
+      }
+
+      /* Air survey planned */
       const air_mobile_survey_planned_Element = document.getElementById(
         "air_mobile_survey_planned"
       );
@@ -442,8 +457,8 @@ document.addEventListener("DOMContentLoaded", () => {
       /* Calculate air percentages */
       const totalAirValue =
         (getMetricValue("air_mobile_survey_complete") || 0) +
-        (getMetricValue("air_stationary_planned") || 0) +
-        (getMetricValue("air_mobile_survey_planned") || 0);
+        (getMetricValue("air_stationary_deployed") || 0) +
+        (getMetricValue("air_stationary_planned") || 0);
 
       const air_mobile_survey_complete_Percentage = totalAirValue
         ? ((getMetricValue("air_mobile_survey_complete") || 0) /
@@ -451,13 +466,13 @@ document.addEventListener("DOMContentLoaded", () => {
           100
         : 0;
 
-      const air_stationary_planned_Percentage = totalAirValue
-        ? ((getMetricValue("air_stationary_planned") || 0) / totalAirValue) *
+      const air_stationary_deployed_Percentage = totalAirValue
+        ? ((getMetricValue("air_stationary_deployed") || 0) / totalAirValue) *
           100
         : 0;
 
-      const air_mobile_survey_planned_Percentage = totalAirValue
-        ? ((getMetricValue("air_mobile_survey_planned") || 0) / totalAirValue) *
+      const air_stationary_planned_Percentage = totalAirValue
+        ? ((getMetricValue("air_stationary_planned") || 0) / totalAirValue) *
           100
         : 0;
 
@@ -468,18 +483,18 @@ document.addEventListener("DOMContentLoaded", () => {
         air_mobile_survey_complete_PERCENT_Element.style.width = `${air_mobile_survey_complete_Percentage}%`;
       }
 
+      const air_stationary_deployed_PERCENT_Element = document.getElementById(
+        "air_stationary_deployed_PERCENT"
+      );
+      if (air_stationary_deployed_PERCENT_Element) {
+        air_stationary_deployed_PERCENT_Element.style.width = `${air_stationary_deployed_Percentage}%`;
+      }
+
       const air_stationary_planned_PERCENT_Element = document.getElementById(
         "air_stationary_planned_PERCENT"
       );
       if (air_stationary_planned_PERCENT_Element) {
         air_stationary_planned_PERCENT_Element.style.width = `${air_stationary_planned_Percentage}%`;
-      }
-
-      const air_mobile_survey_planned_PERCENT_Element = document.getElementById(
-        "air_mobile_survey_planned_PERCENT"
-      );
-      if (air_mobile_survey_planned_PERCENT_Element) {
-        air_mobile_survey_planned_PERCENT_Element.style.width = `${air_mobile_survey_planned_Percentage}%`;
       }
 
       /* Air DATE */
