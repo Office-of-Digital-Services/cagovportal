@@ -48,50 +48,64 @@ lafires_header: true
               Select all that apply.
             </legend>
             <h3>Individual</h3>
+            <h4>Essential help</h4>
+            {%- for category in lafires.recovery_services_categories |
+            pluck("Type_of_Service","Essential help") -%}
+            <!---->
+            {%- set id = "category_short_"+category.ID -%}
             <div class="d-flex align-items-top m-b-md p-l-0">
               <input
                 class="form-check-input brd-gray-200 brd-solid-2 rounded-0 font-size-30 m-l-0 m-a-0 pos-rel top-minus-2"
                 type="checkbox"
                 value=""
-                id="short" />
+                id="{{id}}" />
               <label
                 class="form-check-label cursor-pointer m-l m-a-0"
-                for="short"
+                for="{{id}}"
                 ><span class="d-block font-weight-400"
-                  ><span class="bold">Essential help:</span> Food, expenses,
-                  shelter, replace documents, and more</span
+                  ><span class="bold">{{category.Category}}:</span>
+                  {{category.Category_Description}}</span
                 >
               </label>
             </div>
+            {%-endfor-%}
 
+            <h4>Start recovering</h4>
+            {%- for category in lafires.recovery_services_categories |
+            pluck("Type_of_Service","Start recovering") -%}
+            <!---->
+            {%- set id = "category_long_"+category.ID -%}
             <div class="d-flex align-items-top m-b-md p-l-0">
               <input
                 class="form-check-input brd-gray-200 brd-solid-2 rounded-0 font-size-30 m-l-0 m-a-0 pos-rel top-minus-2"
                 type="checkbox"
                 value=""
-                id="long" />
+                id="{{id}}" />
               <label
                 class="form-check-label cursor-pointer m-l m-a-0"
-                for="long"
+                for="{{id}}"
                 ><span class="d-block font-weight-400"
-                  ><span class="bold">Start recovering: </span> Insurance
-                  claims, rebuilding, employment, and more</span
+                  ><span class="bold">{{category.Category}}:</span>
+                  {{category.Category_Description}}</span
                 >
               </label>
             </div>
+            {%-endfor-%}
+
             <h3>Business</h3>
             {%- for category in lafires.recovery_services_categories |
             pluck("Type_of_Service","Business help") -%}
-
+            <!---->
+            {%- set id = "category_business_"+category.ID -%}
             <div class="d-flex align-items-top m-b-md p-l-0">
               <input
                 class="form-check-input brd-gray-200 brd-solid-2 rounded-0 font-size-30 m-l-0 m-a-0 pos-rel top-minus-2"
                 type="checkbox"
                 value=""
-                id="category_business_{{category.ID}}" />
+                id="{{id}}" />
               <label
                 class="form-check-label cursor-pointer m-l m-a-0"
-                for="category_business_{{category.ID}}"
+                for="{{id}}"
                 ><span class="d-block font-weight-400"
                   ><span class="bold">{{category.Category}}:</span>
                   {{category.Category_Description}}</span
@@ -133,6 +147,6 @@ lafires_header: true
 
 <script>
   function customClick() {
-    window.location.href = "/lafires/recovery-services-short-term/";
+    window.location.href = "/lafires/recovery-services-all/";
   }
 </script>
