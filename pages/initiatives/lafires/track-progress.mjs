@@ -219,29 +219,29 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       /* Phase 1 : Hazardous household waste cleanup */
-      const cleanup_phase1_complete_Element = document.getElementById(
-        "cleanup_phase1_complete"
+      const cleanup_phase1_parcels_Element = document.getElementById(
+        "cleanup_phase1_parcels"
       );
 
-      if (cleanup_phase1_complete_Element) {
-        const cleanup_phase1_complete_Value = getMetricValue(
-          "cleanup_phase1_complete"
+      if (cleanup_phase1_parcels_Element) {
+        const cleanup_phase1_parcels_Value = getMetricValue(
+          "cleanup_phase1_parcels"
         );
-        cleanup_phase1_complete_Element.textContent =
-          cleanup_phase1_complete_Value !== null
-            ? cleanup_phase1_complete_Value.toLocaleString()
+        cleanup_phase1_parcels_Element.textContent =
+          cleanup_phase1_parcels_Value !== null
+            ? cleanup_phase1_parcels_Value.toLocaleString()
             : "N/A";
       }
 
       /* Phase 1 : Hazardous household waste cleanup DATE */
-      const get_cleanup_phase1_complete_date = getLastUpdated(
-        "cleanup_phase1_complete"
+      const get_cleanup_phase1_parcels_date = getLastUpdated(
+        "cleanup_phase1_parcels"
       );
-      const cleanup_phase1_complete_date_Element = document.getElementById(
-        "cleanup_phase1_complete_date"
+      const cleanup_phase1_parcels_date_Element = document.getElementById(
+        "cleanup_phase1_parcels_date"
       );
-      if (cleanup_phase1_complete_date_Element) {
-        cleanup_phase1_complete_date_Element.textContent = `Data as of ${get_cleanup_phase1_complete_date}`;
+      if (cleanup_phase1_parcels_date_Element) {
+        cleanup_phase1_parcels_date_Element.textContent = `Data as of ${get_cleanup_phase1_parcels_date}`;
       }
 
       /* Phase 2 : parcels have been accepted for Phase 2 debris removal */
