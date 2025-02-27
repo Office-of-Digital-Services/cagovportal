@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
               timeZone: "America/Los_Angeles"
             })
           );
-          pstDate.setHours(pstDate.getHours() - 8); // Adjusting time by subtracting 8 hours
           const hours = pstDate.getHours();
           const minutes = pstDate.getMinutes();
           const ampm = hours >= 12 ? "PM" : "AM";
