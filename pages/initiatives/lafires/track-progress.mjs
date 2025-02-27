@@ -40,12 +40,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const metric = metrics.find(m => m.METRIC_NAME === metricName);
         if (metric) {
           const lastUpdated = new Date(metric.LAST_UPDATED);
-          const hours = lastUpdated.getHours();
-          const minutes = lastUpdated.getMinutes();
+          const pstDate = new Date(
+            lastUpdated.toLocaleString("en-US", {
+              timeZone: "America/Los_Angeles"
+            })
+          );
+          pstDate.setHours(pstDate.getHours() - 8); // Adjusting time by subtracting 8 hours
+          const hours = pstDate.getHours();
+          const minutes = pstDate.getMinutes();
           const ampm = hours >= 12 ? "PM" : "AM";
           const formattedHours = hours % 12 || 12;
           const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
-          return `${lastUpdated.getMonth() + 1}/${lastUpdated.getDate()}/${lastUpdated.getFullYear()} at ${formattedHours}:${formattedMinutes} ${ampm}`;
+          return `${pstDate.getMonth() + 1}/${pstDate.getDate()}/${pstDate.getFullYear()} at ${formattedHours}:${formattedMinutes} ${ampm}`;
         }
         return null;
       };
