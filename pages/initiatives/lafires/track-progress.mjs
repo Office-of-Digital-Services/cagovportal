@@ -39,11 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const metrics = data;
         const metric = metrics.find(m => m.METRIC_NAME === metricName);
         if (metric) {
-          const lastUpdatedParts = metric.LAST_UPDATED.split(/[- :]/).map(
-            (part, index) =>
-              index === 1 ? parseInt(part, 10) - 1 : parseInt(part, 10)
-          );
-          const lastUpdated = new Date(Date.UTC.apply(null, lastUpdatedParts));
+          const lastUpdated = new Date(metric.LAST_UPDATED);
           const pstDate = new Date(
             lastUpdated.toLocaleString("en-US", {
               timeZone: "America/Los_Angeles"
