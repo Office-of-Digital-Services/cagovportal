@@ -40,12 +40,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const metric = metrics.find(m => m.METRIC_NAME === metricName);
         if (metric) {
           const lastUpdated = new Date(metric.LAST_UPDATED);
-          const hours = lastUpdated.getHours();
-          const minutes = lastUpdated.getMinutes();
+          const pstDate = new Date(
+            lastUpdated.toLocaleString("en-US", {
+              timeZone: "America/Los_Angeles"
+            })
+          );
+          const hours = pstDate.getHours();
+          const minutes = pstDate.getMinutes();
           const ampm = hours >= 12 ? "PM" : "AM";
           const formattedHours = hours % 12 || 12;
           const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
-          return `${lastUpdated.getMonth() + 1}/${lastUpdated.getDate()}/${lastUpdated.getFullYear()} at ${formattedHours}:${formattedMinutes} ${ampm}`;
+          return `${pstDate.getMonth() + 1}/${pstDate.getDate()}/${pstDate.getFullYear()} at ${formattedHours}:${formattedMinutes} ${ampm}`;
         }
         return null;
       };
@@ -219,29 +224,29 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       /* Phase 1 : Hazardous household waste cleanup */
-      const cleanup_phase1_complete_Element = document.getElementById(
-        "cleanup_phase1_complete"
+      const cleanup_phase1_parcels_Element = document.getElementById(
+        "cleanup_phase1_parcels"
       );
 
-      if (cleanup_phase1_complete_Element) {
-        const cleanup_phase1_complete_Value = getMetricValue(
-          "cleanup_phase1_complete"
+      if (cleanup_phase1_parcels_Element) {
+        const cleanup_phase1_parcels_Value = getMetricValue(
+          "cleanup_phase1_parcels"
         );
-        cleanup_phase1_complete_Element.textContent =
-          cleanup_phase1_complete_Value !== null
-            ? cleanup_phase1_complete_Value.toLocaleString()
+        cleanup_phase1_parcels_Element.textContent =
+          cleanup_phase1_parcels_Value !== null
+            ? cleanup_phase1_parcels_Value.toLocaleString()
             : "N/A";
       }
 
       /* Phase 1 : Hazardous household waste cleanup DATE */
-      const get_cleanup_phase1_complete_date = getLastUpdated(
-        "cleanup_phase1_complete"
+      const get_cleanup_phase1_parcels_date = getLastUpdated(
+        "cleanup_phase1_parcels"
       );
-      const cleanup_phase1_complete_date_Element = document.getElementById(
-        "cleanup_phase1_complete_date"
+      const cleanup_phase1_parcels_date_Element = document.getElementById(
+        "cleanup_phase1_parcels_date"
       );
-      if (cleanup_phase1_complete_date_Element) {
-        cleanup_phase1_complete_date_Element.textContent = `Data as of ${get_cleanup_phase1_complete_date}`;
+      if (cleanup_phase1_parcels_date_Element) {
+        cleanup_phase1_parcels_date_Element.textContent = `Data as of ${get_cleanup_phase1_parcels_date}`;
       }
 
       /* Phase 2 : parcels have been accepted for Phase 2 debris removal */
@@ -423,7 +428,22 @@ document.addEventListener("DOMContentLoaded", () => {
             : "N/A";
       }
 
-      /* Air survey mobile planned */
+      /* Air deployed */
+      const air_stationary_deployed_Element = document.getElementById(
+        "air_stationary_deployed"
+      );
+
+      if (air_stationary_deployed_Element) {
+        const air_stationary_deployed_Value = getMetricValue(
+          "air_stationary_deployed"
+        );
+        air_stationary_deployed_Element.textContent =
+          air_stationary_deployed_Value !== null
+            ? air_stationary_deployed_Value.toLocaleString()
+            : "N/A";
+      }
+
+      /* Air survey planned */
       const air_mobile_survey_planned_Element = document.getElementById(
         "air_mobile_survey_planned"
       );
@@ -442,8 +462,8 @@ document.addEventListener("DOMContentLoaded", () => {
       /* Calculate air percentages */
       const totalAirValue =
         (getMetricValue("air_mobile_survey_complete") || 0) +
-        (getMetricValue("air_stationary_planned") || 0) +
-        (getMetricValue("air_mobile_survey_planned") || 0);
+        (getMetricValue("air_stationary_deployed") || 0) +
+        (getMetricValue("air_stationary_planned") || 0);
 
       const air_mobile_survey_complete_Percentage = totalAirValue
         ? ((getMetricValue("air_mobile_survey_complete") || 0) /
@@ -451,13 +471,13 @@ document.addEventListener("DOMContentLoaded", () => {
           100
         : 0;
 
-      const air_stationary_planned_Percentage = totalAirValue
-        ? ((getMetricValue("air_stationary_planned") || 0) / totalAirValue) *
+      const air_stationary_deployed_Percentage = totalAirValue
+        ? ((getMetricValue("air_stationary_deployed") || 0) / totalAirValue) *
           100
         : 0;
 
-      const air_mobile_survey_planned_Percentage = totalAirValue
-        ? ((getMetricValue("air_mobile_survey_planned") || 0) / totalAirValue) *
+      const air_stationary_planned_Percentage = totalAirValue
+        ? ((getMetricValue("air_stationary_planned") || 0) / totalAirValue) *
           100
         : 0;
 
@@ -468,18 +488,18 @@ document.addEventListener("DOMContentLoaded", () => {
         air_mobile_survey_complete_PERCENT_Element.style.width = `${air_mobile_survey_complete_Percentage}%`;
       }
 
+      const air_stationary_deployed_PERCENT_Element = document.getElementById(
+        "air_stationary_deployed_PERCENT"
+      );
+      if (air_stationary_deployed_PERCENT_Element) {
+        air_stationary_deployed_PERCENT_Element.style.width = `${air_stationary_deployed_Percentage}%`;
+      }
+
       const air_stationary_planned_PERCENT_Element = document.getElementById(
         "air_stationary_planned_PERCENT"
       );
       if (air_stationary_planned_PERCENT_Element) {
         air_stationary_planned_PERCENT_Element.style.width = `${air_stationary_planned_Percentage}%`;
-      }
-
-      const air_mobile_survey_planned_PERCENT_Element = document.getElementById(
-        "air_mobile_survey_planned_PERCENT"
-      );
-      if (air_mobile_survey_planned_PERCENT_Element) {
-        air_mobile_survey_planned_PERCENT_Element.style.width = `${air_mobile_survey_planned_Percentage}%`;
       }
 
       /* Air DATE */
