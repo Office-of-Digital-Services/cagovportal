@@ -180,8 +180,6 @@ lafires_header: true
       </p>
       <nav class="page-navigation"></nav>
 
-      <p class="font-size-15 gray-600 m-y-lg">Last updated 2/26/2025</p>
-
       <!--People helped-->
       <div class="row m-b-lg">
         <h2 class="m-b-md">People helped</h2>
@@ -207,13 +205,16 @@ lafires_header: true
                 height="49"
                 aria-hidden="true" />
               <div class="dashboard-row font-size-12 d-flex">
-                <span class="dashboard-stat">39,236</span>
+                <span class="dashboard-stat" id="people_helped_drc"></span>
                 <span>visits</span>
               </div>
             </div>
 
             <p class="font-size-12 bg-s1 p-a">
-              <i>Reported by Federal Emergency Management Agency</i>
+              <em
+                >Reported by Federal Emergency Management Agency<br /><span
+                  id="people_helped_drc_date"></span
+              ></em>
             </p>
           </div>
         </div>
@@ -235,7 +236,9 @@ lafires_header: true
                 height="49"
                 aria-hidden="true" />
               <div class="dashboard-row font-size-12 d-flex">
-                <span class="dashboard-stat">29,681</span>
+                <span
+                  class="dashboard-stat"
+                  id="people_helped_fema_individuals"></span>
                 <span>people helped</span>
               </div>
 
@@ -245,13 +248,18 @@ lafires_header: true
                 height="49"
                 aria-hidden="true" />
               <div class="dashboard-row font-size-12 d-flex">
-                <span class="dashboard-stat">$79.1M</span>
+                <span class="dashboard-stat"
+                  >$<span id="people_helped_fema_funds"></span>M</span
+                >
                 <span>distributed to individuals</span>
               </div>
             </div>
 
             <p class="font-size-12 bg-s1 p-a">
-              <i>Reported by Federal Emergency Management Agency</i>
+              <em
+                >Reported by Federal Emergency Management Agency<br />
+                <span id="people_helped_fema_individuals_date"></span
+              ></em>
             </p>
           </div>
         </div>
@@ -284,7 +292,9 @@ lafires_header: true
                   style="grid-row: 1 / 4;" />
                 <div class="dashboard-row font-size-12 d-flex">
                   <div class="d-flex gap-1 align-items-center">
-                    <span class="dashboard-stat">8</span>
+                    <span class="dashboard-stat"
+                      ><span id="schools_resumed_inperson"></span
+                    ></span>
                     <span>of</span>
                     <span class="dashboard-stat">8</span>
                   </div>
@@ -296,7 +306,10 @@ lafires_header: true
                     width="23"
                     height="20"
                     aria-hidden="true" />
-                  <p class="m-0 font-size-12">Teaching in-person: 7</p>
+                  <p class="m-0 font-size-12">
+                    Teaching in-person:
+                    <span id="schools_resumed"></span>
+                  </p>
                 </div>
                 <div class="d-flex align-items-center gap-3">
                   <img
@@ -304,13 +317,18 @@ lafires_header: true
                     width="24"
                     height="18"
                     aria-hidden="true" />
-                  <p class="m-0 font-size-12">Teaching online: 1</p>
+                  <p class="m-0 font-size-12">
+                    Teaching online: <span id="schools_resumed_virtual"></span>
+                  </p>
                 </div>
               </div>
             </div>
 
             <p class="font-size-12 bg-s1 p-a">
-              <i>Reported to Schools Task Force</i>
+              <em
+                >Reported to Schools Task Force<br /><span
+                  id="schools_resumed_date"></span
+              ></em>
             </p>
           </div>
         </div>
@@ -378,7 +396,9 @@ lafires_header: true
             </div>
 
             <div class="dashboard-row font-size-12 d-flex">
-              <span class="dashboard-stat">13,612</span>
+              <span class="dashboard-stat"
+                ><span id="cleanup_phase1_parcels"></span
+              ></span>
               <span>parcels completed</span>
             </div>
             <details class="font-size-12 m-t">
@@ -410,7 +430,10 @@ lafires_header: true
             </details>
           </div>
           <p class="font-size-12 bg-s1 p-a">
-            <em>Reported by U.S. Environmental Protection Agency</em>
+            <em
+              >Reported by U.S. Environmental Protection Agency<br /><span
+                id="cleanup_phase1_parcels_date"></span
+            ></em>
           </p>
         </div>
 
@@ -435,7 +458,9 @@ lafires_header: true
 
           <div class="bg-primary h-100 p-x-md p-b-md p-t-sm">
             <div class="dashboard-row font-size-12 d-flex">
-              <span class="dashboard-stat">9,417</span>
+              <span class="dashboard-stat" id="cleanup_phase2_roe_submitted"
+                >9,417</span
+              >
               <span>Right of Entry forms submitted to LA County</span>
             </div>
 
@@ -448,7 +473,9 @@ lafires_header: true
                   width="23"
                   height="23"
                   aria-hidden="true" />
-                <span class="font-size-12">Opt-in: 9,286</span>
+                <span class="font-size-12"
+                  >Opt-in: <span id="cleanup_phase2_optin"></span
+                ></span>
               </div>
               <div class="d-flex align-items-center gap-2">
                 <img
@@ -456,12 +483,17 @@ lafires_header: true
                   width="23"
                   height="23"
                   aria-hidden="true" />
-                <span class="font-size-12">Opt-out: 131</span>
+                <span class="font-size-12"
+                  >Opt-out: <span id="cleanup_phase2_optout"></span
+                ></span>
               </div>
             </div>
           </div>
           <p class="font-size-12 bg-s1 p-a">
-            <em>Reported by LA County</em>
+            <em
+              >Reported by LA County<br /><span
+                id="cleanup_phase2_roe_submitted_date"></span
+            ></em>
           </p>
         </div>
 
@@ -481,7 +513,9 @@ lafires_header: true
 
           <div class="bg-primary h-100 p-x-md p-b-md p-t-sm">
             <div class="dashboard-row font-size-12 d-flex">
-              <span class="dashboard-stat">1,492</span>
+              <span class="dashboard-stat"
+                ><span id="phase2_roes_accepted"></span
+              ></span>
               <span>parcels have been accepted for Phase 2 debris removal</span>
             </div>
 
@@ -492,12 +526,18 @@ lafires_header: true
             </div>
 
             <div class="dashboard-progress m-t-sm">
-              <span data-fill="white" style="width: 1%"></span>
-              <span data-fill="dark" style="width: 99%"></span>
+              <span
+                data-fill="white"
+                id="phase2_parcels_completed_PERCENT"></span>
+              <span
+                data-fill="dark"
+                id="phase2_parcels_incomplete_PERCENT"></span>
             </div>
 
             <div class="dashboard-row font-size-12 d-flex">
-              <span class="dashboard-stat">10</span>
+              <span class="dashboard-stat"
+                ><span id="phase2_parcels_completed"></span
+              ></span>
               <span>parcels completed</span>
             </div>
             <details class="font-size-12 m-t">
@@ -536,7 +576,10 @@ lafires_header: true
             </details>
           </div>
           <p class="font-size-12 bg-s1 p-a">
-            <em>Reported by U.S. Army Corps of Engineers</em>
+            <em
+              >Reported by U.S. Army Corps of Engineers<br /><span
+                id="phase2_parcels_completed_date"></span
+            ></em>
           </p>
         </div>
       </div>
@@ -566,27 +609,34 @@ lafires_header: true
             <div
               class="bg-primary h-100 p-x-md p-b-md p-t-sm dashboard-water-container">
               <div class="dashboard-progress">
-                <span data-fill="white" style="width: 55%"></span>
-                <span data-fill="light" style="width: 45%"></span>
+                <span data-fill="white" id="water_safe_to_drink_PERCENT"></span>
+                <span data-fill="light" id="water_restoration_PERCENT"></span>
               </div>
               <div class="d-flex flex-wrap w-auto dashboard-water">
                 <div
                   class="m-0 p-t-sm font-size-12 d-flex flex-row align-items-center gap-2"
                   style="width:55%">
-                  <span class="dashboard-stat">5</span>
+                  <span class="dashboard-stat"
+                    ><span id="water_safe_to_drink"></span
+                  ></span>
                   <span>systems safe to drink</span>
                 </div>
                 <div
                   class="m-0 p-t-sm font-size-12 d-flex flex-row align-items-center gap-2"
                   style="width:45%">
-                  <span class="dashboard-stat">4</span>
+                  <span class="dashboard-stat"
+                    ><span id="water_restoration"></span
+                  ></span>
                   <span>systems in progress</span>
                 </div>
               </div>
             </div>
 
             <p class="font-size-12 bg-s1 p-a">
-              <i>Reported by State Water Resources Control Board</i>
+              <em
+                >Reported by State Water Resources Control Board<br /><span
+                  id="water_safe_to_drink_date"></span
+              ></em>
             </p>
           </div>
         </div>
@@ -705,15 +755,26 @@ lafires_header: true
 
             <div class="bg-primary h-100 p-x-md p-b-md p-t-sm">
               <div class="dashboard-progress m-b-sm">
-                <span data-fill="white" style="width: calc(100% * 4/9)"></span>
-                <span data-fill="light" style="width: calc(100% * 2/9)"></span>
-                <span data-fill="dark" style="width: calc(100% * 3/9)"></span>
+                <span
+                  data-fill="white"
+                  style="width: calc(100% * 4/9)"
+                  id="air_mobile_survey_complete_PERCENT"></span>
+                <span
+                  data-fill="light"
+                  style="width: calc(100% * 2/9)"
+                  id="air_stationary_deployed_PERCENT"></span>
+                <span
+                  data-fill="dark"
+                  style="width: calc(100% * 3/9)"
+                  id="air_stationary_planned_PERCENT"></span>
               </div>
 
               <div class="d-flex flex-wrap column-gap-5">
                 <div
                   class="m-0 font-size-12 d-flex dashboard-row air-monitoring-row">
-                  <span class="dashboard-stat">4</span>
+                  <span class="dashboard-stat"
+                    ><span id="air_mobile_survey_complete"></span
+                  ></span>
                   <span
                     >mobile monitoring surveys completed in Eaton and Palisades
                     areas</span
@@ -721,7 +782,9 @@ lafires_header: true
                 </div>
                 <div
                   class="m-0 font-size-12 d-flex dashboard-row air-monitoring-row">
-                  <span class="dashboard-stat">2</span>
+                  <span class="dashboard-stat"
+                    ><span id="air_stationary_deployed"></span
+                  ></span>
                   <span
                     >stationary air quality monitoring sites deployed for Eaton
                     and Palisades areas</span
@@ -729,7 +792,9 @@ lafires_header: true
                 </div>
                 <div
                   class="m-0 font-size-12 d-flex dashboard-row air-monitoring-row">
-                  <span class="dashboard-stat">3</span>
+                  <span class="dashboard-stat"
+                    ><span id="air_stationary_planned"></span
+                  ></span>
                   <span
                     >additional stationary air quality monitoring sites planned
                   </span>
@@ -738,7 +803,10 @@ lafires_header: true
             </div>
 
             <p class="font-size-12 bg-s1 p-a">
-              <i>Reported by South Coast Air Quality Management District</i>
+              <em
+                >Reported by South Coast Air Quality Management District<br /><span
+                  id="air_mobile_survey_complete_date"></span
+              ></em>
             </p>
           </div>
         </div>
@@ -776,3 +844,8 @@ lafires_header: true
     <!--END MAIN COL CONTENT-->
   </div>
 </div>
+
+{%- set js -%}{%- include "./track-progress.mjs" -%}{%- endset -%}
+<script type="module">
+  {{- js | jsmin | safe }}
+</script>
