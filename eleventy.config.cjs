@@ -22,6 +22,7 @@ module.exports = function (
   eleventyConfig.addPassthroughCopy({
     "src/images": "images",
     "src/docs": "docs",
+    "pages/initiatives/lafires/docs": "lafires/docs",
     "src/root": "/"
   });
 
