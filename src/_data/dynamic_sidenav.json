@@ -37,6 +37,11 @@
       "indent": true
     },
     {
+      "href": "/lafires/vital-records/",
+      "text": "Vital records",
+      "indent": true
+    },
+    {
       "href": "/lafires/get-help-in-person/",
       "text": "Get help in person"
     },
@@ -64,12 +69,21 @@
       "indent": true
     },
     {
+      "href": "/lafires/steps-to-rebuilding/",
+      "text": "Steps to rebuilding",
+      "indent": true
+    },
+    {
       "href": "/lafires/help-your-business/",
       "text": "Help your business"
     },
     {
       "href": "/lafires/volunteer/",
       "text": "Volunteer"
+    },
+    {
+      "href": "/lafires/stay-healthy/",
+      "text": "Stay healthy"
     },
     {
       "href": "/lafires/track-progress/",
