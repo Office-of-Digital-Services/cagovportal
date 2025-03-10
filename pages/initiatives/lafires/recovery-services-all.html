@@ -89,8 +89,8 @@ lafires_header: true
           <h3>{{service_category.Category}}</h3>
 
           <div class="row">
-            {%- for item in lafires.recovery_services_finder |
-            pluck("Category",service_category.Category) | sortBy("Service_name")
+            {%- for item in airtable.recovery_services_finder |
+            pluck("Category", service_category.Category) | sortBy("Service_name")
             | sortBy("Entity") -%}
             <div class="col-lg-6 m-t-md">
               <div
