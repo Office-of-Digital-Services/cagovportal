@@ -92,10 +92,18 @@ lafires_header: true
             {%- for item in lafires.recovery_services_finder |
             pluck("Category",service_category.Category) | sortBy("Service_name")
             | sortBy("Entity") -%}
-            <div class="col-lg-6 m-t-md">
+            <div class="col-lg-6 alert">
               <div
                 class="bg-white p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 rounded">
-                <h4 class="m-b-sm">{{item.Service_name}}</h4>
+                <div class="d-flex">
+                  <h4 class="m-b-sm">{{item.Service_name}}</h4>
+                  <button
+                    type="button"
+                    class="btn-close ms-auto m-t-md bg-gray-100 rounded-circle p-a-sm pos-rel top-minus-5 right-minus-sm"
+                    data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+                </div>
+
                 <p class="department font-size-14 color-p2 font-weight-600">
                   {{item.Entity}}
                 </p>
