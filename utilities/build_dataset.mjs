@@ -1,7 +1,6 @@
 //@ts-check
 import fs from "node:fs";
 import path from "node:path";
-import fetch from "node-fetch";
 
 const requiredFields = [
   // "ABOVE_MODERATE_INCOME_PCT",
