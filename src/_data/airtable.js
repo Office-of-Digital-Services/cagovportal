@@ -2,15 +2,14 @@ const EleventyFetch = require("@11ty/eleventy-fetch");
 
 const API_URL =
   "https://api.airtable.com/v0/app6t1QEuuPs8NUhg/tblMX0nRW5yTbr5Y6";
-const API_KEY = process.env.AIRTABLE_API_KEY; // Store securely in an env variable
+const API_KEY = process.env.AIRTABLE_API_KEY;
 
 module.exports = async function () {
   try {
     console.log("Fetching Airtable data...");
 
-    // Use EleventyFetch to cache data and prevent rate limits
     const response = await EleventyFetch(API_URL, {
-      duration: "1h", // Cache for 1 hour
+      duration: "1h", // Cache data for 1 hour
       type: "json",
       fetchOptions: {
         headers: {
@@ -19,9 +18,13 @@ module.exports = async function () {
       }
     });
 
-    return response.records.map(record => record.fields); // Extract just the fields
+    const records = response.records.map(record => record.fields);
+
+    return {
+      recovery_services_finder: records // Matches expected variable name
+    };
   } catch (error) {
     console.error("Error fetching Airtable data:", error);
-    return [];
+    return { recovery_services_finder: [] }; // Return empty array on error
   }
 };
