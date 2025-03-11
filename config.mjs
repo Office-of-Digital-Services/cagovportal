@@ -1,2 +1,3 @@
 // Airtable API key from Mark O's account for service finder data
-export const API_KEY = "patJifJHVIoW64pLn.cd9a75e0c806c4544bd29d7e9aa0d956e6cc9c259401c072c949214db40fde08";
+export const API_KEY =
+  "pat6wcuZYcbjUsWin.666c904a394dcb86bfc6aa80dc26077af0292f5ad0d8118883d72d9b5cd75c96";
