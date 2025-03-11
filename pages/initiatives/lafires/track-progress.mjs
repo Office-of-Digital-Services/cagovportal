@@ -309,6 +309,12 @@ document.addEventListener("DOMContentLoaded", () => {
         phase2_parcels_incomplete_PERCENT_Element.style.width = `${phase2_parcels_incomplete_Percentage}%`;
       }
 
+      const phase2_parcels_completed_PERCENT_label_Element =
+        document.getElementById("phase2_parcels_completed_PERCENT_label");
+      if (phase2_parcels_completed_PERCENT_label_Element) {
+        phase2_parcels_completed_PERCENT_label_Element.textContent = `${phase2_parcels_completed_Percentage.toFixed(1)}%`;
+      }
+
       /* Phase 2 : parcels completed DATE */
       const get_phase2_parcels_completed_date = getLastUpdated(
         "phase2_parcels_completed"
