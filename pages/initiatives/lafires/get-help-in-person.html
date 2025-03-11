@@ -216,9 +216,7 @@ lafires_header: true
             </p>
 
             <a
-              class="btn btn-primary rounded-5 m-y"
-              id="map-link-1"
-              class="maps-link"
+              class="btn btn-primary rounded-5 m-y maps-link"
               href="https://maps.google.com/?q=123+UCLA+Drive,+Los+Angeles,+CA+90095"
               ><span class="non-english-only">Driving </span>Directions<span
                 class="sr-only">
@@ -238,9 +236,7 @@ lafires_header: true
             </p>
 
             <a
-              class="btn btn-primary rounded-5 m-y"
-              id="map-link-3"
-              class="maps-link"
+              class="btn btn-primary rounded-5 m-y maps-link"
               href="https://maps.google.com/?q=540+W.+Woodbury+Road,+Altadena,+CA+91001"
               >Directions<span class="sr-only">
                 to Altadena Disaster Recovery Center</span
@@ -357,32 +353,7 @@ lafires_header: true
   </div>
 </div>
 
+{%- set js -%}{%- include "./map-link-fix.js" -%}{%- endset -%}
 <script>
-    const locations = [
-    { id: 'map-link-1', address: '10850 West Pico Blvd, Los Angeles, CA 90064' },
-    // { id: 'map-link-2', address: '3035 E. Foothill Blvd, Pasadena, CA 91107' },
-    { id: 'map-link-3', address: '540 W. Woodbury Road, Altadena, CA 91001' }
-  ];
-
-    locations.forEach(location => {
-    document.querySelector(`#${location.id}`).addEventListener('click', function(e) {
-      e.preventDefault();
-
-      const encodedAddress = encodeURIComponent(location.address);
-      const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) ||
-                    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-      const isAndroid = /Android/.test(navigator.userAgent);
-
-      if (isIOS) {
-          window.location.href = `maps://maps.apple.com/?q=${encodedAddress}`;
-      }
-      else if (isAndroid) {
-          window.location.href = `geo:0,0?q=${encodedAddress}`;
-      }
-      // Default to Google Maps in browser
-      else {
-          window.location.href = `https://maps.google.com/?q=${encodedAddress}`;
-      }
-    });
-  });
+  {{- js | jsmin | safe }}
 </script>
