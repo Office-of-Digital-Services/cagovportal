@@ -1,5 +1,5 @@
 import EleventyFetch from "@11ty/eleventy-fetch";
-import { API_KEY } from "../../config";
+import { API_KEY } from "../../config.js"; // ✅ Corrected path
 
 const API_URL =
   "https://api.airtable.com/v0/app6t1QEuuPs8NUhg/tblMX0nRW5yTbr5Y6";
@@ -10,7 +10,7 @@ export default async function () {
   try {
     if (!API_KEY) {
       throw new Error(
-        "Missing API Key. Make sure your config.js file contains AIRTABLE_API_KEY."
+        "Missing API Key. Make sure your `config.js` file contains `API_KEY`."
       );
     }
 
