@@ -66,5 +66,5 @@ git push origin master
 
 .cache
 
-#env file
-.env
+#add config.js file
+config.js
