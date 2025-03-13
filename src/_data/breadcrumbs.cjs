@@ -19,16 +19,6 @@ const data = [
       {
         key: "Departments",
         href: "/departments/"
-      },
-      {
-        key: "2025 Los Angeles Fires",
-        href: "/lafires/",
-        children: [
-          {
-            key: "Get help in person",
-            href: "/lafires/get-help-in-person/"
-          }
-        ]
       }
     ]
   }
