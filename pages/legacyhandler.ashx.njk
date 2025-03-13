@@ -27,6 +27,14 @@ public class ItemRedirectHandler : IHttpHandler
       {"/departments/208/services/1113/", "/service/?item=job-training-in-madera"},
       {"/departments/208/services/1112/", "/service/?item=job-training-in-long-beach"},
       {"/departments/193/services/15/", "/service/?item=pay-traffic-ticket"},
+      {"/docs/disaster-recovery-center-checklist-chinese-simplified.pdf", "/lafires/docs/disaster-recovery-center-checklist-chinese-simplified.pdf"},
+      {"/docs/disaster-recovery-center-checklist-chinese-traditional.pdf", "/lafires/docs/disaster-recovery-center-checklist-chinese-traditional.pdf"},
+      {"/docs/disaster-recovery-center-checklist-korean.pdf", "/lafires/docs/disaster-recovery-center-checklist-korean.pdf"},
+      {"/docs/disaster-recovery-center-checklist-spanish.pdf", "/lafires/docs/disaster-recovery-center-checklist-spanish.pdf"},
+      {"/docs/disaster-recovery-center-checklist-tagalog.pdf", "/lafires/docs/disaster-recovery-center-checklist-tagalog.pdf"},
+      {"/docs/disaster-recovery-center-checklist-vietnamese.pdf", "/lafires/docs/disaster-recovery-center-checklist-vietnamese.pdf"},
+      {"/docs/disaster-recovery-center-checklist.pdf", "/lafires/docs/disaster-recovery-center-checklist.pdf"},
+
       // End Manual entries
 
       {%- for agency in state_entity.agencies | sortBy("AgencyId") %}
