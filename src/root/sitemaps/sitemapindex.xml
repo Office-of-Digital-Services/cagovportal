@@ -11,4 +11,10 @@
   <sitemap>
     <loc>https://www.ca.gov/sitemaps/pdf.xml</loc>
   </sitemap>
+  <sitemap>
+    <loc>https://www.ca.gov/lafires/sitemaps/pdf.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.ca.gov/lafires/sitemaps/static.xml</loc>
+  </sitemap>
 </sitemapindex>
