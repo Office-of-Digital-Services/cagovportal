@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (!CSS.supports("selector(&)")) {
     // CSS Nesting not supported.  Load alternative CSS file
     const link = /** @type {HTMLLinkElement} */ (
-      document.getElementById("main-stylesheet")
+      document.querySelector("link[rel='stylesheet'][href^='/css/custom.']")
     );
     link.href = link.href.replace("min", "flat");
     console.log("POLYFILL: Using FLAT CSS instead of Nested");
