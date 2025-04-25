@@ -1,6 +1,6 @@
 {
   "name": "www.ca.gov",
-  "version": "6.4.2",
+  "version": "6.5.0",
   "description": "www.ca.gov",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
