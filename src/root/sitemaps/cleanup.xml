@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.ca.gov/archive/gov39/2011/12/page/6/index.html</loc></url>
   <url><loc>https://www.ca.gov/archive/gov39/2013/11/04/news18288/index.html</loc></url>
+  <url><loc>https://www.ca.gov/archive/gov39/2013/page/15/index.html</loc></url>
   <url><loc>https://www.ca.gov/archive/gov39/2014/07/30/news18635</loc></url>
+  <url><loc>https://www.ca.gov/archive/gov39/wp-content/uploads/2017/09/SB_439_Veto_message.pdf</loc></url>
   <url><loc>https://www.ca.gov/archive/gov39/wp-content/uploads/2017/09/SB_707_Signing_Message.pdf</loc></url>
   <url><loc>https://www.ca.gov/archive/gov39/wp-content/uploads/2017/11/AB_547_Veto_Msg_2017.pdf</loc></url>
   <url><loc>https://www.ca.gov/departments/283/services/75/</loc></url>
@@ -21,20 +23,17 @@
   <url><loc>https://www.ca.gov/lafires/es/index.html</loc></url>
   <url><loc>https://www.ca.gov/lafires/es/return-to-your-home-safely/</loc></url>
   <url><loc>https://www.ca.gov/lafires/fr/return-to-your-home-safely/</loc></url>
-  <url><loc>https://www.ca.gov/lafires/get-help-in-person-shared/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/fr/see-real-time-info/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/fr/volunteer/</loc></url>
   <url><loc>https://www.ca.gov/lafires/get-help-online-shared/</loc></url>
   <url><loc>https://www.ca.gov/lafires/help-your-business-shared/</loc></url>
   <url><loc>https://www.ca.gov/lafires/hy/index.html</loc></url>
   <url><loc>https://www.ca.gov/lafires/hy/return-to-your-home-safely/</loc></url>
-  <url><loc>https://www.ca.gov/lafires/index-shared/</loc></url>
   <url><loc>https://www.ca.gov/lafires/ko/index.html</loc></url>
   <url><loc>https://www.ca.gov/lafires/plan-your-in-person-visit-shared/</loc></url>
-  <url><loc>https://www.ca.gov/lafires/recovery-services-all-shared/</loc></url>
   <url><loc>https://www.ca.gov/lafires/recovery-services-finder-shared/</loc></url>
-  <url><loc>https://www.ca.gov/lafires/return-to-your-home-safely-shared/</loc></url>
   <url><loc>https://www.ca.gov/lafires/see-real-time-info-shared/</loc></url>
   <url><loc>https://www.ca.gov/lafires/start-your-recovery-shared/</loc></url>
-  <url><loc>https://www.ca.gov/lafires/stay-healthy-shared/</loc></url>
   <url><loc>https://www.ca.gov/lafires/steps-to-rebuilding-shared/</loc></url>
   <url><loc>https://www.ca.gov/lafires/tl/index.html</loc></url>
   <url><loc>https://www.ca.gov/lafires/track-progress-shared/</loc></url>
@@ -45,4 +44,73 @@
   <url><loc>https://www.ca.gov/lafires/zh-hans/index.html</loc></url>
   <url><loc>https://www.ca.gov/lafires/zh-hant/index.html</loc></url>
   <url><loc>https://www.ca.gov/lafires/zh-hant/track-progress/index.html</loc></url>
+  <url><loc>https://www.ca.gov/lafires/es/vital-records/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/fr/vital-records/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/hy/vital-records/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/ko/vital-records/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/tl/vital-records/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/vi/vital-records/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/vital-records/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/zh-hans/vital-records/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/zh-hant/vital-records/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/es/stay-healthy/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/hy/stay-healthy/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/ko/stay-healthy/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/stay-healthy/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/tl/stay-healthy/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/vi/stay-healthy/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/zh-hans/stay-healthy/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/zh-hant/stay-healthy/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/es/get-help-online/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/get-help-online/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/hy/get-help-online/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/ko/get-help-online/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/tl/get-help-online/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/vi/get-help-online/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/zh-hans/get-help-online/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/zh-hant/get-help-online/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/es/start-your-recovery/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/fr/start-your-recovery/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/hy/start-your-recovery/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/ko/start-your-recovery/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/start-your-recovery/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/tl/start-your-recovery/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/vi/start-your-recovery/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/zh-hans/start-your-recovery/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/zh-hant/start-your-recovery/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/es/help-your-business/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/fr/help-your-business/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/help-your-business/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/hy/help-your-business/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/ko/help-your-business/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/tl/help-your-business/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/vi/help-your-business/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/zh-hans/help-your-business/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/zh-hant/help-your-business/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/es/plan-your-in-person-visit/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/hy/plan-your-in-person-visit/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/ko/plan-your-in-person-visit/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/plan-your-in-person-visit/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/tl/plan-your-in-person-visit/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/vi/plan-your-in-person-visit/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/zh-hans/plan-your-in-person-visit/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/zh-hant/plan-your-in-person-visit/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/accessing-your-property/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/es/accessing-your-property/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/fr/accessing-your-property/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/hy/accessing-your-property/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/ko/accessing-your-property/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/tl/accessing-your-property/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/vi/accessing-your-property/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/zh-hans/accessing-your-property/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/zh-hant/accessing-your-property/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/es/steps-to-rebuilding/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/fr/steps-to-rebuilding/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/hy/steps-to-rebuilding/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/ko/steps-to-rebuilding/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/steps-to-rebuilding/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/tl/steps-to-rebuilding/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/vi/steps-to-rebuilding/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/zh-hans/steps-to-rebuilding/</loc></url>
+  <url><loc>https://www.ca.gov/lafires/zh-hant/steps-to-rebuilding/</loc></url>
 </urlset>
