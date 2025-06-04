@@ -1,8 +1,9 @@
 {
- "recommendations": [
-  "dbaeumer.vscode-eslint",
-  "esbenp.prettier-vscode",
-  "eseom.nunjucks-template",
-  "tombonnike.vscode-status-bar-format-toggle"
- ]
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "eseom.nunjucks-template",
+    "tombonnike.vscode-status-bar-format-toggle",
+    "ambooth.git-rename"
+  ]
 }
