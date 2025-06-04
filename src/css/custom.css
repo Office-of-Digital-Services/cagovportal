@@ -639,3 +639,9 @@ div.search-container > form#Search > button.gsc-search-button {
     color: var(--white);
   }
 }
+
+@media (width >= 1200px) {
+  div.la-fires-container {
+    margin-top: -70px;
+  }
+}
