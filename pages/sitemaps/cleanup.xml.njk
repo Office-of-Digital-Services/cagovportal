@@ -4,12 +4,14 @@ permalink: sitemaps/cleanup.xml
 eleventyExcludeFromCollections: true
 ---
 {#- No space -#} 
+{% set lastmod %}{% today %}{% endset %}
+{#- No space -#} 
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {%- for url in sitemap_cleanup | sortBy("loc") %}
   <url>
     <loc>{{url.loc}}</loc>
-    <lastmod>{% today %}</lastmod>
+    <lastmod>{{ lastmod }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
