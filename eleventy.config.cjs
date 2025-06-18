@@ -147,6 +147,12 @@ module.exports = function (
     return DateTime.fromISO(dateString).toFormat("MM/dd/yyyy");
   });
 
+  // returns the current date in YYYY-MM-DD format
+  // Usage: {% today %}
+  eleventyConfig.addShortcode("today", () => {
+    return new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
+  });
+
   // a special filter for converting md text to HTML
   eleventyConfig.addFilter("md", (/** @type {string} */ contents) => {
     const md = MarkdownIt({
