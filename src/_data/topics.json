@@ -450,8 +450,8 @@
     "topicImg": "/images/topic11-lineart.svg",
     "popularServices": [
       {
-        "DepartmentId": 283,
-        "ServiceId": 75,
+        "DepartmentId": 317,
+        "ServiceId": 1285,
         "ServiceName": "Request a free California visitor’s guide",
         "Description": "Explore the Golden State with trip itineraries for every region of California.",
         "umgURL": "/images/topic11-3.png",
