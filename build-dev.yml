@@ -7,6 +7,15 @@ trigger:
 - dev
 pr: none
 
+#### TEST ####
+# YAML CRON Schedule Run at 8:00 AM DAILY
+schedules:
+- cron: '58 19 * * *'
+  displayName: Daily 8:00 AM build
+  branches:
+    include:
+    - devops-dev-cron-pipeline
+
 pool:
   vmImage: 'ubuntu-latest'
 
