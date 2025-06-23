@@ -4,18 +4,17 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-#- dev
-- none 
+- dev
+
 pr: none
 
-#### TEST ####
 # YAML CRON Schedule Run at 8:00 AM DAILY
 schedules:
-- cron: '4 20 * * *'
-  displayName: Daily 8:00 AM build
+- cron: '0 17 * * *'
+  displayName: Daily 8:00 AM PST (17:00 UTC) build
   branches:
     include:
-    - devops-dev-cron-pipeline
+    - dev
 
 pool:
   vmImage: 'ubuntu-latest'
