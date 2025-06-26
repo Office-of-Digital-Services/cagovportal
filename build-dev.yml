@@ -5,7 +5,16 @@
 
 trigger:
 - dev
+
 pr: none
+
+# YAML CRON Schedule Run at 8:00 AM DAILY
+schedules:
+- cron: '0 17 * * *'
+  displayName: Daily 8:00 AM PST (17:00 UTC) build
+  branches:
+    include:
+    - dev
 
 pool:
   vmImage: 'ubuntu-latest'
