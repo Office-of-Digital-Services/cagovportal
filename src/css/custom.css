@@ -3,6 +3,13 @@
 
 /* THIS IS CUSTOM CSS */
 
+#skip-to-content {
+  > a {
+    width: 0;
+    height: 0;
+  }
+}
+
 /* -- Site header * -- */
 header {
   /* -- Utility header -- */
@@ -630,5 +637,11 @@ div.search-container > form#Search > button.gsc-search-button {
   /* stylelint-disable-next-line selector-combinator-allowed-list */
   aside.mobile-sidenav .side-navigation ul.list-navigation li ul li a.active {
     color: var(--white);
+  }
+}
+
+@media (width >= 1200px) {
+  div.la-fires-container {
+    margin-top: -70px;
   }
 }
