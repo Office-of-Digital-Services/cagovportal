@@ -10,11 +10,12 @@ pr: none
 
 # YAML CRON Schedule Run at 8:00 AM DAILY
 schedules:
-- cron: '0 17 * * *'
+- cron: '0 15 * * *'
   displayName: Daily 8:00 AM PST (17:00 UTC) build
   branches:
     include:
     - dev
+  always: true
 
 pool:
   vmImage: 'ubuntu-latest'
