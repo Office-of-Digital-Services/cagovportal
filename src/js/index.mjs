@@ -212,3 +212,48 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 })();
+
+/* -----------------------------------------
+Fix URLS for search results
+----------------------------------------- */
+(() => {
+  const whitelistMap = {
+    "/search/": ["q"],
+    "/services/all/": ["q"],
+    "/": ["utm_campaign", "utm_medium", "utm_source"]
+  };
+
+  const rawUrl = window.location.href;
+  const url = new URL(rawUrl.toLowerCase());
+
+  // 1. Fix hostname if it ends with a period
+  if (url.hostname.endsWith(".")) {
+    // This will redirect to the same hostname without the trailing period
+    // e.g., "example.com." becomes "example.com"
+
+    url.hostname = url.hostname.slice(0, -1);
+    window.location.href = url.toString();
+    return; // Stop further processing after redirecting
+  }
+
+  // 2. Filter query keys based on whitelist for path
+  const whitelist = whitelistMap[url.pathname] || [];
+  const params = new URLSearchParams(url.search);
+
+  // Remove keys not in the whitelist
+  for (const key of [...params.keys()])
+    if (!whitelist.includes(key)) params.delete(key);
+
+  url.search = params.toString();
+
+  // Replace the URL in the browser only if needed
+  if (rawUrl !== url.toString()) {
+    // Log the changes for debugging
+    console.log("URL modified:", {
+      original: rawUrl,
+      modified: url.toString()
+    });
+
+    history.replaceState(null, "", url.toString());
+  }
+})();
