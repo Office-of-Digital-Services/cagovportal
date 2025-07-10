@@ -230,7 +230,10 @@ Fix URLS for search results
   if (url.hostname.endsWith(".")) {
     // This will redirect to the same hostname without the trailing period
     // e.g., "example.com." becomes "example.com"
-    url.hostname = window.location.hostname = url.hostname.slice(0, -1);
+
+    url.hostname = url.hostname.slice(0, -1);
+    window.location.href = url.toString();
+    return; // Stop further processing after redirecting
   }
 
   // 2. Filter query keys based on whitelist for path
