@@ -56,6 +56,10 @@ public class ItemRedirectHandler : IHttpHandler
             {
                 context.Response.StatusCode = 301;
                 context.Response.RedirectLocation = redirectLocation;
+                context.Response.CacheControl = "public";
+                context.Response.AddHeader("Expires", DateTime.UtcNow.AddYears(1).ToString("R")); // RFC 1123 format
+                context.Response.AddHeader("Last-Modified", DateTime.UtcNow.ToString("R"));
+                context.Response.AddHeader("X-Status-Message", "Permanent redirect issued for: " + currentPath);
             }
             else
             {
@@ -70,8 +74,6 @@ public class ItemRedirectHandler : IHttpHandler
         }
         finally
         {
-            context.Response.CacheControl = "no-cache";
-            context.Response.AddHeader("Pragma", "no-cache");
             context.Response.End();
         }
     }
