@@ -19,7 +19,7 @@ public class ItemRedirectHandler : IHttpHandler
       {"{{service.target}}","{{service.source}}"},
       {%- endfor %}
 
-      // Legacty Agencies
+      // Legacy Agencies
       {%- for agency in legacyUrls | pluck("service","0") %}
       {"{{agency.target}}","{{agency.source}}"}{{-"," if not loop.last-}}
       {%- endfor %}
@@ -54,7 +54,7 @@ public class ItemRedirectHandler : IHttpHandler
 
             if (redirectLocation != null)
             {
-                context.Response.StatusCode = 301;
+                context.Response.StatusCode = 301; // Permanent Redirect
                 context.Response.RedirectLocation = redirectLocation;
                 context.Response.CacheControl = "public";
                 context.Response.AddHeader("Expires", DateTime.UtcNow.AddYears(1).ToString("R")); // RFC 1123 format
@@ -63,7 +63,7 @@ public class ItemRedirectHandler : IHttpHandler
             }
             else
             {
-                context.Response.StatusCode = 404;
+                context.Response.StatusCode = 404; // Not Found
                 context.Response.Headers.Add("X-Status-Message", "Target path not found. " + currentPath);
             }
         }
