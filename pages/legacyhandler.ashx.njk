@@ -27,53 +27,51 @@ public class ItemRedirectHandler : IHttpHandler
 
     public void ProcessRequest(HttpContext context)
     {
-        // Retrieve the 'item' and 'path' query string parameters
-        string item = context.Request.QueryString["item"];
-        string path = context.Request.QueryString["path"];
-
-        // Check if both 'item' and 'path' parameters are present
-        if (!string.IsNullOrEmpty(item) && !string.IsNullOrEmpty(path))
+        try
         {
-            // Replace "dashline" with "-" in the 'item' string
-            // Some old indexes have this
-            item = item.Replace("dashline", "-");
+            string item = context.Request.QueryString["item"];
+            string basePath = string.Format("/{0}", context.Request.QueryString["path"]).ToLower();
+            string queryString = "";
 
-            // Construct the current path using the 'item' and 'path' parameters
-            string currentPath = String.Format("/{0}/?item={1}", path, HttpUtility.UrlEncode(item)).ToLower();
+            if (!string.IsNullOrEmpty(item))
+            {
+                item = item.ToLower().Replace("dashline", "-");
+                queryString = "?item=" + HttpUtility.UrlEncode(item);
+            }
+
+            string currentPath = basePath + queryString;
             string redirectLocation = null;
 
-            // Iterate through the redirects array to find a matching legacy path
             for (int i = 0; i < redirects.GetLength(0); i++)
             {
                 string targetPath = redirects[i, 1].ToLower();
                 if (targetPath.StartsWith(currentPath) || currentPath.StartsWith(targetPath))
                 {
-                    // If a match is found, set the target path
                     redirectLocation = redirects[i, 0];
                     break;
                 }
             }
 
-            // If a target path is found, redirect to it
             if (redirectLocation != null)
             {
-                context.Response.StatusCode = 301; // Permanent Redirect
+                context.Response.StatusCode = 301;
                 context.Response.RedirectLocation = redirectLocation;
-                context.Response.End();
             }
             else
             {
-                // If no matching target path is found, return a 404 Not Found status
-                context.Response.StatusCode = 404; // Not Found
-                context.Response.Headers.Add("X-Status-Message", "Target path not found. "+currentPath);
-                context.Response.End();
+                context.Response.StatusCode = 404;
+                context.Response.Headers.Add("X-Status-Message", "Target path not found. " + currentPath);
             }
         }
-        else
+        catch (Exception ex)
         {
-            // If 'item' or 'path' parameters are missing, return a 400 Bad Request status
-            context.Response.StatusCode = 400; // Bad Request
-            context.Response.Headers.Add("X-Status-Message", "Item or path parameter is missing.");
+            context.Response.StatusCode = 500;
+            context.Response.Headers.Add("X-Status-Message", ex.Message + " " + context.Request.Url);
+        }
+        finally
+        {
+            context.Response.CacheControl = "no-cache";
+            context.Response.AddHeader("Pragma", "no-cache");
             context.Response.End();
         }
     }
