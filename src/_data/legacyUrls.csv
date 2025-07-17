@@ -195,6 +195,7 @@ target,source,manual,service
 /departments/172/services/85/,/service/?item=learn-to-read-and-write,0,1
 /departments/172/services/86/,/Agencies/education-california-department-of/Agency-Services/find-a-citizenship-class,0,1
 /departments/172/services/86/,/service/?item=find-a-citizenship-class,0,1
+/departments/173/,/Agencies/food-agriculture-department-of,1,0
 /departments/173/,/Agencies/food-and-agriculture-department-of,0,0
 /departments/173/,/agency/?item=department-of-food-and-agriculture,0,0
 /departments/173/services/73/,/Agencies/food-and-agriculture-department-of/Agency-Services/find-a-fair,0,1
@@ -450,6 +451,7 @@ target,source,manual,service
 /departments/22/,/Agencies/chiropractic-examiners-board-of,0,0
 /departments/22/,/agency/?item=board-of-chiropractic-examiners,0,0
 /departments/220/,/Agencies/motor-vehicles-department-of,0,0
+/departments/220/,/Agencies/dmv.html,1,0
 /departments/220/,/agency/?item=department-of-motor-vehicles,0,0
 /departments/220/services/1121/,/Agencies/motor-vehicles-department-of/Agency-Services/learn-more-about-dmv-for-daca,0,1
 /departments/220/services/1121/,/service/?item=learn-more-about-dmv-for-daca,0,1
