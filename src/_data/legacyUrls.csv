@@ -168,6 +168,7 @@ target,source,manual,service
 /departments/17/,/agency/?item=california-acupuncture-board,0,0
 /departments/170/,/Agencies/status-of-women-and-girls-commission-on,0,0
 /departments/170/,/agency/?item=commission-on-status-of-women-and-girls,0,0
+/departments/171/,/agencies/cdcr,1,0
 /departments/171/,/Agencies/corrections-and-rehabilitation-california-department-of,0,0
 /departments/171/,/agency/?item=california-department-of-corrections-and-rehabilitation,0,0
 /departments/171/services/1188/,/agencies/corrections-rehabilitation-department-of/agency-services/locate-an-inmate,1,1
@@ -209,6 +210,7 @@ target,source,manual,service
 /departments/174/services/29/,/service/?item=get-a-fishing-or-hunting-license,0,1
 /departments/175/,/Agencies/insurance-department-of,0,0
 /departments/175/,/agency/?item=department-of-insurance,0,0
+/departments/175/,/service/?item=california-department-of-insurance-(cdi),1,0
 /departments/175/services/1170/,/Agencies/insurance-department-of/Agency-Services/file-a-complaint,0,1
 /departments/175/services/1170/,/service/?item=file-a-complaint,0,1
 /departments/175/services/1171/,/Agencies/insurance-department-of/Agency-Services/california-low-cost-auto,0,1
@@ -488,6 +490,7 @@ target,source,manual,service
 /departments/220/services/44/,/service/?item=renew-driver%e2%80%99s-license-or-id-card,0,1
 /departments/220/services/45/,/Agencies/motor-vehicles-department-of/Agency-Services/renew-your-vehicle-registration,0,1
 /departments/220/services/45/,/service/?item=renew-your-vehicle-registration,0,1
+/departments/220/services/45/,/service/?item=renew-vehicle-registration,1,1
 /departments/220/services/46/,/Agencies/motor-vehicles-department-of/Agency-Services/find-a-traffic-school,0,1
 /departments/220/services/46/,/service/?item=find-a-traffic-school,0,1
 /departments/220/services/47/,/Agencies/motor-vehicles-department-of/Agency-Services/change-home-address,0,1
