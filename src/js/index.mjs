@@ -214,7 +214,7 @@ window.addEventListener("DOMContentLoaded", () => {
 })();
 
 /* -----------------------------------------
-Fix URLS for search results
+Fix URLS for analytics and SEO
 ----------------------------------------- */
 (() => {
   const rawUrl = window.location.href;
@@ -230,34 +230,29 @@ Fix URLS for search results
     return; // Stop further processing after redirecting
   }
 
-  // 2. Read meta tag to determine allowed query params
-  let allowAllParams = false;
-  let allowedKeys = [];
+  // 2. Process query parameters based on meta tag
   /** @type {HTMLMetaElement | null} */
   const metaTag = document.querySelector('meta[name="allowed-query-params"]');
+  const metaTagContent = metaTag?.content.trim();
+  if (!metaTagContent) {
+    // No meta tag found, remove all query parameters
+    url.search = "";
+  } else if (metaTagContent !== "*") {
+    // non-wildcard content, filter query parameters
+    const allowedKeys = metaTagContent
+      .split(",")
+      .map(k => k.trim())
+      .filter(Boolean);
 
-  if (metaTag?.content.trim()) {
-    const content = metaTag.content.trim();
-    if (content === "*") {
-      allowAllParams = true;
-    } else {
-      allowedKeys = content
-        .split(",")
-        .map(k => k.trim())
-        .filter(Boolean);
-    }
-  }
+    const params = new URLSearchParams(url.search);
 
-  // 3. Sanitize query string
-  const params = new URLSearchParams(url.search);
-  if (!allowAllParams) {
     for (const key of [...params.keys()])
       if (!allowedKeys.includes(key)) params.delete(key);
+
+    url.search = params.toString();
   }
 
-  url.search = params.toString();
-
-  // 4. Replace URL if modified
+  // 3. Replace URL if modified
   if (rawUrl !== url.toString()) {
     console.log("URL modified:", {
       original: rawUrl,
