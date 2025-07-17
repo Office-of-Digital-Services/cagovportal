@@ -23,6 +23,8 @@
     <meta name="title" content="{% metatitle %}" />
     {%- if updated %}
     <meta name="last-modified" content="{{ updated }}" />
+    {%- endif -%} {#- Allowed query parameters -#} {%- if allowedQueryParams %}
+    <meta name="allowed-query-params" content="{{ allowedQueryParams }}" />
     {%- endif %}
 
     <!-- Canonical link, improves SEO -->
