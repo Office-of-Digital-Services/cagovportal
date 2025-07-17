@@ -231,9 +231,10 @@ Fix URLS for analytics and SEO
   }
 
   // 2. Process query parameters based on meta tag
-  /** @type {HTMLMetaElement | null} */
-  const metaTag = document.querySelector('meta[name="allowed-query-params"]');
-  const metaTagContent = metaTag?.content.trim();
+  const metaTagContent = /** @type {HTMLMetaElement | null} */ (
+    document.querySelector('meta[name="allowed-query-params"]')
+  )?.content.trim();
+
   if (!metaTagContent) {
     // No meta tag found, remove all query parameters
     url.search = "";
