@@ -214,15 +214,9 @@ window.addEventListener("DOMContentLoaded", () => {
 })();
 
 /* -----------------------------------------
-Fix URLS for search results
+Fix URLS for analytics and SEO
 ----------------------------------------- */
 (() => {
-  const whitelistMap = {
-    "/search/": ["q"],
-    "/services/all/": ["q"],
-    "/": ["utm_campaign", "utm_medium", "utm_source"]
-  };
-
   const rawUrl = window.location.href;
   const url = new URL(rawUrl.toLowerCase());
 
@@ -236,24 +230,35 @@ Fix URLS for search results
     return; // Stop further processing after redirecting
   }
 
-  // 2. Filter query keys based on whitelist for path
-  const whitelist = whitelistMap[url.pathname] || [];
-  const params = new URLSearchParams(url.search);
+  // 2. Process query parameters based on meta tag
+  const metaTagContent = /** @type {HTMLMetaElement | null} */ (
+    document.querySelector('meta[name="allowed-query-params"]')
+  )?.content.trim();
 
-  // Remove keys not in the whitelist
-  for (const key of [...params.keys()])
-    if (!whitelist.includes(key)) params.delete(key);
+  if (!metaTagContent) {
+    // No meta tag found, remove all query parameters
+    url.search = "";
+  } else if (metaTagContent !== "*") {
+    // non-wildcard content, filter query parameters
+    const allowedKeys = metaTagContent
+      .split(",")
+      .map(k => k.trim())
+      .filter(Boolean);
 
-  url.search = params.toString();
+    const params = new URLSearchParams(url.search);
 
-  // Replace the URL in the browser only if needed
+    for (const key of [...params.keys()])
+      if (!allowedKeys.includes(key)) params.delete(key);
+
+    url.search = params.toString();
+  }
+
+  // 3. Replace URL if modified
   if (rawUrl !== url.toString()) {
-    // Log the changes for debugging
     console.log("URL modified:", {
       original: rawUrl,
       modified: url.toString()
     });
-
     history.replaceState(null, "", url.toString());
   }
 })();
