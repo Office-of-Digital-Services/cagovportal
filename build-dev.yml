@@ -4,51 +4,51 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- dev
+  - dev
 
 pr: none
 
+# Customize build name to include date, branch, and reason
+name: $(Date:yyyyMMdd)$(Rev:.r)-$(Build.SourceBranchName)-$(Build.Reason)
+
 # YAML CRON Schedule Run at 8:00 AM DAILY
 schedules:
-- cron: '0 15 * * *'
-  displayName: Daily 8:00 AM PST (17:00 UTC) build
-  branches:
-    include:
-    - dev
-  always: true
+  - cron: "0 15 * * *"
+    displayName: Daily 8:00 AM PST (17:00 UTC) build
+    branches:
+      include:
+        - dev
+    always: true
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: "ubuntu-latest"
 
 steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "18.x"
+    displayName: "Install Node.js"
 
-- task: NodeTool@0
-  inputs:
-    versionSpec: '18.x'
-  displayName: 'Install Node.js'
+  - task: Npm@1
+    inputs:
+      command: "install"
+    displayName: "npm install"
 
-- task: Npm@1
-  inputs:
-    command: 'install'
-  displayName: "npm install"
+  - script: npm run build
+    displayName: "npm build"
 
-
-    
-- script: npm run build
-  displayName: "npm build"
-
-- task: CopyFiles@2
-  inputs:
-    Contents: '_site/**' # Pull the build directory
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-- task: PublishBuildArtifacts@1
-  inputs: 
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/_site' # build files
-    ArtifactName: 'drop' # output artifact named drop
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'
-    includeRootFolder: true
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
+  - task: CopyFiles@2
+    inputs:
+      Contents: "_site/**" # Pull the build directory
+      TargetFolder: "$(Build.ArtifactStagingDirectory)"
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: "$(Build.ArtifactStagingDirectory)/_site" # build files
+      ArtifactName: "drop" # output artifact named drop
+  - task: ArchiveFiles@2
+    inputs:
+      rootFolderOrFile: "$(Build.ArtifactStagingDirectory)"
+      includeRootFolder: true
+      archiveType: "zip"
+      archiveFile: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip"
+      replaceExistingArchive: true
