@@ -20,8 +20,8 @@ allowedQueryParams: "*"
         <a href="/">homepage</a>
       </li>
       <li>
-        <a href="https://www.google.com/search?q=site%3A{%-domain-%}"
-          >Search this site on Google</a
+        <a href="/search/?q=" id="search-link"
+          >Search this site for &quot;<span id="search-term"></span>&quot;</a
         >
       </li>
       <li>Double check that link</li>
@@ -35,3 +35,28 @@ allowedQueryParams: "*"
     <p class="font-size-14">Error: Page not found (404)</p>
   </div>
 </div>
+
+<script>
+  (function () {
+    // Purpose: Improve the user experience on 404 pages by turning the invalid URL path
+    // into a meaningful search query. This helps users find relevant content even when
+    // the original link is broken or outdated.
+
+    // Extract and clean the failed path to use as a search term.
+    // This makes the search feel contextual and personalized.
+    const searchTerm = decodeURIComponent(window.location.pathname).replace(/\//g, ' ').trim();
+
+    // Locate the search link and display span in the 404 template.
+    const searchLink = document.getElementById('search-link');
+    const searchTermSpan = document.getElementById('search-term');
+
+    // If everything is in place, update the search link and visible term.
+    if (searchTerm && searchLink && searchTermSpan) {
+      // Link to a site-wide search using the failed path as the query.
+      searchLink.href += encodeURIComponent(searchTerm);
+
+      // Show the readable version of the failed path to guide the user.
+      searchTermSpan.textContent = searchTerm;
+    }
+  })();
+</script>
