@@ -39,23 +39,37 @@ allowedQueryParams: "*"
 <script>
   (function () {
     // Purpose: Improve the user experience on 404 pages by turning the invalid URL path
-    // into a meaningful search query. This helps users find relevant content even when
-    // the original link is broken or outdated.
+    // and querystring values into a meaningful search query. Filters out overly long or noisy terms.
 
-    // Extract and clean the failed path to use as a search term.
-    // This makes the search feel contextual and personalized.
-    const searchTerm = decodeURIComponent(window.location.pathname).replace(/\//g, ' ').trim();
+    // Get and decode path and querystring values
+    const rawPath = decodeURIComponent(window.location.pathname);
+    const queryParams = new URLSearchParams(window.location.search);
+    const rawQuery = Array.from(queryParams.values())
+      .map(val => decodeURIComponent(val))
+      .join(' '); // join query values into one string
 
-    // Locate the search link and display span in the 404 template.
+    // Combine path and query into one string
+    const combinedRaw = `${rawPath} ${rawQuery}`;
+
+    const noiseWords = ["ashx", "html", "htm", "php", "aspx", "en", "us", "index", "default"];
+
+    // Replace all non-alphanumeric characters with spaces, then split
+    const allWords = combinedRaw
+      .replace(/[^a-zA-Z0-9]+/g, ' ') // normalize separators
+      .split(' ')
+      .map(word => word.trim().toLowerCase())
+      .filter(word => word.length && word.length <= 20 && !noiseWords.includes(word));
+
+    // Join into a space-separated search term
+    const searchTerm = allWords.join(' ');
+
+    // Locate the search link and display span in the 404 template
     const searchLink = document.getElementById('search-link');
     const searchTermSpan = document.getElementById('search-term');
 
-    // If everything is in place, update the search link and visible term.
+    // If everything is in place, update the search link and visible term
     if (searchTerm && searchLink && searchTermSpan) {
-      // Link to a site-wide search using the failed path as the query.
       searchLink.href += encodeURIComponent(searchTerm);
-
-      // Show the readable version of the failed path to guide the user.
       searchTermSpan.textContent = searchTerm;
     }
   })();
