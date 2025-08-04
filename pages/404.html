@@ -42,11 +42,15 @@ allowedQueryParams: "*"
     // and querystring values into a meaningful search query. Filters out overly long or noisy terms.
 
     // Get and decode path and querystring values
-    const rawPath = decodeURIComponent(window.location.pathname);
+    const rawPath = decodeURIComponent(window.location.pathname)
+      .replace(/(?<![a-zA-Z0-9])\//g, '') // remove leading/trailing slashes
+      .split('/')
+      .join(", ")
+    ;
     const queryParams = new URLSearchParams(window.location.search);
     const rawQuery = Array.from(queryParams.values())
       .map(val => decodeURIComponent(val))
-      .join(' '); // join query values into one string
+      .join(', '); // join query values into one string
 
     // Combine path and query into one string
     const combinedRaw = `${rawPath} ${rawQuery}`;
@@ -55,7 +59,7 @@ allowedQueryParams: "*"
 
     // Replace all non-alphanumeric characters with spaces, then split
     const allWords = combinedRaw
-      .replace(/[^a-zA-Z0-9]+/g, ' ') // normalize separators
+      .replace(/[^a-zA-Z0-9,]+/g, ' ') // normalize separators
       .split(' ')
       .map(word => word.trim().toLowerCase())
       .filter(word => word.length && word.length <= 20 && !noiseWords.includes(word));
