@@ -41,27 +41,26 @@ allowedQueryParams: "*"
     // Purpose: Improve the user experience on 404 pages by turning the invalid URL path
     // and querystring values into a meaningful search query. Filters out overly long or noisy terms.
 
-    // Get and decode path and querystring values
-    const rawPath = decodeURIComponent(window.location.pathname);
+    // Path values to an array
+    const rawPathArray = decodeURIComponent(window.location.pathname)
+      .split('/')
+      .map(segment => segment.replace(/\..+$/, '')); // removes trailing file extensions
+    ;
+
+    // Query parameters values to an array
     const queryParams = new URLSearchParams(window.location.search);
-    const rawQuery = Array.from(queryParams.values())
-      .map(val => decodeURIComponent(val))
-      .join(' '); // join query values into one string
+    const rawQueryArray = Array.from(queryParams.values())
+      .map(val => decodeURIComponent(val));
 
-    // Combine path and query into one string
-    const combinedRaw = `${rawPath} ${rawQuery}`;
-
-    const noiseWords = ["ashx", "html", "htm", "php", "aspx", "en", "us", "index", "default"];
+    const noiseWords = ["index", "default"];
 
     // Replace all non-alphanumeric characters with spaces, then split
-    const allWords = combinedRaw
-      .replace(/[^a-zA-Z0-9]+/g, ' ') // normalize separators
-      .split(' ')
-      .map(word => word.trim().toLowerCase())
-      .filter(word => word.length && word.length <= 20 && !noiseWords.includes(word));
+    const allWords = [...rawPathArray, ...rawQueryArray]
+      .map(word => word.trim())
+      .filter(word => word.length && word.length <= 20 && !noiseWords.includes(word.toLowerCase()));
 
     // Join into a space-separated search term
-    const searchTerm = allWords.join(' ');
+    const searchTerm = allWords.join(', ');
 
     // Locate the search link and display span in the 404 template
     const searchLink = document.getElementById('search-link');
