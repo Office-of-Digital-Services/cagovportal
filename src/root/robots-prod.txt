@@ -9,7 +9,6 @@ Disallow: /.well-known/apple-app-site-association
 Disallow: /apple-app-site-association
 
 # www.ca.gov specificly, reduces 404 crawl attempts
-Disallow: /serp
 Disallow: /state/portal/
 Disallow: /state/govsite/
 
