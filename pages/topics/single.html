@@ -37,7 +37,12 @@ eleventyComputed:
               Topics
             </a>
           </li>
-          {%- for link in topics | sortBy("featureOrder") %} {%- set href =
+
+          {# Hack an additional item into the sidebar nav. #}
+          {%- set disasterRecoveryObj = { featureOrder: 8.5, slug: "disaster-recovery", name: "Disaster recovery" } -%}
+          {%- set modifiedTopics = topics.concat(disasterRecoveryObj) -%}
+
+          {%- for link in modifiedTopics | sortBy("featureOrder") %} {%- set href =
           "/topics/"+link.slug+"/" -%} {%- set active = href === page.url -%}
           <li>
             <a
