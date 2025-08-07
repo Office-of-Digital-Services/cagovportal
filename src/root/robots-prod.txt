@@ -4,7 +4,6 @@ Allow: /
 # Recommended for all sites
 Disallow: /ads.txt
 Disallow: /app-ads.txt
-Disallow: /.well-known/assetlinks.json
 Disallow: /.well-known/apple-app-site-association
 Disallow: /apple-app-site-association
 
