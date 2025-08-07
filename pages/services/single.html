@@ -122,7 +122,7 @@ eleventyComputed:
         {%- for keyword in item.Keywords.split(",") | sort %} {%- if
         keyword.trim().length > 0 %}
         <a
-          href="/services/all/?q={{keyword | trim | lower | urlencode}}+"
+          href="/services/all/?q={{keyword | trim | lower | urlencode | replace('%20', '+')}}+"
           rel="nofollow">
           {{- keyword | trim -}} </a
         ><span class="m-r-sm">,</span> {% endif -%} {%- endfor %}

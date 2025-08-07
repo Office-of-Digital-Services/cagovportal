@@ -12,6 +12,7 @@
     <meta name="robots" content="noindex, follow" />
     {%- else %}
     <meta name="robots" content="index, follow" />
+    <link href="{% canonical %}" rel="canonical" />
     {%- endif %}
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="HandheldFriendly" content="True" />
@@ -23,10 +24,9 @@
     <meta name="title" content="{% metatitle %}" />
     {%- if updated %}
     <meta name="last-modified" content="{{ updated }}" />
+    {%- endif -%} {#- Allowed query parameters -#} {%- if allowedQueryParams %}
+    <meta name="allowed-query-params" content="{{ allowedQueryParams }}" />
     {%- endif %}
-
-    <!-- Canonical link, improves SEO -->
-    <link href="{% canonical %}" rel="canonical" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:locale" content="en_US" />

@@ -212,3 +212,53 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 })();
+
+/* -----------------------------------------
+Fix URLS for analytics and SEO
+----------------------------------------- */
+(() => {
+  const rawUrl = window.location.href;
+  const url = new URL(rawUrl.toLowerCase());
+
+  // 1. Fix hostname if it ends with a period
+  if (url.hostname.endsWith(".")) {
+    // This will redirect to the same hostname without the trailing period
+    // e.g., "example.com." becomes "example.com"
+
+    url.hostname = url.hostname.slice(0, -1);
+    window.location.href = url.toString();
+    return; // Stop further processing after redirecting
+  }
+
+  // 2. Process query parameters based on meta tag
+  const metaTagContent = /** @type {HTMLMetaElement | null} */ (
+    document.querySelector('meta[name="allowed-query-params"]')
+  )?.content.trim();
+
+  if (!metaTagContent) {
+    // No meta tag found, remove all query parameters
+    url.search = "";
+  } else if (metaTagContent !== "*") {
+    // non-wildcard content, filter query parameters
+    const allowedKeys = metaTagContent
+      .split(",")
+      .map(k => k.trim())
+      .filter(Boolean);
+
+    const params = new URLSearchParams(url.search);
+
+    for (const key of [...params.keys()])
+      if (!allowedKeys.includes(key)) params.delete(key);
+
+    url.search = params.toString();
+  }
+
+  // 3. Replace URL if modified
+  if (rawUrl !== url.toString()) {
+    console.log("URL modified:", {
+      original: rawUrl,
+      modified: url.toString()
+    });
+    history.replaceState(null, "", url.toString());
+  }
+})();
