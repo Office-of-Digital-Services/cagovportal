@@ -56,6 +56,9 @@ eleventyComputed:
       </nav>
     </div>
     <div class="col-md-9 mx-auto">
+      {%- if item.name == "Disaster recovery" -%} {%- include
+      "../../src/_includes/disaster-recovery.html" -%} {%- else -%}
+
       <div class="p-t-md lead">{{item.description | md | safe-}}</div>
 
       <h2 class="m-b-0">Popular related services</h2>
@@ -143,6 +146,9 @@ eleventyComputed:
         </div>
         {%- endfor %}
       </cagovhome-filterlist>
+      {%- endif -%}
+
+      <!--End of main content-->
     </div>
   </div>
 </div>
