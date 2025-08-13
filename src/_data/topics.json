@@ -533,7 +533,7 @@
     "description": "Find resources and support for disaster recovery efforts in California.",
     "metaDescription": "Browse California state services related to disaster recovery and assistance.",
     "cardDescription": "Find resources and support for disaster recovery efforts.",
-    "featureOrder": 8.5,
+    "featureOrder": 2.5,
     "slug": "disaster-recovery",
     "topicImg": "/images/topic12-lineart.svg"
   }
