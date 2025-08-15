@@ -526,5 +526,15 @@
         "imgAlt": "A young tan-skinned female scientist in a white lab coat holds books while smiling at the camera."
       }
     ]
+  },
+  {
+    "topicId": 13,
+    "name": "Disaster recovery",
+    "description": "Find resources and support for disaster recovery efforts in California.",
+    "metaDescription": "Browse California state services related to disaster recovery and assistance.",
+    "cardDescription": "Find resources and support for disaster recovery efforts.",
+    "featureOrder": 2.5,
+    "slug": "disaster-recovery",
+    "topicImg": "/images/topic12-lineart.svg"
   }
 ]
