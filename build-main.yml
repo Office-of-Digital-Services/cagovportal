@@ -11,6 +11,10 @@ pool:
   vmImage: "ubuntu-latest"
 
 steps:
+  - script: |
+      echo "##vso[build.addbuildtag]trigger-$(Build.Reason)"
+    displayName: "Tag build with trigger reason"
+
   - task: NodeTool@0
     inputs:
       versionSpec: "18.x"
