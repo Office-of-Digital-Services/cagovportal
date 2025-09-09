@@ -5,7 +5,6 @@
 
 trigger:
   - dev
-
 pr: none
 
 # Customize build name to include date, branch, and reason
