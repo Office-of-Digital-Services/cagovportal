@@ -228,11 +228,11 @@ target,source,manual,service
 /departments/176/services/51/,/Agencies/public-health-california-department-of/Agency-Services/apply-for-marriage-certificate,0,1
 /departments/176/services/51/,/service/?item=apply-for-marriage-certificate,0,1
 /departments/176/services/51/,/service/?item=get-a-marriage-license,1,1
+/departments/176/services/51/,/service/?item=marriage-license,1,1
 /departments/176/services/52/,/Agencies/public-health-california-department-of/Agency-Services/apply-for-birth-certificate,0,1
 /departments/176/services/52/,/service/?item=apply-for-birth-certificate,0,1
 /departments/176/services/53/,/Agencies/public-health-california-department-of/Agency-Services/apply-for-death-certificate,0,1
 /departments/176/services/53/,/service/?item=apply-for-death-certificate,0,1
-/departments/176/services/53/,/service/?item=marriage-license,1,1
 /departments/177/,/Agencies/pesticide-regulation-department-of,0,0
 /departments/177/,/agency/?item=department-of-pesticide-regulation,0,0
 /departments/178/,/Agencies/social-services-department-of,0,0
