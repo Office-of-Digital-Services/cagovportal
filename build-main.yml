@@ -7,6 +7,18 @@ trigger:
   - main
 pr: none
 
+# Customize build name to include date, branch, and reason
+name: $(Date:yyyyMMdd)$(Rev:.r)-$(Build.SourceBranchName)-$(Build.Reason)
+
+# YAML CRON Schedule Run at 8:00 AM DAILY
+schedules:
+  - cron: "0 15 * * *"
+    displayName: Daily 8:00 AM PST (17:00 UTC) build
+    branches:
+      include:
+        - main
+    always: true
+
 pool:
   vmImage: "ubuntu-latest"
 
