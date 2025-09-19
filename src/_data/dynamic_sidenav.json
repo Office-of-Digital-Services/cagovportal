@@ -1,5 +1,6 @@
 {
   "service": [
+    { "href": "/topics/", "text": "Topics" },
     {
       "href": "/services/",
       "text": "Services <span class=\"sr-only\">landing page</span>"
@@ -8,8 +9,7 @@
       "href": "/services/all/",
       "text": "All services"
     },
-    { "href": "/services/list/", "text": "Services list" },
-    { "href": "/topics/", "text": "Topics" }
+    { "href": "/services/list/", "text": "Services list" }
   ],
   "department": [
     {
