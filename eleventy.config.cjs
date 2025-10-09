@@ -22,7 +22,9 @@ module.exports = function (
   eleventyConfig.addPassthroughCopy({
     "src/images": "images",
     "src/docs": "docs",
-    "src/root": "/"
+    "src/root": "/",
+    "pages/initiatives/immigration/images": "immigration/images",
+    "pages/initiatives/immigration/documents": "immigration/documents"
   });
 
   eleventyConfig.addWatchTarget("./src/js/");
