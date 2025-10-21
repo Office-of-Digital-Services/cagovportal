@@ -9,6 +9,8 @@ const { DateTime } = require("luxon");
 const fs = require("node:fs");
 const path = require("node:path");
 const PurgeCSS = require("@fullhuman/postcss-purgecss");
+const babel = require("@babel/core");
+const transformImports = require("babel-plugin-transform-imports");
 
 // canonical domain
 const domain = "https://www.ca.gov";
@@ -29,7 +31,6 @@ module.exports = function (
   });
 
   eleventyConfig.addWatchTarget("./src/js/");
-
   eleventyConfig.addWatchTarget("./src/css/");
 
   // Add watch target for .mjs files inside the pages directory
@@ -144,7 +145,11 @@ module.exports = function (
     "purgeCSS",
     async (
       /** @type {string} */ css,
-      contentPaths = ["./pages/**/*.html", "./src/_includes/**/*.html"]
+      contentPaths = [
+        "./pages/**/*.html",
+        "./src/_includes/**/*.html",
+        "./src/js/**/*.mjs"
+      ]
     ) => {
       const result = await postcss([
         PurgeCSS({
@@ -154,6 +159,36 @@ module.exports = function (
       ]).process(css, { from: undefined });
       // Minify the purged CSS
       return minifyCSS(result.css);
+    }
+  );
+
+  // Purge unneeded imports from state template JS and minify
+  eleventyConfig.addFilter(
+    "purgeJS",
+    async (
+      /** @type {string} */ jsCode,
+      options = {
+        pluginConfig: {
+          "@state-template": {
+            transform: function (importName) {
+              // Example: only allow specific imports
+              const allowed = ["init", "render"];
+              return allowed.includes(importName)
+                ? `@state-template/${importName}`
+                : false;
+            },
+            preventFullImport: true
+          }
+        }
+      }
+    ) => {
+      const babelResult = await babel.transformAsync(jsCode, {
+        plugins: [[transformImports, options.pluginConfig]],
+        filename:
+          "./node_modules/@cagovweb/state-template/dist/js/cagov.core.js"
+      });
+      const minified = await minify(babelResult.code || "");
+      return minified.code || "";
     }
   );
 
