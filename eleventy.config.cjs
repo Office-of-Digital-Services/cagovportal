@@ -148,7 +148,7 @@ module.exports = function (
       contentPaths = [
         "./pages/**/*.html",
         "./src/_includes/**/*.html",
-        "./src/js/**/*.mjs"
+        "./node_modules/@cagovweb/state-template/dist/js/cagov.core.min.js"
       ]
     ) => {
       const result = await postcss([
