@@ -8,6 +8,7 @@ const postcssNested = require("postcss-nested");
 const { DateTime } = require("luxon");
 const fs = require("node:fs");
 const path = require("node:path");
+const PurgeCSS = require("@fullhuman/postcss-purgecss");
 
 // canonical domain
 const domain = "https://www.ca.gov";
@@ -137,6 +138,25 @@ module.exports = function (
   );
 
   // For making a non-nested fallback
+
+  // PurgeCSS filter to extract only used CSS
+  eleventyConfig.addFilter(
+    "purgeCSS",
+    async (
+      /** @type {string} */ css,
+      contentPaths = ["./pages/**/*.html", "./src/_includes/**/*.html"]
+    ) => {
+      const result = await postcss([
+        PurgeCSS({
+          content: contentPaths,
+          defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+        })
+      ]).process(css, { from: undefined });
+      // Minify the purged CSS
+      return minifyCSS(result.css);
+    }
+  );
+
   eleventyConfig.addFilter("flattenCSS", async code => {
     const result = await postcss([postcssNested]).process(code, {
       from: undefined

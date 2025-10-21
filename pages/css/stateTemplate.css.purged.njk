@@ -1,0 +1,10 @@
+---
+layout: null
+permalink: "css/purged.min.css"
+eleventyExcludeFromCollections: true
+---
+
+{%- set css -%}
+{%- include "../../src/css/stateTemplate.css" -%}
+{%- endset -%}
+{{- css | purgeCSS | safe -}}
