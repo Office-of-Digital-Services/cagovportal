@@ -22,7 +22,9 @@ module.exports = function (
   eleventyConfig.addPassthroughCopy({
     "src/images": "images",
     "src/docs": "docs",
-    "src/root": "/"
+    "src/root": "/",
+    "pages/initiatives/immigration/images": "immigration/images",
+    "pages/initiatives/immigration/documents": "immigration/documents"
   });
 
   eleventyConfig.addWatchTarget("./src/js/");
@@ -209,7 +211,7 @@ module.exports = function (
   // After build hook to create an XML sitemap for PDF files
   eleventyConfig.on("afterBuild", () => {
     const pdfDirs = [
-      path.join(__dirname, "_site", "images")
+      path.join(__dirname, "_site", "immigration/documents")
       //path.join(__dirname, "_site", "docs")
     ];
     const outputFilePath = path.join(__dirname, "_site", "sitemaps/pdf.xml");
