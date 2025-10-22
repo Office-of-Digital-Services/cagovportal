@@ -8,4 +8,4 @@ eleventyExcludeFromCollections: true
 {%- include "../../src/css/fonts.css" -%}
 {%- include "../../src/css/custom.css" -%}
 {%- endset -%}
-{{- css | cssmin | safe -}}
+{{- css | purgeCSS | safe -}}

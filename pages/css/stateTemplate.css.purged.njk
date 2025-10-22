@@ -1,0 +1,10 @@
+---
+layout: null
+permalink: "css/stateTemplate.min.css"
+eleventyExcludeFromCollections: true
+---
+
+{%- set css -%}
+{%- include "../../node_modules/@cagovweb/state-template/dist/css/cagov.core.css" -%}
+{%- endset -%}
+{{- css | purgeCSS | safe -}}
