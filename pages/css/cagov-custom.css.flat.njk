@@ -1,11 +1,12 @@
 ---
 layout: null
-permalink: "css/custom.min.css"
+permalink: "css/cagov-custom.flat.css"
 eleventyExcludeFromCollections: true
 ---
 
 {%- set css -%}
+{%- include "../../node_modules/@cagovweb/state-template/dist/css/cagov.core.css" -%}
 {%- include "../../src/css/fonts.css" -%}
 {%- include "../../src/css/custom.css" -%}
 {%- endset -%}
-{{- css | purgeCSS | safe -}}
+{{- css | flattenCSS | safe -}}
