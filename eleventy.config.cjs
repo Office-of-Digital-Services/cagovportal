@@ -147,6 +147,8 @@ module.exports = function (
       /** @type {string} */ css,
       contentPaths = [
         "./pages/**/*.html",
+        "./src/css/**/*.css",
+        "./src/js/**/*.mjs",
         "./src/_includes/**/*.html",
         "./node_modules/@cagovweb/state-template/dist/js/cagov.core.min.js"
       ]
@@ -154,6 +156,7 @@ module.exports = function (
       const result = await postcss([
         PurgeCSS({
           content: contentPaths,
+          safelist: [":focus", /focus/, "focus-visible", "focus-within"],
           defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
         })
       ]).process(css, { from: undefined });
