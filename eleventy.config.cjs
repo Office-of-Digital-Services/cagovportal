@@ -160,6 +160,7 @@ module.exports = function (
       ]
     ) => {
       const result = await postcss([
+        // @ts-ignore
         PurgeCSS({
           content: contentPaths,
           safelist: [":focus", /focus/, "focus-visible", "focus-within"],
