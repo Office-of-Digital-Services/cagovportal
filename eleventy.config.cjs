@@ -181,10 +181,7 @@ module.exports = function (
       options = {
         pluginConfig: {
           "@state-template": {
-            /**
-             * @param {string} importName
-             */
-            transform: function (importName) {
+            transform: function (/** @type {string} **/ importName) {
               // Example: only allow specific imports
               const allowed = ["init", "render"];
               return allowed.includes(importName)
