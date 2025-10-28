@@ -8,13 +8,11 @@ const data = [
     children: [
       {
         key: "Services",
-        href: "/services/",
-        children: [
-          {
-            key: "Topics",
-            href: "/topics/"
-          }
-        ]
+        href: "/services/"
+      },
+      {
+        key: "Topics",
+        href: "/topics/"
       },
       {
         key: "Departments",
