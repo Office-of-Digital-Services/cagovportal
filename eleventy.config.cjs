@@ -8,6 +8,9 @@ const postcssNested = require("postcss-nested");
 const { DateTime } = require("luxon");
 const fs = require("node:fs");
 const path = require("node:path");
+const PurgeCSS = require("@fullhuman/postcss-purgecss");
+const babel = require("@babel/core");
+const transformImports = require("babel-plugin-transform-imports");
 
 // canonical domain
 const domain = "https://www.ca.gov";
@@ -28,7 +31,6 @@ module.exports = function (
   });
 
   eleventyConfig.addWatchTarget("./src/js/");
-
   eleventyConfig.addWatchTarget("./src/css/");
 
   // Add watch target for .mjs files inside the pages directory
@@ -143,6 +145,66 @@ module.exports = function (
   );
 
   // For making a non-nested fallback
+
+  // PurgeCSS filter to extract only used CSS
+  eleventyConfig.addFilter(
+    "purgeCSS",
+    async (
+      /** @type {string} */ css,
+      contentPaths = [
+        "./pages/**/*.html",
+        "./src/css/**/*.css",
+        "./src/js/**/*.mjs",
+        "./src/_includes/**/*.html",
+        "./node_modules/@cagovweb/state-template/dist/js/cagov.core.min.js"
+      ]
+    ) => {
+      const result = await postcss([
+        PurgeCSS({
+          content: contentPaths,
+          safelist: [":focus", /focus/, "focus-visible", "focus-within"],
+          defaultExtractor: (/** @type {string} */ content) =>
+            content.match(/[\w-/:]+(?<!:)/g) || []
+        })
+      ]).process(css, { from: undefined });
+      // Minify the purged CSS
+      return minifyCSS(result.css);
+    }
+  );
+
+  // Purge unneeded imports from state template JS and minify
+  eleventyConfig.addFilter(
+    "purgeJS",
+    async (
+      /** @type {string} */ jsCode,
+      options = {
+        pluginConfig: {
+          "@state-template": {
+            /**
+             * @param {string} importName
+             */
+            transform: function (importName) {
+              // Example: only allow specific imports
+              const allowed = ["init", "render"];
+              return allowed.includes(importName)
+                ? `@state-template/${importName}`
+                : false;
+            },
+            preventFullImport: true
+          }
+        }
+      }
+    ) => {
+      const babelResult = await babel.transformAsync(jsCode, {
+        plugins: [[transformImports, options.pluginConfig]],
+        filename:
+          "./node_modules/@cagovweb/state-template/dist/js/cagov.core.js"
+      });
+      const minified = await minify(babelResult?.code || "");
+      return minified.code || "";
+    }
+  );
+
   eleventyConfig.addFilter("flattenCSS", async (/** @type {string} */ code) => {
     const result = await postcss([postcssNested]).process(code, {
       from: undefined
