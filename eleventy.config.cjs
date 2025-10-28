@@ -268,6 +268,7 @@ module.exports = function (
     data: "../src/_data",
     // site structure pages (path is realtive to input directory)
     includes: "../src/_includes",
+    // @ts-ignore
     layouts: "../src/_includes/layouts",
     // site final outpuut directory
     output: "_site"
