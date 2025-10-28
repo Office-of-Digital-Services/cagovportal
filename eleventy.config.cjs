@@ -36,14 +36,20 @@ module.exports = function (
 
   // canonical shortcode
   // Usage <link href="{% canonical %}" rel="canonical" />
-  eleventyConfig.addShortcode("canonical", function () {
-    return domain + this.ctx.page.url;
-  });
+  eleventyConfig.addShortcode(
+    "canonical",
+    /** @type {  (this: { ctx: { page: { url: string } } }) => string} */ function () {
+      return domain + this.ctx.page.url;
+    }
+  );
 
   // Usage <title>{% metatitle %}</title>
-  eleventyConfig.addShortcode("metatitle", function () {
-    return this.ctx.title + metatitlepostfix;
-  });
+  eleventyConfig.addShortcode(
+    "metatitle",
+    /** @type {  (this: { ctx: { title: string } }) => string} */ function () {
+      return this.ctx.title + metatitlepostfix;
+    }
+  );
   eleventyConfig.addShortcode("domain", () => domain);
 
   // {%- for tag in topics | pluck("featured", true) | sortBy("featureOrder") -%}
@@ -137,7 +143,7 @@ module.exports = function (
   );
 
   // For making a non-nested fallback
-  eleventyConfig.addFilter("flattenCSS", async code => {
+  eleventyConfig.addFilter("flattenCSS", async (/** @type {string} */ code) => {
     const result = await postcss([postcssNested]).process(code, {
       from: undefined
     });
@@ -145,7 +151,7 @@ module.exports = function (
   });
 
   // Custom filter to format date as MM/DD/YYYY
-  eleventyConfig.addFilter("formatDate", dateString => {
+  eleventyConfig.addFilter("formatDate", (/** @type {string} */ dateString) => {
     return DateTime.fromISO(dateString).toFormat("MM/dd/yyyy");
   });
 
@@ -240,7 +246,8 @@ module.exports = function (
 
   eleventyConfig.addDataExtension("csv", (/** @type {string} */ contents) =>
     parse(contents, {
-      columns: header => header.map(col => col.replace(/\W+/g, "_")),
+      columns: (/** @type {string[]} */ header) =>
+        header.map(col => col.replace(/\W+/g, "_")),
       skip_empty_lines: true,
       cast: value =>
         ["true", "false"].includes(value) ? value === "true" : value //Boolean value parsing
