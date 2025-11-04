@@ -38,14 +38,20 @@ module.exports = function (
 
   // canonical shortcode
   // Usage <link href="{% canonical %}" rel="canonical" />
-  eleventyConfig.addShortcode("canonical", function () {
-    return domain + this.ctx.page.url;
-  });
+  eleventyConfig.addShortcode(
+    "canonical",
+    /** @type {  (this: { ctx: { page: { url: string } } }) => string} */ function () {
+      return domain + this.ctx.page.url;
+    }
+  );
 
   // Usage <title>{% metatitle %}</title>
-  eleventyConfig.addShortcode("metatitle", function () {
-    return this.ctx.title + metatitlepostfix;
-  });
+  eleventyConfig.addShortcode(
+    "metatitle",
+    /** @type {  (this: { ctx: { title: string } }) => string} */ function () {
+      return this.ctx.title + metatitlepostfix;
+    }
+  );
   eleventyConfig.addShortcode("domain", () => domain);
 
   // {%- for tag in topics | pluck("featured", true) | sortBy("featureOrder") -%}
@@ -154,10 +160,12 @@ module.exports = function (
       ]
     ) => {
       const result = await postcss([
+        // @ts-ignore
         PurgeCSS({
           content: contentPaths,
           safelist: [":focus", /focus/, "focus-visible", "focus-within"],
-          defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+          defaultExtractor: (/** @type {string} */ content) =>
+            content.match(/[\w-/:]+(?<!:)/g) || []
         })
       ]).process(css, { from: undefined });
       // Minify the purged CSS
@@ -173,7 +181,7 @@ module.exports = function (
       options = {
         pluginConfig: {
           "@state-template": {
-            transform: function (importName) {
+            transform: function (/** @type {string} **/ importName) {
               // Example: only allow specific imports
               const allowed = ["init", "render"];
               return allowed.includes(importName)
@@ -190,12 +198,12 @@ module.exports = function (
         filename:
           "./node_modules/@cagovweb/state-template/dist/js/cagov.core.js"
       });
-      const minified = await minify(babelResult.code || "");
+      const minified = await minify(babelResult?.code || "");
       return minified.code || "";
     }
   );
 
-  eleventyConfig.addFilter("flattenCSS", async code => {
+  eleventyConfig.addFilter("flattenCSS", async (/** @type {string} */ code) => {
     const result = await postcss([postcssNested]).process(code, {
       from: undefined
     });
@@ -203,7 +211,7 @@ module.exports = function (
   });
 
   // Custom filter to format date as MM/DD/YYYY
-  eleventyConfig.addFilter("formatDate", dateString => {
+  eleventyConfig.addFilter("formatDate", (/** @type {string} */ dateString) => {
     return DateTime.fromISO(dateString).toFormat("MM/dd/yyyy");
   });
 
@@ -298,7 +306,8 @@ module.exports = function (
 
   eleventyConfig.addDataExtension("csv", (/** @type {string} */ contents) =>
     parse(contents, {
-      columns: header => header.map(col => col.replace(/\W+/g, "_")),
+      columns: (/** @type {string[]} */ header) =>
+        header.map(col => col.replace(/\W+/g, "_")),
       skip_empty_lines: true,
       cast: value =>
         ["true", "false"].includes(value) ? value === "true" : value //Boolean value parsing
@@ -319,6 +328,7 @@ module.exports = function (
     data: "../src/_data",
     // site structure pages (path is realtive to input directory)
     includes: "../src/_includes",
+    // @ts-ignore
     layouts: "../src/_includes/layouts",
     // site final outpuut directory
     output: "_site"
