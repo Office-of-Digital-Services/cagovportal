@@ -1,0 +1,6 @@
+path,target
+^\/dmv.*$,/topics/dmv-auto/
+^\/edd.*$,/departments/229/
+/website-feedback/,
+/departments/276/,
+/departments/283/,
