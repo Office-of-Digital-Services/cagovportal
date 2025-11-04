@@ -128,7 +128,7 @@ public class custom404handler : IHttpHandler {
      */
     private static readonly string[,] MatchPaths = new string[,] {
       {%- for path in redirectPaths %}
-      {@"{{path.path}}",@"{{path.target}}"}{{-"," if not loop.last-}}
+      {@"{{path.path | safe}}",@"{{path.target | safe}}"}{{-"," if not loop.last-}}
       {%- endfor %}
     };
 }
