@@ -38,9 +38,14 @@ path,target
 /home.aspx,/
 /home.php,/
 /images/2024-11-27-Governor-Letter-to-School-Leaders.pdf,/immigration/documents/2024-11-27-Governor-Letter-to-School-Leaders.pdf
+/images/ca.gov-portal-logo-bear.png,
+/images/CAgov-logo-footer.svg,
+/images/logo-and-bear.png,
+/images/photo_contest/3-12-04/3-04_18o-7-lg.jpg,
 /images/WebsiteAccessibilityCert-ca.gov.pdf,/website-accessibility-certification.html
 /immigrant/resources,/immigration/
 /jobs,/topics/jobs/
+/js/libs/jquery.js,
 /learning/,/topics/education/
 /living/,/topics/personal-records/
 /lookup-my-representatives/,/departments/275/services/58/
@@ -68,5 +73,7 @@ path,target
 /website-feedback/,
 /working/,/topics/jobs/
 ^\/dmv.*$,/topics/dmv-auto/
+^\/documents.*$,
+^\/drought.*$,
 ^\/edd.*$,/departments/229/
 ^\/use.*$,/legal/conditions-of-use/
