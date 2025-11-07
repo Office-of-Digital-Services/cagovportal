@@ -96,6 +96,11 @@ public class custom404handler : IHttpHandler {
                     context.Response.StatusCode = 410;
                     context.Response.StatusDescription = "Gone";
                     context.Response.ContentType = "text/html";
+
+                    // Cache for 1 year (adjust as needed)
+                    context.Response.AppendHeader("Cache-Control", "public, max-age=31536000");
+                    context.Response.AppendHeader("Expires", DateTime.UtcNow.AddYears(1).ToString("R"));
+
                     context.Response.Write(File.ReadAllText(context.Server.MapPath(GonePagePath)));
                 } else {
                     // Handle 301 Redirect
@@ -103,6 +108,11 @@ public class custom404handler : IHttpHandler {
                     context.Response.StatusDescription = "Moved Permanently";
                     context.Response.RedirectLocation = target;
                     context.Response.ContentType = "text/plain";
+
+                    // Cache for 1 year (adjust as needed)
+                    context.Response.AppendHeader("Cache-Control", "public, max-age=31536000");
+                    context.Response.AppendHeader("Expires", DateTime.UtcNow.AddYears(1).ToString("R"));
+
                     context.Response.Write("301 Moved Permanently → " + target);
                 }
                 return;
@@ -113,6 +123,12 @@ public class custom404handler : IHttpHandler {
         context.Response.StatusCode = 404;
         context.Response.StatusDescription = "Not Found";
         context.Response.ContentType = "text/html";
+
+        // Prevent caching of 404 responses
+        context.Response.AppendHeader("Cache-Control", "no-store, no-cache, must-revalidate");
+        context.Response.AppendHeader("Pragma", "no-cache");
+        context.Response.AppendHeader("Expires", "0");
+        
         context.Response.Write(File.ReadAllText(context.Server.MapPath(NotFoundPagePath)));
     }
 
