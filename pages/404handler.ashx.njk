@@ -101,6 +101,7 @@ public class custom404handler : IHttpHandler {
                     context.Response.AppendHeader("Cache-Control", "public, max-age=31536000");
                     context.Response.AppendHeader("Expires", DateTime.UtcNow.AddYears(1).ToString("R"));
 
+                    context.Response.AddHeader("X-Status-Message", "410 gone response issued for: " + rawUrl);
                     context.Response.Write(File.ReadAllText(context.Server.MapPath(GonePagePath)));
                 } else {
                     // Handle 301 Redirect
@@ -113,6 +114,7 @@ public class custom404handler : IHttpHandler {
                     context.Response.AppendHeader("Cache-Control", "public, max-age=31536000");
                     context.Response.AppendHeader("Expires", DateTime.UtcNow.AddYears(1).ToString("R"));
 
+                    context.Response.AddHeader("X-Status-Message", "301 redirect issued for: " + rawUrl + " → " + target);
                     context.Response.Write("301 Moved Permanently → " + target);
                 }
                 return;
@@ -129,6 +131,7 @@ public class custom404handler : IHttpHandler {
         context.Response.AppendHeader("Pragma", "no-cache");
         context.Response.AppendHeader("Expires", "0");
         
+        context.Response.AddHeader("X-Status-Message", "404 fallback triggered for unmatched path: " + rawUrl);
         context.Response.Write(File.ReadAllText(context.Server.MapPath(NotFoundPagePath)));
     }
 
