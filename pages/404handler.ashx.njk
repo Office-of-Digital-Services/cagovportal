@@ -97,9 +97,9 @@ public class custom404handler : IHttpHandler {
                     context.Response.StatusDescription = "Gone";
                     context.Response.ContentType = "text/html";
 
-                    // Cache for 1 year (adjust as needed)
-                    context.Response.AppendHeader("Cache-Control", "public, max-age=31536000");
-                    context.Response.AppendHeader("Expires", DateTime.UtcNow.AddYears(1).ToString("R"));
+                    // Cache for 60 days (adjust as needed)
+                    context.Response.AppendHeader("Cache-Control", "public, max-age=5184000");
+                    context.Response.AppendHeader("Expires", DateTime.UtcNow.AddDays(60).ToString("R"));
 
                     context.Response.AddHeader("X-Status-Message", "410 gone response issued for: " + rawUrl);
                     context.Response.Write(File.ReadAllText(context.Server.MapPath(GonePagePath)));
@@ -110,12 +110,12 @@ public class custom404handler : IHttpHandler {
                     context.Response.RedirectLocation = target;
                     context.Response.ContentType = "text/plain";
 
-                    // Cache for 1 year (adjust as needed)
-                    context.Response.AppendHeader("Cache-Control", "public, max-age=31536000");
-                    context.Response.AppendHeader("Expires", DateTime.UtcNow.AddYears(1).ToString("R"));
+                    // Cache for 60 days (adjust as needed)
+                    context.Response.AppendHeader("Cache-Control", "public, max-age=5184000");
+                    context.Response.AppendHeader("Expires", DateTime.UtcNow.AddDays(60).ToString("R"));
 
-                    context.Response.AddHeader("X-Status-Message", "301 redirect issued for: " + rawUrl + " → " + target);
-                    context.Response.Write("301 Moved Permanently → " + target);
+                    context.Response.AddHeader("X-Status-Message", "301 redirect issued for: " + rawUrl + " -> " + target);
+                    context.Response.Write("301 Moved Permanently -> " + target);
                 }
                 return;
             }
