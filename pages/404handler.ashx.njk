@@ -96,6 +96,12 @@ public class custom404handler : IHttpHandler {
                     context.Response.StatusCode = 410;
                     context.Response.StatusDescription = "Gone";
                     context.Response.ContentType = "text/html";
+
+                    // Cache for 60 days (adjust as needed)
+                    context.Response.AppendHeader("Cache-Control", "public, max-age=5184000");
+                    context.Response.AppendHeader("Expires", DateTime.UtcNow.AddDays(60).ToString("R"));
+
+                    context.Response.AddHeader("X-Status-Message", "410 gone response issued for: " + rawUrl);
                     context.Response.Write(File.ReadAllText(context.Server.MapPath(GonePagePath)));
                 } else {
                     // Handle 301 Redirect
@@ -103,7 +109,13 @@ public class custom404handler : IHttpHandler {
                     context.Response.StatusDescription = "Moved Permanently";
                     context.Response.RedirectLocation = target;
                     context.Response.ContentType = "text/plain";
-                    context.Response.Write("301 Moved Permanently → " + target);
+
+                    // Cache for 60 days (adjust as needed)
+                    context.Response.AppendHeader("Cache-Control", "public, max-age=5184000");
+                    context.Response.AppendHeader("Expires", DateTime.UtcNow.AddDays(60).ToString("R"));
+
+                    context.Response.AddHeader("X-Status-Message", "301 redirect issued for: " + rawUrl + " -> " + target);
+                    context.Response.Write("301 Moved Permanently -> " + target);
                 }
                 return;
             }
@@ -113,6 +125,13 @@ public class custom404handler : IHttpHandler {
         context.Response.StatusCode = 404;
         context.Response.StatusDescription = "Not Found";
         context.Response.ContentType = "text/html";
+
+        // Prevent caching of 404 responses
+        context.Response.AppendHeader("Cache-Control", "no-store, no-cache, must-revalidate");
+        context.Response.AppendHeader("Pragma", "no-cache");
+        context.Response.AppendHeader("Expires", "0");
+        
+        context.Response.AddHeader("X-Status-Message", "404 fallback triggered for unmatched path: " + rawUrl);
         context.Response.Write(File.ReadAllText(context.Server.MapPath(NotFoundPagePath)));
     }
 
