@@ -123,8 +123,9 @@ public class custom404handler : IHttpHandler {
      * { "pattern_string", "target_url_or_null" }
      * 
      * CONVENTION:
-     * - Patterns starting with '^' are treated as REGEX and matched against the full Request.RawUrl.
+     * - Patterns that start with '^' and end with '$' are treated as REGEX and matched against the full Request.RawUrl.
      * - All other patterns are treated as LITERAL paths (normalized for case and trailing slashes).
+     * - A blank target value indicates a 410 Gone response; otherwise, a 301 redirect is issued.
      */
     private static readonly string[,] MatchPaths = new string[,] {
       {%- for path in redirectPaths %}
