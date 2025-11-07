@@ -123,8 +123,8 @@ public class custom404handler : IHttpHandler {
      * { "pattern_string", "target_url_or_null" }
      * 
      * CONVENTION:
-     * - Patterns starting with ^ and ending with $ are treated as REGEX.
-     * - All other patterns are treated as LITERAL paths (normalized for case/slashes).
+     * - Patterns starting with '^' are treated as REGEX and matched against the full Request.RawUrl.
+     * - All other patterns are treated as LITERAL paths (normalized for case and trailing slashes).
      */
     private static readonly string[,] MatchPaths = new string[,] {
       {%- for path in redirectPaths %}
