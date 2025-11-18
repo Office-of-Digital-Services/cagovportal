@@ -173,9 +173,6 @@ module.exports = function (
     }
   );
 
-  const deadcode = `document.addEventListener("DOMContentLoaded",(()=>{const e=document.querySelectorAll(".scroll-counter");e.forEach((e=>{e.counterAlreadyFired=!1,e.counterSpeed=Number(e.getAttribute("data-counter-time"))/45,e.counterTarget=+e.innerText,e.counterCount=0,e.counterStep=e.counterTarget/e.counterSpeed,e.updateCounter=()=>{e.counterCount+=e.counterStep,e.innerText=Math.ceil(e.counterCount).toLocaleString(),e.counterCount<e.counterTarget?window.setTimeout(e.updateCounter,e.counterSpeed):e.innerText=e.counterTarget.toLocaleString()}}));const t=()=>{e.forEach((e=>{e.counterAlreadyFired||(e=>{const t=window.scrollY||window.pageYOffset,n=e.getBoundingClientRect().top+t,i=t,s=t+window.innerHeight,o=n,r=n+e.clientHeight;return r>=i&&r<=s||o<=s&&o>=i})(e)&&(e.updateCounter(),e.counterAlreadyFired=!0)}))};window.addEventListener("load",t),window.addEventListener("scroll",t)})),`;
-  const replaceCode = ``;
-
   // Purge unneeded imports from state template JS and minify
   eleventyConfig.addFilter(
     "purgeJS",
@@ -202,7 +199,7 @@ module.exports = function (
           "./node_modules/@cagovweb/state-template/dist/js/cagov.core.js"
       });
       const minified = await minify(babelResult?.code || "");
-      return minified.code?.replace(deadcode, replaceCode) || "";
+      return minified.code || "";
     }
   );
 
