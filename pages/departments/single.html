@@ -68,7 +68,9 @@ endfor %} {%- endfor -%}
         {% endif %} {% if item.ContactPhone %}
         <li>
           <span class="bold">Phone:</span>
-          <a href="tel:{{item.ContactPhone}}">{{item.ContactPhone}}</a>
+          <a href="tel:{{item.ContactPhoneDigits}}"
+            >{{item.ContactPhoneDisplay}}</a
+          >
         </li>
         {% endif %}
       </ul>

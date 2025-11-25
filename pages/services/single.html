@@ -78,7 +78,9 @@ eleventyComputed:
 
       <p class="m-t-md">
         <span class="bold">Phone:</span>
-        <a href="tel:{{item.ContactPhone}}">{{item.ContactPhone}}</a>
+        <a href="tel:{{item.ContactPhoneDigits}}"
+          >{{item.ContactPhoneDisplay}}</a
+        >
       </p>
 
       {%- for qa in item.QA -%} {%- if loop.first %}
