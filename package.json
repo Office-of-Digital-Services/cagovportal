@@ -4,7 +4,8 @@
   "description": "www.ca.gov",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "build": "npx @11ty/eleventy",
+    "update_webp": "node src/scripts/update_webp.cjs"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
     "eslint": "8.56.0",
     "eslint-plugin-jsdoc": "^48.2.0",
     "prettier": "^3.3.2",
+    "sharp": "^0.34.5",
     "stylelint": "^16.2.1",
     "stylelint-config-standard": "^35.0.0",
     "stylelint-use-nesting": "^5.1.1"
@@ -25,6 +27,7 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-fetch": "^4.0.0",
     "@babel/core": "^7.28.4",
+    "@cagovweb/state-template": "^6.5.1",
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "babel-plugin-transform-imports": "^2.0.0",
     "csv-parse": "^5.6.0",
@@ -32,7 +35,6 @@
     "postcss": "^8.4.47",
     "postcss-nested": "^6.2.0",
     "terser": "^5.30.3",
-    "xml2js": "^0.6.2",
-    "@cagovweb/state-template": "^6.5.1"
+    "xml2js": "^0.6.2"
   }
 }
