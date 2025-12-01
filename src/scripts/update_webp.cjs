@@ -15,10 +15,13 @@ const processImages = async () => {
     const filePath = imagesFolder + file;
     const outputFilePath = filePath.replace(/\.png$/i, ".webp");
 
+    /** @type {sharp.SharpOptions} */
+    const sharpOptions = {};
+
     /** @type {sharp.WebpOptions} */
-    const options = {
+    const webpoptions = {
       quality: 75,
-      effort: 5,
+      effort: 6,
       lossless: false,
       nearLossless: false,
       smartSubsample: false,
@@ -26,7 +29,7 @@ const processImages = async () => {
     };
 
     return sharp(filePath)
-      .webp(options)
+      .webp(webpoptions)
       .toFile(outputFilePath)
       .then(() => console.log(`Converted: ${file}`));
   });
@@ -34,7 +37,7 @@ const processImages = async () => {
   // Run them all in parallel
   await Promise.all(tasks);
 
-  // run them sequentially instead (uncomment to use this approach)
+  // run them sequentially
   //for (const task of tasks) {
   //  await task;
   //}
