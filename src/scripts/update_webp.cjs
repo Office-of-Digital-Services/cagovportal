@@ -15,13 +15,11 @@ const processImages = async () => {
     const filePath = imagesFolder + file;
     const outputFilePath = filePath.replace(/\.png$/i, ".webp");
 
-    /** @type {sharp.SharpOptions} */
-    const sharpOptions = {};
-
     /** @type {sharp.WebpOptions} */
     const webpoptions = {
-      quality: 75,
-      effort: 6,
+      quality: 50, // 0 (lowest) to 100 (highest)
+      effort: 6, // 0 (fastest) to 6 (slowest)
+      alphaQuality: 50, // 0 (lowest) to 100 (highest),
       lossless: false,
       nearLossless: false,
       smartSubsample: false,
