@@ -3,30 +3,35 @@
 window.addEventListener("DOMContentLoaded", () => {
   //POLYFILL for CSS nesting
   if (!CSS.supports("selector(&)")) {
-    // CSS Nesting not supported.  Load alternative CSS file
-    const link = /** @type {HTMLLinkElement} */ (
-      document.querySelector("link[rel='stylesheet'][href^='/css/custom.']")
+    // CSS Nesting not supported. Load alternative CSS file
+    const links = document.querySelectorAll("link[rel='stylesheet']");
+    const link = Array.prototype.find.call(links, l =>
+      l.href.includes("/css/cagov-custom.")
     );
-    link.href = link.href.replace("min", "flat");
-    console.log("POLYFILL: Using FLAT CSS instead of Nested");
+
+    if (link) {
+      link.href = link.href.replace("min", "flat");
+      console.log("POLYFILL: Using FLAT CSS instead of Nested");
+    }
   }
 
   //POLYFILL for WEBP to PNG
-  const webP = new Image();
-  webP.onload = webP.onerror = function () {
-    if (webP.height !== 1) {
-      // Replace WEBP with PNG
-
-      /** @type {NodeListOf<HTMLImageElement>} */ (
-        document.querySelectorAll('img[src*=".webp" i]')
-      ).forEach(img => {
-        img.src = img.src
-          .replace(/\.jpg\.webp/i, ".jpg")
-          .replace(/\.webp/i, ".png");
-      });
-      console.log("POLYFILL: Using PNG instead of WEBP");
+  function supportsWebP() {
+    const canvas = document.createElement("canvas");
+    if (canvas.getContext && canvas.getContext("2d")) {
+      return canvas.toDataURL("image/webp").indexOf("data:image/webp") === 0;
     }
-  };
-  webP.src =
-    "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=";
+    return false;
+  }
+
+  if (!supportsWebP()) {
+    // Replace WEBP with PNG
+    /** @type {NodeListOf<HTMLImageElement>} */
+    (document.querySelectorAll('img[src*=".webp" i]')).forEach(img => {
+      img.src = img.src
+        .replace(/\.jpg\.webp/i, ".jpg")
+        .replace(/\.webp/i, ".png");
+    });
+    console.log("POLYFILL: Using PNG instead of WEBP");
+  }
 });
