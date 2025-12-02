@@ -4,11 +4,17 @@ const sharp = require("sharp");
 const fs = require("node:fs");
 
 const imagesFolder = "./src/images/";
+const config = require("./update_webp.config.json");
+
+const shouldExclude = (/** @type {string} */ file) => {
+  return config.exclude.some(pattern => file.includes(pattern));
+};
 
 const processImages = async () => {
   const files = fs
     .readdirSync(imagesFolder)
-    .filter(file => file.toLowerCase().endsWith(".png"));
+    .filter(file => file.toLowerCase().endsWith(".png"))
+    .filter(file => !shouldExclude(file)); // apply exclusion
 
   // Map each file to a promise
   const tasks = files.map(file => {
@@ -39,6 +45,8 @@ const processImages = async () => {
   // for (const task of tasks) {
   //   await task;
   // }
+
+  console.log(`${files.length} images processed.`);
 };
 
 (async () => {
