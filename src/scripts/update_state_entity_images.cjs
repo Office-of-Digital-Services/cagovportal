@@ -14,16 +14,14 @@ const serviceData =
 const processImages = async () => {
   agencyData.forEach(agency => {
     // Check if agency is in config, if not, add it
-    const agencyConfig = config.Agencies.find(
+    let agencyConfig = config.Agencies.find(
       a => a.AgencyID === agency.AgencyId
     );
     if (!agencyConfig) {
-      config.Agencies.push({
-        AgencyID: agency.AgencyId,
-        LogoUrl: agency.LogoUrl || null,
-        Services: []
-      });
+      agencyConfig = { AgencyID: agency.AgencyId, LogoUrl: null };
+      config.Agencies.push(agencyConfig);
     }
+    agencyConfig.LogoUrl = agency.LogoUrl;
   });
 
   // Sort config agencies by AgencyID
@@ -44,13 +42,16 @@ const processImages = async () => {
 
     filteredServices.forEach(service => {
       // Check if service is in config, if not, add it
-      if (!agencyConfigServices.find(s => s.ServiceId === service.ServiceId)) {
-        // @ts-ignore
-        agencyConfigServices.push({
-          ServiceId: service.ServiceId,
-          ImageUrl: service.ImageUrl || null
-        });
+      let selectedService = agencyConfigServices.find(
+        s => s.ServiceId === service.ServiceId
+      );
+
+      if (!selectedService) {
+        selectedService = { ServiceId: service.ServiceId, ImageUrl: null };
+        agencyConfigServices.push(selectedService);
       }
+
+      selectedService.ImageUrl = service.ImageUrl;
     });
 
     // Sort config agencies by AgencyID
