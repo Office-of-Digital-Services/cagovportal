@@ -5,7 +5,6 @@ const fs = require("node:fs");
 
 //const imagesFolder = "./src/images/sep/";
 const config = require("./update_state_entity_images.config.json");
-const configAgencies = config.agencies;
 
 const agencyData =
   require("../../.cache/eleventy-fetch-214800724b89a699fb81d3366f424c.json").Data;
@@ -15,24 +14,53 @@ const serviceData =
 const processImages = async () => {
   agencyData.forEach(agency => {
     // Check if agency is in config, if not, add it
-    const agencyConfig = configAgencies.find(
+    const agencyConfig = config.Agencies.find(
       a => a.AgencyID === agency.AgencyId
     );
     if (!agencyConfig) {
-      configAgencies.push({
+      config.Agencies.push({
         AgencyID: agency.AgencyId,
-        LogoUrl: agency.LogoUrl || null
+        LogoUrl: agency.LogoUrl || null,
+        Services: []
       });
     }
   });
 
   // Sort config agencies by AgencyID
-  configAgencies.sort((a, b) => a.AgencyID - b.AgencyID);
+  config.Agencies.sort((a, b) => a.AgencyID - b.AgencyID);
 
   // Remove agencies from config that are no longer in agencyData
   // Filter configAgencies to only include agencies present in agencyData
   const agencyIds = new Set(agencyData.map(a => a.AgencyId));
-  config.agencies = configAgencies.filter(a => agencyIds.has(a.AgencyID));
+  config.Agencies = config.Agencies.filter(a => agencyIds.has(a.AgencyID));
+
+  // add services as children to their parent agencies
+  config.Agencies.forEach(agencyConfig => {
+    const filteredServices = serviceData.filter(
+      s => s.AgencyId === agencyConfig.AgencyID
+    );
+
+    console.log(
+      filteredServices.length +
+        " services found for agency " +
+        agencyConfig.AgencyID
+    );
+
+    agencyConfig.Services = []; // reset services to avoid duplicates
+
+    filteredServices.forEach(service => {
+      // Check if service is in config, if not, add it
+      //if (!agencyConfig.Services.find(s => s.ServiceId === service.ServiceId)) {
+      agencyConfig.Services.push({
+        ServiceID: service.ServiceId,
+        ImageUrl: service.ImageUrl || null
+      });
+      //}
+    });
+
+    // Sort config agencies by AgencyID
+    agencyConfig.Services.sort((a, b) => a.ServiceID - b.ServiceID);
+  });
 
   // resave the config file
   fs.writeFileSync(
