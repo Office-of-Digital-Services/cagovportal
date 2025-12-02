@@ -1,15 +1,21 @@
 //@ts-check
 
 window.addEventListener("DOMContentLoaded", () => {
-  //POLYFILL for CSS nesting
-  if (!CSS.supports("selector(&)")) {
-    // CSS Nesting not supported.  Load alternative CSS file
-    const link = /** @type {HTMLLinkElement} */ (
-      document.querySelector("link[rel='stylesheet'][href^='/css/custom.']")
-    );
-    link.href = link.href.replace("min", "flat");
-    console.log("POLYFILL: Using FLAT CSS instead of Nested");
-  }
+  // POLYFILL for CSS nesting
+  document.addEventListener("DOMContentLoaded", () => {
+    if (!CSS.supports("selector(&)")) {
+      // CSS Nesting not supported. Load alternative CSS file
+      const links = document.querySelectorAll("link[rel='stylesheet']");
+      const link = Array.prototype.find.call(links, l =>
+        l.href.includes("/css/custom.")
+      );
+
+      if (link) {
+        link.href = link.href.replace("min", "flat");
+        console.log("POLYFILL: Using FLAT CSS instead of Nested");
+      }
+    }
+  });
 
   //POLYFILL for WEBP to PNG
   function supportsWebP() {
