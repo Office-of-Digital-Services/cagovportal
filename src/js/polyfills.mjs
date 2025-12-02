@@ -12,21 +12,22 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   //POLYFILL for WEBP to PNG
-  const webP = new Image();
-  webP.onload = webP.onerror = function () {
-    if (webP.height !== 1) {
-      // Replace WEBP with PNG
-
-      /** @type {NodeListOf<HTMLImageElement>} */ (
-        document.querySelectorAll('img[src*=".webp" i]')
-      ).forEach(img => {
-        img.src = img.src
-          .replace(/\.jpg\.webp/i, ".jpg")
-          .replace(/\.webp/i, ".png");
-      });
-      console.log("POLYFILL: Using PNG instead of WEBP");
+  function supportsWebP() {
+    const canvas = document.createElement("canvas");
+    if (canvas.getContext && canvas.getContext("2d")) {
+      return canvas.toDataURL("image/webp").indexOf("data:image/webp") === 0;
     }
-  };
-  webP.src =
-    "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=";
+    return false;
+  }
+
+  if (!supportsWebP()) {
+    // Replace WEBP with PNG
+    /** @type {NodeListOf<HTMLImageElement>} */
+    (document.querySelectorAll('img[src*=".webp" i]')).forEach(img => {
+      img.src = img.src
+        .replace(/\.jpg\.webp/i, ".jpg")
+        .replace(/\.webp/i, ".png");
+    });
+    console.log("POLYFILL: Using PNG instead of WEBP");
+  }
 });
