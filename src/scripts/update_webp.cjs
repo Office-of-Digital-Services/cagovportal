@@ -17,7 +17,7 @@ const processImages = async () => {
     .filter(file => !shouldExclude(file)); // apply exclusion
 
   // Map each file to a promise
-  const tasks = files.map(file => {
+  const tasks = files.map(async file => {
     const filePath = imagesFolder + file;
     const outputFilePath = filePath.replace(/\.png$/i, ".webp");
 
@@ -32,10 +32,8 @@ const processImages = async () => {
       force: true
     };
 
-    return sharp(filePath)
-      .webp(webpoptions)
-      .toFile(outputFilePath)
-      .then(() => console.log(`Converted: ${file}`));
+    await sharp(filePath).webp(webpoptions).toFile(outputFilePath);
+    return console.log(`Converted: ${file}`);
   });
 
   // Run them all in parallel
