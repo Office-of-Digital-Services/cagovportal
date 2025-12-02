@@ -1,7 +1,10 @@
 //@ts-check
 
-//const sharp = require("sharp");
+const sharp = require("sharp");
 const fs = require("node:fs");
+
+const remoteImagesBaseUrl = "https://stateentityprofile.ca.gov/Uploads/";
+const localImagesBasePath = "./src/images/sep/";
 
 //const imagesFolder = "./src/images/sep/";
 const config = require("./update_state_entity_images.config.json");
@@ -12,6 +15,45 @@ const serviceData =
   require("../../.cache/eleventy-fetch-e4eda45ed3541c71e73bc83a531e83.json").Data;
 
 const processImages = async () => {
+  updateConfig();
+
+  /** @type {Promise<any>[]} */
+  let threadingTasks = [];
+
+  config.Agencies.forEach(agency => {
+    if (agency.LogoUrl) {
+      const fullLogoUrl = `${remoteImagesBaseUrl}${agency.LogoUrl}`;
+      const outputPath = `${localImagesBasePath}${agency.AgencyID}/${agency.LogoUrl}`;
+
+      // Ensure output directory exists
+      fs.mkdirSync(`${localImagesBasePath}${agency.AgencyID}`, {
+        recursive: true
+      });
+
+      threadingTasks.push(
+        fetch(fullLogoUrl)
+          .then(res => {
+            if (!res.ok)
+              throw new Error(`Failed to fetch image: ${res.statusText}`);
+            return res.arrayBuffer();
+          })
+          .then(buffer =>
+            sharp(Buffer.from(buffer)).resize(270).toFile(outputPath)
+          )
+          .catch(err => {
+            console.error(
+              `Error processing image for AgencyID ${agency.AgencyID}:`,
+              err
+            );
+          })
+      );
+    }
+  });
+
+  await Promise.all(threadingTasks);
+};
+
+const updateConfig = () => {
   agencyData.forEach(agency => {
     // Check if agency is in config, if not, add it
     let agencyConfig = config.Agencies.find(
