@@ -1,0 +1,154 @@
+---
+layout: null
+permalink: 404handler.ashx
+eleventyExcludeFromCollections: true
+---
+<%@ WebHandler Language="C#" Class="custom404handler" %>
+
+/*
+ * 404handler.ashx
+ * 
+ * This custom HTTP handler is used as a centralized error processor for www.ca.gov.
+ * It supports real HTTP status codes and serves appropriate responses based on the request path.
+ * 
+ * Behavior:
+ * - If the request path matches a known 301 redirect, it issues a 301 Moved Permanently with a new location.
+ * - If the request path matches a known 410 (gone) resource, it returns a 410 Gone status and serves a custom HTML page.
+ * - All other requests return a 404 Not Found status and serve a custom 404 HTML page.
+ * 
+ * Additional Features:
+ * - Supports flexible matching using both literal path comparisons and Regular Expressions.
+ * - Matching logic infers type: Patterns starting with '^' and ending with '$' are treated as RegEx matches against Request.RawUrl. Other patterns are normalized literal matches.
+ * - Prevents rewrite loops by detecting self-invocation.
+ * - Outputs request diagnostics if the handler is triggered by itself.
+ * 
+ * This handler is compatible with .NET Framework 3.5 and designed for maintainability and extensibility.
+ */
+
+using System;
+using System.Web;
+using System.IO;
+using System.Text.RegularExpressions; // Required for Regex functionality
+
+public class custom404handler : IHttpHandler {
+    private static readonly string GonePagePath = "~/410.html";
+    private static readonly string NotFoundPagePath = "~/404.html";
+
+    // NormalizePath is only used for "Literal" matches now.
+    private static string NormalizePath(string rawUrl) {
+        if (string.IsNullOrEmpty(rawUrl)) return "";
+
+        // Strip query string
+        int queryIndex = rawUrl.IndexOf('?');
+        if (queryIndex >= 0) rawUrl = rawUrl.Substring(0, queryIndex);
+
+        // Remove trailing slash (except for root "/")
+        if (rawUrl.Length > 1 && rawUrl.EndsWith("/")) {
+            rawUrl = rawUrl.Substring(0, rawUrl.Length - 1);
+        }
+
+        return rawUrl.ToLower();
+    }
+
+    public void ProcessRequest(HttpContext context) {
+        // Use the raw URL for regex matching, but normalize a version for literal matching.
+        string rawUrl = context.Request.RawUrl;
+        string normalizedPath = NormalizePath(rawUrl);
+
+        // Prevent rewrite loop (still uses normalized path)
+        if (normalizedPath == context.Request.CurrentExecutionFilePath) {
+            string diagnostics = "Request.RawUrl: " + context.Request.RawUrl + "\n"
+                + "Request.Path: " + context.Request.Path + "\n"
+                + "Request.CurrentExecutionFilePath: " + context.Request.CurrentExecutionFilePath + "\n"
+                + "Request.Url: " + context.Request.Url + "\n"
+                + "Request.QueryString: " + context.Request.QueryString + "\n";
+
+            context.Response.StatusCode = 404;
+            context.Response.StatusDescription = "Not Found";
+            context.Response.ContentType = "text/plain";
+            context.Response.Write("404handler cannot process itself.\n\n" + diagnostics);
+            return;
+        }
+
+        // Unified match loop
+        for (int i = 0; i < MatchPaths.GetLength(0); i++) {
+            string pattern = MatchPaths[i, 0];
+
+            bool isMatch = false;
+
+            if (pattern.StartsWith("^") && pattern.EndsWith("$"))
+            {
+                // Use Regex.IsMatch on the full rawUrl (including potential query string if regex allows)
+                // Use RegexOptions.IgnoreCase for case-insensitive matching by default
+                isMatch = Regex.IsMatch(rawUrl, pattern, RegexOptions.IgnoreCase);
+            }
+            else // Default to Literal
+            {
+                // Normalize both the stored pattern path and the incoming request path for comparison
+                string normalizedPattern = NormalizePath(pattern);
+                isMatch = (normalizedPattern == normalizedPath);
+            }
+
+            if (isMatch) {
+                string target = MatchPaths[i, 1]; // Target location or null for 410
+                if (string.IsNullOrEmpty(target)) {
+                    // Handle 410 Gone
+                    context.Response.StatusCode = 410;
+                    context.Response.StatusDescription = "Gone";
+                    context.Response.ContentType = "text/html";
+
+                    // Cache for 60 days (adjust as needed)
+                    context.Response.AppendHeader("Cache-Control", "public, max-age=5184000");
+                    context.Response.AppendHeader("Expires", DateTime.UtcNow.AddDays(60).ToString("R"));
+
+                    context.Response.AddHeader("X-Status-Message", "410 gone response issued for: " + rawUrl);
+                    context.Response.Write(File.ReadAllText(context.Server.MapPath(GonePagePath)));
+                } else {
+                    // Handle 301 Redirect
+                    context.Response.StatusCode = 301;
+                    context.Response.StatusDescription = "Moved Permanently";
+                    context.Response.RedirectLocation = target;
+                    context.Response.ContentType = "text/plain";
+
+                    // Cache for 60 days (adjust as needed)
+                    context.Response.AppendHeader("Cache-Control", "public, max-age=5184000");
+                    context.Response.AppendHeader("Expires", DateTime.UtcNow.AddDays(60).ToString("R"));
+
+                    context.Response.AddHeader("X-Status-Message", "301 redirect issued for: " + rawUrl + " -> " + target);
+                    context.Response.Write("301 Moved Permanently -> " + target);
+                }
+                return;
+            }
+        }
+
+        // Default 404
+        context.Response.StatusCode = 404;
+        context.Response.StatusDescription = "Not Found";
+        context.Response.ContentType = "text/html";
+
+        // Prevent caching of 404 responses
+        context.Response.AppendHeader("Cache-Control", "no-store, no-cache, must-revalidate");
+        context.Response.AppendHeader("Pragma", "no-cache");
+        context.Response.AppendHeader("Expires", "0");
+        
+        context.Response.AddHeader("X-Status-Message", "404 fallback triggered for unmatched path: " + rawUrl);
+        context.Response.Write(File.ReadAllText(context.Server.MapPath(NotFoundPagePath)));
+    }
+
+    public bool IsReusable { get { return true; } }
+
+    /*
+     * Unified match table structure:
+     * { "pattern_string", "target_url_or_null" }
+     * 
+     * CONVENTION:
+     * - Patterns that start with '^' and end with '$' are treated as REGEX and matched against the full Request.RawUrl.
+     * - All other patterns are treated as LITERAL paths (normalized for case and trailing slashes).
+     * - A blank target value indicates a 410 Gone response; otherwise, a 301 redirect is issued.
+     */
+    private static readonly string[,] MatchPaths = new string[,] {
+      {%- for path in redirectPaths %}
+      {@"{{path.path | safe}}",@"{{path.target | safe}}"}{{-"," if not loop.last-}}
+      {%- endfor %}
+    };
+}
