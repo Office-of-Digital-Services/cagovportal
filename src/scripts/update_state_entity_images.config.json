@@ -2,113 +2,91 @@
   "Agencies": [
     {
       "AgencyID": 16,
-      "LogoUrl": "logo-16-CBA.png",
-      "Services": []
+      "LogoUrl": "logo-16-CBA.png"
     },
     {
       "AgencyID": 17,
-      "LogoUrl": "logo-17-Board.png",
-      "Services": []
+      "LogoUrl": "logo-17-Board.png"
     },
     {
       "AgencyID": 18,
-      "LogoUrl": "logo-18-CAB.png",
-      "Services": []
+      "LogoUrl": "logo-18-CAB.png"
     },
     {
       "AgencyID": 19,
-      "LogoUrl": "logo-19-CSAC.png",
-      "Services": []
+      "LogoUrl": "logo-19-CSAC.png"
     },
     {
       "AgencyID": 20,
-      "LogoUrl": "logo-20-BBC.png",
-      "Services": []
+      "LogoUrl": "logo-20-BBC.png"
     },
     {
       "AgencyID": 21,
-      "LogoUrl": "logo-21-BBS.png",
-      "Services": []
+      "LogoUrl": "logo-21-BBS.png"
     },
     {
       "AgencyID": 22,
-      "LogoUrl": "logo-22-Chiro.png",
-      "Services": []
+      "LogoUrl": "logo-22-Chiro.png"
     },
     {
       "AgencyID": 23,
-      "LogoUrl": "logo-23-CRB.png",
-      "Services": []
+      "LogoUrl": "logo-23-CRB.png"
     },
     {
       "AgencyID": 24,
-      "LogoUrl": "logo-24-DBC.png",
-      "Services": []
+      "LogoUrl": "logo-24-DBC.png"
     },
     {
       "AgencyID": 25,
-      "LogoUrl": "logo-25-DHCC.png",
-      "Services": []
+      "LogoUrl": "logo-25-DHCC.png"
     },
     {
       "AgencyID": 26,
-      "LogoUrl": "logo-26-BHGS.png",
-      "Services": []
+      "LogoUrl": "logo-26-BHGS.png"
     },
     {
       "AgencyID": 28,
-      "LogoUrl": "logo-28-LATC.png",
-      "Services": []
+      "LogoUrl": "logo-28-LATC.png"
     },
     {
       "AgencyID": 29,
-      "LogoUrl": "logo-29-MBC.png",
-      "Services": []
+      "LogoUrl": "logo-29-MBC.png"
     },
     {
       "AgencyID": 30,
-      "LogoUrl": "logo-30-NATROPATHC.png",
-      "Services": []
+      "LogoUrl": "logo-30-NATROPATHC.png"
     },
     {
       "AgencyID": 31,
-      "LogoUrl": "logo-31-BOT.png",
-      "Services": []
+      "LogoUrl": "logo-31-BOT.png"
     },
     {
       "AgencyID": 32,
-      "LogoUrl": "logo-32-OPTOMETRY.png",
-      "Services": []
+      "LogoUrl": "logo-32-OPTOMETRY.png"
     },
     {
       "AgencyID": 33,
-      "LogoUrl": "logo-33-OMBC.png",
-      "Services": []
+      "LogoUrl": "logo-33-OMBC.png"
     },
     {
       "AgencyID": 34,
-      "LogoUrl": "logo-34-PHARMACY.png",
-      "Services": []
+      "LogoUrl": "logo-34-PHARMACY.png"
     },
     {
       "AgencyID": 36,
-      "LogoUrl": "logo-36-PAB.png",
-      "Services": []
+      "LogoUrl": "logo-36-PAB.png"
     },
     {
       "AgencyID": 37,
-      "LogoUrl": "logo-37-PMBC.png",
-      "Services": []
+      "LogoUrl": "logo-37-PMBC.png"
     },
     {
       "AgencyID": 38,
-      "LogoUrl": "logo-38-BPELSG.png",
-      "Services": []
+      "LogoUrl": "logo-38-BPELSG.png"
     },
     {
       "AgencyID": 39,
-      "LogoUrl": "logo-39-PSYCHOLOGY.png",
-      "Services": []
+      "LogoUrl": "logo-39-PSYCHOLOGY.png"
     },
     {
       "AgencyID": 40,
@@ -126,63 +104,51 @@
     },
     {
       "AgencyID": 41,
-      "LogoUrl": "logo-41-BRN.png",
-      "Services": []
+      "LogoUrl": "logo-41-BRN.png"
     },
     {
       "AgencyID": 42,
-      "LogoUrl": "logo-42-RCB.png",
-      "Services": []
+      "LogoUrl": "logo-42-RCB.png"
     },
     {
       "AgencyID": 43,
-      "LogoUrl": "logo-43-SLPAHADB.png",
-      "Services": []
+      "LogoUrl": "logo-43-SLPAHADB.png"
     },
     {
       "AgencyID": 44,
-      "LogoUrl": "logo-44-SPCB.png",
-      "Services": []
+      "LogoUrl": "logo-44-SPCB.png"
     },
     {
       "AgencyID": 45,
-      "LogoUrl": "logo-45-VMB.png",
-      "Services": []
+      "LogoUrl": "logo-45-VMB.png"
     },
     {
       "AgencyID": 46,
-      "LogoUrl": "logo-46-BVNPT.png",
-      "Services": []
+      "LogoUrl": "logo-46-BVNPT.png"
     },
     {
       "AgencyID": 47,
-      "LogoUrl": "logo-47-CUCCAC.png",
-      "Services": []
+      "LogoUrl": "logo-47-CUCCAC.png"
     },
     {
       "AgencyID": 48,
-      "LogoUrl": "logo-48-JPB.png",
-      "Services": []
+      "LogoUrl": "logo-48-JPB.png"
     },
     {
       "AgencyID": 49,
-      "LogoUrl": "logo-49-CCJBH.png",
-      "Services": []
+      "LogoUrl": "logo-49-CCJBH.png"
     },
     {
       "AgencyID": 50,
-      "LogoUrl": "logo-50-BPH.png",
-      "Services": []
+      "LogoUrl": "logo-50-BPH.png"
     },
     {
       "AgencyID": 51,
-      "LogoUrl": "logo-51-SMGB.png",
-      "Services": []
+      "LogoUrl": "logo-51-SMGB.png"
     },
     {
       "AgencyID": 52,
-      "LogoUrl": "logo-52-SBE.png",
-      "Services": []
+      "LogoUrl": "logo-52-SBE.png"
     },
     {
       "AgencyID": 53,
@@ -196,123 +162,99 @@
     },
     {
       "AgencyID": 54,
-      "LogoUrl": "logo-54-CGCC.png",
-      "Services": []
+      "LogoUrl": "logo-54-CGCC.png"
     },
     {
       "AgencyID": 55,
-      "LogoUrl": "logo-55-SAB.png",
-      "Services": []
+      "LogoUrl": "logo-55-SAB.png"
     },
     {
       "AgencyID": 56,
-      "LogoUrl": "logo-56-CBSC.png",
-      "Services": []
+      "LogoUrl": "logo-56-CBSC.png"
     },
     {
       "AgencyID": 57,
-      "LogoUrl": "logo-57-OAH.png",
-      "Services": []
+      "LogoUrl": "logo-57-OAH.png"
     },
     {
       "AgencyID": 60,
-      "LogoUrl": "logo-60-CCCC.png",
-      "Services": []
+      "LogoUrl": "logo-60-CCCC.png"
     },
     {
       "AgencyID": 61,
-      "LogoUrl": "logo-61-CAC.png",
-      "Services": []
+      "LogoUrl": "logo-61-CAC.png"
     },
     {
       "AgencyID": 62,
-      "LogoUrl": "logo-62-CHSWC.png",
-      "Services": []
+      "LogoUrl": "logo-62-CHSWC.png"
     },
     {
       "AgencyID": 63,
-      "LogoUrl": null,
-      "Services": []
+      "LogoUrl": null
     },
     {
       "AgencyID": 64,
-      "LogoUrl": "logo-64-OSHAB.png",
-      "Services": []
+      "LogoUrl": "logo-64-OSHAB.png"
     },
     {
       "AgencyID": 65,
-      "LogoUrl": "logo-65-WCAB.png",
-      "Services": []
+      "LogoUrl": "logo-65-WCAB.png"
     },
     {
       "AgencyID": 67,
-      "LogoUrl": "logo-67-DBW-Com.png",
-      "Services": []
+      "LogoUrl": "logo-67-DBW-Com.png"
     },
     {
       "AgencyID": 68,
-      "LogoUrl": "logo-68-SHRC.png",
-      "Services": []
+      "LogoUrl": "logo-68-SHRC.png"
     },
     {
       "AgencyID": 69,
-      "LogoUrl": "logo-69-PRC.png",
-      "Services": []
+      "LogoUrl": "logo-69-PRC.png"
     },
     {
       "AgencyID": 71,
-      "LogoUrl": "logo-71-MOU.png",
-      "Services": []
+      "LogoUrl": "logo-71-MOU.png"
     },
     {
       "AgencyID": 72,
-      "LogoUrl": "logo-72-NMVB.png",
-      "Services": []
+      "LogoUrl": "logo-72-NMVB.png"
     },
     {
       "AgencyID": 73,
-      "LogoUrl": null,
-      "Services": []
+      "LogoUrl": null
     },
     {
       "AgencyID": 74,
-      "LogoUrl": "logo-74-CAEATFA.png",
-      "Services": []
+      "LogoUrl": "logo-74-CAEATFA.png"
     },
     {
       "AgencyID": 75,
-      "LogoUrl": "logo-75-CDIAC.png",
-      "Services": []
+      "LogoUrl": "logo-75-CDIAC.png"
     },
     {
       "AgencyID": 76,
-      "LogoUrl": "logo-76-CDLAC.png",
-      "Services": []
+      "LogoUrl": "logo-76-CDLAC.png"
     },
     {
       "AgencyID": 77,
-      "LogoUrl": "logo-77-CEFA.png",
-      "Services": []
+      "LogoUrl": "logo-77-CEFA.png"
     },
     {
       "AgencyID": 78,
-      "LogoUrl": "logo-78-CIDFAC.png",
-      "Services": []
+      "LogoUrl": "logo-78-CIDFAC.png"
     },
     {
       "AgencyID": 79,
-      "LogoUrl": "logo-79-SIB.png",
-      "Services": []
+      "LogoUrl": "logo-79-SIB.png"
     },
     {
       "AgencyID": 81,
-      "LogoUrl": "logo-81-DVBE.png",
-      "Services": []
+      "LogoUrl": "logo-81-DVBE.png"
     },
     {
       "AgencyID": 82,
-      "LogoUrl": "logo-82-CVB.png",
-      "Services": []
+      "LogoUrl": "logo-82-CVB.png"
     },
     {
       "AgencyID": 89,
@@ -341,6 +283,10 @@
         {
           "ServiceId": 1213,
           "ImageUrl": "service-1213-Search-for-an-exam.jpg"
+        },
+        {
+          "ServiceId": 11901,
+          "ImageUrl": "service-1190-Learn-About-Your-State-Employee-Benefits.jpg"
         }
       ]
     },
@@ -372,28 +318,23 @@
     },
     {
       "AgencyID": 94,
-      "LogoUrl": "logo-94-BSIS.png",
-      "Services": []
+      "LogoUrl": "logo-94-BSIS.png"
     },
     {
       "AgencyID": 95,
-      "LogoUrl": "logo-95-CFB.png",
-      "Services": []
+      "LogoUrl": "logo-95-CFB.png"
     },
     {
       "AgencyID": 96,
-      "LogoUrl": "logo-96-BPPE.png",
-      "Services": []
+      "LogoUrl": "logo-96-BPPE.png"
     },
     {
       "AgencyID": 98,
-      "LogoUrl": "logo-98-PTBC.png",
-      "Services": []
+      "LogoUrl": "logo-98-PTBC.png"
     },
     {
       "AgencyID": 99,
-      "LogoUrl": "logo-99-PFB.png",
-      "Services": []
+      "LogoUrl": "logo-99-PFB.png"
     },
     {
       "AgencyID": 100,
@@ -417,33 +358,27 @@
     },
     {
       "AgencyID": 103,
-      "LogoUrl": "logo-103-CHFFA.png",
-      "Services": []
+      "LogoUrl": "logo-103-CHFFA.png"
     },
     {
       "AgencyID": 104,
-      "LogoUrl": "logo-104-CHFFIC.png",
-      "Services": []
+      "LogoUrl": "logo-104-CHFFIC.png"
     },
     {
       "AgencyID": 105,
-      "LogoUrl": "logo-105-CPCFA.png",
-      "Services": []
+      "LogoUrl": "logo-105-CPCFA.png"
     },
     {
       "AgencyID": 106,
-      "LogoUrl": "logo-106-CSFA.png",
-      "Services": []
+      "LogoUrl": "logo-106-CSFA.png"
     },
     {
       "AgencyID": 107,
-      "LogoUrl": "logo-107-CTCAC.png",
-      "Services": []
+      "LogoUrl": "logo-107-CTCAC.png"
     },
     {
       "AgencyID": 110,
-      "LogoUrl": "logo-110-PMIB.png",
-      "Services": []
+      "LogoUrl": "logo-110-PMIB.png"
     },
     {
       "AgencyID": 131,
@@ -457,8 +392,7 @@
     },
     {
       "AgencyID": 132,
-      "LogoUrl": null,
-      "Services": []
+      "LogoUrl": null
     },
     {
       "AgencyID": 133,
@@ -492,8 +426,7 @@
     },
     {
       "AgencyID": 134,
-      "LogoUrl": "logo-134-ALRB.png",
-      "Services": []
+      "LogoUrl": "logo-134-ALRB.png"
     },
     {
       "AgencyID": 135,
@@ -507,8 +440,7 @@
     },
     {
       "AgencyID": 136,
-      "LogoUrl": "logo-136-Assembly.png",
-      "Services": []
+      "LogoUrl": "logo-136-Assembly.png"
     },
     {
       "AgencyID": 137,
@@ -558,38 +490,31 @@
     },
     {
       "AgencyID": 140,
-      "LogoUrl": "logo-140-BHC.png",
-      "Services": []
+      "LogoUrl": "logo-140-BHC.png"
     },
     {
       "AgencyID": 141,
-      "LogoUrl": "logo-141-BOE.png",
-      "Services": []
+      "LogoUrl": "logo-141-BOE.png"
     },
     {
       "AgencyID": 142,
-      "LogoUrl": "logo-142-BOPC.png",
-      "Services": []
+      "LogoUrl": "logo-142-BOPC.png"
     },
     {
       "AgencyID": 143,
-      "LogoUrl": "logo-143-BSA.png",
-      "Services": []
+      "LogoUrl": "logo-143-BSA.png"
     },
     {
       "AgencyID": 144,
-      "LogoUrl": "logo-144-CAC.png",
-      "Services": []
+      "LogoUrl": "logo-144-CAC.png"
     },
     {
       "AgencyID": 145,
-      "LogoUrl": "logo-145-CAHSRA.png",
-      "Services": []
+      "LogoUrl": "logo-145-CAHSRA.png"
     },
     {
       "AgencyID": 146,
-      "LogoUrl": "logo-146-CAL EXPO.png",
-      "Services": []
+      "LogoUrl": "logo-146-CAL EXPO.png"
     },
     {
       "AgencyID": 147,
@@ -623,23 +548,19 @@
     },
     {
       "AgencyID": 148,
-      "LogoUrl": "logo-148-Cal OES.png",
-      "Services": []
+      "LogoUrl": "logo-148-Cal OES.png"
     },
     {
       "AgencyID": 149,
-      "LogoUrl": "logo-149-CALBAR.png",
-      "Services": []
+      "LogoUrl": "logo-149-CALBAR.png"
     },
     {
       "AgencyID": 150,
-      "LogoUrl": "logo-150-CALEPA.png",
-      "Services": []
+      "LogoUrl": "logo-150-CALEPA.png"
     },
     {
       "AgencyID": 151,
-      "LogoUrl": "logo-151-Calguard.png",
-      "Services": []
+      "LogoUrl": "logo-151-Calguard.png"
     },
     {
       "AgencyID": 152,
@@ -695,13 +616,11 @@
     },
     {
       "AgencyID": 156,
-      "LogoUrl": "logo-156-CALPERS.png",
-      "Services": []
+      "LogoUrl": "logo-156-CALPERS.png"
     },
     {
       "AgencyID": 157,
-      "LogoUrl": "logo-157-CALPIA.png",
-      "Services": []
+      "LogoUrl": "logo-157-CALPIA.png"
     },
     {
       "AgencyID": 158,
@@ -715,18 +634,15 @@
     },
     {
       "AgencyID": 159,
-      "LogoUrl": "logo-159-CALSILC.png",
-      "Services": []
+      "LogoUrl": "logo-159-CALSILC.png"
     },
     {
       "AgencyID": 160,
-      "LogoUrl": "logo-160-CalSTA.png",
-      "Services": []
+      "LogoUrl": "logo-160-CalSTA.png"
     },
     {
       "AgencyID": 161,
-      "LogoUrl": "logo-161-CalSTRS.png",
-      "Services": []
+      "LogoUrl": "logo-161-CalSTRS.png"
     },
     {
       "AgencyID": 162,
@@ -754,18 +670,15 @@
     },
     {
       "AgencyID": 164,
-      "LogoUrl": "logo-164-CalVols.png",
-      "Services": []
+      "LogoUrl": "logo-164-CalVols.png"
     },
     {
       "AgencyID": 165,
-      "LogoUrl": "logo-165-CBC.png",
-      "Services": []
+      "LogoUrl": "logo-165-CBC.png"
     },
     {
       "AgencyID": 166,
-      "LogoUrl": "logo-166-CCC.png",
-      "Services": []
+      "LogoUrl": "logo-166-CCC.png"
     },
     {
       "AgencyID": 167,
@@ -779,18 +692,15 @@
     },
     {
       "AgencyID": 168,
-      "LogoUrl": "logo-168-CCDA.png",
-      "Services": []
+      "LogoUrl": "logo-168-CCDA.png"
     },
     {
       "AgencyID": 169,
-      "LogoUrl": "logo-169-CCOA.png",
-      "Services": []
+      "LogoUrl": "logo-169-CCOA.png"
     },
     {
       "AgencyID": 170,
-      "LogoUrl": "logo-170-CCW.png",
-      "Services": []
+      "LogoUrl": "logo-170-CCW.png"
     },
     {
       "AgencyID": 171,
@@ -926,8 +836,7 @@
     },
     {
       "AgencyID": 177,
-      "LogoUrl": "logo-177-CDPR.png",
-      "Services": []
+      "LogoUrl": "logo-177-CDPR.png"
     },
     {
       "AgencyID": 178,
@@ -977,8 +886,7 @@
     },
     {
       "AgencyID": 179,
-      "LogoUrl": "logo-179-CDT.png",
-      "Services": []
+      "LogoUrl": "logo-179-CDT.png"
     },
     {
       "AgencyID": 180,
@@ -1004,18 +912,15 @@
     },
     {
       "AgencyID": 181,
-      "LogoUrl": "logo-181-CFC.png",
-      "Services": []
+      "LogoUrl": "logo-181-CFC.png"
     },
     {
       "AgencyID": 182,
-      "LogoUrl": null,
-      "Services": []
+      "LogoUrl": null
     },
     {
       "AgencyID": 183,
-      "LogoUrl": "logo-183-CalHHS.png",
-      "Services": []
+      "LogoUrl": "logo-183-CalHHS.png"
     },
     {
       "AgencyID": 184,
@@ -1039,38 +944,31 @@
     },
     {
       "AgencyID": 186,
-      "LogoUrl": "logo-186-CIRM.png",
-      "Services": []
+      "LogoUrl": "logo-186-CIRM.png"
     },
     {
       "AgencyID": 187,
-      "LogoUrl": "logo-187-CJP.png",
-      "Services": []
+      "LogoUrl": "logo-187-CJP.png"
     },
     {
       "AgencyID": 188,
-      "LogoUrl": null,
-      "Services": []
+      "LogoUrl": null
     },
     {
       "AgencyID": 189,
-      "LogoUrl": "logo-189-Coastal.png",
-      "Services": []
+      "LogoUrl": "logo-189-Coastal.png"
     },
     {
       "AgencyID": 190,
-      "LogoUrl": "logo-190-Conservanc.png",
-      "Services": []
+      "LogoUrl": "logo-190-Conservanc.png"
     },
     {
       "AgencyID": 191,
-      "LogoUrl": "logo-191-Conservanc.png",
-      "Services": []
+      "LogoUrl": "logo-191-Conservanc.png"
     },
     {
       "AgencyID": 192,
-      "LogoUrl": "logo-192-CoolCal.png",
-      "Services": []
+      "LogoUrl": "logo-192-CoolCal.png"
     },
     {
       "AgencyID": 193,
@@ -1088,18 +986,15 @@
     },
     {
       "AgencyID": 194,
-      "LogoUrl": "logo-194-CPUC.png",
-      "Services": []
+      "LogoUrl": "logo-194-CPUC.png"
     },
     {
       "AgencyID": 195,
-      "LogoUrl": "logo-195-CRB.png",
-      "Services": []
+      "LogoUrl": "logo-195-CRB.png"
     },
     {
       "AgencyID": 196,
-      "LogoUrl": "logo-196-CRC.png",
-      "Services": []
+      "LogoUrl": "logo-196-CRC.png"
     },
     {
       "AgencyID": 198,
@@ -1129,8 +1024,7 @@
     },
     {
       "AgencyID": 199,
-      "LogoUrl": "logo-199-CSD.png",
-      "Services": []
+      "LogoUrl": "logo-199-CSD.png"
     },
     {
       "AgencyID": 200,
@@ -1144,38 +1038,31 @@
     },
     {
       "AgencyID": 201,
-      "LogoUrl": "logo-201-CSM.png",
-      "Services": []
+      "LogoUrl": "logo-201-CSM.png"
     },
     {
       "AgencyID": 202,
-      "LogoUrl": "logo-202-CSU.png",
-      "Services": []
+      "LogoUrl": "logo-202-CSU.png"
     },
     {
       "AgencyID": 203,
-      "LogoUrl": "logo-203-CTC.png",
-      "Services": []
+      "LogoUrl": "logo-203-CTC.png"
     },
     {
       "AgencyID": 204,
-      "LogoUrl": "logo-204-CTC.png",
-      "Services": []
+      "LogoUrl": "logo-204-CTC.png"
     },
     {
       "AgencyID": 205,
-      "LogoUrl": "logo-205-CUIAB.png",
-      "Services": []
+      "LogoUrl": "logo-205-CUIAB.png"
     },
     {
       "AgencyID": 206,
-      "LogoUrl": "logo-206-CVFPB.png",
-      "Services": []
+      "LogoUrl": "logo-206-CVFPB.png"
     },
     {
       "AgencyID": 207,
-      "LogoUrl": "logo-207-CVMC.png",
-      "Services": []
+      "LogoUrl": "logo-207-CVMC.png"
     },
     {
       "AgencyID": 208,
@@ -1213,8 +1100,7 @@
     },
     {
       "AgencyID": 209,
-      "LogoUrl": null,
-      "Services": []
+      "LogoUrl": null
     },
     {
       "AgencyID": 210,
@@ -1268,13 +1154,11 @@
     },
     {
       "AgencyID": 213,
-      "LogoUrl": "logo-213-Delta.png",
-      "Services": []
+      "LogoUrl": "logo-213-Delta.png"
     },
     {
       "AgencyID": 214,
-      "LogoUrl": "logo-214-Deltacounc.png",
-      "Services": []
+      "LogoUrl": "logo-214-Deltacounc.png"
     },
     {
       "AgencyID": 215,
@@ -1468,13 +1352,11 @@
     },
     {
       "AgencyID": 221,
-      "LogoUrl": "logo-221-DOC.png",
-      "Services": []
+      "LogoUrl": "logo-221-DOC.png"
     },
     {
       "AgencyID": 222,
-      "LogoUrl": "logo-222-DOF.png",
-      "Services": []
+      "LogoUrl": "logo-222-DOF.png"
     },
     {
       "AgencyID": 223,
@@ -1514,13 +1396,11 @@
     },
     {
       "AgencyID": 225,
-      "LogoUrl": "logo-225-CALTRANS.png",
-      "Services": []
+      "LogoUrl": "logo-225-CALTRANS.png"
     },
     {
       "AgencyID": 226,
-      "LogoUrl": "logo-226-DSH.png",
-      "Services": []
+      "LogoUrl": "logo-226-DSH.png"
     },
     {
       "AgencyID": 227,
@@ -1610,33 +1490,27 @@
     },
     {
       "AgencyID": 230,
-      "LogoUrl": "logo-230-EMSA.png",
-      "Services": []
+      "LogoUrl": "logo-230-EMSA.png"
     },
     {
       "AgencyID": 231,
-      "LogoUrl": "logo-231-ENERGY.png",
-      "Services": []
+      "LogoUrl": "logo-231-ENERGY.png"
     },
     {
       "AgencyID": 232,
-      "LogoUrl": "logo-232-ETP.png",
-      "Services": []
+      "LogoUrl": "logo-232-ETP.png"
     },
     {
       "AgencyID": 233,
-      "LogoUrl": "logo-233-FGC.png",
-      "Services": []
+      "LogoUrl": "logo-233-FGC.png"
     },
     {
       "AgencyID": 234,
-      "LogoUrl": "logo-234-First 5.png",
-      "Services": []
+      "LogoUrl": "logo-234-First 5.png"
     },
     {
       "AgencyID": 235,
-      "LogoUrl": "logo-235-FPPC.png",
-      "Services": []
+      "LogoUrl": "logo-235-FPPC.png"
     },
     {
       "AgencyID": 236,
@@ -1742,18 +1616,15 @@
     },
     {
       "AgencyID": 241,
-      "LogoUrl": "logo-241-HCD.png",
-      "Services": []
+      "LogoUrl": "logo-241-HCD.png"
     },
     {
       "AgencyID": 242,
-      "LogoUrl": "logo-242-IBANK.png",
-      "Services": []
+      "LogoUrl": "logo-242-IBANK.png"
     },
     {
       "AgencyID": 243,
-      "LogoUrl": "logo-243-LAO.png",
-      "Services": []
+      "LogoUrl": "logo-243-LAO.png"
     },
     {
       "AgencyID": 244,
@@ -1767,13 +1638,11 @@
     },
     {
       "AgencyID": 245,
-      "LogoUrl": "logo-245-LHC.png",
-      "Services": []
+      "LogoUrl": "logo-245-LHC.png"
     },
     {
       "AgencyID": 246,
-      "LogoUrl": "logo-246-LTG.png",
-      "Services": []
+      "LogoUrl": "logo-246-LTG.png"
     },
     {
       "AgencyID": 247,
@@ -1787,18 +1656,15 @@
     },
     {
       "AgencyID": 248,
-      "LogoUrl": "logo-248-MHSOAC.png",
-      "Services": []
+      "LogoUrl": "logo-248-MHSOAC.png"
     },
     {
       "AgencyID": 249,
-      "LogoUrl": "logo-249-NAHC.png",
-      "Services": []
+      "LogoUrl": "logo-249-NAHC.png"
     },
     {
       "AgencyID": 250,
-      "LogoUrl": "logo-250-OAL.png",
-      "Services": []
+      "LogoUrl": "logo-250-OAL.png"
     },
     {
       "AgencyID": 251,
@@ -1832,23 +1698,19 @@
     },
     {
       "AgencyID": 252,
-      "LogoUrl": "logo-252-OIG.png",
-      "Services": []
+      "LogoUrl": "logo-252-OIG.png"
     },
     {
       "AgencyID": 253,
-      "LogoUrl": "logo-253-OPA.png",
-      "Services": []
+      "LogoUrl": "logo-253-OPA.png"
     },
     {
       "AgencyID": 254,
-      "LogoUrl": "logo-254-OPC.png",
-      "Services": []
+      "LogoUrl": "logo-254-OPC.png"
     },
     {
       "AgencyID": 255,
-      "LogoUrl": "logo-255-OPR.png",
-      "Services": []
+      "LogoUrl": "logo-255-OPR.png"
     },
     {
       "AgencyID": 256,
@@ -1882,13 +1744,11 @@
     },
     {
       "AgencyID": 257,
-      "LogoUrl": "logo-257-OSI.png",
-      "Services": []
+      "LogoUrl": "logo-257-OSI.png"
     },
     {
       "AgencyID": 258,
-      "LogoUrl": "logo-258-OTS.png",
-      "Services": []
+      "LogoUrl": "logo-258-OTS.png"
     },
     {
       "AgencyID": 259,
@@ -1906,23 +1766,19 @@
     },
     {
       "AgencyID": 260,
-      "LogoUrl": "logo-260-PERB.png",
-      "Services": []
+      "LogoUrl": "logo-260-PERB.png"
     },
     {
       "AgencyID": 262,
-      "LogoUrl": "logo-262-POST.png",
-      "Services": []
+      "LogoUrl": "logo-262-POST.png"
     },
     {
       "AgencyID": 263,
-      "LogoUrl": "logo-263-Resources.png",
-      "Services": []
+      "LogoUrl": "logo-263-Resources.png"
     },
     {
       "AgencyID": 264,
-      "LogoUrl": "logo-264-RMC.png",
-      "Services": []
+      "LogoUrl": "logo-264-RMC.png"
     },
     {
       "AgencyID": 265,
@@ -1936,13 +1792,11 @@
     },
     {
       "AgencyID": 266,
-      "LogoUrl": "logo-266-SCDD.png",
-      "Services": []
+      "LogoUrl": "logo-266-SCDD.png"
     },
     {
       "AgencyID": 267,
-      "LogoUrl": "logo-267-SCIF.png",
-      "Services": []
+      "LogoUrl": "logo-267-SCIF.png"
     },
     {
       "AgencyID": 268,
@@ -1970,28 +1824,23 @@
     },
     {
       "AgencyID": 270,
-      "LogoUrl": "logo-270-Senate.png",
-      "Services": []
+      "LogoUrl": "logo-270-Senate.png"
     },
     {
       "AgencyID": 271,
-      "LogoUrl": "logo-271-SJRC.png",
-      "Services": []
+      "LogoUrl": "logo-271-SJRC.png"
     },
     {
       "AgencyID": 272,
-      "LogoUrl": "logo-272-SLC.png",
-      "Services": []
+      "LogoUrl": "logo-272-SLC.png"
     },
     {
       "AgencyID": 273,
-      "LogoUrl": "logo-273-SMMC.png",
-      "Services": []
+      "LogoUrl": "logo-273-SMMC.png"
     },
     {
       "AgencyID": 274,
-      "LogoUrl": "logo-274-SNC.png",
-      "Services": []
+      "LogoUrl": "logo-274-SNC.png"
     },
     {
       "AgencyID": 275,
@@ -2017,28 +1866,23 @@
     },
     {
       "AgencyID": 277,
-      "LogoUrl": "logo-277-SPB.png",
-      "Services": []
+      "LogoUrl": "logo-277-SPB.png"
     },
     {
       "AgencyID": 278,
-      "LogoUrl": "logo-278-SSC.png",
-      "Services": []
+      "LogoUrl": "logo-278-SSC.png"
     },
     {
       "AgencyID": 279,
-      "LogoUrl": "logo-279-STO.png",
-      "Services": []
+      "LogoUrl": "logo-279-STO.png"
     },
     {
       "AgencyID": 280,
-      "LogoUrl": "logo-280-SWRCB.png",
-      "Services": []
+      "LogoUrl": "logo-280-SWRCB.png"
     },
     {
       "AgencyID": 281,
-      "LogoUrl": "logo-281-TAO.png",
-      "Services": []
+      "LogoUrl": "logo-281-TAO.png"
     },
     {
       "AgencyID": 282,
@@ -2052,8 +1896,7 @@
     },
     {
       "AgencyID": 284,
-      "LogoUrl": "logo-284-WCB.png",
-      "Services": []
+      "LogoUrl": "logo-284-WCB.png"
     },
     {
       "AgencyID": 287,
@@ -2075,13 +1918,11 @@
     },
     {
       "AgencyID": 296,
-      "LogoUrl": "logo-296-CWC.png",
-      "Services": []
+      "LogoUrl": "logo-296-CWC.png"
     },
     {
       "AgencyID": 298,
-      "LogoUrl": "logo-298-ACP.png",
-      "Services": []
+      "LogoUrl": "logo-298-ACP.png"
     },
     {
       "AgencyID": 299,
@@ -2143,8 +1984,7 @@
     },
     {
       "AgencyID": 305,
-      "LogoUrl": "logo-305-FI$Cal.png",
-      "Services": []
+      "LogoUrl": "logo-305-FI$Cal.png"
     },
     {
       "AgencyID": 306,
@@ -2162,13 +2002,11 @@
     },
     {
       "AgencyID": 308,
-      "LogoUrl": "logo-308-ODI.png",
-      "Services": []
+      "LogoUrl": "logo-308-ODI.png"
     },
     {
       "AgencyID": 314,
-      "LogoUrl": "logo-314-OEIS.png",
-      "Services": []
+      "LogoUrl": "logo-314-OEIS.png"
     },
     {
       "AgencyID": 315,
@@ -2200,8 +2038,7 @@
     },
     {
       "AgencyID": 318,
-      "LogoUrl": "logo-318-CDII.png",
-      "Services": []
+      "LogoUrl": "logo-318-CDII.png"
     },
     {
       "AgencyID": 319,

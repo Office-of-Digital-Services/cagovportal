@@ -40,19 +40,33 @@ const processImages = async () => {
       s => s.AgencyId === agencyConfig.AgencyID
     );
 
-    agencyConfig.Services = []; // reset services to avoid duplicates
+    let agencyConfigServices = agencyConfig.Services || [];
 
     filteredServices.forEach(service => {
       // Check if service is in config, if not, add it
-      //if (!agencyConfig.Services.find(s => s.ServiceId === service.ServiceId)) {
-      agencyConfig.Services.push({
-        ServiceId: service.ServiceId,
-        ImageUrl: service.ImageUrl || null
-      });
+      if (!agencyConfigServices.find(s => s.ServiceId === service.ServiceId)) {
+        // @ts-ignore
+        agencyConfigServices.push({
+          ServiceId: service.ServiceId,
+          ImageUrl: service.ImageUrl || null
+        });
+      }
     });
 
     // Sort config agencies by AgencyID
-    agencyConfig.Services.sort((a, b) => a.ServiceId - b.ServiceId);
+    agencyConfigServices.sort((a, b) => a.ServiceId - b.ServiceId);
+
+    // Remove services from config that are no longer in agencyData
+    const serviceIds = new Set(agencyConfigServices.map(a => a.ServiceId));
+    agencyConfigServices = agencyConfigServices.filter(s =>
+      serviceIds.has(s.ServiceId)
+    );
+
+    if (agencyConfigServices.length === 0) {
+      delete agencyConfig.Services;
+    } else {
+      agencyConfig.Services = agencyConfigServices;
+    }
   });
 
   // resave the config file
