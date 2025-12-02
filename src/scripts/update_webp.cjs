@@ -36,9 +36,9 @@ const processImages = async () => {
   await Promise.all(tasks);
 
   // run them sequentially
-  //for (const task of tasks) {
-  //  await task;
-  //}
+  // for (const task of tasks) {
+  //   await task;
+  // }
 };
 
 (async () => {
