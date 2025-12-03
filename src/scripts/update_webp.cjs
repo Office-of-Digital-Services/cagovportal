@@ -5,12 +5,14 @@ const fs = require("node:fs");
 
 const imagesFolder = "./src/images/";
 const config = require("./update_webp.config.json");
+const pngBackupSuffix = ".backup.png";
 
 const shouldExclude = (/** @type {string} */ file) => {
   return config.exclude.some(pattern => file.includes(pattern));
 };
 
 const processImages = async () => {
+  // Good quality WebP for web
   /** @type {sharp.WebpOptions} */
   const webpoptions = {
     quality: 50, // 0 (lowest) to 100 (highest)
@@ -22,12 +24,14 @@ const processImages = async () => {
     force: true
   };
 
+  // Low quality PNG for backup
   /** @type {sharp.PngOptions} */
   const pngoptions = {
-    quality: 50, // 0 (lowest) to 100 (highest)
-    effort: 6, // 1-10, default 7
+    quality: 1, // 0 (lowest) to 100 (highest)
+    effort: 10, // 1-10, default 7
     compressionLevel: 9, // 0 (fastest) to 9 (smallest)
-    adaptiveFiltering: true, // true or false
+    adaptiveFiltering: false, // true or false
+    dither: 0, // 0.0 (none) to 1.0 (full)
     force: true // always convert to png
   };
 
@@ -38,6 +42,7 @@ const processImages = async () => {
         file.toLowerCase().endsWith(".png") ||
         file.toLowerCase().endsWith(".jpg")
     )
+    .filter(file => !file.toLowerCase().endsWith(pngBackupSuffix)) // skip backup files
     .filter(file => !shouldExclude(file)); // apply exclusion
 
   // Map each file to a promise
@@ -46,6 +51,9 @@ const processImages = async () => {
     const outputFilePath = filePath.replace(/\.(png|jpg)$/i, ".webp");
 
     await sharp(filePath).webp(webpoptions).toFile(outputFilePath);
+    await sharp(filePath)
+      .png(pngoptions)
+      .toFile(outputFilePath.replace(/\.webp$/i, pngBackupSuffix));
     return console.log(`Converted: ${file}`);
   });
 
