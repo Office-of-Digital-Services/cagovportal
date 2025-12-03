@@ -54,6 +54,7 @@ const processImages = async () => {
     await sharp(filePath)
       .png(pngoptions)
       .toFile(outputFilePath.replace(/\.webp$/i, pngBackupSuffix));
+    fs.rmSync(filePath);
     return console.log(`Converted: ${file}`);
   });
 
