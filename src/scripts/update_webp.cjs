@@ -58,6 +58,13 @@ const processImages = async () => {
     return console.log(`Converted: ${file}`);
   });
 
+  if (tasks.length === 0) {
+    console.log("No images to process.");
+    return;
+  } else {
+    console.log(`Processing ${tasks.length} images...`);
+  }
+
   // Run them all in parallel
   await Promise.all(tasks);
 
@@ -70,7 +77,6 @@ const processImages = async () => {
 };
 
 (async () => {
-  console.log("Processing images...");
   console.time("Done");
   await processImages();
   console.timeEnd("Done");
