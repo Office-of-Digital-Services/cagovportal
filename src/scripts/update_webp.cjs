@@ -11,26 +11,39 @@ const shouldExclude = (/** @type {string} */ file) => {
 };
 
 const processImages = async () => {
+  /** @type {sharp.WebpOptions} */
+  const webpoptions = {
+    quality: 50, // 0 (lowest) to 100 (highest)
+    effort: 6, // 0 (fastest) to 6 (slowest)
+    alphaQuality: 50, // 0 (lowest) to 100 (highest),
+    lossless: false,
+    nearLossless: false,
+    smartSubsample: false,
+    force: true
+  };
+
+  /** @type {sharp.PngOptions} */
+  const pngoptions = {
+    quality: 50, // 0 (lowest) to 100 (highest)
+    effort: 6, // 1-10, default 7
+    compressionLevel: 9, // 0 (fastest) to 9 (smallest)
+    adaptiveFiltering: true, // true or false
+    force: true // always convert to png
+  };
+
   const files = fs
     .readdirSync(imagesFolder)
-    .filter(file => file.toLowerCase().endsWith(".png"))
+    .filter(
+      file =>
+        file.toLowerCase().endsWith(".png") ||
+        file.toLowerCase().endsWith(".jpg")
+    )
     .filter(file => !shouldExclude(file)); // apply exclusion
 
   // Map each file to a promise
   const tasks = files.map(async file => {
     const filePath = imagesFolder + file;
-    const outputFilePath = filePath.replace(/\.png$/i, ".webp");
-
-    /** @type {sharp.WebpOptions} */
-    const webpoptions = {
-      quality: 50, // 0 (lowest) to 100 (highest)
-      effort: 6, // 0 (fastest) to 6 (slowest)
-      alphaQuality: 50, // 0 (lowest) to 100 (highest),
-      lossless: false,
-      nearLossless: false,
-      smartSubsample: false,
-      force: true
-    };
+    const outputFilePath = filePath.replace(/\.(png|jpg)$/i, ".webp");
 
     await sharp(filePath).webp(webpoptions).toFile(outputFilePath);
     return console.log(`Converted: ${file}`);
