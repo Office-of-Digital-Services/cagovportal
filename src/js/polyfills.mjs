@@ -27,13 +27,16 @@ window.addEventListener("DOMContentLoaded", () => {
      * @param {(supported: boolean) => void} callback
      */
     const detectWebP = callback => {
+      // Base64-encoded 1x1 pixel WebP image
       const webpData = "UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=";
 
       // If createImageBitmap is supported, try that first
       if (typeof createImageBitmap === "function") {
         // Create a blob from the base64 string
-        const buffer = Uint8Array.from(atob(webpData), c => c.charCodeAt(0));
-        const blob = new Blob([buffer], { type: "image/webp" });
+        const blob = new Blob(
+          [Uint8Array.from(atob(webpData), c => c.charCodeAt(0))],
+          { type: "image/webp" }
+        );
 
         createImageBitmap(blob)
           .then(() => callback(true))
