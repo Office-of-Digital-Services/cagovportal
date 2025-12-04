@@ -1,5 +1,13 @@
 //@ts-check
 
+// Polyfills for older browsers
+// webp polyfill can use data-fallback-ext attribute on img elements to specify alternative extension
+// e.g., <img src="image.webp" data-fallback-ext="jpg" />
+// default fallback is .backup.png
+//
+// webp polyfill server can be specified with a meta tag:
+// <meta name="webp-polyfill-server" content="https://example.com/images/" />
+
 window.addEventListener("DOMContentLoaded", () => {
   //POLYFILL for CSS nesting
   if (!CSS.supports("selector(&)")) {
