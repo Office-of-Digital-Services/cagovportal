@@ -20,6 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (!webpImages.length) return;
 
   // Read meta tag for external server
+  /** @type {HTMLMetaElement | null} */
   const serverMeta = document.querySelector(
     'meta[name="webp-polyfill-server"]'
   );
@@ -55,10 +56,10 @@ window.addEventListener("DOMContentLoaded", () => {
           : defaultReplacement;
 
         // Extract filename only (strip directories)
-        const fileName = img.src
-          .split("/")
-          .pop()
-          .replace(/\.webp$/i, fallbackExt);
+        const fileName = (img.src.split("/").pop() || "").replace(
+          /\.webp$/i,
+          fallbackExt
+        );
 
         // Build new src
         const newSrc = serverPrefix
