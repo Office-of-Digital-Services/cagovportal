@@ -15,21 +15,22 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  //POLYFILL for WEBP to PNG
-  //POLYFILL for WEBP to PNG
-  const webP = new Image();
-  webP.onload = webP.onerror = function () {
-    if (webP.height !== 1) {
-      // Replace WEBP with PNG
+  /** @type {NodeListOf<HTMLImageElement>} */
+  const webpImages = document.querySelectorAll('img[src*=".webp" i]');
+  if (webpImages.length) {
+    //POLYFILL for WEBP to PNG
+    const webP = new Image();
+    webP.onload = webP.onerror = function () {
+      if (webP.height !== 1) {
+        // Replace WEBP with PNG
 
-      /** @type {NodeListOf<HTMLImageElement>} */ (
-        document.querySelectorAll('img[src*=".webp" i]')
-      ).forEach(img => {
-        img.src = img.src.replace(/\.webp/i, ".backup.png");
-      });
-      console.log("POLYFILL: Using PNG instead of WEBP");
-    }
-  };
-  webP.src =
-    "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=";
+        webpImages.forEach(img => {
+          img.src = img.src.replace(/\.webp$/i, ".backup.png");
+        });
+        console.log("POLYFILL: Using PNG instead of WEBP");
+      }
+    };
+    webP.src =
+      "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=";
+  }
 });
