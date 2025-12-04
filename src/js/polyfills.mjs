@@ -19,6 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
   /** @type {NodeListOf<HTMLImageElement>} */
   const webpImages = document.querySelectorAll('img[src*=".webp" i]');
   if (webpImages.length) {
+    // WebP images are present. Check for support
     const detectWebP = (/** @type {Function} */ callback) => {
       const webpData = "UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=";
 
@@ -36,6 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
           .catch(() => callback(false));
       } else {
         // Fallback: inline <img> test
+        // Safari 14.1 and older do not support createImageBitmap
         const img = new Image();
         img.onload = () => callback(img.height === 1);
         img.onerror = () => callback(false);
