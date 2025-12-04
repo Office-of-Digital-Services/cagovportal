@@ -56,7 +56,7 @@ const processImages = async () => {
     await sharpInstance
       .png(pngoptions)
       .toFile(outputFilePath.replace(/\.webp$/i, pngBackupSuffix));
-    //fs.rmSync(filePath);
+    fs.rmSync(filePath);
     return console.log(`Converted: ${file}`);
   });
 
