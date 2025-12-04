@@ -30,12 +30,14 @@ const webpoptions = {
 
 /** @type {sharp.ResizeOptions} */
 const serviceResizeOptions = {
+  // center and crop to square
   width: 300,
   height: 300
 };
 
 /** @type {sharp.ResizeOptions} */
 const agencyResizeOptions = {
+  // No height limit for agency logos
   width: 270
 };
 
