@@ -37,8 +37,9 @@ const serviceResizeOptions = {
 
 /** @type {sharp.ResizeOptions} */
 const agencyResizeOptions = {
-  // No height limit for agency logos
-  width: 270
+  // Only shrink images larger than 270px wide, don't enlarge smaller ones
+  width: 270,
+  withoutEnlargement: true
 };
 
 const fetchAndProcessImage = async (
