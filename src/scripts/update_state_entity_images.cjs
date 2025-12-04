@@ -9,10 +9,42 @@ const localImagesBasePath = "./src/images/sep/";
 //const imagesFolder = "./src/images/sep/";
 const config = require("./update_state_entity_images.config.json");
 
+const devFileLimit = 3;
+
 const agencyData =
   require("../../.cache/eleventy-fetch-214800724b89a699fb81d3366f424c.json").Data;
 const serviceData =
   require("../../.cache/eleventy-fetch-e4eda45ed3541c71e73bc83a531e83.json").Data;
+
+// Good quality WebP for web
+/** @type {sharp.WebpOptions} */
+const webpoptions = {
+  quality: 50, // 0 (lowest) to 100 (highest)
+  effort: 6, // 0 (fastest) to 6 (slowest)
+  alphaQuality: 50, // 0 (lowest) to 100 (highest),
+  lossless: false,
+  nearLossless: false,
+  smartSubsample: false,
+  force: true
+};
+
+const fetchAndProcessImage = async (/** @type {string} */ file) => {
+  const outputPath = `${localImagesBasePath}/${file}`.replace(
+    /\.(png|jpg|jpeg)$/,
+    ".webp"
+  );
+  try {
+    const res = await fetch(`${remoteImagesBaseUrl}${file}`);
+    if (!res.ok) throw new Error(`Failed to fetch image: ${res.statusText}`);
+    const buffer = await res.arrayBuffer();
+    return await sharp(Buffer.from(buffer))
+      .webp(webpoptions)
+      .resize(270)
+      .toFile(outputPath);
+  } catch (err) {
+    console.error(`Error processing image for ${file}:`, err);
+  }
+};
 
 const processImages = async () => {
   updateConfig();
@@ -20,34 +52,19 @@ const processImages = async () => {
   /** @type {Promise<any>[]} */
   let threadingTasks = [];
 
+  let fileCount = 0;
+
   config.Agencies.forEach(agency => {
+    if (fileCount++ >= devFileLimit) return;
+
     if (agency.LogoUrl) {
-      const fullLogoUrl = `${remoteImagesBaseUrl}${agency.LogoUrl}`;
-      const outputPath = `${localImagesBasePath}${agency.AgencyID}/${agency.LogoUrl}`;
-
-      // Ensure output directory exists
-      fs.mkdirSync(`${localImagesBasePath}${agency.AgencyID}`, {
-        recursive: true
-      });
-
-      threadingTasks.push(
-        fetch(fullLogoUrl)
-          .then(res => {
-            if (!res.ok)
-              throw new Error(`Failed to fetch image: ${res.statusText}`);
-            return res.arrayBuffer();
-          })
-          .then(buffer =>
-            sharp(Buffer.from(buffer)).resize(270).toFile(outputPath)
-          )
-          .catch(err => {
-            console.error(
-              `Error processing image for AgencyID ${agency.AgencyID}:`,
-              err
-            );
-          })
-      );
+      threadingTasks.push(fetchAndProcessImage(agency.LogoUrl));
     }
+    agency.Services?.forEach(service => {
+      if (service.ImageUrl) {
+        threadingTasks.push(fetchAndProcessImage(service.ImageUrl));
+      }
+    });
   });
 
   await Promise.all(threadingTasks);
