@@ -31,13 +31,12 @@ const webpoptions = {
 /** @type {sharp.ResizeOptions} */
 const serviceResizeOptions = {
   width: 300,
-  height: 300,
-  fit: sharp.fit.cover
+  height: 300
 };
 
 /** @type {sharp.ResizeOptions} */
 const agencyResizeOptions = {
-  width: 300
+  width: 270
 };
 
 const fetchAndProcessImage = async (
