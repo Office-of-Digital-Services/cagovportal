@@ -31,11 +31,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
       // If createImageBitmap is supported, try that first
       if (typeof createImageBitmap === "function") {
-        const binary = atob(webpData);
-        const buffer = new Uint8Array(binary.length);
-        for (let i = 0; i < binary.length; i++) {
-          buffer[i] = binary.charCodeAt(i);
-        }
+        // Create a blob from the base64 string
+        const buffer = Uint8Array.from(atob(webpData), c => c.charCodeAt(0));
         const blob = new Blob([buffer], { type: "image/webp" });
 
         createImageBitmap(blob)
