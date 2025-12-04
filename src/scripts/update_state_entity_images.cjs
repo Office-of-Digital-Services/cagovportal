@@ -9,7 +9,7 @@ const localImagesBasePath = "./src/images/sep/";
 //const imagesFolder = "./src/images/sep/";
 const config = require("./update_state_entity_images.config.json");
 
-const devFileLimit = 3;
+const devFileLimit = 3000;
 
 const agencyData =
   require("../../.cache/eleventy-fetch-214800724b89a699fb81d3366f424c.json").Data;
@@ -30,19 +30,25 @@ const webpoptions = {
 
 const fetchAndProcessImage = async (/** @type {string} */ file) => {
   const outputPath = `${localImagesBasePath}/${file}`.replace(
-    /\.(png|jpg|jpeg)$/,
+    /\.(png|jpg|jpeg|gif)$/i,
     ".webp"
   );
   try {
+    // skip if file already exists
+    if (fs.existsSync(outputPath)) {
+      return;
+    }
+
     const res = await fetch(`${remoteImagesBaseUrl}${file}`);
     if (!res.ok) throw new Error(`Failed to fetch image: ${res.statusText}`);
+    console.log(`Processing image: ${file}`);
     const buffer = await res.arrayBuffer();
     return await sharp(Buffer.from(buffer))
       .webp(webpoptions)
       .resize(270)
       .toFile(outputPath);
   } catch (err) {
-    console.error(`Error processing image for ${file}:`, err);
+    console.error(`Error processing image`, err);
   }
 };
 
