@@ -20,7 +20,10 @@ window.addEventListener("DOMContentLoaded", () => {
   const webpImages = document.querySelectorAll('img[src*=".webp" i]');
   if (webpImages.length) {
     // WebP images are present. Check for support
-    const detectWebP = (/** @type {Function} */ callback) => {
+    /**
+     * @param {(supported: boolean) => void} callback
+     */
+    const detectWebP = callback => {
       const webpData = "UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=";
 
       // If createImageBitmap is supported, try that first
@@ -45,7 +48,7 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     };
 
-    detectWebP((/** @type {boolean} */ supported) => {
+    detectWebP(supported => {
       if (!supported) {
         webpImages.forEach(img => {
           if (!img.src.endsWith(".backup.png")) {
