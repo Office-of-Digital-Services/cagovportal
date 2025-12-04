@@ -32,7 +32,8 @@ const webpoptions = {
 const serviceResizeOptions = {
   // center and crop to square
   width: 300,
-  height: 300
+  height: 300,
+  withoutEnlargement: true
 };
 
 /** @type {sharp.ResizeOptions} */
