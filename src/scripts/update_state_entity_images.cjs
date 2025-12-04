@@ -9,8 +9,6 @@ const localImagesBasePath = "./src/images/sep/";
 //const imagesFolder = "./src/images/sep/";
 const config = require("./update_state_entity_images.config.json");
 
-const devFileLimit = 3000;
-
 const agencyData =
   require("../../.cache/eleventy-fetch-214800724b89a699fb81d3366f424c.json").Data;
 const serviceData =
@@ -74,13 +72,9 @@ const processImages = async () => {
   updateConfig();
 
   /** @type {Promise<any>[]} */
-  let threadingTasks = [];
-
-  let fileCount = 0;
+  const threadingTasks = [];
 
   config.Agencies.forEach(agency => {
-    if (fileCount++ >= devFileLimit) return;
-
     if (agency.LogoUrl) {
       threadingTasks.push(
         fetchAndProcessImage(agency.LogoUrl, agencyResizeOptions)
