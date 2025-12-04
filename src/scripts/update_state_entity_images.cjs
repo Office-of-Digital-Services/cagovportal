@@ -52,7 +52,7 @@ const fetchAndProcessImage = async (
       return;
     }
 
-    const res = await fetch(`${remoteImagesBaseUrl}${file}`);
+    const res = await fetch(remoteImagesBaseUrl + file);
     if (!res.ok) throw new Error(`Failed to fetch image: ${res.statusText}`);
     console.log(`Processing image: ${file}`);
     const buffer = await res.arrayBuffer();
