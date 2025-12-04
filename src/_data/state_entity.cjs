@@ -82,6 +82,7 @@ module.exports = async function () {
     }
 
     if (item.LogoUrl) {
+      item["LogoExt"] = item.LogoUrl.match(/\.(\w+)$/i)[1];
       item["LogoPath"] =
         `/images/sep/${item.LogoUrl.replace(/\.(png|jpg|jpeg|gif)$/i, ".webp")}`;
     }
@@ -126,6 +127,7 @@ module.exports = async function () {
     if (item.ImageUrl) {
       item["ImagePath"] =
         `/images/sep/${item.ImageUrl.replace(/\.(png|jpg|jpeg|gif)$/i, ".webp")}`;
+      item["ImageExt"] = item.ImageUrl.match(/\.(\w+)$/i)[1];
     }
 
     item["structuredData"] = {

@@ -19,6 +19,10 @@
 <script src="/js/data_agency.min.js?dv{% DateHex %}"></script>
 {% endif -%} {%- if data_service %}
 <script src="/js/data_service.min.js?dv{% DateHex %}"></script>
+{% endif -%} {%- if use_sep_webp_fallback %}
+<meta
+  name="webp-polyfill-server"
+  content="https://stateentityprofile.ca.gov/Uploads/" />
 {% endif -%}
 
 <!-- Site icons -->

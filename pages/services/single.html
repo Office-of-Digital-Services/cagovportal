@@ -3,6 +3,7 @@ landing: Services
 layout: landing
 breadcrumbparent: Services
 sitemap: service
+use_sep_webp_fallback: true
 pagination:
     data: state_entity.services
     size: 1
@@ -40,6 +41,7 @@ eleventyComputed:
         <div class="pos-rel">
           <img
             src="{{item.ImagePath}}"
+            data-fallback-ext="{{ item.ImageExt }}"
             loading="lazy"
             crossorigin="anonymous"
             class="rounded-circle service-img width-300 height-300 pos-abs right-sm d-none d-lg-block"

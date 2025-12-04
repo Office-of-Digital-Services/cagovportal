@@ -21,8 +21,6 @@ window.addEventListener("DOMContentLoaded", () => {
   if (webpImages.length) {
     // WebP images are present. Check for support
 
-    const replacementString = ".backup.png";
-
     /**
      * @param {(supported: boolean) => void} callback
      */
@@ -54,7 +52,11 @@ window.addEventListener("DOMContentLoaded", () => {
     detectWebP(supported => {
       if (!supported) {
         webpImages.forEach(img => {
-          img.src = img.src.replace(/\.webp$/i, replacementString);
+          const fallbackExt = img.dataset.fallbackExt
+            ? `.${img.dataset.fallbackExt}`
+            : ".backup.png";
+
+          img.src = img.src.replace(/\.webp$/i, fallbackExt);
         });
         console.log("POLYFILL: Using PNG instead of WEBP");
       }
