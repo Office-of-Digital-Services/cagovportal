@@ -6,9 +6,6 @@ const fs = require("node:fs");
 const remoteImagesBaseUrl = "https://stateentityprofile.ca.gov/Uploads/";
 const localImagesBasePath = "./src/images/sep/";
 
-//const imagesFolder = "./src/images/sep/";
-const config = require("./update_state_entity_images.config.json");
-
 const agencyData =
   require("../../.cache/eleventy-fetch-214800724b89a699fb81d3366f424c.json").Data;
 const serviceData =
@@ -69,93 +66,26 @@ const fetchAndProcessImage = async (
 };
 
 const processImages = async () => {
-  updateConfig();
-
   /** @type {Promise<any>[]} */
   const threadingTasks = [];
 
-  config.Agencies.forEach(agency => {
+  agencyData.forEach(agency => {
     if (agency.LogoUrl) {
       threadingTasks.push(
         fetchAndProcessImage(agency.LogoUrl, agencyResizeOptions)
       );
     }
-    agency.Services?.forEach(service => {
-      if (service.ImageUrl) {
-        threadingTasks.push(
-          fetchAndProcessImage(service.ImageUrl, serviceResizeOptions)
-        );
-      }
-    });
+  });
+
+  serviceData.forEach(service => {
+    if (service.ImageUrl) {
+      threadingTasks.push(
+        fetchAndProcessImage(service.ImageUrl, serviceResizeOptions)
+      );
+    }
   });
 
   await Promise.all(threadingTasks);
-};
-
-const updateConfig = () => {
-  agencyData.forEach(agency => {
-    // Check if agency is in config, if not, add it
-    let agencyConfig = config.Agencies.find(
-      a => a.AgencyID === agency.AgencyId
-    );
-    if (!agencyConfig) {
-      agencyConfig = { AgencyID: agency.AgencyId, LogoUrl: null };
-      config.Agencies.push(agencyConfig);
-    }
-    agencyConfig.LogoUrl = agency.LogoUrl;
-  });
-
-  // Sort config agencies by AgencyID
-  config.Agencies.sort((a, b) => a.AgencyID - b.AgencyID);
-
-  // Remove agencies from config that are no longer in agencyData
-  // Filter configAgencies to only include agencies present in agencyData
-  const agencyIds = new Set(agencyData.map(a => a.AgencyId));
-  config.Agencies = config.Agencies.filter(a => agencyIds.has(a.AgencyID));
-
-  // add services as children to their parent agencies
-  config.Agencies.forEach(agencyConfig => {
-    const filteredServices = serviceData.filter(
-      s => s.AgencyId === agencyConfig.AgencyID
-    );
-
-    let agencyConfigServices = agencyConfig.Services || [];
-
-    filteredServices.forEach(service => {
-      // Check if service is in config, if not, add it
-      let selectedService = agencyConfigServices.find(
-        s => s.ServiceId === service.ServiceId
-      );
-
-      if (!selectedService) {
-        selectedService = { ServiceId: service.ServiceId, ImageUrl: null };
-        agencyConfigServices.push(selectedService);
-      }
-
-      selectedService.ImageUrl = service.ImageUrl;
-    });
-
-    // Sort config agencies by AgencyID
-    agencyConfigServices.sort((a, b) => a.ServiceId - b.ServiceId);
-
-    // Remove services from config that are no longer in agencyData
-    const serviceIds = new Set(agencyConfigServices.map(a => a.ServiceId));
-    agencyConfigServices = agencyConfigServices.filter(s =>
-      serviceIds.has(s.ServiceId)
-    );
-
-    if (agencyConfigServices.length === 0) {
-      delete agencyConfig.Services;
-    } else {
-      agencyConfig.Services = agencyConfigServices;
-    }
-  });
-
-  // resave the config file
-  fs.writeFileSync(
-    "./src/scripts/update_state_entity_images.config.json",
-    JSON.stringify(config, null, 2)
-  );
 };
 
 (async () => {
