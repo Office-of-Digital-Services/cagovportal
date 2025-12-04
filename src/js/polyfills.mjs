@@ -15,22 +15,43 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // POLYFILL for WEBP images
   /** @type {NodeListOf<HTMLImageElement>} */
   const webpImages = document.querySelectorAll('img[src*=".webp" i]');
   if (webpImages.length) {
-    //POLYFILL for WEBP to PNG
-    const webP = new Image();
-    webP.onload = webP.onerror = function () {
-      if (webP.height !== 1) {
-        // Replace WEBP with PNG
+    const detectWebP = (/** @type {Function} */ callback) => {
+      const webpData = "UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=";
 
+      // If createImageBitmap is supported, try that first
+      if (typeof createImageBitmap === "function") {
+        const binary = atob(webpData);
+        const buffer = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) {
+          buffer[i] = binary.charCodeAt(i);
+        }
+        const blob = new Blob([buffer], { type: "image/webp" });
+
+        createImageBitmap(blob)
+          .then(() => callback(true))
+          .catch(() => callback(false));
+      } else {
+        // Fallback: inline <img> test
+        const img = new Image();
+        img.onload = () => callback(img.height === 1);
+        img.onerror = () => callback(false);
+        img.src = `data:image/webp;base64,${webpData}`;
+      }
+    };
+
+    detectWebP((/** @type {boolean} */ supported) => {
+      if (!supported) {
         webpImages.forEach(img => {
-          img.src = img.src.replace(/\.webp$/i, ".backup.png");
+          if (!img.src.endsWith(".backup.png")) {
+            img.src = img.src.replace(/\.webp$/i, ".backup.png");
+          }
         });
         console.log("POLYFILL: Using PNG instead of WEBP");
       }
-    };
-    webP.src =
-      "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=";
+    });
   }
 });
