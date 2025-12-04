@@ -81,6 +81,11 @@ module.exports = async function () {
       socialLinks.push(`https://www.youtube.com/${item.YouTube}`);
     }
 
+    if (item.LogoUrl) {
+      item["LogoPath"] =
+        `/images/sep/${item.LogoUrl.replace(/\.(png|jpg|jpeg|gif)$/i, ".webp")}`;
+    }
+
     item["structuredData"] = {
       "@context": "https://schema.org",
       "@type": "GovernmentOrganization",
@@ -117,6 +122,11 @@ module.exports = async function () {
     const provider = results.agencies.find(
       x => x.AgencyId === item.AgencyId
     )?.structuredData;
+
+    if (item.ImageUrl) {
+      item["ImagePath"] =
+        `/images/sep/${item.ImageUrl.replace(/\.(png|jpg|jpeg|gif)$/i, ".webp")}`;
+    }
 
     item["structuredData"] = {
       "@context": "https://schema.org",

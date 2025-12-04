@@ -48,9 +48,9 @@ endfor %} {%- endfor -%}
 <div class="container p-y-lg">
   <div class="row">
     <div class="col-lg-3 pb-lg-5">
-      {% if item.LogoUrl %}
+      {% if item.LogoPath %}
       <img
-        src="{{item.structuredData.logo}}"
+        src="{{item.LogoPath}}"
         class="img-fluid sticky-6 square"
         crossorigin="anonymous"
         style="object-fit: contain;"

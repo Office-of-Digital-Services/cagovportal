@@ -36,10 +36,10 @@ eleventyComputed:
         </p>
       </div>
       <div class="col-lg-5">
-        {% if item.ImageUrl %}
+        {% if item.ImagePath %}
         <div class="pos-rel">
           <img
-            src="https://stateentityprofile.ca.gov/Uploads/{{item.ImageUrl}}"
+            src="{{item.ImagePath}}"
             loading="lazy"
             crossorigin="anonymous"
             class="rounded-circle service-img width-300 height-300 pos-abs right-sm d-none d-lg-block"

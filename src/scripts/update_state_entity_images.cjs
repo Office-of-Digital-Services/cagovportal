@@ -28,7 +28,22 @@ const webpoptions = {
   force: true
 };
 
-const fetchAndProcessImage = async (/** @type {string} */ file) => {
+/** @type {sharp.ResizeOptions} */
+const serviceResizeOptions = {
+  width: 300,
+  height: 300,
+  fit: sharp.fit.cover
+};
+
+/** @type {sharp.ResizeOptions} */
+const agencyResizeOptions = {
+  width: 300
+};
+
+const fetchAndProcessImage = async (
+  /** @type {string} */ file,
+  /** @type {sharp.ResizeOptions} */ resizeOptions
+) => {
   const outputPath = `${localImagesBasePath}/${file}`.replace(
     /\.(png|jpg|jpeg|gif)$/i,
     ".webp"
@@ -45,7 +60,7 @@ const fetchAndProcessImage = async (/** @type {string} */ file) => {
     const buffer = await res.arrayBuffer();
     return await sharp(Buffer.from(buffer))
       .webp(webpoptions)
-      .resize(270)
+      .resize(resizeOptions)
       .toFile(outputPath);
   } catch (err) {
     console.error(`Error processing image`, err);
@@ -64,11 +79,15 @@ const processImages = async () => {
     if (fileCount++ >= devFileLimit) return;
 
     if (agency.LogoUrl) {
-      threadingTasks.push(fetchAndProcessImage(agency.LogoUrl));
+      threadingTasks.push(
+        fetchAndProcessImage(agency.LogoUrl, agencyResizeOptions)
+      );
     }
     agency.Services?.forEach(service => {
       if (service.ImageUrl) {
-        threadingTasks.push(fetchAndProcessImage(service.ImageUrl));
+        threadingTasks.push(
+          fetchAndProcessImage(service.ImageUrl, serviceResizeOptions)
+        );
       }
     });
   });
