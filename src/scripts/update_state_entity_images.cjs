@@ -33,14 +33,14 @@ const serviceResizeOptions = {
   // center and crop to square
   width: 300,
   height: 300,
-  withoutEnlargement: true
+  withoutEnlargement: true // Don't add pixels to small images
 };
 
 /** @type {sharp.ResizeOptions} */
 const agencyResizeOptions = {
-  // Only shrink images larger than 270px wide, don't enlarge smaller ones
+  // unlimited height, max width 270
   width: 270,
-  withoutEnlargement: true
+  withoutEnlargement: true // Don't add pixels to small images
 };
 
 const fetchAndProcessImage = async (
