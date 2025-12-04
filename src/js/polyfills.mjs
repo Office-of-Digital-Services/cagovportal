@@ -20,6 +20,9 @@ window.addEventListener("DOMContentLoaded", () => {
   const webpImages = document.querySelectorAll('img[src*=".webp" i]');
   if (webpImages.length) {
     // WebP images are present. Check for support
+
+    const replacementString = ".backup.png";
+
     /**
      * @param {(supported: boolean) => void} callback
      */
@@ -51,9 +54,7 @@ window.addEventListener("DOMContentLoaded", () => {
     detectWebP(supported => {
       if (!supported) {
         webpImages.forEach(img => {
-          if (!img.src.endsWith(".backup.png")) {
-            img.src = img.src.replace(/\.webp$/i, ".backup.png");
-          }
+          img.src = img.src.replace(/\.webp$/i, replacementString);
         });
         console.log("POLYFILL: Using PNG instead of WEBP");
       }
