@@ -1,5 +1,13 @@
 //@ts-check
 
+// Polyfills for older browsers
+// webp polyfill can use data-fallback-ext attribute on img elements to specify alternative extension
+// e.g., <img src="image.webp" data-fallback-ext="jpg" />
+// default fallback is .backup.png
+//
+// webp polyfill server can be specified with a meta tag:
+// <meta name="webp-polyfill-server" content="https://example.com/images/" />
+
 window.addEventListener("DOMContentLoaded", () => {
   //POLYFILL for CSS nesting
   if (!CSS.supports("selector(&)")) {
@@ -15,49 +23,63 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // POLYFILL for WEBP images
   /** @type {NodeListOf<HTMLImageElement>} */
   const webpImages = document.querySelectorAll('img[src*=".webp" i]');
-  if (webpImages.length) {
-    // WebP images are present. Check for support
+  if (!webpImages.length) return;
 
-    const replacementString = ".backup.png";
+  // Read meta tag for external server
+  /** @type {HTMLMetaElement | null} */
+  const serverMeta = document.querySelector(
+    'meta[name="webp-polyfill-server"]'
+  );
+  const serverPrefix = serverMeta ? serverMeta.content : "";
 
-    /**
-     * @param {(supported: boolean) => void} callback
-     */
-    const detectWebP = callback => {
-      // Base64-encoded 1x1 pixel WebP image
+  const defaultReplacement = ".backup.png";
+
+  const detectWebP = () =>
+    new Promise(resolve => {
       const webpData = "UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=";
-
-      // If createImageBitmap is supported, try that first
       if (typeof createImageBitmap === "function") {
-        // Create a blob from the base64 string
         const blob = new Blob(
           [Uint8Array.from(atob(webpData), c => c.charCodeAt(0))],
           { type: "image/webp" }
         );
-
         createImageBitmap(blob)
-          .then(() => callback(true))
-          .catch(() => callback(false));
+          .then(() => resolve(true))
+          .catch(() => resolve(false));
       } else {
-        // Fallback: inline <img> test
-        // Safari 14.1 and older do not support createImageBitmap
         const img = new Image();
-        img.onload = () => callback(img.height === 1);
-        img.onerror = () => callback(false);
+        img.onload = () => resolve(img.height === 1);
+        img.onerror = () => resolve(false);
         img.src = `data:image/webp;base64,${webpData}`;
       }
-    };
-
-    detectWebP(supported => {
-      if (!supported) {
-        webpImages.forEach(img => {
-          img.src = img.src.replace(/\.webp$/i, replacementString);
-        });
-        console.log("POLYFILL: Using PNG instead of WEBP");
-      }
     });
-  }
+
+  detectWebP().then(supported => {
+    if (!supported) {
+      webpImages.forEach(img => {
+        // Decide fallback extension
+        const fallbackExt = img.dataset.fallbackExt
+          ? `.${img.dataset.fallbackExt}`
+          : defaultReplacement;
+
+        // Extract filename only (strip directories)
+        const fileName = (img.src.split("/").pop() || "").replace(
+          /\.webp$/i,
+          fallbackExt
+        );
+
+        // Build new src
+        const newSrc = serverPrefix
+          ? serverPrefix + fileName
+          : img.src.replace(/\.webp$/i, fallbackExt);
+
+        if (img.src !== newSrc) {
+          img.src = newSrc;
+        }
+      });
+
+      console.log("POLYFILL: Using fallback images instead of WEBP");
+    }
+  });
 });

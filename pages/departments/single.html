@@ -3,6 +3,7 @@ landing: Departments
 layout: landing
 breadcrumbparent: Departments
 sitemap: agency
+use_sep_webp_fallback: true
 pagination:
     data: state_entity.agencies
     size: 1
@@ -48,9 +49,10 @@ endfor %} {%- endfor -%}
 <div class="container p-y-lg">
   <div class="row">
     <div class="col-lg-3 pb-lg-5">
-      {% if item.LogoUrl %}
+      {% if item.LogoPath %}
       <img
-        src="{{item.structuredData.logo}}"
+        src="{{item.LogoPath}}"
+        data-fallback-ext="{{ item.LogoExt }}"
         class="img-fluid sticky-6 square"
         crossorigin="anonymous"
         style="object-fit: contain;"
