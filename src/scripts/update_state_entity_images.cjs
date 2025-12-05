@@ -38,6 +38,8 @@ const agencyResizeOptions = {
   withoutEnlargement: true // Don't add pixels to small images
 };
 
+let processedCount = 0;
+
 const fetchAndProcessImage = async (
   /** @type {string} */ file,
   /** @type {sharp.ResizeOptions} */ resizeOptions
@@ -51,6 +53,8 @@ const fetchAndProcessImage = async (
     if (fs.existsSync(outputPath)) {
       return;
     }
+
+    processedCount++;
 
     const res = await fetch(remoteImagesBaseUrl + file);
     if (!res.ok) throw new Error(`Failed to fetch image: ${res.statusText}`);
@@ -86,10 +90,14 @@ const processImages = async () => {
   });
 
   await Promise.all(threadingTasks);
+  if (processedCount === 0) {
+    console.log("No new images to process.");
+  } else {
+    console.log(`Processed ${processedCount} images.`);
+  }
 };
 
 (async () => {
-  console.log("Processing images...");
   console.time("Done");
   await processImages();
   console.timeEnd("Done");
