@@ -1,6 +1,9 @@
 //@ts-check
-
+const fs = require("node:fs");
 const EleventyFetch = require("@11ty/eleventy-fetch");
+const sepImagePath = "/images/sep/";
+const sepImagePolyfillPath = "https://stateentityprofile.ca.gov/Uploads/";
+const sepImageFolder = "./src/images/sep/";
 
 module.exports = async function () {
   const cleanup = (/** @type {string} */ s) =>
@@ -25,6 +28,7 @@ module.exports = async function () {
     if (obj && typeof obj === "object") {
       Object.keys(obj).forEach(key => {
         if (typeof obj[key] === "object") {
+          // @ts-ignore
           trimObjectProperties(obj[key]);
         } else if (typeof obj[key] === "string") {
           obj[key] = obj[key].trim();
@@ -58,6 +62,8 @@ module.exports = async function () {
     qa: /** @type {*[]} */ (returns[2])
   };
 
+  const sepWebpImages = fs.readdirSync(sepImageFolder);
+
   results.qa.sort((a, b) => a.Id - b.Id);
 
   results.agencies.forEach(item => {
@@ -81,6 +87,23 @@ module.exports = async function () {
       socialLinks.push(`https://www.youtube.com/${item.YouTube}`);
     }
 
+    if (item.LogoUrl) {
+      item["LogoExt"] = item.LogoUrl.match(/\.(\w+)$/i)[1];
+      const webpImageName = item.LogoUrl.replace(
+        /\.(png|jpg|jpeg|gif)$/i,
+        ".webp"
+      );
+
+      if (sepWebpImages.includes(webpImageName)) {
+        item["LogoPath"] = `${sepImagePath}${webpImageName}`;
+      } else {
+        item["LogoPath"] = `${sepImagePolyfillPath}${item.LogoUrl}`;
+        console.log(
+          `Missing SEP webp logo for Agency ${item.LogoUrl}. -> Use "npm run update_state_entity_images"`
+        );
+      }
+    }
+
     item["structuredData"] = {
       "@context": "https://schema.org",
       "@type": "GovernmentOrganization",
@@ -88,7 +111,7 @@ module.exports = async function () {
       description: item.Description,
       url: item.WebsiteURL,
       logo: item.LogoUrl
-        ? `https://stateentityprofile.ca.gov/Uploads/${encodeURIComponent(item.LogoUrl)}`
+        ? `https://www.ca.gov/images/sep/${encodeURIComponent(item["LogoPath"])}`
         : undefined,
 
       areaServed: {
@@ -117,6 +140,23 @@ module.exports = async function () {
     const provider = results.agencies.find(
       x => x.AgencyId === item.AgencyId
     )?.structuredData;
+
+    if (item.ImageUrl) {
+      item["ImageExt"] = item.ImageUrl.match(/\.(\w+)$/i)[1];
+      const webpImageName = item.ImageUrl.replace(
+        /\.(png|jpg|jpeg|gif)$/i,
+        ".webp"
+      );
+
+      if (sepWebpImages.includes(webpImageName)) {
+        item["ImagePath"] = `${sepImagePath}${webpImageName}`;
+      } else {
+        item["ImagePath"] = `${sepImagePolyfillPath}${item.ImageUrl}`;
+        console.log(
+          `Missing SEP webp logo for Service - ${item.ImageUrl}. Run update_state_entity_images.`
+        );
+      }
+    }
 
     item["structuredData"] = {
       "@context": "https://schema.org",
