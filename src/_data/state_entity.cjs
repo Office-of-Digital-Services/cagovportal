@@ -2,8 +2,10 @@
 const fs = require("node:fs");
 const EleventyFetch = require("@11ty/eleventy-fetch");
 const sepImagePath = "/images/sep/";
-const sepImagePolyfillPath = "https://stateentityprofile.ca.gov/Uploads/";
-const sepImageFolder = "./src/images/sep/";
+const sharp = require("sharp");
+
+const remoteImagesBaseUrl = "https://stateentityprofile.ca.gov/Uploads/";
+const localImagesBasePath = "./src/images/sep/";
 
 module.exports = async function () {
   const cleanup = (/** @type {string} */ s) =>
@@ -43,6 +45,7 @@ module.exports = async function () {
     "https://api.stateentityprofile.ca.gov/GetFaqsByServiceIds?lang=en"
   ];
 
+  console.time("Fetching entity data");
   const returns = await Promise.all(
     urls.map(u =>
       EleventyFetch(u, {
@@ -55,14 +58,107 @@ module.exports = async function () {
       })
     )
   );
+  console.timeEnd("Fetching entity data");
 
   const results = {
     agencies: /** @type {*[]} */ (returns[0].Data),
     services: /** @type {*[]} */ (returns[1].Data),
-    qa: /** @type {*[]} */ (returns[2])
+    qa: /** @type {*[]} */ (returns[2]),
+    state_entity_client_filter: /** @type {{agency: *[], service: *[]}} */ ({
+      agency: [],
+      service: []
+    })
   };
 
-  const sepWebpImages = fs.readdirSync(sepImageFolder);
+  // Now download and process images
+
+  // Good quality WebP for web
+  /** @type {sharp.WebpOptions} */
+  const webpoptions = {
+    quality: 50, // 0 (lowest) to 100 (highest)
+    effort: 6, // 0 (fastest) to 6 (slowest)
+    alphaQuality: 50, // 0 (lowest) to 100 (highest),
+    lossless: false,
+    nearLossless: false,
+    smartSubsample: false,
+    force: true
+  };
+
+  /** @type {sharp.ResizeOptions} */
+  const serviceResizeOptions = {
+    // center and crop to square
+    width: 300,
+    height: 300,
+    withoutEnlargement: true // Don't add pixels to small images
+  };
+
+  /** @type {sharp.ResizeOptions} */
+  const agencyResizeOptions = {
+    // unlimited height, max width 270
+    width: 270,
+    withoutEnlargement: true // Don't add pixels to small images
+  };
+
+  let processedCount = 0;
+
+  const fetchAndProcessImage = async (
+    /** @type {string} */ file,
+    /** @type {sharp.ResizeOptions} */ resizeOptions
+  ) => {
+    const outputPath = `${localImagesBasePath}/${file}`.replace(
+      /\.(png|jpg|jpeg|gif)$/i,
+      ".webp"
+    );
+    try {
+      // skip if file already exists
+      if (fs.existsSync(outputPath)) {
+        return;
+      }
+
+      processedCount++;
+
+      const res = await fetch(remoteImagesBaseUrl + file);
+      if (!res.ok) throw new Error(`Failed to fetch image: ${res.statusText}`);
+      console.log(`Processing image: ${file}`);
+      const buffer = await res.arrayBuffer();
+      return await sharp(Buffer.from(buffer))
+        .webp(webpoptions)
+        .resize(resizeOptions)
+        .toFile(outputPath);
+    } catch (err) {
+      console.error(`Error processing image`, err);
+    }
+  };
+
+  const processImages = async () => {
+    /** @type {Promise<any>[]} */
+    const threadingTasks = [];
+
+    results.agencies.forEach(agency => {
+      if (agency.LogoUrl) {
+        threadingTasks.push(
+          fetchAndProcessImage(agency.LogoUrl, agencyResizeOptions)
+        );
+      }
+    });
+
+    results.services.forEach(service => {
+      if (service.ImageUrl) {
+        threadingTasks.push(
+          fetchAndProcessImage(service.ImageUrl, serviceResizeOptions)
+        );
+      }
+    });
+
+    await Promise.all(threadingTasks);
+    if (processedCount !== 0) {
+      console.log(`Processed ${processedCount} images.`);
+    }
+  };
+
+  console.time("Image Processing");
+  await processImages();
+  console.timeEnd("Image Processing");
 
   results.qa.sort((a, b) => a.Id - b.Id);
 
@@ -94,14 +190,7 @@ module.exports = async function () {
         ".webp"
       );
 
-      if (sepWebpImages.includes(webpImageName)) {
-        item["LogoPath"] = `${sepImagePath}${webpImageName}`;
-      } else {
-        item["LogoPath"] = `${sepImagePolyfillPath}${item.LogoUrl}`;
-        console.log(
-          `Missing SEP webp logo for Agency ${item.LogoUrl}. -> Use "npm run update_state_entity_images"`
-        );
-      }
+      item["LogoPath"] = `${sepImagePath}${webpImageName}`;
     }
 
     item["structuredData"] = {
@@ -148,14 +237,7 @@ module.exports = async function () {
         ".webp"
       );
 
-      if (sepWebpImages.includes(webpImageName)) {
-        item["ImagePath"] = `${sepImagePath}${webpImageName}`;
-      } else {
-        item["ImagePath"] = `${sepImagePolyfillPath}${item.ImageUrl}`;
-        console.log(
-          `Missing SEP webp logo for Service - ${item.ImageUrl}. Run update_state_entity_images.`
-        );
-      }
+      item["ImagePath"] = `${sepImagePath}${webpImageName}`;
     }
 
     item["structuredData"] = {
@@ -204,6 +286,28 @@ module.exports = async function () {
       };
     }
   });
+
+  //Filtered data for client side use
+  results.state_entity_client_filter = {
+    agency: results.agencies.map(x => ({
+      AgencyId: x.AgencyId,
+      AgencyFullName: x.AgencyFullName,
+      AgencyTags: x.AgencyTags,
+      Description: x.Description,
+      Keywords: x.Keywords
+    })),
+    service: results.services.map(x => ({
+      AgencyId: x.AgencyId,
+      ServiceId: x.ServiceId,
+      Description: x.Description,
+      Keywords: x.Keywords,
+      ServiceName: x.ServiceName,
+      ServiceType: x.ServiceType,
+      AgencyTags: x.AgencyTags,
+      AgencyName: x.AgencyName,
+      RelatedSearchTerms: x.RelatedSearchTerms
+    }))
+  };
 
   return results;
 };
