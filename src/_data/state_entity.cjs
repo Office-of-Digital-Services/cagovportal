@@ -63,7 +63,11 @@ module.exports = async function () {
   const results = {
     agencies: /** @type {*[]} */ (returns[0].Data),
     services: /** @type {*[]} */ (returns[1].Data),
-    qa: /** @type {*[]} */ (returns[2])
+    qa: /** @type {*[]} */ (returns[2]),
+    state_entity_client_filter: /** @type {{agency: *[], service: *[]}} */ ({
+      agency: [],
+      service: []
+    })
   };
 
   // Now download and process images
@@ -282,6 +286,28 @@ module.exports = async function () {
       };
     }
   });
+
+  //Filtered data for client side use
+  results.state_entity_client_filter = {
+    agency: results.agencies.map(x => ({
+      AgencyId: x.AgencyId,
+      AgencyFullName: x.AgencyFullName,
+      AgencyTags: x.AgencyTags,
+      Description: x.Description,
+      Keywords: x.Keywords
+    })),
+    service: results.services.map(x => ({
+      AgencyId: x.AgencyId,
+      ServiceId: x.ServiceId,
+      Description: x.Description,
+      Keywords: x.Keywords,
+      ServiceName: x.ServiceName,
+      ServiceType: x.ServiceType,
+      AgencyTags: x.AgencyTags,
+      AgencyName: x.AgencyName,
+      RelatedSearchTerms: x.RelatedSearchTerms
+    }))
+  };
 
   return results;
 };
