@@ -10,6 +10,11 @@ noindex_follow: true
 data_agency: true
 ---
 
+<style>
+  div.dep-image-wrapper > img.img-fluid {
+     object-fit: contain;
+  }
+</style>
 <div
   class="section-understated lineart bg-s1"
   style="background: url('/images/departments-lineart.svg?v2evjhb') no-repeat right / auto;">
@@ -41,7 +46,6 @@ data_agency: true
           class="height-50 brd-solid-1 brd-color-light rounded flex-grow-1 p-x webkit-appearance-none" />
       </div>
       <div class="p-b-lg">{%-include "side-filters.html"-%}</div>
-
       <cagovhome-filterlist
         data-search-input-id="searchbox"
         data-result-count-query=".items-count"
@@ -54,11 +58,9 @@ data_agency: true
           <div class="d-flex">
             <div class="dep-image-wrapper">
               <img
-                src="{{ agency.LogoPath if agency.LogoPath else 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='}}"
+                src="{{ agency.LogoPath if agency.LogoPath else 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+X+1cAAAAASUVORK5CYII='}}"
                 data-fallback-ext="{{ agency.LogoExt }}"
                 class="img-fluid"
-                style="aspect-ratio: 1; object-fit: contain;"
-                crossorigin="anonymous"
                 loading="lazy"
                 alt="{{agency.FriendlyName}} logo" />
             </div>

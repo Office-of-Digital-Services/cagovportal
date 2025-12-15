@@ -99,7 +99,7 @@ module.exports = async function () {
       } else {
         item["LogoPath"] = `${sepImagePolyfillPath}${item.LogoUrl}`;
         console.log(
-          `Missing SEP webp logo for Agency ${item.LogoUrl}. Run update_state_entity_images`
+          `Missing SEP webp logo for Agency ${item.LogoUrl}. -> Use "npm run update_state_entity_images"`
         );
       }
     }
