@@ -6,6 +6,7 @@ const sharp = require("sharp");
 
 const remoteImagesBaseUrl = "https://stateentityprofile.ca.gov/Uploads/";
 const localImagesBasePath = "./src/images/sep/";
+const localImagesBasePathPassThru = "./_site/images/sep/";
 
 module.exports = async function () {
   const cleanup = (/** @type {string} */ s) =>
@@ -121,10 +122,17 @@ module.exports = async function () {
       if (!res.ok) throw new Error(`Failed to fetch image: ${res.statusText}`);
       console.log(`Processing image: ${file}`);
       const buffer = await res.arrayBuffer();
-      return await sharp(Buffer.from(buffer))
+      await sharp(Buffer.from(buffer))
         .webp(webpoptions)
         .resize(resizeOptions)
         .toFile(outputPath);
+
+      // Copy to output _site too, since Eleventy already did the passthrough copy
+      const secondOutputPath = outputPath.replace(
+        localImagesBasePath,
+        localImagesBasePathPassThru
+      );
+      fs.copyFileSync(outputPath, secondOutputPath);
     } catch (err) {
       console.error(`Error processing image`, err);
     }
