@@ -2,6 +2,7 @@
   {
     "topicId": 1,
     "name": "Personal records",
+    "title": "Personal records",
     "description": "Your birth certificate, ID card, and other personal records confirm who you are. They help you get the services you need.",
     "metaDescription": "Browse California state services related to personal records. This includes birth certificates, vaccine records, and more.",
     "cardDescription": "Update your personal records, which make it easier to access services.",
@@ -46,6 +47,7 @@
   {
     "topicId": 2,
     "name": "Businesses",
+    "title": "Businesses",
     "description": "California offers services for your business through licensing, permitting, verification, and more.",
     "metaDescription": "Browse California state services related to businesses.",
     "cardDescription": "Grow your business through licensing, permitting, and other resources.",
@@ -90,6 +92,7 @@
   {
     "topicId": 3,
     "name": "DMV/Auto",
+    "title": "DMV/Auto",
     "description": "Get or renew your California driver’s license, vehicle registration, and more. Learn about and obtain auto insurance. Resolve traffic tickets and keep your vehicle in shape with smog and repair services.",
     "metaDescription": "Browse California state services related to vehicles and the DMV.",
     "cardDescription": "Update your driver’s license, registration, and insurance, and resolve traffic tickets.",
@@ -134,6 +137,7 @@
   {
     "topicId": 4,
     "name": "Jobs and unemployment",
+    "title": "Jobs and unemployment",
     "description": "Review job openings, trainings, and resources. Get financial support while you are unemployed.",
     "metaDescription": "Browse California state services related to employment.",
     "cardDescription": "Find a job, enroll in job training, and get support while you are unemployed.",
@@ -178,6 +182,7 @@
   {
     "topicId": 5,
     "name": "Assistance and social programs",
+    "title": "Assistance and social programs",
     "description": "Find services that help improve the well-being of individuals, families, and communities in California. Benefits support\n- obtaining food\n- health coverage\n- vehicle and education costs\n- income assistance when unemployed or on disability",
     "metaDescription": "Browse California state services that provide social and financial help.",
     "cardDescription": "Get help covering food and medical costs, and access other discounted benefits.",
@@ -222,6 +227,7 @@
   {
     "topicId": 6,
     "name": "Housing and real estate",
+    "title": "Housing and real estate",
     "description": "Make informed decisions about your home. Find the status of contractors, real estate agents, and appraisers. Maintain your real estate business license. Find help to pay rent or get home insurance estimates.",
     "metaDescription": "Browse California state services related to housing and real estate.",
     "cardDescription": "Manage your home and real estate for individuals or businesses.",
@@ -266,6 +272,7 @@
   {
     "topicId": 7,
     "name": "Safety and emergencies",
+    "title": "Safety and emergencies",
     "description": "Look up public safety information and receive support if you are a victim of a crime or disaster.",
     "metaDescription": "Browse California state services related to public safety and disaster assistance.",
     "cardDescription": "Learn about disasters, public safety, and get emergency assistance.",
@@ -310,6 +317,7 @@
   {
     "topicId": 8,
     "name": "State info and laws",
+    "title": "State info and laws",
     "description": "Look up state representatives and laws. Access other state data, like lottery numbers, local schools, and voter registration.",
     "metaDescription": "Browse California state services related to state information, records, and laws.",
     "cardDescription": "Look up state information, including representatives, voting, schools, and lotto numbers.",
@@ -354,6 +362,7 @@
   {
     "topicId": 9,
     "name": "Taxes",
+    "title": "Taxes",
     "description": "Learn about taxes in California and how to file for free, check your refund, and earn tax credits.",
     "metaDescription": "Browse California state services related to taxes, refunds, and credits.",
     "cardDescription": "Learn how to file your taxes for free, check your refund, and earn tax credits.",
@@ -398,6 +407,7 @@
   {
     "topicId": 10,
     "name": "Health and wellness",
+    "title": "Health and wellness",
     "description": "Get health and wellness support for you and your family. Find resources for medical care, nutrition, and senior services.",
     "metaDescription": "Browse California state services that support you and your family’s health.",
     "cardDescription": "Find support for your family's health needs, including senior and medical care.",
@@ -442,6 +452,7 @@
   {
     "topicId": 11,
     "name": "Travel and recreation",
+    "title": "Travel and recreation",
     "description": "Discover California's top destinations like state parks, campsites, and museums. Plan trips, reserve campsites, and get licenses for activities.",
     "metaDescription": "Browse California state services related to travel and recreation within the state.",
     "cardDescription": "Explore California's attractions and plan outdoor activities.",
@@ -486,6 +497,7 @@
   {
     "topicId": 12,
     "name": "Education",
+    "title": "Education",
     "description": "Find educational opportunities for people of all ages. Apply for financial help for your degree, vocational training, and more.",
     "metaDescription": "Browse California state services related to education and professional development.",
     "cardDescription": "Find educational opportunities and get financial aid.",
@@ -530,6 +542,7 @@
   {
     "topicId": 13,
     "name": "Disaster recovery",
+    "title": "Disaster recovery",
     "description": "Find resources and support for disaster recovery efforts in California.",
     "metaDescription": "Browse California state services related to disaster recovery and assistance.",
     "cardDescription": "Find resources and support for disaster recovery efforts.",
@@ -539,11 +552,12 @@
   },
   {
     "topicId": 14,
-    "name": "Immigration and families",
+    "name": "Immigration",
+    "title": "Immigration and families",
     "description": "Access resources to support immigrants, including families and groups. Find assistance for essential needs and community services.",
     "metaDescription": "Browse California state services related to immigration and family support.",
     "cardDescription": "Find resources and assistance for immigrants and families.",
-    "featureOrder": 13,
+    "featureOrder": 6.5,
     "slug": "immigration",
     "topicImg": "/images/topic5-lineart.svg",
     "popularServices": [
