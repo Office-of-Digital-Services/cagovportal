@@ -4,13 +4,20 @@ permalink: sitemaps/agency01.xml
 eleventyExcludeFromCollections: true
 ---
 {#- No space -#}
-<?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   {%- for page in collections.all | sortBy("url") -%}
     {%-if page.data.sitemap=="agency"%}
   <url>
     <loc>{{-site.url-}}{{-page.url-}}</loc>
-    <lastmod>{{-page.data.updated | default(globallastmode)-}}</lastmod>
+    {%-if page.data.sitemapimage.loc %}
+    <image:image>
+      <image:loc>{{-page.data.sitemapimage.loc-}}</image:loc>
+      <image:title>{{-page.data.sitemapimage.title-}}</image:title>
+    </image:image>
+    {%- endif %}
   </url>
     {%- endif -%}
   {%- endfor %}

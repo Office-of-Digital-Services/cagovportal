@@ -15,11 +15,14 @@ eleventyComputed:
   keywords: "{{ item.Keywords | safe }}"
   title: "{{ item.ServiceName | safe }}"
   updated: "{{ item.Updated | safe }}"
+  sitemapimage:
+    loc: "{{ item.structuredData.image.contentUrl }}"
+    title: "{{ item.structuredData.image.caption | safe }}"
 ---
 
 <!-- Begin Structured Data -->
 <script type="application/ld+json">
-  {{ item.structuredData  | dump | safe }}
+  {{ item.structuredData | dump | safe }}
 </script>
 <!-- End Structured Data -->
 

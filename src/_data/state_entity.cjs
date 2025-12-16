@@ -5,6 +5,7 @@ const sepImagePath = "/images/sep/";
 const sharp = require("sharp");
 
 const remoteImagesBaseUrl = "https://stateentityprofile.ca.gov/Uploads/";
+const mainSiteBaseUrl = "https://www.ca.gov";
 const localImagesBasePath = "./src/images/sep/";
 const localImagesBasePathPassThru = "./_site/images/sep/";
 
@@ -206,10 +207,17 @@ module.exports = async function () {
       name: item.AgencyFullName,
       description: item.Description,
       url: item.WebsiteURL,
-      logo: item.LogoUrl ? `https://www.ca.gov${item["LogoPath"]}` : undefined,
+      logo: item.LogoUrl
+        ? {
+            "@type": "ImageObject",
+            contentUrl: `${mainSiteBaseUrl}${item["LogoPath"]}`,
+            caption: `Official logo of ${item.AgencyFullName}`,
+            representativeOfPage: true
+          }
+        : undefined,
 
       areaServed: {
-        "@type": "State",
+        "@type": "AdministrativeArea",
         name: "California"
       },
       contactPoint: {
@@ -231,9 +239,13 @@ module.exports = async function () {
 
     item["Updated"] = myDateFormat(item["Updated"]);
 
-    const provider = results.agencies.find(
-      x => x.AgencyId === item.AgencyId
-    )?.structuredData;
+    // Create a deep copy of the provider structuredData to avoid reference issues
+    const provider = JSON.parse(
+      JSON.stringify(
+        results.agencies.find(x => x.AgencyId === item.AgencyId).structuredData
+      )
+    );
+    delete provider["@context"];
 
     if (item.ImageUrl) {
       item["ImageExt"] = item.ImageUrl.match(/\.(\w+)$/i)[1];
@@ -251,9 +263,17 @@ module.exports = async function () {
       description: item.Description,
       serviceType: item.ServiceType,
       url: item.ServiceUrl,
+      image: item.ImageUrl
+        ? {
+            "@type": "ImageObject",
+            contentUrl: `${mainSiteBaseUrl}${item["ImagePath"]}`,
+            caption: `${item.ServiceName} service supporting image`,
+            representativeOfPage: true
+          }
+        : undefined,
       jurisdiction: {
         "@type": "AdministrativeArea",
-        name: "State of California"
+        name: "California"
       },
       availableChannel: {
         "@type": "ServiceChannel",
