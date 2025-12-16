@@ -15,6 +15,9 @@ eleventyComputed:
   title: "{{ item.FriendlyName | safe }} ({{ item.Acronym | safe }})"
   keywords: "{{ item.Keywords | safe }}"
   updated: "{{ item.Updated | safe }}"
+  sitemapimage:
+    loc: "{{ item.structuredData.logo.contentUrl }}"
+    title: "{{ item.structuredData.logo.caption | safe }}"
 ---
 
 {%-set QAs = [] -%} {%- for service in state_entity.services |
