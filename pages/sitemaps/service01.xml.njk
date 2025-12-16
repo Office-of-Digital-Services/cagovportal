@@ -15,7 +15,7 @@ eleventyExcludeFromCollections: true
     {%-if page.data.sitemapimage.loc %}
     <image:image>
       <image:loc>{{-page.data.sitemapimage.loc-}}</image:loc>
-      <image:title>{{-page.data.sitemapimage.title | safe-}}</image:title>
+      <image:title>{{-page.data.sitemapimage.title-}}</image:title>
     </image:image>
     {%- endif %}
   </url>
