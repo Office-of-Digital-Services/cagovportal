@@ -122,12 +122,10 @@ module.exports = async function () {
       if (!res.ok) throw new Error(`Failed to fetch image: ${res.statusText}`);
       console.log(`Processing image: ${file}`);
       const buffer = await res.arrayBuffer();
-      const image = sharp(Buffer.from(buffer))
+      await sharp(Buffer.from(buffer))
         .webp(webpoptions)
-        .resize(resizeOptions);
-
-      // Write to first location
-      await image.toFile(outputPath);
+        .resize(resizeOptions)
+        .toFile(outputPath);
 
       // Copy to output _site too, since Eleventy already did the passthrough copy
       const secondOutputPath = outputPath.replace(
