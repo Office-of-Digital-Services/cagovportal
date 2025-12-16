@@ -193,9 +193,8 @@ module.exports = async function () {
 
     if (item.LogoUrl) {
       item["LogoExt"] = item.LogoUrl.match(/\.(\w+)$/i)[1];
-      const webpImageName = item.LogoUrl.replace(
-        /\.(png|jpg|jpeg|gif)$/i,
-        ".webp"
+      const webpImageName = encodeURI(
+        item.LogoUrl.replace(/\.(png|jpg|jpeg|gif)$/i, ".webp")
       );
 
       item["LogoPath"] = `${sepImagePath}${webpImageName}`;
@@ -207,9 +206,7 @@ module.exports = async function () {
       name: item.AgencyFullName,
       description: item.Description,
       url: item.WebsiteURL,
-      logo: item.LogoUrl
-        ? `https://www.ca.gov/images/sep/${encodeURIComponent(item["LogoPath"])}`
-        : undefined,
+      logo: item.LogoUrl ? `https://www.ca.gov${item["LogoPath"]}` : undefined,
 
       areaServed: {
         "@type": "State",
@@ -240,9 +237,8 @@ module.exports = async function () {
 
     if (item.ImageUrl) {
       item["ImageExt"] = item.ImageUrl.match(/\.(\w+)$/i)[1];
-      const webpImageName = item.ImageUrl.replace(
-        /\.(png|jpg|jpeg|gif)$/i,
-        ".webp"
+      const webpImageName = encodeURI(
+        item.ImageUrl.replace(/\.(png|jpg|jpeg|gif)$/i, ".webp")
       );
 
       item["ImagePath"] = `${sepImagePath}${webpImageName}`;
