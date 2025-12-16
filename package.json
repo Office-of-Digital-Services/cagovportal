@@ -5,8 +5,7 @@
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
-    "update_webp": "node src/scripts/update_webp.cjs",
-    "update_state_entity_images": "node src/scripts/update_state_entity_images.cjs"
+    "update_webp": "node src/scripts/update_webp.cjs"
   },
   "repository": {
     "type": "git",
