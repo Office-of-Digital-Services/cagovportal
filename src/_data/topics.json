@@ -536,5 +536,49 @@
     "featureOrder": 2.5,
     "slug": "disaster-recovery",
     "topicImg": "/images/topic12-lineart.svg"
+  },
+  {
+    "topicId": 14,
+    "name": "Immigration and families",
+    "description": "Access resources to support immigrants, including families and groups. Find assistance for essential needs and community services.",
+    "metaDescription": "Browse California state services related to immigration and family support.",
+    "cardDescription": "Find resources and assistance for immigrants and families.",
+    "featureOrder": 13,
+    "slug": "immigration",
+    "topicImg": "/images/topic5-lineart.svg",
+    "popularServices": [
+      {
+        "DepartmentId": 178,
+        "ServiceId": 80,
+        "ServiceName": "Get citizenship services",
+        "Description": "Get access to citizenship services through the Department of Social Services.",
+        "umgURL": "/images/topic14-1.webp",
+        "imgAlt": "Image of a person making stamp on a document."
+      },
+      {
+        "DepartmentId": 238,
+        "ServiceId": 1115,
+        "ServiceName": "Get updates on DACA",
+        "Description": "Find updated information Deferred Action for Childhood Arrivals (DACA).",
+        "umgURL": "/images/topic14-2.webp",
+        "imgAlt": "Group of diverse young adult people smiling and standing together."
+      },
+      {
+        "DepartmentId": 172,
+        "ServiceId": 83,
+        "ServiceName": "Find ESL or English classes",
+        "Description": "Find a class to learn English near you.",
+        "umgURL": "/images/topic12-3.webp",
+        "imgAlt": "A medium skin toned man with salt and pepper hair sits at a desk in a classroom while holding a pen."
+      },
+      {
+        "DepartmentId": 198,
+        "ServiceId": 1095,
+        "ServiceName": "Apply for the CA Dream Act",
+        "Description": "Provides aid to CA students who do not qualify for federal aid.",
+        "umgURL": "/images/topic12-2.webp",
+        "imgAlt": "A tiny paper graduation cap and tassel are on top of some cash."
+      }
+    ]
   }
 ]
