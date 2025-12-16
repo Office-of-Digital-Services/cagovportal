@@ -318,10 +318,7 @@ module.exports = async function () {
       AgencyFullName: x.AgencyFullName,
       AgencyTags: x.AgencyTags,
       Description: x.Description,
-      Keywords: x.Keywords,
-      Facebook: x.Facebook,
-      TwitterAccount: x.TwitterAccount,
-      YouTube: x.YouTube
+      Keywords: x.Keywords
     })),
     service: results.services.map(x => ({
       AgencyId: x.AgencyId,
