@@ -64,9 +64,9 @@ endfor %} {%- endfor -%}
     </div>
     <div class="col-lg-9">
       <h2 class="mt-lg-0">Contact</h2>
-      <ul>
+      <ul class="list-unstyled mb-1">
         {% if item.ContactEmail %}
-        <li>
+        <li class="mb-1">
           <span class="bold">Email:</span>
           <a href="mailto:{{item.ContactEmail}}">{{item.ContactEmail}}</a>
         </li>
@@ -79,6 +79,23 @@ endfor %} {%- endfor -%}
         </li>
         {% endif %}
       </ul>
+
+      {% if item.Facebook %}
+      <a href="{{item.Facebook}}" class="no-underline font-size-30 me-1"
+        ><span class="ca-gov-icon-share-facebook"></span
+        ><span class="sr-only">Facebook</span></a
+      >
+      {% endif %} {% if item.TwitterAccount %}
+      <a href="{{item.TwitterAccount}}" class="no-underline font-size-30 me-1"
+        ><span class="ca-gov-icon-share-twitter"></span
+        ><span class="sr-only">X (twitter)</span></a
+      >
+      {% endif %} {% if item.YouTube %}
+      <a href="{{item.YouTube}}" class="no-underline font-size-30"
+        ><span class="ca-gov-icon-share-youtube"></span
+        ><span class="sr-only">Youtube</span></a
+      >{% endif %}
+
       <div class="p-y-md">
         <a class="btn btn-primary btn-lg m-r-md m-b" href="{{item.WebsiteURL}}">
           Department website
