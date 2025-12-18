@@ -5,6 +5,7 @@ const sepImagePath = "/images/sep/";
 const sharp = require("sharp");
 
 const remoteImagesBaseUrl = "https://stateentityprofile.ca.gov/Uploads/";
+const mainSiteBaseUrl = "https://www.ca.gov";
 const localImagesBasePath = "./src/images/sep/";
 const localImagesBasePathPassThru = "./_site/images/sep/";
 
@@ -14,6 +15,9 @@ module.exports = async function () {
       /Assistance and social\W\Wprograms/g,
       "Assistance and social programs"
     );
+
+  const socialLinkCleanup = (/** @type {string} */ url) =>
+    `${url.split("?")[0].replace(/^\//, "").replace(/\/$/, "").split("/").pop()}`;
 
   const myDateFormat = (/** @type {string | number | Date} */ dateString) =>
     new Date(dateString).toLocaleDateString("en-CA", {
@@ -182,20 +186,37 @@ module.exports = async function () {
 
     const socialLinks = [];
     if (item.Facebook) {
-      socialLinks.push(`https://www.facebook.com/${item.Facebook}`);
+      if (!item.Facebook.startsWith("http")) {
+        item.Facebook = `https://www.facebook.com/${socialLinkCleanup(item.Facebook)}`;
+      }
+
+      socialLinks.push(item.Facebook);
     }
     if (item.TwitterAccount) {
-      socialLinks.push(`https://www.twitter.com/${item.TwitterAccount}`);
+      if (!item.TwitterAccount.startsWith("http")) {
+        item.TwitterAccount = `https://x.com/${socialLinkCleanup(item.TwitterAccount)}`;
+      }
+
+      socialLinks.push(item.TwitterAccount);
     }
     if (item.YouTube) {
-      socialLinks.push(`https://www.youtube.com/${item.YouTube}`);
+      if (!item.YouTube.startsWith("http")) {
+        if (item.YouTube.startsWith("playlist")) {
+          item.YouTube = `https://www.youtube.com/${item.YouTube}`;
+        } else if (item.YouTube.includes("channel")) {
+          item.YouTube = `https://www.youtube.com/${item.YouTube.replace(/\.\.\//, "")}`;
+        } else {
+          item.YouTube = `https://www.youtube.com/${socialLinkCleanup(item.YouTube)}`;
+        }
+      }
+
+      socialLinks.push(item.YouTube);
     }
 
     if (item.LogoUrl) {
       item["LogoExt"] = item.LogoUrl.match(/\.(\w+)$/i)[1];
-      const webpImageName = item.LogoUrl.replace(
-        /\.(png|jpg|jpeg|gif)$/i,
-        ".webp"
+      const webpImageName = encodeURI(
+        item.LogoUrl.replace(/\.(png|jpg|jpeg|gif)$/i, ".webp")
       );
 
       item["LogoPath"] = `${sepImagePath}${webpImageName}`;
@@ -208,11 +229,16 @@ module.exports = async function () {
       description: item.Description,
       url: item.WebsiteURL,
       logo: item.LogoUrl
-        ? `https://www.ca.gov/images/sep/${encodeURIComponent(item["LogoPath"])}`
+        ? {
+            "@type": "ImageObject",
+            contentUrl: `${mainSiteBaseUrl}${item["LogoPath"]}`,
+            caption: `Official logo of ${item.AgencyFullName}`,
+            representativeOfPage: true
+          }
         : undefined,
 
       areaServed: {
-        "@type": "State",
+        "@type": "AdministrativeArea",
         name: "California"
       },
       contactPoint: {
@@ -234,15 +260,18 @@ module.exports = async function () {
 
     item["Updated"] = myDateFormat(item["Updated"]);
 
-    const provider = results.agencies.find(
-      x => x.AgencyId === item.AgencyId
-    )?.structuredData;
+    // Create a deep copy of the provider structuredData to avoid reference issues
+    const provider = JSON.parse(
+      JSON.stringify(
+        results.agencies.find(x => x.AgencyId === item.AgencyId).structuredData
+      )
+    );
+    delete provider["@context"];
 
     if (item.ImageUrl) {
       item["ImageExt"] = item.ImageUrl.match(/\.(\w+)$/i)[1];
-      const webpImageName = item.ImageUrl.replace(
-        /\.(png|jpg|jpeg|gif)$/i,
-        ".webp"
+      const webpImageName = encodeURI(
+        item.ImageUrl.replace(/\.(png|jpg|jpeg|gif)$/i, ".webp")
       );
 
       item["ImagePath"] = `${sepImagePath}${webpImageName}`;
@@ -255,9 +284,17 @@ module.exports = async function () {
       description: item.Description,
       serviceType: item.ServiceType,
       url: item.ServiceUrl,
+      image: item.ImageUrl
+        ? {
+            "@type": "ImageObject",
+            contentUrl: `${mainSiteBaseUrl}${item["ImagePath"]}`,
+            caption: `${item.ServiceName} service supporting image`,
+            representativeOfPage: true
+          }
+        : undefined,
       jurisdiction: {
         "@type": "AdministrativeArea",
-        name: "State of California"
+        name: "California"
       },
       availableChannel: {
         "@type": "ServiceChannel",
