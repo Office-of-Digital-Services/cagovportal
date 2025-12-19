@@ -562,22 +562,6 @@
     "topicImg": "/images/topic5-lineart.svg",
     "popularServices": [
       {
-        "DepartmentId": 178,
-        "ServiceId": 80,
-        "ServiceName": "Get citizenship services",
-        "Description": "Get access to citizenship services through the Department of Social Services.",
-        "umgURL": "/images/topic14-1.webp",
-        "imgAlt": "Image of a person making stamp on a document."
-      },
-      {
-        "DepartmentId": 238,
-        "ServiceId": 1115,
-        "ServiceName": "Get updates on DACA",
-        "Description": "Find updated information Deferred Action for Childhood Arrivals (DACA).",
-        "umgURL": "/images/topic14-2.webp",
-        "imgAlt": "Group of diverse young adult people smiling and standing together."
-      },
-      {
         "DepartmentId": 172,
         "ServiceId": 83,
         "ServiceName": "Find ESL or English classes",
@@ -592,6 +576,22 @@
         "Description": "Provides aid to CA students who do not qualify for federal aid.",
         "umgURL": "/images/topic12-2.webp",
         "imgAlt": "A tiny paper graduation cap and tassel are on top of some cash."
+      },
+      {
+        "DepartmentId": 178,
+        "ServiceId": 80,
+        "ServiceName": "Get citizenship services",
+        "Description": "Get access to citizenship services through the Department of Social Services.",
+        "umgURL": "/images/topic14-1.webp",
+        "imgAlt": "Image of a person making stamp on a document."
+      },
+      {
+        "DepartmentId": 238,
+        "ServiceId": 1115,
+        "ServiceName": "Get updates on DACA",
+        "Description": "Find updated information Deferred Action for Childhood Arrivals (DACA).",
+        "umgURL": "/images/topic14-2.webp",
+        "imgAlt": "Group of diverse young adult people smiling and standing together."
       }
     ]
   }
