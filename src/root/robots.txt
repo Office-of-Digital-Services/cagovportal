@@ -1,2 +1,6 @@
+User-agent: SiteimproveBot
+Allow: /
+
 User-agent: *
 Disallow: /
+# Explicitly blocking everything else
