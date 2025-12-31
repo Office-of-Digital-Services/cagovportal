@@ -110,7 +110,7 @@ module.exports = async function () {
     /** @type {string} */ file,
     /** @type {sharp.ResizeOptions} */ resizeOptions
   ) => {
-    const outputPath = `${localImagesBasePath}/${file}`.replace(
+    const outputPath = `${localImagesBasePath}${file}`.replace(
       /\.(png|jpg|jpeg|gif)$/i,
       ".webp"
     );
@@ -143,6 +143,11 @@ module.exports = async function () {
   };
 
   const processImages = async () => {
+    // Ensure output folder exists
+    fs.mkdirSync(localImagesBasePath, {
+      recursive: true
+    });
+
     /** @type {Promise<any>[]} */
     const threadingTasks = [];
 
