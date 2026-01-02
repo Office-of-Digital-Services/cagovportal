@@ -124,7 +124,7 @@ module.exports = async function () {
 
       const res = await fetch(remoteImagesBaseUrl + file);
       if (!res.ok) throw new Error(`Failed to fetch image: ${res.statusText}`);
-      console.log(`Processing image: ${file}`);
+      console.warn(`Adding image: ${file}`);
       const buffer = await res.arrayBuffer();
       await sharp(Buffer.from(buffer))
         .webp(webpoptions)
@@ -169,7 +169,21 @@ module.exports = async function () {
 
     await Promise.all(threadingTasks);
     if (processedCount !== 0) {
-      console.log(`Processed ${processedCount} images.`);
+      console.warn(`Added ${processedCount} missing images.`);
+    }
+
+    // get a count of images in localImagesBasePath
+    const existingImages = fs.readdirSync(localImagesBasePath).length;
+
+    // get a count of agency.LogoUrl and service.ImageUrl
+    const totalImages =
+      results.agencies.filter(a => a.LogoUrl).length +
+      results.services.filter(s => s.ImageUrl).length;
+
+    if (existingImages !== totalImages) {
+      console.warn(
+        `There are ${existingImages - totalImages} extra image(s). Delete the src/images/sep/ folder to reprocess all images if needed.`
+      );
     }
   };
 
