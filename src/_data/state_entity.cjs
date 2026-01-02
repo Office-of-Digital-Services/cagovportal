@@ -114,13 +114,11 @@ module.exports = async function () {
       /** @type {string} */ file,
       /** @type {sharp.ResizeOptions} */ resizeOptions
     ) => {
-      const outputPath = `${localImagesBasePath}${file}`.replace(
-        /\.(png|jpg|jpeg|gif)$/i,
-        ".webp"
-      );
+      const newfile = file.replace(/\.(png|jpg|jpeg|gif)$/i, ".webp");
+      const outputPath = `${localImagesBasePath}${newfile}`;
       try {
         // skip if file already exists
-        if (existingImages.includes(outputPath)) {
+        if (existingImages.includes(newfile)) {
           return;
         }
 
