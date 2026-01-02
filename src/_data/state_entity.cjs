@@ -179,7 +179,7 @@ module.exports = async function () {
       results.agencies.filter(a => a.LogoUrl).length +
       results.services.filter(s => s.ImageUrl).length;
 
-    if (existingImages.length !== totalImages) {
+    if (existingImages.length > totalImages) {
       console.warn(
         `There are ${existingImages.length - totalImages} extra image(s). Delete the src/images/sep/ folder to reprocess all images if needed.`
       );
