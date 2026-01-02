@@ -106,43 +106,47 @@ module.exports = async function () {
 
   let processedCount = 0;
 
-  const fetchAndProcessImage = async (
-    /** @type {string} */ file,
-    /** @type {sharp.ResizeOptions} */ resizeOptions
-  ) => {
-    const outputPath = `${localImagesBasePath}${file}`.replace(
-      /\.(png|jpg|jpeg|gif)$/i,
-      ".webp"
-    );
-    try {
-      // skip if file already exists
-      if (fs.existsSync(outputPath)) {
-        return;
-      }
-
-      processedCount++;
-
-      const res = await fetch(remoteImagesBaseUrl + file);
-      if (!res.ok) throw new Error(`Failed to fetch image: ${res.statusText}`);
-      console.warn(`Adding image: ${file}`);
-      const buffer = await res.arrayBuffer();
-      await sharp(Buffer.from(buffer))
-        .webp(webpoptions)
-        .resize(resizeOptions)
-        .toFile(outputPath);
-
-      // Copy to output _site too, since Eleventy already did the passthrough copy
-      const secondOutputPath = outputPath.replace(
-        localImagesBasePath,
-        localImagesBasePathPassThru
-      );
-      fs.copyFileSync(outputPath, secondOutputPath);
-    } catch (err) {
-      console.error(`Error processing image`, err);
-    }
-  };
-
   const processImages = async () => {
+    // get a count of images in localImagesBasePath
+    const existingImages = fs.readdirSync(localImagesBasePath);
+
+    const fetchAndProcessImage = async (
+      /** @type {string} */ file,
+      /** @type {sharp.ResizeOptions} */ resizeOptions
+    ) => {
+      const outputPath = `${localImagesBasePath}${file}`.replace(
+        /\.(png|jpg|jpeg|gif)$/i,
+        ".webp"
+      );
+      try {
+        // skip if file already exists
+        if (existingImages.includes(outputPath)) {
+          return;
+        }
+
+        processedCount++;
+
+        const res = await fetch(remoteImagesBaseUrl + file);
+        if (!res.ok)
+          throw new Error(`Failed to fetch image: ${res.statusText}`);
+        console.warn(`Adding image: ${file}`);
+        const buffer = await res.arrayBuffer();
+        await sharp(Buffer.from(buffer))
+          .webp(webpoptions)
+          .resize(resizeOptions)
+          .toFile(outputPath);
+
+        // Copy to output _site too, since Eleventy already did the passthrough copy
+        const secondOutputPath = outputPath.replace(
+          localImagesBasePath,
+          localImagesBasePathPassThru
+        );
+        fs.copyFileSync(outputPath, secondOutputPath);
+      } catch (err) {
+        console.error(`Error processing image`, err);
+      }
+    };
+
     // Ensure output folder exists
     fs.mkdirSync(localImagesBasePath, {
       recursive: true
@@ -172,17 +176,14 @@ module.exports = async function () {
       console.warn(`Added ${processedCount} missing images.`);
     }
 
-    // get a count of images in localImagesBasePath
-    const existingImages = fs.readdirSync(localImagesBasePath).length;
-
     // get a count of agency.LogoUrl and service.ImageUrl
     const totalImages =
       results.agencies.filter(a => a.LogoUrl).length +
       results.services.filter(s => s.ImageUrl).length;
 
-    if (existingImages !== totalImages) {
+    if (existingImages.length !== totalImages) {
       console.warn(
-        `There are ${existingImages - totalImages} extra image(s). Delete the src/images/sep/ folder to reprocess all images if needed.`
+        `There are ${existingImages.length - totalImages} extra image(s). Delete the src/images/sep/ folder to reprocess all images if needed.`
       );
     }
   };
