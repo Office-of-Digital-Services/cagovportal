@@ -104,9 +104,9 @@ module.exports = async function () {
     withoutEnlargement: true // Don't add pixels to small images
   };
 
-  let processedCount = 0;
-
   const processImages = async () => {
+    let processedCount = 0;
+
     // get a count of images in localImagesBasePath
     const existingImages = fs.readdirSync(localImagesBasePath);
 
@@ -116,14 +116,15 @@ module.exports = async function () {
     ) => {
       const newfile = file.replace(/\.(png|jpg|jpeg|gif)$/i, ".webp");
       const outputPath = `${localImagesBasePath}${newfile}`;
+
+      // skip if file already exists
+      if (existingImages.includes(newfile)) {
+        return;
+      }
+
+      processedCount++;
+
       try {
-        // skip if file already exists
-        if (existingImages.includes(newfile)) {
-          return;
-        }
-
-        processedCount++;
-
         const res = await fetch(remoteImagesBaseUrl + file);
         if (!res.ok)
           throw new Error(`Failed to fetch image: ${res.statusText}`);
@@ -173,6 +174,8 @@ module.exports = async function () {
     if (processedCount !== 0) {
       console.warn(`Added ${processedCount} missing images.`);
     }
+
+    // Final any existing images that are no longer needed
 
     // get a count of agency.LogoUrl and service.ImageUrl
     const totalImages =
