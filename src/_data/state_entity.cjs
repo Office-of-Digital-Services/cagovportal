@@ -107,10 +107,10 @@ module.exports = async function () {
   const processImages = async () => {
     let processedCount = 0;
 
-    // get a count of images in localImagesBasePath
+    // pull a listing of existing images
     const existingImages = fs.readdirSync(localImagesBasePath);
 
-    // Build a list of all images to process
+    // Build a list of all images that should exist
     const imagesToProcess = results.agencies
       .map(a => ({ filename: a.LogoUrl, resizeOptions: agencyResizeOptions }))
       .concat(
@@ -164,21 +164,11 @@ module.exports = async function () {
       recursive: true
     });
 
-    /** @type {Promise<any>[]} */
-    const threadingTasks = [];
-
-    // Create tasks for images that don't already exist
-    imagesToProcess
+    const threadingTasks = imagesToProcess
       .filter(s => !existingImages.includes(s.newfile))
-      .forEach(image => {
-        threadingTasks.push(
-          fetchAndProcessImage(
-            image.filename,
-            image.newfile,
-            image.resizeOptions
-          )
-        );
-      });
+      .map(image =>
+        fetchAndProcessImage(image.filename, image.newfile, image.resizeOptions)
+      );
 
     await Promise.all(threadingTasks);
     if (processedCount !== 0) {
