@@ -110,17 +110,30 @@ module.exports = async function () {
     // get a count of images in localImagesBasePath
     const existingImages = fs.readdirSync(localImagesBasePath);
 
-    const fetchAndProcessImage = async (
-      /** @type {string} */ file,
-      /** @type {sharp.ResizeOptions} */ resizeOptions
-    ) => {
-      const newfile = file.replace(/\.(png|jpg|jpeg|gif)$/i, ".webp");
-      const outputPath = `${localImagesBasePath}${newfile}`;
+    // Build a list of all images to process
+    const imagesToProcess = results.agencies
+      .map(a => ({ filename: a.LogoUrl, resizeOptions: agencyResizeOptions }))
+      .concat(
+        results.services.map(s => ({
+          filename: s.ImageUrl,
+          resizeOptions: serviceResizeOptions
+        }))
+      )
+      .filter(s => s.filename) // only those with images
+      .map(s => ({
+        filename: s.filename,
+        resizeOptions: s.resizeOptions,
+        newfile: s.filename.replace(/\.(png|jpg|jpeg|gif)$/i, ".webp")
+      }));
 
-      // skip if file already exists
-      if (existingImages.includes(newfile)) {
-        return;
-      }
+    /**
+     * Fetches an image from remote URL, processes it, and saves it locally
+     * @param {string} file - The filename of the image to fetch
+     * @param {string} newfile - The new filename to save the processed image as
+     * @param {sharp.ResizeOptions} resizeOptions - The resize options for sharp
+     */
+    const fetchAndProcessImage = async (file, newfile, resizeOptions) => {
+      const outputPath = `${localImagesBasePath}${newfile}`;
 
       processedCount++;
 
@@ -154,39 +167,35 @@ module.exports = async function () {
     /** @type {Promise<any>[]} */
     const threadingTasks = [];
 
-    results.agencies.forEach(agency => {
-      if (agency.LogoUrl) {
+    // Create tasks for images that don't already exist
+    imagesToProcess
+      .filter(s => !existingImages.includes(s.newfile))
+      .forEach(image => {
         threadingTasks.push(
-          fetchAndProcessImage(agency.LogoUrl, agencyResizeOptions)
+          fetchAndProcessImage(
+            image.filename,
+            image.newfile,
+            image.resizeOptions
+          )
         );
-      }
-    });
-
-    results.services.forEach(service => {
-      if (service.ImageUrl) {
-        threadingTasks.push(
-          fetchAndProcessImage(service.ImageUrl, serviceResizeOptions)
-        );
-      }
-    });
+      });
 
     await Promise.all(threadingTasks);
     if (processedCount !== 0) {
       console.warn(`Added ${processedCount} missing images.`);
     }
 
-    // Final any existing images that are no longer needed
+    // Delete any existing images that are no longer needed
+    existingImages
+      .filter(
+        existingImage =>
+          !imagesToProcess.some(img => img.newfile === existingImage)
+      )
+      .forEach(extraImage => {
+        console.warn(`Deleting extra image: ${extraImage}`);
 
-    // get a count of agency.LogoUrl and service.ImageUrl
-    const totalImages =
-      results.agencies.filter(a => a.LogoUrl).length +
-      results.services.filter(s => s.ImageUrl).length;
-
-    if (existingImages.length > totalImages) {
-      console.warn(
-        `There are ${existingImages.length - totalImages} extra image(s). Delete the src/images/sep/ folder to reprocess all images if needed.`
-      );
-    }
+        fs.unlinkSync(`${localImagesBasePath}${extraImage}`);
+      });
   };
 
   console.time("Image Processing");
