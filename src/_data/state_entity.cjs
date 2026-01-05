@@ -144,7 +144,7 @@ module.exports = async function () {
       } catch (err) {
         console.error(`Error processing image`, err);
       }
-    };
+    }; // End fetchAndProcessImage()
 
     // Ensure output folder exists
     fs.mkdirSync(localImagesBasePath, {
