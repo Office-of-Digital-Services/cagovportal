@@ -104,87 +104,90 @@ module.exports = async function () {
     withoutEnlargement: true // Don't add pixels to small images
   };
 
-  let processedCount = 0;
+  const processImages = async () => {
+    let processedCount = 0;
 
-  const fetchAndProcessImage = async (
-    /** @type {string} */ file,
-    /** @type {sharp.ResizeOptions} */ resizeOptions
-  ) => {
-    const outputPath = `${localImagesBasePath}${file}`.replace(
-      /\.(png|jpg|jpeg|gif)$/i,
-      ".webp"
-    );
-    try {
-      // skip if file already exists
-      if (fs.existsSync(outputPath)) {
-        return;
-      }
+    // pull a listing of existing images
+    const existingImages = fs.existsSync(localImagesBasePath)
+      ? fs.readdirSync(localImagesBasePath)
+      : [];
+
+    // Build a list of all images that should exist
+    const imagesToProcess = results.agencies
+      .map(a => ({ filename: a.LogoUrl, resizeOptions: agencyResizeOptions }))
+      .concat(
+        results.services.map(s => ({
+          filename: s.ImageUrl,
+          resizeOptions: serviceResizeOptions
+        }))
+      )
+      .filter(s => s.filename) // only those with images
+      .map(s => ({
+        filename: s.filename,
+        resizeOptions: s.resizeOptions,
+        newfile: s.filename.replace(/\.(png|jpg|jpeg|gif)$/i, ".webp")
+      }));
+
+    /**
+     * Fetches an image from remote URL, processes it, and saves it locally
+     * @param {string} file - The filename of the image to fetch
+     * @param {string} newfile - The new filename to save the processed image as
+     * @param {sharp.ResizeOptions} resizeOptions - The resize options for sharp
+     */
+    const fetchAndProcessImage = async (file, newfile, resizeOptions) => {
+      const outputPath = `${localImagesBasePath}${newfile}`;
 
       processedCount++;
 
-      const res = await fetch(remoteImagesBaseUrl + file);
-      if (!res.ok) throw new Error(`Failed to fetch image: ${res.statusText}`);
-      console.warn(`Adding image: ${file}`);
-      const buffer = await res.arrayBuffer();
-      await sharp(Buffer.from(buffer))
-        .webp(webpoptions)
-        .resize(resizeOptions)
-        .toFile(outputPath);
+      try {
+        const res = await fetch(remoteImagesBaseUrl + file);
+        if (!res.ok)
+          throw new Error(`Failed to fetch image: ${res.statusText}`);
+        console.warn(`Adding image: ${file}`);
+        const buffer = await res.arrayBuffer();
+        await sharp(Buffer.from(buffer))
+          .webp(webpoptions)
+          .resize(resizeOptions)
+          .toFile(outputPath);
 
-      // Copy to output _site too, since Eleventy already did the passthrough copy
-      const secondOutputPath = outputPath.replace(
-        localImagesBasePath,
-        localImagesBasePathPassThru
-      );
-      fs.copyFileSync(outputPath, secondOutputPath);
-    } catch (err) {
-      console.error(`Error processing image`, err);
-    }
-  };
-
-  const processImages = async () => {
-    // Ensure output folder exists
-    fs.mkdirSync(localImagesBasePath, {
-      recursive: true
-    });
-
-    /** @type {Promise<any>[]} */
-    const threadingTasks = [];
-
-    results.agencies.forEach(agency => {
-      if (agency.LogoUrl) {
-        threadingTasks.push(
-          fetchAndProcessImage(agency.LogoUrl, agencyResizeOptions)
+        // Copy to output _site too, since Eleventy already did the passthrough copy
+        const secondOutputPath = outputPath.replace(
+          localImagesBasePath,
+          localImagesBasePathPassThru
         );
+        fs.copyFileSync(outputPath, secondOutputPath);
+      } catch (err) {
+        console.error(`Error processing image`, err);
       }
-    });
+    }; // End fetchAndProcessImage()
 
-    results.services.forEach(service => {
-      if (service.ImageUrl) {
-        threadingTasks.push(
-          fetchAndProcessImage(service.ImageUrl, serviceResizeOptions)
-        );
-      }
-    });
-
-    await Promise.all(threadingTasks);
-    if (processedCount !== 0) {
-      console.warn(`Added ${processedCount} missing images.`);
-    }
-
-    // get a count of images in localImagesBasePath
-    const existingImages = fs.readdirSync(localImagesBasePath).length;
-
-    // get a count of agency.LogoUrl and service.ImageUrl
-    const totalImages =
-      results.agencies.filter(a => a.LogoUrl).length +
-      results.services.filter(s => s.ImageUrl).length;
-
-    if (existingImages !== totalImages) {
-      console.warn(
-        `There are ${existingImages - totalImages} extra image(s). Delete the src/images/sep/ folder to reprocess all images if needed.`
+    const threadingTasks = imagesToProcess
+      .filter(s => !existingImages.includes(s.newfile))
+      .map(image =>
+        fetchAndProcessImage(image.filename, image.newfile, image.resizeOptions)
       );
+
+    if (threadingTasks.length) {
+      // Ensure output folder exists
+      fs.mkdirSync(localImagesBasePath);
+
+      await Promise.all(threadingTasks);
+      if (processedCount !== 0) {
+        console.warn(`Added ${processedCount} missing images.`);
+      }
     }
+
+    // Delete any existing images that are no longer needed
+    existingImages
+      .filter(
+        existingImage =>
+          !imagesToProcess.some(img => img.newfile === existingImage)
+      )
+      .forEach(extraImage => {
+        console.warn(`Deleting extra image: ${extraImage}`);
+
+        fs.unlinkSync(`${localImagesBasePath}${extraImage}`);
+      });
   };
 
   console.time("Image Processing");
