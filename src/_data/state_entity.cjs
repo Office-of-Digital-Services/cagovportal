@@ -108,7 +108,9 @@ module.exports = async function () {
     let processedCount = 0;
 
     // pull a listing of existing images
-    const existingImages = fs.readdirSync(localImagesBasePath);
+    const existingImages = fs.existsSync(localImagesBasePath)
+      ? fs.readdirSync(localImagesBasePath)
+      : [];
 
     // Build a list of all images that should exist
     const imagesToProcess = results.agencies
@@ -159,20 +161,20 @@ module.exports = async function () {
       }
     }; // End fetchAndProcessImage()
 
-    // Ensure output folder exists
-    fs.mkdirSync(localImagesBasePath, {
-      recursive: true
-    });
-
     const threadingTasks = imagesToProcess
       .filter(s => !existingImages.includes(s.newfile))
       .map(image =>
         fetchAndProcessImage(image.filename, image.newfile, image.resizeOptions)
       );
 
-    await Promise.all(threadingTasks);
-    if (processedCount !== 0) {
-      console.warn(`Added ${processedCount} missing images.`);
+    if (threadingTasks.length) {
+      // Ensure output folder exists
+      fs.mkdirSync(localImagesBasePath);
+
+      await Promise.all(threadingTasks);
+      if (processedCount !== 0) {
+        console.warn(`Added ${processedCount} missing images.`);
+      }
     }
 
     // Delete any existing images that are no longer needed
