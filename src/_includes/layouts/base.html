@@ -28,7 +28,7 @@
     <meta name="allowed-query-params" content="{{ allowedQueryParams }}" />
     {%- endif %}
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook / Twitter -->
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="California State Portal" />
     <meta property="og:type" content="website" />
@@ -37,13 +37,8 @@
     <meta property="og:description" content="{{ description }}" />
     <meta property="og:image" content="{{ socialimage }}" />
     <meta property="og:image:alt" content="{{ socialimagealt }}" />
-
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="{% canonical %}" />
-    <meta name="twitter:title" content="{% metatitle %}" />
-    <meta name="twitter:description" content="{{ description }}" />
-    <meta name="twitter:image" content="{{ socialimage }}" />
+
     {% include "head-js-css.html" %}
   </head>
   <body class="primary">
