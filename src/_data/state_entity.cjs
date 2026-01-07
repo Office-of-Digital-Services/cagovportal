@@ -107,10 +107,11 @@ module.exports = async function () {
   const processImages = async () => {
     let processedCount = 0;
 
-    // pull a listing of existing images
-    const existingImages = fs.existsSync(localImagesBasePath)
-      ? fs.readdirSync(localImagesBasePath)
-      : [];
+    // get a list of existing images from the local folder
+    if (!fs.existsSync(localImagesBasePath)) {
+      fs.mkdirSync(localImagesBasePath);
+    }
+    const existingImages = fs.readdirSync(localImagesBasePath);
 
     // Build a list of all images that should exist
     const imagesToProcess = results.agencies
@@ -168,9 +169,6 @@ module.exports = async function () {
       );
 
     if (threadingTasks.length) {
-      // Ensure output folder exists
-      fs.mkdirSync(localImagesBasePath);
-
       await Promise.all(threadingTasks);
       if (processedCount !== 0) {
         console.warn(`Added ${processedCount} missing images.`);
