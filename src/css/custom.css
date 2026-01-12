@@ -629,12 +629,3 @@ nav.breadcrumbs > ol {
     margin: 0;
   }
 }
-
-/* Side nav second level active styles */
-
-@media (width <= 991px) {
-  /* stylelint-disable-next-line selector-combinator-allowed-list */
-  aside.mobile-sidenav .side-navigation ul.list-navigation li ul li a.active {
-    color: var(--white);
-  }
-}
