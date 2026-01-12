@@ -401,10 +401,6 @@ details > div.topic-filters > fieldset {
   }
 }
 
-p.keywords > span:last-child {
-  display: none;
-}
-
 /* Elipsis overflow */
 cagovhome-filterlist {
   /* Hiding the header if the row has hidden results */
