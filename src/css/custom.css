@@ -611,15 +611,6 @@ div.image-header {
   }
 }
 
-h2.header-bg-primary {
-  border-top-right-radius: var(--bs-border-radius);
-  border-top-left-radius: var(--bs-border-radius);
-  background-color: var(--color-p2);
-  padding: 1.5rem;
-  color: var(--white);
-  border-bottom: 5px solid var(--color-p2-darker);
-}
-
 :root {
   --bs-border-radius: 10px;
 }
@@ -645,11 +636,5 @@ nav.breadcrumbs > ol {
   /* stylelint-disable-next-line selector-combinator-allowed-list */
   aside.mobile-sidenav .side-navigation ul.list-navigation li ul li a.active {
     color: var(--white);
-  }
-}
-
-@media (width >= 1200px) {
-  div.la-fires-container {
-    margin-top: -70px;
   }
 }
