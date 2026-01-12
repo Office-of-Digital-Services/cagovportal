@@ -624,24 +624,18 @@ h2.header-bg-primary {
   --bs-border-radius: 10px;
 }
 
-nav.page-navigation > ul > li:last-child {
-  display: none;
-}
-
-/* fixes PurgeCSS overreach */
-nav.breadcrumbs > ol > li:last-child::after {
-  border-left: none;
-  margin: 0;
-}
-
 /* breadcrumbs */
-nav.breadcrumbs > ul,
-nav.breadcrumbs > ol,
-nav.page-navigation > ul > li {
+nav.breadcrumbs > ol {
   font-size: 1rem;
 
   @media (width >= 576px) {
     font-size: calc(0.92rem + 0.1vw);
+  }
+
+  /* fixes PurgeCSS overreach */
+  > li:last-child::after {
+    border-left: none;
+    margin: 0;
   }
 }
 
