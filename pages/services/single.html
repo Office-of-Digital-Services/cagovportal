@@ -104,7 +104,7 @@ eleventyComputed:
       pluck("AgencyId",item.AgencyId) | pluck("ServiceId",item.ServiceId,"not")
       | sortBy("ServiceName") -%} {%- if related_services.length %}
       <h3>Related services</h3>
-      <p class="keywords">
+      <p>
         {%- for related in related_services %}
         <a
           href="../{{related.ServiceId}}/"
@@ -116,23 +116,25 @@ eleventyComputed:
       pluck("name",item.AgencyTags.split("|"),"match")-%} {%- if
       topicsToDisplay.length > 0 %}
       <h3 class="m-t-md">Topics</h3>
-      <p class="keywords">
+      <p>
         {%- for topic in topicsToDisplay %}
-        <a href="/topics/{{topic.slug}}/"> {{- topic.name | trim -}} </a
-        ><span class="m-r-sm">, </span>
-        {%- endfor %}
+        <a href="/topics/{{topic.slug}}/"> {{- topic.name | trim -}} </a>
+        {%- if not loop.last %}<span class="m-r-sm">, </span>{% endif %} {%-
+        endfor %}
       </p>
       {%- endif %}
 
       <h3>Keywords</h3>
-      <p class="keywords">
+      <p>
         {%- for keyword in item.Keywords.split(",") | sort %} {%- if
         keyword.trim().length > 0 %}
         <a
           href="/services/all/?q={{keyword | trim | lower | urlencode | replace('%20', '+')}}+"
           rel="nofollow">
-          {{- keyword | trim -}} </a
-        ><span class="m-r-sm">,</span> {% endif -%} {%- endfor %}
+          {{- keyword | trim -}}
+        </a>
+        {%-if not loop.last-%}<span class="m-r-sm">,</span>{% endif %}{% endif
+        -%}{%- endfor %}
       </p>
       {%- if item.structuredData_FAQPage %}
       <!-- Begin Structured Data for QAPage -->
