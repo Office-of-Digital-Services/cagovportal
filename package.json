@@ -26,7 +26,7 @@
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-fetch": "^4.0.1",
-    "@babel/core": "^7.28.5",
+    "@babel/core": "^7.28.6",
     "@cagovweb/state-template": "^6.5.1",
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "babel-plugin-transform-imports": "^2.0.0",
