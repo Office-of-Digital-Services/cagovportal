@@ -595,10 +595,4 @@ nav.breadcrumbs > ol {
   @media (width >= 576px) {
     font-size: calc(0.92rem + 0.1vw);
   }
-
-  /* fixes PurgeCSS overreach */
-  > li:last-child::after {
-    border-left: none;
-    margin: 0;
-  }
 }
