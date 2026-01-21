@@ -3,6 +3,8 @@ layout: clean
 permalink: gasfacts/
 ---
 
+{%-set js%}{%include "./gasfacts.cjs"%}{%endset-%} {%set css%}*/{%include
+"./gasfacts.css"%}/*{%endset-%}
 <!doctype html>
 <html lang="en">
   <head>
@@ -125,11 +127,12 @@ https://cdn.cdt.ca.gov/cdt/statetemplate/6.4.0/css/cagov.core.min.css"
       defer
       src="https://alert.cdt.ca.gov"
       crossorigin="anonymous"></script>
-    {%include "./gasfacts.css.html"-%}{%-set js%}{%include
-    "./gasfacts.cjs"-%}{%endset-%}
     <script>
       {{- js | jsmin | safe }}
     </script>
+    <style>
+      /*{{- css | cssmin | safe -}}*/
+    </style>
   </head>
   <body class="primary">
     <header role="banner" id="header" class="global-header fixed">
