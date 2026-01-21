@@ -38,7 +38,7 @@ permalink: gasfacts/
       content="California is acting to protect our people from gas price spikes. We’re working toward a future of cleaner air and better roads for all." />
     <meta
       property="og:image"
-      content="https://cdn.cdt.ca.gov/cdt/CAgovPortal/images/gas-facts-meta.jpg" />
+      content="https://www.ca.gov/images/gas-facts-meta.jpg" />
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://www.ca.gov/gasfacts/" />
@@ -48,7 +48,7 @@ permalink: gasfacts/
       content="California is acting to protect our people from gas price spikes. We’re working toward a future of cleaner air and better roads for all." />
     <meta
       property="twitter:image"
-      content="https://cdn.cdt.ca.gov/cdt/CAgovPortal/images/gas-facts-meta.jpg" />
+      content="https://www.ca.gov/images/gas-facts-meta.jpg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -61,7 +61,6 @@ permalink: gasfacts/
 https://cdn.cdt.ca.gov/cdt/statetemplate/6.4.0/css/cagov.core.min.css"
       integrity="sha256-3wrodPRCo3glt2HooL5CsFaOUM/3H6grVtIp/c0rcn4="
       crossorigin="anonymous" />
-    <link rel="stylesheet" href="homepage.css?vNov112024" />
     <script
       src="https://cdn.cdt.ca.gov/cdt/statetemplate/6.4.0/js/cagov.core.min.js"
       integrity="sha256-BuNIol59bN0zb9itVvnWkxpC9rC1V69ANH8fIB+10qI="
@@ -126,6 +125,123 @@ https://cdn.cdt.ca.gov/cdt/statetemplate/6.4.0/css/cagov.core.min.css"
       defer
       src="https://alert.cdt.ca.gov"
       crossorigin="anonymous"></script>
+    <style>
+      .cagov-logo svg path,
+      .cagov-logo svg polygon {
+        fill: #fff;
+      }
+      .tabs-vertical .nav-tabs li {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+      }
+      .brd-bottom {
+        border-bottom: solid 1px var(--gray-300) !important;
+      }
+      .tabs-vertical .nav-tabs li a::after {
+        display: none !important;
+      }
+      @media (max-width: 991px) {
+        .header-primary-banner .row {
+          flex-direction: column-reverse;
+        }
+        .header-primary-banner img {
+          width: 100%;
+        }
+      }
+      @media (min-width: 768px) {
+        .p-r-lg-desktop {
+          padding-right: 3rem !important;
+        }
+        .p-l-lg-desktop {
+          padding-left: 3rem !important;
+        }
+      }
+      p {
+        text-wrap: pretty;
+      }
+      h1 {
+        font-size: 4rem !important;
+      }
+      .section-lightgreen {
+        background-color: #ebf6f3 !important;
+      }
+      cagov-accordion details summary:hover,
+      cagov-accordion details summary:focus {
+        color: #fff;
+      }
+      cagov-accordion details summary::before {
+        background-color: var(--color-p2);
+      }
+      cagov-accordion details summary:hover::before,
+      cagov-accordion details summary:focus::before,
+      cagov-accordion:defined details[open] summary::before {
+        background-color: var(--color-p2-dark) !important;
+      }
+    </style>
+    <script>
+      // webp image polyfill
+      window.addEventListener("DOMContentLoaded", () => {
+        /** @type {NodeListOf<HTMLImageElement>} */
+        const webpImages = document.querySelectorAll('img[src*=".webp" i]');
+        if (!webpImages.length) return;
+
+        // Read meta tag for external server
+        /** @type {HTMLMetaElement | null} */
+        const serverMeta = document.querySelector(
+          'meta[name="webp-polyfill-server"]'
+        );
+        const serverPrefix = serverMeta ? serverMeta.content : "";
+
+        const defaultReplacement = ".backup.png";
+
+        const detectWebP = () =>
+          new Promise(resolve => {
+            const webpData = "UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=";
+            if (typeof createImageBitmap === "function") {
+              const blob = new Blob(
+                [Uint8Array.from(atob(webpData), c => c.charCodeAt(0))],
+                { type: "image/webp" }
+              );
+              createImageBitmap(blob)
+                .then(() => resolve(true))
+                .catch(() => resolve(false));
+            } else {
+              const img = new Image();
+              img.onload = () => resolve(img.height === 1);
+              img.onerror = () => resolve(false);
+              img.src = `data:image/webp;base64,${webpData}`;
+            }
+          });
+
+        detectWebP().then(supported => {
+          if (!supported) {
+            webpImages.forEach(img => {
+              // Decide fallback extension
+              const fallbackExt = img.dataset.fallbackExt
+                ? `.${img.dataset.fallbackExt}`
+                : defaultReplacement;
+
+              // Extract filename only (strip directories)
+              const fileName = (img.src.split("/").pop() || "").replace(
+                /\.webp$/i,
+                fallbackExt
+              );
+
+              // Build new src
+              const newSrc = serverPrefix
+                ? serverPrefix + fileName
+                : img.src.replace(/\.webp$/i, fallbackExt);
+
+              if (img.src !== newSrc) {
+                img.src = newSrc;
+              }
+            });
+
+            console.log("POLYFILL: Using fallback images instead of WEBP");
+          }
+        });
+      });
+    </script>
   </head>
   <body class="primary">
     <header role="banner" id="header" class="global-header fixed">
@@ -185,7 +301,7 @@ https://cdn.cdt.ca.gov/cdt/statetemplate/6.4.0/css/cagov.core.min.css"
                     <img
                       class="img-fluid"
                       width="100%"
-                      src="https://cdn.cdt.ca.gov/cdt/CAgovPortal/images/banner-img.jpg"
+                      src="images/banner-img.webp"
                       alt="A person pumping gas into their vehicle."
                       style="aspect-ratio: 900 / 535" />
                   </div>
@@ -205,7 +321,7 @@ https://cdn.cdt.ca.gov/cdt/statetemplate/6.4.0/css/cagov.core.min.css"
                   industry.
                 </h2>
                 <img
-                  src="https://cdn.cdt.ca.gov/cdt/CAgovPortal/images/fact-1.jpg"
+                  src="images/fact-1.webp"
                   class="img-fluid"
                   alt="Californians paid $2.2 billion more for gas in 2023, while the oil industry saw record profits." />
                 <p class="lead m-t-md">
@@ -227,7 +343,7 @@ https://cdn.cdt.ca.gov/cdt/statetemplate/6.4.0/css/cagov.core.min.css"
                 profits and costs. 
               </h2>
               <img
-                src="https://cdn.cdt.ca.gov/cdt/CAgovPortal/images/fact-2.jpg"
+                src="images/fact-2.webp"
                 class="img-fluid"
                 alt="State taxes and fees are flat. Oil industry profits and costs drive price spikes." />
               <p class="lead m-t-md">
@@ -267,7 +383,7 @@ https://tableau.cnra.ca.gov/t/CNRA_CEC_PUBLIC/views/GasolinePriceBreakdownandMar
                   funds climate action.
                 </h2>
                 <img
-                  src="https://cdn.cdt.ca.gov/cdt/CAgovPortal/images/fact-4.jpg"
+                  src="images/fact-4.webp"
                   class="img-fluid"
                   alt="We’ve invested $60.5 billion in roads and climate projects, funded by gasoline sales." />
                 <p class="lead m-t-md">
@@ -631,7 +747,7 @@ https://tableau.cnra.ca.gov/t/CNRA_CEC_PUBLIC/views/GasolinePriceBreakdownandMar
               <h2>Fact: California is working to combat gas price spikes.</h2>
 
               <img
-                src="https://cdn.cdt.ca.gov/cdt/CAgovPortal/images/fact-5.jpg"
+                src="images/fact-5.webp"
                 class="img-fluid"
                 alt="A new proposal could save Californians over $2 billion during gas price spikes like those in fall 2023." />
               <p class="lead m-t-md">
@@ -654,7 +770,7 @@ https://tableau.cnra.ca.gov/t/CNRA_CEC_PUBLIC/views/GasolinePriceBreakdownandMar
                 interruptions due to maintenance. This would prevent price
                 spikes from artificially low supply when demand is high.
                 Californians could save hundreds of millions, if not billions,
-                of dollars.  
+                of dollars.
               </p>
               <hr class="m-t-lg" />
               <h2>Resources</h2>
