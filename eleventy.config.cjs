@@ -27,7 +27,8 @@ module.exports = function (
     "src/docs": "docs",
     "src/root": "/",
     "pages/initiatives/immigration/images": "immigration/images",
-    "pages/initiatives/immigration/documents": "immigration/documents"
+    "pages/initiatives/immigration/documents": "immigration/documents",
+    "pages/initiatives/gasfacts/images": "gasfacts/images"
   });
 
   eleventyConfig.addWatchTarget("./src/js/");
