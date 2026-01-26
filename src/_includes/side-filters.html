@@ -8,7 +8,7 @@
         </legend>
         {%- for topic in topics | sortBy("featureOrder") %}{% set count =
         (side_filter_list | pluck("AgencyTags",topic.name,"includes")).length
-        %}{% if count %}
+        %}{% if count and count != side_filter_list.length %}
         <div class="form-check m-b-sm">
           <input
             class="form-check-input"
