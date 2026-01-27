@@ -15,6 +15,9 @@ eleventyComputed:
   title: "{{ item.title | safe }}"
 ---
 
+{%- set side_filter_list = state_entity.services |
+pluck('AgencyTags',item.name,"includes") %}
+
 <div
   class="section-understated lineart bg-s1"
   style="background-image: url('{{item.topicImg}}') no-repeat right / auto;">
@@ -100,8 +103,8 @@ eleventyComputed:
       <h2 class="lead m-t items-count" aria-live="polite" role="region">
         0 services <span class="sr-only">found</span>
       </h2>
-      <div class="d-flex m-b-lg">
-        <label class="sr-only" for="searchbox">Filter by topic</label>
+      <div class="d-flex">
+        <label class="sr-only" for="searchbox">Filter services</label>
         <input
           type="search"
           id="searchbox"
@@ -116,12 +119,14 @@ eleventyComputed:
         value="{{item.name}}" />
       <!-- This is the filter that will be applied to the search results -->
 
+      <div class="p-b-lg">{%include "side-filters.html"%}</div>
+
       <cagovhome-filterlist
         data-search-input-id="searchbox"
         data-result-count-query=".items-count"
         data-filter-storage-key="service"
         data-row-filter-key="ServiceId"
-        data-filter-trigger-selector="input#defaultFilter"
+        data-filter-trigger-selector='input#defaultFilter,input[name="AgencyTags"]'
         role="list">
         {%- for service in state_entity.services |
         pluck('AgencyTags',item.name,"includes") -%}

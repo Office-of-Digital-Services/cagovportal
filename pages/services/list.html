@@ -3,13 +3,13 @@ landing: Services
 description: An alphabetic list view of California state services.
 title: Services list
 layout: landing
-side_filter_data: services
 dynamic_sidenavid: service
 noindex_follow: true
 sitemap: hide
 data_service: true
 ---
 
+{%- set side_filter_list = state_entity.services %}
 <div
   class="section-understated lineart bg-s1"
   style="background: url('/images/services-lineart.svg') no-repeat right / auto;">
@@ -41,7 +41,7 @@ data_service: true
           class="height-50 brd-solid-1 brd-color-light rounded flex-grow-1 p-l webkit-appearance-none" />
       </div>
 
-      <div class="p-b-lg">{%-include "side-filters.html"-%}</div>
+      <div class="p-b-lg">{%include "side-filters.html"%}</div>
 
       <cagovhome-filterlist
         data-search-input-id="searchbox"

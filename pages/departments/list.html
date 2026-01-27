@@ -4,12 +4,12 @@ description: An alphabetic list view of California state departments.
 title: Departments list
 layout: landing
 dynamic_sidenavid: department
-side_filter_data: agencies
 noindex_follow: true
 sitemap: hide
 data_agency: true
 ---
 
+{%- set side_filter_list = state_entity.agencies %}
 <div
   class="section-understated lineart bg-s1"
   style="background: url('/images/departments-lineart.svg?v2evjhb') no-repeat right / auto;">
@@ -41,7 +41,7 @@ data_agency: true
           class="height-50 brd-solid-1 brd-color-light rounded flex-grow-1 p-x webkit-appearance-none" />
       </div>
 
-      <div class="p-b-lg">{%-include "side-filters.html"-%}</div>
+      <div class="p-b-lg">{%include "side-filters.html"%}</div>
 
       <cagovhome-filterlist
         data-search-input-id="searchbox"
