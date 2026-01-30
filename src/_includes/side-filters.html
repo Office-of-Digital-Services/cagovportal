@@ -6,7 +6,9 @@
         <legend class="m-y font-size-16">
           Select topics to help you find what you need:
         </legend>
-        {%- for topic in topics | sortBy("featureOrder") %}
+        {%- for topic in topics | sortBy("featureOrder") %}{% set count =
+        (side_filter_list | pluck("AgencyTags",topic.name,"includes")).length
+        %}{% if count and count != side_filter_list.length %}
         <div class="form-check m-b-sm">
           <input
             class="form-check-input"
@@ -16,13 +18,10 @@
             id="chkTopic{{-topic.topicId-}}" />
           <label class="form-check-label" for="chkTopic{{-topic.topicId-}}">
             {{topic.name}}
-            <span>
-              ({{(state_entity[side_filter_data] |
-              pluck("AgencyTags",topic.name,"includes")).length }})
-            </span>
+            <span>({{count}})</span>
           </label>
         </div>
-        {%- endfor %}
+        {%- endif -%}{%- endfor %}
       </fieldset>
       <hr />
       <button
