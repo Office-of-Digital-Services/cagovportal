@@ -1,2 +1,15 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+# Recommended for all sites
+Disallow: /ads.txt
+Disallow: /app-ads.txt
+Disallow: /.well-known/assetlinks.json
+Disallow: /.well-known/apple-app-site-association
+Disallow: /apple-app-site-association
+
+# www.ca.gov specificly, reduces 404 crawl attempts
+Disallow: /state/portal/
+Disallow: /state/govsite/
+
+Sitemap: https://www.ca.gov/sitemaps/sitemapindex.xml
