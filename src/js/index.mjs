@@ -218,7 +218,7 @@ Fix URLS for analytics and SEO
 ----------------------------------------- */
 (() => {
   const rawUrl = window.location.href;
-  const url = new URL(rawUrl.toLowerCase());
+  const url = new URL(rawUrl);
 
   // 1. Fix hostname if it ends with a period
   if (url.hostname.endsWith(".")) {
