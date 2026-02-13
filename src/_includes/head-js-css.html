@@ -65,4 +65,6 @@
 {% include "analytics.html" -%} {%- if not hidestatewidealert %}
 <!-- Statewide Alerts Server -->
 <script defer src="https://alert.cdt.ca.gov" crossorigin="anonymous"></script>
-{%- endif %}
+{% endif -%} {%- if homepage %}
+<!-- Home Page -->
+{% include "home-header.html" -%} {%- endif -%}
