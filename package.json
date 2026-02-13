@@ -24,14 +24,14 @@
     "stylelint-use-nesting": "^5.1.1"
   },
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-fetch": "^4.0.1",
     "@babel/core": "^7.28.6",
     "@cagovweb/state-template": "^6.5.5",
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "babel-plugin-transform-imports": "^2.0.0",
     "csv-parse": "^5.6.0",
-    "markdown-it": "^14.1.0",
+    "markdown-it": "^14.1.1",
     "postcss": "^8.5.6",
     "postcss-nested": "^7.0.2",
     "terser": "^5.45.0",
