@@ -220,13 +220,20 @@ Fix URLS for analytics and SEO
   const rawUrl = window.location.href;
   const url = new URL(rawUrl);
 
-  // 1. Fix hostname if it ends with a period
-  if (url.hostname.endsWith(".")) {
-    // This will redirect to the same hostname without the trailing period
-    // e.g., "example.com." becomes "example.com"
+  // Extract the hash BEFORE lowercasing anything
+  const originalHash = url.hash; // e.g., "#googtrans(en|zh-TW)"
 
-    url.hostname = url.hostname.slice(0, -1);
-    window.location.href = url.toString();
+  // Lowercase only the parts we control
+  const lowerOrigin = url.origin.toLowerCase();
+  const lowerPath = url.pathname.toLowerCase();
+  const lowerSearch = url.search.toLowerCase();
+
+  const rebuilt = new URL(lowerOrigin + lowerPath + lowerSearch + originalHash);
+
+  // 1. Fix hostname if it ends with a period
+  if (rebuilt.hostname.endsWith(".")) {
+    rebuilt.hostname = rebuilt.hostname.slice(0, -1);
+    window.location.href = rebuilt.toString();
     return; // Stop further processing after redirecting
   }
 
@@ -237,7 +244,7 @@ Fix URLS for analytics and SEO
 
   if (!metaTagContent) {
     // No meta tag found, remove all query parameters
-    url.search = "";
+    rebuilt.search = "";
   } else if (metaTagContent !== "*") {
     // non-wildcard content, filter query parameters
     const allowedKeys = metaTagContent
@@ -245,20 +252,20 @@ Fix URLS for analytics and SEO
       .map(k => k.trim())
       .filter(Boolean);
 
-    const params = new URLSearchParams(url.search);
+    const params = new URLSearchParams(rebuilt.search);
 
     for (const key of [...params.keys()])
       if (!allowedKeys.includes(key)) params.delete(key);
 
-    url.search = params.toString();
+    rebuilt.search = params.toString();
   }
 
   // 3. Replace URL if modified
-  if (rawUrl !== url.toString()) {
+  if (rawUrl !== rebuilt.toString()) {
     console.log("URL modified:", {
       original: rawUrl,
-      modified: url.toString()
+      modified: rebuilt.toString()
     });
-    history.replaceState(null, "", url.toString());
+    history.replaceState(null, "", rebuilt.toString());
   }
 })();
