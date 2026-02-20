@@ -16,8 +16,8 @@ const domain = "https://www.ca.gov";
 const metatitlepostfix = " | CA.gov";
 
 /**
- * @typedef {import("@11ty/eleventy/src/defaultConfig").defaultConfig} EleventyDefaultConfig
- * @typedef {import("@11ty/eleventy/src/UserConfig").default} EleventyConfig
+ * @typedef {import("./node_modules/@11ty/eleventy/src/defaultConfig").defaultConfig} EleventyDefaultConfig
+ * @typedef {import("./node_modules/@11ty/eleventy/src/UserConfig").default} EleventyConfig
  */
 
 module.exports = function (/** @type {EleventyConfig} **/ eleventyConfig) {
