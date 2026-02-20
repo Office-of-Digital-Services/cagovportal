@@ -24,8 +24,8 @@
     "stylelint-use-nesting": "^5.1.1"
   },
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-fetch": "^4.0.1",
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-fetch": "^5.1.1",
     "@babel/core": "^7.28.6",
     "@cagovweb/state-template": "^6.5.5",
     "@fullhuman/postcss-purgecss": "^5.0.0",
