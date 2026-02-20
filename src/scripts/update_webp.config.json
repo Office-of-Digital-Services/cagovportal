@@ -1,3 +1,7 @@
 {
-  "exclude": ["apple-touch-icon", "-social-image.jpg"]
+  "exclude": [
+    "apple-touch-icon",
+    "-social-image.jpg",
+    "ca-gov-organization-logo.png"
+  ]
 }
