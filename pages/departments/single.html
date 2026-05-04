@@ -113,34 +113,19 @@ endfor %} {%- endfor -%}
       <h2>Android and iOS apps</h2>
 
       {% if item.GooglePlayStoreUrl %}
-      <a
-        href="{{item.GooglePlayStoreUrl}}"
-        class="btn btn-default m-r-md m-b wp-block-button__link me-2">
-        <div class="d-flex">
-          <span
-            class="ca-gov-icon-carousel-play font-size-30 line-height-1-1em"></span>
-          <div class="d-flex flex-column align-items-start ps-1">
-            <span class="font-size-11 line-height-1-1em">Get it on</span>
-            <span class="font-size-16 font-weight-600 line-height-1-1em"
-              >Google Play</span
-            >
-          </div>
-        </div>
-      </a>
+      <a href="{{item.GooglePlayStoreUrl}}" class="wp-block-button__link me-4">
+        <img
+          src="/images/googleplay-download.svg"
+          alt="Get it on Google Play"
+          class="height-50  mb-3"
+      /></a>
       {% endif -%} {% if item.AppleAppStoreUrl %}
-      <a
-        href="{{item.AppleAppStoreUrl}}"
-        class="btn btn-standout btn-lg m-r-md m-b wp-block-button__link me-2">
-        <div class="d-flex">
-          <span class="ca-gov-icon-apple font-size-25 line-height-1-1em"></span>
-          <div class="d-flex flex-column align-items-start ps-1">
-            <span class="font-size-11 line-height-1-1em">Download on the</span>
-            <span class="font-size-16 font-weight-600 line-height-1-1em"
-              >App Store</span
-            >
-          </div>
-        </div>
-      </a>
+      <a href="{{item.AppleAppStoreUrl}}" class="wp-block-button__link">
+        <img
+          src="/images/app-store-download.svg"
+          alt="Get it on the App Store"
+          class="height-50  mb-3"
+      /></a>
 
       <hr />
       {% endif -%}{% endif -%}
