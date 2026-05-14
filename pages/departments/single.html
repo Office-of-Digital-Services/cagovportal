@@ -109,6 +109,27 @@ endfor %} {%- endfor -%}
 
       <hr />
 
+      {% if item.GooglePlayStoreUrl or item.AppleAppStoreUrl %}
+      <h2>Android and iOS apps</h2>
+
+      {% if item.GooglePlayStoreUrl %}
+      <a href="{{item.GooglePlayStoreUrl}}" class="wp-block-button__link me-4">
+        <img
+          src="/images/googleplay-download.svg"
+          alt="Get it on Google Play"
+          class="height-50  mb-3"
+      /></a>
+      {% endif -%} {% if item.AppleAppStoreUrl %}
+      <a href="{{item.AppleAppStoreUrl}}" class="wp-block-button__link">
+        <img
+          src="/images/app-store-download.svg"
+          alt="Get it on the App Store"
+          class="height-50  mb-3"
+      /></a>
+      {% endif -%}
+      <hr />
+      {% endif -%}
+
       <h2 class="m-t-md">Description</h2>
       <p class="m-b">{{item.Description}}</p>
 
@@ -151,6 +172,7 @@ endfor %} {%- endfor -%}
           </div>
         </details>
       </cagov-accordion>
+
       {%- endfor %}
     </div>
   </div>
