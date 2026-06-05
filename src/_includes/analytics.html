@@ -1,21 +1,38 @@
-<!-- BEGIN Google Analytics -->
+<!-- #region Google Analytics -->
 <script>
   (function () {
-    var myGTM = "GTM-PZGPNNV"; // www.ca.gov
-    var loadGTM = function () {
-      (function(w,d,s,l){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s);j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+myGTM;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer');
+    var statewideGA4 = "G-69TD0KNT0F"; // REQUIRED: Statewide GA4 ID (do not change) ---
+    var siteGA4 = "G-TM1XPW93HF"; // Replace with your site's GA4 ID
+
+    var loadGA4 = function () {
+      var gtagScript = document.createElement('script');
+      gtagScript.async = true;
+      gtagScript.src =
+        "https://www.googletagmanager.com/gtag/js?id=" + statewideGA4;
+      document.head.appendChild(gtagScript);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+
+      gtag("js", new Date());
+
+      // Cookie flags (forces GA4 to use the actual hostname)
+      var cookieFlags = "secure;samesite=lax;domain=";
+
+      gtag("config", statewideGA4, {
+        cookie_flags: cookieFlags
+      });
+      gtag("config", siteGA4, {
+        cookie_flags: cookieFlags
+      });
     };
 
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(loadGTM);
+    // Performance-friendly idle load
+    if ("requestIdleCallback" in window) {
+      requestIdleCallback(loadGA4);
     } else {
-      setTimeout(loadGTM, 200); // fallback for older browsers
+      setTimeout(loadGA4, 200);
     }
   })();
 </script>
-
-<!-- END Google Analytics -->
+<!-- #endregion -->
