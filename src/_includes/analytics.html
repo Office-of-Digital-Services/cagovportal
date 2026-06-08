@@ -1,38 +1,39 @@
 <!-- #region Google Analytics -->
 <script>
-  (function () {
-    var statewideGA4 = "G-69TD0KNT0F"; // REQUIRED: Statewide GA4 ID (do not change) ---
-    var siteGA4 = "G-TM1XPW93HF"; // Replace with your site's GA4 ID
+  (function() {
+    // --- REQUIRED: Statewide GA4 ID (do not change) ---
+    const SW = "G-69TD0KNT0F"; //G-69TD0KNT0F
+    // --- REQUIRED: Site-specific GA4 ID (developers replace this) ---
+    const SITE = "G-TM1XPW93HF"; // Replace with your site's GA4 ID
+    function loadGA4() {
+      // Load gtag.js once (using statewide ID)
+      const s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=" + SW;
+      document.head.appendChild(s);
 
-    var loadGA4 = function () {
-      var gtagScript = document.createElement('script');
-      gtagScript.async = true;
-      gtagScript.src =
-        "https://www.googletagmanager.com/gtag/js?id=" + statewideGA4;
-      document.head.appendChild(gtagScript);
-
+      // Initialize dataLayer + gtag
       window.dataLayer = window.dataLayer || [];
       function gtag(){ dataLayer.push(arguments); }
 
       gtag("js", new Date());
 
-      // Cookie flags (forces GA4 to use the actual hostname)
-      var cookieFlags = "secure;samesite=lax;domain=";
+      // --- Statewide GA4 (uses .ca.gov second‑level domain cookie) ---
+      gtag("config", SW, {
+        cookie_flags: "secure;samesite=lax"
+      });
 
-      gtag("config", statewideGA4, {
-        cookie_flags: cookieFlags
+      // --- Site-specific GA4 (full-hostname cookie) ---
+      gtag("config", SITE, {
+        cookie_flags: "secure;samesite=lax;domain="
       });
-      gtag("config", siteGA4, {
-        cookie_flags: cookieFlags
-      });
-    };
+    }
 
     // Performance-friendly idle load
-    if ("requestIdleCallback" in window) {
-      requestIdleCallback(loadGA4);
-    } else {
-      setTimeout(loadGA4, 200);
-    }
+    ("requestIdleCallback" in window)
+      ? requestIdleCallback(loadGA4)
+      : setTimeout(loadGA4, 200);
+
   })();
 </script>
 <!-- #endregion -->
