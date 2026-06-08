@@ -20,7 +20,7 @@ pluck('AgencyTags',item.name,"includes") %}
 
 <div
   class="section-understated lineart bg-s1"
-  style="background-image: url('{{item.topicImg}}') no-repeat right / auto;">
+  style="background: url('{{item.topicImg}}') no-repeat right / auto;">
   <div class="container p-y-md">
     {%- include "breadcrumbs.html" -%}
     <h1 class="m-t-0 color-p2-darker">{{title}}</h1>
@@ -76,7 +76,7 @@ pluck('AgencyTags',item.name,"includes") %}
             <figure
               class="pos-rel border-0 pb-5 mb-5 pb-xl-5 mb-xl-4 pb-lg-5 mb-lg-4 pb-md-4 mb-md-4">
               <img
-                src="{{pop.umgURL}}"
+                src="{{pop.imgURL}}"
                 class="img-fluid p-a pos-abs absolute-centered-x width-75pct square"
                 loading="lazy"
                 alt="{{pop.imgAlt}}" />
