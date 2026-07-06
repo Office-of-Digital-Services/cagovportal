@@ -25,13 +25,11 @@ eleventyComputed:
   </div>
 </div>
 
-{% set subtopics = item.fields.fld9bMy113TbnCOYp %}
+{%- for subtopic in service_finder.subtopics %}
 <!---->
-{%- for subtopicID in subtopics %}
+{% if subtopic.fields.fldyJgF4eUXCp4cIs == item.id %}
 <!---->
-{% set subtopic = service_finder.subtopics | pluck("id",subtopicID) %}
-<!---->
-{% set fields = subtopic[0].fields %}
+{% set fields = subtopic.fields %}
 
 <!---->
 <h2>{{ fields.fldzSlHGqVTQDZArF }}</h2>
@@ -54,5 +52,8 @@ pluck("ServiceId",serviceFields.fldTefBeQ2PJgm4N4))[0] %}
 <a href="{{sepService.ServiceUrl}}">Go to service</a>
 
 {% endfor %}
+
+<!---->
+{% endif %}
 <!---->
 {% endfor %}

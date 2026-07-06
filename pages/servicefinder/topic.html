@@ -25,13 +25,12 @@ eleventyComputed:
 </div>
 
 <form method="get" action="./results/">
-  {% set subtopics = item.fields.fld9bMy113TbnCOYp %}
   <!---->
-  {%- for subtopicID in subtopics %}
+  {%- for subtopic in service_finder.subtopics %}
   <!---->
-  {% set subtopic = service_finder.subtopics | pluck("id",subtopicID) %}
+  {% if subtopic.fields.fldyJgF4eUXCp4cIs == item.id %}
   <!---->
-  {% set fields = subtopic[0].fields %}
+  {% set fields = subtopic.fields %}
   <!---->
   {% set id = fields.fldOB4zddd8wX5TLE %}
   <label for="subtopic{{ id }}">{{ fields.fldzSlHGqVTQDZArF }}</label>
@@ -41,7 +40,8 @@ eleventyComputed:
     id="subtopic{{ id }}"
     value="{{ id }}" />
   <br />
-
+  {% endif %}
+  <!---->
   {% endfor %}
   <button type="submit">Submit</button>
 </form>

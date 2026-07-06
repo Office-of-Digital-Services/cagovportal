@@ -4,13 +4,7 @@
     "createdTime": "2026-07-02T18:27:30.000Z",
     "fields": {
       "fld7M2nfLHMr0QKMx": "Education",
-      "fld9bMy113TbnCOYp": [
-        "reclMGMOijxHoqsio",
-        "recPdZ3wUHdF90lCQ",
-        "recO38RYKKQsvYUJO"
-      ],
       "fldH5rtK0bKJLPAs5": 2,
-      "fldP1fFOFExZxExi5": 2,
       "fldpGDExgeMe4EKXW": [
         "recBK0ieAUxs5PzKV"
       ],
@@ -22,13 +16,7 @@
     "createdTime": "2026-07-02T18:47:24.000Z",
     "fields": {
       "fld7M2nfLHMr0QKMx": "Immigration",
-      "fld9bMy113TbnCOYp": [
-        "recqFLjRgLSfrhvuD",
-        "rec7WfLvbg9L2RMkK",
-        "rectWneIWQ6K7mD6z"
-      ],
       "fldH5rtK0bKJLPAs5": 14,
-      "fldP1fFOFExZxExi5": 4,
       "fldpGDExgeMe4EKXW": [
         "recUSOaBeZVfWmrV3"
       ],
@@ -40,14 +28,7 @@
     "createdTime": "2026-07-02T18:46:13.000Z",
     "fields": {
       "fld7M2nfLHMr0QKMx": "State info and laws",
-      "fld9bMy113TbnCOYp": [
-        "recqbuFZmUIA5DyPD",
-        "recdGJAyX3UCL5Adn",
-        "recs6Qo8S7FBUOmQc",
-        "rec7nxiHjLGPEx1mc"
-      ],
       "fldH5rtK0bKJLPAs5": 11,
-      "fldP1fFOFExZxExi5": 1,
       "fldpGDExgeMe4EKXW": [
         "recUSOaBeZVfWmrV3"
       ],
@@ -59,20 +40,7 @@
     "createdTime": "2026-07-02T18:27:30.000Z",
     "fields": {
       "fld7M2nfLHMr0QKMx": "Assistance and social programs",
-      "fld9bMy113TbnCOYp": [
-        "rechc3hU9mhXrO4Sy",
-        "recZavC0cDUHa7nxF",
-        "recBWsRyFHT0CF54V",
-        "rec2LSD2mzGvATatD",
-        "recctsaIW7i8iobbW",
-        "recdLKNsNaj0itkgy",
-        "reczSYbTt3pICoUBb",
-        "rec9BrU4EgC9tzmEn",
-        "recrCTa3u9QAJFEty",
-        "recR3dLWBEekAS2zb"
-      ],
       "fldH5rtK0bKJLPAs5": 1,
-      "fldP1fFOFExZxExi5": 1,
       "fldpGDExgeMe4EKXW": [
         "recBK0ieAUxs5PzKV"
       ],
@@ -84,12 +52,7 @@
     "createdTime": "2026-07-02T18:46:39.000Z",
     "fields": {
       "fld7M2nfLHMr0QKMx": "Travel and recreation",
-      "fld9bMy113TbnCOYp": [
-        "recI4OPhX5Oya75H4",
-        "recldXcZdibiXelRd"
-      ],
       "fldH5rtK0bKJLPAs5": 12,
-      "fldP1fFOFExZxExi5": 2,
       "fldpGDExgeMe4EKXW": [
         "recUSOaBeZVfWmrV3"
       ],
@@ -101,12 +64,7 @@
     "createdTime": "2026-07-02T18:45:45.000Z",
     "fields": {
       "fld7M2nfLHMr0QKMx": "Taxes",
-      "fld9bMy113TbnCOYp": [
-        "recnj3KFAyMcYHZXz",
-        "reccUrRSEHOTOFYpS"
-      ],
       "fldH5rtK0bKJLPAs5": 10,
-      "fldP1fFOFExZxExi5": 3,
       "fldpGDExgeMe4EKXW": [
         "recbQLIC0tt2xFqwT"
       ],
@@ -118,14 +76,7 @@
     "createdTime": "2026-07-02T18:47:01.000Z",
     "fields": {
       "fld7M2nfLHMr0QKMx": "Environment",
-      "fld9bMy113TbnCOYp": [
-        "recyoAZZUWXuh28O6",
-        "rec7u2PyVHkaFsdVt",
-        "recjyRHGeoyJw4luS",
-        "recMsWGZor2H0Dm8G"
-      ],
       "fldH5rtK0bKJLPAs5": 13,
-      "fldP1fFOFExZxExi5": 3,
       "fldpGDExgeMe4EKXW": [
         "recUSOaBeZVfWmrV3"
       ],
@@ -137,17 +88,7 @@
     "createdTime": "2026-07-02T18:44:43.000Z",
     "fields": {
       "fld7M2nfLHMr0QKMx": "Businesses",
-      "fld9bMy113TbnCOYp": [
-        "rece6xgZZTZlLNrLl",
-        "recmyJGKYHWJoiXCU",
-        "rec7nARGkMGzzEspi",
-        "recawwRWfCQQOjOyK",
-        "rec4qJmDWrMaTuOMq",
-        "recUAZInOnYaCikbO",
-        "recru8dUOdzcKCrg0"
-      ],
       "fldH5rtK0bKJLPAs5": 8,
-      "fldP1fFOFExZxExi5": 1,
       "fldpGDExgeMe4EKXW": [
         "recbQLIC0tt2xFqwT"
       ],
@@ -159,15 +100,7 @@
     "createdTime": "2026-07-02T18:44:28.000Z",
     "fields": {
       "fld7M2nfLHMr0QKMx": "Safety and emergencies",
-      "fld9bMy113TbnCOYp": [
-        "recTPeYrGYv3LZtp9",
-        "recHwYw22AREEwOwm",
-        "recKq6WPWAcRRnfxi",
-        "rec7lG93rWdudJmS7",
-        "recr5oFhg7TUz9LKa"
-      ],
       "fldH5rtK0bKJLPAs5": 7,
-      "fldP1fFOFExZxExi5": 2,
       "fldpGDExgeMe4EKXW": [
         "recVvUqqN0Vmf5aNB"
       ],
@@ -179,14 +112,7 @@
     "createdTime": "2026-07-02T18:45:23.000Z",
     "fields": {
       "fld7M2nfLHMr0QKMx": "Jobs and unemployment",
-      "fld9bMy113TbnCOYp": [
-        "recXDT4zX0J5jfCrQ",
-        "recR0DpQoFefdyDgn",
-        "recSDMVjT5Cuh64EL",
-        "recBACGN5aPe1TS9U"
-      ],
       "fldH5rtK0bKJLPAs5": 9,
-      "fldP1fFOFExZxExi5": 2,
       "fldpGDExgeMe4EKXW": [
         "recbQLIC0tt2xFqwT"
       ],
@@ -198,13 +124,7 @@
     "createdTime": "2026-07-02T18:35:30.000Z",
     "fields": {
       "fld7M2nfLHMr0QKMx": "Housing and real estate",
-      "fld9bMy113TbnCOYp": [
-        "recUqMxo1id3OBUEb",
-        "recfBbv9sdekv8y2I",
-        "recORD4MPLUH0oPLE"
-      ],
       "fldH5rtK0bKJLPAs5": 4,
-      "fldP1fFOFExZxExi5": 4,
       "fldpGDExgeMe4EKXW": [
         "recBK0ieAUxs5PzKV"
       ],
@@ -216,13 +136,7 @@
     "createdTime": "2026-07-02T18:35:50.000Z",
     "fields": {
       "fld7M2nfLHMr0QKMx": "DMV/auto",
-      "fld9bMy113TbnCOYp": [
-        "recGtPEJ8w9qcNESz",
-        "recZuM5IqavviGsEC",
-        "recTjKjyH13loJ60E"
-      ],
       "fldH5rtK0bKJLPAs5": 5,
-      "fldP1fFOFExZxExi5": 5,
       "fldpGDExgeMe4EKXW": [
         "recBK0ieAUxs5PzKV"
       ],
@@ -234,17 +148,7 @@
     "createdTime": "2026-07-02T18:43:31.000Z",
     "fields": {
       "fld7M2nfLHMr0QKMx": "Health and wellness",
-      "fld9bMy113TbnCOYp": [
-        "recPAKT4KhpXYTFTP",
-        "rec2jHZlhx1lG83lT",
-        "recEWv5ZtGNNqPodc",
-        "recoYMSvVI9opAbzg",
-        "recjfzgY2z0VbVAPG",
-        "rec1HuYfRPvHsqBZE",
-        "recYMVYXtNWLFScD4"
-      ],
       "fldH5rtK0bKJLPAs5": 6,
-      "fldP1fFOFExZxExi5": 1,
       "fldpGDExgeMe4EKXW": [
         "recVvUqqN0Vmf5aNB"
       ],
@@ -256,11 +160,7 @@
     "createdTime": "2026-07-02T18:27:30.000Z",
     "fields": {
       "fld7M2nfLHMr0QKMx": "Personal records",
-      "fld9bMy113TbnCOYp": [
-        "rec6sXxrRvZ5OhCVN"
-      ],
       "fldH5rtK0bKJLPAs5": 3,
-      "fldP1fFOFExZxExi5": 3,
       "fldpGDExgeMe4EKXW": [
         "recBK0ieAUxs5PzKV"
       ],

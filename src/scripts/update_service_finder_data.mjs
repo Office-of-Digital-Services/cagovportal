@@ -13,12 +13,17 @@ const TABLES = [
   {
     tableId: "tbl5wfeJJ4F7FZ837",
     outFile: "categories.json",
-    fields: ["fldxNZIXYjgY1WAC3"] // add field IDs later
+    fields: ["fldxNZIXYjgY1WAC3"]
   },
   {
     tableId: "tbl6JAo9evMInWiKC",
     outFile: "topics.json",
-    fields: [] // add field IDs later
+    fields: [
+      "fldH5rtK0bKJLPAs5",
+      "fldpGDExgeMe4EKXW",
+      "fld7M2nfLHMr0QKMx",
+      "fldtbJV9XVYXI2yre"
+    ] // add field IDs later
   },
   {
     tableId: "tblSOXHg0SEUMrnHv",
