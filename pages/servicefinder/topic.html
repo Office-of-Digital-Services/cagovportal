@@ -15,6 +15,15 @@ eleventyComputed:
   title: "{{ item.fields.Name | safe }}"
 ---
 
+<div
+  class="section-primary lineart bg-p2"
+  style="background: url('/images/departments-lineart.svg?v2evjhb') no-repeat right / auto;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0">{{title}}</h1>
+  </div>
+</div>
+
 <form method="get" action="./results/">
   {% set subtopics = item.fields['Service Subtopic'] %} {%- for subtopicID in
   subtopics %} {% set subtopic = service_finder_subtopics |
