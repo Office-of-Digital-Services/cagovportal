@@ -9,15 +9,24 @@ dotenv.config({ quiet: true });
 
 const AIRTABLE_BASE = "appqN4fe2lK8xlNqp";
 
-const TABLE_CATEGORY = "tbl5wfeJJ4F7FZ837";
-const TABLE_TOPIC = "tbl6JAo9evMInWiKC";
-const TABLE_SUBTOPIC = "tblSOXHg0SEUMrnHv";
-const TABLE_SERVICES = "tblS8RYo4FSqmONyu";
-
-const OUT_CATEGORY = path.resolve("src/_data/service_finder/categories.json");
-const OUT_TOPICS = path.resolve("src/_data/service_finder/topics.json");
-const OUT_SUBTOPICS = path.resolve("src/_data/service_finder/subtopics.json");
-const OUT_SERVICES = path.resolve("src/_data/service_finder/services.json");
+const TABLES = [
+  {
+    tableId: "tbl5wfeJJ4F7FZ837",
+    outFile: "categories.json"
+  },
+  {
+    tableId: "tbl6JAo9evMInWiKC",
+    outFile: "topics.json"
+  },
+  {
+    tableId: "tblSOXHg0SEUMrnHv",
+    outFile: "subtopics.json"
+  },
+  {
+    tableId: "tblS8RYo4FSqmONyu",
+    outFile: "services.json"
+  }
+];
 
 /**
  * @typedef AirtableRecord
@@ -90,17 +99,14 @@ async function updateServiceFinderData() {
   console.log("🔎 Fetching Airtable tables with pagination…");
 
   try {
-    const [categories, topics, subtopics, services] = await Promise.all([
-      fetchAllRecords(TABLE_CATEGORY, apiKey),
-      fetchAllRecords(TABLE_TOPIC, apiKey),
-      fetchAllRecords(TABLE_SUBTOPIC, apiKey),
-      fetchAllRecords(TABLE_SERVICES, apiKey)
-    ]);
+    for (const { tableId, outFile } of TABLES) {
+      console.log(`📄 Fetching table for: ${outFile}`);
 
-    writeJson(OUT_CATEGORY, categories);
-    writeJson(OUT_TOPICS, topics);
-    writeJson(OUT_SUBTOPICS, subtopics);
-    writeJson(OUT_SERVICES, services);
+      const records = await fetchAllRecords(tableId, apiKey);
+
+      const outputPath = path.resolve(`src/_data/service_finder/${outFile}`);
+      writeJson(outputPath, records);
+    }
   } catch (err) {
     console.error("❌ Error fetching Airtable data:");
     console.error(err);
