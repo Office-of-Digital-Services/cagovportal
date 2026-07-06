@@ -27,18 +27,26 @@ eleventyComputed:
 <!---->
 
 <h2>{{ fields['Name'] }}</h2>
-<pre>{{fields | dump(2) | safe}}</pre>
+
 {% for serviceID in fields['Services'] %}
-<pre>{{serviceID | dump(2) | safe}}</pre>
-<!---->
-{% set service = service_finder_services | pluck("id",serviceID) %}
-<!---->
-<pre>{{service | dump(2) | safe}}</pre>
 
-{% set serviceFields = service[0].fields %}
+<!---->
+{% set serviceFields = (service_finder_services |
+pluck("id",serviceID))[0].fields %}
+<!---->
+{% set sepService = (state_entity.services |
+pluck("ServiceId",serviceFields.ServiceId))[0] %}
 
-<h3>{{ serviceFields['ServiceName'] }}</h3>
-<pre>{{serviceFields | dump(2) | safe}}</pre>
+<h3>{{ sepService.ServiceName }}</h3>
+<p>{{sepService.FriendlyName}}</p>
+<p>{{sepService.Description}}</p>
+<a href="/departments/{{sepService.AgencyId}}/services/{{sepService.ServiceId}}"
+  >(Learn More)</a
+>
+<a href="{{sepService.ServiceUrl}}">Go to service</a>
+
+<pre>{{sepService | dump(2) | safe}}</pre>
+
 {% endfor %}
 <!---->
 {% endfor %}
