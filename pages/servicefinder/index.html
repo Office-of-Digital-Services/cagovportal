@@ -34,11 +34,9 @@ layout: landing
     <ul>
       {%- for topic_category in service_finder.categories %}
       <li>
-        <h3>{{topic_category.fields.fldxNZIXYjgY1WAC3}}</h3>
+        <h3>{{topic_category.fldxNZIXYjgY1WAC3}}</h3>
         <ul>
-          {% for topicRow in service_finder.topics %}
-          <!---->
-          {% set topic = topicRow.fields %}
+          {% for topic in service_finder.topics %}
           <!---->
           {% if topic.fldpGDExgeMe4EKXW == topic_category.id %}
           <!---->

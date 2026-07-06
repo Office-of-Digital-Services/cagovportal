@@ -1,30 +1,18 @@
 [
   {
     "id": "recBK0ieAUxs5PzKV",
-    "createdTime": "2026-07-02T18:22:01.000Z",
-    "fields": {
-      "fldxNZIXYjgY1WAC3": "Personal and family life"
-    }
+    "fldxNZIXYjgY1WAC3": "Personal and family life"
   },
   {
     "id": "recUSOaBeZVfWmrV3",
-    "createdTime": "2026-07-02T18:24:30.000Z",
-    "fields": {
-      "fldxNZIXYjgY1WAC3": "Our state"
-    }
+    "fldxNZIXYjgY1WAC3": "Our state"
   },
   {
     "id": "recVvUqqN0Vmf5aNB",
-    "createdTime": "2026-07-02T18:22:01.000Z",
-    "fields": {
-      "fldxNZIXYjgY1WAC3": "Health and safety"
-    }
+    "fldxNZIXYjgY1WAC3": "Health and safety"
   },
   {
     "id": "recbQLIC0tt2xFqwT",
-    "createdTime": "2026-07-02T18:22:01.000Z",
-    "fields": {
-      "fldxNZIXYjgY1WAC3": "Work and finances"
-    }
+    "fldxNZIXYjgY1WAC3": "Work and finances"
   }
 ]

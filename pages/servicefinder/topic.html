@@ -9,10 +9,10 @@ pagination:
     size: 1
     alias: item
     addAllPagesToCollections : true
-permalink: "servicefinder/topic/{{ item.fields.fldH5rtK0bKJLPAs5 }}/"
+permalink: "servicefinder/topic/{{ item.fldH5rtK0bKJLPAs5 }}/"
 eleventyComputed:
-  description: "{{ item.fields.fldtbJV9XVYXI2yre | safe }}"
-  title: "{{ item.fields.fld7M2nfLHMr0QKMx | safe }}"
+  description: "{{ item.fldtbJV9XVYXI2yre | safe }}"
+  title: "{{ item.fld7M2nfLHMr0QKMx | safe }}"
 ---
 
 <div
@@ -28,12 +28,10 @@ eleventyComputed:
   <!---->
   {%- for subtopic in service_finder.subtopics %}
   <!---->
-  {% if subtopic.fields.fldyJgF4eUXCp4cIs == item.id %}
+  {% if subtopic.fldyJgF4eUXCp4cIs == item.id %}
   <!---->
-  {% set fields = subtopic.fields %}
-  <!---->
-  {% set id = fields.fldOB4zddd8wX5TLE %}
-  <label for="subtopic{{ id }}">{{ fields.fldzSlHGqVTQDZArF }}</label>
+  {% set id = subtopic.fldOB4zddd8wX5TLE %}
+  <label for="subtopic{{ id }}">{{ subtopic.fldzSlHGqVTQDZArF }}</label>
   <input
     type="checkbox"
     name="subtopic"
