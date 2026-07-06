@@ -5,11 +5,11 @@ import path from "path";
 import fetch from "node-fetch";
 import dotenv from "dotenv";
 
-dotenv.config();
+dotenv.config({ quiet: true }); // Load environment variables from .env file
 
 // Airtable configuration (hardcoded)
-const AIRTABLE_BASE = "appXXXXXXXXXXXXXX"; // replace with your base ID
-const AIRTABLE_TABLE = "Services"; // replace with your table name
+const AIRTABLE_BASE = "appqN4fe2lK8xlNqp"; // replace with your base ID
+const AIRTABLE_TABLE = "tblS8RYo4FSqmONyu"; // replace with your table name
 
 // Output location for Eleventy
 const OUTPUT_PATH = path.resolve("_data/service_finder_data.json");
