@@ -23,7 +23,7 @@ const TABLES = [
       "fldpGDExgeMe4EKXW",
       "fld7M2nfLHMr0QKMx",
       "fldtbJV9XVYXI2yre"
-    ] // add field IDs later
+    ]
   },
   {
     tableId: "tblSOXHg0SEUMrnHv",
@@ -33,12 +33,12 @@ const TABLES = [
       "fldzSlHGqVTQDZArF",
       "fldyfIW0A6dIYCq9f",
       "fldyJgF4eUXCp4cIs"
-    ] // add field IDs later
+    ]
   },
   {
     tableId: "tblS8RYo4FSqmONyu",
     outFile: "services.json",
-    fields: [] // add field IDs later
+    fields: ["fldOFxDkMWsQIjA1S", "fldTefBeQ2PJgm4N4"]
   }
 ];
 
