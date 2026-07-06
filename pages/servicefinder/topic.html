@@ -5,7 +5,7 @@ title: Find state services
 breadcrumbparent: Service Finder
 layout: landing
 pagination:
-    data: service_finder_topics
+    data: service_finder.topics
     size: 1
     alias: item
     addAllPagesToCollections : true
@@ -26,7 +26,7 @@ eleventyComputed:
 
 <form method="get" action="./results/">
   {% set subtopics = item.fields['Service Subtopic'] %} {%- for subtopicID in
-  subtopics %} {% set subtopic = service_finder_subtopics |
+  subtopics %} {% set subtopic = service_finder.subtopics |
   pluck("id",subtopicID) %} {% set fields = subtopic[0].fields%} {% set id =
   fields['Subtopic ID'] %}
   <label for="subtopic{{ id }}">{{ fields['Name'] }}</label>

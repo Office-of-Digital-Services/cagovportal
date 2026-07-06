@@ -32,15 +32,20 @@ layout: landing
 
   <div class="col-lg-11">
     <ul>
-      {%- for topic_category in service_finder_hierarchy %}
+      {%- for topic_category in service_finder.categories %}
+      <!---->
+      {% set fields = topic_category.fields %}
       <li>
-        <h3>{{topic_category.name}}</h3>
+        <h3>{{fields['Name']}}</h3>
         <ul>
-          {%- for topic in topic_category.topics %}
+          {%- for topicID in fields['Service Topics'] %}
+          <!---->
+          {%- set topic = (service_finder.topics |
+          pluck("id",topicID))[0].fields %}
           <li>
-            <a href="./topic/{{ topic.topicId }}/"
-              ><h4>{{topic.name}}</h4>
-              <p>{{topic.caption}}</p>
+            <a href="./topic/{{ topic['Topic ID'] }}/"
+              ><h4>{{topic['Name']}}</h4>
+              <p>{{topic['Caption']}}</p>
             </a>
           </li>
           {%- endfor %}

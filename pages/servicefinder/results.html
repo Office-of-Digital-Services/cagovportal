@@ -6,7 +6,7 @@ breadcrumbparent: Service Finder
 allowedQueryParams: subtopic
 layout: landing
 pagination:
-    data: service_finder_topics
+    data: service_finder.topics
     size: 1
     alias: item
     addAllPagesToCollections : true
@@ -29,18 +29,17 @@ eleventyComputed:
 <!---->
 {%- for subtopicID in subtopics %}
 <!---->
-{% set subtopic = service_finder_subtopics | pluck("id",subtopicID) %}
+{% set subtopic = service_finder.subtopics | pluck("id",subtopicID) %}
 <!---->
 {% set fields = subtopic[0].fields%}
 
 <!---->
-
 <h2>{{ fields['Name'] }}</h2>
 
 {% for serviceID in fields['Services'] %}
 
 <!---->
-{% set serviceFields = (service_finder_services |
+{% set serviceFields = (service_finder.services |
 pluck("id",serviceID))[0].fields %}
 <!---->
 {% set sepService = (state_entity.services |

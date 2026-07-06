@@ -14,10 +14,10 @@ const TABLE_TOPIC = "tbl6JAo9evMInWiKC";
 const TABLE_SUBTOPIC = "tblSOXHg0SEUMrnHv";
 const TABLE_SERVICES = "tblS8RYo4FSqmONyu";
 
-const OUT_CATEGORY = path.resolve("src/_data/service_finder_categories.json");
-const OUT_TOPICS = path.resolve("src/_data/service_finder_topics.json");
-const OUT_SUBTOPICS = path.resolve("src/_data/service_finder_subtopics.json");
-const OUT_SERVICES = path.resolve("src/_data/service_finder_services.json");
+const OUT_CATEGORY = path.resolve("src/_data/service_finder/categories.json");
+const OUT_TOPICS = path.resolve("src/_data/service_finder/topics.json");
+const OUT_SUBTOPICS = path.resolve("src/_data/service_finder/subtopics.json");
+const OUT_SERVICES = path.resolve("src/_data/service_finder/services.json");
 
 /**
  * @typedef AirtableRecord
