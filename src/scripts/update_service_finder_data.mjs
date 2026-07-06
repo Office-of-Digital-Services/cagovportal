@@ -13,7 +13,7 @@ const TABLES = [
   {
     tableId: "tbl5wfeJJ4F7FZ837",
     outFile: "categories.json",
-    fields: [] // add field IDs later
+    fields: ["fldxNZIXYjgY1WAC3"] // add field IDs later
   },
   {
     tableId: "tbl6JAo9evMInWiKC",
