@@ -2,7 +2,7 @@
 landing: Services
 description: There are a lot of services available from the state government. Use this finder to get a customized list of services you need.
 title: Find state services
-breadcrumbparent: Services
+breadcrumbparent: Service Finder
 allowedQueryParams: subtopic
 layout: landing
 pagination:
@@ -53,8 +53,6 @@ pluck("ServiceId",serviceFields.ServiceId))[0] %}
   >(Learn More)</a
 >
 <a href="{{sepService.ServiceUrl}}">Go to service</a>
-
-<pre>{{sepService | dump(2) | safe}}</pre>
 
 {% endfor %}
 <!---->
