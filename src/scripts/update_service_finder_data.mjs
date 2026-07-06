@@ -51,6 +51,7 @@ async function fetchAllRecords(tableId, apiKey) {
     const url = new URL(
       `https://api.airtable.com/v0/${AIRTABLE_BASE}/${tableId}`
     );
+    url.searchParams.set("returnFieldsByFieldId", "true");
     url.searchParams.set("pageSize", "100");
     if (offset) url.searchParams.set("offset", offset);
 

@@ -36,16 +36,16 @@ layout: landing
       <!---->
       {% set fields = topic_category.fields %}
       <li>
-        <h3>{{fields.Name}}</h3>
+        <h3>{{fields.fldxNZIXYjgY1WAC3}}</h3>
         <ul>
-          {%- for topicID in fields['Service Topics'] %}
+          {%- for topicID in fields.fldLXJ9PBQGGp2bsH %}
           <!---->
           {%- set topic = (service_finder.topics |
           pluck("id",topicID))[0].fields %}
           <li>
-            <a href="./topic/{{ topic['Topic ID'] }}/"
-              ><h4>{{topic.Name}}</h4>
-              <p>{{topic.Caption}}</p>
+            <a href="./topic/{{ topic.fldH5rtK0bKJLPAs5 }}/"
+              ><h4>{{topic.fld7M2nfLHMr0QKMx}}</h4>
+              <p>{{topic.fldtbJV9XVYXI2yre}}</p>
             </a>
           </li>
           {%- endfor %}

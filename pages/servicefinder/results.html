@@ -10,10 +10,10 @@ pagination:
     size: 1
     alias: item
     addAllPagesToCollections : true
-permalink: "servicefinder/topic/{{ item.fields['Topic ID'] }}/results/"
+permalink: "servicefinder/topic/{{ item.fields.fldH5rtK0bKJLPAs5 }}/results/"
 eleventyComputed:
-  description: "{{ item.fields.Caption | safe }}"
-  title: "{{ item.fields.Name | safe }}"
+  description: "{{ item.fields.fldtbJV9XVYXI2yre | safe }}"
+  title: "{{ item.fields.fld7M2nfLHMr0QKMx | safe }}"
 ---
 
 <div
@@ -25,25 +25,25 @@ eleventyComputed:
   </div>
 </div>
 
-{% set subtopics = item.fields['Service Subtopic'] %}
+{% set subtopics = item.fields.fld9bMy113TbnCOYp %}
 <!---->
 {%- for subtopicID in subtopics %}
 <!---->
 {% set subtopic = service_finder.subtopics | pluck("id",subtopicID) %}
 <!---->
-{% set fields = subtopic[0].fields%}
+{% set fields = subtopic[0].fields %}
 
 <!---->
-<h2>{{ fields['Name'] }}</h2>
+<h2>{{ fields.fldzSlHGqVTQDZArF }}</h2>
 
-{% for serviceID in fields['Services'] %}
+{% for serviceID in fields.fldyfIW0A6dIYCq9f %}
 
 <!---->
 {% set serviceFields = (service_finder.services |
 pluck("id",serviceID))[0].fields %}
 <!---->
 {% set sepService = (state_entity.services |
-pluck("ServiceId",serviceFields.ServiceId))[0] %}
+pluck("ServiceId",serviceFields.fldTefBeQ2PJgm4N4))[0] %}
 
 <h3>{{ sepService.ServiceName }}</h3>
 <p>{{sepService.FriendlyName}}</p>

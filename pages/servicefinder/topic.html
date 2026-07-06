@@ -9,10 +9,10 @@ pagination:
     size: 1
     alias: item
     addAllPagesToCollections : true
-permalink: "servicefinder/topic/{{ item.fields['Topic ID'] }}/"
+permalink: "servicefinder/topic/{{ item.fields.fldH5rtK0bKJLPAs5 }}/"
 eleventyComputed:
-  description: "{{ item.fields.Caption | safe }}"
-  title: "{{ item.fields.Name | safe }}"
+  description: "{{ item.fields.fldtbJV9XVYXI2yre | safe }}"
+  title: "{{ item.fields.fld7M2nfLHMr0QKMx | safe }}"
 ---
 
 <div
@@ -25,11 +25,16 @@ eleventyComputed:
 </div>
 
 <form method="get" action="./results/">
-  {% set subtopics = item.fields['Service Subtopic'] %} {%- for subtopicID in
-  subtopics %} {% set subtopic = service_finder.subtopics |
-  pluck("id",subtopicID) %} {% set fields = subtopic[0].fields%} {% set id =
-  fields['Subtopic ID'] %}
-  <label for="subtopic{{ id }}">{{ fields['Name'] }}</label>
+  {% set subtopics = item.fields.fld9bMy113TbnCOYp %}
+  <!---->
+  {%- for subtopicID in subtopics %}
+  <!---->
+  {% set subtopic = service_finder.subtopics | pluck("id",subtopicID) %}
+  <!---->
+  {% set fields = subtopic[0].fields %}
+  <!---->
+  {% set id = fields.fldOB4zddd8wX5TLE %}
+  <label for="subtopic{{ id }}">{{ fields.fldzSlHGqVTQDZArF }}</label>
   <input
     type="checkbox"
     name="subtopic"
