@@ -7,27 +7,17 @@ import dotenv from "dotenv";
 
 dotenv.config({ quiet: true });
 
-/**
- * Airtable base ID
- * @type {string}
- */
 const AIRTABLE_BASE = "appqN4fe2lK8xlNqp";
 
-/**
- * Airtable table IDs
- * @type {string}
- */
 const TABLE_CATEGORY = "tbl5wfeJJ4F7FZ837";
 const TABLE_TOPIC = "tbl6JAo9evMInWiKC";
 const TABLE_SUBTOPIC = "tblSOXHg0SEUMrnHv";
 const TABLE_SERVICES = "tblS8RYo4FSqmONyu";
 
-/**
- * Output locations
- * @type {string}
- */
 const OUT_HIERARCHY = path.resolve("src/_data/service_finder_hierarchy.json");
 const OUT_SERVICES = path.resolve("src/_data/service_finder_services.json");
+const OUT_TOPICS = path.resolve("src/_data/service_finder_topics.json");
+const OUT_SUBTOPICS = path.resolve("src/_data/service_finder_subtopics.json");
 
 /**
  * @typedef AirtableRecord
@@ -158,9 +148,12 @@ async function updateServiceFinderData() {
 
     fs.writeFileSync(OUT_HIERARCHY, JSON.stringify(hierarchy, null, 2));
     fs.writeFileSync(OUT_SERVICES, JSON.stringify(services.records, null, 2));
-
+    fs.writeFileSync(OUT_TOPICS, JSON.stringify(topics.records, null, 2));
+    fs.writeFileSync(OUT_SUBTOPICS, JSON.stringify(subtopics.records, null, 2));
     console.log(`✅ Hierarchy saved → ${OUT_HIERARCHY}`);
     console.log(`✅ Services saved → ${OUT_SERVICES}`);
+    console.log(`✅ Topics saved → ${OUT_TOPICS}`);
+    console.log(`✅ Subtopics saved → ${OUT_SUBTOPICS}`);
   } catch (err) {
     console.error("❌ Error fetching Airtable data:");
     console.error(err);

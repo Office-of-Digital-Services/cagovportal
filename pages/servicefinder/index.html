@@ -38,7 +38,7 @@ layout: landing
         <ul>
           {%- for topic in topic_category.topics %}
           <li>
-            <a href="../"
+            <a href="./topic/{{ topic.topicId }}/"
               ><h4>{{topic.name}}</h4>
               <p>{{topic.caption}}</p>
             </a>
