@@ -28,7 +28,12 @@ const TABLES = [
   {
     tableId: "tblSOXHg0SEUMrnHv",
     outFile: "subtopics.json",
-    fields: [] // add field IDs later
+    fields: [
+      "fldOB4zddd8wX5TLE",
+      "fldzSlHGqVTQDZArF",
+      "fldyfIW0A6dIYCq9f",
+      "fldyJgF4eUXCp4cIs"
+    ] // add field IDs later
   },
   {
     tableId: "tblS8RYo4FSqmONyu",
