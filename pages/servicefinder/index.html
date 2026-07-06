@@ -36,7 +36,7 @@ layout: landing
       <!---->
       {% set fields = topic_category.fields %}
       <li>
-        <h3>{{fields['Name']}}</h3>
+        <h3>{{fields.Name}}</h3>
         <ul>
           {%- for topicID in fields['Service Topics'] %}
           <!---->
@@ -44,8 +44,8 @@ layout: landing
           pluck("id",topicID))[0].fields %}
           <li>
             <a href="./topic/{{ topic['Topic ID'] }}/"
-              ><h4>{{topic['Name']}}</h4>
-              <p>{{topic['Caption']}}</p>
+              ><h4>{{topic.Name}}</h4>
+              <p>{{topic.Caption}}</p>
             </a>
           </li>
           {%- endfor %}
