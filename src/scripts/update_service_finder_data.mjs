@@ -12,19 +12,23 @@ const AIRTABLE_BASE = "appqN4fe2lK8xlNqp";
 const TABLES = [
   {
     tableId: "tbl5wfeJJ4F7FZ837",
-    outFile: "categories.json"
+    outFile: "categories.json",
+    fields: [] // add field IDs later
   },
   {
     tableId: "tbl6JAo9evMInWiKC",
-    outFile: "topics.json"
+    outFile: "topics.json",
+    fields: [] // add field IDs later
   },
   {
     tableId: "tblSOXHg0SEUMrnHv",
-    outFile: "subtopics.json"
+    outFile: "subtopics.json",
+    fields: [] // add field IDs later
   },
   {
     tableId: "tblS8RYo4FSqmONyu",
-    outFile: "services.json"
+    outFile: "services.json",
+    fields: [] // add field IDs later
   }
 ];
 
@@ -37,10 +41,12 @@ const TABLES = [
 
 /**
  * Fetch ALL records from an Airtable table using pagination.
+ *
  * @param {string} tableId
  * @param {string} apiKey
+ * @param {string[]} [fields]
  */
-async function fetchAllRecords(tableId, apiKey) {
+async function fetchAllRecords(tableId, apiKey, fields = []) {
   /** @type {AirtableRecord[]} */
   let all = [];
 
@@ -51,8 +57,15 @@ async function fetchAllRecords(tableId, apiKey) {
     const url = new URL(
       `https://api.airtable.com/v0/${AIRTABLE_BASE}/${tableId}`
     );
+
     url.searchParams.set("returnFieldsByFieldId", "true");
     url.searchParams.set("pageSize", "100");
+
+    // Add field filters if provided
+    for (const f of fields) {
+      url.searchParams.append("fields[]", f);
+    }
+
     if (offset) url.searchParams.set("offset", offset);
 
     const response = await fetch(url.toString(), {
@@ -100,10 +113,10 @@ async function updateServiceFinderData() {
   console.log("🔎 Fetching Airtable tables with pagination…");
 
   try {
-    for (const { tableId, outFile } of TABLES) {
+    for (const { tableId, outFile, fields } of TABLES) {
       console.log(`📄 Fetching table for: ${outFile}`);
 
-      const records = await fetchAllRecords(tableId, apiKey);
+      const records = await fetchAllRecords(tableId, apiKey, fields || []);
 
       const outputPath = path.resolve(`src/_data/service_finder/${outFile}`);
       writeJson(outputPath, records);
