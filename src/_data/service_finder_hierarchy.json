@@ -1,0 +1,683 @@
+[
+  {
+    "id": "recBK0ieAUxs5PzKV",
+    "name": "Personal and family life",
+    "sort": 1,
+    "topics": [
+      {
+        "id": "recA55STHXuT2Fxai",
+        "name": "Assistance and social programs",
+        "caption": "Food, medical, housing, and other programs",
+        "sort": 1,
+        "topicId": 1,
+        "subtopics": [
+          {
+            "id": "rechc3hU9mhXrO4Sy",
+            "name": "Child support",
+            "sort": 1,
+            "subtopicId": 1,
+            "services": [
+              "recDdoxxwnKrWsIxM",
+              "reca8lPN53l1get3z",
+              "recPVjNTNV2Matlsj"
+            ]
+          },
+          {
+            "id": "recZavC0cDUHa7nxF",
+            "name": "Childcare and food for children",
+            "sort": 2,
+            "subtopicId": 2,
+            "services": [
+              "receppNdJctEZJjfM"
+            ]
+          },
+          {
+            "id": "recBWsRyFHT0CF54V",
+            "name": "Disability",
+            "sort": 3,
+            "subtopicId": 3,
+            "services": [
+              "recuMn7sS7fovP78C"
+            ]
+          },
+          {
+            "id": "rec2LSD2mzGvATatD",
+            "name": "Financial support",
+            "sort": 4,
+            "subtopicId": 4,
+            "services": []
+          },
+          {
+            "id": "recctsaIW7i8iobbW",
+            "name": "Food assistance",
+            "sort": 5,
+            "subtopicId": 5,
+            "services": [
+              "recqP2DxB7XS48gCv"
+            ]
+          },
+          {
+            "id": "recdLKNsNaj0itkgy",
+            "name": "Health and insurance",
+            "sort": 6,
+            "subtopicId": 6,
+            "services": []
+          },
+          {
+            "id": "reczSYbTt3pICoUBb",
+            "name": "Housing and utilities",
+            "sort": 7,
+            "subtopicId": 7,
+            "services": []
+          },
+          {
+            "id": "rec9BrU4EgC9tzmEn",
+            "name": "Maternal and infant health",
+            "sort": 8,
+            "subtopicId": 8,
+            "services": [
+              "recryGeeT5TYU2aqO",
+              "recnFlcNy2I0qHdWA",
+              "recMveGxe6J7xvhSi"
+            ]
+          },
+          {
+            "id": "recrCTa3u9QAJFEty",
+            "name": "Senior and caregiver support",
+            "sort": 9,
+            "subtopicId": 9,
+            "services": [
+              "recbVXnPrp3TT7VaL"
+            ]
+          },
+          {
+            "id": "recR3dLWBEekAS2zb",
+            "name": "Social assistance",
+            "sort": 10,
+            "subtopicId": 10,
+            "services": []
+          }
+        ]
+      },
+      {
+        "id": "rec30Uu7p6AdO2xLS",
+        "name": "Education",
+        "caption": "Financial aid, high school diploma, adult ed, and more",
+        "sort": 2,
+        "topicId": 2,
+        "subtopics": [
+          {
+            "id": "reclMGMOijxHoqsio",
+            "name": "K - 12",
+            "sort": 1,
+            "subtopicId": 11,
+            "services": []
+          },
+          {
+            "id": "recPdZ3wUHdF90lCQ",
+            "name": "College",
+            "sort": 2,
+            "subtopicId": 12,
+            "services": [
+              "reckeDHe50bcK601C",
+              "recfgy1MvDa0Lq7dq"
+            ]
+          },
+          {
+            "id": "recO38RYKKQsvYUJO",
+            "name": "Adult education",
+            "sort": 3,
+            "subtopicId": 13,
+            "services": [
+              "rec08LzYSNne7tE2U"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "recvZakmU2N3lL3be",
+        "name": "Personal records",
+        "caption": "Birth and other certificates, REAL ID, remove your data, etc",
+        "sort": 3,
+        "topicId": 3,
+        "subtopics": [
+          {
+            "id": "rec6sXxrRvZ5OhCVN",
+            "name": "Personal records subtopic",
+            "sort": 1,
+            "subtopicId": 14,
+            "services": []
+          }
+        ]
+      },
+      {
+        "id": "recfqC9xQalQ7031D",
+        "name": "Housing and real estate",
+        "caption": "Verify contractors and realtors, loans, find appraisers...",
+        "sort": 4,
+        "topicId": 4,
+        "subtopics": [
+          {
+            "id": "recUqMxo1id3OBUEb",
+            "name": "Own or buy a home",
+            "sort": 1,
+            "subtopicId": 15,
+            "services": []
+          },
+          {
+            "id": "recfBbv9sdekv8y2I",
+            "name": "Rent",
+            "sort": 2,
+            "subtopicId": 16,
+            "services": [
+              "recmSKCFtVjJThisv"
+            ]
+          },
+          {
+            "id": "recORD4MPLUH0oPLE",
+            "name": "Find housing",
+            "sort": 3,
+            "subtopicId": 17,
+            "services": []
+          }
+        ]
+      },
+      {
+        "id": "recld9zeX8KTrozV9",
+        "name": "DMV/auto",
+        "caption": "Renew driver’s license or vehicle registration, pay tickets...",
+        "sort": 5,
+        "topicId": 5,
+        "subtopics": [
+          {
+            "id": "recGtPEJ8w9qcNESz",
+            "name": "Auto maintenance",
+            "sort": 1,
+            "subtopicId": 18,
+            "services": [
+              "rech49ZCS9Q3hZYiG",
+              "recACteUzwzMu8CH9"
+            ]
+          },
+          {
+            "id": "recZuM5IqavviGsEC",
+            "name": "DMV",
+            "sort": 2,
+            "subtopicId": 19,
+            "services": [
+              "recKNzIRrxtvZm9KB",
+              "recZZazhHCNWoB9de",
+              "recgC8Rts52o86PpU",
+              "reciDKPDvI4vGPq1Z",
+              "recq18QmzBIrjF3fS"
+            ]
+          },
+          {
+            "id": "recTjKjyH13loJ60E",
+            "name": "Traffic tickets",
+            "sort": 3,
+            "subtopicId": 20,
+            "services": [
+              "reccJRwVA2w1KyCFQ"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "recVvUqqN0Vmf5aNB",
+    "name": "Health and safety",
+    "sort": 2,
+    "topics": [
+      {
+        "id": "recrqDJhmDQT2BN1y",
+        "name": "Health and wellness",
+        "caption": "Medical care and insurance, mental health, maternal health",
+        "sort": 1,
+        "topicId": 6,
+        "subtopics": [
+          {
+            "id": "recPAKT4KhpXYTFTP",
+            "name": "Children and infant health",
+            "sort": 1,
+            "subtopicId": 21,
+            "services": [
+              "recAOLMzmfI9tDreR",
+              "rec3oxdRuh0SruHDY",
+              "recFFHjXaNMqCYf67"
+            ]
+          },
+          {
+            "id": "rec2jHZlhx1lG83lT",
+            "name": "Maternal health",
+            "sort": 2,
+            "subtopicId": 22,
+            "services": [
+              "recryGeeT5TYU2aqO",
+              "recnFlcNy2I0qHdWA",
+              "recMveGxe6J7xvhSi"
+            ]
+          },
+          {
+            "id": "recEWv5ZtGNNqPodc",
+            "name": "Mental and behavioral health",
+            "sort": 3,
+            "subtopicId": 23,
+            "services": []
+          },
+          {
+            "id": "recoYMSvVI9opAbzg",
+            "name": "Health insurance",
+            "sort": 4,
+            "subtopicId": 24,
+            "services": [
+              "recpNEqqYTGDr8UHl"
+            ]
+          },
+          {
+            "id": "recjfzgY2z0VbVAPG",
+            "name": "Resources for people with disabilities",
+            "sort": 5,
+            "subtopicId": 25,
+            "services": [
+              "recuMn7sS7fovP78C",
+              "recUsqLZLB8CaTtdk"
+            ]
+          },
+          {
+            "id": "rec1HuYfRPvHsqBZE",
+            "name": "Older adult health",
+            "sort": 6,
+            "subtopicId": 26,
+            "services": [
+              "rec0Ku0G5NVzxeepg",
+              "recbVXnPrp3TT7VaL",
+              "rec9TZ6i7OOvkzPhQ"
+            ]
+          },
+          {
+            "id": "recYMVYXtNWLFScD4",
+            "name": "Food and nutrition",
+            "sort": 7,
+            "subtopicId": 27,
+            "services": [
+              "recqP2DxB7XS48gCv",
+              "rec9TZ6i7OOvkzPhQ"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "recbGUfDXfAb4yInQ",
+        "name": "Safety and emergencies",
+        "caption": "Public safety, disaster services, inmate locator, and more",
+        "sort": 2,
+        "topicId": 7,
+        "subtopics": [
+          {
+            "id": "recTPeYrGYv3LZtp9",
+            "name": "Consumer rights and safety",
+            "sort": 1,
+            "subtopicId": 28,
+            "services": [
+              "rec9U11gTLra2kRja"
+            ]
+          },
+          {
+            "id": "recHwYw22AREEwOwm",
+            "name": "Crime",
+            "sort": 2,
+            "subtopicId": 29,
+            "services": [
+              "recBqrx2XZoCS3xG7",
+              "recFeMkS8Zlg7rFPO"
+            ]
+          },
+          {
+            "id": "recKq6WPWAcRRnfxi",
+            "name": "Disasters",
+            "sort": 3,
+            "subtopicId": 30,
+            "services": [
+              "rec6aBLZTyTGMsBcP",
+              "rect7gl62E2Xy5VRQ"
+            ]
+          },
+          {
+            "id": "rec7lG93rWdudJmS7",
+            "name": "Environmental safety",
+            "sort": 4,
+            "subtopicId": 31,
+            "services": []
+          },
+          {
+            "id": "recr5oFhg7TUz9LKa",
+            "name": "Road safety",
+            "sort": 5,
+            "subtopicId": 32,
+            "services": [
+              "recA1EvaSZ5TNIXB5"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "recbQLIC0tt2xFqwT",
+    "name": "Work and finances",
+    "sort": 3,
+    "topics": [
+      {
+        "id": "recVTdGk7HQeQ1HGR",
+        "name": "Businesses",
+        "caption": "Licensing, permitting, verification, incentives, taxes",
+        "sort": 1,
+        "topicId": 8,
+        "subtopics": [
+          {
+            "id": "rece6xgZZTZlLNrLl",
+            "name": "Contractors",
+            "sort": 1,
+            "subtopicId": 33,
+            "services": [
+              "rec7E7XAMEnyEWLa0",
+              "recPBvImd6XgjWjrN",
+              "recTehCWtjrYUho9b"
+            ]
+          },
+          {
+            "id": "recmyJGKYHWJoiXCU",
+            "name": "Employers",
+            "sort": 2,
+            "subtopicId": 34,
+            "services": [
+              "recDdeigzCZPw4TXs",
+              "recjiTzU36CUZ0gW1"
+            ]
+          },
+          {
+            "id": "rec7nARGkMGzzEspi",
+            "name": "Incentives",
+            "sort": 3,
+            "subtopicId": 35,
+            "services": [
+              "recoeQ4ROeOo8ICkP"
+            ]
+          },
+          {
+            "id": "recawwRWfCQQOjOyK",
+            "name": "Licenses and permits",
+            "sort": 4,
+            "subtopicId": 36,
+            "services": [
+              "recjZ9H8ayh2DH80a"
+            ]
+          },
+          {
+            "id": "rec4qJmDWrMaTuOMq",
+            "name": "Managing a business",
+            "sort": 5,
+            "subtopicId": 37,
+            "services": [
+              "rechOumHdfoDWbm8t",
+              "recEmuxaddPJeb9Q0",
+              "recczrMSEX4f9nH5G",
+              "recuVGPEq90NtJ9vn",
+              "reclBhLt3O79X9gNa"
+            ]
+          },
+          {
+            "id": "recUAZInOnYaCikbO",
+            "name": "Resources and help",
+            "sort": 6,
+            "subtopicId": 38,
+            "services": []
+          },
+          {
+            "id": "recru8dUOdzcKCrg0",
+            "name": "Starting a business",
+            "sort": 7,
+            "subtopicId": 39,
+            "services": [
+              "rechOumHdfoDWbm8t"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "reccIDisWUG9PY39f",
+        "name": "Jobs and unemployment",
+        "caption": "Look for jobs, unemployment, disability, job training...",
+        "sort": 2,
+        "topicId": 9,
+        "subtopics": [
+          {
+            "id": "recXDT4zX0J5jfCrQ",
+            "name": "Unemployment",
+            "sort": 1,
+            "subtopicId": 40,
+            "services": [
+              "recuj11if0qFpvJqp",
+              "rec5Kk6crZpAhyI1q",
+              "recMvJizChmZnIjPR",
+              "recEn06niIgt3Rc5z"
+            ]
+          },
+          {
+            "id": "recR0DpQoFefdyDgn",
+            "name": "Find a job",
+            "sort": 2,
+            "subtopicId": 41,
+            "services": [
+              "rec60oeSihfEGFHJ5",
+              "reci9RKD3o9qWvLFL"
+            ]
+          },
+          {
+            "id": "recSDMVjT5Cuh64EL",
+            "name": "Worker's rights",
+            "sort": 3,
+            "subtopicId": 42,
+            "services": [
+              "recjiTzU36CUZ0gW1"
+            ]
+          },
+          {
+            "id": "recBACGN5aPe1TS9U",
+            "name": "Job training",
+            "sort": 4,
+            "subtopicId": 43,
+            "services": [
+              "rec6r4r2le22rwrJ7",
+              "rec1eStUNZuM0IJ80",
+              "recaP6yTX6RF1VwCJ",
+              "recSRPOdi3yeY4yiq",
+              "rec8b4xR89ksSX7E0"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "recFQ48QX9uLxT9vk",
+        "name": "Taxes",
+        "caption": "File taxes, refunds, tax credits, pay taxes...",
+        "sort": 3,
+        "topicId": 10,
+        "subtopics": [
+          {
+            "id": "recnj3KFAyMcYHZXz",
+            "name": "Filing your taxes",
+            "sort": 1,
+            "subtopicId": 44,
+            "services": [
+              "recfTv0Cl8X7Lf1YJ",
+              "recpLJpYFUKx8H1Ap",
+              "recLwafsMMnx8zmH8"
+            ]
+          },
+          {
+            "id": "reccUrRSEHOTOFYpS",
+            "name": "For businesses",
+            "sort": 2,
+            "subtopicId": 45,
+            "services": [
+              "recO1kxwvwpVd5LaM"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "recUSOaBeZVfWmrV3",
+    "name": "Our state",
+    "sort": 4,
+    "topics": [
+      {
+        "id": "rec35JBw9PtVDTtot",
+        "name": "State info and laws",
+        "caption": "Look up representatives, bills, or laws, get data... ",
+        "sort": 1,
+        "topicId": 11,
+        "subtopics": [
+          {
+            "id": "recqbuFZmUIA5DyPD",
+            "name": "Courts",
+            "sort": 1,
+            "subtopicId": 46,
+            "services": []
+          },
+          {
+            "id": "recdGJAyX3UCL5Adn",
+            "name": "Laws",
+            "sort": 2,
+            "subtopicId": 47,
+            "services": []
+          },
+          {
+            "id": "recs6Qo8S7FBUOmQc",
+            "name": "State data and statistics",
+            "sort": 3,
+            "subtopicId": 48,
+            "services": []
+          },
+          {
+            "id": "rec7nxiHjLGPEx1mc",
+            "name": "Voting and elections",
+            "sort": 4,
+            "subtopicId": 49,
+            "services": [
+              "recyh6F8lEVuNZUaH"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "recCYHIOQswAmLQ1x",
+        "name": "Travel and recreation",
+        "caption": "State parks, reserve campsites, museums, fishing license",
+        "sort": 2,
+        "topicId": 12,
+        "subtopics": [
+          {
+            "id": "recI4OPhX5Oya75H4",
+            "name": "Entertainment",
+            "sort": 1,
+            "subtopicId": 50,
+            "services": []
+          },
+          {
+            "id": "recldXcZdibiXelRd",
+            "name": "Recreation",
+            "sort": 2,
+            "subtopicId": 51,
+            "services": []
+          }
+        ]
+      },
+      {
+        "id": "recNXgNM0bmCLtIkI",
+        "name": "Environment",
+        "caption": "Environmental safety, conservation, climate...",
+        "sort": 3,
+        "topicId": 13,
+        "subtopics": [
+          {
+            "id": "recyoAZZUWXuh28O6",
+            "name": "Conservation",
+            "sort": 1,
+            "subtopicId": 52,
+            "services": [
+              "rec3LvWaLIqzCvToD"
+            ]
+          },
+          {
+            "id": "rec7u2PyVHkaFsdVt",
+            "name": "Grants",
+            "sort": 2,
+            "subtopicId": 53,
+            "services": [
+              "recXpW7kRJEnbeN4P"
+            ]
+          },
+          {
+            "id": "recjyRHGeoyJw4luS",
+            "name": "Climate",
+            "sort": 3,
+            "subtopicId": 54,
+            "services": [
+              "recZPjVNaVgmQzk0x"
+            ]
+          },
+          {
+            "id": "recMsWGZor2H0Dm8G",
+            "name": "Environmental safety",
+            "sort": 4,
+            "subtopicId": 55,
+            "services": []
+          }
+        ]
+      },
+      {
+        "id": "rec34ujJyyifeZSpT",
+        "name": "Immigration",
+        "caption": "Community services, citizenship, ESL classes, DACA...",
+        "sort": 4,
+        "topicId": 14,
+        "subtopics": [
+          {
+            "id": "recqFLjRgLSfrhvuD",
+            "name": "Citizenship",
+            "sort": 1,
+            "subtopicId": 56,
+            "services": [
+              "recy3blbGnZBetAVU",
+              "recPxz0oIzFk2sk96",
+              "recmtIwpaNKOKNdTv"
+            ]
+          },
+          {
+            "id": "rec7WfLvbg9L2RMkK",
+            "name": "Immigration resources",
+            "sort": 2,
+            "subtopicId": 57,
+            "services": []
+          },
+          {
+            "id": "rectWneIWQ6K7mD6z",
+            "name": "DACA",
+            "sort": 3,
+            "subtopicId": 58,
+            "services": [
+              "recN5ojCSpwkRF71F",
+              "recvG7r7gz9ZL0OVS",
+              "recBzFS5i4y7Eeau1"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

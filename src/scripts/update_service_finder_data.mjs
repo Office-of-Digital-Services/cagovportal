@@ -5,56 +5,167 @@ import path from "path";
 import fetch from "node-fetch";
 import dotenv from "dotenv";
 
-dotenv.config({ quiet: true }); // Load environment variables from .env file
+dotenv.config({ quiet: true });
 
-// Airtable configuration (hardcoded)
+/**
+ * Airtable base ID
+ * @type {string}
+ */
 const AIRTABLE_BASE = "appqN4fe2lK8xlNqp";
-const AIRTABLE_TABLE = "tblS8RYo4FSqmONyu";
 
-// Only return these fields
-const FIELDS = ["fldTefBeQ2PJgm4N4", "fldOFxDkMWsQIjA1S", "fld1vrzODVrv4Ah05"];
+/**
+ * Airtable table IDs
+ * @type {string}
+ */
+const TABLE_CATEGORY = "tbl5wfeJJ4F7FZ837";
+const TABLE_TOPIC = "tbl6JAo9evMInWiKC";
+const TABLE_SUBTOPIC = "tblSOXHg0SEUMrnHv";
+const TABLE_SERVICES = "tblS8RYo4FSqmONyu";
 
-// Build the query string: fields[]=fldA&fields[]=fldB&fields[]=fldC
-const fieldQuery = FIELDS.map(f => `fields[]=${f}`).join("&");
+/**
+ * Output locations
+ * @type {string}
+ */
+const OUT_HIERARCHY = path.resolve("src/_data/service_finder_hierarchy.json");
+const OUT_SERVICES = path.resolve("src/_data/service_finder_services.json");
 
-// Output location for Eleventy
-const OUTPUT_PATH = path.resolve("src/_data/service_finder_data.json");
+/**
+ * @typedef AirtableRecord
+ * @property {string} id
+ * @property {string} createdTime
+ * @property {Object.<string, any>} fields
+ */
 
+/**
+ * Fetch a table from Airtable
+ * @param {string} tableId
+ * @param {string} apiKey
+ * @returns {Promise<{records: AirtableRecord[]}>}
+ */
+async function fetchTable(tableId, apiKey) {
+  const url = `https://api.airtable.com/v0/${AIRTABLE_BASE}/${tableId}`;
+
+  const response = await fetch(url, {
+    headers: { Authorization: `Bearer ${apiKey}` }
+  });
+
+  if (!response.ok) {
+    throw new Error(
+      `Airtable request failed (${tableId}): ${response.status} ${response.statusText}`
+    );
+  }
+
+  return response.json();
+}
+
+/**
+ * Build sorted hierarchy:
+ * Category → Topic → Subtopic
+ *
+ * @param {{records: AirtableRecord[]}} categories
+ * @param {{records: AirtableRecord[]}} topics
+ * @param {{records: AirtableRecord[]}} subtopics
+ * @returns {Array<Object>}
+ */
+function buildHierarchy(categories, topics, subtopics) {
+  const topicMap = new Map();
+  const subtopicMap = new Map();
+
+  // Index topics
+  topics.records.forEach(t => {
+    topicMap.set(t.id, {
+      id: t.id,
+      name: t.fields.Name,
+      caption: t.fields.Caption,
+      sort: t.fields.Sort || 0,
+      topicId: t.fields["Topic ID"],
+      subtopics: t.fields["Service Subtopic"] || []
+    });
+  });
+
+  // Index subtopics
+  subtopics.records.forEach(s => {
+    subtopicMap.set(s.id, {
+      id: s.id,
+      name: s.fields.Name,
+      sort: s.fields.Sort || 0,
+      subtopicId: s.fields["Subtopic ID"],
+      services: s.fields.Services || []
+    });
+  });
+
+  // Build final hierarchy
+  const hierarchy = categories.records.map(cat => {
+    const catTopics = (cat.fields["Service Topics"] || [])
+      .map(topicId => {
+        const topic = topicMap.get(topicId);
+        if (!topic) return null;
+
+        const topicSubtopics = (topic.subtopics || [])
+          .map(subId => subtopicMap.get(subId) || null)
+          .filter(Boolean)
+          .sort((a, b) => a.sort - b.sort);
+
+        return {
+          id: topic.id,
+          name: topic.name,
+          caption: topic.caption,
+          sort: topic.sort,
+          topicId: topic.topicId,
+          subtopics: topicSubtopics
+        };
+      })
+      .filter(Boolean)
+      .sort((a, b) => a.sort - b.sort);
+
+    return {
+      id: cat.id,
+      name: cat.fields.Name,
+      sort: cat.fields.Sort || 0,
+      topics: catTopics
+    };
+  });
+
+  // Sort categories
+  hierarchy.sort((a, b) => a.sort - b.sort);
+
+  return hierarchy;
+}
+
+/**
+ * Main update function
+ * Fetches 4 tables and writes 2 output files
+ */
 async function updateServiceFinderData() {
   const apiKey = process.env.AIRTABLE_API_KEY;
 
   if (!apiKey) {
-    console.warn(
-      "⚠️ AIRTABLE_API_KEY missing — skipping Airtable fetch and using existing dataset."
-    );
+    console.warn("⚠️ AIRTABLE_API_KEY missing — skipping Airtable fetch.");
     return;
   }
 
-  console.log("🔎 Fetching Airtable Service Finder data…");
-
-  const url = `https://api.airtable.com/v0/${AIRTABLE_BASE}/${AIRTABLE_TABLE}?includeDateDependencyMetadata=true&${fieldQuery}`;
+  console.log("🔎 Fetching Airtable tables…");
 
   try {
-    const response = await fetch(url, {
-      headers: {
-        Authorization: `Bearer ${apiKey}`
-      }
-    });
+    const [categories, topics, subtopics, services] = await Promise.all([
+      fetchTable(TABLE_CATEGORY, apiKey),
+      fetchTable(TABLE_TOPIC, apiKey),
+      fetchTable(TABLE_SUBTOPIC, apiKey),
+      fetchTable(TABLE_SERVICES, apiKey)
+    ]);
 
-    if (!response.ok) {
-      throw new Error(
-        `Airtable request failed: ${response.status} ${response.statusText}`
-      );
-    }
+    console.log("🔧 Building sorted hierarchy…");
+    const hierarchy = buildHierarchy(categories, topics, subtopics);
 
-    const json = await response.json();
+    fs.writeFileSync(OUT_HIERARCHY, JSON.stringify(hierarchy, null, 2));
+    fs.writeFileSync(OUT_SERVICES, JSON.stringify(services.records, null, 2));
 
-    fs.writeFileSync(OUTPUT_PATH, JSON.stringify(json, null, 2));
-    console.log(`✅ Service Finder data updated → ${OUTPUT_PATH}`);
+    console.log(`✅ Hierarchy saved → ${OUT_HIERARCHY}`);
+    console.log(`✅ Services saved → ${OUT_SERVICES}`);
   } catch (err) {
     console.error("❌ Error fetching Airtable data:");
     console.error(err);
-    process.exit(1); // Real error — fail the build
+    process.exit(1);
   }
 }
 
