@@ -1,8 +1,5 @@
 //@ts-check
 
-// Get API key here...
-// https://airtable.com/create/tokens
-
 import fs from "fs";
 import path from "path";
 import fetch from "node-fetch";
@@ -11,8 +8,14 @@ import dotenv from "dotenv";
 dotenv.config({ quiet: true }); // Load environment variables from .env file
 
 // Airtable configuration (hardcoded)
-const AIRTABLE_BASE = "appqN4fe2lK8xlNqp"; // replace with your base ID
-const AIRTABLE_TABLE = "tblS8RYo4FSqmONyu"; // replace with your table name
+const AIRTABLE_BASE = "appqN4fe2lK8xlNqp";
+const AIRTABLE_TABLE = "tblS8RYo4FSqmONyu";
+
+// Only return these fields
+const FIELDS = ["fldTefBeQ2PJgm4N4", "fldOFxDkMWsQIjA1S", "fld1vrzODVrv4Ah05"];
+
+// Build the query string: fields[]=fldA&fields[]=fldB&fields[]=fldC
+const fieldQuery = FIELDS.map(f => `fields[]=${f}`).join("&");
 
 // Output location for Eleventy
 const OUTPUT_PATH = path.resolve("src/_data/service_finder_data.json");
@@ -29,7 +32,7 @@ async function updateServiceFinderData() {
 
   console.log("🔎 Fetching Airtable Service Finder data…");
 
-  const url = `https://api.airtable.com/v0/${AIRTABLE_BASE}/${AIRTABLE_TABLE}`;
+  const url = `https://api.airtable.com/v0/${AIRTABLE_BASE}/${AIRTABLE_TABLE}?includeDateDependencyMetadata=true&${fieldQuery}`;
 
   try {
     const response = await fetch(url, {
