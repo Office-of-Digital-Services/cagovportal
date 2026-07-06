@@ -15,7 +15,7 @@ eleventyComputed:
   title: "{{ item.fields.Name | safe }}"
 ---
 
-<form method="get">
+<form method="get" action="./results/">
   {% set subtopics = item.fields['Service Subtopic'] %} {%- for subtopicID in
   subtopics %} {% set subtopic = service_finder_subtopics |
   pluck("id",subtopicID) %} {% set fields = subtopic[0].fields%} {% set id =
@@ -26,6 +26,7 @@ eleventyComputed:
     name="subtopic"
     id="subtopic{{ id }}"
     value="{{ id }}" />
+  <br />
 
   {% endfor %}
   <button type="submit">Submit</button>

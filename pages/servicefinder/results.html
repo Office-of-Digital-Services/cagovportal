@@ -1,0 +1,44 @@
+---
+landing: Services
+description: There are a lot of services available from the state government. Use this finder to get a customized list of services you need.
+title: Find state services
+breadcrumbparent: Services
+allowedQueryParams: subtopic
+layout: landing
+pagination:
+    data: service_finder_topics
+    size: 1
+    alias: item
+    addAllPagesToCollections : true
+permalink: "servicefinder/topic/{{ item.fields['Topic ID'] }}/results/"
+eleventyComputed:
+  description: "{{ item.fields.Caption | safe }}"
+  title: "{{ item.fields.Name | safe }}"
+---
+
+{% set subtopics = item.fields['Service Subtopic'] %}
+<!---->
+{%- for subtopicID in subtopics %}
+<!---->
+{% set subtopic = service_finder_subtopics | pluck("id",subtopicID) %}
+<!---->
+{% set fields = subtopic[0].fields%}
+
+<!---->
+
+<h2>{{ fields['Name'] }}</h2>
+<pre>{{fields | dump(2) | safe}}</pre>
+{% for serviceID in fields['Services'] %}
+<pre>{{serviceID | dump(2) | safe}}</pre>
+<!---->
+{% set service = service_finder_services | pluck("id",serviceID) %}
+<!---->
+<pre>{{service | dump(2) | safe}}</pre>
+
+{% set serviceFields = service[0].fields %}
+
+<h3>{{ serviceFields['ServiceName'] }}</h3>
+<pre>{{serviceFields | dump(2) | safe}}</pre>
+{% endfor %}
+<!---->
+{% endfor %}
