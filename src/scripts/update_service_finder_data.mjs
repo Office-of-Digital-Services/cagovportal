@@ -1,5 +1,8 @@
 //@ts-check
 
+// Get API key here...
+// https://airtable.com/create/tokens
+
 import fs from "fs";
 import path from "path";
 import fetch from "node-fetch";
@@ -12,7 +15,7 @@ const AIRTABLE_BASE = "appqN4fe2lK8xlNqp"; // replace with your base ID
 const AIRTABLE_TABLE = "tblS8RYo4FSqmONyu"; // replace with your table name
 
 // Output location for Eleventy
-const OUTPUT_PATH = path.resolve("_data/service_finder_data.json");
+const OUTPUT_PATH = path.resolve("src/_data/service_finder_data.json");
 
 async function updateServiceFinderData() {
   const apiKey = process.env.AIRTABLE_API_KEY;

@@ -1,0 +1,1097 @@
+{
+  "records": [
+    {
+      "id": "rec00CRBpR9E4GMV1",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 237,
+        "ServiceId": 1128,
+        "Live Link": "https://www.ca.gov/departments/237/services/1128",
+        "ServiceName": "Community data and statistics"
+      }
+    },
+    {
+      "id": "rec08LzYSNne7tE2U",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recO38RYKKQsvYUJO"
+        ],
+        "AgencyId": 172,
+        "ServiceId": 82,
+        "Live Link": "https://www.ca.gov/departments/172/services/82",
+        "ServiceName": "Find nearby adult education programs"
+      }
+    },
+    {
+      "id": "rec0Ku0G5NVzxeepg",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "rec1HuYfRPvHsqBZE"
+        ],
+        "AgencyId": 175,
+        "ServiceId": 1172,
+        "Live Link": "https://www.ca.gov/departments/175/services/1172",
+        "ServiceName": "Resources for seniors"
+      }
+    },
+    {
+      "id": "rec0UvYwQk772Fphm",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 287,
+        "ServiceId": 26,
+        "Live Link": "https://www.ca.gov/departments/287/services/26",
+        "ServiceName": "Apply for a seller’s permit"
+      }
+    },
+    {
+      "id": "rec1HTDfRkIYf09ir",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 220,
+        "ServiceId": 1194,
+        "Live Link": "https://www.ca.gov/departments/220/services/1194",
+        "ServiceName": "Apply for a REAL ID/DL"
+      }
+    },
+    {
+      "id": "rec1K74mP05CuyUuY",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 91,
+        "ServiceId": 1279,
+        "Live Link": "https://www.ca.gov/departments/91/services/1279",
+        "ServiceName": "Worker safety, wildfire cleanup, and rebuilding"
+      }
+    },
+    {
+      "id": "rec1Kos9ukkXiBM5Y",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 259,
+        "ServiceId": 49,
+        "Live Link": "https://www.ca.gov/departments/259/services/49",
+        "ServiceName": "Find a state park"
+      }
+    },
+    {
+      "id": "rec1eStUNZuM0IJ80",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recBACGN5aPe1TS9U"
+        ],
+        "AgencyId": 208,
+        "ServiceId": 1113,
+        "Live Link": "https://www.ca.gov/departments/208/services/1113",
+        "ServiceName": "Get Job Training in Madera/Fresno"
+      }
+    },
+    {
+      "id": "rec1x6Cv4KBSVTLPy",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 251,
+        "ServiceId": 1267,
+        "Live Link": "https://www.ca.gov/departments/251/services/1267",
+        "ServiceName": "Safe drinking water public health goals"
+      }
+    },
+    {
+      "id": "rec2EfA5NEfdtmWAx",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 217,
+        "ServiceId": 36,
+        "Live Link": "https://www.ca.gov/departments/217/services/36",
+        "ServiceName": "Find behavioral health resources"
+      }
+    },
+    {
+      "id": "rec2FpnZAJZgK5RdC",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 133,
+        "ServiceId": 1257,
+        "Live Link": "https://www.ca.gov/departments/133/services/1257",
+        "ServiceName": "Family Caregiver Services"
+      }
+    },
+    {
+      "id": "rec39zQ7ztiHRV57S",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 89,
+        "ServiceId": 1189,
+        "Live Link": "https://www.ca.gov/departments/89/services/1189",
+        "ServiceName": "CA state recruitment events and resources"
+      }
+    },
+    {
+      "id": "rec3LvWaLIqzCvToD",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recyoAZZUWXuh28O6"
+        ],
+        "AgencyId": 138,
+        "ServiceId": 1229,
+        "Live Link": "https://www.ca.gov/departments/138/services/1229",
+        "ServiceName": "SF Bay Conservation and Development Permits"
+      }
+    },
+    {
+      "id": "rec3oxdRuh0SruHDY",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recPAKT4KhpXYTFTP"
+        ],
+        "AgencyId": 176,
+        "ServiceId": 1174,
+        "Live Link": "https://www.ca.gov/departments/176/services/1174",
+        "ServiceName": "Women, Infants and Children (WIC)"
+      }
+    },
+    {
+      "id": "rec3r5D2qVLUOgRLO",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 40,
+        "ServiceId": 1131,
+        "Live Link": "https://www.ca.gov/departments/40/services/1131",
+        "ServiceName": "Verify real estate licenses"
+      }
+    },
+    {
+      "id": "rec3wNqxmuO2khrRo",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 236,
+        "ServiceId": 1168,
+        "Live Link": "https://www.ca.gov/departments/236/services/1168",
+        "ServiceName": "CalFile - File return for free"
+      }
+    },
+    {
+      "id": "rec3zVRjI0SWwdG1L",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 216,
+        "ServiceId": 1157,
+        "Live Link": "https://www.ca.gov/departments/216/services/1157",
+        "ServiceName": "Fleet and Asset Management"
+      }
+    },
+    {
+      "id": "rec4PZRHcVwuAGSlX",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 158,
+        "ServiceId": 54,
+        "Live Link": "https://www.ca.gov/departments/158/services/54",
+        "ServiceName": "Find a recycling location"
+      }
+    },
+    {
+      "id": "rec4uCLH4N0Y1dBvl",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 256,
+        "ServiceId": 1261,
+        "Live Link": "https://www.ca.gov/departments/256/services/1261",
+        "ServiceName": "Apply for a Seismic Safety Grant"
+      }
+    },
+    {
+      "id": "rec53E3IrQ6ROr5lA",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 198,
+        "ServiceId": 1095,
+        "Live Link": "https://www.ca.gov/departments/198/services/1095",
+        "ServiceName": "Apply for the California Dream Act"
+      }
+    },
+    {
+      "id": "rec5IGf32qe2RMRjf",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 220,
+        "ServiceId": 1121,
+        "Live Link": "https://www.ca.gov/departments/220/services/1121",
+        "ServiceName": "Real ID and non-US citizens"
+      }
+    },
+    {
+      "id": "rec5Kk6crZpAhyI1q",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recXDT4zX0J5jfCrQ"
+        ],
+        "AgencyId": 229,
+        "ServiceId": 1228,
+        "Live Link": "https://www.ca.gov/departments/229/services/1228",
+        "ServiceName": "Certify for unemployment"
+      }
+    },
+    {
+      "id": "rec5w24Co95dVXApF",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 155,
+        "ServiceId": 1274,
+        "Live Link": "https://www.ca.gov/departments/155/services/1274",
+        "ServiceName": "2nd Chance to win CA lottery"
+      }
+    },
+    {
+      "id": "rec60oeSihfEGFHJ5",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recR0DpQoFefdyDgn"
+        ],
+        "AgencyId": 89,
+        "ServiceId": 39,
+        "Live Link": "https://www.ca.gov/departments/89/services/39",
+        "ServiceName": "Find a CA state job"
+      }
+    },
+    {
+      "id": "rec6DGg3VaNC41ZPA",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 180,
+        "ServiceId": 1136,
+        "Live Link": "https://www.ca.gov/departments/180/services/1136",
+        "ServiceName": "Calculate your earthquake insurance premium"
+      }
+    },
+    {
+      "id": "rec6aBLZTyTGMsBcP",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recKq6WPWAcRRnfxi"
+        ],
+        "AgencyId": 238,
+        "ServiceId": 1122,
+        "Live Link": "https://www.ca.gov/departments/238/services/1122",
+        "ServiceName": "Disaster relief assistance"
+      }
+    },
+    {
+      "id": "rec6r4r2le22rwrJ7",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recBACGN5aPe1TS9U"
+        ],
+        "AgencyId": 208,
+        "ServiceId": 1112,
+        "Live Link": "https://www.ca.gov/departments/208/services/1112",
+        "ServiceName": "Get Job Training in Long Beach"
+      }
+    },
+    {
+      "id": "rec6rxSgI5jCyWP93",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 217,
+        "ServiceId": 37,
+        "Live Link": "https://www.ca.gov/departments/217/services/37",
+        "ServiceName": "Apply for Medi-Cal"
+      }
+    },
+    {
+      "id": "rec6sYhc93Qd1OJiL",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 178,
+        "ServiceId": 59,
+        "Live Link": "https://www.ca.gov/departments/178/services/59",
+        "ServiceName": "Foster care"
+      }
+    },
+    {
+      "id": "rec6u6FF2Gai14S0Y",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 176,
+        "ServiceId": 53,
+        "Live Link": "https://www.ca.gov/departments/176/services/53",
+        "ServiceName": "Apply for death certificate"
+      }
+    },
+    {
+      "id": "rec7E7XAMEnyEWLa0",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "rece6xgZZTZlLNrLl"
+        ],
+        "AgencyId": 299,
+        "ServiceId": 10,
+        "Live Link": "https://www.ca.gov/departments/299/services/10",
+        "ServiceName": "Check contractor application"
+      }
+    },
+    {
+      "id": "rec7t31IsKcsW0q6l",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 268,
+        "ServiceId": 1147,
+        "Live Link": "https://www.ca.gov/departments/268/services/1147",
+        "ServiceName": "Report unclaimed property"
+      }
+    },
+    {
+      "id": "rec82SIxDUsBSQqXS",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 236,
+        "ServiceId": 1204,
+        "Live Link": "https://www.ca.gov/departments/236/services/1204",
+        "ServiceName": "Create a MyFTB account"
+      }
+    },
+    {
+      "id": "rec89o4IEoQReDMAl",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 227,
+        "ServiceId": 1251,
+        "Live Link": "https://www.ca.gov/departments/227/services/1251",
+        "ServiceName": "Hazardous waste Regulatory Assistance Office"
+      }
+    },
+    {
+      "id": "rec8CfNzxGcMwUbqH",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 147,
+        "ServiceId": 1283,
+        "Live Link": "https://www.ca.gov/departments/147/services/1283",
+        "ServiceName": "Join CAL FIRE"
+      }
+    },
+    {
+      "id": "rec8UzdWzf3HIWq8B",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 91,
+        "ServiceId": 1224,
+        "Live Link": "https://www.ca.gov/departments/91/services/1224",
+        "ServiceName": "California Paid Sick Leave (PSL)"
+      }
+    },
+    {
+      "id": "rec8b4xR89ksSX7E0",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recBACGN5aPe1TS9U"
+        ],
+        "AgencyId": 208,
+        "ServiceId": 1110,
+        "Live Link": "https://www.ca.gov/departments/208/services/1110",
+        "ServiceName": "Get Job Training in San Diego"
+      }
+    },
+    {
+      "id": "rec8p62PODQ9VaZiL",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 178,
+        "ServiceId": 1180,
+        "Live Link": "https://www.ca.gov/departments/178/services/1180",
+        "ServiceName": "Find benefits online"
+      }
+    },
+    {
+      "id": "rec8s9NlwCq4LscGU",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 227,
+        "ServiceId": 1250,
+        "Live Link": "https://www.ca.gov/departments/227/services/1250",
+        "ServiceName": "Annual hazardous waste verification (eVQ)"
+      }
+    },
+    {
+      "id": "rec90ipP1kMd5AIvd",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 198,
+        "ServiceId": 1108,
+        "Live Link": "https://www.ca.gov/departments/198/services/1108",
+        "ServiceName": "Attend a student financial aid workshop"
+      }
+    },
+    {
+      "id": "rec9FMI4p6aT2XgBm",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 256,
+        "ServiceId": 1260,
+        "Live Link": "https://www.ca.gov/departments/256/services/1260",
+        "ServiceName": "File a hospital bill complaint"
+      }
+    },
+    {
+      "id": "rec9JZaKzeF6gv2Sk",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 229,
+        "ServiceId": 19,
+        "Live Link": "https://www.ca.gov/departments/229/services/19",
+        "ServiceName": "File for Paid Family Leave"
+      }
+    },
+    {
+      "id": "rec9TZ6i7OOvkzPhQ",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recYMVYXtNWLFScD4",
+          "rec1HuYfRPvHsqBZE"
+        ],
+        "AgencyId": 133,
+        "ServiceId": 1254,
+        "Live Link": "https://www.ca.gov/departments/133/services/1254",
+        "ServiceName": "Food and nutrition for older adults"
+      }
+    },
+    {
+      "id": "rec9U11gTLra2kRja",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recTPeYrGYv3LZtp9"
+        ],
+        "AgencyId": 315,
+        "ServiceId": 1187,
+        "Live Link": "https://www.ca.gov/departments/315/services/1187",
+        "ServiceName": "Submit a consumer privacy complaint"
+      }
+    },
+    {
+      "id": "rec9h6KgCcAvDeR90",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 300,
+        "ServiceId": 1124,
+        "Live Link": "https://www.ca.gov/departments/300/services/1124",
+        "ServiceName": "Search for an Appraiser"
+      }
+    },
+    {
+      "id": "recA1EvaSZ5TNIXB5",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recr5oFhg7TUz9LKa"
+        ],
+        "AgencyId": 184,
+        "ServiceId": 38,
+        "Live Link": "https://www.ca.gov/departments/184/services/38",
+        "ServiceName": "Locate current road conditions"
+      }
+    },
+    {
+      "id": "recACteUzwzMu8CH9",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recGtPEJ8w9qcNESz"
+        ],
+        "AgencyId": 137,
+        "ServiceId": 6,
+        "Live Link": "https://www.ca.gov/departments/137/services/6",
+        "ServiceName": "Find an auto shop"
+      }
+    },
+    {
+      "id": "recAOLMzmfI9tDreR",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recPAKT4KhpXYTFTP"
+        ],
+        "AgencyId": 176,
+        "ServiceId": 1297,
+        "Live Link": "https://www.ca.gov/departments/176/services/1297",
+        "ServiceName": "Black Infant Health Program (BIH)"
+      }
+    },
+    {
+      "id": "recAWeOGMeI6S1Vta",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 178,
+        "ServiceId": 1310,
+        "Live Link": "https://www.ca.gov/departments/178/services/1310",
+        "ServiceName": "Bringing Families Home Program"
+      }
+    },
+    {
+      "id": "recAjpommmqEQxLP3",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 239,
+        "ServiceId": 1173,
+        "Live Link": "https://www.ca.gov/departments/239/services/1173",
+        "ServiceName": "Get COVID-19 information and help"
+      }
+    },
+    {
+      "id": "recBXPIn5782DfJlr",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 256,
+        "ServiceId": 1137,
+        "Live Link": "https://www.ca.gov/departments/256/services/1137",
+        "ServiceName": "Resources to build healthcare facilities safely"
+      }
+    },
+    {
+      "id": "recBqrx2XZoCS3xG7",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recHwYw22AREEwOwm"
+        ],
+        "AgencyId": 223,
+        "ServiceId": 40,
+        "Live Link": "https://www.ca.gov/departments/223/services/40",
+        "ServiceName": "Look up crime statistics"
+      }
+    },
+    {
+      "id": "recBzFS5i4y7Eeau1",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "rectWneIWQ6K7mD6z"
+        ],
+        "AgencyId": 178,
+        "ServiceId": 1116,
+        "Live Link": "https://www.ca.gov/departments/178/services/1116",
+        "ServiceName": "Get DACA legal help"
+      }
+    },
+    {
+      "id": "recC5ur8ewTeoFJtV",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 178,
+        "ServiceId": 81,
+        "Live Link": "https://www.ca.gov/departments/178/services/81",
+        "ServiceName": "Find refugee services"
+      }
+    },
+    {
+      "id": "recCTN2TRxEtcorO4",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 175,
+        "ServiceId": 1170,
+        "Live Link": "https://www.ca.gov/departments/175/services/1170",
+        "ServiceName": "File an insurance complaint"
+      }
+    },
+    {
+      "id": "recCTbKjBoh5JiDcP",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 133,
+        "ServiceId": 1259,
+        "Live Link": "https://www.ca.gov/departments/133/services/1259",
+        "ServiceName": "Legal services for older adults"
+      }
+    },
+    {
+      "id": "recDdeigzCZPw4TXs",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recmyJGKYHWJoiXCU"
+        ],
+        "AgencyId": 229,
+        "ServiceId": 1193,
+        "Live Link": "https://www.ca.gov/departments/229/services/1193",
+        "ServiceName": "Enroll in EDD employer services"
+      }
+    },
+    {
+      "id": "recDdoxxwnKrWsIxM",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "rechc3hU9mhXrO4Sy"
+        ],
+        "AgencyId": 211,
+        "ServiceId": 1214,
+        "Live Link": "https://www.ca.gov/departments/211/services/1214",
+        "ServiceName": "Child support payments"
+      }
+    },
+    {
+      "id": "recEB8KVzObdyhsZH",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 176,
+        "ServiceId": 1295,
+        "Live Link": "https://www.ca.gov/departments/176/services/1295",
+        "ServiceName": "Comprehensive Perinatal Services Program (CPSP)"
+      }
+    },
+    {
+      "id": "recEMFdmh04uiAz7H",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 133,
+        "ServiceId": 1258,
+        "Live Link": "https://www.ca.gov/departments/133/services/1258",
+        "ServiceName": "Medicare Counseling"
+      }
+    },
+    {
+      "id": "recERUIo2PF36bDdG",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 210,
+        "ServiceId": 1134,
+        "Live Link": "https://www.ca.gov/departments/210/services/1134",
+        "ServiceName": "File Complaint Against Professional or Business"
+      }
+    },
+    {
+      "id": "recEmuxaddPJeb9Q0",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "rec4qJmDWrMaTuOMq"
+        ],
+        "AgencyId": 237,
+        "ServiceId": 1127,
+        "Live Link": "https://www.ca.gov/departments/237/services/1127",
+        "ServiceName": "Business permits and licensing help"
+      }
+    },
+    {
+      "id": "recEn06niIgt3Rc5z",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recXDT4zX0J5jfCrQ"
+        ],
+        "AgencyId": 229,
+        "ServiceId": 21,
+        "Live Link": "https://www.ca.gov/departments/229/services/21",
+        "ServiceName": "Manage your Unemployment Insurance claim"
+      }
+    },
+    {
+      "id": "recExqo7SHkjpQmnS",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 155,
+        "ServiceId": 1271,
+        "Live Link": "https://www.ca.gov/departments/155/services/1271",
+        "ServiceName": "Who benefits from the CA Lottery"
+      }
+    },
+    {
+      "id": "recFFHjXaNMqCYf67",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recPAKT4KhpXYTFTP"
+        ],
+        "AgencyId": 212,
+        "ServiceId": 1264,
+        "Live Link": "https://www.ca.gov/departments/212/services/1264",
+        "ServiceName": "Early Start for infants and toddlers"
+      }
+    },
+    {
+      "id": "recFeMkS8Zlg7rFPO",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recHwYw22AREEwOwm"
+        ],
+        "AgencyId": 162,
+        "ServiceId": 1169,
+        "Live Link": "https://www.ca.gov/departments/162/services/1169",
+        "ServiceName": "Apply for compensation for crime-related expenses"
+      }
+    },
+    {
+      "id": "recFm8o45ioy7diky",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 217,
+        "ServiceId": 1209,
+        "Live Link": "https://www.ca.gov/departments/217/services/1209",
+        "ServiceName": "Find a dentist"
+      }
+    },
+    {
+      "id": "recGhlHWqE6AN2waB",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 210,
+        "ServiceId": 1133,
+        "Live Link": "https://www.ca.gov/departments/210/services/1133",
+        "ServiceName": "Find a consumer affairs license"
+      }
+    },
+    {
+      "id": "recH05EWLs6anBkrF",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 176,
+        "ServiceId": 1299,
+        "Live Link": "https://www.ca.gov/departments/176/services/1299",
+        "ServiceName": "Genetic Disease Screening Program (GDSP)"
+      }
+    },
+    {
+      "id": "recHXHMKat9tvq1KO",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 301,
+        "ServiceId": 1252,
+        "Live Link": "https://www.ca.gov/departments/301/services/1252",
+        "ServiceName": "Firewise USA®"
+      }
+    },
+    {
+      "id": "recHq6SYrzuJFgOiL",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 217,
+        "ServiceId": 1301,
+        "Live Link": "https://www.ca.gov/departments/217/services/1301",
+        "ServiceName": "Medi-Cal doula program"
+      }
+    },
+    {
+      "id": "recIxsilHiE1fmfVJ",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 178,
+        "ServiceId": 1309,
+        "Live Link": "https://www.ca.gov/departments/178/services/1309",
+        "ServiceName": "Housing and Disability Advocacy Program"
+      }
+    },
+    {
+      "id": "recJVetgtlmVgICGP",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 174,
+        "ServiceId": 28,
+        "Live Link": "https://www.ca.gov/departments/174/services/28",
+        "ServiceName": "Find a hunter education course"
+      }
+    },
+    {
+      "id": "recJizpalQp1Qu1jq",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 220,
+        "ServiceId": 45,
+        "Live Link": "https://www.ca.gov/departments/220/services/45",
+        "ServiceName": "Renew your vehicle registration"
+      }
+    },
+    {
+      "id": "recKNzIRrxtvZm9KB",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recZuM5IqavviGsEC"
+        ],
+        "AgencyId": 220,
+        "ServiceId": 1221,
+        "Live Link": "https://www.ca.gov/departments/220/services/1221",
+        "ServiceName": "DMV fee calculator"
+      }
+    },
+    {
+      "id": "recKOMSLTub5TNtrH",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 180,
+        "ServiceId": 1223,
+        "Live Link": "https://www.ca.gov/departments/180/services/1223",
+        "ServiceName": "Earthquake warning in California"
+      }
+    },
+    {
+      "id": "recKZoHYahbxkK5KY",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 176,
+        "ServiceId": 1210,
+        "Live Link": "https://www.ca.gov/departments/176/services/1210",
+        "ServiceName": "Search for Personnel Licensing"
+      }
+    },
+    {
+      "id": "recKhfejBJ0L6l3fI",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 147,
+        "ServiceId": 1240,
+        "Live Link": "https://www.ca.gov/departments/147/services/1240",
+        "ServiceName": "Burn permits"
+      }
+    },
+    {
+      "id": "recL0hFfE12ouMdmC",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 176,
+        "ServiceId": 1298,
+        "Live Link": "https://www.ca.gov/departments/176/services/1298",
+        "ServiceName": "California Home Visiting Program (CHVP)"
+      }
+    },
+    {
+      "id": "recL2vUA04Ia4fbe1",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 178,
+        "ServiceId": 1313,
+        "Live Link": "https://www.ca.gov/departments/178/services/1313",
+        "ServiceName": "CalWORKs Homeless Assistance Program"
+      }
+    },
+    {
+      "id": "recLOAKF60ywz8whl",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 155,
+        "ServiceId": 1272,
+        "Live Link": "https://www.ca.gov/departments/155/services/1272",
+        "ServiceName": "CA Lottery Mobile App"
+      }
+    },
+    {
+      "id": "recLczWWA2j0JglS5",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 224,
+        "ServiceId": 1238,
+        "Live Link": "https://www.ca.gov/departments/224/services/1238",
+        "ServiceName": "Help for job seekers with disabilities"
+      }
+    },
+    {
+      "id": "recLfU5Nijvsg7X0N",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 259,
+        "ServiceId": 50,
+        "Live Link": "https://www.ca.gov/departments/259/services/50",
+        "ServiceName": "Make a camping reservation"
+      }
+    },
+    {
+      "id": "recLnBvrLqGtsfoRJ",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 251,
+        "ServiceId": 1287,
+        "Live Link": "https://www.ca.gov/departments/251/services/1287",
+        "ServiceName": "Check heat conditions"
+      }
+    },
+    {
+      "id": "recLwafsMMnx8zmH8",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recnj3KFAyMcYHZXz"
+        ],
+        "AgencyId": 236,
+        "ServiceId": 1212,
+        "Live Link": "https://www.ca.gov/departments/236/services/1212",
+        "ServiceName": "Tax forms and publications"
+      }
+    },
+    {
+      "id": "recM0WPOOamukXEPo",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 224,
+        "ServiceId": 1245,
+        "Live Link": "https://www.ca.gov/departments/224/services/1245",
+        "ServiceName": "Blind Field Services"
+      }
+    },
+    {
+      "id": "recM4HJkADohGJGQ9",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 251,
+        "ServiceId": 1270,
+        "Live Link": "https://www.ca.gov/departments/251/services/1270",
+        "ServiceName": "Children's Environmental Health Guidance"
+      }
+    },
+    {
+      "id": "recMMdAKLxI1PgGEh",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 223,
+        "ServiceId": 1132,
+        "Live Link": "https://www.ca.gov/departments/223/services/1132",
+        "ServiceName": "Search for registered sex offenders"
+      }
+    },
+    {
+      "id": "recMRXIa3SA8RVpak",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 306,
+        "ServiceId": 1145,
+        "Live Link": "https://www.ca.gov/departments/306/services/1145",
+        "ServiceName": "Review of cannabis licensing decisions"
+      }
+    },
+    {
+      "id": "recMWZdTQbhTWOXxD",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 219,
+        "ServiceId": 1129,
+        "Live Link": "https://www.ca.gov/departments/219/services/1129",
+        "ServiceName": "Submit an IMR/Complaint Form"
+      }
+    },
+    {
+      "id": "recMZwn8MhsqK7XaM",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 220,
+        "ServiceId": 1219,
+        "Live Link": "https://www.ca.gov/departments/220/services/1219",
+        "ServiceName": "Get a mobile Driver’s License"
+      }
+    },
+    {
+      "id": "recMvJizChmZnIjPR",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "recXDT4zX0J5jfCrQ"
+        ],
+        "AgencyId": 229,
+        "ServiceId": 1226,
+        "Live Link": "https://www.ca.gov/departments/229/services/1226",
+        "ServiceName": "Calculate your unemployment insurance"
+      }
+    },
+    {
+      "id": "recMveGxe6J7xvhSi",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "rec9BrU4EgC9tzmEn",
+          "rec2jHZlhx1lG83lT"
+        ],
+        "AgencyId": 176,
+        "ServiceId": 1296,
+        "Live Link": "https://www.ca.gov/departments/176/services/1296",
+        "ServiceName": "Get maternal mental health help"
+      }
+    },
+    {
+      "id": "recN5ojCSpwkRF71F",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "rectWneIWQ6K7mD6z"
+        ],
+        "AgencyId": 247,
+        "ServiceId": 1117,
+        "Live Link": "https://www.ca.gov/departments/247/services/1117",
+        "ServiceName": "Get DACA info about worker's rights"
+      }
+    },
+    {
+      "id": "recNDSeKaSIM2cz4c",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 215,
+        "ServiceId": 1201,
+        "Live Link": "https://www.ca.gov/departments/215/services/1201",
+        "ServiceName": "Sexual Harassment Prevention Training"
+      }
+    },
+    {
+      "id": "recNTcUnYT5gPG5xD",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 152,
+        "ServiceId": 1262,
+        "Live Link": "https://www.ca.gov/departments/152/services/1262",
+        "ServiceName": "Housing Counseling Program"
+      }
+    },
+    {
+      "id": "recNWccrRrhtDH3jf",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 317,
+        "ServiceId": 1285,
+        "Live Link": "https://www.ca.gov/departments/317/services/1285",
+        "ServiceName": "Request a free California visitor's guide"
+      }
+    },
+    {
+      "id": "recNtAZuCdQMBTAer",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 268,
+        "ServiceId": 13,
+        "Live Link": "https://www.ca.gov/departments/268/services/13",
+        "ServiceName": "Search for unclaimed property"
+      }
+    },
+    {
+      "id": "recO1kxwvwpVd5LaM",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "Subtopics": [
+          "reccUrRSEHOTOFYpS"
+        ],
+        "AgencyId": 229,
+        "ServiceId": 1186,
+        "Live Link": "https://www.ca.gov/departments/229/services/1186",
+        "ServiceName": "EDD payroll taxes"
+      }
+    },
+    {
+      "id": "recOQ3b8D5SOKHMB5",
+      "createdTime": "2026-07-02T19:30:38.000Z",
+      "fields": {
+        "AgencyId": 215,
+        "ServiceId": 27,
+        "Live Link": "https://www.ca.gov/departments/215/services/27",
+        "ServiceName": "File a discrimination complaint"
+      }
+    }
+  ],
+  "offset": "itrvcDy8Bm5b8FqLN/recOQ3b8D5SOKHMB5"
+}
