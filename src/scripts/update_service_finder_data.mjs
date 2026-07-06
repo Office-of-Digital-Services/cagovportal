@@ -33,14 +33,13 @@ const OUT_SERVICES = path.resolve("src/_data/service_finder_services.json");
  * @typedef AirtableRecord
  * @property {string} id
  * @property {string} createdTime
- * @property {Object.<string, any>} fields
+ * @property {{[key: string]: any}} fields
  */
 
 /**
  * Fetch a table from Airtable
  * @param {string} tableId
  * @param {string} apiKey
- * @returns {Promise<{records: AirtableRecord[]}>}
  */
 async function fetchTable(tableId, apiKey) {
   const url = `https://api.airtable.com/v0/${AIRTABLE_BASE}/${tableId}`;
@@ -55,17 +54,15 @@ async function fetchTable(tableId, apiKey) {
     );
   }
 
-  return response.json();
+  return /** @type {{records: AirtableRecord[]}} */ (await response.json());
 }
 
 /**
  * Build sorted hierarchy:
  * Category → Topic → Subtopic
- *
  * @param {{records: AirtableRecord[]}} categories
  * @param {{records: AirtableRecord[]}} topics
  * @param {{records: AirtableRecord[]}} subtopics
- * @returns {Array<Object>}
  */
 function buildHierarchy(categories, topics, subtopics) {
   const topicMap = new Map();
@@ -96,12 +93,14 @@ function buildHierarchy(categories, topics, subtopics) {
 
   // Build final hierarchy
   const hierarchy = categories.records.map(cat => {
-    const catTopics = (cat.fields["Service Topics"] || [])
+    const catTopics = /** @type {string[]} */ (
+      cat.fields["Service Topics"] || []
+    )
       .map(topicId => {
         const topic = topicMap.get(topicId);
         if (!topic) return null;
 
-        const topicSubtopics = (topic.subtopics || [])
+        const topicSubtopics = /** @type {string[]} */ (topic.subtopics || [])
           .map(subId => subtopicMap.get(subId) || null)
           .filter(Boolean)
           .sort((a, b) => a.sort - b.sort);
@@ -116,7 +115,7 @@ function buildHierarchy(categories, topics, subtopics) {
         };
       })
       .filter(Boolean)
-      .sort((a, b) => a.sort - b.sort);
+      .sort((a, b) => a?.sort - b?.sort);
 
     return {
       id: cat.id,
