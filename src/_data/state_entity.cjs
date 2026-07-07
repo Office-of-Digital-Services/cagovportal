@@ -188,10 +188,11 @@ module.exports = async function () {
       });
   };
 
-  console.time("Image Processing");
-  await processImages();
-  console.timeEnd("Image Processing");
-
+  if (process.env.ELEVENTY_RUN_MODE === "build") {
+    console.time("Image Processing");
+    await processImages();
+    console.timeEnd("Image Processing");
+  }
   results.qa.sort((a, b) => a.Id - b.Id);
 
   results.agencies.forEach(item => {
