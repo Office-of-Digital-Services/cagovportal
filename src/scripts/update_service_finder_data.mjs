@@ -13,6 +13,7 @@ import dotenv from "dotenv";
 dotenv.config({ quiet: true });
 
 const AIRTABLE_BASE = "appqN4fe2lK8xlNqp";
+const baseUrl = `https://api.airtable.com/v0/${AIRTABLE_BASE}`;
 
 /**
  * @typedef TableConfig
@@ -70,8 +71,9 @@ const TABLES = [
 /**
  * Fetch ALL records from an Airtable table using pagination.
  * @param {TableConfig} tableConfig
+ * @param {string} apiKey
  */
-async function fetchAllRecords(tableConfig) {
+async function fetchAllRecords(tableConfig, apiKey) {
   /** @type {AirtableRecord[]} */
   let all = [];
 
@@ -79,9 +81,7 @@ async function fetchAllRecords(tableConfig) {
   let offset = undefined;
 
   do {
-    const url = new URL(
-      `https://api.airtable.com/v0/${AIRTABLE_BASE}/${tableConfig.tableId}`
-    );
+    const url = new URL(`${baseUrl}/${tableConfig.tableId}`);
 
     url.searchParams.set("returnFieldsByFieldId", "true");
     url.searchParams.set("pageSize", "100");
@@ -100,7 +100,7 @@ async function fetchAllRecords(tableConfig) {
     if (offset) url.searchParams.set("offset", offset);
 
     const response = await fetch(url.toString(), {
-      headers: { Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}` }
+      headers: { Authorization: `Bearer ${apiKey}` }
     });
 
     if (!response.ok) {
@@ -141,7 +141,8 @@ function writeJson(filePath, data) {
  * Main update function
  */
 async function updateServiceFinderData() {
-  if (!process.env.AIRTABLE_API_KEY) {
+  const apiKey = process.env.AIRTABLE_API_KEY;
+  if (!apiKey) {
     console.warn("⚠️ AIRTABLE_API_KEY missing — skipping Airtable fetch.");
     return;
   }
@@ -151,7 +152,7 @@ async function updateServiceFinderData() {
       TABLES.map(async tableConfig => {
         console.log(`📄 Fetching table for: ${tableConfig.outFile}`);
 
-        const records = await fetchAllRecords(tableConfig);
+        const records = await fetchAllRecords(tableConfig, apiKey);
 
         const flattenedRecords = records.map(record => {
           const flattened = /** @type {{id: string, [key: string]: any}} */ ({
@@ -160,10 +161,6 @@ async function updateServiceFinderData() {
 
           // Copy all of the record.fields into flattened
           Object.assign(flattened, record.fields);
-
-          //for (const fieldId of tableConfig.fields) {
-          //  flattened[fieldId] = record.fields[fieldId] || null;
-          // }
 
           return flattened;
         });
