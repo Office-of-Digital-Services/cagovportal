@@ -152,7 +152,6 @@ async function updateServiceFinderData() {
   } catch (err) {
     console.error("❌ Error fetching Airtable data:");
     console.error(err);
-    process.exit(1);
   }
 }
 
