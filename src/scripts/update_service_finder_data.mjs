@@ -14,11 +14,12 @@ dotenv.config({ quiet: true });
 
 const AIRTABLE_BASE = "appqN4fe2lK8xlNqp";
 const baseUrl = `https://api.airtable.com/v0/${AIRTABLE_BASE}`;
+const outputBasePath = "src/_data/service_finder";
 
 /**
  * @typedef TableConfig
  * @property {string} tableId
- * @property {string} outFile
+ * @property {string} name
  * @property {string[]} fields
  * @property {string} sort
  */
@@ -27,13 +28,13 @@ const baseUrl = `https://api.airtable.com/v0/${AIRTABLE_BASE}`;
 const TABLES = [
   {
     tableId: "tbl5wfeJJ4F7FZ837",
-    outFile: "categories.json",
+    name: "categories",
     fields: ["fldxNZIXYjgY1WAC3"],
     sort: "fldLGhp1pSqhC8J35"
   },
   {
     tableId: "tbl6JAo9evMInWiKC",
-    outFile: "topics.json",
+    name: "topics",
     fields: [
       "fldH5rtK0bKJLPAs5",
       "fldpGDExgeMe4EKXW",
@@ -44,7 +45,7 @@ const TABLES = [
   },
   {
     tableId: "tblSOXHg0SEUMrnHv",
-    outFile: "subtopics.json",
+    name: "subtopics",
     fields: [
       "fldOB4zddd8wX5TLE",
       "fldzSlHGqVTQDZArF",
@@ -55,7 +56,7 @@ const TABLES = [
   },
   {
     tableId: "tblS8RYo4FSqmONyu",
-    outFile: "services.json",
+    name: "services",
     fields: ["fldOFxDkMWsQIjA1S", "fldTefBeQ2PJgm4N4"],
     sort: "fldaKZyhD3cAgqfj6"
   }
@@ -147,10 +148,13 @@ async function updateServiceFinderData() {
     return;
   }
 
+  /** @type {{[key: string]: any[]}} */
+  const recordsDict = {};
+
   try {
     await Promise.all(
       TABLES.map(async tableConfig => {
-        console.log(`📄 Fetching table for: ${tableConfig.outFile}`);
+        console.log(`📄 Fetching table for: ${tableConfig.name}`);
 
         const records = await fetchAllRecords(tableConfig, apiKey);
 
@@ -165,8 +169,10 @@ async function updateServiceFinderData() {
           return flattened;
         });
 
+        recordsDict[tableConfig.name] = flattenedRecords;
+
         const outputPath = path.resolve(
-          `src/_data/service_finder/${tableConfig.outFile}`
+          `${outputBasePath}/${tableConfig.name}.json`
         );
         writeJson(outputPath, flattenedRecords);
       })
