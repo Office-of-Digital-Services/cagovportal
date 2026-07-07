@@ -34,16 +34,16 @@ layout: landing
     <ul>
       {%- for topic_category in service_finder.categories %}
       <li>
-        <h3>{{topic_category.fldxNZIXYjgY1WAC3}}</h3>
+        <h3>{{topic_category.name}}</h3>
         <ul>
           {% for topic in service_finder.topics %}
           <!---->
-          {% if topic.fldpGDExgeMe4EKXW == topic_category.id %}
+          {% if topic.category == topic_category.id %}
           <!---->
           <li>
-            <a href="./topic/{{ topic.fldH5rtK0bKJLPAs5 }}/"
-              ><h4>{{topic.fld7M2nfLHMr0QKMx}}</h4>
-              <p>{{topic.fldtbJV9XVYXI2yre}}</p>
+            <a href="./topic/{{ topic.topicId }}/"
+              ><h4>{{topic.name}}</h4>
+              <p>{{topic.caption}}</p>
             </a>
           </li>
           {% endif %}
