@@ -14,11 +14,21 @@ dotenv.config({ quiet: true });
 
 const AIRTABLE_BASE = "appqN4fe2lK8xlNqp";
 
+/**
+ * @typedef TableConfig
+ * @property {string} tableId
+ * @property {string} outFile
+ * @property {string[]} fields
+ * @property {string} sort
+ */
+
+/** @type {TableConfig[]} */
 const TABLES = [
   {
     tableId: "tbl5wfeJJ4F7FZ837",
     outFile: "categories.json",
-    fields: ["fldxNZIXYjgY1WAC3"]
+    fields: ["fldxNZIXYjgY1WAC3"],
+    sort: "fldLGhp1pSqhC8J35"
   },
   {
     tableId: "tbl6JAo9evMInWiKC",
@@ -28,7 +38,8 @@ const TABLES = [
       "fldpGDExgeMe4EKXW",
       "fld7M2nfLHMr0QKMx",
       "fldtbJV9XVYXI2yre"
-    ]
+    ],
+    sort: "fldP1fFOFExZxExi5"
   },
   {
     tableId: "tblSOXHg0SEUMrnHv",
@@ -38,12 +49,14 @@ const TABLES = [
       "fldzSlHGqVTQDZArF",
       "fldyfIW0A6dIYCq9f",
       "fldyJgF4eUXCp4cIs"
-    ]
+    ],
+    sort: "fldTElWehFTps2yJp"
   },
   {
     tableId: "tblS8RYo4FSqmONyu",
     outFile: "services.json",
-    fields: ["fldOFxDkMWsQIjA1S", "fldTefBeQ2PJgm4N4"]
+    fields: ["fldOFxDkMWsQIjA1S", "fldTefBeQ2PJgm4N4"],
+    sort: "fldaKZyhD3cAgqfj6"
   }
 ];
 
@@ -56,11 +69,9 @@ const TABLES = [
 
 /**
  * Fetch ALL records from an Airtable table using pagination.
- * @param {string} tableId
- * @param {string} apiKey
- * @param {string[]} [fields]
+ * @param {TableConfig} tableConfig
  */
-async function fetchAllRecords(tableId, apiKey, fields = []) {
+async function fetchAllRecords(tableConfig) {
   /** @type {AirtableRecord[]} */
   let all = [];
 
@@ -69,26 +80,32 @@ async function fetchAllRecords(tableId, apiKey, fields = []) {
 
   do {
     const url = new URL(
-      `https://api.airtable.com/v0/${AIRTABLE_BASE}/${tableId}`
+      `https://api.airtable.com/v0/${AIRTABLE_BASE}/${tableConfig.tableId}`
     );
 
     url.searchParams.set("returnFieldsByFieldId", "true");
     url.searchParams.set("pageSize", "100");
 
     // Add field filters if provided
-    for (const f of fields) {
+    for (const f of tableConfig.fields) {
       url.searchParams.append("fields[]", f);
+    }
+
+    // Add sort if provided
+    if (tableConfig.sort) {
+      url.searchParams.append("sort[0][field]", tableConfig.sort);
+      url.searchParams.append("sort[0][direction]", "asc");
     }
 
     if (offset) url.searchParams.set("offset", offset);
 
     const response = await fetch(url.toString(), {
-      headers: { Authorization: `Bearer ${apiKey}` }
+      headers: { Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}` }
     });
 
     if (!response.ok) {
       throw new Error(
-        `Airtable request failed (${tableId}): ${response.status} ${response.statusText}`
+        `Airtable request failed (${tableConfig.tableId}): ${response.status} ${response.statusText}`
       );
     }
 
@@ -124,33 +141,36 @@ function writeJson(filePath, data) {
  * Main update function
  */
 async function updateServiceFinderData() {
-  const apiKey = process.env.AIRTABLE_API_KEY;
-
-  if (!apiKey) {
+  if (!process.env.AIRTABLE_API_KEY) {
     console.warn("⚠️ AIRTABLE_API_KEY missing — skipping Airtable fetch.");
     return;
   }
 
   try {
     await Promise.all(
-      TABLES.map(async ({ tableId, outFile, fields }) => {
-        console.log(`📄 Fetching table for: ${outFile}`);
+      TABLES.map(async tableConfig => {
+        console.log(`📄 Fetching table for: ${tableConfig.outFile}`);
 
-        const records = await fetchAllRecords(tableId, apiKey, fields || []);
+        const records = await fetchAllRecords(tableConfig);
 
         const flattenedRecords = records.map(record => {
           const flattened = /** @type {{id: string, [key: string]: any}} */ ({
             id: record.id
           });
 
-          for (const fieldId of fields) {
-            flattened[fieldId] = record.fields[fieldId] || null;
-          }
+          // Copy all of the record.fields into flattened
+          Object.assign(flattened, record.fields);
+
+          //for (const fieldId of tableConfig.fields) {
+          //  flattened[fieldId] = record.fields[fieldId] || null;
+          // }
 
           return flattened;
         });
 
-        const outputPath = path.resolve(`src/_data/service_finder/${outFile}`);
+        const outputPath = path.resolve(
+          `src/_data/service_finder/${tableConfig.outFile}`
+        );
         writeJson(outputPath, flattenedRecords);
       })
     );
