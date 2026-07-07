@@ -24,20 +24,16 @@ eleventyComputed:
     <h1 class="m-t-0">{{title}}</h1>
   </div>
 </div>
-
-{%- for subtopic in service_finder.subtopics %}
+{% set dataset = service_finder.helpers.getResultsDataset(item, service_finder,
+state_entity) %}
 <!---->
-{% if subtopic.topic == item.id %}
+{%- for subtopic in dataset.subtopics %}
+
 <!---->
 <h2>{{ subtopic.name }}</h2>
 
-{% for serviceID in subtopic.services %}
-
+{% for sepService in subtopic.sepServices %}
 <!---->
-{% set serviceFields = (service_finder.services | pluck("id",serviceID))[0] %}
-<!---->
-{% set sepService = (state_entity.services |
-pluck("ServiceId",serviceFields.serviceId))[0] %}
 
 <h3>{{ sepService.ServiceName }}</h3>
 <p>{{sepService.FriendlyName}}</p>
@@ -49,7 +45,5 @@ pluck("ServiceId",serviceFields.serviceId))[0] %}
 
 {% endfor %}
 
-<!---->
-{% endif %}
 <!---->
 {% endfor %}
