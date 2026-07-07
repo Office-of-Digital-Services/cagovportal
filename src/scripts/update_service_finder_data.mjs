@@ -99,28 +99,32 @@ async function fetchAllRecords(tableId, apiKey, fields = []) {
 }
 
 /**
- * Write JSON to disk
+ * Write JSON to disk only if content has changed
  * @param {string} filePath
  * @param {any} data
  */
 function writeJson(filePath, data) {
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-  console.log(`✅ Saved → ${filePath}`);
+  const newContent = JSON.stringify(data, null, 2);
+
+  if (fs.existsSync(filePath)) {
+    const existingContent = fs.readFileSync(filePath, "utf-8");
+    if (existingContent === newContent) return;
+  }
+
+  fs.writeFileSync(filePath, newContent);
+  console.info(`✅ Saved → ${filePath}`);
 }
 
 /**
  * Main update function
  */
 async function updateServiceFinderData() {
-  const startTime = Date.now();
   const apiKey = process.env.AIRTABLE_API_KEY;
 
   if (!apiKey) {
     console.warn("⚠️ AIRTABLE_API_KEY missing — skipping Airtable fetch.");
     return;
   }
-
-  console.log("🔎 Fetching Airtable tables with pagination…");
 
   try {
     await Promise.all(
@@ -145,9 +149,6 @@ async function updateServiceFinderData() {
         writeJson(outputPath, flattenedRecords);
       })
     );
-
-    const elapsed = Date.now() - startTime;
-    console.log(`⏱️ Completed in ${elapsed}ms`);
   } catch (err) {
     console.error("❌ Error fetching Airtable data:");
     console.error(err);
