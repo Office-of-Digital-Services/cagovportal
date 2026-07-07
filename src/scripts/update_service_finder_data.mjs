@@ -21,7 +21,7 @@ const outputBasePath = "src/_data/service_finder";
  * @property {string} tableId
  * @property {string} name
  * @property {string[]} fields
- * @property {string} sort
+ * @property {string[]} sort
  * @property {{[key: string]: string}} fieldMapping
  */
 
@@ -31,7 +31,7 @@ const TABLES = [
     tableId: "tbl5wfeJJ4F7FZ837",
     name: "categories",
     fields: ["name"],
-    sort: "fldLGhp1pSqhC8J35",
+    sort: ["fldLGhp1pSqhC8J35"],
     fieldMapping: {
       name: "fldxNZIXYjgY1WAC3"
     }
@@ -40,7 +40,7 @@ const TABLES = [
     tableId: "tbl6JAo9evMInWiKC",
     name: "topics",
     fields: ["topicId", "category", "name", "caption"],
-    sort: "fldP1fFOFExZxExi5",
+    sort: ["fldpGDExgeMe4EKXW", "fldP1fFOFExZxExi5"],
     fieldMapping: {
       name: "fld7M2nfLHMr0QKMx",
       caption: "fldtbJV9XVYXI2yre",
@@ -52,7 +52,7 @@ const TABLES = [
     tableId: "tblSOXHg0SEUMrnHv",
     name: "subtopics",
     fields: ["subtopicId", "name", "services", "topic"],
-    sort: "fldTElWehFTps2yJp",
+    sort: ["fldyJgF4eUXCp4cIs", "fldTElWehFTps2yJp"],
     fieldMapping: {
       name: "fldzSlHGqVTQDZArF",
       services: "fldyfIW0A6dIYCq9f",
@@ -64,7 +64,7 @@ const TABLES = [
     tableId: "tblS8RYo4FSqmONyu",
     name: "services",
     fields: ["serviceId"],
-    sort: "fldaKZyhD3cAgqfj6",
+    sort: ["fldaKZyhD3cAgqfj6"],
     fieldMapping: {
       serviceId: "fldTefBeQ2PJgm4N4"
     }
@@ -103,8 +103,10 @@ async function fetchAllRecords(tableConfig, apiKey) {
 
     // Add sort if provided
     if (tableConfig.sort) {
-      url.searchParams.append("sort[0][field]", tableConfig.sort);
-      url.searchParams.append("sort[0][direction]", "asc");
+      tableConfig.sort.forEach((sortField, index) => {
+        url.searchParams.append(`sort[${index}][field]`, sortField);
+        url.searchParams.append(`sort[${index}][direction]`, "asc");
+      });
     }
 
     if (offset) url.searchParams.set("offset", offset);
@@ -194,6 +196,7 @@ async function updateServiceFinderData() {
   } catch (err) {
     console.error("❌ Error fetching Airtable data:");
     console.error(err);
+    process.exit(1);
   }
 }
 
