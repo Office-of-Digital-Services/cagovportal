@@ -1,7 +1,12 @@
 //@ts-check
 
-import fs from "fs";
-import path from "path";
+// API Reference
+// https://airtable.com/developers/web/api/list-records
+// Token Creation
+// https://airtable.com/create/tokens
+
+import fs from "node:fs";
+import path from "node:path";
 import fetch from "node-fetch";
 import dotenv from "dotenv";
 
