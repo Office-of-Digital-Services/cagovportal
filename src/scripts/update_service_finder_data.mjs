@@ -22,6 +22,7 @@ const outputBasePath = "src/_data/service_finder";
  * @property {string} name
  * @property {string[]} fields
  * @property {string} sort
+ * @property {{[key: string]: string}} fieldMapping
  */
 
 /** @type {TableConfig[]} */
@@ -29,36 +30,44 @@ const TABLES = [
   {
     tableId: "tbl5wfeJJ4F7FZ837",
     name: "categories",
-    fields: ["fldxNZIXYjgY1WAC3"],
-    sort: "fldLGhp1pSqhC8J35"
+    fields: ["name"],
+    sort: "fldLGhp1pSqhC8J35",
+    fieldMapping: {
+      name: "fldxNZIXYjgY1WAC3"
+    }
   },
   {
     tableId: "tbl6JAo9evMInWiKC",
     name: "topics",
-    fields: [
-      "fldH5rtK0bKJLPAs5",
-      "fldpGDExgeMe4EKXW",
-      "fld7M2nfLHMr0QKMx",
-      "fldtbJV9XVYXI2yre"
-    ],
-    sort: "fldP1fFOFExZxExi5"
+    fields: ["topicId", "category", "name", "caption"],
+    sort: "fldP1fFOFExZxExi5",
+    fieldMapping: {
+      name: "fld7M2nfLHMr0QKMx",
+      caption: "fldtbJV9XVYXI2yre",
+      category: "fldpGDExgeMe4EKXW",
+      topicId: "fldH5rtK0bKJLPAs5"
+    }
   },
   {
     tableId: "tblSOXHg0SEUMrnHv",
     name: "subtopics",
-    fields: [
-      "fldOB4zddd8wX5TLE",
-      "fldzSlHGqVTQDZArF",
-      "fldyfIW0A6dIYCq9f",
-      "fldyJgF4eUXCp4cIs"
-    ],
-    sort: "fldTElWehFTps2yJp"
+    fields: ["subtopicId", "name", "services", "topic"],
+    sort: "fldTElWehFTps2yJp",
+    fieldMapping: {
+      name: "fldzSlHGqVTQDZArF",
+      services: "fldyfIW0A6dIYCq9f",
+      subtopicId: "fldOB4zddd8wX5TLE",
+      topic: "fldyJgF4eUXCp4cIs"
+    }
   },
   {
     tableId: "tblS8RYo4FSqmONyu",
     name: "services",
-    fields: ["fldOFxDkMWsQIjA1S", "fldTefBeQ2PJgm4N4"],
-    sort: "fldaKZyhD3cAgqfj6"
+    fields: ["serviceId"],
+    sort: "fldaKZyhD3cAgqfj6",
+    fieldMapping: {
+      serviceId: "fldTefBeQ2PJgm4N4"
+    }
   }
 ];
 
@@ -89,7 +98,7 @@ async function fetchAllRecords(tableConfig, apiKey) {
 
     // Add field filters if provided
     for (const f of tableConfig.fields) {
-      url.searchParams.append("fields[]", f);
+      url.searchParams.append("fields[]", tableConfig.fieldMapping[f]);
     }
 
     // Add sort if provided
@@ -148,9 +157,6 @@ async function updateServiceFinderData() {
     return;
   }
 
-  /** @type {{[key: string]: any[]}} */
-  const recordsDict = {};
-
   try {
     await Promise.all(
       TABLES.map(async tableConfig => {
@@ -166,10 +172,18 @@ async function updateServiceFinderData() {
           // Copy all of the record.fields into flattened
           Object.assign(flattened, record.fields);
 
+          // Use the field mapping to rename fields
+          for (const [key, airtableFieldId] of Object.entries(
+            tableConfig.fieldMapping
+          )) {
+            if (flattened[airtableFieldId] !== undefined) {
+              flattened[key] = flattened[airtableFieldId];
+              delete flattened[airtableFieldId];
+            }
+          }
+
           return flattened;
         });
-
-        recordsDict[tableConfig.name] = flattenedRecords;
 
         const outputPath = path.resolve(
           `${outputBasePath}/${tableConfig.name}.json`

@@ -1,18 +1,18 @@
 [
   {
     "id": "recBK0ieAUxs5PzKV",
-    "fldxNZIXYjgY1WAC3": "Personal and family life"
+    "name": "Personal and family life"
   },
   {
     "id": "recVvUqqN0Vmf5aNB",
-    "fldxNZIXYjgY1WAC3": "Health and safety"
+    "name": "Health and safety"
   },
   {
     "id": "recbQLIC0tt2xFqwT",
-    "fldxNZIXYjgY1WAC3": "Work and finances"
+    "name": "Work and finances"
   },
   {
     "id": "recUSOaBeZVfWmrV3",
-    "fldxNZIXYjgY1WAC3": "Our state"
+    "name": "Our state"
   }
 ]

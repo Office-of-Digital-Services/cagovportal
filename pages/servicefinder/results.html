@@ -10,10 +10,10 @@ pagination:
     size: 1
     alias: item
     addAllPagesToCollections : true
-permalink: "servicefinder/topic/{{ item.fldH5rtK0bKJLPAs5 }}/results/"
+permalink: "servicefinder/topic/{{ item.topicId }}/results/"
 eleventyComputed:
-  description: "{{ item.fldtbJV9XVYXI2yre | safe }}"
-  title: "{{ item.fld7M2nfLHMr0QKMx | safe }}"
+  description: "{{ item.caption | safe }}"
+  title: "{{ item.name | safe }}"
 ---
 
 <div
@@ -24,20 +24,16 @@ eleventyComputed:
     <h1 class="m-t-0">{{title}}</h1>
   </div>
 </div>
-
-{%- for subtopic in service_finder.subtopics %}
+{% set dataset = service_finder.helpers.getResultsDataset(item, service_finder,
+state_entity) %}
 <!---->
-{% if subtopic.fldyJgF4eUXCp4cIs == item.id %}
-<!---->
-<h2>{{ subtopic.fldzSlHGqVTQDZArF }}</h2>
-
-{% for serviceID in subtopic.fldyfIW0A6dIYCq9f %}
+{%- for subtopic in dataset.subtopics %}
 
 <!---->
-{% set serviceFields = (service_finder.services | pluck("id",serviceID))[0] %}
+<h2>{{ subtopic.name }}</h2>
+
+{% for sepService in subtopic.sepServices %}
 <!---->
-{% set sepService = (state_entity.services |
-pluck("ServiceId",serviceFields.fldTefBeQ2PJgm4N4))[0] %}
 
 <h3>{{ sepService.ServiceName }}</h3>
 <p>{{sepService.FriendlyName}}</p>
@@ -49,7 +45,5 @@ pluck("ServiceId",serviceFields.fldTefBeQ2PJgm4N4))[0] %}
 
 {% endfor %}
 
-<!---->
-{% endif %}
 <!---->
 {% endfor %}
