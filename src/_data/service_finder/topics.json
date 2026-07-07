@@ -1,128 +1,128 @@
 [
   {
     "id": "recA55STHXuT2Fxai",
-    "fld7M2nfLHMr0QKMx": "Assistance and social programs",
-    "fldH5rtK0bKJLPAs5": 1,
-    "fldpGDExgeMe4EKXW": [
+    "name": "Assistance and social programs",
+    "caption": "Food, medical, housing, and other programs",
+    "category": [
       "recBK0ieAUxs5PzKV"
     ],
-    "fldtbJV9XVYXI2yre": "Food, medical, housing, and other programs"
+    "topicId": 1
   },
   {
     "id": "recrqDJhmDQT2BN1y",
-    "fld7M2nfLHMr0QKMx": "Health and wellness",
-    "fldH5rtK0bKJLPAs5": 6,
-    "fldpGDExgeMe4EKXW": [
+    "name": "Health and wellness",
+    "caption": "Medical care and insurance, mental health, maternal health",
+    "category": [
       "recVvUqqN0Vmf5aNB"
     ],
-    "fldtbJV9XVYXI2yre": "Medical care and insurance, mental health, maternal health"
+    "topicId": 6
   },
   {
     "id": "recVTdGk7HQeQ1HGR",
-    "fld7M2nfLHMr0QKMx": "Businesses",
-    "fldH5rtK0bKJLPAs5": 8,
-    "fldpGDExgeMe4EKXW": [
+    "name": "Businesses",
+    "caption": "Licensing, permitting, verification, incentives, taxes",
+    "category": [
       "recbQLIC0tt2xFqwT"
     ],
-    "fldtbJV9XVYXI2yre": "Licensing, permitting, verification, incentives, taxes"
+    "topicId": 8
   },
   {
     "id": "rec35JBw9PtVDTtot",
-    "fld7M2nfLHMr0QKMx": "State info and laws",
-    "fldH5rtK0bKJLPAs5": 11,
-    "fldpGDExgeMe4EKXW": [
+    "name": "State info and laws",
+    "caption": "Look up representatives, bills, or laws, get data... ",
+    "category": [
       "recUSOaBeZVfWmrV3"
     ],
-    "fldtbJV9XVYXI2yre": "Look up representatives, bills, or laws, get data... "
+    "topicId": 11
   },
   {
     "id": "rec30Uu7p6AdO2xLS",
-    "fld7M2nfLHMr0QKMx": "Education",
-    "fldH5rtK0bKJLPAs5": 2,
-    "fldpGDExgeMe4EKXW": [
+    "name": "Education",
+    "caption": "Financial aid, high school diploma, adult ed, and more",
+    "category": [
       "recBK0ieAUxs5PzKV"
     ],
-    "fldtbJV9XVYXI2yre": "Financial aid, high school diploma, adult ed, and more"
+    "topicId": 2
   },
   {
     "id": "recbGUfDXfAb4yInQ",
-    "fld7M2nfLHMr0QKMx": "Safety and emergencies",
-    "fldH5rtK0bKJLPAs5": 7,
-    "fldpGDExgeMe4EKXW": [
+    "name": "Safety and emergencies",
+    "caption": "Public safety, disaster services, inmate locator, and more",
+    "category": [
       "recVvUqqN0Vmf5aNB"
     ],
-    "fldtbJV9XVYXI2yre": "Public safety, disaster services, inmate locator, and more"
+    "topicId": 7
   },
   {
     "id": "reccIDisWUG9PY39f",
-    "fld7M2nfLHMr0QKMx": "Jobs and unemployment",
-    "fldH5rtK0bKJLPAs5": 9,
-    "fldpGDExgeMe4EKXW": [
+    "name": "Jobs and unemployment",
+    "caption": "Look for jobs, unemployment, disability, job training...",
+    "category": [
       "recbQLIC0tt2xFqwT"
     ],
-    "fldtbJV9XVYXI2yre": "Look for jobs, unemployment, disability, job training..."
+    "topicId": 9
   },
   {
     "id": "recCYHIOQswAmLQ1x",
-    "fld7M2nfLHMr0QKMx": "Travel and recreation",
-    "fldH5rtK0bKJLPAs5": 12,
-    "fldpGDExgeMe4EKXW": [
+    "name": "Travel and recreation",
+    "caption": "State parks, reserve campsites, museums, fishing license",
+    "category": [
       "recUSOaBeZVfWmrV3"
     ],
-    "fldtbJV9XVYXI2yre": "State parks, reserve campsites, museums, fishing license"
+    "topicId": 12
   },
   {
     "id": "recvZakmU2N3lL3be",
-    "fld7M2nfLHMr0QKMx": "Personal records",
-    "fldH5rtK0bKJLPAs5": 3,
-    "fldpGDExgeMe4EKXW": [
+    "name": "Personal records",
+    "caption": "Birth and other certificates, REAL ID, remove your data, etc",
+    "category": [
       "recBK0ieAUxs5PzKV"
     ],
-    "fldtbJV9XVYXI2yre": "Birth and other certificates, REAL ID, remove your data, etc"
+    "topicId": 3
   },
   {
     "id": "recFQ48QX9uLxT9vk",
-    "fld7M2nfLHMr0QKMx": "Taxes",
-    "fldH5rtK0bKJLPAs5": 10,
-    "fldpGDExgeMe4EKXW": [
+    "name": "Taxes",
+    "caption": "File taxes, refunds, tax credits, pay taxes...",
+    "category": [
       "recbQLIC0tt2xFqwT"
     ],
-    "fldtbJV9XVYXI2yre": "File taxes, refunds, tax credits, pay taxes..."
+    "topicId": 10
   },
   {
     "id": "recNXgNM0bmCLtIkI",
-    "fld7M2nfLHMr0QKMx": "Environment",
-    "fldH5rtK0bKJLPAs5": 13,
-    "fldpGDExgeMe4EKXW": [
+    "name": "Environment",
+    "caption": "Environmental safety, conservation, climate...",
+    "category": [
       "recUSOaBeZVfWmrV3"
     ],
-    "fldtbJV9XVYXI2yre": "Environmental safety, conservation, climate..."
+    "topicId": 13
   },
   {
     "id": "recfqC9xQalQ7031D",
-    "fld7M2nfLHMr0QKMx": "Housing and real estate",
-    "fldH5rtK0bKJLPAs5": 4,
-    "fldpGDExgeMe4EKXW": [
+    "name": "Housing and real estate",
+    "caption": "Verify contractors and realtors, loans, find appraisers...",
+    "category": [
       "recBK0ieAUxs5PzKV"
     ],
-    "fldtbJV9XVYXI2yre": "Verify contractors and realtors, loans, find appraisers..."
+    "topicId": 4
   },
   {
     "id": "rec34ujJyyifeZSpT",
-    "fld7M2nfLHMr0QKMx": "Immigration",
-    "fldH5rtK0bKJLPAs5": 14,
-    "fldpGDExgeMe4EKXW": [
+    "name": "Immigration",
+    "caption": "Community services, citizenship, ESL classes, DACA...",
+    "category": [
       "recUSOaBeZVfWmrV3"
     ],
-    "fldtbJV9XVYXI2yre": "Community services, citizenship, ESL classes, DACA..."
+    "topicId": 14
   },
   {
     "id": "recld9zeX8KTrozV9",
-    "fld7M2nfLHMr0QKMx": "DMV/auto",
-    "fldH5rtK0bKJLPAs5": 5,
-    "fldpGDExgeMe4EKXW": [
+    "name": "DMV/auto",
+    "caption": "Renew driver’s license or vehicle registration, pay tickets...",
+    "category": [
       "recBK0ieAUxs5PzKV"
     ],
-    "fldtbJV9XVYXI2yre": "Renew driver’s license or vehicle registration, pay tickets..."
+    "topicId": 5
   }
 ]
