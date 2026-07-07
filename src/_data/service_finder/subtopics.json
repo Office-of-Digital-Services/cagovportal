@@ -56,6 +56,9 @@
   {
     "id": "recdLKNsNaj0itkgy",
     "name": "Health and insurance",
+    "services": [
+      "rec6rxSgI5jCyWP93"
+    ],
     "subtopicId": 6,
     "topic": [
       "recA55STHXuT2Fxai"
@@ -141,7 +144,9 @@
     "id": "recawwRWfCQQOjOyK",
     "name": "Licenses and permits",
     "services": [
-      "recjZ9H8ayh2DH80a"
+      "recjZ9H8ayh2DH80a",
+      "recoe1SGpjWlEHr5l",
+      "recoyRa4ARP8izbBw"
     ],
     "subtopicId": 36,
     "topic": [
@@ -202,7 +207,8 @@
       "recZZazhHCNWoB9de",
       "recgC8Rts52o86PpU",
       "reciDKPDvI4vGPq1Z",
-      "recq18QmzBIrjF3fS"
+      "recq18QmzBIrjF3fS",
+      "rec1HTDfRkIYf09ir"
     ],
     "subtopicId": 19,
     "topic": [
@@ -330,7 +336,8 @@
     "id": "recoYMSvVI9opAbzg",
     "name": "Health insurance",
     "services": [
-      "recpNEqqYTGDr8UHl"
+      "recpNEqqYTGDr8UHl",
+      "rec6rxSgI5jCyWP93"
     ],
     "subtopicId": 24,
     "topic": [
@@ -377,6 +384,9 @@
   {
     "id": "recUqMxo1id3OBUEb",
     "name": "Own or buy a home",
+    "services": [
+      "recmvxGstJreOpaSm"
+    ],
     "subtopicId": 15,
     "topic": [
       "recfqC9xQalQ7031D"
@@ -490,6 +500,10 @@
   {
     "id": "rec6sXxrRvZ5OhCVN",
     "name": "Personal records subtopic",
+    "services": [
+      "recYPYPqnqncnnDWg",
+      "rec6u6FF2Gai14S0Y"
+    ],
     "subtopicId": 14,
     "topic": [
       "recvZakmU2N3lL3be"
@@ -533,6 +547,9 @@
   {
     "id": "rec7lG93rWdudJmS7",
     "name": "Environmental safety",
+    "services": [
+      "rec4uCLH4N0Y1dBvl"
+    ],
     "subtopicId": 31,
     "topic": [
       "recbGUfDXfAb4yInQ"
@@ -611,6 +628,16 @@
   {
     "id": "recI4OPhX5Oya75H4",
     "name": "Entertainment",
+    "services": [
+      "rechefsdM0XLIAk2W",
+      "recLOAKF60ywz8whl",
+      "recbVC2dQKx54lPte",
+      "recyhCcrLQG2NHv7P",
+      "recPkFi7L1kIxn1US",
+      "recsSgZBkXOtIGPPo",
+      "rec5w24Co95dVXApF",
+      "recExqo7SHkjpQmnS"
+    ],
     "subtopicId": 50,
     "topic": [
       "recCYHIOQswAmLQ1x"
