@@ -1,21 +1,30 @@
 [
   {
-    "id": "rec30Uu7p6AdO2xLS",
-    "fld7M2nfLHMr0QKMx": "Education",
-    "fldH5rtK0bKJLPAs5": 2,
+    "id": "recA55STHXuT2Fxai",
+    "fld7M2nfLHMr0QKMx": "Assistance and social programs",
+    "fldH5rtK0bKJLPAs5": 1,
     "fldpGDExgeMe4EKXW": [
       "recBK0ieAUxs5PzKV"
     ],
-    "fldtbJV9XVYXI2yre": "Financial aid, high school diploma, adult ed, and more"
+    "fldtbJV9XVYXI2yre": "Food, medical, housing, and other programs"
   },
   {
-    "id": "rec34ujJyyifeZSpT",
-    "fld7M2nfLHMr0QKMx": "Immigration",
-    "fldH5rtK0bKJLPAs5": 14,
+    "id": "recrqDJhmDQT2BN1y",
+    "fld7M2nfLHMr0QKMx": "Health and wellness",
+    "fldH5rtK0bKJLPAs5": 6,
     "fldpGDExgeMe4EKXW": [
-      "recUSOaBeZVfWmrV3"
+      "recVvUqqN0Vmf5aNB"
     ],
-    "fldtbJV9XVYXI2yre": "Community services, citizenship, ESL classes, DACA..."
+    "fldtbJV9XVYXI2yre": "Medical care and insurance, mental health, maternal health"
+  },
+  {
+    "id": "recVTdGk7HQeQ1HGR",
+    "fld7M2nfLHMr0QKMx": "Businesses",
+    "fldH5rtK0bKJLPAs5": 8,
+    "fldpGDExgeMe4EKXW": [
+      "recbQLIC0tt2xFqwT"
+    ],
+    "fldtbJV9XVYXI2yre": "Licensing, permitting, verification, incentives, taxes"
   },
   {
     "id": "rec35JBw9PtVDTtot",
@@ -27,49 +36,13 @@
     "fldtbJV9XVYXI2yre": "Look up representatives, bills, or laws, get data... "
   },
   {
-    "id": "recA55STHXuT2Fxai",
-    "fld7M2nfLHMr0QKMx": "Assistance and social programs",
-    "fldH5rtK0bKJLPAs5": 1,
+    "id": "rec30Uu7p6AdO2xLS",
+    "fld7M2nfLHMr0QKMx": "Education",
+    "fldH5rtK0bKJLPAs5": 2,
     "fldpGDExgeMe4EKXW": [
       "recBK0ieAUxs5PzKV"
     ],
-    "fldtbJV9XVYXI2yre": "Food, medical, housing, and other programs"
-  },
-  {
-    "id": "recCYHIOQswAmLQ1x",
-    "fld7M2nfLHMr0QKMx": "Travel and recreation",
-    "fldH5rtK0bKJLPAs5": 12,
-    "fldpGDExgeMe4EKXW": [
-      "recUSOaBeZVfWmrV3"
-    ],
-    "fldtbJV9XVYXI2yre": "State parks, reserve campsites, museums, fishing license"
-  },
-  {
-    "id": "recFQ48QX9uLxT9vk",
-    "fld7M2nfLHMr0QKMx": "Taxes",
-    "fldH5rtK0bKJLPAs5": 10,
-    "fldpGDExgeMe4EKXW": [
-      "recbQLIC0tt2xFqwT"
-    ],
-    "fldtbJV9XVYXI2yre": "File taxes, refunds, tax credits, pay taxes..."
-  },
-  {
-    "id": "recNXgNM0bmCLtIkI",
-    "fld7M2nfLHMr0QKMx": "Environment",
-    "fldH5rtK0bKJLPAs5": 13,
-    "fldpGDExgeMe4EKXW": [
-      "recUSOaBeZVfWmrV3"
-    ],
-    "fldtbJV9XVYXI2yre": "Environmental safety, conservation, climate..."
-  },
-  {
-    "id": "recVTdGk7HQeQ1HGR",
-    "fld7M2nfLHMr0QKMx": "Businesses",
-    "fldH5rtK0bKJLPAs5": 8,
-    "fldpGDExgeMe4EKXW": [
-      "recbQLIC0tt2xFqwT"
-    ],
-    "fldtbJV9XVYXI2yre": "Licensing, permitting, verification, incentives, taxes"
+    "fldtbJV9XVYXI2yre": "Financial aid, high school diploma, adult ed, and more"
   },
   {
     "id": "recbGUfDXfAb4yInQ",
@@ -90,31 +63,13 @@
     "fldtbJV9XVYXI2yre": "Look for jobs, unemployment, disability, job training..."
   },
   {
-    "id": "recfqC9xQalQ7031D",
-    "fld7M2nfLHMr0QKMx": "Housing and real estate",
-    "fldH5rtK0bKJLPAs5": 4,
+    "id": "recCYHIOQswAmLQ1x",
+    "fld7M2nfLHMr0QKMx": "Travel and recreation",
+    "fldH5rtK0bKJLPAs5": 12,
     "fldpGDExgeMe4EKXW": [
-      "recBK0ieAUxs5PzKV"
+      "recUSOaBeZVfWmrV3"
     ],
-    "fldtbJV9XVYXI2yre": "Verify contractors and realtors, loans, find appraisers..."
-  },
-  {
-    "id": "recld9zeX8KTrozV9",
-    "fld7M2nfLHMr0QKMx": "DMV/auto",
-    "fldH5rtK0bKJLPAs5": 5,
-    "fldpGDExgeMe4EKXW": [
-      "recBK0ieAUxs5PzKV"
-    ],
-    "fldtbJV9XVYXI2yre": "Renew driver’s license or vehicle registration, pay tickets..."
-  },
-  {
-    "id": "recrqDJhmDQT2BN1y",
-    "fld7M2nfLHMr0QKMx": "Health and wellness",
-    "fldH5rtK0bKJLPAs5": 6,
-    "fldpGDExgeMe4EKXW": [
-      "recVvUqqN0Vmf5aNB"
-    ],
-    "fldtbJV9XVYXI2yre": "Medical care and insurance, mental health, maternal health"
+    "fldtbJV9XVYXI2yre": "State parks, reserve campsites, museums, fishing license"
   },
   {
     "id": "recvZakmU2N3lL3be",
@@ -124,5 +79,50 @@
       "recBK0ieAUxs5PzKV"
     ],
     "fldtbJV9XVYXI2yre": "Birth and other certificates, REAL ID, remove your data, etc"
+  },
+  {
+    "id": "recFQ48QX9uLxT9vk",
+    "fld7M2nfLHMr0QKMx": "Taxes",
+    "fldH5rtK0bKJLPAs5": 10,
+    "fldpGDExgeMe4EKXW": [
+      "recbQLIC0tt2xFqwT"
+    ],
+    "fldtbJV9XVYXI2yre": "File taxes, refunds, tax credits, pay taxes..."
+  },
+  {
+    "id": "recNXgNM0bmCLtIkI",
+    "fld7M2nfLHMr0QKMx": "Environment",
+    "fldH5rtK0bKJLPAs5": 13,
+    "fldpGDExgeMe4EKXW": [
+      "recUSOaBeZVfWmrV3"
+    ],
+    "fldtbJV9XVYXI2yre": "Environmental safety, conservation, climate..."
+  },
+  {
+    "id": "recfqC9xQalQ7031D",
+    "fld7M2nfLHMr0QKMx": "Housing and real estate",
+    "fldH5rtK0bKJLPAs5": 4,
+    "fldpGDExgeMe4EKXW": [
+      "recBK0ieAUxs5PzKV"
+    ],
+    "fldtbJV9XVYXI2yre": "Verify contractors and realtors, loans, find appraisers..."
+  },
+  {
+    "id": "rec34ujJyyifeZSpT",
+    "fld7M2nfLHMr0QKMx": "Immigration",
+    "fldH5rtK0bKJLPAs5": 14,
+    "fldpGDExgeMe4EKXW": [
+      "recUSOaBeZVfWmrV3"
+    ],
+    "fldtbJV9XVYXI2yre": "Community services, citizenship, ESL classes, DACA..."
+  },
+  {
+    "id": "recld9zeX8KTrozV9",
+    "fld7M2nfLHMr0QKMx": "DMV/auto",
+    "fldH5rtK0bKJLPAs5": 5,
+    "fldpGDExgeMe4EKXW": [
+      "recBK0ieAUxs5PzKV"
+    ],
+    "fldtbJV9XVYXI2yre": "Renew driver’s license or vehicle registration, pay tickets..."
   }
 ]
