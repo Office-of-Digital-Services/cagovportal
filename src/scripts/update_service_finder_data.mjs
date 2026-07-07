@@ -112,6 +112,7 @@ function writeJson(filePath, data) {
  * Main update function
  */
 async function updateServiceFinderData() {
+  const startTime = Date.now();
   const apiKey = process.env.AIRTABLE_API_KEY;
 
   if (!apiKey) {
@@ -142,6 +143,9 @@ async function updateServiceFinderData() {
       const outputPath = path.resolve(`src/_data/service_finder/${outFile}`);
       writeJson(outputPath, flattenedRecords);
     }
+
+    const elapsed = Date.now() - startTime;
+    console.log(`⏱️ Completed in ${elapsed}ms`);
   } catch (err) {
     console.error("❌ Error fetching Airtable data:");
     console.error(err);
