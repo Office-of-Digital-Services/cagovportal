@@ -123,26 +123,28 @@ async function updateServiceFinderData() {
   console.log("🔎 Fetching Airtable tables with pagination…");
 
   try {
-    for (const { tableId, outFile, fields } of TABLES) {
-      console.log(`📄 Fetching table for: ${outFile}`);
+    await Promise.all(
+      TABLES.map(async ({ tableId, outFile, fields }) => {
+        console.log(`📄 Fetching table for: ${outFile}`);
 
-      const records = await fetchAllRecords(tableId, apiKey, fields || []);
+        const records = await fetchAllRecords(tableId, apiKey, fields || []);
 
-      const flattenedRecords = records.map(record => {
-        const flattened = /** @type {{id: string, [key: string]: any}} */ ({
-          id: record.id
+        const flattenedRecords = records.map(record => {
+          const flattened = /** @type {{id: string, [key: string]: any}} */ ({
+            id: record.id
+          });
+
+          for (const fieldId of fields) {
+            flattened[fieldId] = record.fields[fieldId] || null;
+          }
+
+          return flattened;
         });
 
-        for (const fieldId of fields) {
-          flattened[fieldId] = record.fields[fieldId] || null;
-        }
-
-        return flattened;
-      });
-
-      const outputPath = path.resolve(`src/_data/service_finder/${outFile}`);
-      writeJson(outputPath, flattenedRecords);
-    }
+        const outputPath = path.resolve(`src/_data/service_finder/${outFile}`);
+        writeJson(outputPath, flattenedRecords);
+      })
+    );
 
     const elapsed = Date.now() - startTime;
     console.log(`⏱️ Completed in ${elapsed}ms`);
