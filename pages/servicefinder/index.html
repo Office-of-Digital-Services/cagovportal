@@ -15,43 +15,41 @@ layout: landing
   </div>
 </div>
 
-<div class="section-understated">
-  <div class="container p-y-lg">
-    <div class="col-md-10">
-      <p class="lead">
-        There are a lot of services available from the state government. Use
-        this finder to get a customized list of services you need.
-      </p>
+<div class="container p-b-lg mt-5 pt-4">
+  <p class="lead col-lg-9">
+    There are a lot of services available from the state government. Use this
+    finder to get a customized list of services you need.
+  </p>
+  <div class="col-lg-9 mt-5 p-0 p-lg-4 service-finder-card">
+    <h2 class="m-t-0">Service Topics</h2>
+    <p>Select one topic to get started.</p>
+
+    <div class="col-lg-9">
+      <ul class="list-unstyled">
+        {%- for topic_category in service_finder.categories %}
+        <li class="pb-2">
+          <h3 class="mb-5">{{topic_category.name}}</h3>
+          <ul class="list-unstyled">
+            {% for topic in service_finder.topics %}
+            <!---->
+            {% if topic.category == topic_category.id %}
+            <!---->
+            <li
+              class="p-y-sm brd-solid-1 brd-gray-200 rounded-10 p-x-md mb-4 pos-rel bg-gray-50-hover transition-0_3 transform-scale-1_05--hover carrot-right">
+              <a
+                href="./topic/{{ topic.topicId }}/"
+                class="no-underline link-before"
+                ><h4 class="h5 m-t-sm pt-2 mb-0">{{topic.name}}</h4></a
+              >
+              <p class="mb-3 mt-1">{{topic.caption}}</p>
+            </li>
+            {% endif %}
+            <!---->
+            {%- endfor %}
+          </ul>
+        </li>
+        {%- endfor %}
+      </ul>
     </div>
-  </div>
-</div>
-
-<div class="container p-b-lg">
-  <h2>Service Topics</h2>
-  <p>Select one topic to get started.</p>
-
-  <div class="col-lg-11">
-    <ul>
-      {%- for topic_category in service_finder.categories %}
-      <li>
-        <h3>{{topic_category.name}}</h3>
-        <ul>
-          {% for topic in service_finder.topics %}
-          <!---->
-          {% if topic.category == topic_category.id %}
-          <!---->
-          <li>
-            <a href="./topic/{{ topic.topicId }}/"
-              ><h4>{{topic.name}}</h4>
-              <p>{{topic.caption}}</p>
-            </a>
-          </li>
-          {% endif %}
-          <!---->
-          {%- endfor %}
-        </ul>
-      </li>
-      {%- endfor %}
-    </ul>
   </div>
 </div>

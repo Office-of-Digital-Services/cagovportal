@@ -17,33 +17,90 @@ eleventyComputed:
 ---
 
 <div
-  class="section-primary lineart bg-p2"
+  class="section-understated lineart bg-s1"
   style="background: url('/images/departments-lineart.svg?v2evjhb') no-repeat right / auto;">
   <div class="container p-y-md">
     {%- include "breadcrumbs.html" -%}
-    <h1 class="m-t-0">{{title}}</h1>
+
+    <p class="h2 font-weight-400 mt-0 mb-1 color-p2">State services for you</p>
+    <h1 class="mt-0 color-p2">{{title}}</h1>
   </div>
 </div>
-{% set dataset = service_finder.helpers.getResultsDataset(item, service_finder,
-state_entity) %}
-<!---->
-{%- for subtopic in dataset.subtopics %}
 
-<!---->
-<h2>{{ subtopic.name }}</h2>
+<div class="container pb-5">
+  <div class="col-lg-9">
+    <h2>Your services</h2>
+    <p class="lead">
+      Here are the services that meet your needs. We provide direct links or
+      information on how to get these services.
+    </p>
 
-{% for sepService in subtopic.sepServices %}
-<!---->
+    <div class="mb-5 d-flex gap-2 gap-md-4 align-items-center d-print-none">
+      <button
+        class="d-print-none btn btn-outline-primary rounded-4 brd-solid-2 pe-4 ps-4"
+        onclick="window.print(); return false;">
+        Print your services
+      </button>
 
-<h3>{{ sepService.ServiceName }}</h3>
-<p>{{sepService.FriendlyName}}</p>
-<p>{{sepService.Description}}</p>
-<a href="/departments/{{sepService.AgencyId}}/services/{{sepService.ServiceId}}"
-  >(Learn More)</a
->
-<a href="{{sepService.ServiceUrl}}">Go to service</a>
+      <a href="/servicefinder/" class="clearVars d-print-none"
+        >Create new plan</a
+      >
+    </div>
 
-{% endfor %}
+    {% set dataset = service_finder.helpers.getResultsDataset(item,
+    service_finder, state_entity) %}
+    <!---->
 
-<!---->
-{% endfor %}
+    <div class="row">
+      {%- for subtopic in dataset.subtopics %}
+
+      <!---->
+      <h2 class="mt-5 mb-3">{{ subtopic.name }}</h2>
+
+      {% for sepService in subtopic.sepServices %}
+      <!---->
+
+      <div class="col-lg-6 mt-4">
+        <div
+          class="bg-white pos-rel h-100 brd-solid-1 brd-gray-200 rounded d-flex flex-column">
+          <div class="p-x-md p-b-md d-flex flex-column h-100">
+            <button
+              type="button"
+              class="btn-close btn-xs bg-white bg-gray-75-hover brd-solid-1 rounded-circle pos-abs top-md right-n p-a-sm"
+              data-service-id="37"
+              aria-label="Close"></button>
+
+            <h3 class="h4 m-b-sm m-t-md p-r-md">
+              {{ sepService.ServiceName }}
+            </h3>
+
+            <p class="department font-size-14 color-p2 font-weight-600">
+              {{sepService.FriendlyName}}
+            </p>
+            <p>
+              {{sepService.Description}}
+              <a
+                href="/departments/{{sepService.AgencyId}}/services/{{sepService.ServiceId}}"
+                >Learn more<span class="sr-only">
+                  about {{ sepService.ServiceName }}</span
+                ></a
+              >.
+            </p>
+
+            <a
+              href="{{sepService.ServiceUrl}}"
+              class="btn btn-outline-primary rounded-5 mt-auto pe-4 ps-4 w-100"
+              >Go to
+              <span class="sr-only">{{ sepService.ServiceName }}</span>
+              service</a
+            >
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+      <!---->
+      {% endfor %}
+    </div>
+  </div>
+</div>
