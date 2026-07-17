@@ -17,34 +17,36 @@ dynamic_sidenavid: service
   </div>
 </div>
 
-<div class="container p-y-lg">
+<div class="container-lg p-b-lg pt-lg-5 px-0">
   <div class="row">
-    <div class="col-lg-3 pb-lg-5 sticky-6 h-100 p-b-md">
+    <div class="col-12 col-lg-3 pb-lg-5 sticky-6 h-100 p-b-md">
       {%-include "dynamic-sidenav.html"-%}
     </div>
-    <div class="col-lg-9">
-      <p>
-        Each state service falls into one or more topics. You can browse
-        individual topic pages to find all services in that topic.
-      </p>
-      <h2>Topics</h2>
+    <div class="col-12 col-lg-9">
+      <div class="container">
+        <p>
+          Each state service falls into one or more topics. You can browse
+          individual topic pages to find all services in that topic.
+        </p>
+        <h2>Topics</h2>
 
-      <div class="row">
-        {%- for tag in topics | sortBy("featureOrder") -%}
-        <div class="col-md-4 mb-4">
-          <div
-            class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
-            <h3 class="h5 m-b">
-              <a
-                href="/topics/{{-tag.slug-}}/"
-                class="color-p2 link-before text-left no-underline d-block"
-                >{{-tag.name-}}</a
-              >
-            </h3>
-            <p class="m-b text-left">{{-tag.cardDescription-}}</p>
+        <div class="row">
+          {%- for tag in topics | sortBy("featureOrder") -%}
+          <div class="col-md-4 mb-4">
+            <div
+              class="bg-gray-50 bg-gray-75-hover text-center p-x-md p-b-md pos-rel h-100 brd-solid-1 brd-gray-200 transform-scale-1_05--hover transition-0_3 rounded">
+              <h3 class="h5 m-b">
+                <a
+                  href="/topics/{{-tag.slug-}}/"
+                  class="color-p2 link-before text-left no-underline d-block"
+                  >{{-tag.name-}}</a
+                >
+              </h3>
+              <p class="m-b text-left">{{-tag.cardDescription-}}</p>
+            </div>
           </div>
+          {%- endfor %}
         </div>
-        {%- endfor %}
       </div>
     </div>
   </div>
