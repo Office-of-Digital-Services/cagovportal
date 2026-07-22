@@ -192,7 +192,8 @@
     "name": "Auto maintenance",
     "services": [
       "rech49ZCS9Q3hZYiG",
-      "recACteUzwzMu8CH9"
+      "recACteUzwzMu8CH9",
+      "reclPGTcRhEqFfNRt"
     ],
     "subtopicId": 18,
     "topic": [
@@ -208,7 +209,9 @@
       "recgC8Rts52o86PpU",
       "reciDKPDvI4vGPq1Z",
       "recq18QmzBIrjF3fS",
-      "rec1HTDfRkIYf09ir"
+      "rec1HTDfRkIYf09ir",
+      "recoqsXsbyvV57y34",
+      "recYrSDMe5GxXbS5M"
     ],
     "subtopicId": 19,
     "topic": [
@@ -229,6 +232,9 @@
   {
     "id": "reclMGMOijxHoqsio",
     "name": "K - 12",
+    "services": [
+      "recFFHjXaNMqCYf67"
+    ],
     "subtopicId": 11,
     "topic": [
       "rec30Uu7p6AdO2xLS"
@@ -427,6 +433,9 @@
   {
     "id": "rec7WfLvbg9L2RMkK",
     "name": "Immigration resources",
+    "services": [
+      "rec5IGf32qe2RMRjf"
+    ],
     "subtopicId": 57,
     "topic": [
       "rec34ujJyyifeZSpT"
@@ -608,7 +617,8 @@
     "services": [
       "recfTv0Cl8X7Lf1YJ",
       "recpLJpYFUKx8H1Ap",
-      "recLwafsMMnx8zmH8"
+      "recLwafsMMnx8zmH8",
+      "rec0UvYwQk772Fphm"
     ],
     "subtopicId": 44,
     "topic": [
