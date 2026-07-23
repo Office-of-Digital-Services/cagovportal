@@ -64,7 +64,7 @@ const TABLES = [
     tableId: "tblS8RYo4FSqmONyu",
     name: "services",
     fields: ["serviceId"],
-    sort: ["fldaKZyhD3cAgqfj6"], //sort
+    sort: ["fldTefBeQ2PJgm4N4"], //ServiceId
     fieldMapping: {
       serviceId: "fldTefBeQ2PJgm4N4"
     }
