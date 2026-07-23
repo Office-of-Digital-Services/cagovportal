@@ -16,6 +16,11 @@ eleventyComputed:
   title: "{{ item.name | safe }}"
 ---
 
+{% set dataset = service_finder.helpers.getResultsDataset(item, service_finder,
+state_entity) %}
+<!---->
+
+{%- include "./results.inc" -%}
 <div
   class="section-understated lineart bg-s1"
   style="background: url('/images/departments-lineart.svg?v2evjhb') no-repeat right / auto;">
@@ -47,20 +52,18 @@ eleventyComputed:
       >
     </div>
 
-    {% set dataset = service_finder.helpers.getResultsDataset(item,
-    service_finder, state_entity) %}
-    <!---->
-
     <div class="row">
       {%- for subtopic in dataset.subtopics %}
 
       <!---->
-      <h2 class="mt-5 mb-3">{{ subtopic.name }}</h2>
+      <h2 class="mt-5 mb-3" data-subtopic-id="{{ subtopic.subtopicId }}">
+        {{ subtopic.name }}
+      </h2>
 
       {% for sepService in subtopic.sepServices %}
       <!---->
 
-      <div class="col-lg-6 mt-4">
+      <div class="col-lg-6 mt-4" data-subtopic-id="{{ subtopic.subtopicId }}">
         <div
           class="bg-white pos-rel h-100 brd-solid-1 brd-gray-200 rounded d-flex flex-column">
           <div class="p-x-md p-b-md d-flex flex-column h-100">
