@@ -33,7 +33,7 @@ state_entity) %}
   </div>
 </div>
 
-<div class="container pb-5 {{allClasses}}" id="service-finder-parent">
+<div class="container pb-5">
   <div class="col-lg-9">
     <h2>Your services</h2>
     <p class="lead">
@@ -74,8 +74,6 @@ state_entity) %}
 
         {% for sepService in subtopic.sepServices %}
         <!---->
-        {% for sepService in subtopic.sepServices %}
-        <!---->
 
         <div
           class="col-lg-6 mt-4"
@@ -93,9 +91,6 @@ state_entity) %}
               <h3 class="h4 m-b-sm m-t-md p-r-md">
                 {{ sepService.ServiceName }}
               </h3>
-              <h3 class="h4 m-b-sm m-t-md p-r-md">
-                {{ sepService.ServiceName }}
-              </h3>
 
               <p class="department font-size-14 color-p2 font-weight-600">
                 {{sepService.FriendlyName}}
@@ -109,35 +104,7 @@ state_entity) %}
                   ></a
                 >.
               </p>
-              <p class="department font-size-14 color-p2 font-weight-600">
-                {{sepService.FriendlyName}}
-              </p>
-              <p>
-                {{sepService.Description}}
-                <a
-                  href="/departments/{{sepService.AgencyId}}/services/{{sepService.ServiceId}}"
-                  >Learn more<span class="sr-only">
-                    about {{ sepService.ServiceName }}</span
-                  ></a
-                >.
-              </p>
 
-              <a
-                href="{{sepService.ServiceUrl}}"
-                class="btn btn-outline-primary rounded-5 mt-auto pe-4 ps-4 w-100"
-                >Go to
-                <span class="sr-only">{{ sepService.ServiceName }}</span>
-                service</a
-              >
-            </div>
-          </div>
-        </div>
-
-        {% endfor %}
-      </div>
-    </section>
-    <!---->
-    {% endfor %}
               <a
                 href="{{sepService.ServiceUrl}}"
                 class="btn btn-outline-primary rounded-5 mt-auto pe-4 ps-4 w-100"
