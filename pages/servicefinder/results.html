@@ -52,58 +52,60 @@ state_entity) %}
       >
     </div>
 
-    <div class="row">
-      {%- for subtopic in dataset.subtopics %}
+    {%- for subtopic in dataset.subtopics %}
 
-      <!---->
-      <h2 class="mt-5 mb-3" data-subtopic-id="{{ subtopic.subtopicId }}">
-        {{ subtopic.name }}
-      </h2>
+    <!---->
+    <section>
+      <div class="row">
+        <h2 class="mt-5 mb-3" data-subtopic-id="{{ subtopic.subtopicId }}">
+          {{ subtopic.name }}
+        </h2>
 
-      {% for sepService in subtopic.sepServices %}
-      <!---->
+        {% for sepService in subtopic.sepServices %}
+        <!---->
 
-      <div class="col-lg-6 mt-4" data-subtopic-id="{{ subtopic.subtopicId }}">
-        <div
-          class="bg-white pos-rel h-100 brd-solid-1 brd-gray-200 rounded d-flex flex-column">
-          <div class="p-x-md p-b-md d-flex flex-column h-100">
-            <button
-              type="button"
-              class="btn-close btn-xs bg-white bg-gray-75-hover brd-solid-1 rounded-circle pos-abs top-md right-n p-a-sm"
-              data-service-id="{{ sepService.ServiceId }}"
-              aria-label="Close"></button>
+        <div class="col-lg-6 mt-4" data-subtopic-id="{{ subtopic.subtopicId }}">
+          <div
+            class="bg-white pos-rel h-100 brd-solid-1 brd-gray-200 rounded d-flex flex-column">
+            <div class="p-x-md p-b-md d-flex flex-column h-100">
+              <button
+                type="button"
+                class="btn-close btn-xs bg-white bg-gray-75-hover brd-solid-1 rounded-circle pos-abs top-md right-n p-a-sm"
+                data-service-id="{{ sepService.ServiceId }}"
+                aria-label="Close"></button>
 
-            <h3 class="h4 m-b-sm m-t-md p-r-md">
-              {{ sepService.ServiceName }}
-            </h3>
+              <h3 class="h4 m-b-sm m-t-md p-r-md">
+                {{ sepService.ServiceName }}
+              </h3>
 
-            <p class="department font-size-14 color-p2 font-weight-600">
-              {{sepService.FriendlyName}}
-            </p>
-            <p>
-              {{sepService.Description}}
+              <p class="department font-size-14 color-p2 font-weight-600">
+                {{sepService.FriendlyName}}
+              </p>
+              <p>
+                {{sepService.Description}}
+                <a
+                  href="/departments/{{sepService.AgencyId}}/services/{{sepService.ServiceId}}"
+                  >Learn more<span class="sr-only">
+                    about {{ sepService.ServiceName }}</span
+                  ></a
+                >.
+              </p>
+
               <a
-                href="/departments/{{sepService.AgencyId}}/services/{{sepService.ServiceId}}"
-                >Learn more<span class="sr-only">
-                  about {{ sepService.ServiceName }}</span
-                ></a
-              >.
-            </p>
-
-            <a
-              href="{{sepService.ServiceUrl}}"
-              class="btn btn-outline-primary rounded-5 mt-auto pe-4 ps-4 w-100"
-              >Go to
-              <span class="sr-only">{{ sepService.ServiceName }}</span>
-              service</a
-            >
+                href="{{sepService.ServiceUrl}}"
+                class="btn btn-outline-primary rounded-5 mt-auto pe-4 ps-4 w-100"
+                >Go to
+                <span class="sr-only">{{ sepService.ServiceName }}</span>
+                service</a
+              >
+            </div>
           </div>
         </div>
-      </div>
-      {% endfor %}
 
-      <!---->
-      {% endfor %}
-    </div>
+        {% endfor %}
+      </div>
+    </section>
+    <!---->
+    {% endfor %}
   </div>
 </div>
