@@ -51,11 +51,10 @@ const TABLES = [
   {
     tableId: "tblSOXHg0SEUMrnHv",
     name: "subtopics",
-    fields: ["subtopicId", "name", "services", "topic"],
+    fields: ["subtopicId", "name", "topic"],
     sort: ["fldyJgF4eUXCp4cIs", "fldTElWehFTps2yJp"], //topic, sort
     fieldMapping: {
       name: "fldzSlHGqVTQDZArF",
-      services: "fldyfIW0A6dIYCq9f",
       subtopicId: "fldOB4zddd8wX5TLE",
       topic: "fldyJgF4eUXCp4cIs"
     }
@@ -63,10 +62,11 @@ const TABLES = [
   {
     tableId: "tblS8RYo4FSqmONyu",
     name: "services",
-    fields: ["serviceId"],
+    fields: ["serviceId", "subtopics"],
     sort: ["fldUE83DR6inhTAbn"], //Service Name
     fieldMapping: {
-      serviceId: "fldTefBeQ2PJgm4N4"
+      serviceId: "fldTefBeQ2PJgm4N4",
+      subtopics: "fld1vrzODVrv4Ah05"
     }
   }
 ];

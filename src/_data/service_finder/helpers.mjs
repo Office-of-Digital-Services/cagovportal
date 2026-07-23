@@ -6,15 +6,27 @@ export default {
     );
 
     item.subtopics.forEach(subtopic => {
-      if (subtopic.services?.length > 0)
-        subtopic.sepServices = subtopic.services.map(serviceDataId => {
-          /** @type {number} */
-          const serviceId = serviceFinderData.services.find(
-            service => service.id === serviceDataId
-          ).serviceId;
+      // if (false && subtopic.services?.length > 0)
+      //   subtopic.sepServices = subtopic.services.map(serviceDataId => {
+      //     /** @type {number} */
+      //     const serviceId = serviceFinderData.services.find(
+      //       service => service.id === serviceDataId
+      //     ).serviceId;
+
+      //     const sepService = stateEntity.services.find(
+      //       service => service.ServiceId === serviceId
+      //     );
+
+      //     return sepService;
+      //   });
+
+      subtopic.sepServices = serviceFinderData.services
+        .filter(service => service.subtopics?.includes(subtopic.id))
+        .map(service => {
+          const serviceId = service.serviceId;
 
           const sepService = stateEntity.services.find(
-            service => service.ServiceId === serviceId
+            s => s.ServiceId === serviceId
           );
 
           return sepService;
