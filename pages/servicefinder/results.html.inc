@@ -1,11 +1,7 @@
 <style>
   {%- include "./results.html.css" -%}
 
-  {%- for subtopic in dataset.subtopics %}
-    .subtopic-{{ subtopic.subtopicId }} [data-subtopic-id="{{ subtopic.subtopicId }}"] {
-      display: unset;
-    }
-  {%- endfor %}
+
 
   [data-service-id] {
     display: none;
@@ -13,12 +9,20 @@
 
   {%- for subtopic in dataset.subtopics %}
     {% for sepService in subtopic.sepServices %}
-    {% set className = "service-" + sepService.ServiceId %}
-    .{{ className }} [data-service-id~="{{ sepService.ServiceId }}"] {
+    {% set className = "show-service-" + sepService.ServiceId %}
+    .{{ className }} [data-service-id~=",{{ sepService.ServiceId }},"] {
       display: unset;
     }
     {% set allClasses = allClasses + " " + className %}
     {% endfor %}
+  {%- endfor %}
+
+  {%- for subtopic in dataset.subtopics %}
+    {% set className = "hide-subtopic-" + subtopic.subtopicId %}
+    {% set subtopicClasses = subtopicClasses + " " + className %}
+    .{{ className }} [data-subtopic-id="{{ subtopic.subtopicId }}"] {
+      display: none;
+    }
   {%- endfor %}
 </style>
 <script>
