@@ -61,7 +61,7 @@ state_entity) %}
     <!---->
     {% for sepService in subtopic.sepServices %}
     <!---->
-    {% set servicesIds = servicesIds + " ," + sepService.ServiceId + ", " %}
+    {% set servicesIds = servicesIds + " " + sepService.ServiceId + " " %}
     <!---->
     {% endfor %}
     <!---->
@@ -79,7 +79,7 @@ state_entity) %}
         <div
           class="col-lg-6 mt-4"
           data-subtopic-id="{{ subtopic.subtopicId }}"
-          data-service-id=",{{ sepService.ServiceId }},">
+          data-service-id="{{ sepService.ServiceId }}">
           <div
             class="bg-white pos-rel h-100 brd-solid-1 brd-gray-200 rounded d-flex flex-column">
             <div class="p-x-md p-b-md d-flex flex-column h-100">

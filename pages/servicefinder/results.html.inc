@@ -10,7 +10,7 @@
   {%- for subtopic in dataset.subtopics %}
     {% for sepService in subtopic.sepServices %}
     {% set className = "show-service-" + sepService.ServiceId %}
-    .{{ className }} [data-service-id~=",{{ sepService.ServiceId }},"] {
+    .{{ className }} [data-service-id~="{{ sepService.ServiceId }}"] {
       display: unset;
     }
     {% set allClasses = allClasses + " " + className %}
