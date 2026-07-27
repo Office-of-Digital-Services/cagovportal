@@ -14,3 +14,19 @@ window.addEventListener("load", () => {
     parentElement?.classList.remove(`show-service-${serviceId}`);
   });
 });
+
+/**
+ *
+ * @param {string} serviceId
+ */
+// eslint-disable-next-line no-unused-vars
+function removeService(serviceId) {
+  // add the serviceId to the "r" query param without reloading the page
+  const urlParams = new URLSearchParams(window.location.search);
+  urlParams.append("r", serviceId);
+  const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+  window.history.replaceState(null, "", newUrl);
+
+  const parentElement = document.getElementById("service-finder-results");
+  parentElement?.classList.remove(`show-service-${serviceId}`);
+}
