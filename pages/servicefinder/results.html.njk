@@ -14,14 +14,6 @@
     {% set allClasses = allClasses + " " + className %}
     {% endfor %}
   {%- endfor %}
-
-  {%- for subtopic in dataset.subtopics %}
-    {% set className = "hide-subtopic-" + subtopic.subtopicId %}
-    {% set subtopicClasses = subtopicClasses + " " + className %}
-    .{{ className }} [data-subtopic-id="{{ subtopic.subtopicId }}"] {
-      display: none;
-    }
-  {%- endfor %}
 </style>
 <script>
   {%- include "./results.html.js" -%}
