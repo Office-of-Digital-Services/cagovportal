@@ -19,8 +19,6 @@ eleventyComputed:
 {% set dataset = service_finder.helpers.getResultsDataset(item, service_finder,
 state_entity) %}
 <!---->
-{% set allClasses = "" %}
-<!---->
 {%- include "./results.html.njk" -%}
 <div
   class="section-understated lineart bg-s1"
@@ -33,7 +31,9 @@ state_entity) %}
   </div>
 </div>
 
-<div class="container pb-5 {{ allClasses }}" id="service-finder-results">
+<div
+  class="container pb-5 {{ dataset.classNames }}"
+  id="service-finder-results">
   <div class="col-lg-9">
     <h2>Your services</h2>
     <p class="lead">
@@ -55,15 +55,7 @@ state_entity) %}
 
     {%- for subtopic in dataset.subtopics %}
     <!---->
-    {% set servicesIds = ' ' %}
-    <!---->
-    {% for sepService in subtopic.sepServices %}
-    <!---->
-    {% set servicesIds = servicesIds + " " + sepService.ServiceId + " " %}
-    <!---->
-    {% endfor %}
-    <!---->
-    <section data-service-id="{{ servicesIds }}">
+    <section data-service-id="{{ subtopic.serviceIdValues }}">
       <div class="row">
         <h2 class="mt-5 mb-3">
           {{ subtopic.name }} ({{ subtopic.subtopicId }})

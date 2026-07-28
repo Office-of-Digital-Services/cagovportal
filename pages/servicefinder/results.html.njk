@@ -1,18 +1,10 @@
 <style>
   {%- include "./results.html.css" -%}
 
-  [data-service-id] {
-    display: none;
-  }
-
-  {%- for subtopic in dataset.subtopics %}
-    {% for sepService in subtopic.sepServices %}
-    {% set className = "show-service-" + sepService.ServiceId %}
-    .{{ className }} [data-service-id~="{{ sepService.ServiceId }}"] {
+  {%- for serviceId in dataset.allServiceIds %}
+    .show-service-{{ serviceId }} [data-service-id~="{{ serviceId }}"] {
       display: unset;
     }
-    {% set allClasses = allClasses + " " + className %}
-    {% endfor %}
   {%- endfor %}
 </style>
 <script>

@@ -1,25 +1,26 @@
+//@ts-check
+
 export default {
   // for results.html
+  /**
+   *
+   * @param {*} item
+   * @param {*} serviceFinderData
+   * @param {*} stateEntity
+   * @returns
+   */
   getResultsDataset(item, serviceFinderData, stateEntity) {
+    /** @type {number[]} */
+    let allServiceIds = [];
+
+    /** @type {string[]} */
+    const classNames = [];
+
     item.subtopics = serviceFinderData.subtopics.filter(subtopic =>
       subtopic.topic.includes(item.id)
     );
 
     item.subtopics.forEach(subtopic => {
-      // if (false && subtopic.services?.length > 0)
-      //   subtopic.sepServices = subtopic.services.map(serviceDataId => {
-      //     /** @type {number} */
-      //     const serviceId = serviceFinderData.services.find(
-      //       service => service.id === serviceDataId
-      //     ).serviceId;
-
-      //     const sepService = stateEntity.services.find(
-      //       service => service.ServiceId === serviceId
-      //     );
-
-      //     return sepService;
-      //   });
-
       subtopic.sepServices = serviceFinderData.services
         .filter(service => service.subtopics?.includes(subtopic.id))
         .map(service => {
@@ -31,7 +32,26 @@ export default {
 
           return sepService;
         });
+
+      const servicesIds = /** @type {number[]} */ (
+        subtopic.sepServices.map(s => s.ServiceId)
+      );
+
+      allServiceIds.push(...servicesIds);
+
+      classNames.push(...servicesIds.map(id => `show-service-${id}`));
+
+      subtopic.servicesIds = servicesIds;
+      subtopic.serviceIdValues = ` ${servicesIds.join(" ")} `;
     });
+
+    allServiceIds = allServiceIds.sort((a, b) => a - b);
+    classNames.push(
+      ...allServiceIds.sort((a, b) => a - b).map(id => `show-service-${id}`)
+    );
+
+    item.allServiceIds = allServiceIds;
+    item.classNames = classNames.join(" ");
 
     return item;
   }
