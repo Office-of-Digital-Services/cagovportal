@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
   const parentElement = document.getElementById("service-finder-results");
 
   subtopicParams.forEach(subtopic => {
-    parentElement?.classList.remove(`hide-subtopic-${subtopic}`);
+    //parentElement?.classList.remove(`hide-subtopic-${subtopic}`);
   });
 
   removeServiceParams.forEach(serviceId => {

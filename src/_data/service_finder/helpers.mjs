@@ -10,11 +10,10 @@ export default {
    * @returns
    */
   getResultsDataset(item, serviceFinderData, stateEntity) {
-    /** @type {number[]} */
-    let allServiceIds = [];
+    item.classPrefix = "show-service-";
 
-    /** @type {string[]} */
-    const classNames = [];
+    /** @type {number[]} */
+    const allServiceIds = [];
 
     item.subtopics = serviceFinderData.subtopics.filter(subtopic =>
       subtopic.topic.includes(item.id)
@@ -39,19 +38,13 @@ export default {
 
       allServiceIds.push(...servicesIds);
 
-      classNames.push(...servicesIds.map(id => `show-service-${id}`));
-
       subtopic.servicesIds = servicesIds;
       subtopic.serviceIdValues = ` ${servicesIds.join(" ")} `;
     });
 
-    allServiceIds = allServiceIds.sort((a, b) => a - b);
-    classNames.push(
-      ...allServiceIds.sort((a, b) => a - b).map(id => `show-service-${id}`)
-    );
-
+    allServiceIds.sort((a, b) => a - b);
     item.allServiceIds = allServiceIds;
-    item.classNames = classNames.join(" ");
+    item.classNames = allServiceIds.map(id => item.classPrefix + id).join(" ");
 
     return item;
   }

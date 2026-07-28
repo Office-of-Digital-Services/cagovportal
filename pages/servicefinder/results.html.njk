@@ -2,7 +2,7 @@
   {%- include "./results.html.css" -%}
 
   {%- for serviceId in dataset.allServiceIds %}
-    .show-service-{{ serviceId }} [data-service-id~="{{ serviceId }}"] {
+    .{{ dataset.classPrefix }}{{ serviceId }} [data-service-id~="{{ serviceId }}"] {
       display: unset;
     }
   {%- endfor %}
