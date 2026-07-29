@@ -4,9 +4,7 @@ window.addEventListener("load", () => {
   const urlParams = new URLSearchParams(window.location.search);
   const subtopicParams = urlParams.getAll("t");
   const removeServiceParams = urlParams.getAll("r");
-  const parentElement = document.getElementById("service-finder-results");
-
-  if (!parentElement) return;
+  const parentElement = document.body;
 
   subtopicParams.forEach(subtopic => {
     // grab the section element from the DOM and use it to determine which services are visible
@@ -38,6 +36,5 @@ function removeService(serviceId) {
   const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
   window.history.replaceState(null, "", newUrl);
 
-  const parentElement = document.getElementById("service-finder-results");
-  parentElement?.classList.remove(`show-service-${serviceId}`);
+  document.body.classList.remove(`show-service-${serviceId}`);
 }
