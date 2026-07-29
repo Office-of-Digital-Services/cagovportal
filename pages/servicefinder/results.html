@@ -31,9 +31,7 @@ state_entity) %}
   </div>
 </div>
 
-<div
-  class="container pb-5 {{ dataset.classNames }}"
-  id="service-finder-results">
+<div class="container pb-5" id="service-finder-results">
   <div class="col-lg-9">
     <h2>Your services</h2>
     <p class="lead">
@@ -55,7 +53,9 @@ state_entity) %}
 
     {%- for subtopic in dataset.subtopics %}
     <!---->
-    <section data-service-id="{{ subtopic.serviceIdValues }}">
+    <section
+      id="subtopic-{{ subtopic.subtopicId }}"
+      data-service-id="{{ subtopic.serviceIdValues }}">
       <div class="row">
         <h2 class="mt-5 mb-3">
           {{ subtopic.name }} ({{ subtopic.subtopicId }})

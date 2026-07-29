@@ -6,12 +6,23 @@ window.addEventListener("load", () => {
   const removeServiceParams = urlParams.getAll("r");
   const parentElement = document.getElementById("service-finder-results");
 
+  if (!parentElement) return;
+
   subtopicParams.forEach(subtopic => {
-    //parentElement?.classList.remove(`hide-subtopic-${subtopic}`);
+    // grab the section element from the DOM and use it to determine which services are visible
+    const sectionElement = document.getElementById(`subtopic-${subtopic}`);
+
+    if (sectionElement) {
+      const serviceIds =
+        sectionElement.dataset.serviceId?.trim().split(" ") || [];
+      serviceIds.forEach(serviceId => {
+        parentElement.classList.add(`show-service-${serviceId}`);
+      });
+    }
   });
 
   removeServiceParams.forEach(serviceId => {
-    parentElement?.classList.remove(`show-service-${serviceId}`);
+    parentElement.classList.remove(`show-service-${serviceId}`);
   });
 });
 
