@@ -59,7 +59,7 @@ state_entity) %}
       data-service-id="{{ subtopic.serviceIdValues }}">
       <div class="row">
         <h2 class="mt-5 mb-3">
-          {{ subtopic.name }} ({{ subtopic.subtopicId }})
+          {{ subtopic.name }} (ID={{ subtopic.subtopicId }})
         </h2>
 
         {% for sepService in subtopic.sepServices %}
@@ -76,7 +76,7 @@ state_entity) %}
                 aria-label="Close"></button>
 
               <h3 class="h4 m-b-sm m-t-md p-r-md">
-                {{ sepService.ServiceName }} ({{ sepService.ServiceId }})
+                {{ sepService.ServiceName }} (ID={{ sepService.ServiceId }})
               </h3>
 
               <p class="department font-size-14 color-p2 font-weight-600">
