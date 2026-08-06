@@ -5,6 +5,7 @@ title: Find state services
 breadcrumbparent: Find state services
 allowedQueryParams: t,r
 layout: landing
+noindex: true
 pagination:
     data: service_finder.topics
     size: 1
@@ -19,8 +20,6 @@ eleventyComputed:
 {% set dataset = service_finder.helpers.getResultsDataset(item, service_finder,
 state_entity) %}
 <!---->
-{% set allClasses = "" %} {% set subtopicClasses = "" %}
-<!---->
 {%- include "./results.html.njk" -%}
 <div
   class="section-understated lineart bg-s1"
@@ -33,9 +32,7 @@ state_entity) %}
   </div>
 </div>
 
-<div
-  class="container pb-5 {{ subtopicClasses }} {{ allClasses }}"
-  id="service-finder-results">
+<div class="container pb-5">
   <div class="col-lg-9">
     <h2>Your services</h2>
     <p class="lead">
@@ -57,29 +54,16 @@ state_entity) %}
 
     {%- for subtopic in dataset.subtopics %}
     <!---->
-    {% set servicesIds = ' ' %}
-    <!---->
-    {% for sepService in subtopic.sepServices %}
-    <!---->
-    {% set servicesIds = servicesIds + " " + sepService.ServiceId + " " %}
-    <!---->
-    {% endfor %}
-    <!---->
-    <section
-      data-subtopic-id="{{ subtopic.subtopicId }}"
-      data-service-id="{{ servicesIds }}">
+    <section data-subtopic-id="{{ subtopic.subtopicId }}">
       <div class="row">
         <h2 class="mt-5 mb-3">
-          {{ subtopic.name }} ({{ subtopic.subtopicId }})
+          {{ subtopic.name }} (ID={{ subtopic.subtopicId }})
         </h2>
 
         {% for sepService in subtopic.sepServices %}
         <!---->
 
-        <div
-          class="col-lg-6 mt-4"
-          data-subtopic-id="{{ subtopic.subtopicId }}"
-          data-service-id="{{ sepService.ServiceId }}">
+        <div class="col-lg-6 mt-4" data-service-id="{{ sepService.ServiceId }}">
           <div
             class="bg-white pos-rel h-100 brd-solid-1 brd-gray-200 rounded d-flex flex-column">
             <div class="p-x-md p-b-md d-flex flex-column h-100">
@@ -90,7 +74,7 @@ state_entity) %}
                 aria-label="Close"></button>
 
               <h3 class="h4 m-b-sm m-t-md p-r-md">
-                {{ sepService.ServiceName }} ({{ sepService.ServiceId }})
+                {{ sepService.ServiceName }} (ID={{ sepService.ServiceId }})
               </h3>
 
               <p class="department font-size-14 color-p2 font-weight-600">

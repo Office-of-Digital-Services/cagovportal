@@ -20,80 +20,82 @@ allowedQueryParams: q
   </div>
 </div>
 
-<div class="container p-y-lg">
+<div class="container-lg p-b-lg pt-lg-5 px-0">
   <div class="row">
-    <div class="col-lg-3 pb-lg-5 sticky-6 h-100 p-b-md">
+    <div class="col-12 col-lg-3 pb-lg-5 sticky-6 h-100 p-b-md">
       {%-include "dynamic-sidenav.html"-%}
     </div>
-    <div class="col-lg-9">
-      <h2
-        class="lead m-t items-count font-weight-500"
-        aria-live="polite"
-        role="region">
-        0 services <span class="sr-only">found</span>
-      </h2>
-      <label class="sr-only" for="searchbox">Search for a service</label>
-      <div class="d-flex m-b">
-        <input
-          type="search"
-          id="searchbox"
-          autofocus
-          placeholder="Search for a service"
-          class="height-50 brd-solid-1 brd-color-light rounded flex-grow-1 p-l webkit-appearance-none" />
-      </div>
-
-      <div class="p-b-lg">{%include "side-filters.html"%}</div>
-
-      <cagovhome-filterlist
-        data-search-input-id="searchbox"
-        data-result-count-query=".items-count"
-        data-filter-storage-key="service"
-        data-row-filter-key="ServiceId"
-        data-filter-trigger-selector='input[name="AgencyTags"]'
-        role="list">
-        {%- for service in state_entity.services %}
-        <div
-          data-row-key="{{service.ServiceId}}"
-          class="pos-rel"
-          role="listitem">
-          <h2 class="lead bold m-t-0 m-b">
-            <a
-              href="/departments/{{ service.AgencyId }}/services/{{ service.ServiceId }}/"
-              >{{service.ServiceName}}</a
-            >
-          </h2>
-          <p class="font-size-14 bold m-t-sm">by {{service.FriendlyName}}</p>
-          <p class="service-description">{{service.Description}}</p>
-          <div
-            class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3">
-            <a
-              class="btn btn-outline-primary btn-lg m-r-sm"
-              href="{{ service.ServiceUrl }}">
-              Launch service<span class="sr-only"
-                >: {{service.ServiceName}}</span
-              ></a
-            >
-            <p class="font-size-13 ms-sm-auto">
-              <em>Last updated {{ service.Updated | formatDate }}</em>
-            </p>
-          </div>
-
-          {%-set topicResults=[]-%}{%-for topic in
-          topics|sortBy("featureOrder")-%}{%-if topic.name in
-          service.AgencyTags-%}{%-set _=topicResults.push('<a
-            href="/topics/'+topic.slug+'/"
-            class="py-1"
-            >'+topic.name+'</a
-          >')-%}{%-endif-%}{%-endfor-%}{%-if topicResults.length%}
-          <p class="font-size-14 m-t-md">
-            Topics: {{topicResults.join(", ") | safe}}
-          </p>
-          {%-endif%}
-
-          <hr class="m-y-md" />
+    <div class="col-12 col-lg-9">
+      <div class="container">
+        <h2
+          class="lead m-t items-count font-weight-500"
+          aria-live="polite"
+          role="region">
+          0 services <span class="sr-only">found</span>
+        </h2>
+        <label class="sr-only" for="searchbox">Search for a service</label>
+        <div class="d-flex m-b">
+          <input
+            type="search"
+            id="searchbox"
+            autofocus
+            placeholder="Search for a service"
+            class="height-50 brd-solid-1 brd-color-light rounded flex-grow-1 p-l webkit-appearance-none" />
         </div>
-        {%- endfor %}
-      </cagovhome-filterlist>
+
+        <div class="p-b-lg">{%include "side-filters.html"%}</div>
+
+        <cagovhome-filterlist
+          data-search-input-id="searchbox"
+          data-result-count-query=".items-count"
+          data-filter-storage-key="service"
+          data-row-filter-key="ServiceId"
+          data-filter-trigger-selector='input[name="AgencyTags"]'
+          role="list">
+          {%- for service in state_entity.services %}
+          <div
+            data-row-key="{{service.ServiceId}}"
+            class="pos-rel"
+            role="listitem">
+            <h2 class="lead bold m-t-0 m-b">
+              <a
+                href="/departments/{{ service.AgencyId }}/services/{{ service.ServiceId }}/"
+                >{{service.ServiceName}}</a
+              >
+            </h2>
+            <p class="font-size-14 bold m-t-sm">by {{service.FriendlyName}}</p>
+            <p class="service-description">{{service.Description}}</p>
+            <div
+              class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3">
+              <a
+                class="btn btn-outline-primary btn-lg m-r-sm"
+                href="{{ service.ServiceUrl }}">
+                Launch service<span class="sr-only"
+                  >: {{service.ServiceName}}</span
+                ></a
+              >
+              <p class="font-size-13 ms-sm-auto">
+                <em>Last updated {{ service.Updated | formatDate }}</em>
+              </p>
+            </div>
+
+            {%-set topicResults=[]-%}{%-for topic in
+            topics|sortBy("featureOrder")-%}{%-if topic.name in
+            service.AgencyTags-%}{%-set _=topicResults.push('<a
+              href="/topics/'+topic.slug+'/"
+              class="py-1"
+              >'+topic.name+'</a
+            >')-%}{%-endif-%}{%-endfor-%}{%-if topicResults.length%}
+            <p class="font-size-14 m-t-md">
+              Topics: {{topicResults.join(", ") | safe}}
+            </p>
+            {%-endif%}
+
+            <hr class="m-y-md" />
+          </div>
+          {%- endfor %}
+        </cagovhome-filterlist>
+      </div>
     </div>
   </div>
 </div>
