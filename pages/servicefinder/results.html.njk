@@ -1,11 +1,5 @@
 <style>
   {%- include "./results.html.css" -%}
-
-  {%- for serviceId in dataset.allServiceIds %}
-    .{{ dataset.classPrefix }}{{ serviceId }} [data-service-id~="{{ serviceId }}"] {
-      display: unset;
-    }
-  {%- endfor %}
 </style>
 <script>
   {%- include "./results.html.js" -%}

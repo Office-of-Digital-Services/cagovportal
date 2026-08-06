@@ -54,9 +54,7 @@ state_entity) %}
 
     {%- for subtopic in dataset.subtopics %}
     <!---->
-    <section
-      id="subtopic-{{ subtopic.subtopicId }}"
-      data-service-id="{{ subtopic.serviceIdValues }}">
+    <section data-subtopic-id="{{ subtopic.subtopicId }}">
       <div class="row">
         <h2 class="mt-5 mb-3">
           {{ subtopic.name }} (ID={{ subtopic.subtopicId }})

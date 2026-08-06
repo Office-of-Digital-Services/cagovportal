@@ -25,18 +25,15 @@
 /**
  * @typedef {object} ServiceFinderSubtopic
  * @property {string} id
+ * @property {number} subtopicId
  * @property {string[]} topic
  * @property {SepService[]} [sepServices]
- * @property {number[]} servicesIds
- * @property {string} serviceIdValues
  */
 
 /**
  * @typedef {object} ResultsItem
  * @property {string} id
- * @property {string} classPrefix
  * @property {ServiceFinderSubtopic[]} [subtopics]
- * @property {number[]} allServiceIds
  */
 
 export default {
@@ -49,11 +46,6 @@ export default {
    * @returns {ResultsItem}
    */
   getResultsDataset(item, serviceFinderData, stateEntity) {
-    item.classPrefix = "show-service-";
-
-    /** @type {number[]} */
-    const allServiceIds = [];
-
     item.subtopics = serviceFinderData.subtopics?.filter(subtopic =>
       subtopic.topic.includes(item.id)
     );
@@ -70,19 +62,7 @@ export default {
           return sepService;
         })
         .filter(x => !!x);
-
-      const servicesIds = /** @type {number[]} */ (
-        subtopic.sepServices?.map(s => s.ServiceId)
-      );
-
-      allServiceIds.push(...servicesIds);
-
-      subtopic.servicesIds = servicesIds;
-      subtopic.serviceIdValues = ` ${servicesIds.join(" ")} `;
     });
-
-    allServiceIds.sort((a, b) => a - b);
-    item.allServiceIds = allServiceIds;
 
     return item;
   }
