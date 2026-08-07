@@ -27,10 +27,10 @@ steps:
       echo "##vso[build.addbuildtag]trigger-$(Build.Reason)"
     displayName: "Tag build with trigger reason"
 
-  - task: NodeTool@0
+  - task: UseNode@1
     inputs:
-      versionSpec: "18.x"
-    displayName: "Install Node.js"
+      version: "22"
+    displayName: "Use Node.js 22"
 
   - task: Npm@1
     inputs:
