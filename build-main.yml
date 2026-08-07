@@ -29,7 +29,7 @@ steps:
 
   - task: NodeTool@1
     inputs:
-      versionSpec: ">=20.9.0"
+      versionSpec: "22.x"
     displayName: "Install Node.js"
 
   - task: Npm@1
