@@ -3,7 +3,7 @@
   "version": "6.6.0",
   "description": "www.ca.gov",
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=20.9.0"
   },
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
