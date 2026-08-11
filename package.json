@@ -2,6 +2,9 @@
   "name": "www.ca.gov",
   "version": "6.6.0",
   "description": "www.ca.gov",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "build": "node src/scripts/update_service_finder_data.mjs && npx @11ty/eleventy",
