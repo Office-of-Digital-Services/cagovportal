@@ -1,0 +1,68 @@
+---
+landing: Services
+description: There are a lot of services available from the state government. Use this finder to get a customized list of services you need.
+title: Find state services
+breadcrumbparent: Find state services
+layout: landing
+noindex: true
+pagination:
+    data: service_finder.topics
+    size: 1
+    alias: item
+    addAllPagesToCollections : true
+permalink: "servicefinder/topic/{{ item.topicId }}/"
+eleventyComputed:
+  description: "{{ item.caption | safe }}"
+  subtitle: "{{ item.name | safe }}"
+---
+
+<div
+  class="section-primary lineart bg-p2 mb-5"
+  style="background: url('/images/departments-lineart.svg?v2evjhb') no-repeat right / auto;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+    <h1 class="m-t-0">{{title}}</h1>
+  </div>
+</div>
+
+<div class="container p-b-lg pt-4">
+  <div class="col-lg-9 p-0 p-lg-4 service-finder-card">
+    <h2 class="m-t-0">{{subtitle}}</h2>
+
+    <p class="lead color-p2 bold mb-4 mt-4">What are you looking for?</p>
+
+    <p class="mb-4">
+      Select the relevant areas that apply to you. You can select as many as you
+      need.
+    </p>
+    <form method="get" action="./results/" class="col-lg-6">
+      <!---->
+      {%- for subtopic in service_finder.subtopics %}
+      <!---->
+      {% if subtopic.topic == item.id %}
+      <!---->
+      {% set id = subtopic.subtopicId %}
+      <label
+        class="finder-check-btn btn btn-outline-primary rounded-5 d-inline-block mb-2 mt-1"
+        for="subtopic{{ id }}">
+        <input
+          class="finder-check"
+          type="checkbox"
+          name="t"
+          id="subtopic{{ id }}"
+          value="{{ id }}" />
+        {{ subtopic.name }}
+      </label>
+      {% endif %}
+      <!---->
+      {% endfor %}
+      <button
+        type="submit"
+        class="btn btn-lg rounded-5 btn-primary mt-5 pe-5 ps-5">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+<style></style>

@@ -63,9 +63,7 @@ const processImages = async () => {
   if (tasks.length === 0) {
     console.log("No new images to process.");
     return;
-  } else {
-    console.log(`Processing ${tasks.length} images...`);
-  }
+  } else console.log(`Processing ${tasks.length} images...`);
 
   // Run them all in parallel
   await Promise.all(tasks);
