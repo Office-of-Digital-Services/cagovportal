@@ -6,6 +6,32 @@ breadcrumbparent: Services
 layout: landing
 ---
 
+<style>
+
+  li.carrot-right::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    text-decoration: none;
+    width: 0.55rem;
+    height: 0.55rem;
+    border-top: 2px solid var(--text-color, #046b99);
+    border-left: 2px solid var(--text-color, #046b99);
+    vertical-align: middle;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+    right: 1.5rem;
+    margin-left: 0.5rem;
+  }
+
+  @media (width >= 992px) {
+    div.service-finder-card {
+      border: 4px solid var(--gray-200);
+      border-radius: 15px;
+    }
+  }
+</style>
+
 <div
   class="section-primary lineart bg-p2"
   style="background: url('/images/departments-lineart.svg?v2evjhb') no-repeat right / auto;">
