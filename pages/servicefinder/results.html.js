@@ -59,6 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const mailBtn = /** @type {HTMLAnchorElement} */ (
     document.getElementById("share-plan-mailto")
   );
+  const shareBtn = /** @type {HTMLAnchorElement} */ (
+    document.getElementById("share-plan-device")
+  );
   const urlInput = /** @type {HTMLInputElement | null} */ (
     document.getElementById("url-copy")
   );
@@ -68,35 +71,23 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  const updateMailButton = () => {
-    const shareData = {
-      title: mailBtn.dataset.mailSubject || document.title,
-      text: mailBtn.dataset.mailBody || "",
-      url: urlInput.value
-    };
-
-    // If Web Share API is supported, use it for mobile sharing
-    if (navigator.share) {
-      mailBtn.innerHTML =
-        '<span class="ca-gov-icon-share m-r" aria-hidden="true"></span> Share';
-      mailBtn.href = "#";
-      mailBtn.onclick = e => {
-        e.preventDefault();
-        navigator.share(shareData).catch(() => {});
-      };
-    } else {
-      // Fallback to mailto
-      mailBtn.href = `mailto:?subject=${encodeURIComponent(shareData.title)}&body=${encodeURIComponent(shareData.text)}%0A%0A${encodeURIComponent(shareData.url)}`;
-      mailBtn.onclick = null;
-    }
+  const shareData = {
+    title: mailBtn.dataset.mailSubject || document.title,
+    text: mailBtn.dataset.mailBody || "",
+    url: ""
   };
 
-  updateMailButton();
+  shareBtn.onclick = e => {
+    e.preventDefault();
+    navigator.share(shareData).catch(() => {});
+  };
 
   // Bootstrap Modal Show Event
   // Set the URL input value to the current page URL when the modal is shown
   sharePlanModal.addEventListener("show.bs.modal", () => {
     urlInput.value = window.location.href;
+    shareData.url = urlInput.value;
+    mailBtn.href = `mailto:?subject=${encodeURIComponent(shareData.title)}&body=${encodeURIComponent(shareData.text)}%0A%0A${encodeURIComponent(shareData.url)}`;
   });
 
   const copyButtonClick = () => {
@@ -105,13 +96,9 @@ document.addEventListener("DOMContentLoaded", () => {
       .writeText(urlInput.value)
       .then(() => {
         // Show the copied button and hide the copy button
-        copiedBtn.classList.remove("d-none");
-        copiedBtn.hidden = false;
-        copiedBtn.ariaHidden = null;
+        copiedBtn.style.display = "flex";
         copiedBtn.focus();
-        copyBtn.classList.add("d-none");
-        copyBtn.hidden = true;
-        copyBtn.ariaHidden = "true";
+        copyBtn.style.display = "none";
       })
       .catch(err => {
         console.error("Failed to copy: ", err);

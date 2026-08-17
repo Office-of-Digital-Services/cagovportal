@@ -155,25 +155,31 @@ state_entity) %}
 
           <button
             id="share-plan-copy"
-            class="btn btn-primary rounded-0 p-x m-t-0 ms-auto d-flex text-nowrap">
+            style="display:flex"
+            class="btn btn-primary rounded-0 p-x m-t-0 ms-auto text-nowrap">
             <span class="ca-gov-icon-copy" aria-hidden="true"></span>
             <div class="m-l-sm">Copy link</div>
           </button>
 
           <button
-            hidden
-            aria-hidden="true"
             id="share-plan-copied"
-            class="btn btn-primary rounded-0 p-x m-t-0 ms-auto d-flex text-nowrap d-none">
+            style="display: none"
+            class="btn btn-primary rounded-0 p-x m-t-0 ms-auto text-nowrap">
             <span class="ca-gov-icon-check-mark" aria-hidden="true"></span>
             <div class="m-l-sm">Link copied</div>
           </button>
         </div>
 
         <a
+          id="share-plan-device"
+          class="btn btn-outline-primary brd-solid-2 rounded-5 m-t d-flex align-items-center fit-content p-r-md">
+          <span class="ca-gov-icon-share m-r" aria-hidden="true"></span> Share
+        </a>
+
+        <a
           id="share-plan-mailto"
-          data-mail-subject="Share from the California Recovery Services Finder"
-          data-mail-body="Here is my plan from the California Recovery Services Finder:"
+          data-mail-subject="Share from the CA.gov Services Finder"
+          data-mail-body="Here is my plan from the CA.gov Services Finder:"
           class="btn btn-outline-primary brd-solid-2 rounded-5 m-t d-flex align-items-center fit-content p-r-md">
           <img
             src="/images/servicefinder/icon-email.svg"
@@ -181,8 +187,7 @@ state_entity) %}
             class="img-fluid 
             height-30 d-print-none m-r"
             aria-hidden="true" />
-          <span class="ca-gov-icon-share m-r" aria-hidden="true"></span>
-          Share
+          Email
         </a>
       </div>
     </div>
