@@ -1675,6 +1675,13 @@
     ]
   },
   {
+    "id": "rec3LvWaLIqzCvToD",
+    "serviceId": 1229,
+    "subtopics": [
+      "recyoAZZUWXuh28O6"
+    ]
+  },
+  {
     "id": "recRICQu8PXPdK9aw",
     "serviceId": 1263,
     "subtopics": [
@@ -1716,13 +1723,6 @@
   {
     "id": "recNDSeKaSIM2cz4c",
     "serviceId": 1201
-  },
-  {
-    "id": "rec3LvWaLIqzCvToD",
-    "serviceId": 1229,
-    "subtopics": [
-      "recyoAZZUWXuh28O6"
-    ]
   },
   {
     "id": "reclBhLt3O79X9gNa",

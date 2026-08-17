@@ -50,3 +50,62 @@ function removeService(serviceId) {
 
   updateServices();
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Begin share plan functionality
+  const sharePlanModal = document.getElementById("share-plan");
+  const copyBtn = document.getElementById("share-plan-copy");
+  const copiedBtn = document.getElementById("share-plan-copied");
+  const mailBtn = /** @type {HTMLAnchorElement} */ (
+    document.getElementById("share-plan-mailto")
+  );
+  const shareBtn = /** @type {HTMLAnchorElement} */ (
+    document.getElementById("share-plan-device")
+  );
+  const urlInput = /** @type {HTMLInputElement | null} */ (
+    document.getElementById("url-copy")
+  );
+
+  if (!(sharePlanModal && copyBtn && copiedBtn && urlInput)) {
+    console.error("Share plan elements not found.");
+    return;
+  }
+
+  const shareData = {
+    title: mailBtn.dataset.mailSubject || document.title,
+    text: mailBtn.dataset.mailBody || "",
+    url: ""
+  };
+
+  shareBtn.onclick = e => {
+    e.preventDefault();
+    navigator.share(shareData).catch(() => {});
+  };
+
+  // Bootstrap Modal Show Event
+  // Set the URL input value to the current page URL when the modal is shown
+  sharePlanModal.addEventListener("show.bs.modal", () => {
+    urlInput.value = window.location.href;
+    shareData.url = urlInput.value;
+    mailBtn.href = `mailto:?subject=${encodeURIComponent(shareData.title)}&body=${encodeURIComponent(shareData.text)}%0A%0A${encodeURIComponent(shareData.url)}`;
+  });
+
+  const copyButtonClick = () => {
+    urlInput.select();
+    navigator.clipboard
+      .writeText(urlInput.value)
+      .then(() => {
+        // Show the copied button and hide the copy button
+        copiedBtn.style.display = "flex";
+        copiedBtn.focus();
+        copyBtn.style.display = "none";
+      })
+      .catch(err => {
+        console.error("Failed to copy: ", err);
+      });
+  };
+  copyBtn.addEventListener("click", copyButtonClick);
+  copiedBtn.addEventListener("click", copyButtonClick);
+
+  // End share plan functionality
+});
