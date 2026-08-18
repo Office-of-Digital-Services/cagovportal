@@ -7,7 +7,8 @@
   },
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
-    "build": "node src/scripts/update_service_finder_data.mjs && npx @11ty/eleventy",
+    "prebuild": "node src/scripts/update_service_finder_data.mjs",
+    "build": "npx @11ty/eleventy",
     "update_webp": "node src/scripts/update_webp.cjs"
   },
   "repository": {
