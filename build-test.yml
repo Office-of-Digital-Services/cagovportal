@@ -2,6 +2,8 @@
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+variables:
+  - group: cagovportal-secrets
 
 trigger:
   - test
@@ -34,11 +36,13 @@ steps:
 
   - task: Npm@1
     inputs:
-      command: "install"
-    displayName: "npm install"
+      command: "ci"
+    displayName: "npm install (ci)"
 
   - script: npm run build
     displayName: "npm build"
+    env:
+      AIRTABLE_API_KEY: $(AIRTABLE_API_KEY)
 
   - task: CopyFiles@2
     inputs:
