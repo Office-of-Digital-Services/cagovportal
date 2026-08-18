@@ -39,6 +39,8 @@ steps:
 
   - script: npm run build
     displayName: "npm build"
+    env:
+      AIRTABLE_API_KEY: $(AIRTABLE_API_KEY)
 
   - task: CopyFiles@2
     inputs:
