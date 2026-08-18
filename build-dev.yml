@@ -27,6 +27,16 @@ steps:
       echo "##vso[build.addbuildtag]trigger-$(Build.Reason)"
     displayName: "Tag build with trigger reason"
 
+  - script: |
+      if [ -z "$AIRTABLE_API_KEY" ]; then
+        echo "❌ AIRTABLE_API_KEY is NOT present"
+      else
+        echo "✅ AIRTABLE_API_KEY is present"
+      fi
+    displayName: "Debug Airtable Key"
+    env:
+      AIRTABLE_API_KEY: $(AIRTABLE_API_KEY)
+
   - task: UseNode@1
     inputs:
       version: "22"
