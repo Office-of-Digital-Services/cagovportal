@@ -29,12 +29,6 @@ steps:
       echo "##vso[build.addbuildtag]trigger-$(Build.Reason)"
     displayName: "Tag build with trigger reason"
 
-  - script: |
-      echo "AIRTABLE_API_KEY (first 8 chars): ${AIRTABLE_API_KEY:0:8}"
-    displayName: "Debug Airtable Key"
-    env:
-      AIRTABLE_API_KEY: $(AIRTABLE_API_KEY)
-
   - task: UseNode@1
     inputs:
       version: "22"
@@ -42,8 +36,8 @@ steps:
 
   - task: Npm@1
     inputs:
-      command: "install"
-    displayName: "npm install"
+      command: "ci"
+    displayName: "npm install (ci)"
 
   - script: npm run build
     displayName: "npm build"
