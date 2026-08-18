@@ -28,6 +28,11 @@ steps:
     displayName: "Tag build with trigger reason"
 
   - script: |
+      echo "Build reason: $(Build.Reason)"
+      echo "AIRTABLE_API_KEY raw: $(AIRTABLE_API_KEY)"
+    displayName: "Debug substitution"
+
+  - script: |
       echo "AIRTABLE_API_KEY (first 8 chars): ${AIRTABLE_API_KEY:0:8}"
     displayName: "Debug Airtable Key"
     env:
