@@ -20,7 +20,7 @@
       },
       {
         "DepartmentId": 220,
-        "ServiceId": 47,
+        "ServiceId": 48,
         "ServiceName": "DMV address change",
         "Description": "Change your address for your driver’s license, identification card, vehicle, or vessel.",
         "imgURL": "/images/topic1-2.webp",
