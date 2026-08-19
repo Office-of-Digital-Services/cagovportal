@@ -55,7 +55,11 @@ module.exports = async function () {
     urls.map(u =>
       EleventyFetch(u, {
         fetchOptions: {
-          method: "POST"
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify([])
         },
         verbose: true,
         duration: "1d", // save for 1 day
