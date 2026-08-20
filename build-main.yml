@@ -34,8 +34,8 @@ steps:
 
   - task: Npm@1
     inputs:
-      command: "install"
-    displayName: "npm install"
+      command: "ci"
+    displayName: "npm install (ci)"
 
   - script: npm run build
     displayName: "npm build"
