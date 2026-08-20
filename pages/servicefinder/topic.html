@@ -36,15 +36,13 @@ eleventyComputed:
     text-align: center;
   }
 
-  input.finder-check:checked + label.finder-check-btn,
-  label.finder-check-btn:has(input.finder-check:checked) {
+  input.finder-check:checked + label.finder-check-btn {
     background-color: var(--color-s1) !important;
     color: var(--color-p2) !important;
     border-color: var(--color-p1) !important;
   }
 
-  input.finder-check:checked ~ label.finder-check-btn::after,
-  label.finder-check-btn:has(input.finder-check:checked)::after {
+  input.finder-check:checked + label.finder-check-btn::after {
     content: "";
     position: absolute;
     left: 0.75rem;
@@ -83,15 +81,15 @@ eleventyComputed:
       {% if subtopic.topic == item.id %}
       <!---->
       {% set id = subtopic.subtopicId %}
+      <input
+        class="finder-check"
+        type="checkbox"
+        name="t"
+        id="subtopic{{ id }}"
+        value="{{ id }}" />
       <label
         class="finder-check-btn btn btn-outline-primary rounded-5 d-inline-block mb-2 mt-1"
         for="subtopic{{ id }}">
-        <input
-          class="finder-check"
-          type="checkbox"
-          name="t"
-          id="subtopic{{ id }}"
-          value="{{ id }}" />
         {{ subtopic.name }}
       </label>
       {% endif %}
