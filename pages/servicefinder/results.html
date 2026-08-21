@@ -1,0 +1,195 @@
+---
+landing: Services
+description: There are a lot of services available from the state government. Use this finder to get a customized list of services you need.
+title: Find state services
+breadcrumbparent: Find state services
+allowedQueryParams: t,r
+layout: landing
+noindex: true
+pagination:
+    data: service_finder.topics
+    size: 1
+    alias: item
+    addAllPagesToCollections : true
+permalink: "servicefinder/topic/{{ item.topicId }}/results/"
+eleventyComputed:
+  description: "{{ item.caption | safe }}"
+  title: "{{ item.name | safe }}"
+---
+
+{% set dataset = service_finder.helpers.getResultsDataset(item, service_finder,
+state_entity) %}
+<!---->
+{%- include "./results.html.njk" -%}
+<div
+  class="section-understated lineart bg-s1"
+  style="background: url('/images/departments-lineart.svg?v2evjhb') no-repeat right / auto;">
+  <div class="container p-y-md">
+    {%- include "breadcrumbs.html" -%}
+
+    <p class="h2 font-weight-400 mt-0 mb-1 color-p2">State services for you</p>
+    <h1 class="mt-0 color-p2">{{title}}</h1>
+  </div>
+</div>
+
+<div class="container pb-5">
+  <div class="col-lg-9">
+    <h2>Your services</h2>
+    <p class="lead">
+      Here are the services that meet your needs. We provide direct links or
+      information on how to get these services.
+    </p>
+
+    <div class="mb-5 d-flex gap-2 gap-md-4 align-items-center d-print-none">
+      <button
+        class="btn btn-primary rounded-4 pe-1 pe-sm-4 ps-1 ps-sm-3"
+        data-bs-toggle="modal"
+        data-bs-target="#share-plan">
+        <img
+          src="/images/servicefinder/icon-share-plan.svg"
+          alt=""
+          class="img-fluid 
+            height-20 d-print-none"
+          aria-hidden="true" />
+        Share your plan
+      </button>
+
+      <button
+        class="d-print-none btn btn-outline-primary rounded-4 brd-solid-2 pe-1 pe-sm-4 ps-1 ps-sm-3"
+        onclick="window.print(); return false;">
+        <img
+          src="/images/servicefinder/icon-print.svg"
+          alt=""
+          class="img-fluid 
+          height-20 d-print-none"
+          aria-hidden="true" />
+        Print your services
+      </button>
+
+      <a href="../../../" class="clearVars d-print-none">Create new plan</a>
+    </div>
+
+    {%- for subtopic in dataset.subtopics %}
+    <!---->
+    <section data-subtopic-id="{{ subtopic.subtopicId }}">
+      <div class="row">
+        <h2 class="mt-5 mb-3">{{ subtopic.name }}</h2>
+
+        {% for sepService in subtopic.sepServices %}
+        <!---->
+
+        <div class="col-lg-6 mt-4" data-service-id="{{ sepService.ServiceId }}">
+          <div
+            class="bg-white pos-rel h-100 brd-solid-1 brd-gray-200 rounded d-flex flex-column">
+            <div class="p-x-md p-b-md d-flex flex-column h-100">
+              <button
+                type="button"
+                class="btn-close btn-xs bg-white bg-gray-75-hover brd-solid-1 rounded-circle pos-abs top-md right-n p-a-sm"
+                onclick="removeService('{{ sepService.ServiceId }}')"
+                aria-label="Close"></button>
+
+              <h3 class="h4 m-b-sm m-t-md p-r-md">
+                {{ sepService.ServiceName }}
+              </h3>
+
+              <p class="department font-size-14 color-p2 font-weight-600">
+                {{sepService.FriendlyName}}
+              </p>
+              <p>
+                {{sepService.Description}}
+                <a
+                  href="/departments/{{sepService.AgencyId}}/services/{{sepService.ServiceId}}"
+                  >Learn more<span class="sr-only">
+                    about {{ sepService.ServiceName }}</span
+                  ></a
+                >.
+              </p>
+
+              <a
+                href="{{sepService.ServiceUrl}}"
+                class="btn btn-outline-primary rounded-5 mt-auto pe-4 ps-4 w-100"
+                >Go to
+                <span class="sr-only">{{ sepService.ServiceName }}</span>
+                service</a
+              >
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+      </div>
+    </section>
+    <!---->
+    {% endfor %}
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="share-plan"
+  role="dialog"
+  tabindex="-1"
+  aria-labelledby="sharePlanTitle">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content p-b-md">
+      <div class="modal-header p-t-0">
+        <h3 id="sharePlanTitle" class="modal-title color-p2">
+          Share your customized plan
+        </h3>
+        <button
+          type="button"
+          class="close btn btn-secondary border-0 rounded-pill bg-white bg-gray-100-hover pos-rel top-minus-5 right-minus-sm shadow-none p-t-0 p-b-0 p-l-sm p-r-sm"
+          data-bs-dismiss="modal">
+          <span class="sr-only">Close modal</span>
+          <span
+            class="ca-gov-icon-close-mark font-size-30"
+            aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="brd-solid-2 brd-primary d-flex rounded-5">
+          <input
+            type="text"
+            id="url-copy"
+            class="bg-transparent border-0 m-y-0 p-x-0 p-l p-r-sm overflow-hidden w-100" />
+
+          <button
+            id="share-plan-copy"
+            style="display:flex"
+            class="btn btn-primary rounded-0 p-x m-t-0 ms-auto text-nowrap">
+            <span class="ca-gov-icon-copy" aria-hidden="true"></span>
+            <div class="m-l-sm">Copy link</div>
+          </button>
+
+          <button
+            id="share-plan-copied"
+            style="display: none"
+            class="btn btn-primary rounded-0 p-x m-t-0 ms-auto text-nowrap">
+            <span class="ca-gov-icon-check-mark" aria-hidden="true"></span>
+            <div class="m-l-sm">Link copied</div>
+          </button>
+        </div>
+
+        <a
+          id="share-plan-device"
+          class="btn btn-outline-primary brd-solid-2 rounded-5 m-t d-flex align-items-center fit-content p-r-md">
+          <span class="ca-gov-icon-share m-r" aria-hidden="true"></span> Share
+        </a>
+
+        <a
+          id="share-plan-mailto"
+          data-mail-subject="Share from the CA.gov Services Finder"
+          data-mail-body="Here is my plan from the CA.gov Services Finder:"
+          class="btn btn-outline-primary brd-solid-2 rounded-5 m-t d-flex align-items-center fit-content p-r-md">
+          <img
+            src="/images/servicefinder/icon-email.svg"
+            alt=""
+            class="img-fluid 
+            height-30 d-print-none m-r"
+            aria-hidden="true" />
+          Email
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
