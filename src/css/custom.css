@@ -605,3 +605,9 @@ nav.breadcrumbs > ol {
     font-size: calc(0.92rem + 0.1vw);
   }
 }
+
+a.btn-outline-primary:focus,
+button.btn-outline-primary:focus {
+  outline: 2px solid var(--outline-default-color, #0f90e6) !important;
+  outline-offset: -4px;
+}
