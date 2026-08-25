@@ -198,6 +198,10 @@ module.exports = async function () {
 
   results.qa.sort((a, b) => a.Id - b.Id);
 
+  results.services.sort(
+    (a, b) => a.AgencyId - b.AgencyId || a.SortOrder - b.SortOrder
+  );
+
   results.agencies.forEach(item => {
     trimObjectProperties(item);
 
