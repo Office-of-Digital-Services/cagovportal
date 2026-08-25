@@ -196,10 +196,37 @@ module.exports = async function () {
   await processImages();
   console.timeEnd("Image Processing");
 
-  results.qa.sort((a, b) => a.Id - b.Id);
+  // Add a SortOrder value for each agency as it currently stands
+  results.agencies.forEach((item, index) => {
+    item.SortOrder = index + 1;
+  });
+
+  // Add an AgencySortOrder value for each service using the SortOrder from the Agency table
+  results.services.forEach(service => {
+    const agency = results.agencies.find(a => a.AgencyId === service.AgencyId);
+
+    service.AgencySortOrder = agency.SortOrder;
+  });
+
+  //Apply AgencySortOrder and ServiceSortOrder to the qa table
+  results.qa.forEach(qaItem => {
+    const service = results.services.find(
+      s => s.ServiceId === qaItem.AgencyServiceId
+    );
+
+    qaItem.AgencySortOrder = service.AgencySortOrder;
+    qaItem.ServiceSortOrder = service.SortOrder;
+  });
 
   results.services.sort(
-    (a, b) => a.AgencyId - b.AgencyId || a.SortOrder - b.SortOrder
+    (a, b) => a.AgencySortOrder - b.AgencySortOrder || a.SortOrder - b.SortOrder
+  );
+
+  results.qa.sort(
+    (a, b) =>
+      a.AgencySortOrder - b.AgencySortOrder ||
+      a.ServiceSortOrder - b.ServiceSortOrder ||
+      a.SortOrder - b.SortOrder
   );
 
   results.agencies.forEach(item => {
