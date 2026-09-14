@@ -18,7 +18,7 @@
         "message": "Global Class-only selector \"%s\" is not allowed."
       }
     ],
-    "selector-combinator-allowed-list": [">"],
+    "selector-combinator-allowed-list": [">", "~", "+"],
     "selector-nested-pattern": [
       "^(?!&\\s*>)(&|>)\\s*",
       {
