@@ -62,10 +62,11 @@ const TABLES = [
   {
     tableId: "tblS8RYo4FSqmONyu",
     name: "services",
-    fields: ["serviceId", "subtopics"],
+    fields: ["serviceId", "shortDescription", "subtopics"],
     sort: ["fldUE83DR6inhTAbn"], //Service Name
     fieldMapping: {
       serviceId: "fldTefBeQ2PJgm4N4",
+      shortDescription: "fldHdf0nl9lOefgQX",
       subtopics: "fld1vrzODVrv4Ah05"
     }
   }
