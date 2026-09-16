@@ -59,6 +59,11 @@ export default {
           const sepService = stateEntity.services.find(
             s => s.ServiceId === serviceId
           );
+
+          if (sepService) {
+            sepService.shortDescription = service.shortDescription ?? "";
+          }
+
           return sepService;
         })
         .filter(x => !!x);
