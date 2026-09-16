@@ -2,6 +2,7 @@
   {
     "id": "rec5w24Co95dVXApF",
     "serviceId": 1274,
+    "shortDescription": "Enter the California Lottery 2nd Chance drawings. Turn non-winning tickets into chances to win prizes.",
     "subtopics": [
       "recI4OPhX5Oya75H4",
       "recs6Qo8S7FBUOmQc"
@@ -10,6 +11,7 @@
   {
     "id": "recYMaw7un6mcH3xf",
     "serviceId": 1244,
+    "shortDescription": "Find community living services for people with disabilities. Get help with housing and daily living skills to live independently.",
     "subtopics": [
       "recBWsRyFHT0CF54V"
     ]
@@ -17,6 +19,7 @@
   {
     "id": "rech4FGdfZ5yKlFNX",
     "serviceId": 1255,
+    "shortDescription": "Find adult day health centers near you. Get daytime care, health services, and activities for seniors and adults with disabilities.",
     "subtopics": [
       "recrCTa3u9QAJFEty",
       "rec1HuYfRPvHsqBZE"
@@ -25,6 +28,7 @@
   {
     "id": "rec8s9NlwCq4LscGU",
     "serviceId": 1250,
+    "shortDescription": "Keep your hazardous waste ID number compliant with the annual Electronic Verification Questionnaire.",
     "subtopics": [
       "rec7lG93rWdudJmS7",
       "recMsWGZor2H0Dm8G"
@@ -33,6 +37,7 @@
   {
     "id": "recoe1SGpjWlEHr5l",
     "serviceId": 1146,
+    "shortDescription": "If you disagree with a cannabis license decision, you may submit an appeal. Learn about the appeal process.",
     "subtopics": [
       "recawwRWfCQQOjOyK",
       "recdGJAyX3UCL5Adn"
@@ -79,6 +84,7 @@
   {
     "id": "rec0UvYwQk772Fphm",
     "serviceId": 26,
+    "shortDescription": "Apply for a seller’s permit to collect California sales tax. You need a permit if your business sells goods.",
     "subtopics": [
       "recawwRWfCQQOjOyK",
       "reccUrRSEHOTOFYpS"
@@ -87,6 +93,7 @@
   {
     "id": "recYPYPqnqncnnDWg",
     "serviceId": 52,
+    "shortDescription": "Order a certified copy of a birth certificate online, by mail, or in person,",
     "subtopics": [
       "rec6sXxrRvZ5OhCVN"
     ]
@@ -94,6 +101,7 @@
   {
     "id": "recFeMkS8Zlg7rFPO",
     "serviceId": 1169,
+    "shortDescription": "Apply for help paying crime-related expenses. The California Victim Compensation Board helps victims cover medical bills, lost wages, and other costs.",
     "subtopics": [
       "recHwYw22AREEwOwm",
       "rec2LSD2mzGvATatD"
@@ -102,6 +110,7 @@
   {
     "id": "rec6u6FF2Gai14S0Y",
     "serviceId": 53,
+    "shortDescription": "Order a certified copy of a California death certificate online, by mail, or in person.",
     "subtopics": [
       "rec6sXxrRvZ5OhCVN"
     ]
@@ -109,6 +118,7 @@
   {
     "id": "rech0ZOb2i6CQH1Wo",
     "serviceId": 51,
+    "shortDescription": "Order a certified copy of a California marriage certificate online, by mail, or in person. ",
     "subtopics": [
       "rec6sXxrRvZ5OhCVN"
     ]
@@ -125,6 +135,7 @@
   {
     "id": "recpNEqqYTGDr8UHl",
     "serviceId": 74,
+    "shortDescription": "Apply for health insurance through Covered California. You can shop plans and compare prices to find one that’s right for you.",
     "subtopics": [
       "recoYMSvVI9opAbzg",
       "recdLKNsNaj0itkgy"
@@ -132,7 +143,11 @@
   },
   {
     "id": "rece4Bcdmml90C4tN",
-    "serviceId": 1156
+    "serviceId": 1156,
+    "shortDescription": "Apply for funding to build or modernize schools. This include grants and loans for school construction and facility projects.",
+    "subtopics": [
+      "rec9rD8WZT5DndhXl"
+    ]
   },
   {
     "id": "rec53E3IrQ6ROr5lA",
@@ -161,15 +176,19 @@
   {
     "id": "rec90ipP1kMd5AIvd",
     "serviceId": 1108,
+    "shortDescription": "Attend a free student financial aid workshop with the Cash for College program. Get help filling out financial aid forms and learn about scholarships.",
     "subtopics": [
-      "recPdZ3wUHdF90lCQ"
+      "recPdZ3wUHdF90lCQ",
+      "rec2LSD2mzGvATatD"
     ]
   },
   {
     "id": "recPkFi7L1kIxn1US",
     "serviceId": 1277,
+    "shortDescription": "Apply to become a California Lottery retailer. Sell lottery tickets at your business. Earn commissions on your ticket sales.",
     "subtopics": [
-      "recI4OPhX5Oya75H4"
+      "recI4OPhX5Oya75H4",
+      "recUAZInOnYaCikbO"
     ]
   },
   {
@@ -197,6 +216,7 @@
   {
     "id": "recKhfejBJ0L6l3fI",
     "serviceId": 1240,
+    "shortDescription": "Get a burn permit before outdoor burning in California. See the steps and information you need to plan safe burning and the alternatives.",
     "subtopics": [
       "rec7lG93rWdudJmS7",
       "recldXcZdibiXelRd"
@@ -205,6 +225,7 @@
   {
     "id": "recoeQ4ROeOo8ICkP",
     "serviceId": 1126,
+    "shortDescription": "California provides great incentives for businesses. This includes tax credits, grants, and more.",
     "subtopics": [
       "rec7nARGkMGzzEspi"
     ]
@@ -212,8 +233,9 @@
   {
     "id": "recEmuxaddPJeb9Q0",
     "serviceId": 1127,
+    "shortDescription": "Find out what permits you need for your business based on business types and location. You’ll also get contact information for each agency.",
     "subtopics": [
-      "rec4qJmDWrMaTuOMq"
+      "recawwRWfCQQOjOyK"
     ]
   },
   {
@@ -233,6 +255,7 @@
   {
     "id": "rechefsdM0XLIAk2W",
     "serviceId": 1276,
+    "shortDescription": "Find CA Lottery district office locations near you. Get addresses, hours, and contact info for local offices serving your area of California.",
     "subtopics": [
       "recI4OPhX5Oya75H4"
     ]
@@ -257,6 +280,7 @@
   {
     "id": "recZowhmZfkp5AEgO",
     "serviceId": 1179,
+    "shortDescription": "The CA Meals for Kids mobile app helps you find, save, and share nearby California meal sites. Search using various criteria to find results to meet your needs.",
     "subtopics": [
       "recZavC0cDUHa7nxF",
       "recYMVYXtNWLFScD4"
@@ -265,6 +289,7 @@
   {
     "id": "rec39zQ7ztiHRV57S",
     "serviceId": 1189,
+    "shortDescription": "Find state job recruitment events and resources. Attend hiring fairs, workshops, and info sessions for California government careers.",
     "subtopics": [
       "recR0DpQoFefdyDgn"
     ]
@@ -280,13 +305,16 @@
   {
     "id": "reckeDHe50bcK601C",
     "serviceId": 63,
+    "shortDescription": "Apply for Cal Grant financial aid to pay for tuition and fees at California colleges.",
     "subtopics": [
-      "recPdZ3wUHdF90lCQ"
+      "recPdZ3wUHdF90lCQ",
+      "rec2LSD2mzGvATatD"
     ]
   },
   {
     "id": "recxiT22Fq14Kvxo0",
     "serviceId": 1182,
+    "shortDescription": "Sign up for a CalABLE account to save without risking disability benefits. You can save with tax free earnings and pay for disability-related expenses. ",
     "subtopics": [
       "recjfzgY2z0VbVAPG",
       "recBWsRyFHT0CF54V"
@@ -295,13 +323,20 @@
   {
     "id": "recPVjNTNV2Matlsj",
     "serviceId": 9,
+    "shortDescription": "Estimate your child support payment using California’s official calculator.",
     "subtopics": [
       "rechc3hU9mhXrO4Sy"
     ]
   },
   {
     "id": "rec6DGg3VaNC41ZPA",
-    "serviceId": 1136
+    "serviceId": 1136,
+    "shortDescription": "Calculate your California earthquake insurance premium. Get an estimate based on your location and home value.",
+    "subtopics": [
+      "rec2LSD2mzGvATatD",
+      "recKq6WPWAcRRnfxi",
+      "recUqMxo1id3OBUEb"
+    ]
   },
   {
     "id": "recMvJizChmZnIjPR",
@@ -327,8 +362,10 @@
   {
     "id": "recd972A2ND4qpEOq",
     "serviceId": 1167,
+    "shortDescription": "The California Earned Income Tax Credit offers support for low-income, working Californians. See if you qualify.",
     "subtopics": [
-      "recnj3KFAyMcYHZXz"
+      "recnj3KFAyMcYHZXz",
+      "rec2LSD2mzGvATatD"
     ]
   },
   {
@@ -341,6 +378,7 @@
   {
     "id": "recUAbhCiM87muoU1",
     "serviceId": 1188,
+    "shortDescription": "Search for people in California prisons online. You can find information about their location, release dates, and parole hearing. ",
     "subtopics": [
       "recqbuFZmUIA5DyPD"
     ]
@@ -380,6 +418,7 @@
   {
     "id": "recdOduYizrUyGfA4",
     "serviceId": 31,
+    "shortDescription": "Get current wildfire info, evacuation orders, and emergency alerts. Check fire conditions and air quality in your area.",
     "subtopics": [
       "rec7lG93rWdudJmS7",
       "recMsWGZor2H0Dm8G"
@@ -388,6 +427,7 @@
   {
     "id": "recqoQzAYZBXdz5nG",
     "serviceId": 64,
+    "shortDescription": "Apply for a CalVet home lone you’re a veteran buying a home in California.These loans offer low rates and flexible terms.",
     "subtopics": [
       "reczSYbTt3pICoUBb"
     ]
@@ -410,6 +450,7 @@
   {
     "id": "recX6fsc3A1bZsDXN",
     "serviceId": 1239,
+    "shortDescription": "Get a free campfire permit online before burning outdoors in California. Find out more about state fire requirements and safety.",
     "subtopics": [
       "recldXcZdibiXelRd",
       "recMsWGZor2H0Dm8G"
@@ -432,6 +473,7 @@
   {
     "id": "rec5Kk6crZpAhyI1q",
     "serviceId": 1228,
+    "shortDescription": "Certify for unemployment benefits every 2 weeks. Report your work search and earnings to keep receiving payments.",
     "subtopics": [
       "recXDT4zX0J5jfCrQ"
     ]
@@ -453,6 +495,7 @@
   {
     "id": "rec7E7XAMEnyEWLa0",
     "serviceId": 10,
+    "shortDescription": "Check the status of your contractor license application online.",
     "subtopics": [
       "rece6xgZZTZlLNrLl"
     ]
@@ -460,6 +503,7 @@
   {
     "id": "recLnBvrLqGtsfoRJ",
     "serviceId": 1287,
+    "shortDescription": "Stay prepared and plan for extreme heat events with alerts and heat risk scores. Get information about local resources like cool centers.",
     "subtopics": [
       "recjyRHGeoyJw4luS",
       "recMsWGZor2H0Dm8G",
@@ -469,6 +513,7 @@
   {
     "id": "recT2xN7mYtYlAoIL",
     "serviceId": 33,
+    "shortDescription": "Check your state tax refund status. Refunds filed online take up to 3 weeks.",
     "subtopics": [
       "recnj3KFAyMcYHZXz"
     ]
@@ -476,6 +521,7 @@
   {
     "id": "recDdoxxwnKrWsIxM",
     "serviceId": 1214,
+    "shortDescription": "Make, receive, and manage child support payments through the California State Disbursement Unit.",
     "subtopics": [
       "rechc3hU9mhXrO4Sy"
     ]
@@ -483,6 +529,7 @@
   {
     "id": "reca8lPN53l1get3z",
     "serviceId": 1203,
+    "shortDescription": "Use Customer Connect to manage your child support case. You can review case information, get payment history, contact your case manager, and more.",
     "subtopics": [
       "rechc3hU9mhXrO4Sy"
     ]
@@ -498,6 +545,7 @@
   {
     "id": "recdP705yjzLdXejk",
     "serviceId": 1236,
+    "shortDescription": "Find Medi-Cal doctors, hospitals, dentists, and more near you with Health Care Options. Search thousands of providers who accept Medi-Cal insurance.",
     "subtopics": [
       "recdLKNsNaj0itkgy"
     ]
@@ -505,6 +553,7 @@
   {
     "id": "recyhCcrLQG2NHv7P",
     "serviceId": 1269,
+    "shortDescription": "Claim your California Lottery prize. Find out how to collect winnings for scratch-offs and draw games.",
     "subtopics": [
       "recI4OPhX5Oya75H4"
     ]
@@ -512,6 +561,7 @@
   {
     "id": "recaDuJb4buYmIqSe",
     "serviceId": 1234,
+    "shortDescription": "Apply for coastal enhancement grants. You can search current conservation projects that work to protect California's waters. Find out more and how you can get involved.",
     "subtopics": [
       "recMsWGZor2H0Dm8G"
     ]
@@ -531,6 +581,7 @@
   {
     "id": "rec00CRBpR9E4GMV1",
     "serviceId": 1128,
+    "shortDescription": "Access community data and statistics by location. Find demographic, economic, and education info for California neighborhoods.",
     "subtopics": [
       "recs6Qo8S7FBUOmQc",
       "recru8dUOdzcKCrg0"
@@ -554,6 +605,7 @@
   {
     "id": "recdM8FgVscY5FXPg",
     "serviceId": 1195,
+    "shortDescription": "Create a CalCareers account to apply for California state jobs. Build your profile, search openings, and manage applications in one place.",
     "subtopics": [
       "recR0DpQoFefdyDgn"
     ]
@@ -584,12 +636,14 @@
     "id": "recrRnPgBVvwUcDB0",
     "serviceId": 1306,
     "subtopics": [
-      "rec6sXxrRvZ5OhCVN"
+      "rec6sXxrRvZ5OhCVN",
+      "recdGJAyX3UCL5Adn"
     ]
   },
   {
     "id": "recuMn7sS7fovP78C",
     "serviceId": 1159,
+    "shortDescription": "Find resources for disability access and compliance. Learn about accessibility requirements for buildings and services.",
     "subtopics": [
       "recBWsRyFHT0CF54V",
       "recjfzgY2z0VbVAPG"
@@ -598,13 +652,16 @@
   {
     "id": "rec6aBLZTyTGMsBcP",
     "serviceId": 1122,
+    "shortDescription": "Prepare for wildfires, floods, earthquakes, and other disasters. You can access life-saving tools and resources in your language.",
     "subtopics": [
-      "recKq6WPWAcRRnfxi"
+      "recKq6WPWAcRRnfxi",
+      "rec2LSD2mzGvATatD"
     ]
   },
   {
     "id": "recuVGPEq90NtJ9vn",
     "serviceId": 1149,
+    "shortDescription": "Find California state procurement resources and contract opportunities. Businesses can bid on contracts and sell goods and services to the state.",
     "subtopics": [
       "rec4qJmDWrMaTuOMq"
     ]
@@ -612,6 +669,7 @@
   {
     "id": "recFFHjXaNMqCYf67",
     "serviceId": 1264,
+    "shortDescription": "You can get early intervention for babies and toddlers with developmental delays. Families can access free help through Early Start.",
     "subtopics": [
       "recPAKT4KhpXYTFTP",
       "reclMGMOijxHoqsio"
@@ -621,12 +679,14 @@
     "id": "recuJ4RhJOtIZRh2I",
     "serviceId": 1183,
     "subtopics": [
-      "recnj3KFAyMcYHZXz"
+      "recnj3KFAyMcYHZXz",
+      "rec7WfLvbg9L2RMkK"
     ]
   },
   {
     "id": "recjX2EsHR0qEOzQV",
     "serviceId": 1141,
+    "shortDescription": "Get earthquake insurance premium discounts for older houses that have been retrofitted for earthquakes. Find out if you qialify.",
     "subtopics": [
       "recKq6WPWAcRRnfxi",
       "rec7lG93rWdudJmS7",
@@ -644,6 +704,7 @@
   {
     "id": "recO1kxwvwpVd5LaM",
     "serviceId": 1186,
+    "shortDescription": "Access your accounts, tax forms and training for your filing needs. Find important links and resources on paying your California payroll taxes.",
     "subtopics": [
       "reccUrRSEHOTOFYpS"
     ]
@@ -660,6 +721,7 @@
   {
     "id": "recbsAP9ufuhRbk1P",
     "serviceId": 8,
+    "shortDescription": "As a parent or legal guardian, you can enroll in child support services online.",
     "subtopics": [
       "rechc3hU9mhXrO4Sy"
     ]
@@ -667,13 +729,16 @@
   {
     "id": "recDdeigzCZPw4TXs",
     "serviceId": 1193,
+    "shortDescription": "Employers can manage claims related to their business. This includes payroll tax accounts and unemployment claims.",
     "subtopics": [
-      "recmyJGKYHWJoiXCU"
+      "recmyJGKYHWJoiXCU",
+      "reccUrRSEHOTOFYpS"
     ]
   },
   {
     "id": "recVsydnadHyS8zxR",
     "serviceId": 1098,
+    "shortDescription": "Enroll your child in Hack the Hood, a free 6-week program that teaches low-income youth technology and computer skills like programming.",
     "subtopics": [
       "reclMGMOijxHoqsio",
       "recBACGN5aPe1TS9U",
@@ -698,11 +763,18 @@
   },
   {
     "id": "recOQ3b8D5SOKHMB5",
-    "serviceId": 27
+    "serviceId": 27,
+    "shortDescription": "Have you faced unfair treatment at work, in housing, or public services? File a discrimination complaint.",
+    "subtopics": [
+      "recHwYw22AREEwOwm",
+      "recdGJAyX3UCL5Adn",
+      "recSDMVjT5Cuh64EL"
+    ]
   },
   {
     "id": "rec9FMI4p6aT2XgBm",
     "serviceId": 1260,
+    "shortDescription": "File a complaint if a hospital wrongly denied you financial help. Report violations of the Hospital Fair Pricing Act for unfair billing.",
     "subtopics": [
       "recTPeYrGYv3LZtp9",
       "recdLKNsNaj0itkgy"
@@ -711,24 +783,32 @@
   {
     "id": "rech49ZCS9Q3hZYiG",
     "serviceId": 1288,
+    "shortDescription": "Report a problem with an auto repair shop. File a complaint so the Bureau of Automotive Repair can investigate and help resolve the issue.",
     "subtopics": [
       "recGtPEJ8w9qcNESz"
     ]
   },
   {
     "id": "recCTN2TRxEtcorO4",
-    "serviceId": 1170
+    "serviceId": 1170,
+    "shortDescription": "File an insurance complaint. You can report denied claims, fraud, or billing problems.",
+    "subtopics": [
+      "recoYMSvVI9opAbzg"
+    ]
   },
   {
     "id": "recERUIo2PF36bDdG",
     "serviceId": 1134,
+    "shortDescription": "File a complaint against a licensed professional or business. Report violations, fraud, or poor service to the licensing board.",
     "subtopics": [
-      "recTPeYrGYv3LZtp9"
+      "recTPeYrGYv3LZtp9",
+      "recawwRWfCQQOjOyK"
     ]
   },
   {
     "id": "recTehCWtjrYUho9b",
     "serviceId": 11,
+    "shortDescription": "You can file a complaint about a contractor online. Report problems with construction work or contract violations.",
     "subtopics": [
       "rece6xgZZTZlLNrLl",
       "recTPeYrGYv3LZtp9",
@@ -741,7 +821,8 @@
     "subtopics": [
       "recjfzgY2z0VbVAPG",
       "recSDMVjT5Cuh64EL",
-      "rec2LSD2mzGvATatD"
+      "rec2LSD2mzGvATatD",
+      "recBWsRyFHT0CF54V"
     ]
   },
   {
@@ -750,7 +831,8 @@
     "subtopics": [
       "recSDMVjT5Cuh64EL",
       "recdLKNsNaj0itkgy",
-      "rec2LSD2mzGvATatD"
+      "rec2LSD2mzGvATatD",
+      "rec9BrU4EgC9tzmEn"
     ]
   },
   {
@@ -772,6 +854,7 @@
   {
     "id": "rec60oeSihfEGFHJ5",
     "serviceId": 39,
+    "shortDescription": "Search and apply for California state government jobs. Browse thousands of openings with good benefits and job security. Apply online anytime.",
     "subtopics": [
       "recR0DpQoFefdyDgn"
     ]
@@ -786,6 +869,7 @@
   {
     "id": "recGhlHWqE6AN2waB",
     "serviceId": 1133,
+    "shortDescription": "Look up a Consumer Affairs license for a person or business to confirm their license status.",
     "subtopics": [
       "recTPeYrGYv3LZtp9",
       "rec4qJmDWrMaTuOMq",
@@ -795,6 +879,7 @@
   {
     "id": "recFm8o45ioy7diky",
     "serviceId": 1209,
+    "shortDescription": "Find a dentist who accepts Medi-Cal Dental and learn about covered services.",
     "subtopics": [
       "recdLKNsNaj0itkgy",
       "recoYMSvVI9opAbzg"
@@ -825,7 +910,10 @@
   },
   {
     "id": "rec4PZRHcVwuAGSlX",
-    "serviceId": 54
+    "serviceId": 54,
+    "subtopics": [
+      "recyoAZZUWXuh28O6"
+    ]
   },
   {
     "id": "rec1Kos9ukkXiBM5Y",
@@ -838,7 +926,8 @@
     "id": "recZ1KEo4sE2VVr4U",
     "serviceId": 1206,
     "subtopics": [
-      "recO38RYKKQsvYUJO"
+      "recO38RYKKQsvYUJO",
+      "recR0DpQoFefdyDgn"
     ]
   },
   {
@@ -852,8 +941,8 @@
     "id": "recqecoyflVGT42db",
     "serviceId": 1216,
     "subtopics": [
-      "recXDT4zX0J5jfCrQ",
-      "recBWsRyFHT0CF54V"
+      "recBWsRyFHT0CF54V",
+      "recnj3KFAyMcYHZXz"
     ]
   },
   {
@@ -896,7 +985,8 @@
     "id": "recczrMSEX4f9nH5G",
     "serviceId": 77,
     "subtopics": [
-      "rec4qJmDWrMaTuOMq"
+      "recUAZInOnYaCikbO",
+      "reccUrRSEHOTOFYpS"
     ]
   },
   {
@@ -945,7 +1035,10 @@
   },
   {
     "id": "recTYNpvSainD17ue",
-    "serviceId": 1162
+    "serviceId": 1162,
+    "subtopics": [
+      "recUAZInOnYaCikbO"
+    ]
   },
   {
     "id": "recC5ur8ewTeoFJtV",
@@ -1017,7 +1110,8 @@
   },
   {
     "id": "rec3zVRjI0SWwdG1L",
-    "serviceId": 1157
+    "serviceId": 1157,
+    "shortDescription": "Purchase cars at auctions, become an approved vendor to repair vehicles. You can bid on state equipment, such as computers, cars, furniture."
   },
   {
     "id": "rec9TZ6i7OOvkzPhQ",
@@ -1331,7 +1425,10 @@
   },
   {
     "id": "recYxo6GSx4HZTjvi",
-    "serviceId": 1164
+    "serviceId": 1164,
+    "subtopics": [
+      "recUAZInOnYaCikbO"
+    ]
   },
   {
     "id": "recZPjVNaVgmQzk0x",
@@ -1397,7 +1494,10 @@
   },
   {
     "id": "rect1O2R9YzkM3NuF",
-    "serviceId": 41
+    "serviceId": 41,
+    "subtopics": [
+      "recdGJAyX3UCL5Adn"
+    ]
   },
   {
     "id": "recbUT2rD496SxHVP",
@@ -1429,7 +1529,10 @@
   },
   {
     "id": "recVsdhjthmsndApY",
-    "serviceId": 58
+    "serviceId": 58,
+    "subtopics": [
+      "recs6Qo8S7FBUOmQc"
+    ]
   },
   {
     "id": "reczB7dMn5exzbCpL",
@@ -1722,7 +1825,11 @@
   },
   {
     "id": "recNDSeKaSIM2cz4c",
-    "serviceId": 1201
+    "serviceId": 1201,
+    "shortDescription": "Take sexual harassment prevention training with short videos and quizzes to help you build a safer, respectful workplace.",
+    "subtopics": [
+      "recSDMVjT5Cuh64EL"
+    ]
   },
   {
     "id": "reclBhLt3O79X9gNa",
