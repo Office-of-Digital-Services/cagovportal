@@ -36,7 +36,7 @@ state_entity) %}
   <div class="col-lg-9">
     <h2>Your services</h2>
     <p class="lead">
-      Here are the services that meet your needs. We provide direct links or
+      Based on what you selected, these services may meet your needs. We provide direct links or
       information on how to get these services.
     </p>
 
@@ -147,12 +147,14 @@ state_entity) %}
         </button>
       </div>
       <div class="modal-body">
+<div class="col-md-6 mx-auto">
         <div class="brd-solid-2 brd-primary d-flex rounded-5">
           <input
             type="text"
             id="url-copy"
             class="bg-transparent border-0 m-y-0 p-x-0 p-l p-r-sm overflow-hidden w-100" />
 
+        
           <button
             id="share-plan-copy"
             style="display:flex"
@@ -168,11 +170,13 @@ state_entity) %}
             <span class="ca-gov-icon-check-mark" aria-hidden="true"></span>
             <div class="m-l-sm">Link copied</div>
           </button>
-        </div>
-
-        <a
+		
+       
+      </div>
+		  
+<a
           id="share-plan-device"
-          class="btn btn-outline-primary brd-solid-2 rounded-5 m-t d-flex align-items-center fit-content p-r-md">
+          class="btn btn-outline-primary brd-solid-2 rounded-5 m-t d-flex align-items-center fit-content p-r-md justify-content-center">
           <span class="ca-gov-icon-share m-r" aria-hidden="true"></span> Share
         </a>
 
@@ -180,7 +184,7 @@ state_entity) %}
           id="share-plan-mailto"
           data-mail-subject="Share from the CA.gov Services Finder"
           data-mail-body="Here is my plan from the CA.gov Services Finder:"
-          class="btn btn-outline-primary brd-solid-2 rounded-5 m-t d-flex align-items-center fit-content p-r-md">
+          class="btn btn-outline-primary brd-solid-2 rounded-5 m-t d-flex align-items-center fit-content p-r-md justify-content-center">
           <img
             src="/images/servicefinder/icon-email.svg"
             alt=""
@@ -189,6 +193,8 @@ state_entity) %}
             aria-hidden="true" />
           Email
         </a>
+       </div>
+        
       </div>
     </div>
   </div>
