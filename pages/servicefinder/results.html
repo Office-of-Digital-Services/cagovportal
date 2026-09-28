@@ -36,8 +36,8 @@ state_entity) %}
   <div class="col-lg-9">
     <h2>Your services</h2>
     <p class="lead">
-      Based on what you selected, these services may meet your needs. We provide direct links or
-      information on how to get these services.
+      Based on what you selected, these services may meet your needs. We provide
+      direct links or information on how to get these services.
     </p>
 
     <div class="mb-5 d-flex gap-2 gap-md-4 align-items-center d-print-none">
@@ -96,7 +96,7 @@ state_entity) %}
                 {{sepService.FriendlyName}}
               </p>
               <p>
-                {{ sepService.shortDescription }}
+                {{ sepService.shortDescription or sepService.Description }}
                 <a
                   href="/departments/{{sepService.AgencyId}}/services/{{sepService.ServiceId}}"
                   >Learn more<span class="sr-only">
@@ -147,54 +147,50 @@ state_entity) %}
         </button>
       </div>
       <div class="modal-body">
-<div class="col-md-6 mx-auto">
-        <div class="brd-solid-2 brd-primary d-flex rounded-5">
-          <input
-            type="text"
-            id="url-copy"
-            class="bg-transparent border-0 m-y-0 p-x-0 p-l p-r-sm overflow-hidden w-100" />
+        <div class="col-md-6 mx-auto">
+          <div class="brd-solid-2 brd-primary d-flex rounded-5">
+            <input
+              type="text"
+              id="url-copy"
+              class="bg-transparent border-0 m-y-0 p-x-0 p-l p-r-sm overflow-hidden w-100" />
 
-        
-          <button
-            id="share-plan-copy"
-            style="display:flex"
-            class="btn btn-primary rounded-0 p-x m-t-0 ms-auto text-nowrap">
-            <span class="ca-gov-icon-copy" aria-hidden="true"></span>
-            <div class="m-l-sm">Copy link</div>
-          </button>
+            <button
+              id="share-plan-copy"
+              style="display:flex"
+              class="btn btn-primary rounded-0 p-x m-t-0 ms-auto text-nowrap">
+              <span class="ca-gov-icon-copy" aria-hidden="true"></span>
+              <div class="m-l-sm">Copy link</div>
+            </button>
 
-          <button
-            id="share-plan-copied"
-            style="display: none"
-            class="btn btn-primary rounded-0 p-x m-t-0 ms-auto text-nowrap">
-            <span class="ca-gov-icon-check-mark" aria-hidden="true"></span>
-            <div class="m-l-sm">Link copied</div>
-          </button>
-		
-       
-      </div>
-		  
-<a
-          id="share-plan-device"
-          class="btn btn-outline-primary brd-solid-2 rounded-5 m-t d-flex align-items-center fit-content p-r-md justify-content-center">
-          <span class="ca-gov-icon-share m-r" aria-hidden="true"></span> Share
-        </a>
+            <button
+              id="share-plan-copied"
+              style="display: none"
+              class="btn btn-primary rounded-0 p-x m-t-0 ms-auto text-nowrap">
+              <span class="ca-gov-icon-check-mark" aria-hidden="true"></span>
+              <div class="m-l-sm">Link copied</div>
+            </button>
+          </div>
 
-        <a
-          id="share-plan-mailto"
-          data-mail-subject="Share from the CA.gov Services Finder"
-          data-mail-body="Here is my plan from the CA.gov Services Finder:"
-          class="btn btn-outline-primary brd-solid-2 rounded-5 m-t d-flex align-items-center fit-content p-r-md justify-content-center">
-          <img
-            src="/images/servicefinder/icon-email.svg"
-            alt=""
-            class="img-fluid 
+          <a
+            id="share-plan-device"
+            class="btn btn-outline-primary brd-solid-2 rounded-5 m-t d-flex align-items-center fit-content p-r-md justify-content-center">
+            <span class="ca-gov-icon-share m-r" aria-hidden="true"></span> Share
+          </a>
+
+          <a
+            id="share-plan-mailto"
+            data-mail-subject="Share from the CA.gov Services Finder"
+            data-mail-body="Here is my plan from the CA.gov Services Finder:"
+            class="btn btn-outline-primary brd-solid-2 rounded-5 m-t d-flex align-items-center fit-content p-r-md justify-content-center">
+            <img
+              src="/images/servicefinder/icon-email.svg"
+              alt=""
+              class="img-fluid 
             height-30 d-print-none m-r"
-            aria-hidden="true" />
-          Email
-        </a>
-       </div>
-        
+              aria-hidden="true" />
+            Email
+          </a>
+        </div>
       </div>
     </div>
   </div>
