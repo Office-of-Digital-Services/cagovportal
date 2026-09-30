@@ -1,5 +1,19 @@
 [
   {
+    "id": "recE3HX5qnOn7t3UY",
+    "serviceId": 1317,
+    "subtopics": [
+      "reclMGMOijxHoqsio"
+    ]
+  },
+  {
+    "id": "recz58OpJPfW2CIpw",
+    "serviceId": 1320,
+    "subtopics": [
+      "reclMGMOijxHoqsio"
+    ]
+  },
+  {
     "id": "rec5w24Co95dVXApF",
     "serviceId": 1274,
     "shortDescription": "Enter the California Lottery 2nd Chance drawings. Turn non-winning tickets into chances to win prizes.",
@@ -623,13 +637,6 @@
     ]
   },
   {
-    "id": "recz58OpJPfW2CIpw",
-    "serviceId": 1320,
-    "subtopics": [
-      "reclMGMOijxHoqsio"
-    ]
-  },
-  {
     "id": "recdM8FgVscY5FXPg",
     "serviceId": 1195,
     "shortDescription": "Create a CalCareers account to apply for California state jobs. Build your profile, search openings, and manage applications in one place.",
@@ -1217,13 +1224,6 @@
     "subtopics": [
       "recZavC0cDUHa7nxF",
       "recR3dLWBEekAS2zb"
-    ]
-  },
-  {
-    "id": "recE3HX5qnOn7t3UY",
-    "serviceId": 1317,
-    "subtopics": [
-      "reclMGMOijxHoqsio"
     ]
   },
   {
