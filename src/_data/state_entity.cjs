@@ -192,6 +192,12 @@ module.exports = async function () {
       });
   };
 
+  if (process.env.ELEVENTY_RUN_MODE === "build") {
+    console.time("Image Processing");
+    await processImages();
+    console.timeEnd("Image Processing");
+  }
+
   console.time("Image Processing");
   await processImages();
   console.timeEnd("Image Processing");

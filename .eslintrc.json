@@ -16,6 +16,7 @@
     "arrow-parens": ["warn", "as-needed"],
     "block-scoped-var": "warn",
     "class-methods-use-this": "warn",
+    "curly": ["warn", "multi"],
     "no-extra-bind": "warn",
     "no-extra-parens": "off",
     "no-lonely-if": "warn",
