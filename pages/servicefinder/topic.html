@@ -69,7 +69,13 @@ eleventyComputed:
   style="background: url('/images/departments-lineart.svg?v2evjhb') no-repeat right / auto;">
   <div class="container p-y-md">
     {%- include "breadcrumbs.html" -%}
-    <h1 class="m-t-0">{{title}}</h1>
+    <h1 class="m-t-0 d-flex flex-wrap gap-2 flex-column">
+      <span
+        class="text-nowrap overflow-hidden text-center border border-white d-flex width-40 justify-content-center font-size-sm font-weight-400">
+        Beta
+      </span>
+      {{title}}
+    </h1>
   </div>
 </div>
 
