@@ -20,7 +20,7 @@ eleventyComputed:
 {% set dataset = service_finder.helpers.getResultsDataset(item, service_finder,
 state_entity) %}
 <!---->
-{%- include "./results.html.njk" -%}
+{%- include "./results.html.include" -%}
 <div
   class="section-understated lineart bg-s1"
   style="background: url('/images/departments-lineart.svg?v2evjhb') no-repeat right / auto;">
