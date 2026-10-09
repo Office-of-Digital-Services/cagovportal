@@ -62,9 +62,6 @@
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <!-- Google analytics -->
-{% include "analytics.html" -%} {%- if not hidestatewidealert %}
-<!-- Statewide Alerts Server -->
-<script defer src="https://alert.cdt.ca.gov" crossorigin="anonymous"></script>
-{% endif -%} {%- if homepage %}
+{% include "analytics.html" -%} {%- if homepage %}
 <!-- Home Page -->
 {% include "home-header.html" -%} {%- endif -%}
