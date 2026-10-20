@@ -33,7 +33,7 @@
     "@11ty/eleventy-fetch": "^5.1.1",
     "@babel/core": "^7.28.6",
     "@cagovweb/state-template": "^6.6.0",
-    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@fullhuman/postcss-purgecss": "^8.0.0",
     "babel-plugin-transform-imports": "^2.0.0",
     "csv-parse": "^7.0.3",
     "dotenv": "^17.4.2",
