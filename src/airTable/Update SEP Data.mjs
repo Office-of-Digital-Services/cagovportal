@@ -32,12 +32,17 @@ for (let service of servicesQuery.records) {
 
 // Multi-select field definition
 const tagsField = table.getField(fldAgencyTags);
-if (!tagsField?.options?.choices)
-  throw new Error("Agency Tags field not found");
+
+if (!tagsField.options) throw new Error("Agency Tags field not found");
 
 // Build a map of existing multi-select choices: name → id
 const choiceMap = new Map();
-for (let choice of tagsField.options.choices)
+
+const tagsOptions = /** @type {{ choices: { id: string, name: string }[] }} */ (
+  tagsField.options
+);
+
+for (let choice of tagsOptions.choices)
   choiceMap.set(choice.name.trim(), choice.id);
 
 // Fetch API
@@ -77,11 +82,13 @@ for (let record of existing.records)
 // STEP 3 — Insert or update
 for (let item of apiData) {
   // Normalize API fields
+  /** @type {number} */
   let serviceId = item.ServiceId;
+  /** @type {string} */
   let serviceName = item.ServiceName || "";
 
   // Parse tags from API
-  let rawTags = item.AgencyTags || "";
+  let rawTags = /** @type {string} */ (item.AgencyTags || "");
   let tagNames = rawTags
     .split("|")
     .map(t => t.trim())
@@ -111,6 +118,7 @@ for (let item of apiData) {
   let linkedServices = linkedServiceId ? [{ id: linkedServiceId }] : [];
 
   // Build new record object
+  /** @type {Record<string, any>} */
   const newRecord = {
     [fldServiceName]: serviceName,
     [fldAgencyTags]: tagIds,
@@ -131,12 +139,14 @@ for (let item of apiData) {
     // Build stable existing JSON for diffing
     const existingJson = {
       [fldServiceName]: existingRecord.getCellValue(fldServiceName) || "",
-      [fldAgencyTags]: (existingRecord.getCellValue(fldAgencyTags) || [])
+      [fldAgencyTags]: /** @type {{id: string}[]} */ (
+        existingRecord.getCellValue(fldAgencyTags) || []
+      )
         .map(x => ({ id: x.id }))
         .sort((a, b) => a.id.localeCompare(b.id)),
-      [fldServices]: (existingRecord.getCellValue(fldServices) || []).map(
-        x => ({ id: x.id })
-      ),
+      [fldServices]: /** @type {{id: string}[]} */ (
+        existingRecord.getCellValue(fldServices) || []
+      ).map(x => ({ id: x.id })),
       [fldDescription]: existingRecord.getCellValue(fldDescription) || ""
     };
 
