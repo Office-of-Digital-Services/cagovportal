@@ -1,15 +1,19 @@
 //@ts-check
 
-/* global base */
+/* global base, input */
 // `base` is the global provided by the Airtable scripting environment.
 // Code published here...
-// https://airtable.com/appqN4fe2lK8xlNqp/wfltY1A4NJ8v3p83q/wacZSGF3biQDEnltu
+// https://airtable.com/appqN4fe2lK8xlNqp/automations
+// Code source: https://github.com/Office-of-Digital-Services/cagovportal/tree/main/src/airTable
 
-const table = base.getTable("tblp4lLpdJJ6ov9DR");
-const keyField = "AgencyId";
-const nameField = "AgencyName";
-const apiPath =
-  "https://api.stateentityprofile.ca.gov/api/Agencies/Get?page=0&pageSize=0&lang=en";
+const config = input.config();
+const table = base.getTable(config["Table"]);
+const keyFieldObject = table.getField(config["keyField"]);
+const keyFieldName = keyFieldObject.name;
+
+const nameFieldObject = table.getField(config["nameField"]);
+const nameFieldName = nameFieldObject.name;
+const apiPath = config["apiUrl"];
 
 // --------------------
 // FETCH API
@@ -53,22 +57,22 @@ const query = await table.selectRecordsAsync();
 const existingMap = new Map();
 
 for (const record of query.records)
-  existingMap.set(record.getCellValue(keyField), record);
+  existingMap.set(record.getCellValue(keyFieldName), record);
 
 // --------------------
 // DELETE STALE RECORDS
 // --------------------
 
-const apiIds = new Set(apiData.map(item => item[keyField]).filter(Boolean));
+const apiIds = new Set(apiData.map(item => item[keyFieldName]).filter(Boolean));
 
 const recordsToDelete = query.records.filter(record => {
-  const keyValue = record.getCellValue(keyField);
+  const keyValue = record.getCellValue(keyFieldName);
   return keyValue && !apiIds.has(keyValue);
 });
 
 for (const record of recordsToDelete) {
   console.log(
-    `DELETE: ${record.getCellValue(nameField)} (${record.getCellValue(keyField)})`
+    `DELETE: ${record.getCellValue(nameFieldName)} (${record.getCellValue(keyFieldName)})`
   );
 
   await table.deleteRecordAsync(record.id);
@@ -99,8 +103,8 @@ function normalize(value) {
 // --------------------
 
 for (const item of apiData) {
-  const keyValue = item[keyField];
-  const nameValue = item[nameField];
+  const keyValue = item[keyFieldName];
+  const nameValue = item[nameFieldName];
 
   const existingRecord = existingMap.get(keyValue);
 
