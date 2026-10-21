@@ -17,12 +17,10 @@ async function getTopStories() {
     // parse XML
     let jsonObj;
     parseString(response.toString(), (err, result) => {
-      if (err) {
-        console.error("Error parsing XML:", err);
-      } else {
+      if (err) console.error("Error parsing XML:", err);
+      else
         // Process the parsed result (stored in 'result')
         jsonObj = result;
-      }
     });
 
     return jsonObj;
