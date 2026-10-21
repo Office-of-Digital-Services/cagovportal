@@ -54,34 +54,11 @@ category3: Press Release
                 Immigration
               </a>
               <ul>
+                {%- for slug, title in pages %}
                 <li>
-                  <a href="/immigration/education/"
-                    >Education rights and laws</a
-                  >
+                  <a href="/immigration/{{ slug }}/">{{ title }}</a>
                 </li>
-                <li>
-                  <a href="/immigration/business-and-worker-rights/"
-                    >Business and worker rights</a
-                  >
-                </li>
-                <li>
-                  <a href="/immigration/federal-updates/"
-                    >Federal policies updates</a
-                  >
-                </li>
-                <li>
-                  <a href="/immigration/laws-and-your-rights/"
-                    >Laws and your rights</a
-                  >
-                </li>
-                <li>
-                  <a href="/immigration/about-california-immigrant-families/"
-                    >About California immigrant families</a
-                  >
-                </li>
-                <li>
-                  <a href="/immigration/mental-health/">Mental health</a>
-                </li>
+                {%- endfor %}
               </ul>
             </li>
           </ul>
