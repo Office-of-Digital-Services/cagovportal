@@ -32,4 +32,6 @@ async function getTopStories() {
   }
 }
 
-module.exports = getTopStories;
+module.exports = async () => ({
+  getImmigrantsStories: await getTopStories()
+});
