@@ -1,4 +1,4 @@
- <div class="col-12 col-lg-3 pb-lg-5 sticky-6 h-100 p-b-md px-0">
+<div class="col-12 col-lg-3 pb-lg-5 sticky-6 h-100 p-b-md px-0">
   <!-- Side navigation -->
   <details
     class="side-navigation-toggle"
@@ -19,8 +19,8 @@
             Immigration and families
           </a>
         </li>
-        {%- for slug,title in immigration.pages | sortBy("featureOrder") %} 
-        {%- set href = "/immigration/"+slug+"/" -%} {%- set active = href === page.url -%}
+        {%- for slug,title in pages | sortBy("featureOrder") %} {%- set href =
+        "/immigration/"+slug+"/" -%} {%- set active = href === page.url -%}
         <li>
           <a
             href="{{-href-}}"
