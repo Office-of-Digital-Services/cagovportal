@@ -2,6 +2,7 @@
 title: Maternal health resources
 description: Access maternal health info and support. Guidance for pregnancy, childbirth, and postpartum care, plus mental health and essential resources.
 layout: landing
+breadcrumbparent: Get help
 permalink: /support/maternal-health-resources.html
 ---
 
@@ -9,13 +10,7 @@ permalink: /support/maternal-health-resources.html
   class="section-understated lineart bg-s1"
   style="background: url('/images/maternal-lineart.svg') no-repeat right / auto;">
   <div class="container p-y-md">
-    <nav aria-label="You are here" class="breadcrumbs">
-      <ol>
-        <li><a href="/">Home</a></li>
-        <li><a href="/support/">Get help</a></li>
-        <li class="active">Maternal health resources</li>
-      </ol>
-    </nav>
+    {%- include "breadcrumbs.html" -%}
     <h1 class="m-t-0">{{title}}</h1>
   </div>
 </div>
