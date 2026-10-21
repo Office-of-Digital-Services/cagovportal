@@ -7,39 +7,25 @@ breadcrumbparent: Immigration and families
 permalink: immigration/business-and-worker-rights/
 ---
 
-<style>
-  div.image-header {
-    border-radius: 16px;
-  }
-
-  div.image-header > img {
-    aspect-ratio: 1 / 1;
-    max-height: 200px;
-    width: 100%;
-    object-fit: cover;
-    object-position: top;
-  }
-
-  @media (width >= 992px) {
-    div.image-header {
-      border-top-left-radius: 100px;
-      border-bottom-left-radius: 100px;
-    }
-
-    div.image-header > img {
-      height: 200px;
-      width: 200px;
-      border-radius: 100px;
-    }
-  }
-</style>
-
-<div
-  class="section-understated lineart bg-s1"
-  style="background: url('/images/get-help-lineart.svg?v2') no-repeat right / auto;">
+<div class="section-understated bg-s1">
   <div class="container p-y-md">
+    <div class="row">
+      <div class="col-lg-7"></div>
+      <div class="col-lg-5">
+        <div class="pos-rel">
+          <img
+            src="../images/business-and-workers-rights.webp"
+            data-fallback-ext="jpg"
+            loading="lazy"
+            crossorigin="anonymous"
+            class="rounded-circle service-img width-250 height-250 pos-abs right-sm d-none d-lg-block"
+            alt=""
+            aria-hidden="true" />
+        </div>
+      </div>
+    </div>
     {%- include "breadcrumbs.html" -%}
-    <h1 class="m-t-0">{{title}}</h1>
+    <h1 class="m-t-0 color-p2-darker">{{title}}</h1>
   </div>
 </div>
 
@@ -47,13 +33,7 @@ permalink: immigration/business-and-worker-rights/
   <div class="row">
     {%- include "./immigration-side-nav.inc" -%}
     <div class="col-12 col-lg-9">
-      <div class="container">
-        <p class="lead">
-          California is home to many families with different immigration
-          statuses. Many US citizens live with family members in “mixed-status”
-          families who
-        </p>
-
+      <div class="container pt-lg-5">
         <ul class="lead">
           <li>have a green card or a visa but aren’t US citizens, or</li>
           <li>who are undocumented.</li>
