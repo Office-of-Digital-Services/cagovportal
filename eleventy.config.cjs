@@ -4,6 +4,7 @@ const { parse } = require("csv-parse/sync");
 const MarkdownIt = require("markdown-it");
 const postcss = require("postcss");
 const postcssNested = require("postcss-nested");
+const postcssMediaMinmax = require("postcss-media-minmax");
 const { DateTime } = require("luxon");
 const fs = require("node:fs");
 const path = require("node:path");
@@ -213,10 +214,20 @@ module.exports = function (/** @type {EleventyConfig} **/ eleventyConfig) {
     }
   );
 
+  // Plugins run in array order: flatten nesting first, then rewrite
+  // any media queries that nesting hoisted to the top level.
+  const flattenPlugins = [postcssNested, postcssMediaMinmax];
+
   eleventyConfig.addFilter("flattenCSS", async (/** @type {string} */ code) => {
-    const result = await postcss([postcssNested]).process(code, {
+    const result = await postcss(flattenPlugins).process(code, {
       from: undefined
     });
+
+    // Surface problems instead of shipping silently-broken CSS
+    result.warnings().forEach(warn => {
+      console.warn(`[flattenCSS] ${warn.toString()}`);
+    });
+
     return result.css;
   });
 

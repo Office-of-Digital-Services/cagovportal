@@ -210,8 +210,8 @@ main {
     background: #177f99;
     background: radial-gradient(
       circle at 75% 50%,
-      rgba(23, 127, 153, 1) 0%,
-      rgba(3, 83, 118, 1) 80%
+      rgb(23 127 153) 0%,
+      rgb(3 83 118) 80%
     );
     display: block;
     position: relative;
