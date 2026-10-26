@@ -40,6 +40,7 @@
     "markdown-it": "^14.1.0",
     "node-fetch": "^3.3.2",
     "postcss": "^8.5.12",
+    "postcss-media-minmax": "^5.0.0",
     "postcss-nested": "^7.0.2",
     "terser": "^5.45.0",
     "xml2js": "^0.6.2"

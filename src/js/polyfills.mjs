@@ -74,9 +74,7 @@ window.addEventListener("DOMContentLoaded", () => {
           ? serverPrefix + fileName
           : img.src.replace(/\.webp$/i, fallbackExt);
 
-        if (img.src !== newSrc) {
-          img.src = newSrc;
-        }
+        if (img.src !== newSrc) img.src = newSrc;
       });
 
       console.log("POLYFILL: Using fallback images instead of WEBP");
