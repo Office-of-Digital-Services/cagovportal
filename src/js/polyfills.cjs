@@ -20,8 +20,8 @@
  *
  * On browsers without CSS nesting support, every matching <link> is
  * swapped to its fallback URL. Links without the attribute are ignored,
- * so this is opt-in. Generate both hrefs from one version value (see the
- * `cssLink` shortcode) — the cache-bust params drift if hand-edited.
+ * so this is opt-in. Both URLs carry their own cache-bust param — keep
+ * them in sync when bumping the version.
  *
  * The fallback build comes from the `flattenCSS` filter: postcss-nested
  * flattens nested rules, postcss-media-minmax rewrites media query range
@@ -38,23 +38,20 @@
  *
  * SYNTAX FLOOR: ES2015 (Safari 10+). A parse error kills the entire
  * fallback, so don't exceed the oldest browser in the support matrix.
+ * In particular, no optional chaining (`?.`) — that's ES2020 and fails
+ * to parse on Safari 13.0 and below, which still reach this code path.
  *
  * No onerror handler — link error events don't fire reliably on Safari
  * 15.6 and below. A bad path shows as a 404 in the network tab instead.
  */
-(function () {
-  if (window.CSS && CSS.supports && CSS.supports("selector(&)")) return;
 
-  const links = /** @type {NodeListOf<HTMLLinkElement>} */ (
+if (!(window.CSS && CSS.supports && CSS.supports("selector(&)")))
+  /** @type {NodeListOf<HTMLLinkElement>} */ (
     document.querySelectorAll("link[rel='stylesheet'][data-fallback-href]")
-  );
-
-  for (const link of links) {
+  ).forEach(link => {
     const fallback = link.dataset.fallbackHref;
-    if (!fallback) continue;
-    link.href = fallback;
-  }
-})();
+    if (fallback) link.href = fallback;
+  });
 
 window.addEventListener("DOMContentLoaded", () => {
   /** @type {NodeListOf<HTMLImageElement>} */
