@@ -11,79 +11,47 @@
 /**
  * Legacy CSS fallback swap.
  *
- * USAGE:
  * Add `data-fallback-href` to any stylesheet <link> that has a
- * legacy-compatible alternate build. The attribute value is the URL of
- * that alternate file, including its own cache-busting query param:
+ * legacy-compatible alternate build:
  *
  *   <link rel="stylesheet"
  *         href="/css/cagov-custom.min.css?vNov26"
  *         data-fallback-href="/css/cagov-custom.flat.css?vNov26" />
  *
- * On browsers without CSS nesting support, every matching <link> has its
- * href swapped to the fallback URL before first paint. Links without the
- * attribute are ignored, so this is opt-in and safe to add incrementally.
- * Multiple stylesheets may each declare their own fallback.
+ * On browsers without CSS nesting support, every matching <link> is
+ * swapped to its fallback URL. Links without the attribute are ignored,
+ * so this is opt-in. Both URLs carry their own cache-bust param — keep
+ * them in sync when bumping the version.
  *
- * Both URLs carry independent cache-busting params, so they can drift
- * apart if edited by hand. Generate the tag from a shared version value
- * (see the `cssLink` Eleventy shortcode) rather than maintaining both.
+ * The fallback build comes from the `flattenCSS` filter: postcss-nested
+ * flattens nested rules, postcss-media-minmax rewrites media query range
+ * syntax to min-width/max-width.
  *
- * The fallback build is produced at build time by the `flattenCSS`
- * filter: postcss-nested flattens nested rules, postcss-media-minmax
- * rewrites modern media query range syntax to min-width/max-width form.
+ * MUST RUN INLINE IN <head>, immediately after the link tag. On
+ * DOMContentLoaded the modern stylesheet has already painted, so the swap
+ * causes a visible reflow — worst on the old hardware this exists to
+ * serve. An external script would reintroduce the same delay.
  *
- * WHY THIS RUNS INLINE IN <head> AND NOT ON DOMContentLoaded:
- * DOMContentLoaded fires only after the full document is parsed — by
- * which time the modern stylesheet has already loaded, applied, and
- * painted. Swapping the href at that point produces a visible flash of
- * broken layout followed by a reflow, which is worst on exactly the
- * old hardware this fallback exists to serve (iPhone 6s-era devices
- * stuck on iOS 15). Running parser-blocking in <head>, immediately
- * after the link tag, means the swap happens before first paint.
+ * ONE CHECK IS ENOUGH: nesting is the binding constraint. Range syntax
+ * shipped earlier in every engine, so nesting support implies range
+ * support. Revisit if a later-baseline feature is adopted (e.g. @scope).
  *
- * Must stay inline (not an external file): an external script would be
- * a separate network round trip, reintroducing the paint delay.
+ * SYNTAX FLOOR: ES2015 (Safari 10+). A parse error kills the entire
+ * fallback, so don't exceed the oldest browser in the support matrix.
+ * In particular, no optional chaining (`?.`) — that's ES2020 and fails
+ * to parse on Safari 13.0 and below, which still reach this code path.
  *
- * WHY AN IIFE: keeps `links`, `original`, etc. out of the global scope.
- * Inline <head> scripts share the global namespace with everything else
- * on the page, so an unwrapped `const links` risks collision.
- *
- * WHY ONE CHECK: CSS nesting is the binding constraint for our flattened
- * bundle. Media query range syntax shipped earlier in every engine, so
- * any browser supporting nesting also supports range. If a CSS feature
- * with a later baseline is adopted (e.g. @scope), revisit this.
- *
- * SYNTAX FLOOR: ES2015. Safari 10+ parses this fine, which covers every
- * browser in our support matrix. Note the inline script is all-or-nothing
- * — a parse error anywhere kills the whole fallback, so avoid syntax
- * newer than the oldest browser we intend to serve.
+ * No onerror handler — link error events don't fire reliably on Safari
+ * 15.6 and below. A bad path shows as a 404 in the network tab instead.
  */
-(function () {
-  if (window.CSS && CSS.supports && CSS.supports("selector(&)")) return;
 
-  const links = /** @type {NodeListOf<HTMLLinkElement>} */ (
+if (!(window.CSS && CSS.supports && CSS.supports("selector(&)")))
+  /** @type {NodeListOf<HTMLLinkElement>} */ (
     document.querySelectorAll("link[rel='stylesheet'][data-fallback-href]")
-  );
-
-  for (const link of links) {
+  ).forEach(link => {
     const fallback = link.dataset.fallbackHref;
-    if (!fallback) continue;
-
-    // Note: link.href returns the resolved absolute URL, not the literal
-    // attribute value. Fine for restoring — same file either way.
-    const original = link.href;
-
-    // If the fallback file is missing (bad deploy, cache mismatch),
-    // restore the original rather than leaving the page unstyled.
-    link.onerror = function () {
-      link.onerror = null;
-      link.href = original;
-    };
-
-    link.href = fallback;
-  }
-})();
+    if (fallback) link.href = fallback;
+  });
 
 window.addEventListener("DOMContentLoaded", () => {
   /** @type {NodeListOf<HTMLImageElement>} */
