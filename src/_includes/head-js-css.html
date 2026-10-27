@@ -12,7 +12,10 @@
   type="font/woff2"
   crossorigin />
 
-<link rel="stylesheet" href="/css/cagov-custom.min.css?vOct26" />
+<link
+  rel="stylesheet"
+  href="/css/cagov-custom.min.css?vOct26"
+  data-fallback-href="/css/cagov-custom.flat.css" />
 <script src="/js/cagov-custom.min.js?vOct26" type="module" defer></script>
 {%- if data_agency %}
 <script src="/js/data_agency.min.js?dv{% DateHex %}"></script>
@@ -66,4 +69,5 @@
 <script defer src="https://alert.cdt.ca.gov" crossorigin="anonymous"></script>
 {% endif -%} {%- if homepage %}
 <!-- Home Page -->
-{% include "home-header.html" -%} {%- endif -%}
+{% include "home-header.html" -%} {%- endif -%} {%- inlineScript
+"src/js/polyfills.cjs" %}
