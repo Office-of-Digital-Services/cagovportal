@@ -27,10 +27,10 @@ homepage: true
               name="q"
               placeholder="Search CA.gov"
               aria-labelledby="ServiceSearch"
-              class="height-50 rounded-4 border-0 flex-grow-1 p-l webkit-appearance-none" />
+              class="height-50 rounded-start border-0 flex-grow-1 p-l webkit-appearance-none outline-offset-4" />
             <button
               type="submit"
-              class="border-0 rounded-4 bg-white bg-gray-50-hover right-sm pos-rel width-50 webkit-appearance-none p-x-0">
+              class="border-0 rounded-end bg-white bg-gray-50-hover pos-rel width-50 webkit-appearance-none p-x-0 outline-offset-4">
               <span
                 class="ca-gov-icon-search font-size-25 gray-900"
                 aria-hidden="true"></span>
@@ -38,14 +38,38 @@ homepage: true
             </button>
           </div>
         </form>
+        <div
+          class="card bg-transparent text-white border border-white rounded-3 mt-4">
+          <div class="card-body">
+            <div class="d-flex align-items-center flex-wrap gap-3">
+              <span
+                class="align-self-center text-nowrap overflow-hidden text-center border border-white d-flex width-60 justify-content-center">
+                Beta
+              </span>
+              <h3 class="h4 m-y-sm flex-grow-0 flex-shrink-0 text-nowrap mb-0">
+                Try our new service finder!
+              </h3>
+            </div>
+            <p class="m-b m-t">
+              Finding the right service can be tough. Get a list of services
+              tailored to your needs.
+            </p>
+            <a
+              class="btn btn-outline-primary p-x-md btn-outline-light rounded"
+              href="/servicefinder/">
+              Get started
+              <span class="sr-only">with link related to card title</span>
+            </a>
+          </div>
+        </div>
       </div>
       <div class="col-lg-6 m-0 p-0 my-auto">
         <img
           class="img-fluid d-none d-lg-block"
           loading="lazy"
-          src="/images/main-banner.svg"
+          src="/images/banner-fall.svg"
           style="aspect-ratio:604/440"
-          alt="A California beach at sunset showing rock formations on the sand." />
+          alt="Autumn leaves in the Eastern Sierra near Mammoth California." />
       </div>
     </div>
   </div>

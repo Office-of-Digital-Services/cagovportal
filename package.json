@@ -7,6 +7,7 @@
   },
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
+    "prebuild": "node src/scripts/update_service_finder_data.mjs",
     "build": "npx @11ty/eleventy",
     "update_webp": "node src/scripts/update_webp.cjs"
   },
@@ -18,6 +19,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@airtable/blocks": "^1.19.0",
     "eslint": "8.56.0",
     "eslint-plugin-jsdoc": "^48.2.0",
     "prettier": "^3.8.0",
@@ -33,9 +35,12 @@
     "@cagovweb/state-template": "^6.6.0",
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "babel-plugin-transform-imports": "^2.0.0",
-    "csv-parse": "^5.6.0",
+    "csv-parse": "^7.0.3",
+    "dotenv": "^17.4.2",
     "markdown-it": "^14.1.0",
+    "node-fetch": "^3.3.2",
     "postcss": "^8.5.12",
+    "postcss-media-minmax": "^5.0.0",
     "postcss-nested": "^7.0.2",
     "terser": "^5.45.0",
     "xml2js": "^0.6.2"

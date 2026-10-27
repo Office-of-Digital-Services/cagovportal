@@ -1,0 +1,128 @@
+[
+  {
+    "id": "recrqDJhmDQT2BN1y",
+    "name": "Health and wellness",
+    "caption": "Medical care and insurance, mental health, maternal health",
+    "category": [
+      "recVvUqqN0Vmf5aNB"
+    ],
+    "topicId": 6
+  },
+  {
+    "id": "recbGUfDXfAb4yInQ",
+    "name": "Safety and emergencies",
+    "caption": "Public safety, disaster services, inmate locator, and more",
+    "category": [
+      "recVvUqqN0Vmf5aNB"
+    ],
+    "topicId": 7
+  },
+  {
+    "id": "rec35JBw9PtVDTtot",
+    "name": "State info and laws",
+    "caption": "Look up representatives, bills, or laws, get data... ",
+    "category": [
+      "recUSOaBeZVfWmrV3"
+    ],
+    "topicId": 11
+  },
+  {
+    "id": "recCYHIOQswAmLQ1x",
+    "name": "Travel and recreation",
+    "caption": "State parks, reserve campsites, museums, fishing license",
+    "category": [
+      "recUSOaBeZVfWmrV3"
+    ],
+    "topicId": 12
+  },
+  {
+    "id": "recNXgNM0bmCLtIkI",
+    "name": "Environment",
+    "caption": "Environmental safety, conservation, climate...",
+    "category": [
+      "recUSOaBeZVfWmrV3"
+    ],
+    "topicId": 13
+  },
+  {
+    "id": "rec34ujJyyifeZSpT",
+    "name": "Immigration",
+    "caption": "Community services, citizenship, ESL classes, DACA...",
+    "category": [
+      "recUSOaBeZVfWmrV3"
+    ],
+    "topicId": 14
+  },
+  {
+    "id": "recA55STHXuT2Fxai",
+    "name": "Assistance and social programs",
+    "caption": "Food, medical, housing, and other programs",
+    "category": [
+      "recBK0ieAUxs5PzKV"
+    ],
+    "topicId": 1
+  },
+  {
+    "id": "rec30Uu7p6AdO2xLS",
+    "name": "Education",
+    "caption": "Financial aid, high school diploma, adult ed, and more",
+    "category": [
+      "recBK0ieAUxs5PzKV"
+    ],
+    "topicId": 2
+  },
+  {
+    "id": "recvZakmU2N3lL3be",
+    "name": "Personal records",
+    "caption": "Birth and other certificates, REAL ID, remove your data, etc",
+    "category": [
+      "recBK0ieAUxs5PzKV"
+    ],
+    "topicId": 3
+  },
+  {
+    "id": "recfqC9xQalQ7031D",
+    "name": "Housing and real estate",
+    "caption": "Verify contractors and realtors, loans, find appraisers...",
+    "category": [
+      "recBK0ieAUxs5PzKV"
+    ],
+    "topicId": 4
+  },
+  {
+    "id": "recld9zeX8KTrozV9",
+    "name": "DMV/auto",
+    "caption": "Renew driver’s license or vehicle registration, pay tickets...",
+    "category": [
+      "recBK0ieAUxs5PzKV"
+    ],
+    "topicId": 5
+  },
+  {
+    "id": "recVTdGk7HQeQ1HGR",
+    "name": "Businesses",
+    "caption": "Licensing, permitting, verification, incentives, taxes",
+    "category": [
+      "recbQLIC0tt2xFqwT"
+    ],
+    "topicId": 8
+  },
+  {
+    "id": "reccIDisWUG9PY39f",
+    "name": "Jobs and unemployment",
+    "caption": "Look for jobs, unemployment, disability, job training...",
+    "category": [
+      "recbQLIC0tt2xFqwT"
+    ],
+    "topicId": 9
+  },
+  {
+    "id": "recFQ48QX9uLxT9vk",
+    "name": "Taxes",
+    "caption": "File taxes, refunds, tax credits, pay taxes...",
+    "category": [
+      "recbQLIC0tt2xFqwT"
+    ],
+    "topicId": 10
+  }
+]
