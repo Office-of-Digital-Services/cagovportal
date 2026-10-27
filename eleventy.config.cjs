@@ -265,7 +265,10 @@ module.exports = function (/** @type {EleventyConfig} **/ eleventyConfig) {
       console.warn(`[flattenCSS] ${warn.toString()}`);
     });
 
-    return result.css;
+    // Temporary fix for leftover nested selectors because of incorrectly leading with "&" with no parent selector
+    //TODO: Remove with next State Template Release
+    //https://github.com/Office-of-Digital-Services/California-State-Web-Template-Development/pull/291
+    return result.css.replace(/\n& /g, "");
   });
 
   // Custom filter to format date as MM/DD/YYYY
