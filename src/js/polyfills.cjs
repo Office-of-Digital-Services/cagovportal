@@ -8,21 +8,52 @@
 // webp polyfill server can be specified with a meta tag:
 // <meta name="webp-polyfill-server" content="https://example.com/images/" />
 
+/**
+ * Legacy CSS fallback swap.
+ *
+ * Add `data-fallback-href` to any stylesheet <link> that has a
+ * legacy-compatible alternate build:
+ *
+ *   <link rel="stylesheet"
+ *         href="/css/cagov-custom.min.css?vNov26"
+ *         data-fallback-href="/css/cagov-custom.flat.css?vNov26" />
+ *
+ * On browsers without CSS nesting support, every matching <link> is
+ * swapped to its fallback URL. Links without the attribute are ignored,
+ * so this is opt-in. Both URLs carry their own cache-bust param — keep
+ * them in sync when bumping the version.
+ *
+ * The fallback build comes from the `flattenCSS` filter: postcss-nested
+ * flattens nested rules, postcss-media-minmax rewrites media query range
+ * syntax to min-width/max-width.
+ *
+ * MUST RUN INLINE IN <head>, immediately after the link tag. On
+ * DOMContentLoaded the modern stylesheet has already painted, so the swap
+ * causes a visible reflow — worst on the old hardware this exists to
+ * serve. An external script would reintroduce the same delay.
+ *
+ * ONE CHECK IS ENOUGH: nesting is the binding constraint. Range syntax
+ * shipped earlier in every engine, so nesting support implies range
+ * support. Revisit if a later-baseline feature is adopted (e.g. @scope).
+ *
+ * SYNTAX FLOOR: ES2015 (Safari 10+). A parse error kills the entire
+ * fallback, so don't exceed the oldest browser in the support matrix.
+ * In particular, no optional chaining (`?.`) — that's ES2020 and fails
+ * to parse on Safari 13.0 and below, which still reach this code path.
+ *
+ * No onerror handler — link error events don't fire reliably on Safari
+ * 15.6 and below. A bad path shows as a 404 in the network tab instead.
+ */
+
+if (!(window.CSS && CSS.supports && CSS.supports("selector(&)")))
+  /** @type {NodeListOf<HTMLLinkElement>} */ (
+    document.querySelectorAll("link[rel='stylesheet'][data-fallback-href]")
+  ).forEach(link => {
+    const fallback = link.dataset.fallbackHref;
+    if (fallback) link.href = fallback;
+  });
+
 window.addEventListener("DOMContentLoaded", () => {
-  //POLYFILL for CSS nesting
-  if (!CSS.supports("selector(&)")) {
-    // CSS Nesting not supported. Load alternative CSS file
-    const links = document.querySelectorAll("link[rel='stylesheet']");
-    const link = Array.prototype.find.call(links, l =>
-      l.href.includes("/css/cagov-custom.")
-    );
-
-    if (link) {
-      link.href = link.href.replace("min", "flat");
-      console.log("POLYFILL: Using FLAT CSS instead of Nested");
-    }
-  }
-
   /** @type {NodeListOf<HTMLImageElement>} */
   const webpImages = document.querySelectorAll('img[src*=".webp" i]');
   if (!webpImages.length) return;
