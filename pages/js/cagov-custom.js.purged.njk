@@ -4,8 +4,10 @@ permalink: "js/cagov-custom.min.js"
 eleventyExcludeFromCollections: true
 ---
 
-
 {%- set js -%}
-{%- include "../../node_modules/@cagovweb/state-template/dist/js/cagov.core.min.js" ignore missing -%}
+{%- include "../../src/js/index.cjs" -%}
+{%- include "../../src/js/cagov-feedback.cjs" -%}
+{%- include "../../src/js/googletranslate.cjs" -%}
+{%- include "../../node_modules/@cagovweb/state-template/dist/js/cagov.core.min.js" -%}
 {%- endset -%}
 {{- js | purgeJS | safe -}}
