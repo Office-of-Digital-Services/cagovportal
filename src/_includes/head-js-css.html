@@ -12,9 +12,11 @@
   type="font/woff2"
   crossorigin />
 
-<link rel="stylesheet" href="/css/cagov-custom.min.css?vNov26" />
-<script src="/js/cagov-custom.min.js?vjan26a" defer></script>
-<script src="/js/custom.min.js?vjan26a" type="module" defer></script>
+<link
+  rel="stylesheet"
+  href="/css/cagov-custom.min.css?vOct26"
+  data-fallback-href="/css/cagov-custom.flat.css?vOct26" />
+<script src="/js/cagov-custom.min.js?vOct26" type="module" defer></script>
 {%- if data_agency %}
 <script src="/js/data_agency.min.js?dv{% DateHex %}"></script>
 {% endif -%} {%- if data_service %}
@@ -62,9 +64,11 @@
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <!-- Google analytics -->
-{% include "analytics.html" -%} {%- if not hidestatewidealert %}
+{% inlineScript "src/js/analytics.cjs" %}
+<!-- Polyfills -->
+{% inlineScript "src/js/polyfills.cjs" %}
 <!-- Statewide Alerts Server -->
 <script defer src="https://dev.alert.cdt.ca.gov" crossorigin="anonymous"></script>
-{% endif -%} {%- if homepage %}
+{%- if homepage %}
 <!-- Home Page -->
 {% include "home-header.html" -%} {%- endif -%}
