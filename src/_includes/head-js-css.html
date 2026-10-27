@@ -64,10 +64,11 @@
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <!-- Google analytics -->
-{% include "analytics.html" -%} {%- if not hidestatewidealert %}
+{% inlineScript "src/js/analytics.cjs" %}
+<!-- Polyfills -->
+{% inlineScript "src/js/polyfills.cjs" %}
 <!-- Statewide Alerts Server -->
 <script defer src="https://alert.cdt.ca.gov" crossorigin="anonymous"></script>
-{% endif -%} {%- if homepage %}
+{%- if homepage %}
 <!-- Home Page -->
-{% include "home-header.html" -%} {%- endif -%} {%- inlineScript
-"src/js/polyfills.cjs" %}
+{% include "home-header.html" -%} {%- endif -%}
