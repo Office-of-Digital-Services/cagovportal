@@ -1,5 +1,14 @@
 [
   {
+    "id": "recmtIwpaNKOKNdTv",
+    "serviceId": 1101,
+    "shortDescription": "Get free help at your local library to become a U.S. citizen. Find study materials, forms, and English classes with a library card.",
+    "subtopics": [
+      "recqFLjRgLSfrhvuD",
+      "rec7WfLvbg9L2RMkK"
+    ]
+  },
+  {
     "id": "recE3HX5qnOn7t3UY",
     "serviceId": 1317,
     "subtopics": [
@@ -223,6 +232,10 @@
     ]
   },
   {
+    "id": "recBS6W5tWnveAidq",
+    "serviceId": 1327
+  },
+  {
     "id": "recAWeOGMeI6S1Vta",
     "serviceId": 1310,
     "shortDescription": "Get housing and financial help if your family is in the child welfare system and homeless or at risk. Stable housing can help you reunite or stay together.",
@@ -395,6 +408,10 @@
     ]
   },
   {
+    "id": "recO817gPhc0Xj7S1",
+    "serviceId": 1328
+  },
+  {
     "id": "recL0hFfE12ouMdmC",
     "serviceId": 1298,
     "shortDescription": "Get free home visits for new parents. You can receive professional support, parenting help, and resources to help overburdened families.",
@@ -428,6 +445,10 @@
       "recSDMVjT5Cuh64EL",
       "recmyJGKYHWJoiXCU"
     ]
+  },
+  {
+    "id": "recTZqB0cNQQ10tTZ",
+    "serviceId": 1329
   },
   {
     "id": "recWgonCvUe4Rl33v",
@@ -1231,6 +1252,10 @@
     ]
   },
   {
+    "id": "reccVltckAGea5kz0",
+    "serviceId": 1331
+  },
+  {
     "id": "recH05EWLs6anBkrF",
     "serviceId": 1299,
     "shortDescription": "Get low-cost genetic screening for newborns and pregnant women. You can get tested for genetic conditions and inherited disorders.",
@@ -1434,6 +1459,10 @@
       "recXDT4zX0J5jfCrQ",
       "recR3dLWBEekAS2zb"
     ]
+  },
+  {
+    "id": "recqMTRVpVYIrFReP",
+    "serviceId": 1330
   },
   {
     "id": "rec89o4IEoQReDMAl",
@@ -1744,15 +1773,6 @@
     "subtopics": [
       "rec1HuYfRPvHsqBZE",
       "recdLKNsNaj0itkgy"
-    ]
-  },
-  {
-    "id": "recmtIwpaNKOKNdTv",
-    "serviceId": 1101,
-    "shortDescription": "Get free help at your local library to become a U.S. citizen. Find study materials, forms, and English classes with a library card.",
-    "subtopics": [
-      "recqFLjRgLSfrhvuD",
-      "rec7WfLvbg9L2RMkK"
     ]
   },
   {
@@ -2147,6 +2167,10 @@
     "subtopics": [
       "recI4OPhX5Oya75H4"
     ]
+  },
+  {
+    "id": "rect61veavqf7nleD",
+    "serviceId": 1332
   },
   {
     "id": "rec3oxdRuh0SruHDY",
