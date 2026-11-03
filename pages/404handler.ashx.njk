@@ -3,4 +3,5 @@ layout: null
 permalink: 404handler.ashx
 eleventyExcludeFromCollections: true
 ---
+<%@ WebHandler Language="C#" Class="custom404handler" %>
 {% include "../src/csharp/404handler.ashx.cs" %}

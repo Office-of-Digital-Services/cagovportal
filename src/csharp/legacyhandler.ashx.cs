@@ -1,10 +1,3 @@
----
-layout: null
-permalink: legacyhandler.ashx
-eleventyExcludeFromCollections: true
----
-<%@ WebHandler Language="C#" Class="ItemRedirectHandler" %>
-
 using System;
 using System.Web;
 

@@ -1,5 +1,3 @@
-<%@ WebHandler Language="C#" Class="custom404handler" %>
-
 /*
  * 404handler.ashx
  * 
