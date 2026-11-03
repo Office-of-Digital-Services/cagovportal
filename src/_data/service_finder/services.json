@@ -1,5 +1,13 @@
 [
   {
+    "id": "recmSKCFtVjJThisv",
+    "serviceId": 1175,
+    "shortDescription": "COVID-19 Rent Relief closed on March 31, 2022. You can still log in to check status if needed. ",
+    "subtopics": [
+      "recfBbv9sdekv8y2I"
+    ]
+  },
+  {
     "id": "recmtIwpaNKOKNdTv",
     "serviceId": 1101,
     "shortDescription": "Get free help at your local library to become a U.S. citizen. Find study materials, forms, and English classes with a library card.",
@@ -275,14 +283,6 @@
     "shortDescription": "Check if your truck meets California emissions standards. Find out if your commercial vehicle complies with clean truck regulations.",
     "subtopics": [
       "recZuM5IqavviGsEC"
-    ]
-  },
-  {
-    "id": "recmSKCFtVjJThisv",
-    "serviceId": 1175,
-    "shortDescription": "COVID-19 Rent Relief closed on March 31, 2022. You can still log in to check status if needed. ",
-    "subtopics": [
-      "recfBbv9sdekv8y2I"
     ]
   },
   {
