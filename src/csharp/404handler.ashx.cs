@@ -114,6 +114,23 @@ public class custom404handler : IHttpHandler {
             }
         }
 
+        //New Rule, if the link matches the following patters, make this a 410 result
+        //https://www.ca.gov/departments/{number}/
+        //https://www.ca.gov/departments/{number}/services/{number}/
+        if (Regex.IsMatch(rawUrl, @"^(https?://[^/]+)?/departments/\d+/?(services/\d+/?)?(\?.*)?$", RegexOptions.IgnoreCase)) {
+            context.Response.StatusCode = 410;
+            context.Response.StatusDescription = "Gone";
+            context.Response.ContentType = "text/html";
+
+            // Cache for 60 days (adjust as needed)
+            context.Response.AppendHeader("Cache-Control", "public, max-age=5184000");
+            context.Response.AppendHeader("Expires", DateTime.UtcNow.AddDays(60).ToString("R"));
+
+            context.Response.AddHeader("X-Status-Message", "410 gone response issued for: " + rawUrl);
+            context.Response.Write(File.ReadAllText(context.Server.MapPath(GonePagePath)));
+            return;
+        }
+
         // Default 404
         context.Response.StatusCode = 404;
         context.Response.StatusDescription = "Not Found";
