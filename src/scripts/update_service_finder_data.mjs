@@ -23,6 +23,7 @@ const outputBasePath = "src/_data/service_finder";
  * @property {string[]} fields
  * @property {string[]} sort
  * @property {{[key: string]: string}} fieldMapping
+ * @property {string} [filterByFormula]
  */
 
 /** @type {TableConfig[]} */
@@ -68,7 +69,8 @@ const TABLES = [
       serviceId: "fldTefBeQ2PJgm4N4",
       shortDescription: "fldHdf0nl9lOefgQX",
       subtopics: "fld1vrzODVrv4Ah05"
-    }
+    },
+    filterByFormula: "NOT({fldUE83DR6inhTAbn} = '')"
   }
 ];
 
@@ -95,6 +97,9 @@ async function fetchAllRecords(tableConfig, apiKey) {
     const url = new URL(`${baseUrl}/${tableConfig.tableId}`);
 
     url.searchParams.set("returnFieldsByFieldId", "true");
+
+    if (tableConfig.filterByFormula)
+      url.searchParams.set("filterByFormula", tableConfig.filterByFormula);
 
     // Add field filters if provided
     tableConfig.fields.forEach(f => {
