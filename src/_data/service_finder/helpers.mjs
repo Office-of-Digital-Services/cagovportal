@@ -60,9 +60,8 @@ export default {
             s => s.ServiceId === serviceId
           );
 
-          if (sepService) {
+          if (sepService)
             sepService.shortDescription = service.shortDescription ?? "";
-          }
 
           return sepService;
         })
