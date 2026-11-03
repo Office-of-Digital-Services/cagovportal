@@ -1,8 +1,3 @@
----
-layout: null
-permalink: 404handler.ashx
-eleventyExcludeFromCollections: true
----
 <%@ WebHandler Language="C#" Class="custom404handler" %>
 
 /*
