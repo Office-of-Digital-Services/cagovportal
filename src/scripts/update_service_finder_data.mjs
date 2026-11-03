@@ -70,7 +70,7 @@ const TABLES = [
       shortDescription: "fldHdf0nl9lOefgQX",
       subtopics: "fld1vrzODVrv4Ah05"
     },
-    filterByFormula: "NOT({fldUE83DR6inhTAbn} = '')"
+    filterByFormula: "NOT({fldUE83DR6inhTAbn} = '')" // Only include records where the Service Name is not empty
   }
 ];
 
