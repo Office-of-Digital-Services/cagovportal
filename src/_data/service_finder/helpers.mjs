@@ -4,6 +4,7 @@
  * @typedef {object} ServiceFinderService
  * @property {number} serviceId
  * @property {string[]} [subtopics]
+ * @property {string} [shortDescription]
  */
 
 /**
@@ -15,6 +16,7 @@
 /**
  * @typedef {object} SepService
  * @property {number} ServiceId
+ * @property {string} shortDescription
  */
 
 /**
