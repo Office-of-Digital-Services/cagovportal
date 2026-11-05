@@ -93,7 +93,11 @@ if (!apiKey) {
   for (const table of tables) {
     console.info(`Fetching SEP ${table.name}`);
     const records = await fetchAllRecords(table, apiKey);
-    snapshots[table.name] = records.map(record => record.fields);
+    snapshots[table.name] = records.map(record =>
+      Object.fromEntries(
+        Object.entries(record.fields).sort(([a], [b]) => a.localeCompare(b))
+      )
+    );
   }
 
   // Validate the complete dataset before replacing any existing snapshots.
