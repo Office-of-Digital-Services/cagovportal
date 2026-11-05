@@ -1,5 +1,5 @@
 //@ts-check
-const { loadSepData } = require("../airTable/load_sep_data.cjs");
+const { loadSepData } = require("../airTable/load_data.cjs");
 const sepImagePath = "/images/sep/";
 
 const mainSiteBaseUrl = "https://www.ca.gov";

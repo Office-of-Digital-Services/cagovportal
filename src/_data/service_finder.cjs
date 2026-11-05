@@ -1,8 +1,6 @@
 //@ts-check
 
-const {
-  loadServiceFinderData
-} = require("../airTable/load_service_finder_data.cjs");
+const { loadServiceFinderData } = require("../airTable/load_data.cjs");
 
 module.exports = async function () {
   const { default: helpers } =

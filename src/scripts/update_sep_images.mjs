@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
-import sepData from "../airTable/load_sep_data.cjs";
+import sepData from "../airTable/load_data.cjs";
 
 const remoteImagesBaseUrl = "https://stateentityprofile.ca.gov/Uploads/";
 const imagesDirectory = fileURLToPath(

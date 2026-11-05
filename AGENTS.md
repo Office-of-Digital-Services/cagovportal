@@ -32,7 +32,7 @@
   services by field name into `src/airTable/data/service_finder_*.json`, with
   alphabetical JSON keys. Record IDs are retained for linked-table relationships.
 - `src/_data/service_finder.cjs` loads these snapshots once per Eleventy build
-  through `src/airTable/load_service_finder_data.cjs`, which preserves the
+  through `src/airTable/load_data.cjs`, which preserves the
   template-facing lowercase properties. The results helper lives in
   `src/airTable/service_finder_helpers.mjs`.
 - Without `AIRTABLE_API_KEY`, both sync scripts validate and use checked-in
@@ -44,10 +44,13 @@
   fields needed by templates, structured data, filtering, image processing, and
   relationship validation. Update these lists when adding field consumers;
   snapshots omit Airtable record metadata.
-- `state_entity.cjs` reads the snapshots through `src/airTable/load_sep_data.cjs`
+- `state_entity.cjs` reads the snapshots through `src/airTable/load_data.cjs`
   once per build, not through the SEP API. The loader normalizes omitted text
   fields and unchecked FAQ checkboxes, validates IDs and relationships, and
   restores AgencyName ordering independently of Airtable view order.
+- Both datasets share snapshot reading in `load_data.cjs`, with separate
+  normalizers for their schemas. Load only the requested dataset; do not cache
+  mutable normalized records across Eleventy builds.
 - Fetch or validation failures stop prebuild before replacing that sync's
   snapshots. Missing or invalid snapshots fail the build; there is no fallback
   to the SEP API.

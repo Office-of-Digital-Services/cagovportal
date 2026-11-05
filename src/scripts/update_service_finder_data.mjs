@@ -3,7 +3,7 @@
 import { fileURLToPath } from "node:url";
 import dotenv from "dotenv";
 import { fetchAllRecords, writeJson } from "./lib/airtable.mjs";
-import serviceFinderData from "../airTable/load_service_finder_data.cjs";
+import serviceFinderData from "../airTable/load_data.cjs";
 
 dotenv.config({ quiet: true });
 
