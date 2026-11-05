@@ -1,6 +1,7 @@
 //@ts-check
 
 import { fileURLToPath } from "node:url";
+import { readFile } from "node:fs/promises";
 import { fetchAllRecords, writeJson } from "./lib/airtable.mjs";
 import sepData from "../airTable/load_data.cjs";
 
@@ -10,71 +11,19 @@ const tables = [
     name: "departments",
     tableId: "tblp4lLpdJJ6ov9DR",
     view: "viwz0z4qokjvja8VU",
-    sort: ["AgencyName"],
-    fields: [
-      "AgencyId",
-      "AgencyName",
-      "FriendlyName",
-      "Acronym",
-      "Description",
-      "AgencyTags",
-      "Keywords",
-      "Updated",
-      "LogoUrl",
-      "WebsiteURL",
-      "ContactURL",
-      "ContactEmail",
-      "ContactPhone",
-      "ContactPhoneDigits",
-      "ContactPhoneDisplay",
-      "Facebook",
-      "TwitterAccount",
-      "YouTube",
-      "GooglePlayStoreUrl",
-      "AppleAppStoreUrl"
-    ]
+    sort: ["AgencyName"]
   },
   {
     name: "services",
     tableId: "tblZwLzCmz3ulSEII",
     view: "viwuyNtp20RQDOLAO",
-    sort: ["AgencyName", "ServiceName"],
-    fields: [
-      "ServiceId",
-      "AgencyId",
-      "AgencyName",
-      "FriendlyName",
-      "ServiceName",
-      "Description",
-      "ServiceType",
-      "ServiceUrl",
-      "ContactUrl",
-      "ContactPhone",
-      "ContactPhoneDigits",
-      "ContactPhoneDisplay",
-      "AgencyTags",
-      "Keywords",
-      "RelatedSearchTerms",
-      "Updated",
-      "SortOrder",
-      "ImageUrl",
-      "AltText"
-    ]
+    sort: ["AgencyName", "ServiceName"]
   },
   {
     name: "faqs",
     tableId: "tblUY0BdXSYNUCPVt",
     view: "viwSIT2P1rCRYcEW2",
-    sort: ["AgencyServiceId", "SortOrder"],
-    fields: [
-      "Id",
-      "AgencyServiceId",
-      "Question",
-      "Answer",
-      "Featured",
-      "SortOrder",
-      "Updated"
-    ]
+    sort: ["AgencyServiceId", "SortOrder"]
   }
 ];
 
@@ -85,7 +34,20 @@ export default async function updateSepData(apiKey) {
   await Promise.all(
     tables.map(async table => {
       console.info(`Fetching SEP ${table.name}`);
-      const records = await fetchAllRecords(table, apiKey);
+      // Use schema property names as Airtable fields so the field list has one source of truth.
+      const schema = JSON.parse(
+        await readFile(
+          new URL(
+            `../airTable/schemas/${table.name}.schema.json`,
+            import.meta.url
+          ),
+          "utf8"
+        )
+      );
+      const records = await fetchAllRecords(
+        { ...table, fields: Object.keys(schema.items.properties) },
+        apiKey
+      );
       snapshots[table.name] = records.map(record =>
         Object.fromEntries(
           Object.entries(record.fields).sort(([a], [b]) => a.localeCompare(b))
