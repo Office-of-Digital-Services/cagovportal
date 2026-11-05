@@ -123,38 +123,38 @@ function normalizeServiceFinderData(snapshots) {
   validateSnapshots(
     snapshots,
     {
-      categories: "categoryId",
-      topics: "topicId",
-      subtopics: "subtopicId",
-      services: "serviceId"
+      categories: "CategoryId",
+      topics: "TopicId",
+      subtopics: "SubtopicId",
+      services: "ServiceId"
     },
     "service_finder_"
   );
 
-  const categoryIds = new Set(snapshots.categories.map(row => row.categoryId));
-  const topicIds = new Set(snapshots.topics.map(row => row.topicId));
-  const subtopicIds = new Set(snapshots.subtopics.map(row => row.subtopicId));
+  const categoryIds = new Set(snapshots.categories.map(row => row.CategoryId));
+  const topicIds = new Set(snapshots.topics.map(row => row.TopicId));
+  const SubtopicIds = new Set(snapshots.subtopics.map(row => row.SubtopicId));
 
   for (const row of snapshots.topics) {
-    const categoryId = row.categoryId;
-    if (!categoryIds.has(categoryId))
+    const CategoryId = row.CategoryId;
+    if (!categoryIds.has(CategoryId))
       throw new Error(
-        `Service finder topic ${row.topicId} references missing categoryId ${categoryId}.`
+        `Service finder topic ${row.TopicId} references missing CategoryId ${CategoryId}.`
       );
   }
   for (const row of snapshots.subtopics) {
-    const topicId = row.topicId;
-    if (!topicIds.has(topicId))
+    const TopicId = row.TopicId;
+    if (!topicIds.has(TopicId))
       throw new Error(
-        `Service finder subtopic ${row.subtopicId} references missing topicId ${topicId}.`
+        `Service finder subtopic ${row.SubtopicId} references missing TopicId ${TopicId}.`
       );
   }
   for (const row of snapshots.services) {
-    const linkedSubtopicIds = /** @type {number[]} */ (row.subtopicIds ?? []);
-    for (const subtopicId of linkedSubtopicIds)
-      if (!subtopicIds.has(subtopicId))
+    const linkedSubtopicIds = /** @type {number[]} */ (row.SubtopicIds ?? []);
+    for (const SubtopicId of linkedSubtopicIds)
+      if (!SubtopicIds.has(SubtopicId))
         throw new Error(
-          `Service finder ${row.serviceId} references missing subtopicId ${subtopicId}.`
+          `Service finder ${row.ServiceId} references missing SubtopicId ${SubtopicId}.`
         );
   }
   return {

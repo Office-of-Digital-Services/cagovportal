@@ -39,13 +39,15 @@
   the `Topic ID` lookup directly. Services read the numeric `Subtopic IDs`
   lookup directly; no internal record-ID translation or storage is needed.
 - Each service finder topic must link to exactly one category, and each subtopic
-  to exactly one topic. Saved and template-facing `categoryId`/`topicId` are
+  to exactly one topic. Saved and template-facing `CategoryId`/`TopicId` are
   single numeric IDs. Missing, multiple, or invalid links
   fail sync/build rather than being silently accepted.
 - `src/_data/service_finder.cjs` loads these snapshots once per Eleventy build
   through `src/airTable/load_data.cjs`. Template-facing numeric ID fields use
-  `categoryId`, `topicId`, `subtopicId`, and `serviceId`; numeric ID lists use
-  `subtopicIds`. Service finder snapshots already use these final property names;
+  `CategoryId`, `TopicId`, `SubtopicId`, and `ServiceId`; numeric ID lists use
+  `SubtopicIds`. Service finder snapshots already use these final property names;
+  all saved service finder field names start with a capital letter, including
+  `Name`, `Caption`, and `ShortDescription`.
   Airtable field-name mappings live only in `update_service_finder_data.mjs`,
   whose API field lists are derived from that mapping. The loader validates
   without renaming fields. SEP snapshots retain Airtable field names.

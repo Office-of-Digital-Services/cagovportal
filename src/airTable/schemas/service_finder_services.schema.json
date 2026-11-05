@@ -6,11 +6,11 @@
   "items": {
     "type": "object",
     "additionalProperties": false,
-    "required": ["serviceId"],
+    "required": ["ServiceId"],
     "properties": {
-      "serviceId": { "type": "integer" },
-      "shortDescription": { "type": "string" },
-      "subtopicIds": {
+      "ServiceId": { "type": "integer" },
+      "ShortDescription": { "type": "string" },
+      "SubtopicIds": {
         "type": "array",
         "items": { "type": "integer" }
       }

@@ -64,20 +64,20 @@ layout: landing
       <ul class="list-unstyled">
         {%- for topic_category in service_finder.categories %}
         <li class="pb-2">
-          <h3 class="mb-5">{{topic_category.name}}</h3>
+          <h3 class="mb-5">{{topic_category.Name}}</h3>
           <ul class="list-unstyled">
             {% for topic in service_finder.topics %}
             <!---->
-            {% if topic.categoryId == topic_category.categoryId %}
+            {% if topic.CategoryId == topic_category.CategoryId %}
             <!---->
             <li
               class="p-y-sm brd-solid-1 brd-gray-200 rounded-10 p-x-md mb-4 pos-rel bg-gray-50-hover transition-0_3 transform-scale-1_05--hover carrot-right">
               <a
-                href="./topic/{{ topic.topicId }}/"
+                href="./topic/{{ topic.TopicId }}/"
                 class="no-underline link-before"
-                ><h4 class="h5 m-t-sm pt-2 mb-0">{{topic.name}}</h4></a
+                ><h4 class="h5 m-t-sm pt-2 mb-0">{{topic.Name}}</h4></a
               >
-              <p class="mb-3 mt-1">{{topic.caption}}</p>
+              <p class="mb-3 mt-1">{{topic.Caption}}</p>
             </li>
             {% endif %}
             <!---->

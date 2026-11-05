@@ -6,10 +6,10 @@
   "items": {
     "type": "object",
     "additionalProperties": false,
-    "required": ["categoryId", "name"],
+    "required": ["CategoryId", "Name"],
     "properties": {
-      "categoryId": { "type": "integer" },
-      "name": { "type": "string", "pattern": "\\S" }
+      "CategoryId": { "type": "integer" },
+      "Name": { "type": "string", "pattern": "\\S" }
     }
   }
 }

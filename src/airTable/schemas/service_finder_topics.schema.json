@@ -6,12 +6,12 @@
   "items": {
     "type": "object",
     "additionalProperties": false,
-    "required": ["topicId", "categoryId", "name", "caption"],
+    "required": ["TopicId", "CategoryId", "Name", "Caption"],
     "properties": {
-      "topicId": { "type": "integer" },
-      "categoryId": { "type": "integer" },
-      "name": { "type": "string", "pattern": "\\S" },
-      "caption": { "type": "string", "pattern": "\\S" }
+      "TopicId": { "type": "integer" },
+      "CategoryId": { "type": "integer" },
+      "Name": { "type": "string", "pattern": "\\S" },
+      "Caption": { "type": "string", "pattern": "\\S" }
     }
   }
 }
