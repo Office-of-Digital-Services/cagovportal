@@ -1,11 +1,8 @@
 //@ts-check
 
 import { fileURLToPath } from "node:url";
-import dotenv from "dotenv";
 import { fetchAllRecords, writeJson } from "./lib/airtable.mjs";
 import sepData from "../airTable/load_data.cjs";
-
-dotenv.config({ quiet: true });
 
 /** @type {import("./lib/airtable.mjs").TableConfig[]} */
 const tables = [
@@ -81,13 +78,8 @@ const tables = [
   }
 ];
 
-const apiKey = process.env.AIRTABLE_API_KEY;
-if (!apiKey) {
-  console.warn(
-    "AIRTABLE_API_KEY missing - using checked-in SEP Airtable snapshots."
-  );
-  sepData.loadSepData();
-} else {
+/** @param {string} apiKey */
+export default async function updateSepData(apiKey) {
   /** @type {Record<string, Record<string, unknown>[]>} */
   const snapshots = {};
   await Promise.all(

@@ -1,11 +1,8 @@
 //@ts-check
 
 import { fileURLToPath } from "node:url";
-import dotenv from "dotenv";
 import { fetchAllRecords, writeJson } from "./lib/airtable.mjs";
 import serviceFinderData from "../airTable/load_data.cjs";
-
-dotenv.config({ quiet: true });
 
 /** @type {(Omit<import("./lib/airtable.mjs").TableConfig, "fields"> & { fields: Record<string, string> })[]} */
 const tables = [
@@ -45,13 +42,8 @@ const tables = [
   }
 ];
 
-const apiKey = process.env.AIRTABLE_API_KEY;
-if (!apiKey) {
-  console.warn(
-    "AIRTABLE_API_KEY missing - using checked-in service finder Airtable snapshots."
-  );
-  serviceFinderData.loadServiceFinderData();
-} else {
+/** @param {string} apiKey */
+export default async function updateServiceFinderData(apiKey) {
   /** @type {Record<string, Record<string, unknown>[]>} */
   const snapshots = {};
   // Fetch tables concurrently and map Airtable field names to saved properties.

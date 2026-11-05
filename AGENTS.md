@@ -25,9 +25,10 @@
 ## Prebuild and external data
 
 - [src/scripts/prebuild.mjs](src/scripts/prebuild.mjs) is the prebuild entry
-  point. Data syncs in `dataScripts` run concurrently; subsequent tasks in
-  `scripts` run sequentially after both syncs succeed, in separate processes.
-  Paths are relative to the entry point; nonzero exits stop the build.
+  point. Data syncs in `AirtableDataScripts` run concurrently; subsequent tasks in
+  `otherScripts` run sequentially after both syncs succeed. Each module exports a
+  default async function; only `AirtableDataScripts` receive the API key.
+  Paths are relative to the entry point; rejected tasks stop the build.
 - Each sync fetches its tables with `Promise.all` before validation and writing.
   Pagination stays sequential within each table. Concurrent requests can hit
   Airtable's base-wide rate limit; the API helper retries a 429 once after 30
@@ -50,8 +51,11 @@
   without renaming fields. SEP snapshots retain Airtable field names.
   The results helper lives in
   `src/airTable/service_finder_helpers.mjs`.
-- Without `AIRTABLE_API_KEY`, both sync scripts validate and use checked-in
-  snapshots. Keep Airtable field names stable; no field-ID mapping is used.
+- Prebuild loads `.env` and checks `AIRTABLE_API_KEY` once. Without it, one
+  message skips both Airtable syncs and SEP image processing; Eleventy still
+  loads and validates checked-in snapshots. Task modules do not load `.env`,
+  check credentials, or execute on import; run them through `npm run prebuild`.
+  Keep Airtable field names stable; no field-ID mapping is used.
 - `update_sep_data.mjs` syncs SEP departments, services, and FAQs by field name
   from their configured default views into `src/airTable/data/`. Keep these
   snapshots checked in so builds work without an Airtable token.
