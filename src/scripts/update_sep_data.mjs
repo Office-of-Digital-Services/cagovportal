@@ -13,6 +13,7 @@ const tables = [
     name: "departments",
     tableId: "tblp4lLpdJJ6ov9DR",
     view: "viwz0z4qokjvja8VU",
+    sort: ["AgencyName"],
     fields: [
       "AgencyId",
       "AgencyName",
@@ -40,6 +41,7 @@ const tables = [
     name: "services",
     tableId: "tblZwLzCmz3ulSEII",
     view: "viwuyNtp20RQDOLAO",
+    sort: ["AgencyName", "ServiceName"],
     fields: [
       "ServiceId",
       "AgencyId",
