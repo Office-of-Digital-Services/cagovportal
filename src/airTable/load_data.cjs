@@ -124,37 +124,37 @@ function normalizeServiceFinderData(snapshots) {
     snapshots,
     {
       categories: "categoryID",
-      topics: "topicID",
-      subtopics: "subtopicID",
+      topics: "topicId",
+      subtopics: "subtopicId",
       services: "serviceID"
     },
     "service_finder_"
   );
 
   const categoryIds = new Set(snapshots.categories.map(row => row.categoryID));
-  const topicIds = new Set(snapshots.topics.map(row => row.topicID));
-  const subtopicIds = new Set(snapshots.subtopics.map(row => row.subtopicID));
+  const topicIds = new Set(snapshots.topics.map(row => row.topicId));
+  const subtopicIds = new Set(snapshots.subtopics.map(row => row.subtopicId));
 
   for (const row of snapshots.topics) {
     const categoryID = row.categoryID;
     if (!categoryIds.has(categoryID))
       throw new Error(
-        `Service finder topic ${row.topicID} references missing categoryID ${categoryID}.`
+        `Service finder topic ${row.topicId} references missing categoryID ${categoryID}.`
       );
   }
   for (const row of snapshots.subtopics) {
-    const topicID = row.topicID;
-    if (!topicIds.has(topicID))
+    const topicId = row.topicId;
+    if (!topicIds.has(topicId))
       throw new Error(
-        `Service finder subtopic ${row.subtopicID} references missing topicID ${topicID}.`
+        `Service finder subtopic ${row.subtopicId} references missing topicId ${topicId}.`
       );
   }
   for (const row of snapshots.services) {
-    const subtopicIDs = /** @type {number[]} */ (row.subtopicIDs ?? []);
-    for (const subtopicID of subtopicIDs)
-      if (!subtopicIds.has(subtopicID))
+    const linkedSubtopicIds = /** @type {number[]} */ (row.subtopicIds ?? []);
+    for (const subtopicId of linkedSubtopicIds)
+      if (!subtopicIds.has(subtopicId))
         throw new Error(
-          `Service finder ${row.serviceID} references missing subtopicID ${subtopicID}.`
+          `Service finder ${row.serviceID} references missing subtopicId ${subtopicId}.`
         );
   }
   return {

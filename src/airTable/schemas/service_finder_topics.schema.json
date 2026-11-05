@@ -6,9 +6,9 @@
   "items": {
     "type": "object",
     "additionalProperties": false,
-    "required": ["topicID", "categoryID", "name", "caption"],
+    "required": ["topicId", "categoryID", "name", "caption"],
     "properties": {
-      "topicID": { "type": "integer" },
+      "topicId": { "type": "integer" },
       "categoryID": { "type": "integer" },
       "name": { "type": "string", "pattern": "\\S" },
       "caption": { "type": "string", "pattern": "\\S" }

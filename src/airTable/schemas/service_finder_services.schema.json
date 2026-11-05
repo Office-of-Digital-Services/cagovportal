@@ -10,7 +10,7 @@
     "properties": {
       "serviceID": { "type": "integer" },
       "shortDescription": { "type": "string" },
-      "subtopicIDs": {
+      "subtopicIds": {
         "type": "array",
         "items": { "type": "integer" }
       }

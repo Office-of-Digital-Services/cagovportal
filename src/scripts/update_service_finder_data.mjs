@@ -16,7 +16,7 @@ const tables = [
     tableId: "tbl6JAo9evMInWiKC",
     name: "topics",
     fields: {
-      topicID: "Topic ID",
+      topicId: "Topic ID",
       categoryID: "Category ID",
       name: "Name",
       caption: "Caption"
@@ -26,7 +26,7 @@ const tables = [
   {
     tableId: "tblSOXHg0SEUMrnHv",
     name: "subtopics",
-    fields: { subtopicID: "Subtopic ID", name: "Name", topicID: "Topic ID" },
+    fields: { subtopicId: "Subtopic ID", name: "Name", topicId: "Topic ID" },
     sort: ["Topic", "Sort"]
   },
   {
@@ -35,7 +35,7 @@ const tables = [
     fields: {
       serviceID: "ServiceId",
       shortDescription: "Short description",
-      subtopicIDs: "Subtopic IDs"
+      subtopicIds: "Subtopic IDs"
     },
     sort: ["Service Name"],
     filterByFormula: "NOT({Service Name} = '')"
@@ -70,8 +70,8 @@ export default async function updateServiceFinderData(apiKey) {
 
   // Airtable lookups return arrays; require one parent before storing a scalar ID.
   for (const [table, field, key] of [
-    ["topics", "categoryID", "topicID"],
-    ["subtopics", "topicID", "subtopicID"]
+    ["topics", "categoryID", "topicId"],
+    ["subtopics", "topicId", "subtopicId"]
   ])
     for (const row of snapshots[table]) {
       const links = row[field];

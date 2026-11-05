@@ -11,7 +11,7 @@ pagination:
     size: 1
     alias: item
     addAllPagesToCollections : true
-permalink: "servicefinder/topic/{{ item.topicID }}/results/"
+permalink: "servicefinder/topic/{{ item.topicId }}/results/"
 eleventyComputed:
   description: "{{ item.caption | safe }}"
   title: "{{ item.name | safe }}"
@@ -80,7 +80,7 @@ state_entity) %}
 
     {%- for subtopic in dataset.subtopics %}
     <!---->
-    <section data-subtopic-id="{{ subtopic.subtopicID }}">
+    <section data-subtopic-id="{{ subtopic.subtopicId }}">
       <div class="row">
         <h2 class="mt-5 mb-3">{{ subtopic.name }}</h2>
 

@@ -3,7 +3,7 @@
 /**
  * @typedef {object} ServiceFinderService
  * @property {number} serviceID
- * @property {number[]} [subtopicIDs]
+ * @property {number[]} [subtopicIds]
  * @property {string} [shortDescription]
  */
 
@@ -26,14 +26,14 @@
 
 /**
  * @typedef {object} ServiceFinderSubtopic
- * @property {number} subtopicID
- * @property {number} topicID
+ * @property {number} subtopicId
+ * @property {number} topicId
  * @property {SepService[]} [sepServices]
  */
 
 /**
  * @typedef {object} ResultsItem
- * @property {number} topicID
+ * @property {number} topicId
  * @property {ServiceFinderSubtopic[]} [subtopics]
  */
 
@@ -48,12 +48,12 @@ export default {
    */
   getResultsDataset(item, serviceFinderData, stateEntity) {
     item.subtopics = serviceFinderData.subtopics?.filter(
-      subtopic => subtopic.topicID === item.topicID
+      subtopic => subtopic.topicId === item.topicId
     );
 
     item.subtopics?.forEach(subtopic => {
       subtopic.sepServices = serviceFinderData.services
-        ?.filter(service => service.subtopicIDs?.includes(subtopic.subtopicID))
+        ?.filter(service => service.subtopicIds?.includes(subtopic.subtopicId))
         .map(service => {
           const serviceID = service.serviceID;
 

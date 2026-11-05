@@ -6,10 +6,10 @@
   "items": {
     "type": "object",
     "additionalProperties": false,
-    "required": ["subtopicID", "topicID", "name"],
+    "required": ["subtopicId", "topicId", "name"],
     "properties": {
-      "subtopicID": { "type": "integer" },
-      "topicID": { "type": "integer" },
+      "subtopicId": { "type": "integer" },
+      "topicId": { "type": "integer" },
       "name": { "type": "string", "pattern": "\\S" }
     }
   }
