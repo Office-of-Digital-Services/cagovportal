@@ -33,6 +33,10 @@
 - `update_sep_data.mjs` syncs SEP departments, services, and FAQs by field name
   from their configured default views into `src/airTable/data/`. Keep these
   snapshots checked in so builds work without an Airtable token.
+- The `fields` lists in `update_sep_data.mjs` limit Airtable API responses to
+  fields needed by templates, structured data, filtering, image processing, and
+  relationship validation. Update these lists when adding field consumers;
+  snapshots omit Airtable record metadata.
 - `state_entity.cjs` reads the snapshots through `src/airTable/load_sep_data.cjs`
   once per build, not through the SEP API. The loader normalizes omitted text
   fields and unchecked FAQ checkboxes, validates IDs and relationships, and

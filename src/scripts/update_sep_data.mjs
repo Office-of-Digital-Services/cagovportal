@@ -12,17 +12,69 @@ const tables = [
   {
     name: "departments",
     tableId: "tblp4lLpdJJ6ov9DR",
-    view: "viwz0z4qokjvja8VU"
+    view: "viwz0z4qokjvja8VU",
+    fields: [
+      "AgencyId",
+      "AgencyName",
+      "FriendlyName",
+      "Acronym",
+      "Description",
+      "AgencyTags",
+      "Keywords",
+      "Updated",
+      "LogoUrl",
+      "WebsiteURL",
+      "ContactURL",
+      "ContactEmail",
+      "ContactPhone",
+      "ContactPhoneDigits",
+      "ContactPhoneDisplay",
+      "Facebook",
+      "TwitterAccount",
+      "YouTube",
+      "GooglePlayStoreUrl",
+      "AppleAppStoreUrl"
+    ]
   },
   {
     name: "services",
     tableId: "tblZwLzCmz3ulSEII",
-    view: "viwuyNtp20RQDOLAO"
+    view: "viwuyNtp20RQDOLAO",
+    fields: [
+      "ServiceId",
+      "AgencyId",
+      "AgencyName",
+      "FriendlyName",
+      "ServiceName",
+      "Description",
+      "ServiceType",
+      "ServiceUrl",
+      "ContactUrl",
+      "ContactPhone",
+      "ContactPhoneDigits",
+      "ContactPhoneDisplay",
+      "AgencyTags",
+      "Keywords",
+      "RelatedSearchTerms",
+      "Updated",
+      "SortOrder",
+      "ImageUrl",
+      "AltText"
+    ]
   },
   {
     name: "faqs",
     tableId: "tblUY0BdXSYNUCPVt",
-    view: "viwSIT2P1rCRYcEW2"
+    view: "viwSIT2P1rCRYcEW2",
+    fields: [
+      "Id",
+      "AgencyServiceId",
+      "Question",
+      "Answer",
+      "Featured",
+      "SortOrder",
+      "Updated"
+    ]
   }
 ];
 
@@ -38,10 +90,7 @@ if (!apiKey) {
   for (const table of tables) {
     console.info(`Fetching SEP ${table.name}`);
     const records = await fetchAllRecords(table, apiKey);
-    snapshots[table.name] = records.map(record => ({
-      ...record.fields,
-      id: record.id
-    }));
+    snapshots[table.name] = records.map(record => record.fields);
   }
 
   // Validate the complete dataset before replacing any existing snapshots.

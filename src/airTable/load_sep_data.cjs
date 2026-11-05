@@ -69,7 +69,9 @@ function normalizeSepData(snapshots) {
           throw new Error(`SEP ${table} field ${field} must be a string.`);
   for (const row of [...services, ...qa])
     if (typeof row.SortOrder !== "number" || !Number.isFinite(row.SortOrder))
-      throw new Error(`SEP record ${row.id} is missing a numeric SortOrder.`);
+      throw new Error(
+        `SEP record ${row.ServiceId ?? row.Id} is missing a numeric SortOrder.`
+      );
   for (const row of qa)
     if (typeof row.Featured !== "boolean")
       throw new Error(`SEP FAQ ${row.Id} field Featured must be a boolean.`);
