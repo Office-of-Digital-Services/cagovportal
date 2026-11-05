@@ -12,7 +12,7 @@ const imagesDirectory = fileURLToPath(
 );
 const { agencies, services } = sepData.loadSepData();
 
-/** @type {sharp.WebpOptions} */
+/** @type {import("sharp").WebpOptions} */
 const webpOptions = {
   quality: 50,
   effort: 6,
@@ -23,9 +23,9 @@ const webpOptions = {
   force: true
 };
 
-/** @type {sharp.ResizeOptions} */
+/** @type {import("sharp").ResizeOptions} */
 const agencyResizeOptions = { width: 270, withoutEnlargement: true };
-/** @type {sharp.ResizeOptions} */
+/** @type {import("sharp").ResizeOptions} */
 const serviceResizeOptions = {
   width: 300,
   height: 300,
