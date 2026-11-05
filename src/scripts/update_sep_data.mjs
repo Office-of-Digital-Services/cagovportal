@@ -66,6 +66,7 @@ const tables = [
     name: "faqs",
     tableId: "tblUY0BdXSYNUCPVt",
     view: "viwSIT2P1rCRYcEW2",
+    sort: ["AgencyServiceId", "SortOrder"],
     fields: [
       "Id",
       "AgencyServiceId",
