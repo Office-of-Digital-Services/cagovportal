@@ -59,12 +59,14 @@ export default {
             s => s.ServiceId === service.ServiceId
           );
 
-          if (sepService)
-            sepService.ShortDescription = service.ShortDescription ?? "";
+          if (!sepService)
+            throw new Error(
+              `Service finder ${service.ServiceId} references missing SEP service.`
+            );
 
+          sepService.ShortDescription = service.ShortDescription ?? "";
           return sepService;
-        })
-        .filter(x => !!x);
+        });
     });
 
     return item;

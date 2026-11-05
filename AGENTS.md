@@ -82,6 +82,9 @@
   roots without adding `$schema` properties to records.
 - `npm run validate:airtable` checks all saved snapshots without credentials or
   network access and reports validation time. It does not refresh data or images.
+  It also checks that every service finder `ServiceId` exists in SEP services.
+  The results helper throws on missing SEP matches rather than silently dropping
+  linked services.
 - Fetch or validation failures stop prebuild before replacing that sync's
   snapshots. Missing or invalid snapshots fail the build; there is no fallback
   to the SEP API.
