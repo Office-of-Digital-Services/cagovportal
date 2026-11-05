@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Service finder subtopics",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["subtopicID", "topicID", "name"],
+    "properties": {
+      "subtopicID": { "type": "integer" },
+      "topicID": { "type": "integer" },
+      "name": { "type": "string", "pattern": "\\S" }
+    }
+  }
+}

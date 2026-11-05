@@ -70,6 +70,14 @@
 - Both datasets share snapshot reading in `load_data.cjs`, with separate
   normalizers for their schemas. Load only the requested dataset; do not cache
   mutable normalized records across Eleventy builds.
+- JSON Schemas in `src/airTable/schemas/` validate snapshot shapes, types, and
+  allowed fields during sync and loading. Ajv validators compile once per
+  process; ID uniqueness and cross-table relationships remain code checks.
+  Update the matching schema when adding saved fields. VS Code associates each
+  snapshot with its schema through `.vscode/settings.json`, preserving array
+  roots without adding `$schema` properties to records.
+- `npm run validate:airtable` checks all saved snapshots without credentials or
+  network access and reports validation time. It does not refresh data or images.
 - Fetch or validation failures stop prebuild before replacing that sync's
   snapshots. Missing or invalid snapshots fail the build; there is no fallback
   to the SEP API.

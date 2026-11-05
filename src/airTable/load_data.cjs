@@ -2,6 +2,11 @@
 
 const fs = require("node:fs");
 const path = require("node:path");
+const { Ajv } = require("ajv");
+
+const ajv = new Ajv({ allErrors: true, strict: true });
+/** @type {Map<string, import("ajv").ValidateFunction>} */
+const validators = new Map();
 
 /**
  * @typedef {Record<string, unknown>} SepRecord
@@ -9,43 +14,50 @@ const path = require("node:path");
 
 /**
  * @param {Record<string, SepRecord[]>} snapshots
+ * @param {Record<string, string>} keys
+ * @param {string} [prefix]
+ */
+function validateSnapshots(snapshots, keys, prefix = "") {
+  for (const [table, key] of Object.entries(keys)) {
+    const name = `${prefix}${table}`;
+    let validate = validators.get(name);
+    if (!validate) {
+      const schema = JSON.parse(
+        fs.readFileSync(
+          path.join(__dirname, "schemas", `${name}.schema.json`),
+          "utf8"
+        )
+      );
+      validate = ajv.compile(schema);
+      validators.set(name, validate);
+    }
+    const rows = snapshots[table];
+    if (!validate(rows))
+      throw new Error(
+        `Invalid Airtable snapshot ${name}.json: ${ajv.errorsText(validate.errors, { dataVar: name, separator: "; " })}`
+      );
+
+    // Schema validation cannot enforce uniqueness of a specific ID property.
+    const ids = new Set();
+    for (const row of rows) {
+      if (ids.has(row[key]))
+        throw new Error(
+          `Airtable snapshot ${name}.json has duplicate ${key}: ${row[key]}.`
+        );
+      ids.add(row[key]);
+    }
+  }
+}
+
+/**
+ * @param {Record<string, SepRecord[]>} snapshots
  */
 function normalizeSepData(snapshots) {
-  const keys = {
+  validateSnapshots(snapshots, {
     departments: "AgencyId",
     services: "ServiceId",
     faqs: "Id"
-  };
-  /** @type {Record<string, string[]>} */
-  const requiredText = {
-    departments: ["AgencyName", "FriendlyName", "Updated"],
-    services: ["ServiceName", "Updated"],
-    faqs: ["Question", "Answer"]
-  };
-  for (const [table, key] of Object.entries(keys)) {
-    const rows = snapshots[table];
-    if (!Array.isArray(rows) || !rows.length)
-      throw new Error(`SEP ${table} snapshot must be a nonempty array.`);
-
-    const ids = new Set();
-    for (const row of rows) {
-      if (
-        !row ||
-        typeof row !== "object" ||
-        Array.isArray(row) ||
-        typeof row[key] !== "number" ||
-        !Number.isInteger(row[key]) ||
-        ids.has(row[key])
-      )
-        throw new Error(`SEP ${table} has an invalid or duplicate ${key}.`);
-      ids.add(row[key]);
-      for (const field of requiredText[table])
-        if (typeof row[field] !== "string" || !row[field].trim())
-          throw new Error(
-            `SEP ${table} record ${row[key]} is missing ${field}.`
-          );
-    }
-  }
+  });
 
   /** @type {SepRecord[]} */
   const agencies = snapshots.departments.map(row => ({
@@ -61,20 +73,6 @@ function normalizeSepData(snapshots) {
   }));
   /** @type {SepRecord[]} */
   const qa = snapshots.faqs.map(row => ({ Featured: false, ...row }));
-
-  for (const [table, rows] of Object.entries({ agencies, services }))
-    for (const row of rows)
-      for (const field of ["AgencyTags", "Keywords"])
-        if (typeof row[field] !== "string")
-          throw new Error(`SEP ${table} field ${field} must be a string.`);
-  for (const row of [...services, ...qa])
-    if (typeof row.SortOrder !== "number" || !Number.isFinite(row.SortOrder))
-      throw new Error(
-        `SEP record ${row.ServiceId ?? row.Id} is missing a numeric SortOrder.`
-      );
-  for (const row of qa)
-    if (typeof row.Featured !== "boolean")
-      throw new Error(`SEP FAQ ${row.Id} field Featured must be a boolean.`);
 
   const agencyIds = new Set(agencies.map(row => row.AgencyId));
   const serviceIds = new Set(services.map(row => row.ServiceId));
@@ -122,113 +120,42 @@ function loadSepData() {
  * @param {Record<string, Record<string, unknown>[]>} snapshots
  */
 function normalizeServiceFinderData(snapshots) {
-  const keys = {
-    categories: "categoryID",
-    topics: "topicID",
-    subtopics: "subtopicID",
-    services: "serviceID"
-  };
-  for (const [table, key] of Object.entries(keys)) {
-    const rows = snapshots[table];
-    if (!Array.isArray(rows) || !rows.length)
-      throw new Error(
-        `Service finder ${table} snapshot must be a nonempty array.`
-      );
-    const ids = new Set();
-    for (const row of rows) {
-      if (
-        !row ||
-        typeof row[key] !== "number" ||
-        !Number.isInteger(row[key]) ||
-        ids.has(row[key])
-      )
-        throw new Error(
-          `Service finder ${table} has an invalid or duplicate ${key}.`
-        );
-      ids.add(row[key]);
-    }
-  }
-
-  /** @param {Record<string, unknown>} row */
-  const recordId = row =>
-    row.serviceID ?? row.subtopicID ?? row.topicID ?? row.categoryID;
-
-  /**
-   * @param {Record<string, unknown>} row
-   * @param {string} field
-   */
-  const text = (row, field) => {
-    const value = row[field];
-    if (typeof value !== "string" || !value.trim())
-      throw new Error(`Service finder ${recordId(row)} is missing ${field}.`);
-    return value;
-  };
-
-  /**
-   * @param {Record<string, unknown>} row
-   * @param {string} field
-   */
-  const number = (row, field) => {
-    const value = row[field];
-    if (typeof value !== "number" || !Number.isInteger(value))
-      throw new Error(
-        `Service finder ${recordId(row)} has an invalid ${field}.`
-      );
-    return value;
-  };
-
-  /**
-   * @param {Record<string, unknown>} row
-   * @param {string} field
-   * @param {Set<unknown>} targetIds
-   * @param {boolean} [required]
-   * @returns {number[]}
-   */
-  const links = (row, field, targetIds, required = true) => {
-    const value = row[field] ?? [];
-    if (
-      !Array.isArray(value) ||
-      (required && !value.length) ||
-      value.some(id => typeof id !== "number" || !targetIds.has(id))
-    )
-      throw new Error(
-        `Service finder ${recordId(row)} has invalid ${field} links.`
-      );
-    return value;
-  };
+  validateSnapshots(
+    snapshots,
+    {
+      categories: "categoryID",
+      topics: "topicID",
+      subtopics: "subtopicID",
+      services: "serviceID"
+    },
+    "service_finder_"
+  );
 
   const categoryIds = new Set(snapshots.categories.map(row => row.categoryID));
   const topicIds = new Set(snapshots.topics.map(row => row.topicID));
   const subtopicIds = new Set(snapshots.subtopics.map(row => row.subtopicID));
 
-  for (const row of snapshots.categories) text(row, "name");
   for (const row of snapshots.topics) {
-    text(row, "name");
-    text(row, "caption");
-    const categoryID = number(row, "categoryID");
+    const categoryID = row.categoryID;
     if (!categoryIds.has(categoryID))
       throw new Error(
         `Service finder topic ${row.topicID} references missing categoryID ${categoryID}.`
       );
   }
   for (const row of snapshots.subtopics) {
-    text(row, "name");
-    const topicID = number(row, "topicID");
+    const topicID = row.topicID;
     if (!topicIds.has(topicID))
       throw new Error(
         `Service finder subtopic ${row.subtopicID} references missing topicID ${topicID}.`
       );
   }
   for (const row of snapshots.services) {
-    if (
-      row.shortDescription !== undefined &&
-      typeof row.shortDescription !== "string"
-    )
-      throw new Error(
-        `Service finder ${row.serviceID} has an invalid shortDescription.`
-      );
-    if (row.subtopicIDs !== undefined)
-      links(row, "subtopicIDs", subtopicIds, false);
+    const subtopicIDs = /** @type {number[]} */ (row.subtopicIDs ?? []);
+    for (const subtopicID of subtopicIDs)
+      if (!subtopicIds.has(subtopicID))
+        throw new Error(
+          `Service finder ${row.serviceID} references missing subtopicID ${subtopicID}.`
+        );
   }
   return {
     categories: snapshots.categories,

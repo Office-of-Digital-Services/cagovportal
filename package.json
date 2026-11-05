@@ -9,6 +9,7 @@
     "start": "npx @11ty/eleventy --serve",
     "prebuild": "node src/scripts/prebuild.mjs",
     "build": "npx @11ty/eleventy",
+    "validate:airtable": "node src/scripts/validate_airtable_data.cjs",
     "update_webp": "node src/scripts/update_webp.cjs"
   },
   "repository": {
@@ -34,6 +35,7 @@
     "@babel/core": "^7.28.6",
     "@cagovweb/state-template": "^6.6.0",
     "@fullhuman/postcss-purgecss": "^5.0.0",
+    "ajv": "^8.17.1",
     "babel-plugin-transform-imports": "^2.0.0",
     "csv-parse": "^7.0.3",
     "dotenv": "^17.4.2",

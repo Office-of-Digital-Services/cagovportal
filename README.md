@@ -30,3 +30,5 @@ Run prebuild tasks alone with `npm run prebuild`; Airtable sync and SEP image
 processing are skipped without `AIRTABLE_API_KEY`, using checked-in data and
 images instead. See
 [the prebuild entry point](src/scripts/prebuild.mjs) to add tasks.
+
+Validate saved Airtable data without fetching: `npm run validate:airtable`.
