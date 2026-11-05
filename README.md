@@ -11,15 +11,14 @@ This is the code base and project location for the www.ca.gov portal redesign st
 [DevSecOps pipeline](https://calenterprise.visualstudio.com/GO.Ca.Gov.Website/)  
 [LA Fires GitHub](https://github.com/Office-of-Digital-Services/cagovportal-lafires/)
 
-## Prebuild tasks
+## Local development
 
-`npm run build` automatically runs [the prebuild entry point](src/scripts/prebuild.mjs)
-before Eleventy. Run these tasks separately with `npm run prebuild`.
+```sh
+npm ci
+npm start
+```
 
-To add a task, add its script path to the `scripts` array in the entry point,
-relative to that file. Tasks run sequentially in separate Node.js processes with
-inherited environment and console output. A nonzero task exit stops the prebuild
-and prevents the build from continuing.
-
-The existing service finder updater still skips fetching when `AIRTABLE_API_KEY`
-is missing.
+Build with `npm run build`, which runs prebuild tasks before Eleventy.
+Run prebuild tasks alone with `npm run prebuild`; the Airtable refresh is skipped
+without `AIRTABLE_API_KEY`. See [the prebuild entry point](src/scripts/prebuild.mjs)
+to add tasks.
