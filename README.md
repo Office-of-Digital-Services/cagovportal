@@ -32,3 +32,24 @@ images instead. See
 [the prebuild entry point](src/scripts/prebuild.mjs) to add tasks.
 
 Validate saved Airtable data without fetching: `npm run validate:airtable`.
+
+### Airtable token setup
+
+To refresh data locally, use an Airtable account with access to the
+[project base](https://airtable.com/appqN4fe2lK8xlNqp/).
+
+1. Open [Airtable personal access tokens](https://airtable.com/create/tokens)
+   and create a token with a descriptive name.
+2. Add the `data.records:read` scope.
+3. Under access, select only the project base linked above.
+4. Save the token in a `.env` file at the project root:
+
+   ```dotenv
+   AIRTABLE_API_KEY=your-personal-access-token
+   ```
+
+The `.env` file is hidden because it is listed in `.gitignore`, so Git excludes it from normal
+staging and commits. Do not force-add it.
+
+Run `npm run prebuild` to refresh data and prepare images, or `npm run build`
+to also build the site.
