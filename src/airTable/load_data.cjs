@@ -157,12 +157,7 @@ function normalizeServiceFinderData(snapshots) {
           `Service finder ${row.ServiceId} references missing SubtopicId ${SubtopicId}.`
         );
   }
-  return {
-    categories: snapshots.categories,
-    topics: snapshots.topics,
-    subtopics: snapshots.subtopics,
-    services: snapshots.services
-  };
+  return snapshots;
 }
 
 function loadServiceFinderData() {
