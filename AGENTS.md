@@ -16,9 +16,8 @@
 - `npm start` starts the Eleventy development server.
 - `npm run build` runs prebuild tasks followed by Eleventy.
 - `npm run prebuild` runs only the prebuild tasks; `npm start` does not run them.
-- Run `node --test src/scripts/sep_data.test.mjs` for Airtable sync and SEP loader
-  tests. There is no npm test script. Run a build for changes affecting site
-  generation.
+- There is no npm test script. Validate changes with the smallest relevant
+  checks, and run a build for changes affecting site generation.
 - Use the existing ESLint, Prettier, and Stylelint configurations. For example,
   `npx eslint <changed-js-files>` and `npx prettier --check <changed-files>`.
   Use the installed tools rather than downloading new tooling for validation.
