@@ -38,7 +38,7 @@ const tables = [
     fields: {
       serviceID: "ServiceId",
       shortDescription: "Short description",
-      subtopicIDs: "Service Subtopics"
+      subtopicIDs: "Subtopic IDs"
     },
     sort: ["Service Name"],
     filterByFormula: "NOT({Service Name} = '')"
@@ -54,6 +54,7 @@ if (!apiKey) {
 } else {
   /** @type {Record<string, Record<string, unknown>[]>} */
   const snapshots = {};
+  // Fetch tables concurrently and map Airtable field names to saved properties.
   await Promise.all(
     tables.map(async table => {
       console.info(`Fetching service finder ${table.name}`);
@@ -65,40 +66,17 @@ if (!apiKey) {
         },
         apiKey
       );
-      snapshots[table.name] = records.map(record => ({
-        id: record.id,
-        ...Object.fromEntries(
+      snapshots[table.name] = records.map(record =>
+        Object.fromEntries(
           Object.entries(table.fields)
             .filter(([, field]) => record.fields[field] !== undefined)
             .map(([name, field]) => [name, record.fields[field]])
         )
-      }));
+      );
     })
   );
 
-  const subtopicIDs = new Map(
-    snapshots.subtopics.map(row => [row.id, row.subtopicID])
-  );
-  for (const row of snapshots.services) {
-    const links = row.subtopicIDs;
-    if (links === undefined) continue;
-    if (!Array.isArray(links))
-      throw new Error(
-        `Service finder ${row.serviceID} has invalid subtopicIDs links.`
-      );
-    row.subtopicIDs = links.map(id => {
-      const numericID = subtopicIDs.get(id);
-      if (typeof numericID !== "number" || !Number.isInteger(numericID))
-        throw new Error(
-          `Service finder ${row.serviceID} has an unresolved subtopicIDs link: ${id}.`
-        );
-      return numericID;
-    });
-  }
-
-  for (const rows of Object.values(snapshots))
-    for (const row of rows) delete row.id;
-
+  // Airtable lookups return arrays; require one parent before storing a scalar ID.
   for (const [table, field, key] of [
     ["topics", "categoryID", "topicID"],
     ["subtopics", "topicID", "subtopicID"]
@@ -112,6 +90,7 @@ if (!apiKey) {
       row[field] = links[0];
     }
 
+  // Stable key ordering keeps snapshot diffs independent of API field order.
   for (const table of tables)
     snapshots[table.name] = snapshots[table.name].map(row =>
       Object.fromEntries(
@@ -120,6 +99,7 @@ if (!apiKey) {
     );
 
   serviceFinderData.normalizeServiceFinderData(snapshots);
+  // Replace snapshots only after the entire dataset passes relationship validation.
   for (const table of tables)
     writeJson(
       fileURLToPath(

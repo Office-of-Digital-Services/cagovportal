@@ -35,8 +35,8 @@
 - `update_service_finder_data.mjs` syncs categories, topics, subtopics, and
   services by field name into `src/airTable/data/service_finder_*.json`, with
   alphabetical JSON keys. Topics read the `Category ID` lookup and subtopics read
-  the `Topic ID` lookup directly. Sync resolves service-to-subtopic Airtable links
-  to numeric Subtopic IDs before saving; internal record IDs are omitted.
+  the `Topic ID` lookup directly. Services read the numeric `Subtopic IDs`
+  lookup directly; no internal record-ID translation or storage is needed.
 - Each service finder topic must link to exactly one category, and each subtopic
   to exactly one topic. Saved and template-facing `categoryID`/`topicID` are
   single numeric IDs. Missing, multiple, or invalid links
