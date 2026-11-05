@@ -12,7 +12,7 @@ const tables = [
   {
     tableId: "tbl5wfeJJ4F7FZ837",
     name: "categories",
-    fields: ["Name"],
+    fields: ["Category ID", "Name"],
     sort: ["Sort"]
   },
   {
@@ -58,6 +58,62 @@ if (!apiKey) {
       );
     })
   );
+
+  /**
+   * @param {string} table
+   * @param {string} field
+   */
+  const recordIds = (table, field) =>
+    new Map(snapshots[table].map(row => [row.id, row[field]]));
+
+  const relationships = [
+    {
+      table: "topics",
+      field: "Category",
+      ids: recordIds("categories", "Category ID")
+    },
+    {
+      table: "subtopics",
+      field: "Topic",
+      ids: recordIds("topics", "Topic ID")
+    },
+    {
+      table: "services",
+      field: "Service Subtopics",
+      ids: recordIds("subtopics", "Subtopic ID")
+    }
+  ];
+  for (const { table, field, ids } of relationships)
+    for (const row of snapshots[table]) {
+      const links = row[field];
+      if (links === undefined) continue;
+      if (!Array.isArray(links))
+        throw new Error(`Service finder ${row.id} has invalid ${field} links.`);
+      row[field] = links.map(id => {
+        const numericId = ids.get(id);
+        if (typeof numericId !== "number" || !Number.isInteger(numericId))
+          throw new Error(
+            `Service finder ${row.id} has an unresolved ${field} link: ${id}.`
+          );
+        return numericId;
+      });
+    }
+
+  for (const rows of Object.values(snapshots))
+    for (const row of rows) delete row.id;
+
+  for (const [table, field, key] of [
+    ["topics", "Category", "Topic ID"],
+    ["subtopics", "Topic", "Subtopic ID"]
+  ])
+    for (const row of snapshots[table]) {
+      const links = row[field];
+      if (!Array.isArray(links) || links.length !== 1)
+        throw new Error(
+          `Service finder ${table} record ${row[key]} must link to exactly one ${field}.`
+        );
+      row[field] = links[0];
+    }
 
   serviceFinderData.normalizeServiceFinderData(snapshots);
   for (const table of tables)

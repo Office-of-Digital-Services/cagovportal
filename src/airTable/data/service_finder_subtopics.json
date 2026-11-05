@@ -1,474 +1,297 @@
 [
   {
-    "id": "rechc3hU9mhXrO4Sy",
     "Name": "Child support",
     "Subtopic ID": 1,
-    "Topic": [
-      "recA55STHXuT2Fxai"
-    ]
+    "Topic": 1
   },
   {
-    "id": "recZavC0cDUHa7nxF",
     "Name": "Childcare and food for children",
     "Subtopic ID": 2,
-    "Topic": [
-      "recA55STHXuT2Fxai"
-    ]
+    "Topic": 1
   },
   {
-    "id": "recBWsRyFHT0CF54V",
     "Name": "Disability",
     "Subtopic ID": 3,
-    "Topic": [
-      "recA55STHXuT2Fxai"
-    ]
+    "Topic": 1
   },
   {
-    "id": "rec2LSD2mzGvATatD",
     "Name": "Financial support",
     "Subtopic ID": 4,
-    "Topic": [
-      "recA55STHXuT2Fxai"
-    ]
+    "Topic": 1
   },
   {
-    "id": "recctsaIW7i8iobbW",
     "Name": "Food assistance",
     "Subtopic ID": 5,
-    "Topic": [
-      "recA55STHXuT2Fxai"
-    ]
+    "Topic": 1
   },
   {
-    "id": "recdLKNsNaj0itkgy",
     "Name": "Health and insurance",
     "Subtopic ID": 6,
-    "Topic": [
-      "recA55STHXuT2Fxai"
-    ]
+    "Topic": 1
   },
   {
-    "id": "reczSYbTt3pICoUBb",
     "Name": "Housing and utilities",
     "Subtopic ID": 7,
-    "Topic": [
-      "recA55STHXuT2Fxai"
-    ]
+    "Topic": 1
   },
   {
-    "id": "rec9BrU4EgC9tzmEn",
     "Name": "Maternal and infant health",
     "Subtopic ID": 8,
-    "Topic": [
-      "recA55STHXuT2Fxai"
-    ]
+    "Topic": 1
   },
   {
-    "id": "recrCTa3u9QAJFEty",
     "Name": "Senior and caregiver support",
     "Subtopic ID": 9,
-    "Topic": [
-      "recA55STHXuT2Fxai"
-    ]
+    "Topic": 1
   },
   {
-    "id": "recR3dLWBEekAS2zb",
     "Name": "Social assistance",
     "Subtopic ID": 10,
-    "Topic": [
-      "recA55STHXuT2Fxai"
-    ]
+    "Topic": 1
   },
   {
-    "id": "rece6xgZZTZlLNrLl",
     "Name": "Contractors",
     "Subtopic ID": 33,
-    "Topic": [
-      "recVTdGk7HQeQ1HGR"
-    ]
+    "Topic": 8
   },
   {
-    "id": "recmyJGKYHWJoiXCU",
     "Name": "Employers",
     "Subtopic ID": 34,
-    "Topic": [
-      "recVTdGk7HQeQ1HGR"
-    ]
+    "Topic": 8
   },
   {
-    "id": "rec7nARGkMGzzEspi",
     "Name": "Incentives",
     "Subtopic ID": 35,
-    "Topic": [
-      "recVTdGk7HQeQ1HGR"
-    ]
+    "Topic": 8
   },
   {
-    "id": "recawwRWfCQQOjOyK",
     "Name": "Licenses and permits",
     "Subtopic ID": 36,
-    "Topic": [
-      "recVTdGk7HQeQ1HGR"
-    ]
+    "Topic": 8
   },
   {
-    "id": "rec4qJmDWrMaTuOMq",
     "Name": "Managing a business",
     "Subtopic ID": 37,
-    "Topic": [
-      "recVTdGk7HQeQ1HGR"
-    ]
+    "Topic": 8
   },
   {
-    "id": "recUAZInOnYaCikbO",
     "Name": "Resources and help",
     "Subtopic ID": 38,
-    "Topic": [
-      "recVTdGk7HQeQ1HGR"
-    ]
+    "Topic": 8
   },
   {
-    "id": "recru8dUOdzcKCrg0",
     "Name": "Starting a business",
     "Subtopic ID": 39,
-    "Topic": [
-      "recVTdGk7HQeQ1HGR"
-    ]
+    "Topic": 8
   },
   {
-    "id": "recGtPEJ8w9qcNESz",
     "Name": "Auto maintenance",
     "Subtopic ID": 18,
-    "Topic": [
-      "recld9zeX8KTrozV9"
-    ]
+    "Topic": 5
   },
   {
-    "id": "recZuM5IqavviGsEC",
     "Name": "DMV",
     "Subtopic ID": 19,
-    "Topic": [
-      "recld9zeX8KTrozV9"
-    ]
+    "Topic": 5
   },
   {
-    "id": "recTjKjyH13loJ60E",
     "Name": "Traffic tickets",
     "Subtopic ID": 20,
-    "Topic": [
-      "recld9zeX8KTrozV9"
-    ]
+    "Topic": 5
   },
   {
-    "id": "reclMGMOijxHoqsio",
     "Name": "K - 12",
     "Subtopic ID": 11,
-    "Topic": [
-      "rec30Uu7p6AdO2xLS"
-    ]
+    "Topic": 2
   },
   {
-    "id": "recPdZ3wUHdF90lCQ",
     "Name": "College",
     "Subtopic ID": 12,
-    "Topic": [
-      "rec30Uu7p6AdO2xLS"
-    ]
+    "Topic": 2
   },
   {
-    "id": "recO38RYKKQsvYUJO",
     "Name": "Adult education",
     "Subtopic ID": 13,
-    "Topic": [
-      "rec30Uu7p6AdO2xLS"
-    ]
+    "Topic": 2
   },
   {
-    "id": "rec9rD8WZT5DndhXl",
     "Name": "General",
     "Subtopic ID": 59,
-    "Topic": [
-      "rec30Uu7p6AdO2xLS"
-    ]
+    "Topic": 2
   },
   {
-    "id": "recyoAZZUWXuh28O6",
     "Name": "Conservation",
     "Subtopic ID": 52,
-    "Topic": [
-      "recNXgNM0bmCLtIkI"
-    ]
+    "Topic": 13
   },
   {
-    "id": "rec7u2PyVHkaFsdVt",
     "Name": "Grants",
     "Subtopic ID": 53,
-    "Topic": [
-      "recNXgNM0bmCLtIkI"
-    ]
+    "Topic": 13
   },
   {
-    "id": "recjyRHGeoyJw4luS",
     "Name": "Climate",
     "Subtopic ID": 54,
-    "Topic": [
-      "recNXgNM0bmCLtIkI"
-    ]
+    "Topic": 13
   },
   {
-    "id": "recMsWGZor2H0Dm8G",
     "Name": "Environmental safety",
     "Subtopic ID": 55,
-    "Topic": [
-      "recNXgNM0bmCLtIkI"
-    ]
+    "Topic": 13
   },
   {
-    "id": "recPAKT4KhpXYTFTP",
     "Name": "Children and infant health",
     "Subtopic ID": 21,
-    "Topic": [
-      "recrqDJhmDQT2BN1y"
-    ]
+    "Topic": 6
   },
   {
-    "id": "rec2jHZlhx1lG83lT",
     "Name": "Maternal health",
     "Subtopic ID": 22,
-    "Topic": [
-      "recrqDJhmDQT2BN1y"
-    ]
+    "Topic": 6
   },
   {
-    "id": "recEWv5ZtGNNqPodc",
     "Name": "Mental and behavioral health",
     "Subtopic ID": 23,
-    "Topic": [
-      "recrqDJhmDQT2BN1y"
-    ]
+    "Topic": 6
   },
   {
-    "id": "recoYMSvVI9opAbzg",
     "Name": "Health insurance",
     "Subtopic ID": 24,
-    "Topic": [
-      "recrqDJhmDQT2BN1y"
-    ]
+    "Topic": 6
   },
   {
-    "id": "recjfzgY2z0VbVAPG",
     "Name": "Resources for people with disabilities",
     "Subtopic ID": 25,
-    "Topic": [
-      "recrqDJhmDQT2BN1y"
-    ]
+    "Topic": 6
   },
   {
-    "id": "rec1HuYfRPvHsqBZE",
     "Name": "Older adult health",
     "Subtopic ID": 26,
-    "Topic": [
-      "recrqDJhmDQT2BN1y"
-    ]
+    "Topic": 6
   },
   {
-    "id": "recYMVYXtNWLFScD4",
     "Name": "Food and nutrition",
     "Subtopic ID": 27,
-    "Topic": [
-      "recrqDJhmDQT2BN1y"
-    ]
+    "Topic": 6
   },
   {
-    "id": "recUqMxo1id3OBUEb",
     "Name": "Own or buy a home",
     "Subtopic ID": 15,
-    "Topic": [
-      "recfqC9xQalQ7031D"
-    ]
+    "Topic": 4
   },
   {
-    "id": "recfBbv9sdekv8y2I",
     "Name": "Rent",
     "Subtopic ID": 16,
-    "Topic": [
-      "recfqC9xQalQ7031D"
-    ]
+    "Topic": 4
   },
   {
-    "id": "recORD4MPLUH0oPLE",
     "Name": "Find housing",
     "Subtopic ID": 17,
-    "Topic": [
-      "recfqC9xQalQ7031D"
-    ]
+    "Topic": 4
   },
   {
-    "id": "recqFLjRgLSfrhvuD",
     "Name": "Citizenship",
     "Subtopic ID": 56,
-    "Topic": [
-      "rec34ujJyyifeZSpT"
-    ]
+    "Topic": 14
   },
   {
-    "id": "rec7WfLvbg9L2RMkK",
     "Name": "Immigration resources",
     "Subtopic ID": 57,
-    "Topic": [
-      "rec34ujJyyifeZSpT"
-    ]
+    "Topic": 14
   },
   {
-    "id": "rectWneIWQ6K7mD6z",
     "Name": "DACA",
     "Subtopic ID": 58,
-    "Topic": [
-      "rec34ujJyyifeZSpT"
-    ]
+    "Topic": 14
   },
   {
-    "id": "recXDT4zX0J5jfCrQ",
     "Name": "Unemployment",
     "Subtopic ID": 40,
-    "Topic": [
-      "reccIDisWUG9PY39f"
-    ]
+    "Topic": 9
   },
   {
-    "id": "recR0DpQoFefdyDgn",
     "Name": "Find a job",
     "Subtopic ID": 41,
-    "Topic": [
-      "reccIDisWUG9PY39f"
-    ]
+    "Topic": 9
   },
   {
-    "id": "recSDMVjT5Cuh64EL",
     "Name": "Worker's rights",
     "Subtopic ID": 42,
-    "Topic": [
-      "reccIDisWUG9PY39f"
-    ]
+    "Topic": 9
   },
   {
-    "id": "recBACGN5aPe1TS9U",
     "Name": "Job training",
     "Subtopic ID": 43,
-    "Topic": [
-      "reccIDisWUG9PY39f"
-    ]
+    "Topic": 9
   },
   {
-    "id": "rec6sXxrRvZ5OhCVN",
     "Name": "Personal records subtopic",
     "Subtopic ID": 14,
-    "Topic": [
-      "recvZakmU2N3lL3be"
-    ]
+    "Topic": 3
   },
   {
-    "id": "recTPeYrGYv3LZtp9",
     "Name": "Consumer rights and safety",
     "Subtopic ID": 28,
-    "Topic": [
-      "recbGUfDXfAb4yInQ"
-    ]
+    "Topic": 7
   },
   {
-    "id": "recHwYw22AREEwOwm",
     "Name": "Crime",
     "Subtopic ID": 29,
-    "Topic": [
-      "recbGUfDXfAb4yInQ"
-    ]
+    "Topic": 7
   },
   {
-    "id": "recKq6WPWAcRRnfxi",
     "Name": "Disasters",
     "Subtopic ID": 30,
-    "Topic": [
-      "recbGUfDXfAb4yInQ"
-    ]
+    "Topic": 7
   },
   {
-    "id": "rec7lG93rWdudJmS7",
     "Name": "Environmental safety",
     "Subtopic ID": 31,
-    "Topic": [
-      "recbGUfDXfAb4yInQ"
-    ]
+    "Topic": 7
   },
   {
-    "id": "recr5oFhg7TUz9LKa",
     "Name": "Road safety",
     "Subtopic ID": 32,
-    "Topic": [
-      "recbGUfDXfAb4yInQ"
-    ]
+    "Topic": 7
   },
   {
-    "id": "recqbuFZmUIA5DyPD",
     "Name": "Courts",
     "Subtopic ID": 46,
-    "Topic": [
-      "rec35JBw9PtVDTtot"
-    ]
+    "Topic": 11
   },
   {
-    "id": "recdGJAyX3UCL5Adn",
     "Name": "Laws",
     "Subtopic ID": 47,
-    "Topic": [
-      "rec35JBw9PtVDTtot"
-    ]
+    "Topic": 11
   },
   {
-    "id": "recs6Qo8S7FBUOmQc",
     "Name": "State data and statistics",
     "Subtopic ID": 48,
-    "Topic": [
-      "rec35JBw9PtVDTtot"
-    ]
+    "Topic": 11
   },
   {
-    "id": "rec7nxiHjLGPEx1mc",
     "Name": "Voting and elections",
     "Subtopic ID": 49,
-    "Topic": [
-      "rec35JBw9PtVDTtot"
-    ]
+    "Topic": 11
   },
   {
-    "id": "recnj3KFAyMcYHZXz",
     "Name": "Filing your taxes",
     "Subtopic ID": 44,
-    "Topic": [
-      "recFQ48QX9uLxT9vk"
-    ]
+    "Topic": 10
   },
   {
-    "id": "reccUrRSEHOTOFYpS",
     "Name": "For businesses",
     "Subtopic ID": 45,
-    "Topic": [
-      "recFQ48QX9uLxT9vk"
-    ]
+    "Topic": 10
   },
   {
-    "id": "recI4OPhX5Oya75H4",
     "Name": "Entertainment",
     "Subtopic ID": 50,
-    "Topic": [
-      "recCYHIOQswAmLQ1x"
-    ]
+    "Topic": 12
   },
   {
-    "id": "recldXcZdibiXelRd",
     "Name": "Recreation",
     "Subtopic ID": 51,
-    "Topic": [
-      "recCYHIOQswAmLQ1x"
-    ]
+    "Topic": 12
   }
 ]

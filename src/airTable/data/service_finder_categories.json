@@ -1,18 +1,18 @@
 [
   {
-    "id": "recBK0ieAUxs5PzKV",
+    "Category ID": 1,
     "Name": "Personal and family life"
   },
   {
-    "id": "recVvUqqN0Vmf5aNB",
+    "Category ID": 2,
     "Name": "Health and safety"
   },
   {
-    "id": "recbQLIC0tt2xFqwT",
+    "Category ID": 3,
     "Name": "Work and finances"
   },
   {
-    "id": "recUSOaBeZVfWmrV3",
+    "Category ID": 4,
     "Name": "Our state"
   }
 ]

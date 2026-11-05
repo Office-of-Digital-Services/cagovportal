@@ -122,7 +122,13 @@ function loadSepData() {
  * @param {Record<string, Record<string, unknown>[]>} snapshots
  */
 function normalizeServiceFinderData(snapshots) {
-  for (const table of ["categories", "topics", "subtopics", "services"]) {
+  const keys = {
+    categories: "Category ID",
+    topics: "Topic ID",
+    subtopics: "Subtopic ID",
+    services: "ServiceId"
+  };
+  for (const [table, key] of Object.entries(keys)) {
     const rows = snapshots[table];
     if (!Array.isArray(rows) || !rows.length)
       throw new Error(
@@ -130,13 +136,25 @@ function normalizeServiceFinderData(snapshots) {
       );
     const ids = new Set();
     for (const row of rows) {
-      if (!row || typeof row.id !== "string" || !row.id || ids.has(row.id))
+      if (
+        !row ||
+        typeof row[key] !== "number" ||
+        !Number.isInteger(row[key]) ||
+        ids.has(row[key])
+      )
         throw new Error(
-          `Service finder ${table} has an invalid or duplicate record ID.`
+          `Service finder ${table} has an invalid or duplicate ${key}.`
         );
-      ids.add(row.id);
+      ids.add(row[key]);
     }
   }
+
+  /** @param {Record<string, unknown>} row */
+  const recordId = row =>
+    row["Category ID"] ??
+    row["Topic ID"] ??
+    row["Subtopic ID"] ??
+    row.ServiceId;
 
   /**
    * @param {Record<string, unknown>} row
@@ -145,7 +163,7 @@ function normalizeServiceFinderData(snapshots) {
   const text = (row, field) => {
     const value = row[field];
     if (typeof value !== "string" || !value.trim())
-      throw new Error(`Service finder ${row.id} is missing ${field}.`);
+      throw new Error(`Service finder ${recordId(row)} is missing ${field}.`);
     return value;
   };
 
@@ -156,7 +174,9 @@ function normalizeServiceFinderData(snapshots) {
   const number = (row, field) => {
     const value = row[field];
     if (typeof value !== "number" || !Number.isInteger(value))
-      throw new Error(`Service finder ${row.id} has an invalid ${field}.`);
+      throw new Error(
+        `Service finder ${recordId(row)} has an invalid ${field}.`
+      );
     return value;
   };
 
@@ -165,57 +185,74 @@ function normalizeServiceFinderData(snapshots) {
    * @param {string} field
    * @param {Set<unknown>} targetIds
    * @param {boolean} [required]
-   * @returns {string[]}
+   * @returns {number[]}
    */
   const links = (row, field, targetIds, required = true) => {
     const value = row[field] ?? [];
     if (
       !Array.isArray(value) ||
       (required && !value.length) ||
-      value.some(id => typeof id !== "string" || !targetIds.has(id))
+      value.some(id => typeof id !== "number" || !targetIds.has(id))
     )
-      throw new Error(`Service finder ${row.id} has invalid ${field} links.`);
+      throw new Error(
+        `Service finder ${recordId(row)} has invalid ${field} links.`
+      );
     return value;
   };
 
-  const categoryIds = new Set(snapshots.categories.map(row => row.id));
-  const topicIds = new Set(snapshots.topics.map(row => row.id));
-  const subtopicIds = new Set(snapshots.subtopics.map(row => row.id));
+  const categoryIds = new Set(
+    snapshots.categories.map(row => row["Category ID"])
+  );
+  const topicIds = new Set(snapshots.topics.map(row => row["Topic ID"]));
+  const subtopicIds = new Set(
+    snapshots.subtopics.map(row => row["Subtopic ID"])
+  );
 
   return {
     categories: snapshots.categories.map(row => ({
-      id: row.id,
+      categoryID: number(row, "Category ID"),
       name: text(row, "Name")
     })),
-    topics: snapshots.topics.map(row => ({
-      id: row.id,
-      topicId: number(row, "Topic ID"),
-      category: links(row, "Category", categoryIds),
-      name: text(row, "Name"),
-      caption: text(row, "Caption")
-    })),
-    subtopics: snapshots.subtopics.map(row => ({
-      id: row.id,
-      subtopicId: number(row, "Subtopic ID"),
-      name: text(row, "Name"),
-      topic: links(row, "Topic", topicIds)
-    })),
+    topics: snapshots.topics.map(row => {
+      const category = number(row, "Category");
+      if (!categoryIds.has(category))
+        throw new Error(
+          `Service finder topic ${row["Topic ID"]} references missing Category ${category}.`
+        );
+      return {
+        topicID: number(row, "Topic ID"),
+        categoryID: category,
+        name: text(row, "Name"),
+        caption: text(row, "Caption")
+      };
+    }),
+    subtopics: snapshots.subtopics.map(row => {
+      const topic = number(row, "Topic");
+      if (!topicIds.has(topic))
+        throw new Error(
+          `Service finder subtopic ${row["Subtopic ID"]} references missing Topic ${topic}.`
+        );
+      return {
+        subtopicID: number(row, "Subtopic ID"),
+        name: text(row, "Name"),
+        topicID: topic
+      };
+    }),
     services: snapshots.services.map(row => {
       if (
         row["Short description"] !== undefined &&
         typeof row["Short description"] !== "string"
       )
         throw new Error(
-          `Service finder ${row.id} has an invalid Short description.`
+          `Service finder ${recordId(row)} has an invalid Short description.`
         );
       return {
-        id: row.id,
-        serviceId: number(row, "ServiceId"),
+        serviceID: number(row, "ServiceId"),
         ...(row["Short description"] !== undefined
           ? { shortDescription: row["Short description"] }
           : {}),
         ...(row["Service Subtopics"] !== undefined
-          ? { subtopics: links(row, "Service Subtopics", subtopicIds, false) }
+          ? { subtopicIDs: links(row, "Service Subtopics", subtopicIds, false) }
           : {})
       };
     })

@@ -2,8 +2,8 @@
 
 /**
  * @typedef {object} ServiceFinderService
- * @property {number} serviceId
- * @property {string[]} [subtopics]
+ * @property {number} serviceID
+ * @property {number[]} [subtopicIDs]
  * @property {string} [shortDescription]
  */
 
@@ -26,15 +26,14 @@
 
 /**
  * @typedef {object} ServiceFinderSubtopic
- * @property {string} id
- * @property {number} subtopicId
- * @property {string[]} topic
+ * @property {number} subtopicID
+ * @property {number} topicID
  * @property {SepService[]} [sepServices]
  */
 
 /**
  * @typedef {object} ResultsItem
- * @property {string} id
+ * @property {number} topicID
  * @property {ServiceFinderSubtopic[]} [subtopics]
  */
 
@@ -48,18 +47,18 @@ export default {
    * @returns {ResultsItem}
    */
   getResultsDataset(item, serviceFinderData, stateEntity) {
-    item.subtopics = serviceFinderData.subtopics?.filter(subtopic =>
-      subtopic.topic.includes(item.id)
+    item.subtopics = serviceFinderData.subtopics?.filter(
+      subtopic => subtopic.topicID === item.topicID
     );
 
     item.subtopics?.forEach(subtopic => {
       subtopic.sepServices = serviceFinderData.services
-        ?.filter(service => service.subtopics?.includes(subtopic.id))
+        ?.filter(service => service.subtopicIDs?.includes(subtopic.subtopicID))
         .map(service => {
-          const serviceId = service.serviceId;
+          const serviceID = service.serviceID;
 
           const sepService = stateEntity.services.find(
-            s => s.ServiceId === serviceId
+            s => s.ServiceId === serviceID
           );
 
           if (sepService)
