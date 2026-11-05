@@ -1,18 +1,18 @@
 [
   {
-    "Category ID": 1,
-    "Name": "Personal and family life"
+    "categoryID": 1,
+    "name": "Personal and family life"
   },
   {
-    "Category ID": 2,
-    "Name": "Health and safety"
+    "categoryID": 2,
+    "name": "Health and safety"
   },
   {
-    "Category ID": 3,
-    "Name": "Work and finances"
+    "categoryID": 3,
+    "name": "Work and finances"
   },
   {
-    "Category ID": 4,
-    "Name": "Our state"
+    "categoryID": 4,
+    "name": "Our state"
   }
 ]

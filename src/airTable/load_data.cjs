@@ -123,10 +123,10 @@ function loadSepData() {
  */
 function normalizeServiceFinderData(snapshots) {
   const keys = {
-    categories: "Category ID",
-    topics: "Topic ID",
-    subtopics: "Subtopic ID",
-    services: "ServiceId"
+    categories: "categoryID",
+    topics: "topicID",
+    subtopics: "subtopicID",
+    services: "serviceID"
   };
   for (const [table, key] of Object.entries(keys)) {
     const rows = snapshots[table];
@@ -151,10 +151,7 @@ function normalizeServiceFinderData(snapshots) {
 
   /** @param {Record<string, unknown>} row */
   const recordId = row =>
-    row["Category ID"] ??
-    row["Topic ID"] ??
-    row["Subtopic ID"] ??
-    row.ServiceId;
+    row.serviceID ?? row.subtopicID ?? row.topicID ?? row.categoryID;
 
   /**
    * @param {Record<string, unknown>} row
@@ -200,62 +197,44 @@ function normalizeServiceFinderData(snapshots) {
     return value;
   };
 
-  const categoryIds = new Set(
-    snapshots.categories.map(row => row["Category ID"])
-  );
-  const topicIds = new Set(snapshots.topics.map(row => row["Topic ID"]));
-  const subtopicIds = new Set(
-    snapshots.subtopics.map(row => row["Subtopic ID"])
-  );
+  const categoryIds = new Set(snapshots.categories.map(row => row.categoryID));
+  const topicIds = new Set(snapshots.topics.map(row => row.topicID));
+  const subtopicIds = new Set(snapshots.subtopics.map(row => row.subtopicID));
 
+  for (const row of snapshots.categories) text(row, "name");
+  for (const row of snapshots.topics) {
+    text(row, "name");
+    text(row, "caption");
+    const categoryID = number(row, "categoryID");
+    if (!categoryIds.has(categoryID))
+      throw new Error(
+        `Service finder topic ${row.topicID} references missing categoryID ${categoryID}.`
+      );
+  }
+  for (const row of snapshots.subtopics) {
+    text(row, "name");
+    const topicID = number(row, "topicID");
+    if (!topicIds.has(topicID))
+      throw new Error(
+        `Service finder subtopic ${row.subtopicID} references missing topicID ${topicID}.`
+      );
+  }
+  for (const row of snapshots.services) {
+    if (
+      row.shortDescription !== undefined &&
+      typeof row.shortDescription !== "string"
+    )
+      throw new Error(
+        `Service finder ${row.serviceID} has an invalid shortDescription.`
+      );
+    if (row.subtopicIDs !== undefined)
+      links(row, "subtopicIDs", subtopicIds, false);
+  }
   return {
-    categories: snapshots.categories.map(row => ({
-      categoryID: number(row, "Category ID"),
-      name: text(row, "Name")
-    })),
-    topics: snapshots.topics.map(row => {
-      const category = number(row, "Category");
-      if (!categoryIds.has(category))
-        throw new Error(
-          `Service finder topic ${row["Topic ID"]} references missing Category ${category}.`
-        );
-      return {
-        topicID: number(row, "Topic ID"),
-        categoryID: category,
-        name: text(row, "Name"),
-        caption: text(row, "Caption")
-      };
-    }),
-    subtopics: snapshots.subtopics.map(row => {
-      const topic = number(row, "Topic");
-      if (!topicIds.has(topic))
-        throw new Error(
-          `Service finder subtopic ${row["Subtopic ID"]} references missing Topic ${topic}.`
-        );
-      return {
-        subtopicID: number(row, "Subtopic ID"),
-        name: text(row, "Name"),
-        topicID: topic
-      };
-    }),
-    services: snapshots.services.map(row => {
-      if (
-        row["Short description"] !== undefined &&
-        typeof row["Short description"] !== "string"
-      )
-        throw new Error(
-          `Service finder ${recordId(row)} has an invalid Short description.`
-        );
-      return {
-        serviceID: number(row, "ServiceId"),
-        ...(row["Short description"] !== undefined
-          ? { shortDescription: row["Short description"] }
-          : {}),
-        ...(row["Service Subtopics"] !== undefined
-          ? { subtopicIDs: links(row, "Service Subtopics", subtopicIds, false) }
-          : {})
-      };
-    })
+    categories: snapshots.categories,
+    topics: snapshots.topics,
+    subtopics: snapshots.subtopics,
+    services: snapshots.services
   };
 }
 

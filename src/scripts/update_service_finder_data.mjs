@@ -7,30 +7,39 @@ import serviceFinderData from "../airTable/load_data.cjs";
 
 dotenv.config({ quiet: true });
 
-/** @type {import("./lib/airtable.mjs").TableConfig[]} */
+/** @type {(Omit<import("./lib/airtable.mjs").TableConfig, "fields"> & { fields: Record<string, string> })[]} */
 const tables = [
   {
     tableId: "tbl5wfeJJ4F7FZ837",
     name: "categories",
-    fields: ["Category ID", "Name"],
+    fields: { categoryID: "Category ID", name: "Name" },
     sort: ["Sort"]
   },
   {
     tableId: "tbl6JAo9evMInWiKC",
     name: "topics",
-    fields: ["Topic ID", "Category", "Name", "Caption"],
+    fields: {
+      topicID: "Topic ID",
+      categoryID: "Category ID",
+      name: "Name",
+      caption: "Caption"
+    },
     sort: ["Category", "Sort"]
   },
   {
     tableId: "tblSOXHg0SEUMrnHv",
     name: "subtopics",
-    fields: ["Subtopic ID", "Name", "Topic"],
+    fields: { subtopicID: "Subtopic ID", name: "Name", topicID: "Topic ID" },
     sort: ["Topic", "Sort"]
   },
   {
     tableId: "tblS8RYo4FSqmONyu",
     name: "services",
-    fields: ["ServiceId", "Short description", "Service Subtopics"],
+    fields: {
+      serviceID: "ServiceId",
+      shortDescription: "Short description",
+      subtopicIDs: "Service Subtopics"
+    },
     sort: ["Service Name"],
     filterByFormula: "NOT({Service Name} = '')"
   }
@@ -48,63 +57,51 @@ if (!apiKey) {
   await Promise.all(
     tables.map(async table => {
       console.info(`Fetching service finder ${table.name}`);
-      const records = await fetchAllRecords(table, apiKey);
-      snapshots[table.name] = records.map(record =>
-        Object.fromEntries(
-          Object.entries({ ...record.fields, id: record.id }).sort(([a], [b]) =>
-            a.localeCompare(b)
-          )
-        )
+      const records = await fetchAllRecords(
+        {
+          ...table,
+          fields: Object.values(table.fields),
+          sort: table.sort?.map(field => table.fields[field] ?? field)
+        },
+        apiKey
       );
+      snapshots[table.name] = records.map(record => ({
+        id: record.id,
+        ...Object.fromEntries(
+          Object.entries(table.fields)
+            .filter(([, field]) => record.fields[field] !== undefined)
+            .map(([name, field]) => [name, record.fields[field]])
+        )
+      }));
     })
   );
 
-  /**
-   * @param {string} table
-   * @param {string} field
-   */
-  const recordIds = (table, field) =>
-    new Map(snapshots[table].map(row => [row.id, row[field]]));
-
-  const relationships = [
-    {
-      table: "topics",
-      field: "Category",
-      ids: recordIds("categories", "Category ID")
-    },
-    {
-      table: "subtopics",
-      field: "Topic",
-      ids: recordIds("topics", "Topic ID")
-    },
-    {
-      table: "services",
-      field: "Service Subtopics",
-      ids: recordIds("subtopics", "Subtopic ID")
-    }
-  ];
-  for (const { table, field, ids } of relationships)
-    for (const row of snapshots[table]) {
-      const links = row[field];
-      if (links === undefined) continue;
-      if (!Array.isArray(links))
-        throw new Error(`Service finder ${row.id} has invalid ${field} links.`);
-      row[field] = links.map(id => {
-        const numericId = ids.get(id);
-        if (typeof numericId !== "number" || !Number.isInteger(numericId))
-          throw new Error(
-            `Service finder ${row.id} has an unresolved ${field} link: ${id}.`
-          );
-        return numericId;
-      });
-    }
+  const subtopicIDs = new Map(
+    snapshots.subtopics.map(row => [row.id, row.subtopicID])
+  );
+  for (const row of snapshots.services) {
+    const links = row.subtopicIDs;
+    if (links === undefined) continue;
+    if (!Array.isArray(links))
+      throw new Error(
+        `Service finder ${row.serviceID} has invalid subtopicIDs links.`
+      );
+    row.subtopicIDs = links.map(id => {
+      const numericID = subtopicIDs.get(id);
+      if (typeof numericID !== "number" || !Number.isInteger(numericID))
+        throw new Error(
+          `Service finder ${row.serviceID} has an unresolved subtopicIDs link: ${id}.`
+        );
+      return numericID;
+    });
+  }
 
   for (const rows of Object.values(snapshots))
     for (const row of rows) delete row.id;
 
   for (const [table, field, key] of [
-    ["topics", "Category", "Topic ID"],
-    ["subtopics", "Topic", "Subtopic ID"]
+    ["topics", "categoryID", "topicID"],
+    ["subtopics", "topicID", "subtopicID"]
   ])
     for (const row of snapshots[table]) {
       const links = row[field];
@@ -114,6 +111,13 @@ if (!apiKey) {
         );
       row[field] = links[0];
     }
+
+  for (const table of tables)
+    snapshots[table.name] = snapshots[table.name].map(row =>
+      Object.fromEntries(
+        Object.entries(row).sort(([a], [b]) => a.localeCompare(b))
+      )
+    );
 
   serviceFinderData.normalizeServiceFinderData(snapshots);
   for (const table of tables)

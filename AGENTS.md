@@ -34,16 +34,21 @@
   seconds.
 - `update_service_finder_data.mjs` syncs categories, topics, subtopics, and
   services by field name into `src/airTable/data/service_finder_*.json`, with
-  alphabetical JSON keys. Sync resolves Airtable links to numeric Category ID,
-  Topic ID, and Subtopic ID values before saving; internal record IDs are omitted.
+  alphabetical JSON keys. Topics read the `Category ID` lookup and subtopics read
+  the `Topic ID` lookup directly. Sync resolves service-to-subtopic Airtable links
+  to numeric Subtopic IDs before saving; internal record IDs are omitted.
 - Each service finder topic must link to exactly one category, and each subtopic
-  to exactly one topic. Snapshot `Category`/`Topic` and template-facing
-  `categoryID`/`topicID` are single numeric IDs. Missing, multiple, or invalid links
+  to exactly one topic. Saved and template-facing `categoryID`/`topicID` are
+  single numeric IDs. Missing, multiple, or invalid links
   fail sync/build rather than being silently accepted.
 - `src/_data/service_finder.cjs` loads these snapshots once per Eleventy build
   through `src/airTable/load_data.cjs`. Template-facing numeric ID fields use
   `categoryID`, `topicID`, `subtopicID`, and `serviceID`; numeric ID lists use
-  `subtopicIDs`. Raw snapshots retain Airtable field names. The results helper lives in
+  `subtopicIDs`. Service finder snapshots already use these final property names;
+  Airtable field-name mappings live only in `update_service_finder_data.mjs`,
+  whose API field lists are derived from that mapping. The loader validates
+  without renaming fields. SEP snapshots retain Airtable field names.
+  The results helper lives in
   `src/airTable/service_finder_helpers.mjs`.
 - Without `AIRTABLE_API_KEY`, both sync scripts validate and use checked-in
   snapshots. Keep Airtable field names stable; no field-ID mapping is used.
