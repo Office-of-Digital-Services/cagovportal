@@ -5,12 +5,6 @@ const sepImagePath = "/images/sep/";
 const mainSiteBaseUrl = "https://www.ca.gov";
 
 module.exports = async function () {
-  const cleanup = (/** @type {string} */ s) =>
-    s.replace(
-      /Assistance and social\W\Wprograms/g,
-      "Assistance and social programs"
-    );
-
   const socialLinkCleanup = (/** @type {string} */ url) =>
     `${url.split("?")[0].replace(/^\//, "").replace(/\/$/, "").split("/").pop()}`;
 
@@ -88,9 +82,6 @@ module.exports = async function () {
 
     item["Updated"] = myDateFormat(item["Updated"]);
 
-    //Fix annoying typos
-    item["AgencyTags"] = cleanup(item["AgencyTags"]);
-
     const socialLinks = [];
     if (item.Facebook) {
       if (!item.Facebook.startsWith("http"))
@@ -157,9 +148,6 @@ module.exports = async function () {
 
   results.services.forEach(item => {
     trimObjectProperties(item);
-
-    //Fix annoying typos
-    item["AgencyTags"] = cleanup(item["AgencyTags"]);
 
     item["Updated"] = myDateFormat(item["Updated"]);
 
