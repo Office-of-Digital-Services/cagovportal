@@ -36,6 +36,7 @@ module.exports = function (/** @type {EleventyConfig} **/ eleventyConfig) {
 
   eleventyConfig.addWatchTarget("./src/js/");
   eleventyConfig.addWatchTarget("./src/css/");
+  eleventyConfig.addWatchTarget("./src/airTable/data/");
 
   // Add watch target for .mjs files inside the pages directory
   eleventyConfig.addWatchTarget("./pages/");

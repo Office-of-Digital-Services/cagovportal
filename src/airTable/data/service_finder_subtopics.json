@@ -1,0 +1,297 @@
+[
+  {
+    "Name": "Child support",
+    "SubtopicId": 1,
+    "TopicId": 1
+  },
+  {
+    "Name": "Childcare and food for children",
+    "SubtopicId": 2,
+    "TopicId": 1
+  },
+  {
+    "Name": "Disability",
+    "SubtopicId": 3,
+    "TopicId": 1
+  },
+  {
+    "Name": "Financial support",
+    "SubtopicId": 4,
+    "TopicId": 1
+  },
+  {
+    "Name": "Food assistance",
+    "SubtopicId": 5,
+    "TopicId": 1
+  },
+  {
+    "Name": "Health and insurance",
+    "SubtopicId": 6,
+    "TopicId": 1
+  },
+  {
+    "Name": "Housing and utilities",
+    "SubtopicId": 7,
+    "TopicId": 1
+  },
+  {
+    "Name": "Maternal and infant health",
+    "SubtopicId": 8,
+    "TopicId": 1
+  },
+  {
+    "Name": "Senior and caregiver support",
+    "SubtopicId": 9,
+    "TopicId": 1
+  },
+  {
+    "Name": "Social assistance",
+    "SubtopicId": 10,
+    "TopicId": 1
+  },
+  {
+    "Name": "Contractors",
+    "SubtopicId": 33,
+    "TopicId": 8
+  },
+  {
+    "Name": "Employers",
+    "SubtopicId": 34,
+    "TopicId": 8
+  },
+  {
+    "Name": "Incentives",
+    "SubtopicId": 35,
+    "TopicId": 8
+  },
+  {
+    "Name": "Licenses and permits",
+    "SubtopicId": 36,
+    "TopicId": 8
+  },
+  {
+    "Name": "Managing a business",
+    "SubtopicId": 37,
+    "TopicId": 8
+  },
+  {
+    "Name": "Resources and help",
+    "SubtopicId": 38,
+    "TopicId": 8
+  },
+  {
+    "Name": "Starting a business",
+    "SubtopicId": 39,
+    "TopicId": 8
+  },
+  {
+    "Name": "Auto maintenance",
+    "SubtopicId": 18,
+    "TopicId": 5
+  },
+  {
+    "Name": "DMV",
+    "SubtopicId": 19,
+    "TopicId": 5
+  },
+  {
+    "Name": "Traffic tickets",
+    "SubtopicId": 20,
+    "TopicId": 5
+  },
+  {
+    "Name": "K - 12",
+    "SubtopicId": 11,
+    "TopicId": 2
+  },
+  {
+    "Name": "College",
+    "SubtopicId": 12,
+    "TopicId": 2
+  },
+  {
+    "Name": "Adult education",
+    "SubtopicId": 13,
+    "TopicId": 2
+  },
+  {
+    "Name": "General",
+    "SubtopicId": 59,
+    "TopicId": 2
+  },
+  {
+    "Name": "Conservation",
+    "SubtopicId": 52,
+    "TopicId": 13
+  },
+  {
+    "Name": "Grants",
+    "SubtopicId": 53,
+    "TopicId": 13
+  },
+  {
+    "Name": "Climate",
+    "SubtopicId": 54,
+    "TopicId": 13
+  },
+  {
+    "Name": "Environmental safety",
+    "SubtopicId": 55,
+    "TopicId": 13
+  },
+  {
+    "Name": "Children and infant health",
+    "SubtopicId": 21,
+    "TopicId": 6
+  },
+  {
+    "Name": "Maternal health",
+    "SubtopicId": 22,
+    "TopicId": 6
+  },
+  {
+    "Name": "Mental and behavioral health",
+    "SubtopicId": 23,
+    "TopicId": 6
+  },
+  {
+    "Name": "Health insurance",
+    "SubtopicId": 24,
+    "TopicId": 6
+  },
+  {
+    "Name": "Resources for people with disabilities",
+    "SubtopicId": 25,
+    "TopicId": 6
+  },
+  {
+    "Name": "Older adult health",
+    "SubtopicId": 26,
+    "TopicId": 6
+  },
+  {
+    "Name": "Food and nutrition",
+    "SubtopicId": 27,
+    "TopicId": 6
+  },
+  {
+    "Name": "Own or buy a home",
+    "SubtopicId": 15,
+    "TopicId": 4
+  },
+  {
+    "Name": "Rent",
+    "SubtopicId": 16,
+    "TopicId": 4
+  },
+  {
+    "Name": "Find housing",
+    "SubtopicId": 17,
+    "TopicId": 4
+  },
+  {
+    "Name": "Citizenship",
+    "SubtopicId": 56,
+    "TopicId": 14
+  },
+  {
+    "Name": "Immigration resources",
+    "SubtopicId": 57,
+    "TopicId": 14
+  },
+  {
+    "Name": "DACA",
+    "SubtopicId": 58,
+    "TopicId": 14
+  },
+  {
+    "Name": "Unemployment",
+    "SubtopicId": 40,
+    "TopicId": 9
+  },
+  {
+    "Name": "Find a job",
+    "SubtopicId": 41,
+    "TopicId": 9
+  },
+  {
+    "Name": "Worker's rights",
+    "SubtopicId": 42,
+    "TopicId": 9
+  },
+  {
+    "Name": "Job training",
+    "SubtopicId": 43,
+    "TopicId": 9
+  },
+  {
+    "Name": "Personal records subtopic",
+    "SubtopicId": 14,
+    "TopicId": 3
+  },
+  {
+    "Name": "Consumer rights and safety",
+    "SubtopicId": 28,
+    "TopicId": 7
+  },
+  {
+    "Name": "Crime",
+    "SubtopicId": 29,
+    "TopicId": 7
+  },
+  {
+    "Name": "Disasters",
+    "SubtopicId": 30,
+    "TopicId": 7
+  },
+  {
+    "Name": "Environmental safety",
+    "SubtopicId": 31,
+    "TopicId": 7
+  },
+  {
+    "Name": "Road safety",
+    "SubtopicId": 32,
+    "TopicId": 7
+  },
+  {
+    "Name": "Courts",
+    "SubtopicId": 46,
+    "TopicId": 11
+  },
+  {
+    "Name": "Laws",
+    "SubtopicId": 47,
+    "TopicId": 11
+  },
+  {
+    "Name": "State data and statistics",
+    "SubtopicId": 48,
+    "TopicId": 11
+  },
+  {
+    "Name": "Voting and elections",
+    "SubtopicId": 49,
+    "TopicId": 11
+  },
+  {
+    "Name": "Filing your taxes",
+    "SubtopicId": 44,
+    "TopicId": 10
+  },
+  {
+    "Name": "For businesses",
+    "SubtopicId": 45,
+    "TopicId": 10
+  },
+  {
+    "Name": "Entertainment",
+    "SubtopicId": 50,
+    "TopicId": 12
+  },
+  {
+    "Name": "Recreation",
+    "SubtopicId": 51,
+    "TopicId": 12
+  }
+]

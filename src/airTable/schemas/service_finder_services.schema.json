@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Service finder services",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["ServiceId"],
+    "properties": {
+      "ServiceId": { "type": "integer" },
+      "ShortDescription": { "type": "string" },
+      "SubtopicIds": {
+        "type": "array",
+        "items": { "type": "integer" }
+      }
+    }
+  }
+}

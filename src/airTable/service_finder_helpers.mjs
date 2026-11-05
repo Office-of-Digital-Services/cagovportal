@@ -2,8 +2,9 @@
 
 /**
  * @typedef {object} ServiceFinderService
- * @property {number} serviceId
- * @property {string[]} [subtopics]
+ * @property {number} ServiceId
+ * @property {number[]} [SubtopicIds]
+ * @property {string} [ShortDescription]
  */
 
 /**
@@ -15,6 +16,7 @@
 /**
  * @typedef {object} SepService
  * @property {number} ServiceId
+ * @property {string} ShortDescription
  */
 
 /**
@@ -24,15 +26,14 @@
 
 /**
  * @typedef {object} ServiceFinderSubtopic
- * @property {string} id
- * @property {number} subtopicId
- * @property {string[]} topic
+ * @property {number} SubtopicId
+ * @property {number} TopicId
  * @property {SepService[]} [sepServices]
  */
 
 /**
  * @typedef {object} ResultsItem
- * @property {string} id
+ * @property {number} TopicId
  * @property {ServiceFinderSubtopic[]} [subtopics]
  */
 
@@ -46,26 +47,26 @@ export default {
    * @returns {ResultsItem}
    */
   getResultsDataset(item, serviceFinderData, stateEntity) {
-    item.subtopics = serviceFinderData.subtopics?.filter(subtopic =>
-      subtopic.topic.includes(item.id)
+    item.subtopics = serviceFinderData.subtopics?.filter(
+      subtopic => subtopic.TopicId === item.TopicId
     );
 
     item.subtopics?.forEach(subtopic => {
       subtopic.sepServices = serviceFinderData.services
-        ?.filter(service => service.subtopics?.includes(subtopic.id))
+        ?.filter(service => service.SubtopicIds?.includes(subtopic.SubtopicId))
         .map(service => {
-          const serviceId = service.serviceId;
-
           const sepService = stateEntity.services.find(
-            s => s.ServiceId === serviceId
+            s => s.ServiceId === service.ServiceId
           );
 
-          if (sepService)
-            sepService.shortDescription = service.shortDescription ?? "";
+          if (!sepService)
+            throw new Error(
+              `Service finder ${service.ServiceId} references missing SEP service.`
+            );
 
+          sepService.ShortDescription = service.ShortDescription ?? "";
           return sepService;
-        })
-        .filter(x => !!x);
+        });
     });
 
     return item;
