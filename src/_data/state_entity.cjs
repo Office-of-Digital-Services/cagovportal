@@ -1,13 +1,8 @@
 //@ts-check
-const fs = require("node:fs");
 const { loadSepData } = require("../airTable/load_sep_data.cjs");
 const sepImagePath = "/images/sep/";
-const sharp = require("sharp");
 
-const remoteImagesBaseUrl = "https://stateentityprofile.ca.gov/Uploads/";
 const mainSiteBaseUrl = "https://www.ca.gov";
-const localImagesBasePath = "./src/images/sep/";
-const localImagesBasePathPassThru = "./_site/images/sep/";
 
 module.exports = async function () {
   const cleanup = (/** @type {string} */ s) =>
@@ -52,127 +47,6 @@ module.exports = async function () {
       service: []
     })
   };
-
-  // Now download and process images
-
-  // Good quality WebP for web
-  /** @type {sharp.WebpOptions} */
-  const webpoptions = {
-    quality: 50, // 0 (lowest) to 100 (highest)
-    effort: 6, // 0 (fastest) to 6 (slowest)
-    alphaQuality: 50, // 0 (lowest) to 100 (highest),
-    lossless: false,
-    nearLossless: false,
-    smartSubsample: false,
-    force: true
-  };
-
-  /** @type {sharp.ResizeOptions} */
-  const serviceResizeOptions = {
-    // center and crop to square
-    width: 300,
-    height: 300,
-    withoutEnlargement: true // Don't add pixels to small images
-  };
-
-  /** @type {sharp.ResizeOptions} */
-  const agencyResizeOptions = {
-    // unlimited height, max width 270
-    width: 270,
-    withoutEnlargement: true // Don't add pixels to small images
-  };
-
-  const processImages = async () => {
-    let processedCount = 0;
-
-    // get a list of existing images from the local folder
-    if (!fs.existsSync(localImagesBasePath)) fs.mkdirSync(localImagesBasePath);
-
-    const existingImages = fs.readdirSync(localImagesBasePath);
-
-    // Build a list of all images that should exist
-    const imagesToProcess = results.agencies
-      .map(a => ({ filename: a.LogoUrl, resizeOptions: agencyResizeOptions }))
-      .concat(
-        results.services.map(s => ({
-          filename: s.ImageUrl,
-          resizeOptions: serviceResizeOptions
-        }))
-      )
-      .filter(s => s.filename) // only those with images
-      .map(s => ({
-        filename: s.filename,
-        resizeOptions: s.resizeOptions,
-        newfile: s.filename.replace(/\.(png|jpg|jpeg|gif)$/i, ".webp")
-      }));
-
-    /**
-     * Fetches an image from remote URL, processes it, and saves it locally
-     * @param {string} file - The filename of the image to fetch
-     * @param {string} newfile - The new filename to save the processed image as
-     * @param {sharp.ResizeOptions} resizeOptions - The resize options for sharp
-     */
-    const fetchAndProcessImage = async (file, newfile, resizeOptions) => {
-      const outputPath = `${localImagesBasePath}${newfile}`;
-
-      processedCount++;
-
-      try {
-        const res = await fetch(remoteImagesBaseUrl + file);
-        if (!res.ok)
-          throw new Error(`Failed to fetch image: ${res.statusText}`);
-        console.warn(`Adding image: ${file}`);
-        const buffer = await res.arrayBuffer();
-        await sharp(Buffer.from(buffer))
-          .webp(webpoptions)
-          .resize(resizeOptions)
-          .toFile(outputPath);
-
-        // Copy to output _site too, since Eleventy already did the passthrough copy
-        const secondOutputPath = outputPath.replace(
-          localImagesBasePath,
-          localImagesBasePathPassThru
-        );
-        fs.copyFileSync(outputPath, secondOutputPath);
-      } catch (err) {
-        console.error(`Error processing image`, err);
-      }
-    }; // End fetchAndProcessImage()
-
-    const threadingTasks = imagesToProcess
-      .filter(s => !existingImages.includes(s.newfile))
-      .map(image =>
-        fetchAndProcessImage(image.filename, image.newfile, image.resizeOptions)
-      );
-
-    if (threadingTasks.length) {
-      await Promise.all(threadingTasks);
-      if (processedCount !== 0)
-        console.warn(`Added ${processedCount} missing images.`);
-    }
-
-    // Delete any existing images that are no longer needed
-    existingImages
-      .filter(
-        existingImage =>
-          !imagesToProcess.some(img => img.newfile === existingImage)
-      )
-      .forEach(extraImage => {
-        console.warn(`Deleting extra image: ${extraImage}`);
-
-        fs.unlinkSync(`${localImagesBasePath}${extraImage}`);
-      });
-  };
-
-  if (process.env.ELEVENTY_RUN_MODE === "build") {
-    console.time("Image Processing");
-    await processImages();
-    console.timeEnd("Image Processing");
-  }
-
-  console.time("Image Processing");
-  await processImages();
-  console.timeEnd("Image Processing");
 
   // Add a SortOrder value for each agency as it currently stands
   results.agencies.forEach((item, index) => {

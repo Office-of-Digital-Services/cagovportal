@@ -24,7 +24,8 @@ npm ci
 npm start
 ```
 
-Build with `npm run build`, which runs prebuild tasks before Eleventy.
+Build with `npm run build`, which refreshes data and prepares SEP images before
+Eleventy. Run `npm run prebuild` before `npm start` when data or images need updating.
 Run prebuild tasks alone with `npm run prebuild`; the Airtable refresh is skipped
 without `AIRTABLE_API_KEY`, using checked-in SEP snapshots instead. See
 [the prebuild entry point](src/scripts/prebuild.mjs) to add tasks.
