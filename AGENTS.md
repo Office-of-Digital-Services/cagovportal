@@ -25,9 +25,13 @@
 ## Prebuild and external data
 
 - [src/scripts/prebuild.mjs](src/scripts/prebuild.mjs) is the prebuild entry
-  point. Add future Node.js tasks to its `scripts` array, with paths relative to
-  that file. Tasks run sequentially in separate processes; nonzero exits stop
-  the build.
+  point. Data syncs in `dataScripts` run concurrently; subsequent tasks in
+  `scripts` run sequentially after both syncs succeed, in separate processes.
+  Paths are relative to the entry point; nonzero exits stop the build.
+- Each sync fetches its tables with `Promise.all` before validation and writing.
+  Pagination stays sequential within each table. Concurrent requests can hit
+  Airtable's base-wide rate limit; the API helper retries a 429 once after 30
+  seconds.
 - `update_service_finder_data.mjs` syncs categories, topics, subtopics, and
   services by field name into `src/airTable/data/service_finder_*.json`, with
   alphabetical JSON keys. Record IDs are retained for linked-table relationships.

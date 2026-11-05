@@ -45,17 +45,19 @@ if (!apiKey) {
 } else {
   /** @type {Record<string, Record<string, unknown>[]>} */
   const snapshots = {};
-  for (const table of tables) {
-    console.info(`Fetching service finder ${table.name}`);
-    const records = await fetchAllRecords(table, apiKey);
-    snapshots[table.name] = records.map(record =>
-      Object.fromEntries(
-        Object.entries({ ...record.fields, id: record.id }).sort(([a], [b]) =>
-          a.localeCompare(b)
+  await Promise.all(
+    tables.map(async table => {
+      console.info(`Fetching service finder ${table.name}`);
+      const records = await fetchAllRecords(table, apiKey);
+      snapshots[table.name] = records.map(record =>
+        Object.fromEntries(
+          Object.entries({ ...record.fields, id: record.id }).sort(([a], [b]) =>
+            a.localeCompare(b)
+          )
         )
-      )
-    );
-  }
+      );
+    })
+  );
 
   serviceFinderData.normalizeServiceFinderData(snapshots);
   for (const table of tables)
