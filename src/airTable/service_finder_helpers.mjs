@@ -2,7 +2,7 @@
 
 /**
  * @typedef {object} ServiceFinderService
- * @property {number} serviceID
+ * @property {number} serviceId
  * @property {number[]} [subtopicIds]
  * @property {string} [shortDescription]
  */
@@ -55,10 +55,10 @@ export default {
       subtopic.sepServices = serviceFinderData.services
         ?.filter(service => service.subtopicIds?.includes(subtopic.subtopicId))
         .map(service => {
-          const serviceID = service.serviceID;
+          const serviceId = service.serviceId;
 
           const sepService = stateEntity.services.find(
-            s => s.ServiceId === serviceID
+            s => s.ServiceId === serviceId
           );
 
           if (sepService)

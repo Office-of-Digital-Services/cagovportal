@@ -6,9 +6,9 @@
   "items": {
     "type": "object",
     "additionalProperties": false,
-    "required": ["serviceID"],
+    "required": ["serviceId"],
     "properties": {
-      "serviceID": { "type": "integer" },
+      "serviceId": { "type": "integer" },
       "shortDescription": { "type": "string" },
       "subtopicIds": {
         "type": "array",

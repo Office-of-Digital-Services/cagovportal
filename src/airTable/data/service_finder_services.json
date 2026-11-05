@@ -1,6 +1,6 @@
 [
   {
-    "serviceID": 1274,
+    "serviceId": 1274,
     "shortDescription": "Enter the California Lottery 2nd Chance drawings. Turn non-winning tickets into chances to win prizes.",
     "subtopicIds": [
       50,
@@ -8,14 +8,14 @@
     ]
   },
   {
-    "serviceID": 1244,
+    "serviceId": 1244,
     "shortDescription": "Find community living services for people with disabilities. Get help with housing and daily living skills to live independently.",
     "subtopicIds": [
       3
     ]
   },
   {
-    "serviceID": 1255,
+    "serviceId": 1255,
     "shortDescription": "Find adult day health centers near you. Get daytime care, health services, and activities for seniors and adults with disabilities.",
     "subtopicIds": [
       9,
@@ -23,7 +23,7 @@
     ]
   },
   {
-    "serviceID": 1250,
+    "serviceId": 1250,
     "shortDescription": "Keep your hazardous waste ID number compliant with the annual Electronic Verification Questionnaire.",
     "subtopicIds": [
       31,
@@ -31,7 +31,7 @@
     ]
   },
   {
-    "serviceID": 1146,
+    "serviceId": 1146,
     "shortDescription": "If you disagree with a cannabis license decision, you may submit an appeal. Learn about the appeal process.",
     "subtopicIds": [
       36,
@@ -39,7 +39,7 @@
     ]
   },
   {
-    "serviceID": 1281,
+    "serviceId": 1281,
     "shortDescription": "Apply for a California cannabis business license. You can get local permits and submit your application.",
     "subtopicIds": [
       39,
@@ -47,7 +47,7 @@
     ]
   },
   {
-    "serviceID": 1194,
+    "serviceId": 1194,
     "shortDescription": "Apply for a REAL ID driver's license or identification card. A REAL ID is required to board flights in the U.S. and to enter certain federal facilities.",
     "subtopicIds": [
       19,
@@ -55,7 +55,7 @@
     ]
   },
   {
-    "serviceID": 1144,
+    "serviceId": 1144,
     "shortDescription": "Apply for a California horse racing license. Get licensed to work in horse racing as an owner, trainer, or jockey.",
     "subtopicIds": [
       36,
@@ -63,14 +63,14 @@
     ]
   },
   {
-    "serviceID": 1261,
+    "serviceId": 1261,
     "shortDescription": "Apply for seismic safety grants for small or rural hospitals. Get funding for your hospital to help you meet earthquake safety standards.",
     "subtopicIds": [
       31
     ]
   },
   {
-    "serviceID": 26,
+    "serviceId": 26,
     "shortDescription": "Apply for a seller’s permit to collect California sales tax. You need a permit if your business sells goods.",
     "subtopicIds": [
       36,
@@ -78,14 +78,14 @@
     ]
   },
   {
-    "serviceID": 52,
+    "serviceId": 52,
     "shortDescription": "Order a certified copy of a birth certificate online, by mail, or in person,",
     "subtopicIds": [
       14
     ]
   },
   {
-    "serviceID": 1169,
+    "serviceId": 1169,
     "shortDescription": "Apply for help paying crime-related expenses. The California Victim Compensation Board helps victims cover medical bills, lost wages, and other costs.",
     "subtopicIds": [
       29,
@@ -93,21 +93,21 @@
     ]
   },
   {
-    "serviceID": 53,
+    "serviceId": 53,
     "shortDescription": "Order a certified copy of a California death certificate online, by mail, or in person.",
     "subtopicIds": [
       14
     ]
   },
   {
-    "serviceID": 51,
+    "serviceId": 51,
     "shortDescription": "Order a certified copy of a California marriage certificate online, by mail, or in person. ",
     "subtopicIds": [
       14
     ]
   },
   {
-    "serviceID": 37,
+    "serviceId": 37,
     "shortDescription": "Apply for free or low-cost health coverage. All Californians can apply regardless of immigration status.",
     "subtopicIds": [
       24,
@@ -116,7 +116,7 @@
     ]
   },
   {
-    "serviceID": 74,
+    "serviceId": 74,
     "shortDescription": "Apply for health insurance through Covered California. You can shop plans and compare prices to find one that’s right for you.",
     "subtopicIds": [
       24,
@@ -124,14 +124,14 @@
     ]
   },
   {
-    "serviceID": 1156,
+    "serviceId": 1156,
     "shortDescription": "Apply for funding to build or modernize schools. This include grants and loans for school construction and facility projects.",
     "subtopicIds": [
       59
     ]
   },
   {
-    "serviceID": 1095,
+    "serviceId": 1095,
     "shortDescription": "Apply for California state financial aid if you can't get federal aid. The Dream Act helps you pay for college or career training.",
     "subtopicIds": [
       12,
@@ -140,7 +140,7 @@
     ]
   },
   {
-    "serviceID": 1273,
+    "serviceId": 1273,
     "shortDescription": "Apply to a California veterans home. Get access to long-term care, skilled nursing, and residential living for eligible veterans.",
     "subtopicIds": [
       26,
@@ -148,14 +148,14 @@
     ]
   },
   {
-    "serviceID": 1230,
+    "serviceId": 1230,
     "shortDescription": "Submit concept proposals for grants to support San Diego River conservation. Get support for projects to improve trails, parks, and open spaces.",
     "subtopicIds": [
       52
     ]
   },
   {
-    "serviceID": 1108,
+    "serviceId": 1108,
     "shortDescription": "Attend a free student financial aid workshop with the Cash for College program. Get help filling out financial aid forms and learn about scholarships.",
     "subtopicIds": [
       12,
@@ -163,7 +163,7 @@
     ]
   },
   {
-    "serviceID": 1277,
+    "serviceId": 1277,
     "shortDescription": "Apply to become a California Lottery retailer. Sell lottery tickets at your business. Earn commissions on your ticket sales.",
     "subtopicIds": [
       50,
@@ -171,24 +171,24 @@
     ]
   },
   {
-    "serviceID": 1297,
+    "serviceId": 1297,
     "shortDescription": "Join the Black Infant Health Program for support during pregnancy. Receive one-on-one and group sessions focused on improving birth outcomes.",
     "subtopicIds": [
       21
     ]
   },
   {
-    "serviceID": 1245,
+    "serviceId": 1245,
     "shortDescription": "Get services for Californians who are blind or visually impaired. Find training, tools, and support to live independently and find jobs in California.",
     "subtopicIds": [
       25
     ]
   },
   {
-    "serviceID": 1327
+    "serviceId": 1327
   },
   {
-    "serviceID": 1310,
+    "serviceId": 1310,
     "shortDescription": "Get housing and financial help if your family is in the child welfare system and homeless or at risk. Stable housing can help you reunite or stay together.",
     "subtopicIds": [
       10,
@@ -196,7 +196,7 @@
     ]
   },
   {
-    "serviceID": 1240,
+    "serviceId": 1240,
     "shortDescription": "Get a burn permit before outdoor burning in California. See the steps and information you need to plan safe burning and the alternatives.",
     "subtopicIds": [
       31,
@@ -204,42 +204,42 @@
     ]
   },
   {
-    "serviceID": 1126,
+    "serviceId": 1126,
     "shortDescription": "California provides great incentives for businesses. This includes tax credits, grants, and more.",
     "subtopicIds": [
       35
     ]
   },
   {
-    "serviceID": 1127,
+    "serviceId": 1127,
     "shortDescription": "Find out what permits you need for your business based on business types and location. You’ll also get contact information for each agency.",
     "subtopicIds": [
       36
     ]
   },
   {
-    "serviceID": 1199,
+    "serviceId": 1199,
     "shortDescription": "Check if your truck meets California emissions standards. Find out if your commercial vehicle complies with clean truck regulations.",
     "subtopicIds": [
       19
     ]
   },
   {
-    "serviceID": 1276,
+    "serviceId": 1276,
     "shortDescription": "Find CA Lottery district office locations near you. Get addresses, hours, and contact info for local offices serving your area of California.",
     "subtopicIds": [
       50
     ]
   },
   {
-    "serviceID": 1272,
+    "serviceId": 1272,
     "shortDescription": "Download the California Lottery mobile app. Check winning numbers, scan tickets, find retailers, and play games on your phone.",
     "subtopicIds": [
       50
     ]
   },
   {
-    "serviceID": 1178,
+    "serviceId": 1178,
     "shortDescription": "The CA Meals for Kids mobile app helps you find, save, and share nearby California meal sites. Search using various criteria to find results to meet your needs.",
     "subtopicIds": [
       21,
@@ -249,7 +249,7 @@
     ]
   },
   {
-    "serviceID": 1179,
+    "serviceId": 1179,
     "shortDescription": "The CA Meals for Kids mobile app helps you find, save, and share nearby California meal sites. Search using various criteria to find results to meet your needs.",
     "subtopicIds": [
       2,
@@ -257,14 +257,14 @@
     ]
   },
   {
-    "serviceID": 1189,
+    "serviceId": 1189,
     "shortDescription": "Find state job recruitment events and resources. Attend hiring fairs, workshops, and info sessions for California government careers.",
     "subtopicIds": [
       41
     ]
   },
   {
-    "serviceID": 1284,
+    "serviceId": 1284,
     "shortDescription": "Apply for grants to improve forest health, prevent wildfires, enhance firefighting capacity and funding for communities.",
     "subtopicIds": [
       53,
@@ -272,7 +272,7 @@
     ]
   },
   {
-    "serviceID": 63,
+    "serviceId": 63,
     "shortDescription": "Apply for Cal Grant financial aid to pay for tuition and fees at California colleges.",
     "subtopicIds": [
       12,
@@ -280,7 +280,7 @@
     ]
   },
   {
-    "serviceID": 1182,
+    "serviceId": 1182,
     "shortDescription": "Sign up for a CalABLE account to save without risking disability benefits. You can save with tax free earnings and pay for disability-related expenses. ",
     "subtopicIds": [
       25,
@@ -288,14 +288,14 @@
     ]
   },
   {
-    "serviceID": 9,
+    "serviceId": 9,
     "shortDescription": "Estimate your child support payment using California’s official calculator.",
     "subtopicIds": [
       1
     ]
   },
   {
-    "serviceID": 1136,
+    "serviceId": 1136,
     "shortDescription": "Calculate your California earthquake insurance premium. Get an estimate based on your location and home value.",
     "subtopicIds": [
       4,
@@ -304,28 +304,28 @@
     ]
   },
   {
-    "serviceID": 1226,
+    "serviceId": 1226,
     "shortDescription": "Estimate your unemployment insurance benefit amount. Calculate weekly payments based on your earnings. You can see what you might receive if you're unemployed.",
     "subtopicIds": [
       40
     ]
   },
   {
-    "serviceID": 1168,
+    "serviceId": 1168,
     "shortDescription": "E-file your state tax return directly to the Franchise Tax Board for free. Get real-time confirmation and the fastest refund possible.",
     "subtopicIds": [
       44
     ]
   },
   {
-    "serviceID": 1148,
+    "serviceId": 1148,
     "shortDescription": "Get information about the California Census. Find data, resources, and why the census matters for your community.",
     "subtopicIds": [
       48
     ]
   },
   {
-    "serviceID": 1167,
+    "serviceId": 1167,
     "shortDescription": "The California Earned Income Tax Credit offers support for low-income, working Californians. See if you qualify.",
     "subtopicIds": [
       44,
@@ -333,24 +333,24 @@
     ]
   },
   {
-    "serviceID": 1328
+    "serviceId": 1328
   },
   {
-    "serviceID": 1298,
+    "serviceId": 1298,
     "shortDescription": "Get free home visits for new parents. You can receive professional support, parenting help, and resources to help overburdened families.",
     "subtopicIds": [
       21
     ]
   },
   {
-    "serviceID": 1188,
+    "serviceId": 1188,
     "shortDescription": "Search for people in California prisons online. You can find information about their location, release dates, and parole hearing. ",
     "subtopicIds": [
       46
     ]
   },
   {
-    "serviceID": 1171,
+    "serviceId": 1171,
     "shortDescription": "Get affordable car insurance through California Low Cost Auto. Good drivers with low income can get coverage at reduced rates.",
     "subtopicIds": [
       6,
@@ -358,7 +358,7 @@
     ]
   },
   {
-    "serviceID": 1224,
+    "serviceId": 1224,
     "shortDescription": "Learn how to qualify for California paid sick leave rights and learn what might be covered. Most workers can earn paid time off to care for themself or a family member.",
     "subtopicIds": [
       4,
@@ -367,10 +367,10 @@
     ]
   },
   {
-    "serviceID": 1329
+    "serviceId": 1329
   },
   {
-    "serviceID": 1247,
+    "serviceId": 1247,
     "shortDescription": "Get firefighter training and certification through California State Fire Training. Find courses, academies, and career programs.",
     "subtopicIds": [
       31,
@@ -378,14 +378,14 @@
     ]
   },
   {
-    "serviceID": 1253,
+    "serviceId": 1253,
     "shortDescription": "Track local reservoir levels, drought status, and precipitation data with California Water Watch.",
     "subtopicIds": [
       55
     ]
   },
   {
-    "serviceID": 31,
+    "serviceId": 31,
     "shortDescription": "Get current wildfire info, evacuation orders, and emergency alerts. Check fire conditions and air quality in your area.",
     "subtopicIds": [
       31,
@@ -393,17 +393,17 @@
     ]
   },
   {
-    "serviceID": 1326
+    "serviceId": 1326
   },
   {
-    "serviceID": 64,
+    "serviceId": 64,
     "shortDescription": "Apply for a CalVet home lone you’re a veteran buying a home in California.These loans offer low rates and flexible terms.",
     "subtopicIds": [
       7
     ]
   },
   {
-    "serviceID": 1313,
+    "serviceId": 1313,
     "shortDescription": "Get help finding housing or temporary shelter. You're eligible if you're in CalWORKs and homeless or at risk. Apply at your county welfare office.",
     "subtopicIds": [
       10,
@@ -411,14 +411,14 @@
     ]
   },
   {
-    "serviceID": 1312,
+    "serviceId": 1312,
     "shortDescription": "Enrolled in CalWORKS? Get help with rent, deposits, and moving costs if your family is homeless or at risk. Apply through your county welfare office. ",
     "subtopicIds": [
       7
     ]
   },
   {
-    "serviceID": 1239,
+    "serviceId": 1239,
     "shortDescription": "Get a free campfire permit online before burning outdoors in California. Find out more about state fire requirements and safety.",
     "subtopicIds": [
       51,
@@ -426,42 +426,42 @@
     ]
   },
   {
-    "serviceID": 1304,
+    "serviceId": 1304,
     "shortDescription": "A Certificate of Veterinary Inspection for dogs must be submitted within 10 days of entering California. This is required to meet state import rules.",
     "subtopicIds": [
       14
     ]
   },
   {
-    "serviceID": 1208,
+    "serviceId": 1208,
     "shortDescription": "Submit certified payroll records for California public works projects.",
     "subtopicIds": [
       45
     ]
   },
   {
-    "serviceID": 1228,
+    "serviceId": 1228,
     "shortDescription": "Certify for unemployment benefits every 2 weeks. Report your work search and earnings to keep receiving payments.",
     "subtopicIds": [
       40
     ]
   },
   {
-    "serviceID": 7,
+    "serviceId": 7,
     "shortDescription": "Visit the Department of Consumer Affairs to verify auto shop license status. ",
     "subtopicIds": [
       36
     ]
   },
   {
-    "serviceID": 10,
+    "serviceId": 10,
     "shortDescription": "Check the status of your contractor license application online.",
     "subtopicIds": [
       33
     ]
   },
   {
-    "serviceID": 1287,
+    "serviceId": 1287,
     "shortDescription": "Stay prepared and plan for extreme heat events with alerts and heat risk scores. Get information about local resources like cool centers.",
     "subtopicIds": [
       54,
@@ -470,35 +470,35 @@
     ]
   },
   {
-    "serviceID": 1319,
+    "serviceId": 1319,
     "shortDescription": "You can check the status of your teacher credential application. Learn about how it's processed and timelines.",
     "subtopicIds": [
       11
     ]
   },
   {
-    "serviceID": 33,
+    "serviceId": 33,
     "shortDescription": "Check your state tax refund status. Refunds filed online take up to 3 weeks.",
     "subtopicIds": [
       44
     ]
   },
   {
-    "serviceID": 1214,
+    "serviceId": 1214,
     "shortDescription": "Make, receive, and manage child support payments through the California State Disbursement Unit.",
     "subtopicIds": [
       1
     ]
   },
   {
-    "serviceID": 1203,
+    "serviceId": 1203,
     "shortDescription": "Use Customer Connect to manage your child support case. You can review case information, get payment history, contact your case manager, and more.",
     "subtopicIds": [
       1
     ]
   },
   {
-    "serviceID": 1270,
+    "serviceId": 1270,
     "shortDescription": "Learn about and gather resources on air quality, lead, pesticides, and other environmental risks to kids.",
     "subtopicIds": [
       21,
@@ -506,28 +506,28 @@
     ]
   },
   {
-    "serviceID": 1236,
+    "serviceId": 1236,
     "shortDescription": "Find Medi-Cal doctors, hospitals, dentists, and more near you with Health Care Options. Search thousands of providers who accept Medi-Cal insurance.",
     "subtopicIds": [
       6
     ]
   },
   {
-    "serviceID": 1269,
+    "serviceId": 1269,
     "shortDescription": "Claim your California Lottery prize. Find out how to collect winnings for scratch-offs and draw games.",
     "subtopicIds": [
       50
     ]
   },
   {
-    "serviceID": 1234,
+    "serviceId": 1234,
     "shortDescription": "Apply for coastal enhancement grants. You can search current conservation projects that work to protect California's waters. Find out more and how you can get involved.",
     "subtopicIds": [
       55
     ]
   },
   {
-    "serviceID": 1314,
+    "serviceId": 1314,
     "shortDescription": "Get funding for adult and senior care facilities that serve vulnerable population. This funding can be used to buy land, build new facilities, or renovations.",
     "subtopicIds": [
       17,
@@ -535,11 +535,11 @@
     ]
   },
   {
-    "serviceID": 1316,
+    "serviceId": 1316,
     "shortDescription": "Community groups can get help with stopping conflicts and potential violence. This helps reduces conflict between groups to help them agree on a solution."
   },
   {
-    "serviceID": 1128,
+    "serviceId": 1128,
     "shortDescription": "Access community data and statistics by location. Find demographic, economic, and education info for California neighborhoods.",
     "subtopicIds": [
       48,
@@ -547,7 +547,7 @@
     ]
   },
   {
-    "serviceID": 1295,
+    "serviceId": 1295,
     "shortDescription": "Get free pregnancy support for Medi-Cal members. You can receive services including health education and nutrition during pregnancy and up to 60 days after.",
     "subtopicIds": [
       8,
@@ -555,21 +555,21 @@
     ]
   },
   {
-    "serviceID": 1195,
+    "serviceId": 1195,
     "shortDescription": "Create a CalCareers account to apply for California state jobs. Build your profile, search openings, and manage applications in one place.",
     "subtopicIds": [
       41
     ]
   },
   {
-    "serviceID": 1325,
+    "serviceId": 1325,
     "shortDescription": "Create an online account with the DMV. This gives you a more personalized DMV experience and allows you to easily update your address and contact information.",
     "subtopicIds": [
       19
     ]
   },
   {
-    "serviceID": 1204,
+    "serviceId": 1204,
     "shortDescription": "MyFTB gives individuals, business representatives, and tax professionals access to tax account information and services. You can make payments and more.",
     "subtopicIds": [
       44,
@@ -577,14 +577,14 @@
     ]
   },
   {
-    "serviceID": 1121,
+    "serviceId": 1121,
     "shortDescription": "You can get a driver’s license if you’re a DACA recipient or if you're unable to show legal proof of presence in the United States. Learn more.",
     "subtopicIds": [
       57
     ]
   },
   {
-    "serviceID": 1306,
+    "serviceId": 1306,
     "shortDescription": "Submit requests to delete your personal data or opt out of its sale. You can use DROP to protect your data under California privacy laws.",
     "subtopicIds": [
       14,
@@ -592,7 +592,7 @@
     ]
   },
   {
-    "serviceID": 1159,
+    "serviceId": 1159,
     "shortDescription": "Find resources for disability access and compliance. Learn about accessibility requirements for buildings and services.",
     "subtopicIds": [
       3,
@@ -600,7 +600,7 @@
     ]
   },
   {
-    "serviceID": 1122,
+    "serviceId": 1122,
     "shortDescription": "Prepare for wildfires, floods, earthquakes, and other disasters. You can access life-saving tools and resources in your language.",
     "subtopicIds": [
       30,
@@ -608,14 +608,14 @@
     ]
   },
   {
-    "serviceID": 1149,
+    "serviceId": 1149,
     "shortDescription": "Find California state procurement resources and contract opportunities. Businesses can bid on contracts and sell goods and services to the state.",
     "subtopicIds": [
       37
     ]
   },
   {
-    "serviceID": 1264,
+    "serviceId": 1264,
     "shortDescription": "You can get early intervention for babies and toddlers with developmental delays. Families can access free help through Early Start.",
     "subtopicIds": [
       21,
@@ -623,7 +623,7 @@
     ]
   },
   {
-    "serviceID": 1183,
+    "serviceId": 1183,
     "shortDescription": "See if you qualify for the federal Earned Income Tax Credit. Find charts, information and resources on the EITC.",
     "subtopicIds": [
       44,
@@ -631,7 +631,7 @@
     ]
   },
   {
-    "serviceID": 1141,
+    "serviceId": 1141,
     "shortDescription": "Get earthquake insurance premium discounts for older houses that have been retrofitted for earthquakes. Find out if you qialify.",
     "subtopicIds": [
       30,
@@ -640,7 +640,7 @@
     ]
   },
   {
-    "serviceID": 1223,
+    "serviceId": 1223,
     "shortDescription": "Get earthquake early warnings on your phone. MyShake is an app that sends alerts seconds before shaking starts, so you can take cover.",
     "subtopicIds": [
       31,
@@ -648,14 +648,14 @@
     ]
   },
   {
-    "serviceID": 1186,
+    "serviceId": 1186,
     "shortDescription": "Access your accounts, tax forms and training for your filing needs. Find important links and resources on paying your California payroll taxes.",
     "subtopicIds": [
       45
     ]
   },
   {
-    "serviceID": 1294,
+    "serviceId": 1294,
     "shortDescription": "Find programs to provide solar systems and energy efficiency upgrades. Low-income households can get help upgrading at no cost.",
     "subtopicIds": [
       15,
@@ -664,14 +664,14 @@
     ]
   },
   {
-    "serviceID": 8,
+    "serviceId": 8,
     "shortDescription": "As a parent or legal guardian, you can enroll in child support services online.",
     "subtopicIds": [
       1
     ]
   },
   {
-    "serviceID": 1193,
+    "serviceId": 1193,
     "shortDescription": "Employers can manage claims related to their business. This includes payroll tax accounts and unemployment claims.",
     "subtopicIds": [
       34,
@@ -679,7 +679,7 @@
     ]
   },
   {
-    "serviceID": 1098,
+    "serviceId": 1098,
     "shortDescription": "Enroll your child in Hack the Hood, a free 6-week program that teaches low-income youth technology and computer skills like programming.",
     "subtopicIds": [
       11,
@@ -688,7 +688,7 @@
     ]
   },
   {
-    "serviceID": 1257,
+    "serviceId": 1257,
     "shortDescription": "Get support caring for an aging family member. Find respite care and training. Services are available through local Area Agencies on Aging.",
     "subtopicIds": [
       26,
@@ -696,7 +696,7 @@
     ]
   },
   {
-    "serviceID": 85,
+    "serviceId": 85,
     "shortDescription": "Find an adult education class to learn how to read and write in English. Search the directory to find classes near you.",
     "subtopicIds": [
       11,
@@ -704,7 +704,7 @@
     ]
   },
   {
-    "serviceID": 27,
+    "serviceId": 27,
     "shortDescription": "Have you faced unfair treatment at work, in housing, or public services? File a discrimination complaint.",
     "subtopicIds": [
       29,
@@ -713,7 +713,7 @@
     ]
   },
   {
-    "serviceID": 1260,
+    "serviceId": 1260,
     "shortDescription": "File a complaint if a hospital wrongly denied you financial help. Report violations of the Hospital Fair Pricing Act for unfair billing.",
     "subtopicIds": [
       28,
@@ -721,21 +721,21 @@
     ]
   },
   {
-    "serviceID": 1288,
+    "serviceId": 1288,
     "shortDescription": "Report a problem with an auto repair shop. File a complaint so the Bureau of Automotive Repair can investigate and help resolve the issue.",
     "subtopicIds": [
       18
     ]
   },
   {
-    "serviceID": 1170,
+    "serviceId": 1170,
     "shortDescription": "File an insurance complaint. You can report denied claims, fraud, or billing problems.",
     "subtopicIds": [
       24
     ]
   },
   {
-    "serviceID": 1134,
+    "serviceId": 1134,
     "shortDescription": "File a complaint against a licensed professional or business. Report violations, fraud, or poor service to the licensing board.",
     "subtopicIds": [
       28,
@@ -743,7 +743,7 @@
     ]
   },
   {
-    "serviceID": 11,
+    "serviceId": 11,
     "shortDescription": "You can file a complaint about a contractor online. Report problems with construction work or contract violations.",
     "subtopicIds": [
       33,
@@ -752,7 +752,7 @@
     ]
   },
   {
-    "serviceID": 18,
+    "serviceId": 18,
     "shortDescription": "File for State Disability Insurance if you can't work due to illness or injury. Get short-term income replacement while off work. ",
     "subtopicIds": [
       25,
@@ -762,7 +762,7 @@
     ]
   },
   {
-    "serviceID": 19,
+    "serviceId": 19,
     "shortDescription": "File for Paid Family Leave to bond with a new baby or care for a sick family member. You can get benefits while you’re off work.",
     "subtopicIds": [
       42,
@@ -772,7 +772,7 @@
     ]
   },
   {
-    "serviceID": 20,
+    "serviceId": 20,
     "shortDescription": "Visit the Employment Development Department to file for Unemployment benefits using a myEDD account.",
     "subtopicIds": [
       40,
@@ -781,28 +781,28 @@
     ]
   },
   {
-    "serviceID": 1227,
+    "serviceId": 1227,
     "shortDescription": "File your California state income tax return. E-file online for free or mail paper forms. Get your refund faster with electronic filing.",
     "subtopicIds": [
       44
     ]
   },
   {
-    "serviceID": 39,
+    "serviceId": 39,
     "shortDescription": "Search and apply for California state government jobs. Browse thousands of openings with good benefits and job security. Apply online anytime.",
     "subtopicIds": [
       41
     ]
   },
   {
-    "serviceID": 86,
+    "serviceId": 86,
     "shortDescription": "Find a citizenship class near you. Learn about becoming a U.S. citizen. Classes cover English skills, civics, and requirements.",
     "subtopicIds": [
       56
     ]
   },
   {
-    "serviceID": 1133,
+    "serviceId": 1133,
     "shortDescription": "Look up a Consumer Affairs license for a person or business to confirm their license status.",
     "subtopicIds": [
       28,
@@ -811,7 +811,7 @@
     ]
   },
   {
-    "serviceID": 1209,
+    "serviceId": 1209,
     "shortDescription": "Find a dentist who accepts Medi-Cal Dental and learn about covered services.",
     "subtopicIds": [
       6,
@@ -819,21 +819,21 @@
     ]
   },
   {
-    "serviceID": 73,
+    "serviceId": 73,
     "shortDescription": "You can find dates, locations, and event details for local fairs.",
     "subtopicIds": [
       51
     ]
   },
   {
-    "serviceID": 28,
+    "serviceId": 28,
     "shortDescription": "First time hunting license buyers must take a hunter education course. Find courses and resources to help you hunt safely.",
     "subtopicIds": [
       51
     ]
   },
   {
-    "serviceID": 22,
+    "serviceId": 22,
     "shortDescription": "Search for California jobs on CalJOBS. You can create a profile and upload a resume. ",
     "subtopicIds": [
       41,
@@ -842,21 +842,21 @@
     ]
   },
   {
-    "serviceID": 54,
+    "serviceId": 54,
     "shortDescription": "Find recycling centers near you for bottles, cans, paper, electronics, compost, and more. ",
     "subtopicIds": [
       52
     ]
   },
   {
-    "serviceID": 49,
+    "serviceId": 49,
     "shortDescription": "Search for California state parks by location or activity. You can find hiking, camping, beaches, and more.",
     "subtopicIds": [
       51
     ]
   },
   {
-    "serviceID": 1206,
+    "serviceId": 1206,
     "shortDescription": "Find an apprenticeship. Learn a skill or trade and get the experience you need to build a career.",
     "subtopicIds": [
       13,
@@ -864,14 +864,14 @@
     ]
   },
   {
-    "serviceID": 6,
+    "serviceId": 6,
     "shortDescription": "Find licensed and STAR-certified auto repair shops and smog check stations near you.",
     "subtopicIds": [
       18
     ]
   },
   {
-    "serviceID": 1216,
+    "serviceId": 1216,
     "shortDescription": "Find an EDD office near you. Get in person help with unemployment insurance, disability insurance, and tax assistance programs.",
     "subtopicIds": [
       3,
@@ -879,7 +879,7 @@
     ]
   },
   {
-    "serviceID": 83,
+    "serviceId": 83,
     "shortDescription": "Find English as a Second Language classes near you. There are free and low-cost classes for adults at all skilll levels.",
     "subtopicIds": [
       11,
@@ -887,14 +887,14 @@
     ]
   },
   {
-    "serviceID": 61,
+    "serviceId": 61,
     "shortDescription": "Find licensed assisted living facilities in California.",
     "subtopicIds": [
       26
     ]
   },
   {
-    "serviceID": 36,
+    "serviceId": 36,
     "shortDescription": "Find resources and information for mental health, substance use, stress, or crisis. You may qualify for local country services if you are eligible for Medi-Cal.",
     "subtopicIds": [
       6,
@@ -902,7 +902,7 @@
     ]
   },
   {
-    "serviceID": 1180,
+    "serviceId": 1180,
     "shortDescription": "We’re here to support you with food, cash aid, and health coverage benefits. Access, apply and manage CalFresh, Medi-Cal, CalWORKs, and other programs online.",
     "subtopicIds": [
       6,
@@ -915,7 +915,7 @@
     ]
   },
   {
-    "serviceID": 77,
+    "serviceId": 77,
     "shortDescription": "Find resources to start or grow your business. Get help with permits, licenses, registration, and compliance.",
     "subtopicIds": [
       38,
@@ -923,7 +923,7 @@
     ]
   },
   {
-    "serviceID": 1119,
+    "serviceId": 1119,
     "shortDescription": "Find resources for undocumented California Community College students.",
     "subtopicIds": [
       57,
@@ -931,28 +931,28 @@
     ]
   },
   {
-    "serviceID": 62,
+    "serviceId": 62,
     "shortDescription": "Find licensed child care near you. This includes daycare centers, family child care home, and preschools.",
     "subtopicIds": [
       2
     ]
   },
   {
-    "serviceID": 1140,
+    "serviceId": 1140,
     "shortDescription": "Access California healthcare data, statistics, and reports. Topics include hospital info, healthcare quality, the workforce, and more.",
     "subtopicIds": [
       48
     ]
   },
   {
-    "serviceID": 1292,
+    "serviceId": 1292,
     "shortDescription": "Find information on abortion access in California. Locate providers, learn about coverage, and get resources for reproductive healthcare.",
     "subtopicIds": [
       22
     ]
   },
   {
-    "serviceID": 1303,
+    "serviceId": 1303,
     "shortDescription": "Find reproductive health information and services. Access birth control, STI testing, pregnancy care, and family planning resources in California.",
     "subtopicIds": [
       22,
@@ -960,35 +960,35 @@
     ]
   },
   {
-    "serviceID": 82,
+    "serviceId": 82,
     "shortDescription": "Search for adult education programs near you. GED classes, high school diploma programs, English classes, and job training are available.",
     "subtopicIds": [
       13
     ]
   },
   {
-    "serviceID": 1162,
+    "serviceId": 1162,
     "shortDescription": "Find business and acquisition services for state agencies. Get help with procurement, contracts, and purchasing.",
     "subtopicIds": [
       38
     ]
   },
   {
-    "serviceID": 81,
+    "serviceId": 81,
     "shortDescription": "Find services if you're a refugee in California. You can get help with employment, English classes, citizenship, and more.",
     "subtopicIds": [
       57
     ]
   },
   {
-    "serviceID": 1120,
+    "serviceId": 1120,
     "shortDescription": "Find treatment and recovery services for Substance Use Disorder near you.",
     "subtopicIds": [
       23
     ]
   },
   {
-    "serviceID": 1118,
+    "serviceId": 1118,
     "shortDescription": "Find resources for undocumented University of California students.",
     "subtopicIds": [
       57,
@@ -996,21 +996,21 @@
     ]
   },
   {
-    "serviceID": 17,
+    "serviceId": 17,
     "shortDescription": "Find public, private, and adult schools near you. You can also get information about school districts and county education offices.",
     "subtopicIds": [
       11
     ]
   },
   {
-    "serviceID": 1322,
+    "serviceId": 1322,
     "shortDescription": "Use this to check your fingerprint clearance status for your teaching credential.  The status displays on the Personal Information page after you log in.",
     "subtopicIds": [
       11
     ]
   },
   {
-    "serviceID": 1246,
+    "serviceId": 1246,
     "shortDescription": "Get updates on fire regulations, policies, and important announcements on new safety technologies.",
     "subtopicIds": [
       30,
@@ -1018,7 +1018,7 @@
     ]
   },
   {
-    "serviceID": 1248,
+    "serviceId": 1248,
     "shortDescription": "Log into the GOVmotus Fire portal for fire and life safety applications or renewals. Get licenses for fireworks, fire pumps, extinguishers, and more. You can apply for product listings, like building materials, and request safety inspections.",
     "subtopicIds": [
       31,
@@ -1026,7 +1026,7 @@
     ]
   },
   {
-    "serviceID": 1252,
+    "serviceId": 1252,
     "shortDescription": "Make your community Firewise USA certified. Get resources to plan and reduce wildfire risk for homes and surrounding areas.",
     "subtopicIds": [
       30,
@@ -1035,18 +1035,18 @@
     ]
   },
   {
-    "serviceID": 1233,
+    "serviceId": 1233,
     "shortDescription": "Get help buying your first home with California Housing Finance Agency programs. Find low down payment loans, grants, and resources.",
     "subtopicIds": [
       15
     ]
   },
   {
-    "serviceID": 1157,
+    "serviceId": 1157,
     "shortDescription": "Purchase cars at auctions, become an approved vendor to repair vehicles. You can bid on state equipment, such as computers, cars, furniture."
   },
   {
-    "serviceID": 1254,
+    "serviceId": 1254,
     "shortDescription": "Find food and nutrition programs for seniors. Get free meals at senior centers or delivered to your home.",
     "subtopicIds": [
       27,
@@ -1054,7 +1054,7 @@
     ]
   },
   {
-    "serviceID": 60,
+    "serviceId": 60,
     "shortDescription": "Get help paying for food and groceries with CalFresh. This is a program for qualifying low-income households.",
     "subtopicIds": [
       5,
@@ -1062,7 +1062,7 @@
     ]
   },
   {
-    "serviceID": 55,
+    "serviceId": 55,
     "shortDescription": "Register your business and file documents online for LLCs, corporations, and partnerships.",
     "subtopicIds": [
       37,
@@ -1070,7 +1070,7 @@
     ]
   },
   {
-    "serviceID": 59,
+    "serviceId": 59,
     "shortDescription": "Register your business and file documents online for LLCs, corporations, and partnerships.",
     "subtopicIds": [
       2,
@@ -1078,10 +1078,10 @@
     ]
   },
   {
-    "serviceID": 1331
+    "serviceId": 1331
   },
   {
-    "serviceID": 1299,
+    "serviceId": 1299,
     "shortDescription": "Get low-cost genetic screening for newborns and pregnant women. You can get tested for genetic conditions and inherited disorders.",
     "subtopicIds": [
       21,
@@ -1089,28 +1089,28 @@
     ]
   },
   {
-    "serviceID": 16,
+    "serviceId": 16,
     "shortDescription": "Find the right court to file for divorce in California based on your county.",
     "subtopicIds": [
       14
     ]
   },
   {
-    "serviceID": 29,
+    "serviceId": 29,
     "shortDescription": "Buy a California fishing or hunting license online. You can download and print a license at home or request one to be mailed to you. ",
     "subtopicIds": [
       51
     ]
   },
   {
-    "serviceID": 84,
+    "serviceId": 84,
     "shortDescription": "Get your high school diploma or GED through adult education programs. Find free or low-cost classes and testing locations.",
     "subtopicIds": [
       13
     ]
   },
   {
-    "serviceID": 80,
+    "serviceId": 80,
     "shortDescription": "Find organizations that can help with immigration legal services.",
     "subtopicIds": [
       56,
@@ -1118,7 +1118,7 @@
     ]
   },
   {
-    "serviceID": 56,
+    "serviceId": 56,
     "shortDescription": "Order copies of business records and filing documents from the Secretary of State.",
     "subtopicIds": [
       45,
@@ -1127,7 +1127,7 @@
     ]
   },
   {
-    "serviceID": 1173,
+    "serviceId": 1173,
     "shortDescription": "Get official COVID-19 information and resources. Find where you can get immunizations, records and recommendations.",
     "subtopicIds": [
       6,
@@ -1135,7 +1135,7 @@
     ]
   },
   {
-    "serviceID": 1117,
+    "serviceId": 1117,
     "shortDescription": "Get information on DACA and worker's rights.",
     "subtopicIds": [
       58,
@@ -1143,7 +1143,7 @@
     ]
   },
   {
-    "serviceID": 1116,
+    "serviceId": 1116,
     "shortDescription": "Get free help with your DACA application or renewal. Find organizations near you.",
     "subtopicIds": [
       58,
@@ -1151,14 +1151,14 @@
     ]
   },
   {
-    "serviceID": 1177,
+    "serviceId": 1177,
     "shortDescription": "Get your official digital COVID-19 vaccine record. Download proof of vaccination for travel, work, or school.",
     "subtopicIds": [
       14
     ]
   },
   {
-    "serviceID": 1293,
+    "serviceId": 1293,
     "shortDescription": "Get help paying your energy bills. Find assistance programs for low-income households to help pay for heating and cooling.",
     "subtopicIds": [
       7,
@@ -1166,49 +1166,49 @@
     ]
   },
   {
-    "serviceID": 79,
+    "serviceId": 79,
     "shortDescription": "Find free or low-cost legal help for immigration, family law, housing, and more. Search by location and legal issue.",
     "subtopicIds": [
       57
     ]
   },
   {
-    "serviceID": 1112,
+    "serviceId": 1112,
     "shortDescription": "Get help finding a job in Long Beach. You can get career guidance, job training, connect with potential employers, and more.",
     "subtopicIds": [
       43
     ]
   },
   {
-    "serviceID": 1113,
+    "serviceId": 1113,
     "shortDescription": "Get help finding a job in the Madera and Fresno County areas. You can get support with job placement, vocational training, learning opportunities, and more.",
     "subtopicIds": [
       43
     ]
   },
   {
-    "serviceID": 1111,
+    "serviceId": 1111,
     "shortDescription": "Get help finding a job in Orange County. You can find job search workshops, training, connect with potential employers, and more.",
     "subtopicIds": [
       43
     ]
   },
   {
-    "serviceID": 1114,
+    "serviceId": 1114,
     "shortDescription": "Get help finding a job in Sacramento. You can get help with job training, interview prep, resumes, and networking opportunities.",
     "subtopicIds": [
       43
     ]
   },
   {
-    "serviceID": 1110,
+    "serviceId": 1110,
     "shortDescription": "Get help finding a job in San Diego. You can find training, professional development resources, help with job placement, and more.",
     "subtopicIds": [
       43
     ]
   },
   {
-    "serviceID": 1305,
+    "serviceId": 1305,
     "shortDescription": "Get maternal health help services and support. Find prenatal care and support during pregnancy and after birth.",
     "subtopicIds": [
       8,
@@ -1216,7 +1216,7 @@
     ]
   },
   {
-    "serviceID": 1296,
+    "serviceId": 1296,
     "shortDescription": "Get help for maternal mental health issues. Find support for postpartum depression, anxiety, and other mental health challenges during pregnancy.",
     "subtopicIds": [
       8,
@@ -1224,21 +1224,21 @@
     ]
   },
   {
-    "serviceID": 1107,
+    "serviceId": 1107,
     "shortDescription": "Read the Fund Your Future magazine to learn about financial aid for college and career training. Available in multiple languages.",
     "subtopicIds": [
       12
     ]
   },
   {
-    "serviceID": 1115,
+    "serviceId": 1115,
     "shortDescription": "Get updates on DACA. Find legal help, worker rights info, services for DACA recipients, and other resources.",
     "subtopicIds": [
       58
     ]
   },
   {
-    "serviceID": 1139,
+    "serviceId": 1139,
     "shortDescription": "Get education and training to build workforce skills. Find programs for healthcare workers and career development.",
     "subtopicIds": [
       13,
@@ -1247,14 +1247,14 @@
     ]
   },
   {
-    "serviceID": 1219,
+    "serviceId": 1219,
     "shortDescription": "Get your driver’s license or ID on your phone. You can use it at airport TSA checkpoints, at businesses, and more.",
     "subtopicIds": [
       19
     ]
   },
   {
-    "serviceID": 1196,
+    "serviceId": 1196,
     "shortDescription": "Check the status of your unemployment insurance claim to see if it was approved.",
     "subtopicIds": [
       40,
@@ -1262,10 +1262,10 @@
     ]
   },
   {
-    "serviceID": 1330
+    "serviceId": 1330
   },
   {
-    "serviceID": 1251,
+    "serviceId": 1251,
     "shortDescription": "You can get help understanding California's hazardous waste regulations. Find guidance on how to comply if you're a business or waste handler.",
     "subtopicIds": [
       55,
@@ -1273,7 +1273,7 @@
     ]
   },
   {
-    "serviceID": 1205,
+    "serviceId": 1205,
     "shortDescription": "The Hazardous Water Tracking System is a database that keeps track of hazardous waste shipments. It manages permits, monitors who is transporting waste, and collects data.",
     "subtopicIds": [
       31,
@@ -1281,7 +1281,7 @@
     ]
   },
   {
-    "serviceID": 1138,
+    "serviceId": 1138,
     "shortDescription": "Students, healthcare professionals, and organizations can get funding for education, student loan repayments, and workforce training. See if you’re eligible.",
     "subtopicIds": [
       12,
@@ -1289,14 +1289,14 @@
     ]
   },
   {
-    "serviceID": 1266,
+    "serviceId": 1266,
     "shortDescription": "Learn about the health effects of pesticides. You can get information about safety, risks, and health guidance for pesticide use..",
     "subtopicIds": [
       31
     ]
   },
   {
-    "serviceID": 1129,
+    "serviceId": 1129,
     "shortDescription": "Submit a health insurance complaint or Independent Medical Review request. Get help if your medical claim was delayed or denied.",
     "subtopicIds": [
       28,
@@ -1304,7 +1304,7 @@
     ]
   },
   {
-    "serviceID": 1238,
+    "serviceId": 1238,
     "shortDescription": "Get job help if you have a disability. Vocational rehab teams help you find, keep, and advance in jobs. Find services tailored to your needs.",
     "subtopicIds": [
       41,
@@ -1312,7 +1312,7 @@
     ]
   },
   {
-    "serviceID": 1256,
+    "serviceId": 1256,
     "shortDescription": "Access home and community services for seniors in your county. Get help with in-home care, transportation, legal aid, and caregiver support.",
     "subtopicIds": [
       9,
@@ -1320,7 +1320,7 @@
     ]
   },
   {
-    "serviceID": 1311,
+    "serviceId": 1311,
     "shortDescription": "Get financial assistance and support services if you’re unhoused or at risk of being unhoused and are involved in Adult Protective Services.",
     "subtopicIds": [
       7,
@@ -1329,7 +1329,7 @@
     ]
   },
   {
-    "serviceID": 1309,
+    "serviceId": 1309,
     "shortDescription": "You can get financial help and support services if you’re unhoused or at risk of being unhoused and have a disability.",
     "subtopicIds": [
       17,
@@ -1339,7 +1339,7 @@
     ]
   },
   {
-    "serviceID": 1262,
+    "serviceId": 1262,
     "shortDescription": "Get free housing counseling from HUD-certified counselors. You can get help with buying a home, mortgage problems, avoiding foreclosure, and rental housing.",
     "subtopicIds": [
       7,
@@ -1347,7 +1347,7 @@
     ]
   },
   {
-    "serviceID": 1318,
+    "serviceId": 1318,
     "shortDescription": "Learn how to start a rewarding career as a teacher that includes a roadmap to teaching, financial resources, teacher preparation programs, and more.",
     "subtopicIds": [
       11,
@@ -1355,28 +1355,28 @@
     ]
   },
   {
-    "serviceID": 1164,
+    "serviceId": 1164,
     "shortDescription": "Access human resources services for state employees. Get help with benefits, payroll, employment questions, and HR support.",
     "subtopicIds": [
       38
     ]
   },
   {
-    "serviceID": 1268,
+    "serviceId": 1268,
     "shortDescription": "View climate change indicators for California. You can track climate impacts over time such as temperature, wildfires, or sea levels.",
     "subtopicIds": [
       54
     ]
   },
   {
-    "serviceID": 23,
+    "serviceId": 23,
     "shortDescription": "You can get help finding a job if you’re a veteran. Employers can post jobs and find qualified candidates. ",
     "subtopicIds": [
       41
     ]
   },
   {
-    "serviceID": 1283,
+    "serviceId": 1283,
     "shortDescription": "Apply for jobs with CAL FIRE. Discover career opportunities in California's wildfire and emergency response teams.",
     "subtopicIds": [
       41,
@@ -1384,14 +1384,14 @@
     ]
   },
   {
-    "serviceID": 1106,
+    "serviceId": 1106,
     "shortDescription": "Get help applying to college if you're a first-generation or low-income student. You can qualify for advising, tutoring, and more.",
     "subtopicIds": [
       12
     ]
   },
   {
-    "serviceID": 1099,
+    "serviceId": 1099,
     "shortDescription": "Many foreign-born California residents became professionals in their home countries and are highly-educated, but are unemployed or underemployed in the United States. Upwardly Global can help you find work that matches your skills.",
     "subtopicIds": [
       57,
@@ -1399,74 +1399,74 @@
     ]
   },
   {
-    "serviceID": 1190,
+    "serviceId": 1190,
     "shortDescription": "Learn about benefits for California state employees. Find info about health insurance, retirement, time off, and more."
   },
   {
-    "serviceID": 1259,
+    "serviceId": 1259,
     "shortDescription": "Access legal services for seniors 60 or over. Get help with civil legal issues like housing, benefits, and consumer problems.",
     "subtopicIds": [
       46
     ]
   },
   {
-    "serviceID": 71,
+    "serviceId": 71,
     "shortDescription": "Locate California adult and juvenile correctional facilities using an interactive map.",
     "subtopicIds": [
       46
     ]
   },
   {
-    "serviceID": 38,
+    "serviceId": 38,
     "shortDescription": "Get real-time traffic information from California Highway Patrol like accidents and closures.",
     "subtopicIds": [
       32
     ]
   },
   {
-    "serviceID": 41,
+    "serviceId": 41,
     "shortDescription": "Search for California laws and bills. You can find current legislation, bill text, voting records, and legal publications.",
     "subtopicIds": [
       47
     ]
   },
   {
-    "serviceID": 1198,
+    "serviceId": 1198,
     "shortDescription": "Look up an alcohol license for bars, restaurants, and stores. You can verify license status and check for violations or restrictions.",
     "subtopicIds": [
       36
     ]
   },
   {
-    "serviceID": 12,
+    "serviceId": 12,
     "shortDescription": "Look up a contractor license to see if it’s active and check if they have any past complaints. You can search by license number or business name.",
     "subtopicIds": [
       33
     ]
   },
   {
-    "serviceID": 40,
+    "serviceId": 40,
     "shortDescription": "Find California crime statistics and reports. You can search data on crime rates, arrests, and domestic violence by county.",
     "subtopicIds": [
       29
     ]
   },
   {
-    "serviceID": 1210,
+    "serviceId": 1210,
     "shortDescription": "Look up licenses and certificates for clinical lab scientists, specialists, and phlebotomists.",
     "subtopicIds": [
       36
     ]
   },
   {
-    "serviceID": 58,
+    "serviceId": 58,
     "shortDescription": "Find your California elected representatives. You can look up state legislators, congress members, and local officials.",
     "subtopicIds": [
       48
     ]
   },
   {
-    "serviceID": 24,
+    "serviceId": 24,
     "shortDescription": "You can find any current sales tax rate by searching a specific California address or city. ",
     "subtopicIds": [
       45,
@@ -1475,28 +1475,28 @@
     ]
   },
   {
-    "serviceID": 50,
+    "serviceId": 50,
     "shortDescription": "Reserve campsites at California state parks. Book camping spots, cabins, and group sites up to 6 months in advance.",
     "subtopicIds": [
       51
     ]
   },
   {
-    "serviceID": 1130,
+    "serviceId": 1130,
     "shortDescription": "Manage your California real estate license online. Renew, update information, and check your license status anytime.",
     "subtopicIds": [
       36
     ]
   },
   {
-    "serviceID": 21,
+    "serviceId": 21,
     "shortDescription": "Manage your unemployment claim with UI Online. Certify for benefits, check payments, and update your info anytime.",
     "subtopicIds": [
       40
     ]
   },
   {
-    "serviceID": 1291,
+    "serviceId": 1291,
     "shortDescription": "Find maternal health resources in California. Get help during pregnancy and after, with prenatal care, doulas, and support programs.",
     "subtopicIds": [
       8,
@@ -1504,7 +1504,7 @@
     ]
   },
   {
-    "serviceID": 1237,
+    "serviceId": 1237,
     "shortDescription": "Find out what benefits and services are covered for members. Coverage includes doctor visits, hospitals, and more.",
     "subtopicIds": [
       6,
@@ -1512,7 +1512,7 @@
     ]
   },
   {
-    "serviceID": 1301,
+    "serviceId": 1301,
     "shortDescription": "Get free doula services through Medi-Cal. A doula can help with emotional support, coaching, and help during and after pregnancy.",
     "subtopicIds": [
       8,
@@ -1522,7 +1522,7 @@
     ]
   },
   {
-    "serviceID": 1300,
+    "serviceId": 1300,
     "shortDescription": "Get pregnancy and postpartum care through Medi-Cal. Coverage includes prenatal visits, delivery, and care after birth.",
     "subtopicIds": [
       8,
@@ -1532,7 +1532,7 @@
     ]
   },
   {
-    "serviceID": 1258,
+    "serviceId": 1258,
     "shortDescription": "Get free Medicare counseling through the Health Insurance Counseling and Advocacy Program. if you’re 65 or over. Trained volunteers help you understand coverage, choose plans, and solve billing problems.",
     "subtopicIds": [
       26,
@@ -1540,116 +1540,116 @@
     ]
   },
   {
-    "serviceID": 1315,
+    "serviceId": 1315,
     "shortDescription": "Employers can report annual payroll, demographic, and other workforce data online as required by California law.",
     "subtopicIds": [
       37
     ]
   },
   {
-    "serviceID": 1166,
+    "serviceId": 1166,
     "shortDescription": "Pay your state taxes online with a bank account, credit card, set up a payment plan, or other payment options.",
     "subtopicIds": [
       44
     ]
   },
   {
-    "serviceID": 1143,
+    "serviceId": 1143,
     "shortDescription": "Prepare your house for earthquakes, wildfires, and other disasters. Get tips and resources to make your home safer.",
     "subtopicIds": [
       30
     ]
   },
   {
-    "serviceID": 1242,
+    "serviceId": 1242,
     "shortDescription": "Register for the professional forester exam. You must register to practice forestry in California. Find exam dates and requirements.",
     "subtopicIds": [
       55
     ]
   },
   {
-    "serviceID": 1286,
+    "serviceId": 1286,
     "shortDescription": "Get a free California travel guide. Order a printed copy or download trip ideas, itineraries, and attractions for every region of the state.",
     "subtopicIds": [
       30
     ]
   },
   {
-    "serviceID": 1241,
+    "serviceId": 1241,
     "shortDescription": "Find reforestation services for replanting trees after wildfires or on private land. Native conifer seed and seedlings are available.",
     "subtopicIds": [
       55
     ]
   },
   {
-    "serviceID": 1222,
+    "serviceId": 1222,
     "shortDescription": "Learn how to register a vehicle in California. ",
     "subtopicIds": [
       19
     ]
   },
   {
-    "serviceID": 57,
+    "serviceId": 57,
     "shortDescription": "Register to vote in California elections online.",
     "subtopicIds": [
       49
     ]
   },
   {
-    "serviceID": 1125,
+    "serviceId": 1125,
     "shortDescription": "Renew your California appraiser license. You must complete your continuing education credits (CE) before you renew your license.",
     "subtopicIds": [
       36
     ]
   },
   {
-    "serviceID": 44,
+    "serviceId": 44,
     "shortDescription": "Renew your California driver's license or ID card online. You can also renew by mail or in person.",
     "subtopicIds": [
       19
     ]
   },
   {
-    "serviceID": 45,
+    "serviceId": 45,
     "shortDescription": "You can renew your vehicle registration online.",
     "subtopicIds": [
       19
     ]
   },
   {
-    "serviceID": 1135,
+    "serviceId": 1135,
     "shortDescription": "Renew your professional license through the Department of Consumer Affairs. You can also change your address or submit a license application.",
     "subtopicIds": [
       36
     ]
   },
   {
-    "serviceID": 1289,
+    "serviceId": 1289,
     "shortDescription": "Get help paying for emissions repairs if your car fails a smog check. You can also get paid for retiring your old vehicle.",
     "subtopicIds": [
       18
     ]
   },
   {
-    "serviceID": 1211,
+    "serviceId": 1211,
     "shortDescription": "Report an issue or file a complaint about auto fraud, licensing, or related concerns.",
     "subtopicIds": [
       28
     ]
   },
   {
-    "serviceID": 1147,
+    "serviceId": 1147,
     "shortDescription": "Report unclaimed property to the state. Businesses can learn reporting requirements and how to report."
   },
   {
-    "serviceID": 1290,
+    "serviceId": 1290,
     "shortDescription": "Request an inspection of collision repair work done in California. Get help if you're concerned with auto body repairs, to ensure the safety of your vehicle.",
     "subtopicIds": [
       18
     ]
   },
   {
-    "serviceID": 1285,
+    "serviceId": 1285,
     "shortDescription": "Get a free California travel guide. Order a printed copy or download trip ideas, itineraries, and attractions for every region of the state.",
     "subtopicIds": [
       51,
@@ -1657,22 +1657,22 @@
     ]
   },
   {
-    "serviceID": 1152,
+    "serviceId": 1152,
     "shortDescription": "Request a hearing for a fair decision of administrative disputes.  Get a hearing general jurisdiction and special education issues."
   },
   {
-    "serviceID": 1172,
+    "serviceId": 1172,
     "shortDescription": "Find resources for seniors, families, and caregivers. You can get help with healthcare, fraud prevention, legal rights, and report abuse.",
     "subtopicIds": [
       26
     ]
   },
   {
-    "serviceID": 1137,
+    "serviceId": 1137,
     "shortDescription": "Safely build healthcare facilities. Find resources for facilities, building plans and permits, seismic compliance, inspections, and more."
   },
   {
-    "serviceID": 1145,
+    "serviceId": 1145,
     "shortDescription": "Request a review of a cannabis licensing decision. You can appeal denied or suspended professional license applications.",
     "subtopicIds": [
       36,
@@ -1681,18 +1681,18 @@
     ]
   },
   {
-    "serviceID": 1158,
+    "serviceId": 1158,
     "shortDescription": "Get risk and insurance management services for state agencies. Protect assets, manage liability, and ensure coverage."
   },
   {
-    "serviceID": 1267,
+    "serviceId": 1267,
     "shortDescription": "Learn about California's public health goals for contaminants in drinking water. These are science-based goals to keep residents safe from harmful chemicals.",
     "subtopicIds": [
       31
     ]
   },
   {
-    "serviceID": 25,
+    "serviceId": 25,
     "shortDescription": "Register to access sales and use tax permits, seller's permits, or business accounts. This offers a quick registration process for sales and use tax.",
     "subtopicIds": [
       36,
@@ -1701,81 +1701,81 @@
     ]
   },
   {
-    "serviceID": 1229,
+    "serviceId": 1229,
     "shortDescription": "Apply for permits for projects near San Francisco Bay, marshes, shorelines, and Suisun Marsh. Find out if your project needs a permit and the steps needed to apply.",
     "subtopicIds": [
       52
     ]
   },
   {
-    "serviceID": 1263,
+    "serviceId": 1263,
     "shortDescription": "Learn how to save water at home and in your yard. Get tips, find rebates, and make water conservation a habit. ",
     "subtopicIds": [
       55
     ]
   },
   {
-    "serviceID": 1155,
+    "serviceId": 1155,
     "shortDescription": "Receive design and construction oversight for K-12 schools, community college, and other state facilities. This ensures the school complies with building and safety codes."
   },
   {
-    "serviceID": 1213,
+    "serviceId": 1213,
     "shortDescription": "For some state job applications, you'll need to take an exam to assesses your knowledge and skills. Search for a CalCareers exam.",
     "subtopicIds": [
       41
     ]
   },
   {
-    "serviceID": 1124,
+    "serviceId": 1124,
     "shortDescription": "Search for licensed real estate appraisers in California. You can verify appraiser credentials and check for disciplinary actions.",
     "subtopicIds": [
       15
     ]
   },
   {
-    "serviceID": 1132,
+    "serviceId": 1132,
     "shortDescription": "You can find registered sex offenders in California. Search the sex offender registry by name or location. ",
     "subtopicIds": [
       46
     ]
   },
   {
-    "serviceID": 13,
+    "serviceId": 13,
     "shortDescription": "You can search for unclaimed money from old bank accounts, uncashed checks, or forgotten assets.",
     "subtopicIds": [
       14
     ]
   },
   {
-    "serviceID": 1201,
+    "serviceId": 1201,
     "shortDescription": "Take sexual harassment prevention training with short videos and quizzes to help you build a safer, respectful workplace.",
     "subtopicIds": [
       42
     ]
   },
   {
-    "serviceID": 1184,
+    "serviceId": 1184,
     "shortDescription": "Find centers to get help for your small business. Get free consulting, training, and resources to start or grow your California business.",
     "subtopicIds": [
       37
     ]
   },
   {
-    "serviceID": 1249,
+    "serviceId": 1249,
     "shortDescription": "Check if your fire safety products, like smoke alarms and extinguishers, need recalls. Learn how to return products for refunds, and review the latest recalls.",
     "subtopicIds": [
       28
     ]
   },
   {
-    "serviceID": 1191,
+    "serviceId": 1191,
     "shortDescription": "Start saving and planning for retirement if you’re a California state employee with the Savings Plus Program.",
     "subtopicIds": [
       4
     ]
   },
   {
-    "serviceID": 1243,
+    "serviceId": 1243,
     "shortDescription": "You can apply for student services that support your education and job search. Services include: job counseling, vocational training, help with schoolbooks and supplies, and more. See if you qualify.",
     "subtopicIds": [
       43,
@@ -1783,28 +1783,28 @@
     ]
   },
   {
-    "serviceID": 1187,
+    "serviceId": 1187,
     "shortDescription": "Submit a complaint form online for state services or licensing issues. You can use the form to report problems with businesses, professionals, or government agencies.",
     "subtopicIds": [
       28
     ]
   },
   {
-    "serviceID": 1212,
+    "serviceId": 1212,
     "shortDescription": "Find California tax forms, instructions, and publications.",
     "subtopicIds": [
       44
     ]
   },
   {
-    "serviceID": 1321,
+    "serviceId": 1321,
     "shortDescription": "Manage your teacher credentials. You can check the status of an application that's currently being processed. Learn more about requirements.",
     "subtopicIds": [
       11
     ]
   },
   {
-    "serviceID": 1302,
+    "serviceId": 1302,
     "shortDescription": "The Newborn Gateway gives new babies health coverage that starts at birth. It's available for Medi-Cal members.",
     "subtopicIds": [
       8,
@@ -1812,35 +1812,35 @@
     ]
   },
   {
-    "serviceID": 15,
+    "serviceId": 15,
     "shortDescription": "Find your county traffic court and get information about how to pay or challenge your ticket.",
     "subtopicIds": [
       20
     ]
   },
   {
-    "serviceID": 1217,
+    "serviceId": 1217,
     "shortDescription": "Transfer your vehicle title when buying or selling a car. Complete title transfer at DMV to legally change ownership within 10 days of sale.",
     "subtopicIds": [
       19
     ]
   },
   {
-    "serviceID": 1142,
+    "serviceId": 1142,
     "shortDescription": "Learn about warnings for harmful chemicals in products and places. Topics include Prop 65 warnings protecting your health, and business compliance.",
     "subtopicIds": [
       28
     ]
   },
   {
-    "serviceID": 48,
+    "serviceId": 48,
     "shortDescription": "Keep your information accurate. Update your address, name, or gender on your driver’s license or ID. ",
     "subtopicIds": [
       14
     ]
   },
   {
-    "serviceID": 1131,
+    "serviceId": 1131,
     "shortDescription": "Look up a real estate license. You can verify an agent or broker is licensed,   check their license status, and more.",
     "subtopicIds": [
       36,
@@ -1848,52 +1848,52 @@
     ]
   },
   {
-    "serviceID": 42,
+    "serviceId": 42,
     "shortDescription": "Check winning lottery numbers for all California Lottery games. You can also view current games and prizes.",
     "subtopicIds": [
       50
     ]
   },
   {
-    "serviceID": 72,
+    "serviceId": 72,
     "shortDescription": "Schedule visiting appointments at California correctional facilities.",
     "subtopicIds": [
       46
     ]
   },
   {
-    "serviceID": 1181,
+    "serviceId": 1181,
     "shortDescription": "Get free tax help through VITA. Volunteers help people with low to moderate income file tax returns. Find a site near you during tax season.",
     "subtopicIds": [
       44
     ]
   },
   {
-    "serviceID": 1275,
+    "serviceId": 1275,
     "shortDescription": "For a chance to win, locate CA Lottery retailers near you that sell lottery tickets, scratchers, and draw game entries.",
     "subtopicIds": [
       50
     ]
   },
   {
-    "serviceID": 1271,
+    "serviceId": 1271,
     "shortDescription": "Learn how lottery money supports public schools and education programs statewide.",
     "subtopicIds": [
       50
     ]
   },
   {
-    "serviceID": 1332
+    "serviceId": 1332
   },
   {
-    "serviceID": 1174,
+    "serviceId": 1174,
     "shortDescription": "Keep your family healthy with food, education, and support resources. Families with children from pregnancy through age 5 can get support.",
     "subtopicIds": [
       21
     ]
   },
   {
-    "serviceID": 1280,
+    "serviceId": 1280,
     "shortDescription": "Learn about California worker rights and employer responsibilities. You have a right to fair pay, safe workplaces, and breaks under state law.",
     "subtopicIds": [
       34,
@@ -1901,7 +1901,7 @@
     ]
   },
   {
-    "serviceID": 1279,
+    "serviceId": 1279,
     "shortDescription": "Review worker safety protections during wildfire cleanup and rebuilding. Protect yourself from hazards like ash, debris, and damaged structures.",
     "subtopicIds": [
       31,
@@ -1909,7 +1909,7 @@
     ]
   },
   {
-    "serviceID": 1235,
+    "serviceId": 1235,
     "shortDescription": "Get free mental health help for youth through Apps for Android and IOS. BrightLife Kids serves ages 0-12 and Soluna serves teens 13-25. You can access youth coaching, tools, and care navigation.",
     "subtopicIds": [
       23,

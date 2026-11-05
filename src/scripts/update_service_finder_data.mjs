@@ -33,7 +33,7 @@ const tables = [
     tableId: "tblS8RYo4FSqmONyu",
     name: "services",
     fields: {
-      serviceID: "ServiceId",
+      serviceId: "ServiceId",
       shortDescription: "Short description",
       subtopicIds: "Subtopic IDs"
     },

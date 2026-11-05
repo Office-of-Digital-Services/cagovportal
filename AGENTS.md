@@ -44,7 +44,7 @@
   fail sync/build rather than being silently accepted.
 - `src/_data/service_finder.cjs` loads these snapshots once per Eleventy build
   through `src/airTable/load_data.cjs`. Template-facing numeric ID fields use
-  `categoryId`, `topicId`, `subtopicId`, and `serviceID`; numeric ID lists use
+  `categoryId`, `topicId`, `subtopicId`, and `serviceId`; numeric ID lists use
   `subtopicIds`. Service finder snapshots already use these final property names;
   Airtable field-name mappings live only in `update_service_finder_data.mjs`,
   whose API field lists are derived from that mapping. The loader validates

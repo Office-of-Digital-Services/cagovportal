@@ -126,7 +126,7 @@ function normalizeServiceFinderData(snapshots) {
       categories: "categoryId",
       topics: "topicId",
       subtopics: "subtopicId",
-      services: "serviceID"
+      services: "serviceId"
     },
     "service_finder_"
   );
@@ -154,7 +154,7 @@ function normalizeServiceFinderData(snapshots) {
     for (const subtopicId of linkedSubtopicIds)
       if (!subtopicIds.has(subtopicId))
         throw new Error(
-          `Service finder ${row.serviceID} references missing subtopicId ${subtopicId}.`
+          `Service finder ${row.serviceId} references missing subtopicId ${subtopicId}.`
         );
   }
   return {
