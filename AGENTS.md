@@ -28,8 +28,15 @@
   point. Add future Node.js tasks to its `scripts` array, with paths relative to
   that file. Tasks run sequentially in separate processes; nonzero exits stop
   the build.
-- Preserve the service finder updater's behavior when adding tasks. It skips
-  Airtable fetching when `AIRTABLE_API_KEY` is missing.
+- `update_service_finder_data.mjs` syncs categories, topics, subtopics, and
+  services by field name into `src/airTable/data/service_finder_*.json`, with
+  alphabetical JSON keys. Record IDs are retained for linked-table relationships.
+- `src/_data/service_finder.cjs` loads these snapshots once per Eleventy build
+  through `src/airTable/load_service_finder_data.cjs`, which preserves the
+  template-facing lowercase properties. The results helper lives in
+  `src/airTable/service_finder_helpers.mjs`.
+- Without `AIRTABLE_API_KEY`, both sync scripts validate and use checked-in
+  snapshots. Keep Airtable field names stable; no field-ID mapping is used.
 - `update_sep_data.mjs` syncs SEP departments, services, and FAQs by field name
   from their configured default views into `src/airTable/data/`. Keep these
   snapshots checked in so builds work without an Airtable token.
@@ -41,9 +48,9 @@
   once per build, not through the SEP API. The loader normalizes omitted text
   fields and unchecked FAQ checkboxes, validates IDs and relationships, and
   restores AgencyName ordering independently of Airtable view order.
-- SEP fetch or validation failures stop prebuild before replacing snapshots.
-  Missing or invalid snapshots fail the build; there is no fallback to the SEP
-  API.
+- Fetch or validation failures stop prebuild before replacing that sync's
+  snapshots. Missing or invalid snapshots fail the build; there is no fallback
+  to the SEP API.
 - SEP images still come from `stateentityprofile.ca.gov/Uploads/` when missing
   locally. Avoid live data refreshes for unrelated changes, and review generated
   data diffs before including them.

@@ -10,7 +10,6 @@ import { setTimeout } from "node:timers/promises";
  * @property {string} name
  * @property {string[]} [fields]
  * @property {string[]} [sort]
- * @property {Record<string, string>} [fieldMapping]
  * @property {string} [filterByFormula]
  * @property {string} [view]
  */
@@ -36,16 +35,11 @@ export async function fetchAllRecords(tableConfig, apiKey) {
     const url = new URL(
       `https://api.airtable.com/v0/appqN4fe2lK8xlNqp/${tableConfig.tableId}`
     );
-    if (tableConfig.fieldMapping)
-      url.searchParams.set("returnFieldsByFieldId", "true");
     if (tableConfig.view) url.searchParams.set("view", tableConfig.view);
     if (tableConfig.filterByFormula)
       url.searchParams.set("filterByFormula", tableConfig.filterByFormula);
     for (const field of tableConfig.fields ?? [])
-      url.searchParams.append(
-        "fields[]",
-        tableConfig.fieldMapping?.[field] ?? field
-      );
+      url.searchParams.append("fields[]", field);
     (tableConfig.sort ?? []).forEach((field, index) => {
       url.searchParams.append(`sort[${index}][field]`, field);
       url.searchParams.append(`sort[${index}][direction]`, "asc");
