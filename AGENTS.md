@@ -18,6 +18,9 @@
 - `npm run prebuild` runs only the prebuild tasks; `npm start` does not run them.
 - There is no npm test script. Validate changes with the smallest relevant
   checks, and run a build for changes affecting site generation.
+- For validation without live data refreshes, use `npm run validate:airtable`
+  and `AIRTABLE_API_KEY= npm run build`. Prebuild otherwise loads the local
+  `.env` token and may refresh snapshots and images.
 - Use the existing ESLint, Prettier, and Stylelint configurations. For example,
   `npx eslint <changed-js-files>` and `npx prettier --check <changed-files>`.
   Use the installed tools rather than downloading new tooling for validation.
@@ -86,7 +89,9 @@
   locally. Avoid live data refreshes for unrelated changes, and review generated
   data diffs before including them.
 - Keep credentials in the environment or an ignored `.env` file, never in
-  committed source.
+  committed source. See [Airtable token setup](README.md#airtable-token-setup)
+  for contributor instructions. Tokens need only `data.records:read` on the
+  project base; never print tokens or force-add `.env`.
 
 ## Change conventions
 
@@ -94,3 +99,7 @@
   and `.cjs`, so preserve the appropriate module format.
 - Keep changes focused, preserve unrelated working-tree edits, and update
   directly affected documentation.
+- Keep README.md brief and useful for humans; put agent-specific guidance here.
+- Prefer fixing source-data typos in Airtable over adding one-off cleanup rules
+  to the loader.
+- Add concise comments above non-obvious loops to explain their purpose.
