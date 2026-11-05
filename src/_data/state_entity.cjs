@@ -1,6 +1,6 @@
 //@ts-check
 const fs = require("node:fs");
-const EleventyFetch = require("@11ty/eleventy-fetch");
+const { loadSepData } = require("../airTable/load_sep_data.cjs");
 const sepImagePath = "/images/sep/";
 const sharp = require("sharp");
 
@@ -32,47 +32,21 @@ module.exports = async function () {
    * @param {{[x: string]: string | object}} obj
    */
   const trimObjectProperties = obj => {
-    if (obj && typeof obj === "object") {
+    if (obj && typeof obj === "object")
       Object.keys(obj).forEach(key => {
-        if (typeof obj[key] === "object") {
+        if (typeof obj[key] === "object")
           // @ts-ignore
           trimObjectProperties(obj[key]);
-        } else if (typeof obj[key] === "string") {
-          obj[key] = obj[key].trim();
-        }
+        else if (typeof obj[key] === "string") obj[key] = obj[key].trim();
       });
-    }
   };
 
-  const urls = [
-    "https://api.stateentityprofile.ca.gov/api/Agencies/Get?page=0&pageSize=0&lang=en",
-    "https://api.stateentityprofile.ca.gov/api/Services/Get?page=0&pageSize=0&lang=en",
-    "https://api.stateentityprofile.ca.gov/GetFaqsByServiceIds?lang=en"
-  ];
-
-  console.time("Fetching entity data");
-  const returns = await Promise.all(
-    urls.map(u =>
-      EleventyFetch(u, {
-        fetchOptions: {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify([])
-        },
-        verbose: true,
-        duration: "1d", // save for 1 day
-        type: "json" // we’ll parse JSON for you
-      })
-    )
-  );
-  console.timeEnd("Fetching entity data");
+  const snapshots = loadSepData();
 
   const results = {
-    agencies: /** @type {*[]} */ (returns[0].Data),
-    services: /** @type {*[]} */ (returns[1].Data),
-    qa: /** @type {*[]} */ (returns[2]),
+    agencies: /** @type {*[]} */ (snapshots.agencies),
+    services: /** @type {*[]} */ (snapshots.services),
+    qa: /** @type {*[]} */ (snapshots.qa),
     state_entity_client_filter: /** @type {{agency: *[], service: *[]}} */ ({
       agency: [],
       service: []
@@ -112,9 +86,8 @@ module.exports = async function () {
     let processedCount = 0;
 
     // get a list of existing images from the local folder
-    if (!fs.existsSync(localImagesBasePath)) {
-      fs.mkdirSync(localImagesBasePath);
-    }
+    if (!fs.existsSync(localImagesBasePath)) fs.mkdirSync(localImagesBasePath);
+
     const existingImages = fs.readdirSync(localImagesBasePath);
 
     // Build a list of all images that should exist
@@ -174,9 +147,8 @@ module.exports = async function () {
 
     if (threadingTasks.length) {
       await Promise.all(threadingTasks);
-      if (processedCount !== 0) {
+      if (processedCount !== 0)
         console.warn(`Added ${processedCount} missing images.`);
-      }
     }
 
     // Delete any existing images that are no longer needed
@@ -247,29 +219,25 @@ module.exports = async function () {
 
     const socialLinks = [];
     if (item.Facebook) {
-      if (!item.Facebook.startsWith("http")) {
+      if (!item.Facebook.startsWith("http"))
         item.Facebook = `https://www.facebook.com/${socialLinkCleanup(item.Facebook)}`;
-      }
 
       socialLinks.push(item.Facebook);
     }
     if (item.TwitterAccount) {
-      if (!item.TwitterAccount.startsWith("http")) {
+      if (!item.TwitterAccount.startsWith("http"))
         item.TwitterAccount = `https://x.com/${socialLinkCleanup(item.TwitterAccount)}`;
-      }
 
       socialLinks.push(item.TwitterAccount);
     }
     if (item.YouTube) {
-      if (!item.YouTube.startsWith("http")) {
-        if (item.YouTube.startsWith("playlist")) {
+      if (!item.YouTube.startsWith("http"))
+        if (item.YouTube.startsWith("playlist"))
           item.YouTube = `https://www.youtube.com/${item.YouTube}`;
-        } else if (item.YouTube.includes("channel")) {
+        else if (item.YouTube.includes("channel"))
           item.YouTube = `https://www.youtube.com/${item.YouTube.replace(/\.\.\//, "")}`;
-        } else {
+        else
           item.YouTube = `https://www.youtube.com/${socialLinkCleanup(item.YouTube)}`;
-        }
-      }
 
       socialLinks.push(item.YouTube);
     }
@@ -373,7 +341,7 @@ module.exports = async function () {
     );
 
     item.QA = QaResult;
-    if (QaResult.length) {
+    if (QaResult.length)
       item["structuredData_FAQPage"] = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -385,12 +353,12 @@ module.exports = async function () {
           acceptedAnswer: {
             "@type": "Answer",
             text: x.Answer,
-            dateCreated: x.DateTimeStamp
+            dateCreated: x.DateTimeStamp,
+            dateModified: x.Updated
           }
         })),
         provider
       };
-    }
   });
 
   //Filtered data for client side use

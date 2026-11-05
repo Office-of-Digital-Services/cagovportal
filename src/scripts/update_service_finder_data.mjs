@@ -5,25 +5,16 @@
 // Token Creation
 // https://airtable.com/create/tokens
 
-import fs from "node:fs";
 import path from "node:path";
-import fetch from "node-fetch";
 import dotenv from "dotenv";
+import { fetchAllRecords, writeJson } from "./lib/airtable.mjs";
 
 dotenv.config({ quiet: true });
 
-const AIRTABLE_BASE = "appqN4fe2lK8xlNqp";
-const baseUrl = `https://api.airtable.com/v0/${AIRTABLE_BASE}`;
 const outputBasePath = "src/_data/service_finder";
 
 /**
- * @typedef TableConfig
- * @property {string} tableId
- * @property {string} name
- * @property {string[]} fields
- * @property {string[]} sort
- * @property {{[key: string]: string}} fieldMapping
- * @property {string} [filterByFormula]
+ * @typedef {import("./lib/airtable.mjs").TableConfig} TableConfig
  */
 
 /** @type {TableConfig[]} */
@@ -75,83 +66,6 @@ const TABLES = [
 ];
 
 /**
- * @typedef AirtableRecord
- * @property {string} id
- * @property {string} createdTime
- * @property {{[key: string]: any}} fields
- */
-
-/**
- * Fetch ALL records from an Airtable table using pagination.
- * @param {TableConfig} tableConfig
- * @param {string} apiKey
- */
-async function fetchAllRecords(tableConfig, apiKey) {
-  /** @type {AirtableRecord[]} */
-  let all = [];
-
-  /** @type {string | undefined} */
-  let offset = undefined;
-
-  do {
-    const url = new URL(`${baseUrl}/${tableConfig.tableId}`);
-
-    url.searchParams.set("returnFieldsByFieldId", "true");
-
-    if (tableConfig.filterByFormula)
-      url.searchParams.set("filterByFormula", tableConfig.filterByFormula);
-
-    // Add field filters if provided
-    tableConfig.fields.forEach(f => {
-      url.searchParams.append("fields[]", tableConfig.fieldMapping[f]);
-    });
-
-    // Add sort if provided
-    tableConfig.sort.forEach((sortField, index) => {
-      url.searchParams.append(`sort[${index}][field]`, sortField);
-      url.searchParams.append(`sort[${index}][direction]`, "asc");
-    });
-
-    if (offset) url.searchParams.set("offset", offset);
-
-    const response = await fetch(url.toString(), {
-      headers: { Authorization: `Bearer ${apiKey}` }
-    });
-
-    if (!response.ok)
-      throw new Error(
-        `Airtable request failed (${tableConfig.tableId}): ${response.status} ${response.statusText}`
-      );
-
-    const json = /** @type {{records: AirtableRecord[], offset?: string}} */ (
-      await response.json()
-    );
-
-    all = all.concat(json.records);
-    offset = json.offset;
-  } while (offset);
-
-  return all;
-}
-
-/**
- * Write JSON to disk only if content has changed
- * @param {string} filePath
- * @param {any} data
- */
-function writeJson(filePath, data) {
-  const newContent = JSON.stringify(data, null, 2);
-
-  if (fs.existsSync(filePath)) {
-    const existingContent = fs.readFileSync(filePath, "utf-8");
-    if (existingContent === newContent) return;
-  }
-
-  fs.writeFileSync(filePath, newContent);
-  console.info(`✅ Saved → ${filePath}`);
-}
-
-/**
  * Main update function
  */
 async function updateServiceFinderData() {
@@ -178,7 +92,7 @@ async function updateServiceFinderData() {
 
           // Use the field mapping to rename fields
           for (const [key, airtableFieldId] of Object.entries(
-            tableConfig.fieldMapping
+            tableConfig.fieldMapping ?? {}
           ))
             if (flattened[airtableFieldId] !== undefined) {
               flattened[key] = flattened[airtableFieldId];

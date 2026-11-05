@@ -26,5 +26,5 @@ npm start
 
 Build with `npm run build`, which runs prebuild tasks before Eleventy.
 Run prebuild tasks alone with `npm run prebuild`; the Airtable refresh is skipped
-without `AIRTABLE_API_KEY`. See [the prebuild entry point](src/scripts/prebuild.mjs)
-to add tasks.
+without `AIRTABLE_API_KEY`, using checked-in SEP snapshots instead. See
+[the prebuild entry point](src/scripts/prebuild.mjs) to add tasks.

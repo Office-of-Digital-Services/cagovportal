@@ -16,8 +16,9 @@
 - `npm start` starts the Eleventy development server.
 - `npm run build` runs prebuild tasks followed by Eleventy.
 - `npm run prebuild` runs only the prebuild tasks; `npm start` does not run them.
-- There is no npm test script. Validate changes with the smallest relevant
-  checks, and run a build for changes affecting site generation.
+- Run `node --test src/scripts/sep_data.test.mjs` for Airtable sync and SEP loader
+  tests. There is no npm test script. Run a build for changes affecting site
+  generation.
 - Use the existing ESLint, Prettier, and Stylelint configurations. For example,
   `npx eslint <changed-js-files>` and `npx prettier --check <changed-files>`.
   Use the installed tools rather than downloading new tooling for validation.
@@ -30,8 +31,19 @@
   the build.
 - Preserve the service finder updater's behavior when adding tasks. It skips
   Airtable fetching when `AIRTABLE_API_KEY` is missing.
-- Builds can access external APIs. Avoid live data refreshes for unrelated
-  changes, and review generated data diffs before including them.
+- `update_sep_data.mjs` syncs SEP departments, services, and FAQs by field name
+  from their configured default views into `src/airTable/data/`. Keep these
+  snapshots checked in so builds work without an Airtable token.
+- `state_entity.cjs` reads the snapshots through `src/airTable/load_sep_data.cjs`
+  once per build, not through the SEP API. The loader normalizes omitted text
+  fields and unchecked FAQ checkboxes, validates IDs and relationships, and
+  restores AgencyName ordering independently of Airtable view order.
+- SEP fetch or validation failures stop prebuild before replacing snapshots.
+  Missing or invalid snapshots fail the build; there is no fallback to the SEP
+  API.
+- SEP images still come from `stateentityprofile.ca.gov/Uploads/` when missing
+  locally. Avoid live data refreshes for unrelated changes, and review generated
+  data diffs before including them.
 - Keep credentials in the environment or an ignored `.env` file, never in
   committed source.
 
