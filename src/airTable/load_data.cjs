@@ -123,7 +123,7 @@ function normalizeServiceFinderData(snapshots) {
   validateSnapshots(
     snapshots,
     {
-      categories: "categoryID",
+      categories: "categoryId",
       topics: "topicId",
       subtopics: "subtopicId",
       services: "serviceID"
@@ -131,15 +131,15 @@ function normalizeServiceFinderData(snapshots) {
     "service_finder_"
   );
 
-  const categoryIds = new Set(snapshots.categories.map(row => row.categoryID));
+  const categoryIds = new Set(snapshots.categories.map(row => row.categoryId));
   const topicIds = new Set(snapshots.topics.map(row => row.topicId));
   const subtopicIds = new Set(snapshots.subtopics.map(row => row.subtopicId));
 
   for (const row of snapshots.topics) {
-    const categoryID = row.categoryID;
-    if (!categoryIds.has(categoryID))
+    const categoryId = row.categoryId;
+    if (!categoryIds.has(categoryId))
       throw new Error(
-        `Service finder topic ${row.topicId} references missing categoryID ${categoryID}.`
+        `Service finder topic ${row.topicId} references missing categoryId ${categoryId}.`
       );
   }
   for (const row of snapshots.subtopics) {

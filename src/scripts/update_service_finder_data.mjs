@@ -9,7 +9,7 @@ const tables = [
   {
     tableId: "tbl5wfeJJ4F7FZ837",
     name: "categories",
-    fields: { categoryID: "Category ID", name: "Name" },
+    fields: { categoryId: "Category ID", name: "Name" },
     sort: ["Sort"]
   },
   {
@@ -17,7 +17,7 @@ const tables = [
     name: "topics",
     fields: {
       topicId: "Topic ID",
-      categoryID: "Category ID",
+      categoryId: "Category ID",
       name: "Name",
       caption: "Caption"
     },
@@ -70,7 +70,7 @@ export default async function updateServiceFinderData(apiKey) {
 
   // Airtable lookups return arrays; require one parent before storing a scalar ID.
   for (const [table, field, key] of [
-    ["topics", "categoryID", "topicId"],
+    ["topics", "categoryId", "topicId"],
     ["subtopics", "topicId", "subtopicId"]
   ])
     for (const row of snapshots[table]) {

@@ -6,9 +6,9 @@
   "items": {
     "type": "object",
     "additionalProperties": false,
-    "required": ["categoryID", "name"],
+    "required": ["categoryId", "name"],
     "properties": {
-      "categoryID": { "type": "integer" },
+      "categoryId": { "type": "integer" },
       "name": { "type": "string", "pattern": "\\S" }
     }
   }

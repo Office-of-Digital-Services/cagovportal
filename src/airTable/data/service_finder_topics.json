@@ -1,85 +1,85 @@
 [
   {
     "caption": "Medical care and insurance, mental health, maternal health",
-    "categoryID": 2,
+    "categoryId": 2,
     "name": "Health and wellness",
     "topicId": 6
   },
   {
     "caption": "Public safety, disaster services, inmate locator, and more",
-    "categoryID": 2,
+    "categoryId": 2,
     "name": "Safety and emergencies",
     "topicId": 7
   },
   {
     "caption": "Look up representatives, bills, or laws, get data... ",
-    "categoryID": 4,
+    "categoryId": 4,
     "name": "State info and laws",
     "topicId": 11
   },
   {
     "caption": "State parks, reserve campsites, museums, fishing license",
-    "categoryID": 4,
+    "categoryId": 4,
     "name": "Travel and recreation",
     "topicId": 12
   },
   {
     "caption": "Environmental safety, conservation, climate...",
-    "categoryID": 4,
+    "categoryId": 4,
     "name": "Environment",
     "topicId": 13
   },
   {
     "caption": "Community services, citizenship, ESL classes, DACA...",
-    "categoryID": 4,
+    "categoryId": 4,
     "name": "Immigration",
     "topicId": 14
   },
   {
     "caption": "Food, medical, housing, and other programs",
-    "categoryID": 1,
+    "categoryId": 1,
     "name": "Assistance and social programs",
     "topicId": 1
   },
   {
     "caption": "Financial aid, high school diploma, adult ed, and more",
-    "categoryID": 1,
+    "categoryId": 1,
     "name": "Education",
     "topicId": 2
   },
   {
     "caption": "Birth and other certificates, REAL ID, remove your data, etc",
-    "categoryID": 1,
+    "categoryId": 1,
     "name": "Personal records",
     "topicId": 3
   },
   {
     "caption": "Verify contractors and realtors, loans, find appraisers...",
-    "categoryID": 1,
+    "categoryId": 1,
     "name": "Housing and real estate",
     "topicId": 4
   },
   {
     "caption": "Renew driver’s license or vehicle registration, pay tickets...",
-    "categoryID": 1,
+    "categoryId": 1,
     "name": "DMV/auto",
     "topicId": 5
   },
   {
     "caption": "Licensing, permitting, verification, incentives, taxes",
-    "categoryID": 3,
+    "categoryId": 3,
     "name": "Businesses",
     "topicId": 8
   },
   {
     "caption": "Look for jobs, unemployment, disability, job training...",
-    "categoryID": 3,
+    "categoryId": 3,
     "name": "Jobs and unemployment",
     "topicId": 9
   },
   {
     "caption": "File taxes, refunds, tax credits, pay taxes...",
-    "categoryID": 3,
+    "categoryId": 3,
     "name": "Taxes",
     "topicId": 10
   }

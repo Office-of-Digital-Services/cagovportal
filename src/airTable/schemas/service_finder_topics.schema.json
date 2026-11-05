@@ -6,10 +6,10 @@
   "items": {
     "type": "object",
     "additionalProperties": false,
-    "required": ["topicId", "categoryID", "name", "caption"],
+    "required": ["topicId", "categoryId", "name", "caption"],
     "properties": {
       "topicId": { "type": "integer" },
-      "categoryID": { "type": "integer" },
+      "categoryId": { "type": "integer" },
       "name": { "type": "string", "pattern": "\\S" },
       "caption": { "type": "string", "pattern": "\\S" }
     }
