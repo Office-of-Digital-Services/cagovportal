@@ -123,6 +123,43 @@ module.exports = function (/** @type {EleventyConfig} **/ eleventyConfig) {
     }
   );
 
+  /** @type {Map<string, string>} */
+  const inlineScriptCache = new Map();
+
+  // Minification is expensive and the result is identical for every page.
+  // Cache per build; clear at the start of each build so --serve picks up edits.
+  eleventyConfig.on("eleventy.before", () => inlineScriptCache.clear());
+
+  eleventyConfig.addNunjucksAsyncShortcode(
+    "inlineScript",
+    /**
+     * Read a JS file, minify it, and emit it as an inline <script> tag.
+     * @param {string} filePath Path relative to the project root
+     * @returns {Promise<string>}
+     */
+    async filePath => {
+      const resolved = path.resolve(filePath);
+      let code = inlineScriptCache.get(resolved);
+
+      if (code === undefined) {
+        const source = fs.readFileSync(resolved, "utf8");
+        const result = await minify(source, { ecma: 2015 });
+
+        if (!result.code)
+          // Fail the build rather than shipping an empty <script>.
+          throw new Error(
+            `inlineScript: minify produced no output for ${filePath}`
+          );
+
+        // Guard against a literal </script> inside a string breaking the tag.
+        code = result.code.replace(/<\/script/gi, "<\\/script");
+        inlineScriptCache.set(resolved, code);
+      }
+
+      return `<script>${code}</script>`;
+    }
+  );
+
   /**
    * @param {string} content
    */
@@ -228,7 +265,10 @@ module.exports = function (/** @type {EleventyConfig} **/ eleventyConfig) {
       console.warn(`[flattenCSS] ${warn.toString()}`);
     });
 
-    return result.css;
+    // Temporary fix for leftover nested selectors because of incorrectly leading with "&" with no parent selector
+    //TODO: Remove with next State Template Release
+    //https://github.com/Office-of-Digital-Services/California-State-Web-Template-Development/pull/291
+    return result.css.replace(/\n& /g, "");
   });
 
   // Custom filter to format date as MM/DD/YYYY
