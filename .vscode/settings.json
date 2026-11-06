@@ -13,5 +13,10 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "prettier.documentSelectors": ["**/web.config", "**/*.svg", "**/*.xml"]
+  "prettier.documentSelectors": ["**/web.config", "**/*.svg", "**/*.xml"],
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.html": "${capture}.11tydata.*"
+  }
 }
