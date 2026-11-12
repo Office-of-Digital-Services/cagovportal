@@ -6,10 +6,9 @@ layout: landing
 description: Provides state resources, programs, and information to help connect immigrant families. Includes health, education, employment, legal help, and work/business.
 breadcrumbparent: Get help
 permalink: immigration/
-category1: Other
-category2: California for All
-category3: Press Release
-keywords: immigrants, immigration, health care, health, education, employment, H.R. 1, DACA, legal, employment, work
+category1: Public safety
+category2: Recent news
+category3: Press releases
 ---
 
 <div
@@ -69,7 +68,7 @@ keywords: immigrants, immigration, health care, health, education, employment, H
     </div>
     <div class="col-12 col-lg-9">
       <div class="container p-y-md">
-        <p>
+        <p class="lead">
           California’s immigrant communities are vital to the state’s strength
           and success. People from around the world have made California home,
           bringing diverse cultures, skills, innovation, and perspectives that
@@ -83,34 +82,37 @@ keywords: immigrants, immigration, health care, health, education, employment, H
           and business support.
         </p>
 
-        <p>
-          The Council on Immigrant Integration and Talent coordinates statewide
-          efforts and provides technical assistance to support immigrant
-          families, workers, and businesses. To learn more, review the
-          <a
-            href="https://www.gov.ca.gov/wp-content/uploads/2025/10/Fact-Sheet_-California-Council-on-Immigration-Talent-August-2025.pdf"
-            >Council Fact Sheet</a
-          >.
-        </p>
-
         <!--NEWS FEED-->
         <div class="p-a-md m-t-lg brd-solid-1 brd-gray-200 rounded-10">
           <h2 class="h4 mt-0">Latest updates</h2>
-
-          {%- set counter = 0 -%} {%- for story in
+          <!-- {%- set counter = 0 -%} {%- for story in
           getImmigrantsStories.rss.channel[0].item -%} {%- if counter < 3 and
-          (category1 in story.category or category2 in story.category or
-          category3 in story.category) -%}
+          story.title and "immigration" in (story.title[0] | lower) -%}
+          <p>
+            <span class="font-size-14">{{ story.pubDate[0] | customDate }}</span
+            ><br />
+            <a href="{{ story.link[0] }}">{{ story.title[0] }}</a>
+          </p>
+          {%- set counter = counter + 1 -%} {%- endif -%} {%- endfor -%} -->
 
           <p>
-            <a href="{{ story.link }}"
-              >{{ story.title }}
-              <span class="font-size-14"
-                >({{ story.pubDate | customDate }})</span
-              ></a
+            <span class="font-size-14">October 31, 2026</span><br />
+            <a
+              href="https://www.gov.ca.gov/2026/10/31/as-federal-immigration-enforcement-intensifies-california-continues-connecting-families-to-protections-deepens-new-efforts-to-expand-legal-capacity/"
+              >As federal immigration enforcement intensifies, California
+              continues connecting families to protections, deepens new efforts
+              to expand legal capacity</a
             >
           </p>
-          {%- set counter = counter + 1 -%} {%- endif -%} {%- endfor %}
+
+          <p>
+            <span class="font-size-14">October 31, 2026</span><br />
+            <a
+              href="https://www.gov.ca.gov/2026/10/09/governor-newsom-urges-californians-to-stay-safe-and-know-their-rights-amid-increased-federal-immigration-enforcement/"
+              >Governor Newsom urges Californians to stay safe and know their
+              rights amid increased federal immigration enforcement</a
+            >
+          </p>
         </div>
 
         <!-- END NEWS FEED-->
@@ -178,12 +180,25 @@ keywords: immigrants, immigration, health care, health, education, employment, H
             <div
               class="p-a-md h-100 brd-solid-1 brd-gray-200 rounded-10 bg-default bg-default-hover pos-rel transform-scale-1_05--hover transition-0_3">
               <a
-                href="/topics/immigration/"
+                href="/immigration/about-california-immigrant-families/"
                 class="lead bold link-before h-100 no-underline"
-                >General Public Assistance Programs</a
+                >About California immigrant families</a
               >
             </div>
           </div>
+        </div>
+
+        <div
+          class="mt-4 p-a-md brd-solid-1 brd-gray-200 rounded-10 bg-default bg-default-hover pos-rel transform-scale-1_05--hover transition-0_3">
+          <a
+            href="/topics/immigration/"
+            class="lead bold link-before h-100 no-underline"
+            >Public assistance programs
+          </a>
+          <p class="m-t">
+            Access resources to support immigrants, including families and
+            groups. Find assistance for essential needs and community services.
+          </p>
         </div>
 
         <p class="mt-4">
