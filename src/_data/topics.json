@@ -562,34 +562,34 @@
     "topicImg": "/images/topic5-lineart.svg",
     "popularServices": [
       {
-        "DepartmentId": 172,
-        "ServiceId": 83,
-        "ServiceName": "Find ESL or English classes",
-        "Description": "Find a class to learn English near you.",
+        "DepartmentId": 217,
+        "ServiceId": 37,
+        "ServiceName": "Apply for Medi-Cal",
+        "Description": "Free or low-cost health coverage, regardless of immigration status.",
         "imgURL": "/images/topic12-3.webp",
         "imgAlt": "A medium skin toned man with salt and pepper hair sits at a desk in a classroom while holding a pen."
       },
       {
-        "DepartmentId": 198,
-        "ServiceId": 1095,
-        "ServiceName": "Apply for the CA Dream Act",
-        "Description": "Provides aid to CA students who do not qualify for federal aid.",
-        "imgURL": "/images/topic12-2.webp",
-        "imgAlt": "A tiny paper graduation cap and tassel are on top of some cash."
+        "DepartmentId": 178,
+        "ServiceId": 79,
+        "ServiceName": "Immigration legal help for DACA",
+        "Description": "Provides free legal DACA services to immigrants who live in California.",
+        "imgURL": "/images/topic14-4.webp",
+        "imgAlt": "Two people with a medium brown skin tone are seated and reviewing paperwork"
       },
       {
         "DepartmentId": 178,
-        "ServiceId": 80,
-        "ServiceName": "Get citizenship services",
-        "Description": "Get access to citizenship services through the Department of Social Services.",
-        "imgURL": "/images/topic14-1.webp",
-        "imgAlt": "Image of a person making stamp on a document."
+        "ServiceId": 60,
+        "ServiceName": "Food Stamps",
+        "Description": "The CalFresh program helps to improve the health and well-being of qualified households.",
+        "imgURL": "/images/topic14-3.webp",
+        "imgAlt": "A person with a medium-light skin tone grabs salad with tongs at a table with various vegetables. There's a sign that says salad mix."
       },
       {
-        "DepartmentId": 238,
-        "ServiceId": 1115,
-        "ServiceName": "Real ID and non-US citizens",
-        "Description": "Learn about getting a Real ID, including as a DACA recipient.",
+        "DepartmentId": 167,
+        "ServiceId": 1119,
+        "ServiceName": "Find CCC undocumented student resources",
+        "Description": "Find resources for undocumented CCC students.",
         "imgURL": "/images/topic14-2.webp",
         "imgAlt": "Group of diverse young adult people smiling and standing together."
       }
