@@ -574,16 +574,16 @@
         "ServiceId": 79,
         "ServiceName": "Immigration legal help for DACA",
         "Description": "Provides free legal DACA services to immigrants who live in California.",
-        "imgURL": "/images/topic12-2.webp",
-        "imgAlt": "A tiny paper graduation cap and tassel are on top of some cash."
+        "imgURL": "/images/topic14-4.webp",
+        "imgAlt": "Two people with a medium brown skin tone are seated and reviewing paperwork"
       },
       {
         "DepartmentId": 178,
         "ServiceId": 60,
         "ServiceName": "Food Stamps",
         "Description": "The CalFresh program helps to improve the health and well-being of qualified households.",
-        "imgURL": "/images/topic14-1.webp",
-        "imgAlt": "Image of a person making stamp on a document."
+        "imgURL": "/images/topic14-3.webp",
+        "imgAlt": "A person with a medium-light skin tone grabs salad with tongs at a table with various vegetables. There's a sign that says salad mix."
       },
       {
         "DepartmentId": 167,
