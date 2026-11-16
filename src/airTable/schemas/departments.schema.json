@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SEP departments",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["AgencyId", "AgencyName", "FriendlyName", "Updated"],
+    "properties": {
+      "AgencyId": { "type": "integer" },
+      "AgencyName": { "type": "string", "pattern": "\\S" },
+      "FriendlyName": { "type": "string", "pattern": "\\S" },
+      "Updated": { "type": "string", "pattern": "\\S" },
+      "Acronym": { "type": "string" },
+      "Description": { "type": "string" },
+      "AgencyTags": { "type": "string" },
+      "Keywords": { "type": "string" },
+      "LogoUrl": { "type": "string" },
+      "WebsiteURL": { "type": "string" },
+      "ContactURL": { "type": "string" },
+      "ContactEmail": { "type": "string" },
+      "ContactPhone": { "type": "string" },
+      "ContactPhoneDigits": { "type": "string" },
+      "ContactPhoneDisplay": { "type": "string" },
+      "Facebook": { "type": "string" },
+      "TwitterAccount": { "type": "string" },
+      "YouTube": { "type": "string" },
+      "GooglePlayStoreUrl": { "type": "string" },
+      "AppleAppStoreUrl": { "type": "string" }
+    }
+  }
+}

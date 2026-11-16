@@ -260,10 +260,10 @@
         "imgAlt": "A row of houses are on a suburban street with a clear sky in the background."
       },
       {
-        "DepartmentId": 139,
-        "ServiceId": 1175,
-        "ServiceName": "COVID-19 rent relief",
-        "Description": "Check the status of your submitted COVID-19 rent relief application.",
+        "DepartmentId": 199,
+        "ServiceId": 1293,
+        "ServiceName": "Get home energy bill assistance",
+        "Description": "Get assistance with your home energy bills.",
         "imgURL": "/images/topic6-4.webp",
         "imgAlt": "A tan-skinned family is smiling and standing outside of their home and next to their car."
       }
