@@ -1,0 +1,86 @@
+[
+  {
+    "Caption": "Medical care and insurance, mental health, maternal health",
+    "CategoryId": 2,
+    "Name": "Health and wellness",
+    "TopicId": 6
+  },
+  {
+    "Caption": "Public safety, disaster services, inmate locator, and more",
+    "CategoryId": 2,
+    "Name": "Safety and emergencies",
+    "TopicId": 7
+  },
+  {
+    "Caption": "Look up representatives, bills, or laws, get data... ",
+    "CategoryId": 4,
+    "Name": "State info and laws",
+    "TopicId": 11
+  },
+  {
+    "Caption": "State parks, reserve campsites, museums, fishing license",
+    "CategoryId": 4,
+    "Name": "Travel and recreation",
+    "TopicId": 12
+  },
+  {
+    "Caption": "Environmental safety, conservation, climate...",
+    "CategoryId": 4,
+    "Name": "Environment",
+    "TopicId": 13
+  },
+  {
+    "Caption": "Community services, citizenship, ESL classes, DACA...",
+    "CategoryId": 4,
+    "Name": "Immigration",
+    "TopicId": 14
+  },
+  {
+    "Caption": "Food, medical, housing, and other programs",
+    "CategoryId": 1,
+    "Name": "Assistance and social programs",
+    "TopicId": 1
+  },
+  {
+    "Caption": "Financial aid, high school diploma, adult ed, and more",
+    "CategoryId": 1,
+    "Name": "Education",
+    "TopicId": 2
+  },
+  {
+    "Caption": "Birth and other certificates, REAL ID, remove your data, etc",
+    "CategoryId": 1,
+    "Name": "Personal records",
+    "TopicId": 3
+  },
+  {
+    "Caption": "Verify contractors and realtors, loans, find appraisers...",
+    "CategoryId": 1,
+    "Name": "Housing and real estate",
+    "TopicId": 4
+  },
+  {
+    "Caption": "Renew driver’s license or vehicle registration, pay tickets...",
+    "CategoryId": 1,
+    "Name": "DMV/auto",
+    "TopicId": 5
+  },
+  {
+    "Caption": "Licensing, permitting, verification, incentives, taxes",
+    "CategoryId": 3,
+    "Name": "Businesses",
+    "TopicId": 8
+  },
+  {
+    "Caption": "Look for jobs, unemployment, disability, job training...",
+    "CategoryId": 3,
+    "Name": "Jobs and unemployment",
+    "TopicId": 9
+  },
+  {
+    "Caption": "File taxes, refunds, tax credits, pay taxes...",
+    "CategoryId": 3,
+    "Name": "Taxes",
+    "TopicId": 10
+  }
+]

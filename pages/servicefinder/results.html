@@ -11,10 +11,10 @@ pagination:
     size: 1
     alias: item
     addAllPagesToCollections : true
-permalink: "servicefinder/topic/{{ item.topicId }}/results/"
+permalink: "servicefinder/topic/{{ item.TopicId }}/results/"
 eleventyComputed:
-  description: "{{ item.caption | safe }}"
-  title: "{{ item.name | safe }}"
+  description: "{{ item.Caption | safe }}"
+  title: "{{ item.Name | safe }}"
 ---
 
 {% set dataset = service_finder.helpers.getResultsDataset(item, service_finder,
@@ -80,9 +80,9 @@ state_entity) %}
 
     {%- for subtopic in dataset.subtopics %}
     <!---->
-    <section data-subtopic-id="{{ subtopic.subtopicId }}">
+    <section data-subtopic-id="{{ subtopic.SubtopicId }}">
       <div class="row">
-        <h2 class="mt-5 mb-3">{{ subtopic.name }}</h2>
+        <h2 class="mt-5 mb-3">{{ subtopic.Name }}</h2>
 
         {% for sepService in subtopic.sepServices %}
         <!---->
@@ -105,7 +105,7 @@ state_entity) %}
                 {{sepService.FriendlyName}}
               </p>
               <p>
-                {{ sepService.shortDescription or sepService.Description }}
+                {{ sepService.ShortDescription or sepService.Description }}
                 <a
                   href="/departments/{{sepService.AgencyId}}/services/{{sepService.ServiceId}}"
                   >Learn more<span class="sr-only">
