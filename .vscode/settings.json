@@ -13,5 +13,35 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "prettier.documentSelectors": ["**/web.config", "**/*.svg", "**/*.xml"]
+  "prettier.documentSelectors": ["**/web.config", "**/*.svg", "**/*.xml"],
+  "json.schemas": [
+    {
+      "fileMatch": ["/src/airTable/data/departments.json"],
+      "url": "./src/airTable/schemas/departments.schema.json"
+    },
+    {
+      "fileMatch": ["/src/airTable/data/services.json"],
+      "url": "./src/airTable/schemas/services.schema.json"
+    },
+    {
+      "fileMatch": ["/src/airTable/data/faqs.json"],
+      "url": "./src/airTable/schemas/faqs.schema.json"
+    },
+    {
+      "fileMatch": ["/src/airTable/data/service_finder_categories.json"],
+      "url": "./src/airTable/schemas/service_finder_categories.schema.json"
+    },
+    {
+      "fileMatch": ["/src/airTable/data/service_finder_topics.json"],
+      "url": "./src/airTable/schemas/service_finder_topics.schema.json"
+    },
+    {
+      "fileMatch": ["/src/airTable/data/service_finder_subtopics.json"],
+      "url": "./src/airTable/schemas/service_finder_subtopics.schema.json"
+    },
+    {
+      "fileMatch": ["/src/airTable/data/service_finder_services.json"],
+      "url": "./src/airTable/schemas/service_finder_services.schema.json"
+    }
+  ]
 }
