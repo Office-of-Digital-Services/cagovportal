@@ -1,204 +1,105 @@
 //@ts-check
 
-// API Reference
-// https://airtable.com/developers/web/api/list-records
-// Token Creation
-// https://airtable.com/create/tokens
+import { fileURLToPath } from "node:url";
+import { fetchAllRecords, writeJson } from "./lib/airtable.mjs";
+import serviceFinderData from "../airTable/load_data.cjs";
 
-import fs from "node:fs";
-import path from "node:path";
-import fetch from "node-fetch";
-import dotenv from "dotenv";
-
-dotenv.config({ quiet: true });
-
-const AIRTABLE_BASE = "appqN4fe2lK8xlNqp";
-const baseUrl = `https://api.airtable.com/v0/${AIRTABLE_BASE}`;
-const outputBasePath = "src/_data/service_finder";
-
-/**
- * @typedef TableConfig
- * @property {string} tableId
- * @property {string} name
- * @property {string[]} fields
- * @property {string[]} sort
- * @property {{[key: string]: string}} fieldMapping
- * @property {string} [filterByFormula]
- */
-
-/** @type {TableConfig[]} */
-const TABLES = [
+/** @type {(Omit<import("./lib/airtable.mjs").TableConfig, "fields"> & { fields: Record<string, string> })[]} */
+const tables = [
   {
     tableId: "tbl5wfeJJ4F7FZ837",
     name: "categories",
-    fields: ["name"],
-    sort: ["fldLGhp1pSqhC8J35"], //sort
-    fieldMapping: {
-      name: "fldxNZIXYjgY1WAC3"
-    }
+    fields: { CategoryId: "Category ID", Name: "Name" },
+    sort: ["Sort"]
   },
   {
     tableId: "tbl6JAo9evMInWiKC",
     name: "topics",
-    fields: ["topicId", "category", "name", "caption"],
-    sort: ["fldpGDExgeMe4EKXW", "fldP1fFOFExZxExi5"], //category, sort
-    fieldMapping: {
-      name: "fld7M2nfLHMr0QKMx",
-      caption: "fldtbJV9XVYXI2yre",
-      category: "fldpGDExgeMe4EKXW",
-      topicId: "fldH5rtK0bKJLPAs5"
-    }
+    fields: {
+      TopicId: "Topic ID",
+      CategoryId: "Category ID",
+      Name: "Name",
+      Caption: "Caption"
+    },
+    sort: ["Category", "Sort"]
   },
   {
     tableId: "tblSOXHg0SEUMrnHv",
     name: "subtopics",
-    fields: ["subtopicId", "name", "topic"],
-    sort: ["fldyJgF4eUXCp4cIs", "fldTElWehFTps2yJp"], //topic, sort
-    fieldMapping: {
-      name: "fldzSlHGqVTQDZArF",
-      subtopicId: "fldOB4zddd8wX5TLE",
-      topic: "fldyJgF4eUXCp4cIs"
-    }
+    fields: { SubtopicId: "Subtopic ID", Name: "Name", TopicId: "Topic ID" },
+    sort: ["Topic", "Sort"]
   },
   {
     tableId: "tblS8RYo4FSqmONyu",
     name: "services",
-    fields: ["serviceId", "shortDescription", "subtopics"],
-    sort: ["fldUE83DR6inhTAbn"], //Service Name
-    fieldMapping: {
-      serviceId: "fldTefBeQ2PJgm4N4",
-      shortDescription: "fldHdf0nl9lOefgQX",
-      subtopics: "fld1vrzODVrv4Ah05"
+    fields: {
+      ServiceId: "ServiceId",
+      ShortDescription: "Short description",
+      SubtopicIds: "Subtopic IDs"
     },
-    filterByFormula: "NOT({fldUE83DR6inhTAbn} = '')" // Only include records where the Service Name is not empty
+    sort: ["Service Name"],
+    filterByFormula: "NOT({Service Name} = '')"
   }
 ];
 
-/**
- * @typedef AirtableRecord
- * @property {string} id
- * @property {string} createdTime
- * @property {{[key: string]: any}} fields
- */
-
-/**
- * Fetch ALL records from an Airtable table using pagination.
- * @param {TableConfig} tableConfig
- * @param {string} apiKey
- */
-async function fetchAllRecords(tableConfig, apiKey) {
-  /** @type {AirtableRecord[]} */
-  let all = [];
-
-  /** @type {string | undefined} */
-  let offset = undefined;
-
-  do {
-    const url = new URL(`${baseUrl}/${tableConfig.tableId}`);
-
-    url.searchParams.set("returnFieldsByFieldId", "true");
-
-    if (tableConfig.filterByFormula)
-      url.searchParams.set("filterByFormula", tableConfig.filterByFormula);
-
-    // Add field filters if provided
-    tableConfig.fields.forEach(f => {
-      url.searchParams.append("fields[]", tableConfig.fieldMapping[f]);
-    });
-
-    // Add sort if provided
-    tableConfig.sort.forEach((sortField, index) => {
-      url.searchParams.append(`sort[${index}][field]`, sortField);
-      url.searchParams.append(`sort[${index}][direction]`, "asc");
-    });
-
-    if (offset) url.searchParams.set("offset", offset);
-
-    const response = await fetch(url.toString(), {
-      headers: { Authorization: `Bearer ${apiKey}` }
-    });
-
-    if (!response.ok)
-      throw new Error(
-        `Airtable request failed (${tableConfig.tableId}): ${response.status} ${response.statusText}`
+/** @param {string} apiKey */
+export default async function updateServiceFinderData(apiKey) {
+  /** @type {Record<string, Record<string, unknown>[]>} */
+  const snapshots = {};
+  // Fetch tables concurrently and map Airtable field names to saved properties.
+  await Promise.all(
+    tables.map(async table => {
+      console.info(`Fetching service finder ${table.name}`);
+      const records = await fetchAllRecords(
+        {
+          ...table,
+          fields: Object.values(table.fields),
+          sort: table.sort?.map(field => table.fields[field] ?? field)
+        },
+        apiKey
       );
+      snapshots[table.name] = records.map(record =>
+        Object.fromEntries(
+          Object.entries(table.fields)
+            .filter(([, field]) => record.fields[field] !== undefined)
+            .map(([name, field]) => [name, record.fields[field]])
+        )
+      );
+    })
+  );
 
-    const json = /** @type {{records: AirtableRecord[], offset?: string}} */ (
-      await response.json()
-    );
-
-    all = all.concat(json.records);
-    offset = json.offset;
-  } while (offset);
-
-  return all;
-}
-
-/**
- * Write JSON to disk only if content has changed
- * @param {string} filePath
- * @param {any} data
- */
-function writeJson(filePath, data) {
-  const newContent = JSON.stringify(data, null, 2);
-
-  if (fs.existsSync(filePath)) {
-    const existingContent = fs.readFileSync(filePath, "utf-8");
-    if (existingContent === newContent) return;
-  }
-
-  fs.writeFileSync(filePath, newContent);
-  console.info(`✅ Saved → ${filePath}`);
-}
-
-/**
- * Main update function
- */
-async function updateServiceFinderData() {
-  const apiKey = process.env.AIRTABLE_API_KEY;
-  if (!apiKey) {
-    console.warn("⚠️ AIRTABLE_API_KEY missing — skipping Airtable fetch.");
-    return;
-  }
-
-  try {
-    await Promise.all(
-      TABLES.map(async tableConfig => {
-        console.log(`📄 Fetching table for: ${tableConfig.name}`);
-
-        const records = await fetchAllRecords(tableConfig, apiKey);
-
-        const flattenedRecords = records.map(record => {
-          const flattened = /** @type {{id: string, [key: string]: any}} */ ({
-            id: record.id
-          });
-
-          // Copy all of the record.fields into flattened
-          Object.assign(flattened, record.fields);
-
-          // Use the field mapping to rename fields
-          for (const [key, airtableFieldId] of Object.entries(
-            tableConfig.fieldMapping
-          ))
-            if (flattened[airtableFieldId] !== undefined) {
-              flattened[key] = flattened[airtableFieldId];
-              delete flattened[airtableFieldId];
-            }
-
-          return flattened;
-        });
-
-        const outputPath = path.resolve(
-          `${outputBasePath}/${tableConfig.name}.json`
+  // Airtable lookups return arrays; require one parent before storing a scalar ID.
+  for (const [table, field, key] of [
+    ["topics", "CategoryId", "TopicId"],
+    ["subtopics", "TopicId", "SubtopicId"]
+  ])
+    for (const row of snapshots[table]) {
+      const links = row[field];
+      if (!Array.isArray(links) || links.length !== 1)
+        throw new Error(
+          `Service finder ${table} record ${row[key]} must link to exactly one ${field}.`
         );
-        writeJson(outputPath, flattenedRecords);
-      })
-    );
-  } catch (err) {
-    console.error("❌ Error fetching Airtable data:");
-    console.error(err);
-    //process.exit(1);
-  }
-}
+      row[field] = links[0];
+    }
 
-updateServiceFinderData();
+  // Stable key ordering keeps snapshot diffs independent of API field order.
+  for (const table of tables)
+    snapshots[table.name] = snapshots[table.name].map(row =>
+      Object.fromEntries(
+        Object.entries(row).sort(([a], [b]) => a.localeCompare(b))
+      )
+    );
+
+  serviceFinderData.normalizeServiceFinderData(snapshots);
+  // Replace snapshots only after the entire dataset passes relationship validation.
+  for (const table of tables)
+    writeJson(
+      fileURLToPath(
+        new URL(
+          `../airTable/data/service_finder_${table.name}.json`,
+          import.meta.url
+        )
+      ),
+      snapshots[table.name]
+    );
+}
