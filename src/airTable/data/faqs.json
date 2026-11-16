@@ -429,11 +429,11 @@
   },
   {
     "AgencyServiceId": 19,
-    "Answer": "Yes, but only if you participate in the <a href=\"https://edd.ca.gov/en/payroll_taxes/Disability_Insurance_Elective_Coverage/\">Disability Insurance Elective Coverage Program</a>.",
+    "Answer": "Yes, but only if you participate in the <a href=\"https://edd.ca.gov/en/disability/Disability_Insurance_Elective_Coverage/\">Disability Insurance Elective Coverage Program</a>.",
     "Id": 99,
     "Question": "Am I covered by PFL if I am self-employed?",
     "SortOrder": 4,
-    "Updated": "2025-10-30T19:51:15.2583747"
+    "Updated": "2026-11-10T17:57:59.0508949"
   },
   {
     "AgencyServiceId": 20,
@@ -797,19 +797,19 @@
   },
   {
     "AgencyServiceId": 37,
-    "Answer": "See the <a href=\"https://www.dhcs.ca.gov/services/medi-cal/eligibility/Pages/Medi-Cal_CovCA_FAQ.aspx\">full FAQ</a>.",
+    "Answer": "See the <a href=\"https://www.dhcs.ca.gov/services/medi-cal-resources/medi-cal-eligibility-division/medi-cal-and-covered-california-frequently-asked-questions/\">full FAQ</a>.",
     "Id": 167,
     "Question": "Where can I find more FAQs regarding Medi-Cal?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T20:35:49.3608966"
+    "Updated": "2026-11-10T18:03:56.2707356"
   },
   {
     "AgencyServiceId": 37,
-    "Answer": "<p style=\"background:white;\"><span>Low-income Californians and certain special populations may qualify for Medi-Cal, regardless of immigration status</span><span style=\"font-family:'Segoe UI',sans-serif;color:#3B3A48;\">. Think you&rsquo;re eligible? </span><a href=\"https://www.dhcs.ca.gov/Get-Medi-Cal/Pages/default.aspx\">Learn more</a><span style=\"font-family:'Segoe UI',sans-serif;color:#3B3A48;\">.&nbsp;</span>Starting January 1, 2026, Medi-Cal will freeze new enrollments for certain adults who are undocumented and do not have a satisfactory immigration status for federal full-scope Medi-Cal. This group will no longer be able to newly enroll in full-scope Medi-Cal, even if they qualified before under state-funded programs.</p>",
+    "Answer": "<p><a href=\"https://www.dhcs.ca.gov/medi-cal/\">Learn more</a>&nbsp;Starting January 1, 2026, Medi-Cal will freeze new enrollments for certain adults who are undocumented and do not have a satisfactory immigration status for federal full-scope Medi-Cal. This group will no longer be able to newly enroll in full-scope Medi-Cal, even if they qualified before under state-funded programs.</p>",
     "Id": 168,
     "Question": "Who is eligible for Medi-Cal?",
     "SortOrder": 2,
-    "Updated": "2025-12-09T19:47:15.4634705"
+    "Updated": "2026-11-10T18:05:52.55152"
   },
   {
     "AgencyServiceId": 37,
@@ -821,11 +821,11 @@
   },
   {
     "AgencyServiceId": 37,
-    "Answer": "<p><span style=\"font-family:'Segoe UI',sans-serif;color:windowtext;\">DHCS contracts with 23 Medi-Cal managed care plans to provide medically necessary health care services. Your health plan options will vary depending on the county where you live. Every county's Medi-Cal health plans provide the same high-quality care at the same low or no cost. The directory of health plans available through Medi-Cal managed care is available online at&nbsp;</span><a href=\"https://www.dhcs.ca.gov/individuals/Pages/MMCDHealthPlanDir.aspx\"><span style=\"font-family:'Segoe UI',sans-serif;color:#0563C1;\">Medi-Cal Managed Care: Health Plan Directory</span></a><span style=\"font-family:'Segoe UI',sans-serif;color:windowtext;\">.​</span></p>",
+    "Answer": "<p>DHCS contracts with 23 Medi-Cal managed care plans to provide medically necessary health care services. Your health plan options will vary depending on the county where you live. Every county's Medi-Cal health plans provide the same high-quality care at the same low or no cost. The directory of health plans available through Medi-Cal managed care is available online at <a href=\"https://www.dhcs.ca.gov/individuals/medi-cal-managed-care-health-plan-directory/\">Medi-Cal Managed Care: Health Plan Directory</a>.​</p>",
     "Id": 170,
     "Question": "What health plans are available through Medi-Cal?",
     "SortOrder": 4,
-    "Updated": "2024-11-21T20:32:46.2593641"
+    "Updated": "2026-11-10T18:05:03.8871162"
   },
   {
     "AgencyServiceId": 38,
@@ -925,11 +925,11 @@
   },
   {
     "AgencyServiceId": 40,
-    "Answer": "Yes, they are available as <a href=\"https://oag.ca.gov/crime/cjsc/criminal-justice-profiles\">Interactive Crime Statistics Tables</a>",
+    "Answer": "Yes, they are available as <a href=\"https://openjustice.doj.ca.gov/exploration/crime-statistics\">Interactive Crime Statistics Tables</a>",
     "Id": 177,
     "Question": "Are web-based presentations of data available?",
     "SortOrder": 3,
-    "Updated": "2017-05-22T16:09:11.39"
+    "Updated": "2026-11-10T17:56:25.4027537"
   },
   {
     "AgencyServiceId": 40,
@@ -2409,11 +2409,11 @@
   },
   {
     "AgencyServiceId": 1223,
-    "Answer": "Visit the <a href=\"https://earthquake.ca.gov/frequently-asked-questions/\">full FAQs</a>",
+    "Answer": "Visit the <a href=\"https://www.earthquake.ca.gov/frequently-asked-questions/\">full FAQs</a>",
     "Id": 394,
     "Question": "How can I learn more about Earthquake warning in California?",
     "SortOrder": 4,
-    "Updated": "2024-11-01T22:29:27.0132944"
+    "Updated": "2026-11-10T17:59:42.2976575"
   },
   {
     "AgencyServiceId": 1224,
@@ -2511,12 +2511,12 @@
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p style=\"background:white;\"><a href=\"https://californiaopioidresponse.org/matproject/youth/\"><span style=\"font-family:'Segoe UI',sans-serif;color:#0563C1;\">California Youth Opioid Response</span></a><span style=\"font-family:'Segoe UI',sans-serif;\"> aims to increase access to care through the expansion of Medication Assisted Treatment services and opioid and stimulant use prevention for youth and families.</span></p>",
+    "Answer": "<p><a href=\"https://californiaopioidresponse.org/matproject/youth-opioid-response/\">California Youth Opioid Response</a> aims to increase access to care through the expansion of Medication Assisted Treatment services and opioid and stimulant use prevention for youth and families.</p>",
     "Featured": true,
     "Id": 413,
     "Question": "What is the California Youth Opioid Response?",
     "SortOrder": 3,
-    "Updated": "2024-11-21T20:59:17.8712368"
+    "Updated": "2026-11-10T17:34:24.6268514"
   },
   {
     "AgencyServiceId": 1235,
@@ -2545,11 +2545,11 @@
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p style=\"line-height:107%;background:white;\"><a href=\"https://californiaopioidresponse.org/matproject/california-conservation-corps/\"><span style=\"line-height:107%;font-family:'Segoe UI',sans-serif;color:#0563C1;\">Youth Peer Mentor Program</span></a><span style=\"line-height:107%;font-family:'Segoe UI',sans-serif;\"> trains justice-involved youth to provide recovery support to peers with substance use challenges.</span></p>",
+    "Answer": "<p><a href=\"https://californiaopioidresponse.org/matproject/youth-peer-mentor-program/\">Youth Peer Mentor Program</a> trains justice-involved youth to provide recovery support to peers with substance use challenges.</p>",
     "Id": 417,
     "Question": "What is the Youth Peer Mentor Program?",
     "SortOrder": 7,
-    "Updated": "2024-11-21T20:58:56.1139918"
+    "Updated": "2026-11-10T17:29:34.2497862"
   },
   {
     "AgencyServiceId": 1236,
@@ -2843,11 +2843,11 @@
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "All your 2nd Chance code entries for the last year will be on your <a href=\"https://www.calottery.com/en/my-account/2nd-chance-submissions\">My 2nd Chance Submissions page</a>, so it’s easy to check them against the 2nd Chance codes you have. Codes entered more than one year ago are not eligible for drawings and/or claims, so they will not be listed on your <a href=\"https://www.calottery.com/en/my-account/2nd-chance-submissions\">My 2nd Chance Submissions page</a>.",
+    "Answer": "All your 2nd Chance code entries for the last year will be on your <a href=\"https://www.calottery.com/en/sign-in?returnUrl=%2Fen%2Fmy-account%2F2nd-chance-submissions\">My 2nd Chance Submissions page</a>, so it’s easy to check them against the 2nd Chance codes you have. Codes entered more than one year ago are not eligible for drawings and/or claims, so they will not be listed on your <a href=\"https://www.calottery.com/en/sign-in?returnUrl=%2Fen%2Fmy-account%2F2nd-chance-submissions\">My 2nd Chance Submissions page</a>.",
     "Id": 523,
     "Question": "Can I see a list of all the California Lottery 2nd Chance codes I've entered?",
     "SortOrder": 3,
-    "Updated": "2026-07-17T15:43:01.434434"
+    "Updated": "2026-11-10T17:36:22.8604319"
   },
   {
     "AgencyServiceId": 1274,
