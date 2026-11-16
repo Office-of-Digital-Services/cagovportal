@@ -2435,8 +2435,8 @@
     "FriendlyName": "Juvenile Parole Board",
     "LogoUrl": "logo-48-JPB.png",
     "TwitterAccount": "https://x.com/CACorrections",
-    "Updated": "2025-12-18T17:11:59.3848975",
-    "WebsiteURL": "https://www.cdcr.ca.gov/Juvenile_Justice/Juvenile_Parole_Board/index.html",
+    "Updated": "2026-11-10T18:09:23.0666334",
+    "WebsiteURL": "https://www.cdcr.ca.gov/juvenile-justice/",
     "YouTube": "https://www.youtube.com/user/CACorrections"
   },
   {
@@ -2570,9 +2570,9 @@
     "AgencyId": 200,
     "AgencyName": "Library, California State",
     "AgencyTags": "Education|Learn English|Immigration|Citizenship|Job Skills|Travel and recreation",
-    "ContactPhone": "916-653-7843",
-    "ContactPhoneDigits": "9166537843",
-    "ContactPhoneDisplay": "916-653-7843",
+    "ContactPhone": "916-323-9843",
+    "ContactPhoneDigits": "9163239843",
+    "ContactPhoneDisplay": "916-323-9843",
     "ContactURL": "https://www.library.ca.gov/contact-us/",
     "Description": "The California State Library, a California public research institution, provides its customers with the accurate, up-to-date information they need to do their jobs easily, quickly, and confidently. Whether you are an elected official, a state employee, a representative of one of California's libraries, a person with special reading needs or a member of the general public, the California State Library is here for you. Our staff, including librarians, researchers, and consultants are at your service.",
     "Facebook": "https://www.facebook.com/CAStateLibrary",
@@ -2580,7 +2580,7 @@
     "Keywords": "library, books, education, student, teacher",
     "LogoUrl": "logo-200-CSL.png",
     "TwitterAccount": "https://x.com/castatelibrary",
-    "Updated": "2026-10-27T18:12:31.4171428",
+    "Updated": "2026-11-06T23:47:42.6587714",
     "WebsiteURL": "https://www.library.ca.gov/",
     "YouTube": "https://www.youtube.com/@CSLmultimedia"
   },
@@ -2887,6 +2887,23 @@
     "Updated": "2025-12-18T19:30:33.6748315",
     "WebsiteURL": "https://www.opc.ca.gov/",
     "YouTube": "https://www.youtube.com/channel/UC0IYJ5NiT17CS-FlJy--5YA"
+  },
+  {
+    "Acronym": "OTSI",
+    "AgencyId": 257,
+    "AgencyName": "Office of Technology and Solutions Integration ",
+    "AgencyTags": "Health and wellness",
+    "ContactPhone": "916-263-4111",
+    "ContactPhoneDigits": "9162634111",
+    "ContactPhoneDisplay": "916-263-4111",
+    "ContactURL": "https://www.osi.ca.gov/Contact_Us.html",
+    "Description": "The Office of Technology and Solutions Integration (OTSI) fosters a learning organization and a culture that embraces collaboration and focuses on professional growth. We are passionate about the people of California who receive vital health and human services by the successful delivery of our large, complex IT systems. We are a trusted leader and work toward common goals, by sharing knowledge, learning and building consensus to implement solutions. We support each other and create the synergy that can only come from working with respect, integrity and accountability.",
+    "FriendlyName": "Office of Technology and Solutions Integration ",
+    "Keywords": "Systems Integration, OSI,",
+    "LogoUrl": "logo-257-OTSI-20261110231930.png",
+    "Updated": "2026-11-10T23:19:37.1790299",
+    "WebsiteURL": "https://www.osi.ca.gov/",
+    "YouTube": "https://www.youtube.com/@theofficeofsystemsintegrat5717"
   },
   {
     "Acronym": "OPTOMETRY",
@@ -3868,23 +3885,6 @@
     "Updated": "2026-04-27T21:15:58.5558357",
     "WebsiteURL": "https://www.csac.ca.gov/",
     "YouTube": "https://www.youtube.com/user/CaStudentAid"
-  },
-  {
-    "Acronym": "OSI",
-    "AgencyId": 257,
-    "AgencyName": "Systems Integration, Office of",
-    "AgencyTags": "Health and wellness",
-    "ContactPhone": "916-263-4111",
-    "ContactPhoneDigits": "9162634111",
-    "ContactPhoneDisplay": "916-263-4111",
-    "ContactURL": "https://www.osi.ca.gov/Contact_Us.html",
-    "Description": "In 2005, the Office of Systems Integration (OSI) was established to manage a portfolio of large, complex health and human services information technology projects. The OSI provides project management, oversight, procurement and support services for a multi-billion dollar portfolio of high criticality projects. In this capacity, OSI coordinates communication, collaboration and decision making among project stakeholders and program-side sponsors of the projects. OSI manages the procurement, contract negotiations and contract management aspects of the acquisition of technology systems and services. After the procurement phase, OSI oversees the design, development, governance and implementation of IT systems which serve health and human services programs.",
-    "FriendlyName": "Office of Systems Integration",
-    "Keywords": "Systems Integration, OSI,",
-    "LogoUrl": "logo-257-OSI.png",
-    "Updated": "2025-12-30T18:29:05.1026753",
-    "WebsiteURL": "https://www.osi.ca.gov/",
-    "YouTube": "https://www.youtube.com/@theofficeofsystemsintegrat5717"
   },
   {
     "Acronym": "Tahoe",

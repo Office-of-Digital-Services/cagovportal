@@ -20,7 +20,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@airtable/blocks": "^1.19.0",
     "eslint": "8.56.0",
     "eslint-plugin-jsdoc": "^48.2.0",
     "prettier": "^3.8.0",
@@ -30,7 +29,7 @@
     "stylelint-use-nesting": "^5.1.1"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy": "^3.1.8",
     "@11ty/eleventy-fetch": "^5.1.1",
     "@babel/core": "^7.28.6",
     "@cagovweb/state-template": "^6.6.0",

@@ -679,7 +679,7 @@
     "ContactPhone": "800-884-1684",
     "ContactPhoneDigits": "8008841684",
     "ContactPhoneDisplay": "800-884-1684",
-    "ContactUrl": "https://www.calcivilrights.ca.gov/contact-us/",
+    "ContactUrl": "https://calcivilrights.ca.gov/ContactUs/",
     "Description": "If you believe you were subjected to discrimination, harassment, or retaliation, CRD may be able to investigate and help you resolve your complaint. File a discrimination complaint via CRD's online system, creating a user account if this is your first time filing.",
     "FriendlyName": "Civil Rights Department",
     "ImageUrl": "service-File-Discrimination-Complaint.jpg",
@@ -690,7 +690,7 @@
     "ServiceType": "By Mail|Online Service",
     "ServiceUrl": "https://calcivilrights.ca.gov/ComplaintProcess/",
     "SortOrder": 1,
-    "Updated": "2026-11-03T22:03:13.0247111"
+    "Updated": "2026-11-10T17:41:24.0349613"
   },
   {
     "AgencyId": 215,
@@ -1019,7 +1019,7 @@
     "ContactPhone": "800-374-8474",
     "ContactPhoneDigits": "8003748474",
     "ContactPhoneDisplay": "800-374-8474",
-    "ContactUrl": "https://www.cdcr.ca.gov/Visitors/",
+    "ContactUrl": "https://www.cdcr.ca.gov/visitors/",
     "Description": "The Visitation Scheduling Application is an application that is offered as an additional service to help expedite and enhance the visitation process.",
     "FriendlyName": "California Department of Corrections and Rehabilitation",
     "ImageUrl": "service-72-Visitor-Appointment-System.jpg",
@@ -1030,7 +1030,7 @@
     "ServiceType": "Online Service",
     "ServiceUrl": "https://www.cdcr.ca.gov/visitors/",
     "SortOrder": 2,
-    "Updated": "2026-06-25T22:29:51.2563742"
+    "Updated": "2026-11-10T17:46:43.9295043"
   },
   {
     "AgencyId": 193,
@@ -1039,7 +1039,7 @@
     "ContactPhone": "415-865-7796",
     "ContactPhoneDigits": "4158657796",
     "ContactPhoneDisplay": "415-865-7796",
-    "ContactUrl": "https://www.courts.ca.gov/9149.htm?rdeLocaleAttr=en",
+    "ContactUrl": "https://courts.ca.gov/about/contact-us?rdeLocaleAttr=en",
     "Description": "Find where to file for divorce, which depend on several factors including but not limited to your county of residence. This website can help you locate the proper county in which to file.",
     "FriendlyName": "California Courts",
     "ImageUrl": "service-Find-Where-File-Divorce.jpg",
@@ -1050,7 +1050,7 @@
     "ServiceType": "Online Service",
     "ServiceUrl": "https://courts.ca.gov/publication/faqs",
     "SortOrder": 2,
-    "Updated": "2026-07-20T20:26:41.8772652"
+    "Updated": "2026-11-10T17:50:27.4585039"
   },
   {
     "AgencyId": 193,
@@ -1059,7 +1059,7 @@
     "ContactPhone": "800-807-6755",
     "ContactPhoneDigits": "8008076755",
     "ContactPhoneDisplay": "800-807-6755",
-    "ContactUrl": "https://www.courts.ca.gov/find-my-court.htm",
+    "ContactUrl": "https://courts.ca.gov/find-my-court",
     "Description": "Traffic tickets are handled at the county office in which the ticket was issued. This website can help you find the appropriate county traffic court to pay or challenge your ticket.",
     "FriendlyName": "California Courts",
     "ImageUrl": "service-15-Traffic-tickets.jpg",
@@ -1070,7 +1070,7 @@
     "ServiceType": "By Mail|Online Service",
     "ServiceUrl": "https://selfhelp.courts.ca.gov/traffic",
     "SortOrder": 1,
-    "Updated": "2019-01-09T00:59:30"
+    "Updated": "2026-11-10T17:53:50.227483"
   },
   {
     "AgencyId": 212,
@@ -1676,7 +1676,7 @@
     "ContactPhone": "916-445-6900",
     "ContactPhoneDigits": "9164456900",
     "ContactPhoneDisplay": "916-445-6900",
-    "ContactUrl": "https://www.p65warnings.ca.gov/contact-us",
+    "ContactUrl": "https://www.p65warnings.ca.gov/contact-us-proposition-65-help-desk",
     "Description": "The California Office of Environmental Health Hazard Assessment is establishing this website to provide the public with information on chemicals, products and locations often associated with Proposition 65 warnings.  These warnings inform Californians about their exposures to chemicals that cause cancer, birth defects or other reproductive harm. ",
     "FriendlyName": "Office of Environmental Health Hazard Assessment",
     "ImageUrl": "service-1142-Find-harmful-chemical-warnings.jpg",
@@ -1687,7 +1687,7 @@
     "ServiceType": "Online Service",
     "ServiceUrl": "https://www.p65warnings.ca.gov/",
     "SortOrder": 1,
-    "Updated": "2026-06-25T23:14:04.4372637"
+    "Updated": "2026-11-10T17:38:53.8361074"
   },
   {
     "AgencyId": 174,
@@ -2320,7 +2320,7 @@
     "ContactPhone": "800-807-6755",
     "ContactPhoneDigits": "8008076755",
     "ContactPhoneDisplay": "800-807-6755",
-    "ContactUrl": "https://ca.gov/contact/",
+    "ContactUrl": "https://www.ca.gov/contact/",
     "Description": "Find updated information on DACA.",
     "FriendlyName": "Office of the Governor",
     "ImageUrl": "service-1115-Get-Updates-on-DACA.jpg",
@@ -2331,7 +2331,7 @@
     "ServiceType": "Online Service",
     "ServiceUrl": "https://immigrantguide.ca.gov/en/daca",
     "SortOrder": 1,
-    "Updated": "2026-06-25T23:36:57.1386717"
+    "Updated": "2026-11-10T17:48:34.8821969"
   },
   {
     "AgencyId": 240,
@@ -2680,7 +2680,7 @@
     "ContactPhone": "800-835-5247",
     "ContactPhoneDigits": "8008355247",
     "ContactPhoneDisplay": "800-835-5247",
-    "ContactUrl": "https://www.chp.ca.gov/home/contact-us",
+    "ContactUrl": "https://www.chp.ca.gov/contact-us/",
     "Description": "For up-to-date information on current road conditions, choose from a list of CHP Communication Centers. The contact number below is for non-emergency situations.",
     "FriendlyName": "California Highway Patrol",
     "ImageUrl": "service-Locate-Current-Road-Conditions.jpg",
@@ -2691,7 +2691,7 @@
     "ServiceType": "Online Service",
     "ServiceUrl": "https://www.chp.ca.gov/traffic",
     "SortOrder": 1,
-    "Updated": "2026-06-25T23:53:10.8474429"
+    "Updated": "2026-11-10T17:39:53.7968651"
   },
   {
     "AgencyId": 185,
@@ -2700,7 +2700,7 @@
     "ContactPhone": "916-263-6000",
     "ContactPhoneDigits": "9162636000",
     "ContactPhoneDisplay": "916-263-6000",
-    "ContactUrl": "http://www.chrb.ca.gov/contact.html",
+    "ContactUrl": "https://www.chrb.ca.gov/contact.html",
     "Description": "Download and fill out applications for horse racing licenses:  Owners, Trainers, Jockeys, Grooms, Agents, Officials.",
     "FriendlyName": "California Horse Racing Board",
     "ImageUrl": "service-1144-Apply-for-a-license.jpg",
@@ -2711,7 +2711,7 @@
     "ServiceType": "By Mail|In Person|Online Service",
     "ServiceUrl": "https://www.chrb.ca.gov/licensing.html",
     "SortOrder": 1,
-    "Updated": "2026-07-22T22:16:01.9355679"
+    "Updated": "2026-11-10T17:43:51.2248804"
   },
   {
     "AgencyId": 152,
@@ -2814,7 +2814,7 @@
     "ContactPhone": "916-909-2863",
     "ContactPhoneDigits": "9169092863",
     "ContactPhoneDisplay": "916-909-2863",
-    "ContactUrl": "https://www.calhr.ca.gov/pages/contacts.aspx",
+    "ContactUrl": "https://www.calhr.ca.gov/contact-CalHR/",
     "Description": "CalHR is responsible for the design, acquisition, and oversight of the statewide employee benefit programs, including dental, vision, flexible spending accounts, wellness and other statewide benefit programs.",
     "FriendlyName": "Department of Human Resources",
     "ImageUrl": "service-1190-Learn-About-Your-State-Employee-Benefits.jpg",
@@ -2825,7 +2825,7 @@
     "ServiceType": "Online Service",
     "ServiceUrl": "https://www.calhr.ca.gov/about-calhr/divisions-programs/benefits/",
     "SortOrder": 3,
-    "Updated": "2026-11-03T18:55:36.1620154"
+    "Updated": "2026-11-10T17:49:40.0298774"
   },
   {
     "AgencyId": 89,
@@ -3126,7 +3126,7 @@
     "ServiceType": "By Mail|In Person|Online Service",
     "ServiceUrl": "https://www.library.ca.gov/btbl/",
     "SortOrder": 1,
-    "Updated": "2026-10-28T19:19:08.1697064"
+    "Updated": "2026-11-06T23:39:36.1045968"
   },
   {
     "AgencyId": 200,
@@ -3147,7 +3147,7 @@
     "ServiceType": "By Mail|In Person|Online Service",
     "ServiceUrl": "https://www.library.ca.gov/california-history/",
     "SortOrder": 3,
-    "Updated": "2026-10-28T19:30:34.1070649"
+    "Updated": "2026-11-06T23:40:23.3885632"
   },
   {
     "AgencyId": 200,
@@ -3215,11 +3215,31 @@
   {
     "AgencyId": 200,
     "AgencyName": "Library, California State",
+    "AgencyTags": "Education",
+    "ContactPhone": "415-469-6100",
+    "ContactPhoneDigits": "4154696100",
+    "ContactPhoneDisplay": "415-469-6100",
+    "ContactUrl": "https://www.library.ca.gov/sutro/visiting/",
+    "Description": "The Sutro Library acquires, preserves, and makes accessible rare and unique resources for scholarship and education of students, faculty, and independent researchers. With over 90,000 volumes of rare books and 100,000 pamphlets, broadsides, photographs and maps, visitors will find information relevant to all academic disciplines. The Sutro Library also holds one of the largest genealogy collections west of Salt Lake City, allowing patrons to explore their family history and local genealogy.",
+    "FriendlyName": "California State Library",
+    "ImageUrl": "service-1333-Sutro-Library-20261106234455.jpg",
+    "Keywords": "rare books, photographs, maps, genealogy",
+    "RelatedSearchTerms": "Sutro Library",
+    "ServiceId": 1333,
+    "ServiceName": "Sutro Library",
+    "ServiceType": "In Person",
+    "ServiceUrl": "https://www.library.ca.gov/sutro/",
+    "SortOrder": 8,
+    "Updated": "2026-11-06T23:46:24.2321609"
+  },
+  {
+    "AgencyId": 200,
+    "AgencyName": "Library, California State",
     "AgencyTags": "Education|Legal Help|Privacy|Safety and emergencies|State info and laws",
     "AltText": "A woman reads a thick law book in front of shelves of law books.",
-    "ContactPhone": "9163239839",
+    "ContactPhone": "916-323-9839",
     "ContactPhoneDigits": "9163239839",
-    "ContactPhoneDisplay": "9163239839",
+    "ContactPhoneDisplay": "916-323-9839",
     "ContactUrl": "https://libraryca.libanswers.com/form",
     "Description": "The Witkin State Law Library offers an extensive collection of primary and secondary legal sources with a focus on California law. Primary sources from California’s beginnings aid the Legislature and state agencies in tracing legislative or regulatory histories, and practice guides and court briefs aid lawyers and those proceeding pro se. Our rare and frequently consulted collections include virtually all California legislation dating back to 1867, superseded California Codes, and the California Code of Regulations Supplement and Notice Register. Extending beyond California, we have materials relating to other states, federal legislation, and even historical and international law.",
     "FriendlyName": "California State Library",
@@ -3231,7 +3251,7 @@
     "ServiceType": "In Person|Online Service",
     "ServiceUrl": "https://www.library.ca.gov/law/",
     "SortOrder": 7,
-    "Updated": "2026-10-28T21:04:24.5308138"
+    "Updated": "2026-11-06T23:41:34.5892561"
   },
   {
     "AgencyId": 155,
@@ -3999,7 +4019,7 @@
     "ContactPhone": "916-732-9253",
     "ContactPhoneDigits": "9167329253",
     "ContactPhoneDisplay": "916-732-9253",
-    "ContactUrl": "https://www.calrecycle.ca.gov/ContactUs/",
+    "ContactUrl": "https://calrecycle.ca.gov/ContactUs/",
     "Description": "Find out where to recycle beverage containers, electronic waste, and other recyclables.",
     "FriendlyName": "Department of Resources Recycling and Recovery",
     "ImageUrl": "service-Find-Recycling-Location.jpg",
@@ -4010,7 +4030,7 @@
     "ServiceType": "Online Service",
     "ServiceUrl": "https://www2.calrecycle.ca.gov/WhereToRecycle/",
     "SortOrder": 1,
-    "Updated": "2026-06-26T21:33:29.3918613"
+    "Updated": "2026-11-10T17:52:50.6460801"
   },
   {
     "AgencyId": 269,
@@ -4394,7 +4414,7 @@
     "ContactPhoneDigits": "9166573442",
     "ContactPhoneDisplay": "916-657-3442",
     "ContactUrl": "https://www.cdss.ca.gov/immigration-services",
-    "Description": "Find immigration legal services via the Department of Social Services website. Legal help can include application assistance with the Naturalization application and other USCIS forms. Service providers exist throughout California; choose your region to find a provider near you. ",
+    "Description": "Find immigration legal services (including DACA) on the Department of Social Services website. Legal help can include application assistance with the Naturalization application and other USCIS forms. Service providers exist throughout California.",
     "FriendlyName": "Department of Social Services",
     "ImageUrl": "service-79-Get-Legal-Help.jpg",
     "Keywords": "Naturalization, Know Your Rights, immigration, DACA",
@@ -4402,9 +4422,9 @@
     "ServiceId": 79,
     "ServiceName": "Get immigration legal help",
     "ServiceType": "Field Office Service",
-    "ServiceUrl": "https://www.calbar.ca.gov/finding-help-immigration",
+    "ServiceUrl": "https://www.cdss.ca.gov/inforesources/immigration/contractor-contact-information",
     "SortOrder": 5,
-    "Updated": "2026-11-02T19:48:12.4200054"
+    "Updated": "2026-11-13T19:46:23.0030657"
   },
   {
     "AgencyId": 178,
@@ -4960,7 +4980,7 @@
     "ContactPhone": "800-777-9229",
     "ContactPhoneDigits": "8007779229",
     "ContactPhoneDisplay": "800-777-9229",
-    "ContactUrl": "https://victims.ca.gov/Contact.aspx",
+    "ContactUrl": "https://victims.ca.gov/",
     "Description": "Were you a victim of crime? The California Victim Compensation Board (CalVCB) can help. We can help pay bills and expenses that result from crime. Crime survivors who have been injured or have been threatened with injury may be eligible.",
     "FriendlyName": "California Victim Compensation Board",
     "ImageUrl": "service-1169-Apply-for-Compensation-for-Crime-Related-Expenses.jpg",
@@ -4971,7 +4991,7 @@
     "ServiceType": "Online Service",
     "ServiceUrl": "https://victims.ca.gov/for-victims/how-compensation-works/",
     "SortOrder": 1,
-    "Updated": "2026-07-22T22:21:27.2642053"
+    "Updated": "2026-11-10T17:40:39.5395669"
   },
   {
     "AgencyId": 228,
