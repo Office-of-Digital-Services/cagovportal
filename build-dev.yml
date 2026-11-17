@@ -31,7 +31,7 @@ steps:
 
   - task: UseNode@1
     inputs:
-      version: "22"
+      version: ">=22.22.2 <23"
     displayName: "Use Node.js 22"
 
   - task: Npm@1
