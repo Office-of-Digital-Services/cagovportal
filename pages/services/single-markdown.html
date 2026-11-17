@@ -1,0 +1,82 @@
+---
+layout: false
+eleventyExcludeFromCollections: true
+pagination:
+  data: state_entity.services
+  size: 1
+  alias: item
+permalink: "departments/{{ item.AgencyId }}/services/{{ item.ServiceId }}/index.md"
+---
+
+{%- set servicePath = "/departments/" + item.AgencyId + "/services/" +
+item.ServiceId + "/" -%} {% set canonicalUrl %}{% domain %}{{ servicePath }}{%
+endset -%} {% set markdownContent %}
+<h1>{{ item.ServiceName | escape }}</h1>
+<p>
+  Source: <a href="{{ canonicalUrl | escape }}">{{ canonicalUrl | escape }}</a>
+</p>
+<p>
+  Department:
+  <a href="/departments/{{ item.AgencyId }}/"
+    >{{ item.FriendlyName | escape }}</a
+  >
+</p>
+<p>Last updated: {{ item.Updated | formatDate | escape }}</p>
+
+<h2>Description</h2>
+<p>{{ item.Description | escape }}</p>
+<ul>
+  {% if item.ServiceUrl %}
+  <li><a href="{{ item.ServiceUrl | escape }}">Launch service</a></li>
+  {% endif %} {% if item.structuredData.provider.url %}
+  <li>
+    <a href="{{ item.structuredData.provider.url | escape }}"
+      >Department website</a
+    >
+  </li>
+  {% endif %} {% if item.ContactUrl %}
+  <li><a href="{{ item.ContactUrl | escape }}">Contact</a></li>
+  {% endif %} {% if item.ContactPhoneDigits %}
+  <li>
+    Phone:
+    <a href="tel:{{ item.ContactPhoneDigits | escape }}"
+      >{{ item.ContactPhoneDisplay | escape }}</a
+    >
+  </li>
+  {% endif %}
+</ul>
+
+{% if item.QA.length %}
+<h2>Frequently Asked Questions</h2>
+{% for qa in item.QA %}
+<h3>{{ qa.Question | escape }}</h3>
+{{ qa.Answer | safe }} {% endfor %} {% endif %} {% set relatedServices =
+state_entity.services | pluck("AgencyId", item.AgencyId) | pluck("ServiceId",
+item.ServiceId, "not") | sortBy("ServiceName") %} {% if relatedServices.length
+%}
+<h2>Related services</h2>
+<ul>
+  {% for related in relatedServices %}
+  <li>
+    <a href="../{{ related.ServiceId }}/">{{ related.ServiceName | escape }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %} {% set serviceTopics = topics | sortBy("featureOrder") |
+pluck("name", item.AgencyTags.split("|"), "match") %} {% if serviceTopics.length
+%}
+<h2>Topics</h2>
+<ul>
+  {% for topic in serviceTopics %}
+  <li>
+    <a href="/topics/{{ topic.slug | escape }}/"
+      >{{ topic.name | trim | escape }}</a
+    >
+  </li>
+  {% endfor %}
+</ul>
+{% endif %} {% if item.Keywords | trim %}
+<h2>Keywords</h2>
+<p>{{ item.Keywords | escape }}</p>
+{% endif %} {% endset -%} {{ markdownContent | toMarkdown(canonicalUrl) | safe
+}}

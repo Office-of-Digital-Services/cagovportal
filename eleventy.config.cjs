@@ -11,6 +11,7 @@ const path = require("node:path");
 const PurgeCSS = require("@fullhuman/postcss-purgecss");
 const babel = require("@babel/core");
 const transformImports = require("babel-plugin-transform-imports");
+const toMarkdown = require("./src/filters/to_markdown.cjs");
 
 // canonical domain
 const domain = "https://www.ca.gov";
@@ -58,6 +59,7 @@ module.exports = function (/** @type {EleventyConfig} **/ eleventyConfig) {
     }
   );
   eleventyConfig.addShortcode("domain", () => domain);
+  eleventyConfig.addFilter("toMarkdown", toMarkdown);
 
   // {%- for tag in topics | pluck("featured", true) | sortBy("featureOrder") -%}
   eleventyConfig.addFilter(
