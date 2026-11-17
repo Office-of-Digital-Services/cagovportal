@@ -1,0 +1,27 @@
+---
+layout: false
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+{%- set siteUrl %}{% domain %}{% endset -%}
+# CA.gov
+
+> The official portal of the State of California, connecting people with state departments and government services.
+
+The links below provide Markdown versions of department and service pages.
+Each file links to its canonical HTML page and includes available contact information.
+Department files include service summaries and featured FAQs; service files include descriptions and FAQs.
+
+## Departments
+
+{% for agency in state_entity.agencies -%}
+{% set agencyName %}{{ agency.AgencyFullName | escape }}{% endset -%}
+- [{{ agencyName | toMarkdown(siteUrl) | trim | safe }}]({{ siteUrl }}/departments/{{ agency.AgencyId }}/index.md)
+{% endfor %}
+## Services
+
+{% for service in state_entity.services -%}
+{% set serviceName %}{{ service.ServiceName | escape }}{% endset -%}
+{% set departmentName %}{{ service.FriendlyName | escape }}{% endset -%}
+- [{{ serviceName | toMarkdown(siteUrl) | trim | safe }}]({{ siteUrl }}/departments/{{ service.AgencyId }}/services/{{ service.ServiceId }}/index.md): {{ departmentName | toMarkdown(siteUrl) | trim | safe }}
+{% endfor -%}

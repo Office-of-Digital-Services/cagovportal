@@ -110,6 +110,9 @@
   permalink and no layout to avoid converting the output back into HTML.
 - Keep IIS Markdown MIME mapping, the `index.md` redirect exception, and
   Markdown cache policy in `src/root/web.config` when extending this feature.
+- `pages/llms.txt.njk` generates `/llms.txt` with links to department and service
+  Markdown pages from `state_entity`. Keep these links aligned with their
+  Markdown permalinks; the generator is excluded from HTML page collections.
 
 - Follow nearby naming and module conventions; build scripts use both `.mjs`
   and `.cjs`, so preserve the appropriate module format.
