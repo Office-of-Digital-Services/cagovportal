@@ -1,0 +1,89 @@
+---
+layout: false
+eleventyExcludeFromCollections: true
+pagination:
+  data: state_entity.agencies
+  size: 1
+  alias: item
+permalink: "departments/{{ item.AgencyId }}/index.md"
+---
+
+{%- set departmentPath = "/departments/" + item.AgencyId + "/" -%} {% set
+canonicalUrl %}{% domain %}{{ departmentPath }}{% endset -%} {%- set
+departmentServices = state_entity.services | pluck("AgencyId", item.AgencyId)
+-%} {%- set featuredQuestions = [] -%} {%- for service in departmentServices -%}
+{%- for qa in service.QA | pluck("Featured", true) -%} {%- set _ =
+featuredQuestions.push(qa) -%} {%- endfor -%} {%- endfor -%} {% set
+markdownContent %}
+<h1>{{ item.AgencyFullName | escape }}</h1>
+<p>
+  Source: <a href="{{ canonicalUrl | escape }}">{{ canonicalUrl | escape }}</a>
+</p>
+<p>Last updated: {{ item.Updated | formatDate | escape }}</p>
+
+<h2>Contact</h2>
+<ul>
+  {%- if item.ContactEmail %}
+  <li>
+    Email:
+    <a href="mailto:{{ item.ContactEmail | escape }}"
+      >{{ item.ContactEmail | escape }}</a
+    >
+  </li>
+  {%- endif %} {%- if item.ContactPhone %}
+  <li>
+    Phone:
+    <a href="tel:{{ item.ContactPhoneDigits | escape }}"
+      >{{ item.ContactPhoneDisplay | escape }}</a
+    >
+  </li>
+  {%- endif %} {%- if item.WebsiteURL %}
+  <li><a href="{{ item.WebsiteURL | escape }}">Department website</a></li>
+  {%- endif %} {%- if item.ContactURL %}
+  <li><a href="{{ item.ContactURL | escape }}">More contact info</a></li>
+  {%- endif %} {%- if item.Facebook %}
+  <li><a href="{{ item.Facebook | escape }}">Facebook</a></li>
+  {%- endif %} {%- if item.TwitterAccount %}
+  <li><a href="{{ item.TwitterAccount | escape }}">X (Twitter)</a></li>
+  {%- endif %} {%- if item.YouTube %}
+  <li><a href="{{ item.YouTube | escape }}">YouTube</a></li>
+  {%- endif %}
+</ul>
+
+{%- if item.GooglePlayStoreUrl or item.AppleAppStoreUrl %}
+<h2>Android and iOS apps</h2>
+<ul>
+  {%- if item.GooglePlayStoreUrl %}
+  <li>
+    <a href="{{ item.GooglePlayStoreUrl | escape }}">Get it on Google Play</a>
+  </li>
+  {%- endif %} {%- if item.AppleAppStoreUrl %}
+  <li>
+    <a href="{{ item.AppleAppStoreUrl | escape }}">Get it on the App Store</a>
+  </li>
+  {%- endif %}
+</ul>
+{%- endif %}
+
+<h2>Description</h2>
+<p>{{ item.Description | escape }}</p>
+
+{%- if departmentServices.length %}
+<h2>Services</h2>
+{%- for service in departmentServices %}
+<h3>
+  <a href="./services/{{ service.ServiceId }}/"
+    >{{ service.ServiceName | escape }}</a
+  >
+</h3>
+<p>{{ service.Description | escape }}</p>
+{%- if service.ServiceUrl %}
+<p><a href="{{ service.ServiceUrl | escape }}">Launch service</a></p>
+{%- endif %}
+<p>Last updated: {{ service.Updated | formatDate | escape }}</p>
+{%- endfor %} {%- endif %} {%- if featuredQuestions.length %}
+<h2>Frequently Asked Questions</h2>
+{%- for qa in featuredQuestions %}
+<h3>{{ qa.Question | escape }}</h3>
+{{ qa.Answer | safe }} {%- endfor %} {%- endif %} {% endset -%} {{
+markdownContent | toMarkdown(canonicalUrl) | safe }}

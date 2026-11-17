@@ -12,7 +12,7 @@
       type="text/markdown"
       title="Markdown"
       href="{{ markdownUrl | escape }}" />
-    {% endif %} {%- if noindex %}
+    {%- endif %} {%- if noindex %}
     <meta name="robots" content="noindex" />
     {%- elseif noindex_follow %}
     <meta name="robots" content="noindex, follow" />
