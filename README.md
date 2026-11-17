@@ -19,6 +19,8 @@ Some resources require an authenticated account with appropriate access.
 
 ## Local development
 
+Use Node.js 22 (22.22.2+), Node.js 24 (24.15.0+), or Node.js 26 or newer.
+
 ```sh
 npm ci
 npm start
