@@ -11,6 +11,7 @@ pagination:
     addAllPagesToCollections : true
 permalink: "departments/{{ item.AgencyId }}/services/{{ item.ServiceId }}/"
 eleventyComputed:
+  markdownUrl: "/departments/{{ item.AgencyId }}/services/{{ item.ServiceId }}/index.md"
   description: "{{ item.Description | safe }}"
   keywords: "{{ item.Keywords | safe }}"
   title: "{{ item.ServiceName | safe }}"

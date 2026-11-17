@@ -6,7 +6,13 @@
     <meta name="Author" content="State of California" />
     <meta name="Description" content="{{ description }}" />
     <meta name="Keywords" content="California, government, {{ keywords }}" />
-    {%- if noindex %}
+    {%- if markdownUrl %}
+    <link
+      rel="alternate"
+      type="text/markdown"
+      title="Markdown"
+      href="{{ markdownUrl | escape }}" />
+    {%- endif %} {%- if noindex %}
     <meta name="robots" content="noindex" />
     {%- elseif noindex_follow %}
     <meta name="robots" content="noindex, follow" />
