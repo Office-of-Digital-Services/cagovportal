@@ -23,6 +23,16 @@ const data = [
       {
         key: "Departments",
         href: "/departments/"
+      },
+      {
+        key: "Get help",
+        href: "/support/",
+        children: [
+          {
+            key: "Immigration and families",
+            href: "/immigration/"
+          }
+        ]
       }
     ]
   }
