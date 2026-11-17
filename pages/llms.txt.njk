@@ -15,13 +15,10 @@ Department files include service summaries and featured FAQs; service files incl
 ## Departments
 
 {% for agency in state_entity.agencies -%}
-{% set agencyName %}{{ agency.AgencyFullName | escape }}{% endset -%}
-- [{{ agencyName | toMarkdown(siteUrl) | trim | safe }}]({{ siteUrl }}/departments/{{ agency.AgencyId }}/index.md)
+- [{{ agency.AgencyFullName | safe }}]({{ siteUrl | safe }}/departments/{{ agency.AgencyId }}/index.md)
 {% endfor %}
 ## Services
 
 {% for service in state_entity.services -%}
-{% set serviceName %}{{ service.ServiceName | escape }}{% endset -%}
-{% set departmentName %}{{ service.FriendlyName | escape }}{% endset -%}
-- [{{ serviceName | toMarkdown(siteUrl) | trim | safe }}]({{ siteUrl }}/departments/{{ service.AgencyId }}/services/{{ service.ServiceId }}/index.md): {{ departmentName | toMarkdown(siteUrl) | trim | safe }}
+- [{{ service.ServiceName | safe }}]({{ siteUrl | safe }}/departments/{{ service.AgencyId }}/services/{{ service.ServiceId }}/index.md): {{ service.FriendlyName | safe }}
 {% endfor -%}
