@@ -356,12 +356,12 @@
   },
   {
     "AgencyServiceId": 17,
-    "Answer": "Effective July 1, 2013, the California School Directory will no longer provide information for postsecondary districts or schools that are a part of the&nbsp;<a href=\"https://www.cccco.edu/Students/Find-a-College/\">California Community College</a>,&nbsp;<a href=\"https://www.calstate.edu/\">California State University</a>&nbsp;, or&nbsp;<a href=\"https://www.universityofcalifornia.edu/\">University of California</a>&nbsp;systems.",
+    "Answer": "Effective July 1, 2013, the California School Directory will no longer provide information for postsecondary districts or schools that are a part of the <a href=\"https://www.cccco.edu/Students/Find-a-College/\">California Community College</a>, <a href=\"https://www.calstate.edu/\">California State University</a>, or <a href=\"https://www.universityofcalifornia.edu/\">University of California</a> systems.",
     "Featured": true,
     "Id": 16,
     "Question": "You used to list college information. What happened?",
     "SortOrder": 4,
-    "Updated": "2026-11-02T20:25:25.2886868"
+    "Updated": "2026-11-18T20:09:06.1957585"
   },
   {
     "AgencyServiceId": 18,
@@ -373,11 +373,11 @@
   },
   {
     "AgencyServiceId": 18,
-    "Answer": "Workers who suffer a loss of wages when they are unable to work due to a non-work-related illness or injury, pregnancy, or childbirth, may be eligible for DI benefits.&nbsp;",
+    "Answer": "Workers who suffer a loss of wages when they are unable to work due to a non-work-related illness or injury, pregnancy, or childbirth, may be eligible for DI benefits.",
     "Id": 93,
     "Question": "Who is eligible for DI?",
     "SortOrder": 2,
-    "Updated": "2019-01-09T02:32:48.8178203"
+    "Updated": "2026-11-18T20:09:35.0596332"
   },
   {
     "AgencyServiceId": 18,
@@ -464,12 +464,12 @@
   },
   {
     "AgencyServiceId": 20,
-    "Answer": "<p>A Standard Base Period includes wages from a 12-month period of time consisting of the first four of the last five completed calendar quarters.</p><p>If your claim begins in:</p><ul><li>January-February-March:&nbsp;Your Standard Base Period is the prior 12 months, ending the last day of&nbsp;September.</li><li>April-May-June&lt;/strong&gt;:&nbsp;Your Standard Base Period is the prior 12 months,&nbsp;ending the last day of December.</li><li>July-August-September:&nbsp;Your Standard Base Period is the prior 12 months,&nbsp;ending the last day of&nbsp;March.</li><li>October-November-December:&nbsp;Your Standard Base Period is the prior 12 months, ending the last day of June.</li></ul>",
+    "Answer": "<p>A Standard Base Period includes wages from a 12-month period of time consisting of the first four of the last five completed calendar quarters.</p><p>If your claim begins in:</p><ul><li>January-February-March: Your Standard Base Period is the prior 12 months, ending the last day of September.</li><li>April-May-June: Your Standard Base Period is the prior 12 months, ending the last day of December.</li><li>July-August-September: Your Standard Base Period is the prior 12 months, ending the last day of March.</li><li>October-November-December: Your Standard Base Period is the prior 12 months, ending the last day of June.</li></ul>",
     "Featured": true,
     "Id": 105,
     "Question": "What is the Standard Base Period?",
     "SortOrder": 4,
-    "Updated": "2024-06-19T22:08:56.6109388"
+    "Updated": "2026-11-18T20:10:41.1282895"
   },
   {
     "AgencyServiceId": 22,
@@ -505,39 +505,39 @@
   },
   {
     "AgencyServiceId": 24,
-    "Answer": "Visit the <a href=\"https://cdtfa.ca.gov/taxes-and-fees/sales-use-tax-rates.htm\">California City &amp; County Sales &amp; Use Tax Rates</a>&nbsp;page. ",
+    "Answer": "Visit the <a href=\"https://cdtfa.ca.gov/taxes-and-fees/sales-use-tax-rates.htm\">California City &amp; County Sales &amp; Use Tax Rates</a> page.",
     "Featured": true,
     "Id": 114,
     "Question": "Where can I find more information regarding looking up tax rates?",
     "SortOrder": 1,
-    "Updated": "2025-11-03T17:43:59.3864709"
+    "Updated": "2026-11-18T20:11:55.111243"
   },
   {
     "AgencyServiceId": 24,
-    "Answer": "<p>The statewide tax rate is 7.25%. In most areas of California, local jurisdictions have added district taxes that increase the tax owed by a seller. Those district tax rates range from 0.10% to 1.00%. Some areas may have more than one district tax in effect. Sellers are required to report and pay the applicable district taxes for their taxable sales and purchases.</p><p>If you need help identifying the correct rate, ⁠<a href=\"https://maps.cdtfa.ca.gov/\">you may look up the rate by address</a>, contact our Customer Service Center at 1-800-400-7115 (TTY: 711), or call your local&nbsp;<a href=\"https://cdtfa.ca.gov/office-locations.htm\">CDTFA office</a> for assistance.</p>",
+    "Answer": "<p>The statewide tax rate is 7.25%. In most areas of California, local jurisdictions have added district taxes that increase the tax owed by a seller. Those district tax rates range from 0.10% to 1.00%. Some areas may have more than one district tax in effect. Sellers are required to report and pay the applicable district taxes for their taxable sales and purchases.</p><p>If you need help identifying the correct rate, <a href=\"https://maps.cdtfa.ca.gov/\">you may look up the rate by address</a>, contact our Customer Service Center at 1-800-400-7115 (TTY: 711), or call your local <a href=\"https://cdtfa.ca.gov/office-locations.htm\">CDTFA office</a> for assistance.</p>",
     "Featured": true,
     "Id": 115,
     "Question": "How do Tax Districts affect the tax rate?  ",
     "SortOrder": 2,
-    "Updated": "2026-11-18T19:31:52.5632607"
+    "Updated": "2026-11-18T20:12:59.3386157"
   },
   {
     "AgencyServiceId": 24,
-    "Answer": "Visit the&nbsp;<a href=\"https://cdtfa.ca.gov/taxes-and-fees/know-your-rate.htm\">Know Your Sales and Use Tax Rate</a> page. ",
+    "Answer": "Visit the <a href=\"https://cdtfa.ca.gov/taxes-and-fees/know-your-rate.htm\">Know Your Sales and Use Tax Rate</a> page.",
     "Featured": true,
     "Id": 117,
     "Question": "As a retailer, how will I know what tax rates to charge?  ",
     "SortOrder": 3,
-    "Updated": "2026-11-04T22:34:16.6320826"
+    "Updated": "2026-11-18T20:13:34.647292"
   },
   {
     "AgencyServiceId": 24,
-    "Answer": "Visit the&nbsp;<a href=\"https://cdtfa.ca.gov/taxes-and-fees/sut-rates-description.htm\">Detailed Description of the Sales &amp; Use Tax Rate</a> page. ",
+    "Answer": "Visit the <a href=\"https://cdtfa.ca.gov/taxes-and-fees/sut-rates-description.htm\">Detailed Description of the Sales &amp; Use Tax Rate</a> page.",
     "Featured": true,
     "Id": 119,
     "Question": "What are my tax dollars being used for?  ",
     "SortOrder": 4,
-    "Updated": "2026-11-04T22:35:13.943192"
+    "Updated": "2026-11-18T20:14:02.3980975"
   },
   {
     "AgencyServiceId": 25,
@@ -604,21 +604,21 @@
   },
   {
     "AgencyServiceId": 26,
-    "Answer": "Visit the <a href=\"https://cdtfa.ca.gov/taxes-and-fees/faqseller.htm\">Obtaining a Seller's Permit</a>&nbsp;page. ",
+    "Answer": "Visit the <a href=\"https://cdtfa.ca.gov/taxes-and-fees/faqseller.htm\">Obtaining a Seller's Permit</a> page.",
     "Featured": true,
     "Id": 132,
     "Question": "Where can I find more FAQs regarding seller's permits?",
     "SortOrder": 4,
-    "Updated": "2026-11-04T22:33:17.1496144"
+    "Updated": "2026-11-18T20:14:34.5305702"
   },
   {
     "AgencyServiceId": 27,
-    "Answer": "In employment cases, you must submit an intake form to CRD within three years of the date you were last harmed. In most other cases, you must do this within one year of the date you were last harmed.&nbsp;",
+    "Answer": "In employment cases, you must submit an intake form to CRD within three years of the date you were last harmed. In most other cases, you must do this within one year of the date you were last harmed.",
     "Featured": true,
     "Id": 134,
     "Question": "What are the time limits for filing a discrimination complaint?",
     "SortOrder": 1,
-    "Updated": "2026-05-29T16:27:51.0007571"
+    "Updated": "2026-11-18T20:15:04.0123887"
   },
   {
     "AgencyServiceId": 27,
@@ -770,12 +770,12 @@
   },
   {
     "AgencyServiceId": 36,
-    "Answer": "Please see the <a href=\"https://www.dhcs.ca.gov/providers-partners/directories-for-substance-use-disorder-services/\">Directories for Substance Use Disorder Services webpage</a>.&nbsp;<br>",
+    "Answer": "Please see the <a href=\"https://www.dhcs.ca.gov/providers-partners/directories-for-substance-use-disorder-services/\">Directories for Substance Use Disorder Services webpage</a>.<br>",
     "Featured": true,
     "Id": 164,
     "Question": "How do I find licensed mental health or substance use disorder treatment facilities? ",
     "SortOrder": 2,
-    "Updated": "2026-11-02T20:02:02.0249346"
+    "Updated": "2026-11-18T20:15:36.6626909"
   },
   {
     "AgencyServiceId": 36,
@@ -1049,12 +1049,12 @@
   },
   {
     "AgencyServiceId": 49,
-    "Answer": "<p>No matter what your destination is or whether you have a reserved or a first-come, first-served site, it's always a good idea to call ahead and check on park conditions.</p><strong>For Reservations - Plan ahead</strong> <p>You can make reservations up to&nbsp;six months in advance through <a href=\"https://www.reservecalifornia.com/\">ReserveCalifornia</a>.</p><strong>Determine where you want to camp and be flexible</strong> <p>Have alternate parks in mind in case your first choice is booked.<br><br>To help you, get your copy of the California State Parks Camping Reservation Guide by calling (916) 653-6995 or writing to: <br></p><strong>Consider less busy days</strong> <p>Sometimes reservations are easier to make if you can camp mid-week.</p><strong>Consider less popular camps</strong> <p>Southern coastal campgrounds can be full year-round. You could have better luck getting reservations at State Parks north of Santa Cruz or inland.&nbsp; Look for sites which are more remote and away from major metropolitan areas.</p><strong>Remember the holiday crush</strong> <p>The closer you try to make reservations to a holiday (Memorial Day weekend, Fourth of July, or Labor Day weekend), the further north and inland you may need to go.</p><strong>Consider cancellations</strong> <p>Check the Reserve America website or call the 800-444-7275 phone number. While no waiting lists are maintained, cancellations are rare but they can occur.</p><strong>Consider visiting the park for a day</strong> <p>If the campgrounds you want to visit are booked, consider a day visit to the park for a picnic, hike or other outdoor recreation.</p><strong>Consider April, May, September, and October</strong> <p>The \"shoulder season\" (April, May, September, and October) is a good time to enjoy California State Parks. The weather during these months is usually good.</p>",
+    "Answer": "<p>No matter what your destination is or whether you have a reserved or a first-come, first-served site, it's always a good idea to call ahead and check on park conditions.</p><strong>For Reservations - Plan ahead</strong><p>You can make reservations up to six months in advance through <a href=\"https://www.reservecalifornia.com/\">ReserveCalifornia</a>.</p><strong>Determine where you want to camp and be flexible</strong><p>Have alternate parks in mind in case your first choice is booked.</p><p>To help you, get your copy of the California State Parks Camping Reservation Guide by calling (916) 653-6995 or writing to:</p><strong>Consider less busy days</strong><p>Sometimes reservations are easier to make if you can camp mid-week.</p><strong>Consider less popular camps</strong><p>Southern coastal campgrounds can be full year-round. You could have better luck getting reservations at State Parks north of Santa Cruz or inland.&nbsp; Look for sites which are more remote and away from major metropolitan areas.</p><strong>Remember the holiday crush</strong><p>The closer you try to make reservations to a holiday (Memorial Day weekend, Fourth of July, or Labor Day weekend), the further north and inland you may need to go.</p><strong>Consider cancellations</strong><p>Check the Reserve America website or call the 800-444-7275 phone number. While no waiting lists are maintained, cancellations are rare but they can occur.</p><strong>Consider visiting the park for a day</strong><p>If the campgrounds you want to visit are booked, consider a day visit to the park for a picnic, hike or other outdoor recreation.</p><strong>Consider April, May, September, and October</strong><p>The \"shoulder season\" (April, May, September, and October) is a good time to enjoy California State Parks. The weather during these months is usually good.</p>",
     "Featured": true,
     "Id": 213,
     "Question": "What are some helpful camping tips for year-round camping enjoyment?",
     "SortOrder": 3,
-    "Updated": "2026-11-18T19:41:01.1696737"
+    "Updated": "2026-11-18T20:17:40.5637428"
   },
   {
     "AgencyServiceId": 49,
@@ -1067,12 +1067,12 @@
   },
   {
     "AgencyServiceId": 50,
-    "Answer": "If the reservation sites are full, look for first-come, first-served campgrounds, and try to arrive on a Wednesday or Thursday to maximize your chance to get a campsite.&nbsp;Please call the specific park for details.&nbsp; They include:<br /><a href=\"https://www.parks.ca.gov/?page_id=604\">Emma Wood State Beach</a><br /><a href=\"https://www.parks.ca.gov/?page_id=553\">Indian Grinding Rock State Historic Park</a>",
+    "Answer": "<p>If the reservation sites are full, look for first-come, first-served campgrounds, and try to arrive on a Wednesday or Thursday to maximize your chance to get a campsite. Please call the specific park for details. They include:</p><ul><li><a href=\"https://www.parks.ca.gov/?page_id=604\">Emma Wood State Beach</a></li><li><a href=\"https://www.parks.ca.gov/?page_id=553\">Indian Grinding Rock State Historic Park</a></li></ul>",
     "Featured": true,
     "Id": 216,
     "Question": "What about non-reservation sites? ",
     "SortOrder": 1,
-    "Updated": "2025-10-30T18:25:23.5155405"
+    "Updated": "2026-11-18T20:20:23.247259"
   },
   {
     "AgencyServiceId": 50,
@@ -1085,12 +1085,12 @@
   },
   {
     "AgencyServiceId": 50,
-    "Answer": "Visit&nbsp;<a href=\"https://www.reservecalifornia.com/\" target=\"_blank\">ReserveCalifornia</a>, our new system is easy to use - similar to booking hotels, airline tickets and other comparable services.",
+    "Answer": "Visit <a href=\"https://www.reservecalifornia.com/\">ReserveCalifornia</a>, our new system is easy to use - similar to booking hotels, airline tickets and other comparable services.",
     "Featured": true,
     "Id": 218,
     "Question": "How do I reserve a campsite?",
     "SortOrder": 3,
-    "Updated": "2018-03-16T12:38:57.187986"
+    "Updated": "2026-11-18T20:20:54.9576918"
   },
   {
     "AgencyServiceId": 51,
@@ -1380,11 +1380,11 @@
   },
   {
     "AgencyServiceId": 60,
-    "Answer": "An interview is required before certifying your household to get CalFresh benefits. The interview can occur in the county office or by telephone (in most counties). The interview may be held with the head of household, spouse, the authorized representative or any other responsible household family member. An interview is required annually.&nbsp;",
+    "Answer": "An interview is required before certifying your household to get CalFresh benefits. The interview can occur in the county office or by telephone (in most counties). The interview may be held with the head of household, spouse, the authorized representative or any other responsible household family member. An interview is required annually.",
     "Id": 22,
-    "Question": "Is an interview required?  ",
+    "Question": "Is an interview required?",
     "SortOrder": 2,
-    "Updated": "2017-05-19T09:12:35.681558"
+    "Updated": "2026-11-18T20:21:22.7022423"
   },
   {
     "AgencyServiceId": 60,
@@ -1430,12 +1430,12 @@
   },
   {
     "AgencyServiceId": 62,
-    "Answer": "Select \"view\" to see additional information about the facility.&nbsp;",
+    "Answer": "Select \"view\" to see additional information about the facility.",
     "Featured": true,
     "Id": 36,
     "Question": "How do I see more detail about a facility?",
     "SortOrder": 3,
-    "Updated": "2017-05-19T09:50:45.23736"
+    "Updated": "2026-11-18T20:21:46.287293"
   },
   {
     "AgencyServiceId": 63,
@@ -1621,12 +1621,12 @@
   },
   {
     "AgencyServiceId": 74,
-    "Answer": "The best way to get a quick estimate of the price you would pay is to use the&nbsp;<a href=\"https://apply.coveredca.com/lw-shopandcompare/\">Shop and Compare Tool</a>. The price is based on your estimated income for the coverage year, your ZIP code, your household size and your age. If you are a low- or moderate-income Californian, you may get help buying insurance from Covered California through monthly subsidies that lower your premium costs so that you pay less for top-quality, brand-name insurance. Learn more about&nbsp;<a href=\"https://www.coveredca.com/costs\">who qualifies for a subsidy</a>.",
+    "Answer": "The best way to get a quick estimate of the price you would pay is to use the <a href=\"https://apply.coveredca.com/lw-shopandcompare/\">Shop and Compare Tool</a>. The price is based on your estimated income for the coverage year, your ZIP code, your household size and your age. If you are a low- or moderate-income Californian, you may get help buying insurance from Covered California through monthly subsidies that lower your premium costs so that you pay less for top-quality, brand-name insurance. Learn more about <a href=\"https://www.coveredca.com/costs\">who qualifies for a subsidy</a>.",
     "Featured": true,
     "Id": 265,
     "Question": "How much does it cost to buy insurance through Covered California?",
     "SortOrder": 3,
-    "Updated": "2026-11-03T22:42:18.6906174"
+    "Updated": "2026-11-18T20:22:23.8916312"
   },
   {
     "AgencyServiceId": 74,
@@ -1675,12 +1675,12 @@
   },
   {
     "AgencyServiceId": 1121,
-    "Answer": "View the <a href=\"https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/assembly-bill-ab-60-driver-licenses/\">AB 60 application process&nbsp;</a>",
+    "Answer": "View the <a href=\"https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/assembly-bill-ab-60-driver-licenses/\">AB 60 application process</a>",
     "Featured": true,
     "Id": 550,
     "Question": "How do I apply for an AB 60 driver's license?",
     "SortOrder": 1,
-    "Updated": "2026-08-02T22:09:37.1469255"
+    "Updated": "2026-11-18T20:23:01.5328113"
   },
   {
     "AgencyServiceId": 1124,
@@ -1791,12 +1791,12 @@
   },
   {
     "AgencyServiceId": 1129,
-    "Answer": "The Consumer Complaint process assists consumers in resolving issues with their health plans. These issues can consist of billing problems, cancellation of coverage, claim and copay disputes, delays in getting an appointment, referral or authorization for care, access to translation services, finding an in-network doctor, hospital, or specialist, complaints about a doctor or plan and continuity of care.&nbsp;",
+    "Answer": "The Consumer Complaint process assists consumers in resolving issues with their health plans. These issues can consist of billing problems, cancellation of coverage, claim and copay disputes, delays in getting an appointment, referral or authorization for care, access to translation services, finding an in-network doctor, hospital, or specialist, complaints about a doctor or plan and continuity of care.",
     "Featured": true,
     "Id": 297,
     "Question": "4. What is a Consumer Complaint?",
     "SortOrder": 4,
-    "Updated": "2025-01-14T17:55:22.5660756"
+    "Updated": "2026-11-18T20:23:30.5496474"
   },
   {
     "AgencyServiceId": 1129,
@@ -1816,11 +1816,11 @@
   },
   {
     "AgencyServiceId": 1129,
-    "Answer": "If your health problem is urgent an IMR is usually decided within 7 days after the request qualifies for an IMR and the required documentation has been received. This is called an expedited IMR. A health problem is urgent if it is a serious and immediate threat to your health.&nbsp;<br /><br />If your health problem is not urgent, an IMR is usually decided within 30 days after all required documentation is received.",
+    "Answer": "<p>If your health problem is urgent an IMR is usually decided within 7 days after the request qualifies for an IMR and the required documentation has been received. This is called an expedited IMR. A health problem is urgent if it is a serious and immediate threat to your health.</p><p>If your health problem is not urgent, an IMR is usually decided within 30 days after all required documentation is received.</p>",
     "Id": 300,
     "Question": "7. How long does an IMR take?",
     "SortOrder": 7,
-    "Updated": "2025-01-14T17:57:16.4991843"
+    "Updated": "2026-11-18T20:23:56.2245973"
   },
   {
     "AgencyServiceId": 1129,
@@ -1874,12 +1874,12 @@
   },
   {
     "AgencyServiceId": 1136,
-    "Answer": "The not-for-profit CEA is one of the world&rsquo;s largest providers of residential earthquake insurance. Our rates are based on science, not profit, enabling us to use the <a href=\"https://www.earthquakeauthority.com/about-cea/research-outreach/our-research\">best science available to determine competitive earthquake insurance rates</a>.&nbsp; CEA is actuarially sound and could pay all covered claims if the 1906 San Francisco, 1989 Loma Prieta, or 1994 Northridge earthquake reoccurred today.",
+    "Answer": "The not-for-profit CEA is one of the world’s largest providers of residential earthquake insurance. Our rates are based on science, not profit, enabling us to use the <a href=\"https://www.earthquakeauthority.com/about-cea/research-outreach/our-research\">best science available to determine competitive earthquake insurance rates</a>. CEA is actuarially sound and could pay all covered claims if the 1906 San Francisco, 1989 Loma Prieta, or 1994 Northridge earthquake reoccurred today.",
     "Featured": true,
     "Id": 324,
     "Question": "Why choose CEA earthquake insurance?",
     "SortOrder": 3,
-    "Updated": "2025-10-31T18:38:14.4564963"
+    "Updated": "2026-11-18T20:24:38.3557515"
   },
   {
     "AgencyServiceId": 1136,
@@ -1937,12 +1937,12 @@
   },
   {
     "AgencyServiceId": 1142,
-    "Answer": "The list contains a wide range of naturally occurring and synthetic chemicals that include additives or ingredients in pesticides, common household products, food, drugs, dyes, or solvents. Listed chemicals may also be used in manufacturing and construction, or they may be byproducts of chemical processes, such as motor vehicle exhaust.&nbsp;<br><br><a href=\"https://oehha.ca.gov/proposition-65/how-chemicals-are-added-proposition-65-list\">Learn how chemicals are added to the Proposition 65 list.</a>",
+    "Answer": "<p>The list contains a wide range of naturally occurring and synthetic chemicals that include additives or ingredients in pesticides, common household products, food, drugs, dyes, or solvents. Listed chemicals may also be used in manufacturing and construction, or they may be byproducts of chemical processes, such as motor vehicle exhaust.<a href=\"https://oehha.ca.gov/proposition-65/how-chemicals-are-added-proposition-65-list\"></a></p><p><a href=\"https://oehha.ca.gov/proposition-65/how-chemicals-are-added-proposition-65-list\">Learn how chemicals are added to the Proposition 65 list.</a></p>",
     "Featured": true,
     "Id": 319,
     "Question": "What types of chemicals are on the Proposition 65 list?",
     "SortOrder": 2,
-    "Updated": "2026-11-02T20:24:01.3004148"
+    "Updated": "2026-11-18T20:25:13.9850607"
   },
   {
     "AgencyServiceId": 1142,
@@ -2156,19 +2156,19 @@
   },
   {
     "AgencyServiceId": 1195,
-    "Answer": "With an account, you are able to apply to state jobs electronically, set up alerts for new job opportunities, store your resume, and track your application status. <a href=\"https://calcareers.ca.gov/CalHRPublic/Login.aspx\">Learn more about benefits.&nbsp;</a>",
+    "Answer": "With an account, you are able to apply to state jobs electronically, set up alerts for new job opportunities, store your resume, and track your application status. <a href=\"https://calcareers.ca.gov/CalHRPublic/Login.aspx\">Learn more about benefits.</a>",
     "Id": 353,
     "Question": "What are the benefits of creating a CalCareer account?",
     "SortOrder": 1,
-    "Updated": "2024-10-29T17:14:14.7034513"
+    "Updated": "2026-11-18T20:25:45.8932456"
   },
   {
     "AgencyServiceId": 1195,
-    "Answer": "A CalCareer account includes all State of California jobs. A CalJOBS account includes jobs from local employers including State of California jobs.&nbsp;",
+    "Answer": "A CalCareer account includes all State of California jobs. A CalJOBS account includes jobs from local employers including State of California jobs.",
     "Id": 354,
     "Question": "What is the difference between having a CalJOBS and CalCareers account?",
     "SortOrder": 2,
-    "Updated": "2024-10-29T17:16:12.2299039"
+    "Updated": "2026-11-18T20:26:06.6216229"
   },
   {
     "AgencyServiceId": 1196,
@@ -2180,19 +2180,19 @@
   },
   {
     "AgencyServiceId": 1196,
-    "Answer": "Use your <a href=\"https://myedd.edd.ca.gov/s/login/?language=en_US&amp;ec=302&amp;startURL=%2Fs%2F\">UI online account</a> to provide additional documentation to verify your identity.&nbsp;",
+    "Answer": "Use your <a href=\"https://myedd.edd.ca.gov/s/login/?language=en_US&amp;ec=302&amp;startURL=%2Fs%2F\">UI online account</a> to provide additional documentation to verify your identity.",
     "Id": 356,
-    "Question": "How do I respond to an identity verification request? ",
+    "Question": "How do I respond to an identity verification request?",
     "SortOrder": 2,
-    "Updated": "2024-10-29T18:14:58.7045936"
+    "Updated": "2026-11-18T20:26:42.0495652"
   },
   {
     "AgencyServiceId": 1196,
-    "Answer": "If there is an issue with your claim, EDD will contact you either by email or mail to complete an eligibility questionnaire.&nbsp;",
+    "Answer": "If there is an issue with your claim, EDD will contact you either by email or mail to complete an eligibility questionnaire.",
     "Id": 357,
     "Question": "What if I received notice for eligibility issues?",
     "SortOrder": 3,
-    "Updated": "2024-10-29T18:16:26.9268288"
+    "Updated": "2026-11-18T20:27:02.6877299"
   },
   {
     "AgencyServiceId": 1196,
@@ -2228,19 +2228,19 @@
   },
   {
     "AgencyServiceId": 1199,
-    "Answer": "Yes, all non-gasoline heavy-duty vehicles with a GVWR over 14,000 lbs. that operate in CA must be compliant with Clean Truck Check. Out of state vehicles have the same compliance requirements as California registered vehicles.&nbsp;",
+    "Answer": "Yes, all non-gasoline heavy-duty vehicles with a GVWR over 14,000 lbs. that operate in CA must be compliant with Clean Truck Check. Out of state vehicles have the same compliance requirements as California registered vehicles.",
     "Id": 365,
     "Question": "Do I still need to report if my vehicle isn't registered in CA?",
     "SortOrder": 5,
-    "Updated": "2024-10-29T22:12:36.6854571"
+    "Updated": "2026-11-18T20:27:24.4386664"
   },
   {
     "AgencyServiceId": 1203,
-    "Answer": "You can register for a Customer Connect account online or by 24-7 toll-free automated phone system (866-901-3212).&nbsp;",
+    "Answer": "You can register for a Customer Connect account online or by 24-7 toll-free automated phone system (866-901-3212).",
     "Id": 370,
     "Question": "How do I register for an account?",
     "SortOrder": 1,
-    "Updated": "2024-10-29T23:06:11.7797654"
+    "Updated": "2026-11-18T20:28:13.7307688"
   },
   {
     "AgencyServiceId": 1203,
@@ -2302,12 +2302,12 @@
   },
   {
     "AgencyServiceId": 1209,
-    "Answer": "Please see the Smile, California website,&nbsp;<a href=\"https://smilecalifornia.org/common-questions/\">https://smilecalifornia.org/common-questions/</a>.&nbsp;",
+    "Answer": "Please see the Smile, California website, <a href=\"https://smilecalifornia.org/common-questions/\">https://smilecalifornia.org/common-questions/</a>.",
     "Featured": true,
     "Id": 424,
     "Question": "Are there more FAQs about Medi-Cal Dental?",
     "SortOrder": 3,
-    "Updated": "2024-11-21T21:19:11.215401"
+    "Updated": "2026-11-18T20:28:54.2547061"
   },
   {
     "AgencyServiceId": 1211,
@@ -2327,11 +2327,11 @@
   },
   {
     "AgencyServiceId": 1213,
-    "Answer": "All examinations and assessments that are given by CalHR and other State departments are listed on the CalCareers website. Examinations and assessments are administered within specific testing end dates and not all exams or assessments are always available. Please check back, as the site is updated on a continuous basis.&nbsp;",
+    "Answer": "All examinations and assessments that are given by CalHR and other State departments are listed on the CalCareers website. Examinations and assessments are administered within specific testing end dates and not all exams or assessments are always available. Please check back, as the site is updated on a continuous basis.",
     "Id": 379,
     "Question": "I am looking for a specific exam and can't find it. What should I do? ",
     "SortOrder": 1,
-    "Updated": "2024-11-01T19:02:57.7309469"
+    "Updated": "2026-11-18T20:29:22.9275941"
   },
   {
     "AgencyServiceId": 1213,
@@ -2359,12 +2359,12 @@
   },
   {
     "AgencyServiceId": 1217,
-    "Answer": "View the FAQ and get help from the Title Transfer Assistant on the&nbsp;<a href=\"https://www.dmv.ca.gov/portal/vehicle-registration/titles/title-transfers-and-changes/\">Title Transfer</a> page.",
+    "Answer": "View the FAQ and get help from the Title Transfer Assistant on the <a href=\"https://www.dmv.ca.gov/portal/vehicle-registration/titles/title-transfers-and-changes/\">Title Transfer</a> page.",
     "Featured": true,
     "Id": 502,
     "Question": "I have questions about title and transfer requirements. ",
     "SortOrder": 1,
-    "Updated": "2026-08-02T22:26:59.6705719"
+    "Updated": "2026-11-18T20:29:57.9034404"
   },
   {
     "AgencyServiceId": 1219,
@@ -2401,11 +2401,11 @@
   },
   {
     "AgencyServiceId": 1223,
-    "Answer": "<p>There are a few ways for individuals or organizations to prepare for&nbsp; an emergency such as earthquake:<br /></p><ul><li>Download the MyShake App and enable location services to receive earthquake warnings.</li><li>Have a plan in place in advance so you can act quickly if you receive a MyShake, Android or WEA earthquake warning. </li><li>Visit ca.gov for information and other resources to help prepare for earthquakes in California</li><li>Follow Cal OES on social media</li></ul>",
+    "Answer": "<p>There are a few ways for individuals or organizations to prepare for an emergency such as earthquake:<br></p><ul><li>Download the MyShake App and enable location services to receive earthquake warnings.</li><li>Have a plan in place in advance so you can act quickly if you receive a MyShake, Android or WEA earthquake warning. </li><li>Visit ca.gov for information and other resources to help prepare for earthquakes in California</li><li>Follow Cal OES on social media</li></ul>",
     "Id": 393,
     "Question": "How can I receive more information about earthquake warnings and related resources? ",
     "SortOrder": 3,
-    "Updated": "2024-11-01T22:28:49.6916778"
+    "Updated": "2026-11-18T20:30:33.8350291"
   },
   {
     "AgencyServiceId": 1223,
@@ -2571,11 +2571,11 @@
   },
   {
     "AgencyServiceId": 1250,
-    "Answer": "Yes, please go to:&nbsp;<a href=\"https://dtsc.ca.gov/hazardous-waste-id-number-verification-questionnaire/\">https://dtsc.ca.gov/hazardous-waste-id-number-verification-questionnaire/</a>&nbsp;for a full page of FAQs.",
+    "Answer": "Yes, please go to: <a href=\"https://dtsc.ca.gov/hazardous-waste-id-number-verification-questionnaire/\">https://dtsc.ca.gov/hazardous-waste-id-number-verification-questionnaire/</a> for a full page of FAQs.",
     "Id": 427,
     "Question": "Are there FAQs regarding eVQ?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T19:58:51.237807"
+    "Updated": "2026-11-18T20:31:08.7094199"
   },
   {
     "AgencyServiceId": 1269,
@@ -2620,12 +2620,12 @@
   },
   {
     "AgencyServiceId": 1272,
-    "Answer": "You can watch the <a href=\"https://www.youtube.com/watch?v=D3S6UGSbpvM\">How to Scan Check-A-Ticket for Android video here</a>&nbsp;or the <a href=\"https://www.youtube.com/watch?v=GquANwiXwBQ\">How to Scan Check-A-Ticket for iOS video here</a>. Tap on \"Check-A-Ticket\" in the menu and hold your device so that you can see your ticket on the screen. Then keep your camera over the barcode. The scanner will automatically recognize if it is an eligible Check-A-Ticket barcode and confirm your entry.",
+    "Answer": "You can watch the <a href=\"https://www.youtube.com/watch?v=D3S6UGSbpvM\">How to Scan Check-A-Ticket for Android video here</a> or the <a href=\"https://www.youtube.com/watch?v=GquANwiXwBQ\">How to Scan Check-A-Ticket for iOS video here</a>. Tap on \"Check-A-Ticket\" in the menu and hold your device so that you can see your ticket on the screen. Then keep your camera over the barcode. The scanner will automatically recognize if it is an eligible Check-A-Ticket barcode and confirm your entry.",
     "Featured": true,
     "Id": 438,
     "Question": "How do I scan for Check-a-Ticket?",
     "SortOrder": 5,
-    "Updated": "2026-11-18T19:00:39.2288662"
+    "Updated": "2026-11-18T20:31:54.2775737"
   },
   {
     "AgencyServiceId": 1272,
@@ -2637,12 +2637,12 @@
   },
   {
     "AgencyServiceId": 1272,
-    "Answer": "You can watch the <a href=\"https://www.youtube.com/watch?v=Q9Jg0x9tifI\">How to Scan for 2nd Chance Android video here</a>&nbsp;or the <a href=\"https://www.youtube.com/watch?v=qPKT8hTyoC8\">How to Scan for 2nd Chance iOS video here</a>. Tap on \"Enter 2nd Chance\" in the menu and hold your device so that you can see your ticket on the screen. Then keep your camera over the barcode. The scanner will automatically recognize if it is an eligible 2nd Chance barcode and confirm your entry. Not all Draw games are eligible for 2nd Chance. Currently any SuperLotto Plus ticket, and Fantasy 5 tickets over $5, have codes that can be entered into 2nd Chance.",
+    "Answer": "You can watch the <a href=\"https://www.youtube.com/watch?v=Q9Jg0x9tifI\">How to Scan for 2nd Chance Android video here</a> or the <a href=\"https://www.youtube.com/watch?v=qPKT8hTyoC8\">How to Scan for 2nd Chance iOS video here</a>. Tap on \"Enter 2nd Chance\" in the menu and hold your device so that you can see your ticket on the screen. Then keep your camera over the barcode. The scanner will automatically recognize if it is an eligible 2nd Chance barcode and confirm your entry. Not all Draw games are eligible for 2nd Chance. Currently any SuperLotto Plus ticket, and Fantasy 5 tickets over $5, have codes that can be entered into 2nd Chance.",
     "Featured": true,
     "Id": 440,
     "Question": "How do I scan to enter my 2nd Chance barcode?",
     "SortOrder": 7,
-    "Updated": "2026-11-18T19:03:16.1497972"
+    "Updated": "2026-11-18T20:32:25.8049508"
   },
   {
     "AgencyServiceId": 1272,
@@ -2851,12 +2851,12 @@
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "View instructions for collecting your 2nd Chance prize on the <a href=\"https://www.calottery.com/en/claim-a-prize\">Claim A Prize page</a>. After you sign in to your account, you’ll see your prize and a link to a <a href=\"https://static.www.calottery.com/-/media/project/calottery/pws/pdfs/csl-1358-2nd-chance-claim.pdf?rev=9ca6e508180847759b657a20855ee14b&amp;hash=4D29D626CBE7CACAAFDA83AAC5495A1A\">2nd Chance Winner Claim Form (PDF)</a>. You’ll be asked to download, complete, and mail the claim form within 180 days of the drawing to:<br><br>California Lottery<br>Attn: 2nd Chance Promotion<br>700 North 10th Street&nbsp; MS: 2-2<br>Sacramento, CA 95811-0336",
+    "Answer": "<p>View instructions for collecting your 2nd Chance prize on the <a href=\"https://www.calottery.com/en/claim-a-prize\">Claim A Prize page</a>. After you sign in to your account, you’ll see your prize and a link to a <a href=\"https://static.www.calottery.com/-/media/project/calottery/pws/pdfs/csl-1358-2nd-chance-claim.pdf?rev=9ca6e508180847759b657a20855ee14b&amp;hash=4D29D626CBE7CACAAFDA83AAC5495A1A\">2nd Chance Winner Claim Form (PDF)</a>. You’ll be asked to download, complete, and mail the claim form within 180 days of the drawing to:</p><p>California Lottery<br>Attn: 2nd Chance Promotion<br>700 North 10th Street MS: 2-2<br>Sacramento, CA 95811-0336</p>",
     "Featured": true,
     "Id": 524,
     "Question": "How do I collect my 2nd Chance prize?",
     "SortOrder": 4,
-    "Updated": "2026-07-17T15:45:17.1655703"
+    "Updated": "2026-11-18T20:33:19.0377053"
   },
   {
     "AgencyServiceId": 1274,
@@ -3006,11 +3006,11 @@
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "<p>You have two options: Suspend your account, or delete your account.</p><ul><li>Suspend - Your account will be suspended, but your profile information will be retained – so you can reactivate your account whenever you wish.</li><li>Delete - All your information will be removed from our database. Your active 2nd Chance draw submissions will also be deleted. You will need to create a new account if you’d like to participate in 2nd Chance again.&nbsp;</li></ul><a href=\"https://www.calottery.com/en/sign-in\">Sign in</a>, go to the My Profile page, select the \"Edit My Profile\" button, then select the link for “Suspend/Delete My Account.\" Follow the options for suspending or deleting your account.<br><br>Note that if you delete your account while you have active 2nd Chance entries, your entries will be deleted along with all your other account information.",
+    "Answer": "<p>You have two options: Suspend your account, or delete your account.</p><ul><li>Suspend - Your account will be suspended, but your profile information will be retained – so you can reactivate your account whenever you wish.</li><li>Delete - All your information will be removed from our database. Your active 2nd Chance draw submissions will also be deleted. You will need to create a new account if you’d like to participate in 2nd Chance again.</li></ul><p><a href=\"https://www.calottery.com/en/sign-in\">Sign in</a>, go to the My Profile page, select the \"Edit My Profile\" button, then select the link for “Suspend/Delete My Account.\" Follow the options for suspending or deleting your account.</p><p>Note that if you delete your account while you have active 2nd Chance entries, your entries will be deleted along with all your other account information.</p>",
     "Id": 543,
     "Question": "How can I suspend or delete my 2nd Chance account?",
     "SortOrder": 23,
-    "Updated": "2026-07-17T16:08:58.4936932"
+    "Updated": "2026-11-18T20:34:19.881039"
   },
   {
     "AgencyServiceId": 1274,
@@ -3074,11 +3074,11 @@
   },
   {
     "AgencyServiceId": 1285,
-    "Answer": "Please visit the California welcome center finder&nbsp;webpage.",
+    "Answer": "Please visit the California welcome center finder webpage.",
     "Id": 517,
     "Question": "Where is the nearest visitor center?",
     "SortOrder": 1,
-    "Updated": "2026-07-02T19:56:32.5941058"
+    "Updated": "2026-11-18T20:34:45.1242532"
   },
   {
     "AgencyServiceId": 1286,
