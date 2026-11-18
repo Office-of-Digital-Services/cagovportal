@@ -97,11 +97,11 @@
   },
   {
     "AgencyServiceId": 9,
-    "Answer": "<p><span style=\"font-family:'Century Gothic', sans-serif;font-size:16px;\">There are 47 agencies throughout California delivering professional child support services in order to enhance the well-being of children and self-sufficiency of families. <a href=\"https://childsupport.ca.gov/find-my-local-agency/\">Find the nearest agency</a>.&nbsp;&nbsp;</span></p><p>&nbsp;</p><p><span style=\"font-size:12.0pt;font-family:'Century Gothic',sans-serif;\">&nbsp;</span></p>",
+    "Answer": "There are 47 agencies throughout California delivering professional child support services in order to enhance the well-being of children and self-sufficiency of families. <a href=\"https://childsupport.ca.gov/find-my-local-agency/\">Find the nearest agency</a>.",
     "Id": 57,
     "Question": "Where can I find a child support agency near me?",
     "SortOrder": 1,
-    "Updated": "2024-11-21T18:13:10.9787728"
+    "Updated": "2026-11-18T19:08:30.6942021"
   },
   {
     "AgencyServiceId": 9,
@@ -1840,11 +1840,11 @@
   },
   {
     "AgencyServiceId": 1129,
-    "Answer": "Yes. You must complete and sign the DMHC Authorized Assistant Form. The DMHC cannot speak to anyone about your Independent Medical Review or Consumer Complaint unless we have your authorization to do so. Completion and submission of the DMHC Authorized Assistant Form tells the DMHC that it has your permission to speak with the person you have designated as your authorized assistant or representative.<span style=\"color:#505050;text-transform:none;text-indent:0px;letter-spacing:normal;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-style:normal;font-weight:400;word-spacing:0px;float:none;display:inline !important;white-space:normal;orphans:2;widows:2;background-color:#ffffff;font-variant-ligatures:normal;font-variant-caps:normal;-webkit-text-stroke-width:0px;text-decoration-style:initial;text-decoration-color:initial;\"></span>",
+    "Answer": "Yes. You must complete and sign the DMHC Authorized Assistant Form. The DMHC cannot speak to anyone about your Independent Medical Review or Consumer Complaint unless we have your authorization to do so. Completion and submission of the DMHC Authorized Assistant Form tells the DMHC that it has your permission to speak with the person you have designated as your authorized assistant or representative.",
     "Id": 308,
-    "Question": " 10. Can another person help me submit an Independent Medical Review or Consumer Complaint?",
+    "Question": "10. Can another person help me submit an Independent Medical Review or Consumer Complaint?",
     "SortOrder": 10,
-    "Updated": "2025-01-14T21:51:57.4267041"
+    "Updated": "2026-11-18T19:14:15.263623"
   },
   {
     "AgencyServiceId": 1129,
@@ -2044,11 +2044,11 @@
   },
   {
     "AgencyServiceId": 1146,
-    "Answer": "<p>The Appellant may file the Notice of Appeal with the Panel in one of two ways:</p><p>&nbsp;</p><ul><li>By delivery or mail to the CCAP office located at 801 Capitol Mall, Suite 601, Sacramento, CA 95814</li><li>By email to appeals@ccap.ca.gov</li></ul><p>Additionally, Appellant must serve a copy of the Notice of Appeal to all parties to the matter. The parties may agree in writing to have the Notice served via email. Appellant should submit the Proof of Service to the Panel at the same time as the Notice of Appeal.</p><div class=\"OutlineElement Ltr SCXW237960222 BCX0\" style=\"margin:0px;padding:0px;user-select:text;-webkit-user-drag:none;-webkit-tap-highlight-color:transparent;overflow:visible;cursor:text;clear:both;position:relative;direction:ltr;font-family:'Segoe UI', 'Segoe UI Web', Arial, Verdana, sans-serif;background-color:#ffffff;\"><p class=\"Paragraph SCXW237960222 BCX0\" paraid=\"1276964602\" paraeid=\"{4f586c25-0e43-4215-8410-e2e4b0781bec}{181}\" style=\"margin-bottom:0px;padding:0px;user-select:text;-webkit-user-drag:none;-webkit-tap-highlight-color:transparent;overflow-wrap:break-word;vertical-align:baseline;background-color:transparent;color:windowtext;\"><span data-contrast=\"auto\" class=\"TextRun SCXW237960222 BCX0\" xml:lang=\"EN-US\" lang=\"EN-US\" style=\"margin:0px;padding:0px;user-select:text;-webkit-user-drag:none;-webkit-tap-highlight-color:transparent;font-variant-ligatures:none !important;font-size:11pt;font-family:Calibri, Calibri_MSFontService, sans-serif;font-kerning:none;line-height:19.425px;\"><span class=\"NormalTextRun SCXW237960222 BCX0\" style=\"margin:0px;padding:0px;user-select:text;-webkit-user-drag:none;-webkit-tap-highlight-color:transparent;background-color:inherit;\"></span></span><span class=\"EOP SCXW237960222 BCX0\" data-ccp-props=\"{\" 201341983\":0,\"335559739\":160,\"335559740\":259}\"=\"\" style=\"margin:0px;padding:0px;user-select:text;-webkit-user-drag:none;-webkit-tap-highlight-color:transparent;font-size:11pt;line-height:19.425px;font-family:Calibri, Calibri_MSFontService, sans-serif;\"></span></p></div>",
+    "Answer": "<p>The Appellant may file the Notice of Appeal with the Panel in one of two ways:</p><ul><li>By delivery or mail to the CCAP office located at 801 Capitol Mall, Suite 601, Sacramento, CA 95814</li><li>By email to appeals@ccap.ca.gov</li></ul><p>Additionally, Appellant must serve a copy of the Notice of Appeal to all parties to the matter. The parties may agree in writing to have the Notice served via email. Appellant should submit the Proof of Service to the Panel at the same time as the Notice of Appeal.</p>",
     "Id": 338,
-    "Question": "Where and how should the Notice of Appeal be filed? ",
+    "Question": "Where and how should the Notice of Appeal be filed?",
     "SortOrder": 1,
-    "Updated": "2019-05-30T17:33:32.6128146"
+    "Updated": "2026-11-18T19:12:53.3577087"
   },
   {
     "AgencyServiceId": 1147,
