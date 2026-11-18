@@ -338,12 +338,12 @@
   },
   {
     "AgencyServiceId": 17,
-    "Answer": "<p><strong>Public School or County Offices of Education/Districts Updates</strong></p><p>All corrections must be routed through the LEA CDS coordinator. Below are links to resources for LEA CDS coordinators for submitting corrections.<br></p><ul><li><a href=\"https://www3.cde.ca.gov/opuscds/\">OPUS-CDS Web Application</a><br>Application used by authorized LEA CDS coordinators to notify the CDE of updates to the Public School Directory. A user name and password is required to access this application.</li><li><a href=\"https://www.cde.ca.gov/ds/si/ds/opuscds.asp\">OPUS-CDS Application and Resources</a><br>Access the OPUS-CDS Web application, as well as useful information for using this application.<br></li></ul><p><strong>Private School or Nonpublic, Nonsectarian School Updates</strong></p><ul><li>For private school information and instructions on submitting updates, please visit the <a href=\"https://www.cde.ca.gov/sp/ps/affidavit.asp\">Private School Affidavit Web page</a>. For general inquiries, please send an e-mail to <a>privateschools@cde.ca.gov</a>.</li><li>For questions regarding Nonpublic, Nonsectarian Schools, please send an e-mail to <a>NPSA@cde.ca.gov</a>. Information regarding Nonpublic, Nonsectarian Schools can be found on the <a href=\"https://www.cde.ca.gov/sp/se/\">Data Collection and Reporting</a> web page.</li></ul>",
+    "Answer": "<p><strong>Public School or County Offices of Education/Districts Updates</strong></p><p>All corrections must be routed through the LEA CDS coordinator. Below are links to resources for LEA CDS coordinators for submitting corrections.</p><ul><li><a href=\"https://www3.cde.ca.gov/opuscds/\">OPUS-CDS Web Application</a><br>Application used by authorized LEA CDS coordinators to notify the CDE of updates to the Public School Directory. A user name and password is required to access this application.</li><li><a href=\"https://www.cde.ca.gov/ds/si/ds/opuscds.asp\">OPUS-CDS Application and Resources</a><br>Access the OPUS-CDS Web application, as well as useful information for using this application.</li></ul><p><strong>Private School or Nonpublic, Nonsectarian School Updates</strong></p><ul><li>For private school information and instructions on submitting updates, please visit the <a href=\"https://www.cde.ca.gov/sp/ps/affidavit.asp\">Private School Affidavit Web page</a>. For general inquiries, please send an e-mail to <a>privateschools@cde.ca.gov</a>.</li><li>For questions regarding Nonpublic, Nonsectarian Schools, please send an e-mail to <a>NPSA@cde.ca.gov</a>. Information regarding Nonpublic, Nonsectarian Schools can be found on the <a href=\"https://www.cde.ca.gov/sp/se/\">Data Collection and Reporting</a> web page.</li></ul>",
     "Featured": true,
     "Id": 14,
     "Question": "How do I report any errors that I find?",
     "SortOrder": 2,
-    "Updated": "2026-11-18T22:42:14.9214183"
+    "Updated": "2026-11-18T23:18:59.3508167"
   },
   {
     "AgencyServiceId": 17,
@@ -2826,11 +2826,11 @@
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "<p><strong>Username Requirements</strong></p>Length: 6-20 characters<br>Allowed characters: Letters, numbers, and the following special characters: -_&amp;%$#!*+=<br>Spaces are not allowed<br>Cannot contain profanity or inappropriate words<br>Cannot be your email address<br><br><p><strong>Password Requirements</strong></p>Cannot be easily guessed (like 'Password1')<br>Cannot match any of your last 5 passwords<br>Must contain the following:<br>12-50 characters<br>Capital letter (A-Z)<br>Lowercase letter (a-z)<br>Number (0-9)<br>Any of the following symbols: -_&amp;%$#@!*+=<br>",
+    "Answer": "<p><strong>Username Requirements</strong></p><ul><li>Length: 6-20 characters</li><li>Allowed characters: Letters, numbers, and the following special characters: -_&amp;%$#!*+=</li><li>Spaces are not allowed</li><li>Cannot contain profanity or inappropriate words</li><li>Cannot be your email address</li></ul><p><strong>Password Requirements</strong></p><ul><li>Cannot be easily guessed (like 'Password1')</li><li>Cannot match any of your last 5 passwords</li></ul><p>Must contain the following</p><ul><li>12-50 characters</li><li>Capital letter (A-Z)</li><li>Lowercase letter (a-z)</li><li>Number (0-9)</li><li>Any of the following symbols: -_&amp;%$#@!*+=</li></ul>",
     "Id": 521,
     "Question": "What are the username and password requirements for sign in?",
     "SortOrder": 1,
-    "Updated": "2026-07-17T15:39:50.5896738"
+    "Updated": "2026-11-18T23:23:09.1461118"
   },
   {
     "AgencyServiceId": 1274,
@@ -2860,28 +2860,28 @@
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "Just sign in to your account and <a href=\"https://www.calottery.com/en/my-account/my-profile/edit\">go to the Edit My Profile page</a>. After you update your information, select the “Save Changes” button.<br><br>If you update your email address, the California Lottery will send you a verification email. If you don’t see it in your inbox, check your junk/spam folder. Add California Lottery to your safe senders list so this doesn’t happen in the future.",
+    "Answer": "<p>Just sign in to your account and <a href=\"https://www.calottery.com/en/my-account/my-profile/edit\">go to the Edit My Profile page</a>. After you update your information, select the “Save Changes” button.</p><p>If you update your email address, the California Lottery will send you a verification email. If you don’t see it in your inbox, check your junk/spam folder. Add California Lottery to your safe senders list so this doesn’t happen in the future.</p>",
     "Id": 525,
     "Question": "How do I update my email address or other personal information?",
     "SortOrder": 5,
-    "Updated": "2026-07-17T15:46:40.5803587"
+    "Updated": "2026-11-18T23:24:19.5601356"
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "<a href=\"https://www.calottery.com/en/sign-in\">Sign in to your account</a> or <a href=\"https://www.calottery.com/en/registration\">register for a 2nd Chance account</a>. There are two ways to submit the 2nd Chance code on your SuperLotto Plus, non-winning Scratchers, or $5 or more Fantasy 5 ticket.<br><br>(1) When you are signed into your account, you can enter your 2nd Chance codes manually. Refer to the images in the How To Enter section of this page, which show where you'll find your 2nd Chance codes.<br><br>(2) For a fast and easy way to play, you can also submit your ticket using the <a href=\"https://www.calottery.com/en/mobile-app\">California Lottery Official Mobile App</a> by scanning the barcode on the front of your ticket.",
+    "Answer": "<p><a href=\"https://www.calottery.com/en/sign-in\">Sign in to your account</a> or <a href=\"https://www.calottery.com/en/registration\">register for a 2nd Chance account</a>. There are two ways to submit the 2nd Chance code on your SuperLotto Plus, non-winning Scratchers, or $5 or more Fantasy 5 ticket.</p><ol><li>When you are signed into your account, you can enter your 2nd Chance codes manually. Refer to the images in the How To Enter section of this page, which show where you'll find your 2nd Chance codes.</li><li>For a fast and easy way to play, you can also submit your ticket using the <a href=\"https://www.calottery.com/en/mobile-app\">California Lottery Official Mobile App</a> by scanning the barcode on the front of your ticket.</li></ol>",
     "Featured": true,
     "Id": 526,
     "Question": "How do I enter a 2nd Chance code?",
     "SortOrder": 6,
-    "Updated": "2026-07-17T15:48:31.8011181"
+    "Updated": "2026-11-18T23:25:12.2438735"
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "Every SuperLotto Plus ticket has a 2nd Chance code that grants 1 entry into the weekly SuperLotto Plus 2nd Chance drawing for each $1 spent. There are 5 prizes, and the more money you play, the more entries you get. For example, if you play $5 on a single ticket, your 2nd Chance code will be good for 5 draw entries.<br><br>Every $5 Fantasy 5 ticket has a 2nd Chance code for 1 entry into the weekly Fantasy 5 – 2nd Chance drawing. There are 15 prizes, and the more money you play, the more entries you get. For example, if you play $15 on a single ticket, your 2nd Chance code will award 3 draw entries.",
+    "Answer": "<p>Every SuperLotto Plus ticket has a 2nd Chance code that grants 1 entry into the weekly SuperLotto Plus 2nd Chance drawing for each $1 spent. There are 5 prizes, and the more money you play, the more entries you get. For example, if you play $5 on a single ticket, your 2nd Chance code will be good for 5 draw entries.</p><p>Every $5 Fantasy 5 ticket has a 2nd Chance code for 1 entry into the weekly Fantasy 5 – 2nd Chance drawing. There are 15 prizes, and the more money you play, the more entries you get. For example, if you play $15 on a single ticket, your 2nd Chance code will award 3 draw entries.</p>",
     "Id": 527,
     "Question": "How does 2nd Chance work for SuperLotto Plus and Fantasy 5?",
     "SortOrder": 7,
-    "Updated": "2026-07-17T15:49:35.9621373"
+    "Updated": "2026-11-18T23:25:48.2732954"
   },
   {
     "AgencyServiceId": 1274,
@@ -2917,11 +2917,11 @@
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "<p>To ensure the integrity of your account, the California Lottery uses age/identity verification technology to validate your account details, such as your name, address, and birthdate. To participate in registered player benefits like 2nd Chance and be eligible to win promotional or 2nd Chance prizes, players must provide the following information:</p><ul><li>Full legal name (first and last name)</li><li>Valid California street address (including apartment, unit, or suite number, if applicable)</li><li>Date of birth (to ensure you’re 18 or older and can legally play the California Lottery)</li></ul>If the personal information you entered in your My Profile page is correct, but you are unable to submit 2nd Chance codes, you may need to pursue manual verification. You can find details on the Manual Account Verification page.<br><br>It is the California Lottery’s policy to limit the collection of personal information and protect the personal information we collect and maintain.",
+    "Answer": "<p>To ensure the integrity of your account, the California Lottery uses age/identity verification technology to validate your account details, such as your name, address, and birthdate. To participate in registered player benefits like 2nd Chance and be eligible to win promotional or 2nd Chance prizes, players must provide the following information:</p><ul><li>Full legal name (first and last name)</li><li>Valid California street address (including apartment, unit, or suite number, if applicable)</li><li>Date of birth (to ensure you’re 18 or older and can legally play the California Lottery)</li></ul><p>If the personal information you entered in your My Profile page is correct, but you are unable to submit 2nd Chance codes, you may need to pursue manual verification. You can find details on the Manual Account Verification page.</p><p>It is the California Lottery’s policy to limit the collection of personal information and protect the personal information we collect and maintain.</p>",
     "Id": 532,
     "Question": "What is a verified account?",
     "SortOrder": 12,
-    "Updated": "2026-07-17T15:55:51.1099415"
+    "Updated": "2026-11-18T23:26:30.6870172"
   },
   {
     "AgencyServiceId": 1274,
@@ -2941,11 +2941,11 @@
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "The email address associated with your 2nd Chance account may not have been verified. <a href=\"https://www.calottery.com/en/sign-in\">Sign in to your account</a> and go to your My Profile page to confirm the email address you used when you registered, then check your inbox for an account-activation email. If you can’t find it, check your junk/spam folder.<br><br>If the email was delivered more than 24 hours before you click the button to confirm your email address, you will need to sign in to your account and click the link to request a new verification email.<br><br>If you need help, call California Lottery Customer Service at 1-800-LOTTERY (1-800-568-8379) Monday to Friday between 8:00 a.m. and 5:00 p.m., send an email to <a>customerservice@calottery.com</a>, or <a href=\"https://www.calottery.com/en/contact-us\">submit questions via the Contact Us form</a>.",
+    "Answer": "<p>The email address associated with your 2nd Chance account may not have been verified. <a href=\"https://www.calottery.com/en/sign-in\">Sign in to your account</a> and go to your My Profile page to confirm the email address you used when you registered, then check your inbox for an account-activation email. If you can’t find it, check your junk/spam folder.</p><p>If the email was delivered more than 24 hours before you click the button to confirm your email address, you will need to sign in to your account and click the link to request a new verification email.</p><p>If you need help, call California Lottery Customer Service at 1-800-LOTTERY (1-800-568-8379) Monday to Friday between 8:00 a.m. and 5:00 p.m., send an email to <a>customerservice@calottery.com</a>, or <a href=\"https://www.calottery.com/en/contact-us\">submit questions via the Contact Us form</a>.</p>",
     "Id": 535,
     "Question": "What if I'm not receiving emails from the California Lottery?",
     "SortOrder": 15,
-    "Updated": "2026-07-17T15:59:55.5811413"
+    "Updated": "2026-11-18T23:27:05.1150218"
   },
   {
     "AgencyServiceId": 1274,
@@ -3014,11 +3014,11 @@
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "If you suspended your 2nd Chance account and would like to reactivate it, simply <a href=\"https://www.calottery.com/en/sign-in\">go to the Sign In page</a> and enter the username and password associated with your 2nd Chance account, then follow the prompts.<br><br>Note that if you deleted your account, all of your account information was deleted. You will need to create a new 2nd Chance account.",
+    "Answer": "<p>If you suspended your 2nd Chance account and would like to reactivate it, simply <a href=\"https://www.calottery.com/en/sign-in\">go to the Sign In page</a> and enter the username and password associated with your 2nd Chance account, then follow the prompts.</p><p>Note that if you deleted your account, all of your account information was deleted. You will need to create a new 2nd Chance account.</p>",
     "Id": 544,
     "Question": "How can I reactivate my 2nd Chance account?",
     "SortOrder": 24,
-    "Updated": "2026-07-17T16:09:59.8001524"
+    "Updated": "2026-11-18T23:27:28.5558316"
   },
   {
     "AgencyServiceId": 1274,
