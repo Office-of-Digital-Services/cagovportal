@@ -745,19 +745,19 @@
   },
   {
     "AgencyServiceId": 31,
-    "Answer": "California Department of Forestry and Fire Protection<br />P.O. Box 944246, Sacramento, California 94244-2460",
+    "Answer": "California Department of Forestry and Fire Protection<br>P.O. Box 944246<br>Sacramento, CA 94244-2460",
     "Id": 148,
     "Question": "What is CAL FIRE's mailing address?",
     "SortOrder": 3,
-    "Updated": "2017-05-22T16:09:09.333"
+    "Updated": "2026-11-18T23:32:36.6108155"
   },
   {
     "AgencyServiceId": 31,
-    "Answer": "Visit <a href=\"https://www.fire.ca.gov/about\">About</a> to learn about our values and organization, and strategic plans. You'll also find resources.<br />",
+    "Answer": "Visit <a href=\"https://www.fire.ca.gov/about\">About</a> to learn about our values and organization, and strategic plans. You'll also find resources.",
     "Id": 149,
     "Question": "Where can I find more information about Cal Fire?",
     "SortOrder": 4,
-    "Updated": "2025-10-30T22:40:58.8161944"
+    "Updated": "2026-11-18T23:31:29.2145185"
   },
   {
     "AgencyServiceId": 36,
@@ -1475,12 +1475,12 @@
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. CalVet often uses the federal VA guarantee to offer veterans up to 100% financing with no monthly private mortgage insurance payments.<br />",
+    "Answer": "Yes. CalVet often uses the federal VA guarantee to offer veterans up to 100% financing with no monthly private mortgage insurance payments.",
     "Featured": true,
     "Id": 491,
     "Question": "Can I use my benefit of 100% financing?",
     "SortOrder": 2,
-    "Updated": "2025-10-30T20:40:05.6161844"
+    "Updated": "2026-11-18T23:33:16.6771178"
   },
   {
     "AgencyServiceId": 64,
@@ -1534,11 +1534,11 @@
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. Example: If you have a federal VA-guaranteed loan and are turning your property into a rental, we may help you get a CalVet or VA loan for a new owner-occupied property.<br />",
+    "Answer": "Yes. Example: If you have a federal VA-guaranteed loan and are turning your property into a rental, we may help you get a CalVet or VA loan for a new owner-occupied property.",
     "Id": 498,
     "Question": "If I only have a partial federal VA guarantee left, can I get 100% financing?",
     "SortOrder": 9,
-    "Updated": "2025-10-30T20:42:04.8971786"
+    "Updated": "2026-11-18T23:33:32.838298"
   },
   {
     "AgencyServiceId": 64,
@@ -2786,43 +2786,43 @@
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "Yes. Washing machines and dryers are available at all locations.<br />",
+    "Answer": "Yes. Washing machines and dryers are available at all locations.",
     "Id": 458,
     "Question": "Do Veterans Homes of California have laundry facilities?",
     "SortOrder": 13,
-    "Updated": "2025-10-30T21:11:36.5443787"
+    "Updated": "2026-11-18T23:33:53.0552649"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "No pets are allowed at the Veterans Home. Service animals are allowed, however. If you have questions, contact the Veterans Home's admissions office for information.<br />",
+    "Answer": "No pets are allowed at the Veterans Home. Service animals are allowed, however. If you have questions, contact the Veterans Home's admissions office for information.",
     "Id": 459,
     "Question": "I have a pet dog and a cat. May I bring them with me?",
     "SortOrder": 14,
-    "Updated": "2025-10-30T21:11:24.5819882"
+    "Updated": "2026-11-18T23:34:09.756923"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "Yes. We encourage visits by your friends and relatives. Home staff will be glad to assist you in arranging these visits.<br />",
+    "Answer": "Yes. We encourage visits by your friends and relatives. Home staff will be glad to assist you in arranging these visits.",
     "Id": 460,
     "Question": "May I have visitors at a Veterans Home of California?",
     "SortOrder": 15,
-    "Updated": "2025-10-30T21:11:10.70584"
+    "Updated": "2026-11-18T23:34:25.933967"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "If you keep your HMO, you may be required to access all services through your HMO, except for urgent and emergency care. If the Home is not within your HMO&rsquo;s service area, you must unenroll from your HMO.<br />",
+    "Answer": "If you keep your HMO, you may be required to access all services through your HMO, except for urgent and emergency care. If the Home is not within your HMO’s service area, you must unenroll from your HMO.",
     "Id": 461,
     "Question": "I have medical coverage through a Health Maintenance Organization (HMO). Should I keep this coverage?",
     "SortOrder": 16,
-    "Updated": "2025-10-30T21:10:56.675576"
+    "Updated": "2026-11-18T23:34:42.8412852"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "A very limited number of private rooms are available &ndash; based on seniority &ndash; at most Home locations. All rooms are private at the Redding and Fresno Homes.<br />",
+    "Answer": "A very limited number of private rooms are available – based on seniority – at most Home locations. All rooms are private at the Redding and Fresno Homes.",
     "Id": 462,
     "Question": "Will I have a private room?",
     "SortOrder": 17,
-    "Updated": "2025-10-30T21:10:43.4875644"
+    "Updated": "2026-11-18T23:35:21.1540303"
   },
   {
     "AgencyServiceId": 1274,
