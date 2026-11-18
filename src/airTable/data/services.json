@@ -3131,6 +3131,27 @@
   {
     "AgencyId": 200,
     "AgencyName": "Library, California State",
+    "AgencyTags": "Businesses",
+    "AltText": "A logo that says \"California Grants Portal\"",
+    "ContactPhone": "916-323-9843",
+    "ContactPhoneDigits": "9163239843",
+    "ContactPhoneDisplay": "916-323-9843",
+    "ContactUrl": "https://www.grants.ca.gov/contact-us/",
+    "Description": "The Grant Information Act of 2018 (Stats. 2018, Ch. 318) required the State Library to build one website by July 1, 2020, “that provides a centralized location … to find state grant opportunities.” State agencies provide all information on grants.ca.gov to the State Library for publication. The Grant Information Act requires state agencies to provide summaries of each of their grant or loan opportunities, including information about how to apply and links that grantseekers can follow for more details. AB132 (section 8334.1) expanded the Grants Portal mission, requiring state grantmakers to submit post award data for all grants closing on or after July 1, 2022.",
+    "FriendlyName": "California State Library",
+    "ImageUrl": "service-1334-California-Grants-Portal-20261118000106.jpg",
+    "Keywords": "Grants, competitive grants,  post award, California Grants Portal, Grant Award, business. individual, loans, nonprofit, public agency, tribal government",
+    "RelatedSearchTerms": "California Grants Portal",
+    "ServiceId": 1334,
+    "ServiceName": "California Grants Portal",
+    "ServiceType": "Online Service",
+    "ServiceUrl": "https://www.grants.ca.gov/",
+    "SortOrder": 9,
+    "Updated": "2026-11-18T00:01:25.3243451"
+  },
+  {
+    "AgencyId": 200,
+    "AgencyName": "Library, California State",
     "AgencyTags": "State info and laws",
     "AltText": "A well-lit room with books and tables for reading.",
     "ContactPhone": "9166540176",
@@ -5060,7 +5081,7 @@
     "ContactPhone": "562-570-3700",
     "ContactPhoneDigits": "5625703700",
     "ContactPhoneDisplay": "562-570-3700",
-    "ContactUrl": "https://longbeach.gov/economicdevelopment/connect/",
+    "ContactUrl": "https://longbeach.gov/edo/connect/",
     "Description": "If you are in the Long Beach area and need training to find a good job, contact this program. You can get job training, help finding education programs, and support services. The ASPIRE (Access, Systems & Programs for Immigrants) leads this program.",
     "FriendlyName": "California Workforce Development Board",
     "ImageUrl": "service-1112-Get-Job-Training-in-Long-Beach.jpg",
@@ -5069,9 +5090,9 @@
     "ServiceId": 1112,
     "ServiceName": "Get Job Training in Long Beach",
     "ServiceType": "Field Office Service|In Person",
-    "ServiceUrl": "https://www.pacific-gateway.org/",
+    "ServiceUrl": "https://longbeach.gov/edo/talent-workforce/",
     "SortOrder": 5,
-    "Updated": "2025-05-13T17:30:08.800631"
+    "Updated": "2026-11-16T19:28:09.1495394"
   },
   {
     "AgencyId": 208,
@@ -5100,7 +5121,7 @@
     "ContactPhone": "714-480-6500",
     "ContactPhoneDigits": "7144806500",
     "ContactPhoneDisplay": "714-480-6500",
-    "ContactUrl": "https://www.ocgov.com/about-county/contact-county",
+    "ContactUrl": "https://www.ocgov.com/contact",
     "Description": "If you are in the Orange County area and need training to find a good job, contact this program. You can get career counseling and support services through the Orange County English Language Learner (ELL) Workforce Navigator Program. ELL Navigators work in the Orange County America’s Job Center of California (AJCC) system where they offer many services to help people get a job.",
     "FriendlyName": "California Workforce Development Board",
     "ImageUrl": "service-1111-Get-Job-Training-in-Orange-County.jpg",
@@ -5109,9 +5130,9 @@
     "ServiceId": 1111,
     "ServiceName": "Get Job Training in Orange County",
     "ServiceType": "Field Office Service|In Person",
-    "ServiceUrl": "https://workforce.ocgov.com/oc-workforce-development-board/job-seeker-services",
+    "ServiceUrl": "https://workforce.oc.gov/career-services/adult-programs",
     "SortOrder": 4,
-    "Updated": "2021-01-11T23:49:08"
+    "Updated": "2026-11-16T19:33:10.2261076"
   },
   {
     "AgencyId": 208,
@@ -5120,7 +5141,7 @@
     "ContactPhone": "916-263-3800",
     "ContactPhoneDigits": "9162633800",
     "ContactPhoneDisplay": "916-263-3800",
-    "ContactUrl": "http://seta.net/contact/",
+    "ContactUrl": "https://sacworks.seta.net/contact/",
     "Description": "If you are in the Sacramento area and need training to find a good job, contact this program. You can get English classes, job training, and support services. Services are offered at four locations in the area.",
     "FriendlyName": "California Workforce Development Board",
     "ImageUrl": "service-1114-Get-Job-Training-in-Sacramento.jpg",
@@ -5129,9 +5150,9 @@
     "ServiceId": 1114,
     "ServiceName": "Get Job Training in Sacramento",
     "ServiceType": "Field Office Service|In Person",
-    "ServiceUrl": "http://seta.net/workforce-development-services/",
+    "ServiceUrl": "https://sacworks.seta.net/job-seekers/",
     "SortOrder": 7,
-    "Updated": "2019-01-09T02:11:32"
+    "Updated": "2026-11-16T17:16:24.9067365"
   },
   {
     "AgencyId": 208,
