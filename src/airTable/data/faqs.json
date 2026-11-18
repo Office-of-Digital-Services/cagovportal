@@ -65,11 +65,11 @@
   },
   {
     "AgencyServiceId": 8,
-    "Answer": "<span style=\"font-size:12.0pt;font-family:'Century Gothic',sans-serif;\">There are 47 agencies throughout California delivering professional child support services in order to enhance the well-being of children and self-sufficiency of families. <a href=\"https://childsupport.ca.gov/find-my-local-agency/\">Find the nearest agency</a>.</span>",
+    "Answer": "There are 47 agencies throughout California delivering professional child support services in order to enhance the well-being of children and self-sufficiency of families. <a href=\"https://childsupport.ca.gov/find-my-local-agency/\">Find the nearest agency</a>].",
     "Id": 53,
     "Question": "Where can I find a child support agency near me?",
     "SortOrder": 1,
-    "Updated": "2024-11-21T18:17:59.8041875"
+    "Updated": "2026-11-18T19:04:41.5616936"
   },
   {
     "AgencyServiceId": 8,
@@ -1832,11 +1832,11 @@
   },
   {
     "AgencyServiceId": 1129,
-    "Answer": "Yes. Your name, medical records, and all other personal medical information are kept private and confidential under California law. IMR decisions are public, but all personal information is removed including the names and all identifying information of patients, doctors, or facilities.<span style=\"color:#505050;text-transform:none;text-indent:0px;letter-spacing:normal;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-style:normal;font-weight:400;word-spacing:0px;float:none;display:inline !important;white-space:normal;orphans:2;widows:2;background-color:#ffffff;font-variant-ligatures:normal;font-variant-caps:normal;-webkit-text-stroke-width:0px;text-decoration-style:initial;text-decoration-color:initial;\"></span>",
+    "Answer": "Yes. Your name, medical records, and all other personal medical information are kept private and confidential under California law. IMR decisions are public, but all personal information is removed including the names and all identifying information of patients, doctors, or facilities.",
     "Id": 305,
     "Question": "9. Will my medical condition and treatment stay private?",
     "SortOrder": 9,
-    "Updated": "2025-01-14T17:59:40.2195882"
+    "Updated": "2026-11-18T19:06:02.1933927"
   },
   {
     "AgencyServiceId": 1129,
@@ -2493,21 +2493,21 @@
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p data-list=\"0\" data-level=\"1\" style=\"text-indent:-.25in;\">&nbsp; &nbsp; &nbsp; &nbsp;<a href=\"https://www.youtube.com/watch?v=li3fCyBXTuQ\"><span style=\"font-family:'Segoe UI',sans-serif;\">Statewide Multi-Payer Fee Schedule for School-Linked Behavioral Health Services</span></a><span style=\"font-family:'Segoe UI',sans-serif;color:windowtext;\">: Children and youth may have their school&rsquo;s mental health services covered by their insurance providers.&nbsp;</span></p>",
+    "Answer": "Children and youth may have their school’s mental health services covered by their insurance providers.",
     "Featured": true,
     "Id": 411,
     "Question": "What are Statewide Multi-Payer Fee Schedule for School-Linked Behavioral Health Services?",
     "SortOrder": 1,
-    "Updated": "2024-11-21T20:59:06.5587544"
+    "Updated": "2026-11-18T18:26:12.8391737"
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p><a href=\"https://elevateyouthca.org/\"><span style=\"font-family:'Segoe UI',sans-serif;color:#0563C1;\">Elevate Youth California</span></a><span style=\"font-family:'Segoe UI',sans-serif;\"> is a prevention program funded by Proposition 64. It serves low-income youth ages 12 to 26 in Tribal, LGBTQIA+, and communities of color across the state. The program provides necessary peer-to-peer support, mentoring, substance use prevention education, and youth civic engagement activities in communities disproportionally affected by the war on drugs.&nbsp;</span></p>",
+    "Answer": "<p><a href=\"https://elevateyouthca.org/\">Elevate Youth California</a> is a prevention program funded by Proposition 64. It serves low-income youth ages 12 to 26 in Tribal, LGBTQIA+, and communities of color across the state. The program provides necessary peer-to-peer support, mentoring, substance use prevention education, and youth civic engagement activities in communities disproportionally affected by the war on drugs.</p>",
     "Featured": true,
     "Id": 412,
     "Question": "What is Elevate Youth California?",
     "SortOrder": 2,
-    "Updated": "2024-11-21T20:59:12.1699615"
+    "Updated": "2026-11-18T18:20:19.5695451"
   },
   {
     "AgencyServiceId": 1235,
@@ -2520,28 +2520,28 @@
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p style=\"line-height:107%;background:white;\"><a href=\"https://californiaopioidresponse.org/matproject/song-for-charlie-fentanyl-awareness-and-drug-education-program/\"><span style=\"line-height:107%;font-family:'Segoe UI',sans-serif;color:#0563C1;\">Song for Charlie: Fentanyl Awareness and Drug Education Program</span></a><span style=\"text-decoration:underline;\"><span style=\"line-height:107%;font-family:'Segoe UI',sans-serif;\">:</span></span><span style=\"line-height:107%;font-family:'Segoe UI',sans-serif;\"> This online learning hub equips California families with factual, current, actionable information and tools that may help parents keep California&rsquo;s youth safe from harm and facilitate open conversations about mental health, substances, and the heightened risks associated with self-medication caused by the emergence of synthetic drugs like fentanyl in the street drug supply.</span></p>",
+    "Answer": "<a href=\"https://californiaopioidresponse.org/matproject/song-for-charlie-fentanyl-awareness-and-drug-education-program/education-program\">Song for Charlie: Fentanyl Awareness and Drug Education Program</a>: This online learning hub equips California families with factual, current, actionable information and tools that may help parents keep California’s youth safe from harm and facilitate open conversations about mental health, substances, and the heightened risks associated with self-medication caused by the emergence of synthetic drugs like fentanyl in the street drug supply.",
     "Featured": true,
     "Id": 414,
     "Question": "What is the Song for Charlie: Fentanyl Awareness and Drug Education Program?",
     "SortOrder": 4,
-    "Updated": "2024-11-21T20:59:25.869648"
+    "Updated": "2026-11-18T18:24:09.8349642"
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p style=\"line-height:107%;background:white;\"><a href=\"https://californiaopioidresponse.org/matproject/young-people-in-recovery/\"><span style=\"line-height:107%;font-family:'Segoe UI',sans-serif;color:#0563C1;\">Young People in Recovery</span></a><span style=\"line-height:107%;font-family:'Segoe UI',sans-serif;\"> launches chapters and life-skills curriculum programs for youth in recovery from opioid use and substance use disorders.</span></p>",
+    "Answer": "<p><a href=\"https://californiaopioidresponse.org/matproject/young-people-in-recovery/\">Young People in Recovery</a> launches chapters and life-skills curriculum programs for youth in recovery from opioid use and substance use disorders.</p>",
     "Id": 415,
     "Question": "What is Young People in Recovery?",
     "SortOrder": 5,
-    "Updated": "2024-11-21T20:58:09.1934621"
+    "Updated": "2026-11-18T18:27:40.4970438"
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p style=\"line-height:107%;background:white;\"><a href=\"https://californiaopioidresponse.org/matproject/youth-opioid-education-and-awareness-and-fentanyl-education-and-awareness-campaign/\"><span style=\"line-height:107%;font-family:'Segoe UI',sans-serif;color:#0563C1;\">Youth Opioid Education and Awareness and Fentanyl Education and Awareness Campaign</span></a><span style=\"line-height:107%;font-family:'Segoe UI',sans-serif;\"> aims to prevent substance use and raise awareness of fentanyl contamination among youth and young adults, prevent overdose and overdose death among young adults using a harm reduction lens, and raise awareness among families and communities, empowering them to respond to the overdose epidemic with life-saving solutions and strategies.</span></p>",
+    "Answer": "<p><a href=\"https://californiaopioidresponse.org/matproject/youth-opioid-education-and-awareness-and-fentanyl-education-and-awareness-campaign/\">Youth Opioid Education and Awareness and Fentanyl Education and Awareness Campaign</a> aims to prevent substance use and raise awareness of fentanyl contamination among youth and young adults, prevent overdose and overdose death among young adults using a harm reduction lens, and raise awareness among families and communities, empowering them to respond to the overdose epidemic with life-saving solutions and strategies.</p>",
     "Id": 416,
     "Question": "What is the Youth Opioid Education and Awareness and Fentanyl Education and Awareness Campaign?",
     "SortOrder": 6,
-    "Updated": "2024-11-21T20:58:34.0674585"
+    "Updated": "2026-11-18T18:28:28.0954499"
   },
   {
     "AgencyServiceId": 1235,
@@ -2620,12 +2620,12 @@
   },
   {
     "AgencyServiceId": 1272,
-    "Answer": "<span style=\"font-size:14.5pt;line-height:107%;font-family:'Segoe UI',sans-serif;color:#212529;\">You can watch the <a href=\"https://www.youtube.com/embed/D3S6UGSbpvM?autoplay=1&amp;showinfo=0&amp;controls=1&amp;rel=0\" target=\"_blank\">How to Scan Check-A-Ticket for Android video here</a> or the <a href=\"https://www.youtube.com/embed/GquANwiXwBQ?autoplay=1&amp;showinfo=0&amp;controls=1&amp;rel=0\" target=\"_blank\">How to Scan Check-A-Ticket for iOS video here</a>. Tap on \"Check-A-Ticket\" in the menu and hold your device so that you can see your ticket on the screen. Then keep your camera over the barcode. The scanner will automatically recognize if it is an eligible Check-A-Ticket barcode and confirm your entry.</span>",
+    "Answer": "You can watch the <a href=\"https://www.youtube.com/watch?v=D3S6UGSbpvM\">How to Scan Check-A-Ticket for Android video here</a>&nbsp;or the <a href=\"https://www.youtube.com/watch?v=GquANwiXwBQ\">How to Scan Check-A-Ticket for iOS video here</a>. Tap on \"Check-A-Ticket\" in the menu and hold your device so that you can see your ticket on the screen. Then keep your camera over the barcode. The scanner will automatically recognize if it is an eligible Check-A-Ticket barcode and confirm your entry.",
     "Featured": true,
     "Id": 438,
     "Question": "How do I scan for Check-a-Ticket?",
     "SortOrder": 5,
-    "Updated": "2024-12-31T19:13:48.9176959"
+    "Updated": "2026-11-18T19:00:39.2288662"
   },
   {
     "AgencyServiceId": 1272,
@@ -2637,12 +2637,12 @@
   },
   {
     "AgencyServiceId": 1272,
-    "Answer": "<span style=\"font-size:14.5pt;line-height:107%;font-family:'Segoe UI',sans-serif;color:#212529;\">You can watch the <a href=\"https://www.youtube.com/embed/Q9Jg0x9tifI?autoplay=1&amp;showinfo=0&amp;controls=1&amp;rel=0\" target=\"_blank\">How to Scan for 2nd Chance Android video here</a> or the <a href=\"https://www.youtube.com/embed/qPKT8hTyoC8?autoplay=1&amp;showinfo=0&amp;controls=1&amp;rel=0\" target=\"_blank\">How to Scan for 2nd Chance iOS video here</a>. Tap on \"Enter 2nd Chance\" in the menu and hold your device so that you can see your ticket on the screen. Then keep your camera over the barcode. The scanner will automatically recognize if it is an eligible 2nd Chance barcode and confirm your entry. Not all Draw games are eligible for 2nd Chance. Currently any SuperLotto Plus ticket, and Fantasy 5 tickets over $5, have codes that can be entered into 2nd Chance.</span>",
+    "Answer": "You can watch the <a href=\"https://www.youtube.com/watch?v=Q9Jg0x9tifI\">How to Scan for 2nd Chance Android video here</a>&nbsp;or the <a href=\"https://www.youtube.com/watch?v=qPKT8hTyoC8\">How to Scan for 2nd Chance iOS video here</a>. Tap on \"Enter 2nd Chance\" in the menu and hold your device so that you can see your ticket on the screen. Then keep your camera over the barcode. The scanner will automatically recognize if it is an eligible 2nd Chance barcode and confirm your entry. Not all Draw games are eligible for 2nd Chance. Currently any SuperLotto Plus ticket, and Fantasy 5 tickets over $5, have codes that can be entered into 2nd Chance.",
     "Featured": true,
     "Id": 440,
     "Question": "How do I scan to enter my 2nd Chance barcode?",
     "SortOrder": 7,
-    "Updated": "2024-12-31T19:13:58.9334141"
+    "Updated": "2026-11-18T19:03:16.1497972"
   },
   {
     "AgencyServiceId": 1272,
