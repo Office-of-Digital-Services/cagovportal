@@ -1764,12 +1764,12 @@
   },
   {
     "AgencyServiceId": 1129,
-    "Answer": "<p>If your health plan denies, changes or delays your request for medical services, denies payment for emergency treatment or refuses to cover experimental or investigational treatment for a serious medical condition, you can apply for an Independent Medical Review (IMR).</p><p>During an IMR, independent doctors and medical providers, who do not work for your health plan, will examine your case to see if your health plan appropriately denied services or if you should receive the requested service or treatment. These doctors may discover that your health plan was wrong to deny you care. If the IMR is decided in your favor, your plan must authorize and provide the service(s) or treatment(s) you requested. IMR’s are free to enrollees.<br></p>",
+    "Answer": "<p>If your health plan denies, changes or delays your request for medical services, denies payment for emergency treatment or refuses to cover experimental or investigational treatment for a serious medical condition, you can apply for an Independent Medical Review (IMR).</p><p>During an IMR, independent doctors and medical providers, who do not work for your health plan, will examine your case to see if your health plan appropriately denied services or if you should receive the requested service or treatment. These doctors may discover that your health plan was wrong to deny you care. If the IMR is decided in your favor, your plan must authorize and provide the service(s) or treatment(s) you requested. IMR’s are free to enrollees.</p>",
     "Featured": true,
     "Id": 294,
     "Question": "1. What is an Independent Medical Review (IMR)?",
     "SortOrder": 1,
-    "Updated": "2026-09-14T21:16:03.5087681"
+    "Updated": "2026-11-18T19:50:39.443003"
   },
   {
     "AgencyServiceId": 1129,
@@ -1808,11 +1808,11 @@
   },
   {
     "AgencyServiceId": 1129,
-    "Answer": "<p>If your health plan covers prescription drugs but says that the drug you asked for is not medically necessary or is experimental or investigational, you may qualify for an IMR.</p>",
+    "Answer": "If your health plan covers prescription drugs but says that the drug you asked for is not medically necessary or is experimental or investigational, you may qualify for an IMR.",
     "Id": 299,
     "Question": "6. Can I get an IMR if my plan will not pay for the medicine I think I need?",
     "SortOrder": 6,
-    "Updated": "2026-09-14T21:18:37.5703295"
+    "Updated": "2026-11-18T19:51:02.1540053"
   },
   {
     "AgencyServiceId": 1129,
@@ -1824,11 +1824,11 @@
   },
   {
     "AgencyServiceId": 1129,
-    "Answer": "<p>The DMHC Help Center will send you a letter informing you that your problem does not qualify for an IMR. If this happens, the Help Center will review your case through its Consumer Complaint process and send you a written decision within 30 days. You do not need to send in another form.</p>",
+    "Answer": "The DMHC Help Center will send you a letter informing you that your problem does not qualify for an IMR. If this happens, the Help Center will review your case through its Consumer Complaint process and send you a written decision within 30 days. You do not need to send in another form.",
     "Id": 302,
     "Question": "8. What happens if my problem does not qualify for an IMR?",
     "SortOrder": 8,
-    "Updated": "2026-09-14T21:19:11.062005"
+    "Updated": "2026-11-18T19:51:18.0231472"
   },
   {
     "AgencyServiceId": 1129,
@@ -1928,12 +1928,12 @@
   },
   {
     "AgencyServiceId": 1142,
-    "Answer": "<p>Proposition 65 requires businesses to provide warnings to Californians about significant exposures to chemicals that cause cancer, birth defects or other<br />reproductive harm.&nbsp; Exposure to these chemicals may take place when products are acquired or used. Exposure may also occur in homes, workplaces, or other environments in California. By requiring that this information be provided, Proposition 65 enables Californians to make informed decisions about their exposures to these chemicals.</p><p>Proposition 65 also prohibits California businesses from knowingly discharging significant amounts of listed chemicals into sources of drinking water.</p><p>Proposition 65 requires California to publish a list of chemicals known to cause cancer, birth defects or other reproductive harm. This list was first published in 1987, and must be updated at least once a year. It now includes over 900 chemicals.</p><p>Proposition 65 became law in November 1986, when California voters approved it by a 63-37 percent margin.&nbsp; The official name of Proposition 65 is the <a href=\"https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=HSC&amp;division=20.&amp;title=&amp;part=&amp;chapter=6.6.&amp;article\">Safe Drinking Water and Toxic Enforcement Act of 1986</a>.</p>",
+    "Answer": "<p>Proposition 65 requires businesses to provide warnings to Californians about significant exposures to chemicals that cause cancer, birth defects or other reproductive harm. Exposure to these chemicals may take place when products are acquired or used. Exposure may also occur in homes, workplaces, or other environments in California. By requiring that this information be provided, Proposition 65 enables Californians to make informed decisions about their exposures to these chemicals.</p><p>Proposition 65 also prohibits California businesses from knowingly discharging significant amounts of listed chemicals into sources of drinking water.</p><p>Proposition 65 requires California to publish a list of chemicals known to cause cancer, birth defects or other reproductive harm. This list was first published in 1987, and must be updated at least once a year. It now includes over 900 chemicals.</p><p>Proposition 65 became law in November 1986, when California voters approved it by a 63-37 percent margin. The official name of Proposition 65 is the <a href=\"https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=HSC&amp;division=20.&amp;title=&amp;part=&amp;chapter=6.6.&amp;article\">Safe Drinking Water and Toxic Enforcement Act of 1986</a>.</p>",
     "Featured": true,
     "Id": 318,
     "Question": "What is Proposition 65?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T21:49:09.952996"
+    "Updated": "2026-11-18T19:53:01.8359947"
   },
   {
     "AgencyServiceId": 1142,
@@ -1999,12 +1999,12 @@
   },
   {
     "AgencyServiceId": 1143,
-    "Answer": "There are thousands of known faults in California, and scientists continue to discover new ones. Since earthquakes can happen anywhere in California, damage to your home and personal property is always possible. Check to <a href=\"https://www.earthquakeauthority.com/prepare-your-house-earthquake-risk/preparedness-resources\">see earthquake risk near you</a> and take <a href=\"https://www.earthquakeauthority.com/california-earthquake-risk/seven-steps-to-earthquake-safety\">steps to get prepared</a>!<p></p>",
+    "Answer": "There are thousands of known faults in California, and scientists continue to discover new ones. Since earthquakes can happen anywhere in California, damage to your home and personal property is always possible. Check to <a href=\"https://www.earthquakeauthority.com/prepare-your-house-earthquake-risk/preparedness-resources\">see earthquake risk near you</a> and take <a href=\"https://www.earthquakeauthority.com/california-earthquake-risk/seven-steps-to-earthquake-safety\">steps to get prepared</a>!",
     "Featured": true,
     "Id": 332,
     "Question": "Is my home at risk from an earthquake?",
     "SortOrder": 4,
-    "Updated": "2026-11-02T20:15:15.4973719"
+    "Updated": "2026-11-18T19:54:15.2443159"
   },
   {
     "AgencyServiceId": 1144,
@@ -2052,12 +2052,12 @@
   },
   {
     "AgencyServiceId": 1147,
-    "Answer": "<p>Unclaimed property is generally defined as any financial asset that has been left inactive by the owner for a period of time specified in the law, generally three (3) years. The California Unclaimed Property Law does not include real estate. Unused gift certificates are also generally excluded from unclaimed property and are not send to the State as unclaimed property. The most common types of Unclaimed Property are:&nbsp;</p><ul><li>Bank accounts and safe deposit box contents</li><li>Stocks, mutual funds, bonds, and dividends</li><li>Uncashed cashier&rsquo;s checks and money orders</li><li>Certificates of deposit</li><li>Matured or terminated insurance policies</li><li>Estates</li><li>Mineral interests and royalty payments</li><li>Trust funds and escrow accounts</li></ul><p style=\"box-sizing:inherit;margin-bottom:1.25rem;padding:0px;font-family:Arial, Helvetica, san-serif;font-size:16px;line-height:1.6;text-rendering:optimizelegibility;background-color:#ffffff;\"><br /></p>",
+    "Answer": "<p>Unclaimed property is generally defined as any financial asset that has been left inactive by the owner for a period of time specified in the law, generally three (3) years. The California Unclaimed Property Law does not include real estate. Unused gift certificates are also generally excluded from unclaimed property and are not send to the State as unclaimed property. The most common types of Unclaimed Property are:</p><ul><li>Bank accounts and safe deposit box contents</li><li>Stocks, mutual funds, bonds, and dividends</li><li>Uncashed cashier’s checks and money orders</li><li>Certificates of deposit</li><li>Matured or terminated insurance policies</li><li>Estates</li><li>Mineral interests and royalty payments</li><li>Trust funds and escrow accounts</li></ul>",
     "Featured": true,
     "Id": 339,
     "Question": "What is Unclaimed Property?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T22:16:07.5789402"
+    "Updated": "2026-11-18T19:56:28.1308589"
   },
   {
     "AgencyServiceId": 1147,
@@ -2113,11 +2113,11 @@
   },
   {
     "AgencyServiceId": 1171,
-    "Answer": "<p>Income eligibility requirements per household effective 2020 are:</p><ul><li>1 person - $32,200.00</li><li>2 people - $43,550.00</li><li>3 people - $54,900.00</li><li>4 people - $66,250.00</li></ul><p>&nbsp;A &ldquo;household&rdquo; is defined as all persons listed on a federal or state income tax form.<br /></p>",
+    "Answer": "<p>Income eligibility requirements per household effective 2020 are:</p><ul><li>1 person - $32,200.00</li><li>2 people - $43,550.00</li><li>3 people - $54,900.00</li><li>4 people - $66,250.00</li></ul><p>A “household” is defined as all persons listed on a federal or state income tax form.</p>",
     "Id": 346,
     "Question": "What are the income requirements?",
     "SortOrder": 2,
-    "Updated": "2025-10-30T20:44:33.3359379"
+    "Updated": "2026-11-18T19:57:19.0413039"
   },
   {
     "AgencyServiceId": 1171,
@@ -2268,11 +2268,11 @@
   },
   {
     "AgencyServiceId": 1205,
-    "Answer": "<p>The e-Manifest System was established by the United States Environmental Protection Agency (U.S. EPA) and is the national system for tracking hazardous waste shipments electronically. Visit the <a href=\"https://www.epa.gov/e-manifest\">U.S. EPA&rsquo;s e-Manifest webpage</a> for information on user registration, webinars, stakeholder fact sheets, FAQs and more.</p>",
+    "Answer": "The e-Manifest System was established by the United States Environmental Protection Agency (U.S. EPA) and is the national system for tracking hazardous waste shipments electronically. Visit the <a href=\"https://www.epa.gov/e-manifest\">U.S. EPA’s e-Manifest webpage</a> for information on user registration, webinars, stakeholder fact sheets, FAQs and more.",
     "Id": 374,
     "Question": "How is the United State's Environment Protection Agency Electronic Manifest system related? ",
     "SortOrder": 1,
-    "Updated": "2025-10-30T21:43:18.1761531"
+    "Updated": "2026-11-18T19:58:30.209606"
   },
   {
     "AgencyServiceId": 1205,
@@ -2376,12 +2376,12 @@
   },
   {
     "AgencyServiceId": 1219,
-    "Answer": "<p>The mDL can be used for identity verification at TSA, select retail, select websites, and select travel experiences. See <a href=\"https://www.dmv.ca.gov/portal/california-mdl/\">where to use the mDL</a>.</p>",
+    "Answer": "The mDL can be used for identity verification at TSA, select retail, select websites, and select travel experiences. See <a href=\"https://www.dmv.ca.gov/portal/california-mdl/\">where to use the mDL</a>.",
     "Featured": true,
     "Id": 387,
     "Question": "Where can I use the California mDL?",
     "SortOrder": 2,
-    "Updated": "2026-08-02T22:23:11.9264914"
+    "Updated": "2026-11-18T19:59:08.8449212"
   },
   {
     "AgencyServiceId": 1223,
@@ -2502,21 +2502,21 @@
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p><a href=\"https://elevateyouthca.org/\">Elevate Youth California</a> is a prevention program funded by Proposition 64. It serves low-income youth ages 12 to 26 in Tribal, LGBTQIA+, and communities of color across the state. The program provides necessary peer-to-peer support, mentoring, substance use prevention education, and youth civic engagement activities in communities disproportionally affected by the war on drugs.</p>",
+    "Answer": "<a href=\"https://elevateyouthca.org/\">Elevate Youth California</a> is a prevention program funded by Proposition 64. It serves low-income youth ages 12 to 26 in Tribal, LGBTQIA+, and communities of color across the state. The program provides necessary peer-to-peer support, mentoring, substance use prevention education, and youth civic engagement activities in communities disproportionally affected by the war on drugs.",
     "Featured": true,
     "Id": 412,
     "Question": "What is Elevate Youth California?",
     "SortOrder": 2,
-    "Updated": "2026-11-18T18:20:19.5695451"
+    "Updated": "2026-11-18T19:59:48.3082688"
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p><a href=\"https://californiaopioidresponse.org/matproject/youth-opioid-response/\">California Youth Opioid Response</a> aims to increase access to care through the expansion of Medication Assisted Treatment services and opioid and stimulant use prevention for youth and families.</p>",
+    "Answer": "<a href=\"https://californiaopioidresponse.org/matproject/youth-opioid-response/\">California Youth Opioid Response</a> aims to increase access to care through the expansion of Medication Assisted Treatment services and opioid and stimulant use prevention for youth and families.",
     "Featured": true,
     "Id": 413,
     "Question": "What is the California Youth Opioid Response?",
     "SortOrder": 3,
-    "Updated": "2026-11-10T17:34:24.6268514"
+    "Updated": "2026-11-18T20:00:23.2500654"
   },
   {
     "AgencyServiceId": 1235,
@@ -3038,39 +3038,39 @@
   },
   {
     "AgencyServiceId": 1281,
-    "Answer": "<p>California became the first state to allow medicinal cannabis use when voters passed the Compassionate Use Act in 1996. Today, cannabis is legal in California for both medicinal and adult (recreational) use.</p><p>The cannabis industry is strictly regulated to make sure:</p><ul><li>Businesses operate safely</li><li>Products are contaminant-free and labeled to inform purchasers</li><li>Cannabis is kept away from children</li></ul><p>Statutes, regulations and ordinances are all types of laws that work together to set rules for businesses and consumers.&nbsp;</p><p>Learn more about <a href=\"https://www.cannabis.ca.gov/cannabis-laws/laws-and-regulations/\">California cannabis laws</a>.</p>",
+    "Answer": "<p>California became the first state to allow medicinal cannabis use when voters passed the Compassionate Use Act in 1996. Today, cannabis is legal in California for both medicinal and adult (recreational) use.</p><p>The cannabis industry is strictly regulated to make sure:</p><ul><li>Businesses operate safely</li><li>Products are contaminant-free and labeled to inform purchasers</li><li>Cannabis is kept away from children</li></ul><p>Statutes, regulations and ordinances are all types of laws that work together to set rules for businesses and consumers.</p><p>Learn more about <a href=\"https://www.cannabis.ca.gov/cannabis-laws/laws-and-regulations/\">California cannabis laws</a>.</p>",
     "Featured": true,
     "Id": 503,
     "Question": "What are California cannabis laws?",
     "SortOrder": 1,
-    "Updated": "2026-10-29T20:27:08.1467453"
+    "Updated": "2026-11-18T20:02:14.6282014"
   },
   {
     "AgencyServiceId": 1281,
-    "Answer": "<p>&nbsp;</p><p>The DCC issues licenses based on the type of cannabis activity that your business will perform. If you will do more than one activity, you may need more than one license.<br>You must have a valid DCC license before performing any commercial cannabis activity, including:</p><ul><li>Growing cannabis (cultivation)</li><li>Transporting cannabis (distribution)</li><li>Making cannabis products (manufacturing)</li><li>Testing cannabis or cannabis products (testing laboratory)</li><li>Selling cannabis (retail)</li><li>Holding an event where cannabis will be sold (event organizers)</li></ul><p>Learn more about <a href=\"https://www.cannabis.ca.gov/applicants/license-types/\">license types</a>.<br></p>",
+    "Answer": "<p>The DCC issues licenses based on the type of cannabis activity that your business will perform. If you will do more than one activity, you may need more than one license.</p><p>You must have a valid DCC license before performing any commercial cannabis activity, including:</p><ul><li>Growing cannabis (cultivation)</li><li>Transporting cannabis (distribution)</li><li>Making cannabis products (manufacturing)</li><li>Testing cannabis or cannabis products (testing laboratory)</li><li>Selling cannabis (retail)</li><li>Holding an event where cannabis will be sold (event organizers)</li></ul><p>Learn more about <a href=\"https://www.cannabis.ca.gov/applicants/license-types/\">license types</a>.</p>",
     "Featured": true,
     "Id": 504,
     "Question": "What are the types of licenses?",
     "SortOrder": 2,
-    "Updated": "2026-10-29T20:27:44.3226741"
+    "Updated": "2026-11-18T20:03:48.2522696"
   },
   {
     "AgencyServiceId": 1281,
-    "Answer": "<p><a href=\"https://www.cannabis.ca.gov/applicants/how-to-apply/\">How to apply for a license</a></p>",
+    "Answer": "<a href=\"https://www.cannabis.ca.gov/applicants/how-to-apply/\">How to apply for a license</a>",
     "Featured": true,
     "Id": 505,
     "Question": "How do I apply for a license?",
     "SortOrder": 3,
-    "Updated": "2026-10-30T20:44:07.0523324"
+    "Updated": "2026-11-18T20:05:10.066018"
   },
   {
     "AgencyServiceId": 1281,
-    "Answer": "<p>The California Department of Public Health (CDPH) manages the state-authorized Medical Marijuana Identification Card Program (MMICP). The MMICP web-based registry allows law enforcement and the public to verify the validity of a qualified patient or primary caregiver&rsquo;s MMICP as authorization to possess, grow, transport, and/or use medical marijuana within California.</p><p>Visit <a href=\"https://www.cdph.ca.gov/Programs/CHSI/Pages/MMICP.aspx\" title=\"CDPH state-authorized Medical Marijuana Identification Card program page\" target=\"_blank\">program homepage</a>.<br /></p>",
+    "Answer": "<p>The California Department of Public Health (CDPH) manages the state-authorized Medical Marijuana Identification Card Program (MMICP). The MMICP web-based registry allows law enforcement and the public to verify the validity of a qualified patient or primary caregiver’s MMICP as authorization to possess, grow, transport, and/or use medical marijuana within California.</p><p>Visit <a href=\"https://www.cdph.ca.gov/Programs/CHSI/Pages/MMICP.aspx\">program homepage</a>.</p>",
     "Featured": true,
     "Id": 506,
     "Question": "Who should I reach out to for state-authorized Medical Marijuana Identification Card?",
     "SortOrder": 4,
-    "Updated": "2025-05-07T17:52:23.2221838"
+    "Updated": "2026-11-18T20:05:55.3913232"
   },
   {
     "AgencyServiceId": 1285,
