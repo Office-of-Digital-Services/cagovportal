@@ -338,12 +338,12 @@
   },
   {
     "AgencyServiceId": 17,
-    "Answer": "<p><strong>Public School or County Offices of Education/Districts Updates</strong></p><p>All corrections must be routed through the LEA CDS coordinator. Below are links to resources for LEA CDS coordinators for submitting corrections.<br><br></p><ul><li><a href=\"https://www3.cde.ca.gov/opuscds/\">OPUS-CDS Web Application</a><br>Application used by authorized LEA CDS coordinators to notify the CDE of updates to the Public School Directory. A user name and password is required to access this application.</li><li><a href=\"https://www.cde.ca.gov/ds/si/ds/opuscds.asp\">OPUS-CDS Application and Resources</a><br>Access the OPUS-CDS Web application, as well as useful information for using this application.<br></li></ul><p><strong>Private School or Nonpublic, Nonsectarian School Updates</strong></p><ul><li>For private school information and instructions on submitting updates, please visit the <a href=\"https://www.cde.ca.gov/sp/ps/affidavit.asp\">Private School Affidavit Web page</a>. For general inquiries, please send an e-mail to <a>privateschools@cde.ca.gov</a>.</li><li>For questions regarding Nonpublic, Nonsectarian Schools, please send an e-mail to <a>NPSA@cde.ca.gov</a>. Information regarding Nonpublic, Nonsectarian Schools can be found on the <a href=\"https://www.cde.ca.gov/sp/se/\">Data Collection and Reporting</a> web page.&nbsp;<br></li></ul>",
+    "Answer": "<p><strong>Public School or County Offices of Education/Districts Updates</strong></p><p>All corrections must be routed through the LEA CDS coordinator. Below are links to resources for LEA CDS coordinators for submitting corrections.<br></p><ul><li><a href=\"https://www3.cde.ca.gov/opuscds/\">OPUS-CDS Web Application</a><br>Application used by authorized LEA CDS coordinators to notify the CDE of updates to the Public School Directory. A user name and password is required to access this application.</li><li><a href=\"https://www.cde.ca.gov/ds/si/ds/opuscds.asp\">OPUS-CDS Application and Resources</a><br>Access the OPUS-CDS Web application, as well as useful information for using this application.<br></li></ul><p><strong>Private School or Nonpublic, Nonsectarian School Updates</strong></p><ul><li>For private school information and instructions on submitting updates, please visit the <a href=\"https://www.cde.ca.gov/sp/ps/affidavit.asp\">Private School Affidavit Web page</a>. For general inquiries, please send an e-mail to <a>privateschools@cde.ca.gov</a>.</li><li>For questions regarding Nonpublic, Nonsectarian Schools, please send an e-mail to <a>NPSA@cde.ca.gov</a>. Information regarding Nonpublic, Nonsectarian Schools can be found on the <a href=\"https://www.cde.ca.gov/sp/se/\">Data Collection and Reporting</a> web page.<br></li></ul>",
     "Featured": true,
     "Id": 14,
     "Question": "How do I report any errors that I find?",
     "SortOrder": 2,
-    "Updated": "2026-11-02T20:27:14.4167731"
+    "Updated": "2026-11-18T19:29:03.9973764"
   },
   {
     "AgencyServiceId": 17,
@@ -514,12 +514,12 @@
   },
   {
     "AgencyServiceId": 24,
-    "Answer": "<p>The statewide tax rate is 7.25%. In most areas of California, local jurisdictions have added district taxes that increase the tax owed by a seller. Those district tax rates range from 0.10% to 1.00%. Some areas may have more than one district tax in effect. Sellers are required to report and pay the applicable district taxes for their taxable sales and purchases.<br></p><p>If you need help identifying the correct rate, ⁠<a href=\"https://maps.cdtfa.ca.gov/\">you&nbsp;may look up the rate by address</a>, contact our Customer Service Center at 1-800-400-7115 (TTY: 711), or call your local&nbsp;<a href=\"https://cdtfa.ca.gov/office-locations.htm\">⁠CDTFA office</a>&nbsp;for assistance.<br></p>",
+    "Answer": "<p>The statewide tax rate is 7.25%. In most areas of California, local jurisdictions have added district taxes that increase the tax owed by a seller. Those district tax rates range from 0.10% to 1.00%. Some areas may have more than one district tax in effect. Sellers are required to report and pay the applicable district taxes for their taxable sales and purchases.</p><p>If you need help identifying the correct rate, ⁠<a href=\"https://maps.cdtfa.ca.gov/\">you may look up the rate by address</a>, contact our Customer Service Center at 1-800-400-7115 (TTY: 711), or call your local&nbsp;<a href=\"https://cdtfa.ca.gov/office-locations.htm\">CDTFA office</a> for assistance.</p>",
     "Featured": true,
     "Id": 115,
     "Question": "How do Tax Districts affect the tax rate?  ",
     "SortOrder": 2,
-    "Updated": "2026-11-04T22:31:51.2330202"
+    "Updated": "2026-11-18T19:31:52.5632607"
   },
   {
     "AgencyServiceId": 24,
@@ -595,12 +595,12 @@
   },
   {
     "AgencyServiceId": 26,
-    "Answer": "<p><a href=\"https://cdtfa.ca.gov/services/registration.htm\">Register online</a> for a seller's permit, use tax account, or apply for other tax and fee programs. It is convenient to apply anytime, day or night, seven days a week. Many applicants will be able to obtain their permit immediately after they submit their application.</p><p>&nbsp;</p>",
+    "Answer": "<a href=\"https://cdtfa.ca.gov/services/registration.htm\">Register online</a> for a seller's permit, use tax account, or apply for other tax and fee programs. It is convenient to apply anytime, day or night, seven days a week. Many applicants will be able to obtain their permit immediately after they submit their application.",
     "Featured": true,
     "Id": 130,
     "Question": "How do I register online if I don't want to do so in person?",
     "SortOrder": 3,
-    "Updated": "2026-11-04T22:32:34.6130522"
+    "Updated": "2026-11-18T19:32:54.1211171"
   },
   {
     "AgencyServiceId": 26,
@@ -729,19 +729,19 @@
   },
   {
     "AgencyServiceId": 31,
-    "Answer": "<p>You can get a campfire permit from any <a href=\"https://www.fire.ca.gov/resources/cal-fire-contacts/\">CAL FIRE</a> facility, the US Forest Service, the <a href=\"https://www.blm.gov/office/california-state-office\">Bureau of Land Management</a> or online at <a href=\"https://www.readyforwildfire.org/forest-health/\">www.PreventWildfireCA.org</a>. There is no fee for the permit, but you must go to one of these facilities to pick up and fill out the permit.</p>",
+    "Answer": "You can get a campfire permit from any <a href=\"https://www.fire.ca.gov/resources/cal-fire-contacts/\">CAL FIRE</a> facility, the US Forest Service, the <a href=\"https://www.blm.gov/office/california-state-office\">Bureau of Land Management</a> or online at <a href=\"https://www.readyforwildfire.org/forest-health/\">www.PreventWildfireCA.org</a>. There is no fee for the permit, but you must go to one of these facilities to pick up and fill out the permit.",
     "Id": 146,
     "Question": "Where can I get a campfire permit? Is there a fee? ",
     "SortOrder": 1,
-    "Updated": "2026-10-29T20:25:10.1984201"
+    "Updated": "2026-11-18T19:33:27.7444886"
   },
   {
     "AgencyServiceId": 31,
-    "Answer": "<p>CAL FIRE has closed the Magalia Reforestation Center in Butte County as of June 30, 2011 due to ongoing state budget reductions. This closure has suspended for the foreseeable future CAL FIRE's bare root seedling production. You can purchase tree seedlings from the <a href=\"https://shop.arborday.org/nursery\" target=\"_blank\">Arbor Day Foundation</a> or by contacting your local nursery. </p>",
+    "Answer": "CAL FIRE has closed the Magalia Reforestation Center in Butte County as of June 30, 2011 due to ongoing state budget reductions. This closure has suspended for the foreseeable future CAL FIRE's bare root seedling production. You can purchase tree seedlings from the <a href=\"https://shop.arborday.org/nursery\">Arbor Day Foundation</a> or by contacting your local nursery.",
     "Id": 147,
     "Question": "Where can I get tree seedlings? ",
     "SortOrder": 2,
-    "Updated": "2025-11-03T17:47:28.6407916"
+    "Updated": "2026-11-18T19:34:07.4628293"
   },
   {
     "AgencyServiceId": 31,
@@ -779,12 +779,12 @@
   },
   {
     "AgencyServiceId": 36,
-    "Answer": "<p>All county mental health departments have 24/7 hotlines for residents seeking assistance in a crisis and to access local mental health programs. You can find your county's information at</p><p><a href=\"https://www.dhcs.ca.gov/individuals/county-mental-health-plan-information/\">County Mental Health Crisis Numbers</a>. </p><p>Any resident can call 24/7 or walk into a county mental health office during business hours and speak with a crisis worker.</p>",
+    "Answer": "<p>All county mental health departments have 24/7 hotlines for residents seeking assistance in a crisis and to access local mental health programs. You can find your county's information at</p><p><a href=\"https://www.dhcs.ca.gov/individuals/county-mental-health-plan-information/\">County Mental Health Crisis Numbers</a>.</p><p>Any resident can call 24/7 or walk into a county mental health office during business hours and speak with a crisis worker.</p>",
     "Featured": true,
     "Id": 165,
     "Question": "How can I access crisis services?",
     "SortOrder": 3,
-    "Updated": "2026-11-04T17:21:11.2021229"
+    "Updated": "2026-11-18T19:35:21.5497234"
   },
   {
     "AgencyServiceId": 36,
@@ -805,11 +805,11 @@
   },
   {
     "AgencyServiceId": 37,
-    "Answer": "<p><a href=\"https://www.dhcs.ca.gov/medi-cal/\">Learn more</a>&nbsp;Starting January 1, 2026, Medi-Cal will freeze new enrollments for certain adults who are undocumented and do not have a satisfactory immigration status for federal full-scope Medi-Cal. This group will no longer be able to newly enroll in full-scope Medi-Cal, even if they qualified before under state-funded programs.</p>",
+    "Answer": "<a href=\"https://www.dhcs.ca.gov/medi-cal/\">Learn more</a> Starting January 1, 2026, Medi-Cal will freeze new enrollments for certain adults who are undocumented and do not have a satisfactory immigration status for federal full-scope Medi-Cal. This group will no longer be able to newly enroll in full-scope Medi-Cal, even if they qualified before under state-funded programs.",
     "Id": 168,
     "Question": "Who is eligible for Medi-Cal?",
     "SortOrder": 2,
-    "Updated": "2026-11-10T18:05:52.55152"
+    "Updated": "2026-11-18T19:36:12.3999901"
   },
   {
     "AgencyServiceId": 37,
@@ -821,11 +821,11 @@
   },
   {
     "AgencyServiceId": 37,
-    "Answer": "<p>DHCS contracts with 23 Medi-Cal managed care plans to provide medically necessary health care services. Your health plan options will vary depending on the county where you live. Every county's Medi-Cal health plans provide the same high-quality care at the same low or no cost. The directory of health plans available through Medi-Cal managed care is available online at <a href=\"https://www.dhcs.ca.gov/individuals/medi-cal-managed-care-health-plan-directory/\">Medi-Cal Managed Care: Health Plan Directory</a>.​</p>",
+    "Answer": "DHCS contracts with 23 Medi-Cal managed care plans to provide medically necessary health care services. Your health plan options will vary depending on the county where you live. Every county's Medi-Cal health plans provide the same high-quality care at the same low or no cost. The directory of health plans available through Medi-Cal managed care is available online at <a href=\"https://www.dhcs.ca.gov/individuals/medi-cal-managed-care-health-plan-directory/\">Medi-Cal Managed Care: Health Plan Directory</a>.",
     "Id": 170,
     "Question": "What health plans are available through Medi-Cal?",
     "SortOrder": 4,
-    "Updated": "2026-11-10T18:05:03.8871162"
+    "Updated": "2026-11-18T19:37:31.7724935"
   },
   {
     "AgencyServiceId": 38,
@@ -864,12 +864,12 @@
   },
   {
     "AgencyServiceId": 38,
-    "Answer": "<ul style=\"box-sizing:border-box;margin-top:0px;margin-bottom:11px;color:#212529;font-family:'Source Sans Pro', sans-serif;font-size:17.28px;background-color:#ffffff;\"><li style=\"box-sizing:border-box;\"><a href=\"https://www.chp.ca.gov/traffic\" title=\"CHP Traffic Incident Information Page\" target=\"_blank\">CHP Traffic Incident Information Page</a></li></ul><p>&nbsp;</p>",
+    "Answer": "<ul><li><a href=\"https://www.chp.ca.gov/traffic\">CHP Traffic Incident Information Page</a></li></ul>",
     "Featured": true,
     "Id": 429,
     "Question": "How do I get more information on a current incident?",
     "SortOrder": 5,
-    "Updated": "2024-12-04T08:08:41.6441499"
+    "Updated": "2026-11-18T19:38:54.2495845"
   },
   {
     "AgencyServiceId": 39,
@@ -1022,12 +1022,12 @@
   },
   {
     "AgencyServiceId": 48,
-    "Answer": "<p>Visit the <a href=\"https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/updating-information-on-your-driver-license-or-identification-dl-id-card/#acc-changing-your-gender-identity\">Driver’s License or ID Card Updates</a> page.</p>",
+    "Answer": "Visit the <a href=\"https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/updating-information-on-your-driver-license-or-identification-dl-id-card/#acc-changing-your-gender-identity\">Driver’s License or ID Card Updates</a> page.",
     "Featured": true,
     "Id": 210,
     "Question": "Where can I find more information regarding changing my address, name, or gender on a DL/ID card?",
     "SortOrder": 4,
-    "Updated": "2026-08-02T22:25:52.4637875"
+    "Updated": "2026-11-18T19:39:54.9549659"
   },
   {
     "AgencyServiceId": 49,
@@ -1049,12 +1049,12 @@
   },
   {
     "AgencyServiceId": 49,
-    "Answer": "<p>No matter what your destination is or whether you have a reserved or a first-come, first-served site, it's always a good idea to call ahead and check on park conditions.</p><strong>For Reservations&nbsp;- Plan ahead</strong> <p>You can make reservations up to&nbsp;six months in advance through <a href=\"https://www.reservecalifornia.com/\" target=\"_blank\">ReserveCalifornia</a>.</p><strong>Determine where you want to camp and be flexible</strong> <p>Have alternate parks in mind in case your first choice is booked.<br /><br />To help you, get your copy of the California State Parks Camping Reservation Guide by calling (916) 653-6995 or writing to: <br /></p><strong>Consider less busy days</strong> <p>Sometimes reservations are easier to make if you can camp mid-week.</p><strong>Consider less popular camps</strong> <p>Southern coastal campgrounds can be full year-round. You could have better luck getting reservations at State Parks north of Santa Cruz or inland.&nbsp; Look for sites which are more remote and away from major metropolitan areas.</p><strong>Remember the holiday crush</strong> <p>The closer you try to make reservations to a holiday (Memorial Day weekend, Fourth of July, or Labor Day weekend), the further north and inland you may need to go.</p><strong>Consider cancellations</strong> <p>Check the Reserve America website or call the 800-444-7275 phone number. While no waiting lists are maintained, cancellations are rare but they can occur.</p><strong>Consider visiting the park for a day</strong> <p>If the campgrounds you want to visit are booked, consider a day visit to the park for a picnic, hike or other outdoor recreation.</p><strong>Consider April, May, September, and October</strong> <p>The \"shoulder season\" (April, May, September, and October) is a good time to enjoy California State Parks.&nbsp; The weather during these months is usually good.</p>",
+    "Answer": "<p>No matter what your destination is or whether you have a reserved or a first-come, first-served site, it's always a good idea to call ahead and check on park conditions.</p><strong>For Reservations - Plan ahead</strong> <p>You can make reservations up to&nbsp;six months in advance through <a href=\"https://www.reservecalifornia.com/\">ReserveCalifornia</a>.</p><strong>Determine where you want to camp and be flexible</strong> <p>Have alternate parks in mind in case your first choice is booked.<br><br>To help you, get your copy of the California State Parks Camping Reservation Guide by calling (916) 653-6995 or writing to: <br></p><strong>Consider less busy days</strong> <p>Sometimes reservations are easier to make if you can camp mid-week.</p><strong>Consider less popular camps</strong> <p>Southern coastal campgrounds can be full year-round. You could have better luck getting reservations at State Parks north of Santa Cruz or inland.&nbsp; Look for sites which are more remote and away from major metropolitan areas.</p><strong>Remember the holiday crush</strong> <p>The closer you try to make reservations to a holiday (Memorial Day weekend, Fourth of July, or Labor Day weekend), the further north and inland you may need to go.</p><strong>Consider cancellations</strong> <p>Check the Reserve America website or call the 800-444-7275 phone number. While no waiting lists are maintained, cancellations are rare but they can occur.</p><strong>Consider visiting the park for a day</strong> <p>If the campgrounds you want to visit are booked, consider a day visit to the park for a picnic, hike or other outdoor recreation.</p><strong>Consider April, May, September, and October</strong> <p>The \"shoulder season\" (April, May, September, and October) is a good time to enjoy California State Parks. The weather during these months is usually good.</p>",
     "Featured": true,
     "Id": 213,
     "Question": "What are some helpful camping tips for year-round camping enjoyment?",
     "SortOrder": 3,
-    "Updated": "2018-03-16T12:48:14.2831962"
+    "Updated": "2026-11-18T19:41:01.1696737"
   },
   {
     "AgencyServiceId": 49,
@@ -1457,12 +1457,12 @@
   },
   {
     "AgencyServiceId": 63,
-    "Answer": "<p>Use these <a href=\"https://www.csac.ca.gov/pod/financial-aid-checklist\">checklists</a> to help you plan and pay for college.</p>",
+    "Answer": "Use these <a href=\"https://www.csac.ca.gov/pod/financial-aid-checklist\">checklists</a> to help you plan and pay for college.",
     "Featured": true,
     "Id": 253,
     "Question": "Is a financial aid planning checklist available?",
     "SortOrder": 3,
-    "Updated": "2018-05-02T13:19:12.4885779"
+    "Updated": "2026-11-18T19:45:52.7073108"
   },
   {
     "AgencyServiceId": 64,
@@ -1639,12 +1639,12 @@
   },
   {
     "AgencyServiceId": 79,
-    "Answer": "<p>Eligibility requirements are listed on the CDSS website at the following link:</p><p><a href=\"https://www.cdss.ca.gov/benefits-services/more-services/immigration-services/immigration-services-contractors\" target=\"_blank\" title=\"click here to go to the page\">Naturalization Eligibility</a></p>",
+    "Answer": "<p>Eligibility requirements are listed on the CDSS website at the following link:</p><p><a href=\"https://www.cdss.ca.gov/benefits-services/more-services/immigration-services/immigration-services-contractors\">Naturalization Eligibility</a></p>",
     "Featured": true,
     "Id": 272,
     "Question": "Where can I find eligibility requirements for naturalization?",
     "SortOrder": 1,
-    "Updated": "2025-11-03T18:43:13.8431157"
+    "Updated": "2026-11-18T19:46:35.1699365"
   },
   {
     "AgencyServiceId": 1120,
@@ -1850,9 +1850,9 @@
     "AgencyServiceId": 1129,
     "Answer": "The DMHC contracts with the <a href=\"https://healthconsumer.org/\">Health Consumer Alliance</a>, a group of local, community-based organizations that will give you free help with filing a complaint/grievance with your health plan. If you need more local, one-on-one assistance, please contact the Health Consumer Alliance’s Consumer Assistance Program at 1-888-804-3536.",
     "Id": 309,
-    "Question": " 11. What if I need assistance in filing a complaint/grievance with my health plan?",
+    "Question": "11. What if I need assistance in filing a complaint/grievance with my health plan?",
     "SortOrder": 11,
-    "Updated": "2026-09-14T21:20:43.092246"
+    "Updated": "2026-11-18T19:21:55.6466716"
   },
   {
     "AgencyServiceId": 1136,
@@ -2529,27 +2529,27 @@
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p><a href=\"https://californiaopioidresponse.org/matproject/young-people-in-recovery/\">Young People in Recovery</a> launches chapters and life-skills curriculum programs for youth in recovery from opioid use and substance use disorders.</p>",
+    "Answer": "<a href=\"https://californiaopioidresponse.org/matproject/young-people-in-recovery/\">Young People in Recovery</a> launches chapters and life-skills curriculum programs for youth in recovery from opioid use and substance use disorders.",
     "Id": 415,
     "Question": "What is Young People in Recovery?",
     "SortOrder": 5,
-    "Updated": "2026-11-18T18:27:40.4970438"
+    "Updated": "2026-11-18T19:25:14.5181886"
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p><a href=\"https://californiaopioidresponse.org/matproject/youth-opioid-education-and-awareness-and-fentanyl-education-and-awareness-campaign/\">Youth Opioid Education and Awareness and Fentanyl Education and Awareness Campaign</a> aims to prevent substance use and raise awareness of fentanyl contamination among youth and young adults, prevent overdose and overdose death among young adults using a harm reduction lens, and raise awareness among families and communities, empowering them to respond to the overdose epidemic with life-saving solutions and strategies.</p>",
+    "Answer": "<a href=\"https://californiaopioidresponse.org/matproject/youth-opioid-education-and-awareness-and-fentanyl-education-and-awareness-campaign/\">Youth Opioid Education and Awareness and Fentanyl Education and Awareness Campaign</a> aims to prevent substance use and raise awareness of fentanyl contamination among youth and young adults, prevent overdose and overdose death among young adults using a harm reduction lens, and raise awareness among families and communities, empowering them to respond to the overdose epidemic with life-saving solutions and strategies.",
     "Id": 416,
     "Question": "What is the Youth Opioid Education and Awareness and Fentanyl Education and Awareness Campaign?",
     "SortOrder": 6,
-    "Updated": "2026-11-18T18:28:28.0954499"
+    "Updated": "2026-11-18T19:25:45.8046136"
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p><a href=\"https://californiaopioidresponse.org/matproject/youth-peer-mentor-program/\">Youth Peer Mentor Program</a> trains justice-involved youth to provide recovery support to peers with substance use challenges.</p>",
+    "Answer": "<a href=\"https://californiaopioidresponse.org/matproject/youth-peer-mentor-program/\">Youth Peer Mentor Program</a> trains justice-involved youth to provide recovery support to peers with substance use challenges.",
     "Id": 417,
     "Question": "What is the Youth Peer Mentor Program?",
     "SortOrder": 7,
-    "Updated": "2026-11-10T17:29:34.2497862"
+    "Updated": "2026-11-18T19:26:16.8005643"
   },
   {
     "AgencyServiceId": 1236,
