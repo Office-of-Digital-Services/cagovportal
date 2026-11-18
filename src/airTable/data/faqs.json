@@ -57,11 +57,11 @@
   },
   {
     "AgencyServiceId": 7,
-    "Answer": "<ul><li>Ask family, friends, and co-workers which repair shops they like and why.</li><li>Verify that the shop you are considering is registered with BAR, and check to see if there has been any disciplinary action taken against it. You can verify a license online at, verify a license, or call (800) 952-5210.</li><li>Try out a repair shop with a minor maintenance job, such as an oil change. If you're happy with the service you receive, you may have found a shop that's right for you.<br /></li></ul>",
+    "Answer": "<ul><li>Ask family, friends, and co-workers which repair shops they like and why.</li><li>Verify that the shop you are considering is registered with BAR, and check to see if there has been any disciplinary action taken against it. You can verify a license online at, verify a license, or call (800) 952-5210.</li><li>Try out a repair shop with a minor maintenance job, such as an oil change. If you're happy with the service you receive, you may have found a shop that's right for you.</li></ul>",
     "Id": 51,
     "Question": "What are some tips regarding finding an automotive repair vendor?",
     "SortOrder": 4,
-    "Updated": "2025-10-30T22:38:22.0992242"
+    "Updated": "2026-11-18T22:41:14.6695509"
   },
   {
     "AgencyServiceId": 8,
@@ -338,12 +338,12 @@
   },
   {
     "AgencyServiceId": 17,
-    "Answer": "<p><strong>Public School or County Offices of Education/Districts Updates</strong></p><p>All corrections must be routed through the LEA CDS coordinator. Below are links to resources for LEA CDS coordinators for submitting corrections.<br></p><ul><li><a href=\"https://www3.cde.ca.gov/opuscds/\">OPUS-CDS Web Application</a><br>Application used by authorized LEA CDS coordinators to notify the CDE of updates to the Public School Directory. A user name and password is required to access this application.</li><li><a href=\"https://www.cde.ca.gov/ds/si/ds/opuscds.asp\">OPUS-CDS Application and Resources</a><br>Access the OPUS-CDS Web application, as well as useful information for using this application.<br></li></ul><p><strong>Private School or Nonpublic, Nonsectarian School Updates</strong></p><ul><li>For private school information and instructions on submitting updates, please visit the <a href=\"https://www.cde.ca.gov/sp/ps/affidavit.asp\">Private School Affidavit Web page</a>. For general inquiries, please send an e-mail to <a>privateschools@cde.ca.gov</a>.</li><li>For questions regarding Nonpublic, Nonsectarian Schools, please send an e-mail to <a>NPSA@cde.ca.gov</a>. Information regarding Nonpublic, Nonsectarian Schools can be found on the <a href=\"https://www.cde.ca.gov/sp/se/\">Data Collection and Reporting</a> web page.<br></li></ul>",
+    "Answer": "<p><strong>Public School or County Offices of Education/Districts Updates</strong></p><p>All corrections must be routed through the LEA CDS coordinator. Below are links to resources for LEA CDS coordinators for submitting corrections.<br></p><ul><li><a href=\"https://www3.cde.ca.gov/opuscds/\">OPUS-CDS Web Application</a><br>Application used by authorized LEA CDS coordinators to notify the CDE of updates to the Public School Directory. A user name and password is required to access this application.</li><li><a href=\"https://www.cde.ca.gov/ds/si/ds/opuscds.asp\">OPUS-CDS Application and Resources</a><br>Access the OPUS-CDS Web application, as well as useful information for using this application.<br></li></ul><p><strong>Private School or Nonpublic, Nonsectarian School Updates</strong></p><ul><li>For private school information and instructions on submitting updates, please visit the <a href=\"https://www.cde.ca.gov/sp/ps/affidavit.asp\">Private School Affidavit Web page</a>. For general inquiries, please send an e-mail to <a>privateschools@cde.ca.gov</a>.</li><li>For questions regarding Nonpublic, Nonsectarian Schools, please send an e-mail to <a>NPSA@cde.ca.gov</a>. Information regarding Nonpublic, Nonsectarian Schools can be found on the <a href=\"https://www.cde.ca.gov/sp/se/\">Data Collection and Reporting</a> web page.</li></ul>",
     "Featured": true,
     "Id": 14,
     "Question": "How do I report any errors that I find?",
     "SortOrder": 2,
-    "Updated": "2026-11-18T19:29:03.9973764"
+    "Updated": "2026-11-18T22:42:14.9214183"
   },
   {
     "AgencyServiceId": 17,
@@ -770,12 +770,12 @@
   },
   {
     "AgencyServiceId": 36,
-    "Answer": "Please see the <a href=\"https://www.dhcs.ca.gov/providers-partners/directories-for-substance-use-disorder-services/\">Directories for Substance Use Disorder Services webpage</a>.<br>",
+    "Answer": "Please see the <a href=\"https://www.dhcs.ca.gov/providers-partners/directories-for-substance-use-disorder-services/\">Directories for Substance Use Disorder Services webpage</a>.",
     "Featured": true,
     "Id": 164,
     "Question": "How do I find licensed mental health or substance use disorder treatment facilities? ",
     "SortOrder": 2,
-    "Updated": "2026-11-18T20:15:36.6626909"
+    "Updated": "2026-11-18T22:42:59.0165649"
   },
   {
     "AgencyServiceId": 36,
@@ -788,12 +788,12 @@
   },
   {
     "AgencyServiceId": 36,
-    "Answer": "Please <a>call</a>, <a>text</a>, or <a href=\"https://chat.988lifeline.org/\">chat</a> the <a href=\"https://988lifeline.org/\">988 lifeline</a> if you or someone you know needs immediate crisis services. Additionally, Medi-Cal covers mobile crisis services, which provide de-escalation and referrals, as appropriate, to Medi-Cal members experiencing a mental health or substance use crisis.<br>",
+    "Answer": "Please <a>call</a>, <a>text</a>, or <a href=\"https://chat.988lifeline.org/\">chat</a> the <a href=\"https://988lifeline.org/\">988 lifeline</a> if you or someone you know needs immediate crisis services. Additionally, Medi-Cal covers mobile crisis services, which provide de-escalation and referrals, as appropriate, to Medi-Cal members experiencing a mental health or substance use crisis.",
     "Featured": true,
     "Id": 405,
     "Question": "What is 988?",
     "SortOrder": 4,
-    "Updated": "2026-11-02T20:05:24.9206196"
+    "Updated": "2026-11-18T22:43:33.3840227"
   },
   {
     "AgencyServiceId": 37,
@@ -1058,12 +1058,12 @@
   },
   {
     "AgencyServiceId": 49,
-    "Answer": "<p><strong>General Questions</strong><br />For general inquiries, please send\r\n    email to:\r\n    <a href=\"mailto:info@parks.ca.gov\">info@parks.ca.gov</a>\r\n </p><p><strong>Comments, Suggestions or Complaints</strong><br />To send us\r\n    comments, suggestions or complaints, please send email to:\r\n    <a href=\"mailto:info@parks.ca.gov\">info@parks.ca.gov</a>\r\n </p><p><strong>Technical Inquiries</strong><br />For technical inquiries regarding\r\n    the website, please send email to the\r\n    <a href=\"mailto:webmaster@parks.ca.gov\">webmaster</a></p><p><strong>Inaccurate Content</strong><br />If you discover any information on our pages which you believe to be\r\n    inaccurate or outdated, please send email to the\r\n    <a href=\"mailto:webmaster@parks.ca.gov\">webmaster</a>\r\n </p><p><strong>Accessibility</strong><br />For inquiries related to accessibility\r\n    for people with disabilities, please send email to\r\n    <a href=\"mailto:access@parks.ca.gov\">access@parks.ca.gov</a>\r\n or phone 916-445-8949. TTY relay service, 711.</p><p><a href=\"https://www.parks.ca.gov/?page_id=24248\">District Office Contacts</a>\r\n </p>",
+    "Answer": "<p><strong>General Questions</strong><br>For general inquiries, please send email to: <a>info@parks.ca.gov</a></p><p><strong>Comments, Suggestions or Complaints</strong><br>To send us comments, suggestions or complaints, please send email to: <a>info@parks.ca.gov</a></p><p><strong>Technical Inquiries</strong><br>For technical inquiries regarding the website, please send email to: webmaster@parks.ca.gov.</p><p><strong>Inaccurate Content</strong><br>If you discover any information on our pages which you believe to be inaccurate or outdated, please send email to webmaster@parks.ca.gov.</p><p><strong>Accessibility</strong><br>For inquiries related to accessibility for people with disabilities, please send email to <a>access@parks.ca.gov</a> or phone 916-445-8949. TTY relay service, 711.</p><p><a href=\"https://www.parks.ca.gov/?page_id=24248\">District Office Contacts</a></p>",
     "Featured": true,
     "Id": 214,
     "Question": "How do I submit a comment, suggestion or complaint?",
     "SortOrder": 4,
-    "Updated": "2025-11-03T21:27:14.6399018"
+    "Updated": "2026-11-18T22:47:06.6394347"
   },
   {
     "AgencyServiceId": 50,
@@ -1396,11 +1396,11 @@
   },
   {
     "AgencyServiceId": 60,
-    "Answer": "<ul><li>Proof of identity (driver's license, etc.), alien status.<br /></li><li>Social Security Numbers for all household members.<br /></li><li>If employed, proof of income (wage stubs, earning statements, etc.) for the past 30 days.<br /></li><li>Bank statements for checking accounts, savings accounts, certificates of deposit, credit union accounts, retirement accounts, stocks, bonds, dividends, etc.</li><li>Proof of shelter costs (rent or mortgage payment, lot rent, household, real estate, taxes, utility bills &ndash; heat, electricity, water/sewage/garbage, telephone, etc.)</li></ul>",
+    "Answer": "<ul><li>Proof of identity (driver's license, etc.), alien status.</li><li>Social Security Numbers for all household members.</li><li>If employed, proof of income (wage stubs, earning statements, etc.) for the past 30 days.</li><li>Bank statements for checking accounts, savings accounts, certificates of deposit, credit union accounts, retirement accounts, stocks, bonds, dividends, etc.</li><li>Proof of shelter costs (rent or mortgage payment, lot rent, household, real estate, taxes, utility bills – heat, electricity, water/sewage/garbage, telephone, etc.)</li></ul>",
     "Id": 25,
     "Question": "What documents do I need to bring?",
     "SortOrder": 4,
-    "Updated": "2017-05-19T09:27:30.3143815"
+    "Updated": "2026-11-18T22:47:56.6118085"
   },
   {
     "AgencyServiceId": 61,
@@ -1466,12 +1466,12 @@
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. CalVet can combine your federal loan benefit with benefits offered by the state to create home financing that is of superb value for our veterans.<br />",
+    "Answer": "Yes. CalVet can combine your federal loan benefit with benefits offered by the state to create home financing that is of superb value for our veterans.",
     "Featured": true,
     "Id": 490,
     "Question": "I want to use my VA loan benefit. Should I consider CalVet Home Loans?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T20:39:51.4859465"
+    "Updated": "2026-11-18T22:48:31.9185646"
   },
   {
     "AgencyServiceId": 64,
@@ -1484,53 +1484,53 @@
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. All veterans who served on active duty can apply; at any age in any state of enlistment. You only need to be purchasing or refinancing a home in California.<br />",
+    "Answer": "Yes. All veterans who served on active duty can apply; at any age in any state of enlistment. You only need to be purchasing or refinancing a home in California.",
     "Featured": true,
     "Id": 492,
     "Question": "I was in the service over 25 years ago. Can I apply for a CalVet loan?",
     "SortOrder": 3,
-    "Updated": "2025-10-30T20:39:28.0761682"
+    "Updated": "2026-11-18T22:52:01.7830048"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. We have credit standards, but we do not have a minimum credit score requirement. We manually underwrite all our home loans to maximize flexibility and improve your homeownership opportunities.<br />",
+    "Answer": "Yes. We have credit standards, but we do not have a minimum credit score requirement. We manually underwrite all our home loans to maximize flexibility and improve your homeownership opportunities.",
     "Featured": true,
     "Id": 493,
     "Question": "My credit score is too low for my bank to help. Can CalVet work with me?",
     "SortOrder": 4,
-    "Updated": "2025-10-30T20:40:16.0451737"
+    "Updated": "2026-11-18T22:52:23.4260684"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. We underwrite all of our home loans; thus, we can help you obtain a CalVet loan after a short sale, foreclosure, or bankruptcy.<br />",
+    "Answer": "Yes. We underwrite all of our home loans; thus, we can help you obtain a CalVet loan after a short sale, foreclosure, or bankruptcy.",
     "Id": 494,
     "Question": "If I had a short sale, foreclosure, or bankruptcy in the past, can I get a CalVet loan?",
     "SortOrder": 5,
-    "Updated": "2025-10-30T20:40:28.3733437"
+    "Updated": "2026-11-18T22:52:39.2132019"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "<p>Yes. We fund loans for most property types, including:<br /></p><ul><li>Single-family.</li><li>Planned unit developments.</li><li>VA-approved condominiums.</li><li>Manufactured homes installed on land.</li><li>Mobile homes in mobile home parks.</li><li>Working farms.<br /></li></ul>",
+    "Answer": "<p>Yes. We fund loans for most property types, including:</p><ul><li>Single-family.</li><li>Planned unit developments.</li><li>VA-approved condominiums.</li><li>Manufactured homes installed on land.</li><li>Mobile homes in mobile home parks.</li><li>Working farms.</li></ul>",
     "Id": 495,
     "Question": "Can I purchase a manufactured home on land?",
     "SortOrder": 6,
-    "Updated": "2025-10-30T20:41:05.8625553"
+    "Updated": "2026-11-18T22:53:18.1365682"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. We do not sell the servicing, and you stay with us for the life of your loan.<br />",
+    "Answer": "Yes. We do not sell the servicing, and you stay with us for the life of your loan.",
     "Id": 496,
     "Question": "I don’t want my loan to be sold to another bank. Can I stay with CalVet for loan servicing?",
     "SortOrder": 7,
-    "Updated": "2025-10-30T20:41:21.8822926"
+    "Updated": "2026-11-18T22:53:50.3526252"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. You can use our program again and again. If you had a CalVet home loan in the past and paid in full, you can apply for another loan.<br />",
+    "Answer": "Yes. You can use our program again and again. If you had a CalVet home loan in the past and paid in full, you can apply for another loan.",
     "Id": 497,
     "Question": "I used the CalVet program once before. Can I use it again?",
     "SortOrder": 8,
-    "Updated": "2025-10-30T20:41:53.7418181"
+    "Updated": "2026-11-18T22:54:09.7509145"
   },
   {
     "AgencyServiceId": 64,
@@ -1542,28 +1542,28 @@
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. We offer outstanding fire and hazard insurance coverage and disaster coverage, including earthquake and flood protection. We will not cancel your policy after a natural disaster.<br />",
+    "Answer": "Yes. We offer outstanding fire and hazard insurance coverage and disaster coverage, including earthquake and flood protection. We will not cancel your policy after a natural disaster.",
     "Id": 499,
     "Question": "Does CalVet have an excellent property insurance program for most of its loans?",
     "SortOrder": 10,
-    "Updated": "2025-10-30T20:42:14.964393"
+    "Updated": "2026-11-18T22:54:59.2033051"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. We offer construction loans and other specialty loans, such as rehabilitation purchase loans and home improvement loans.<br />",
+    "Answer": "Yes. We offer construction loans and other specialty loans, such as rehabilitation purchase loans and home improvement loans.",
     "Featured": true,
     "Id": 500,
     "Question": "What if I want to build a home? Can CalVet help?",
     "SortOrder": 11,
-    "Updated": "2025-10-30T20:42:25.3984222"
+    "Updated": "2026-11-18T22:55:20.3763566"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. <a href=\"https://calvet.zipforhome.com/\">Apply now</a> to start the streamlined pre-approval process for a home loan. After you apply online, a CalVet representative will guide you through the process. You have a friend in the lending business!<br />",
+    "Answer": "Yes. <a href=\"https://calvet.zipforhome.com/\">Apply now</a> to start the streamlined pre-approval process for a home loan. After you apply online, a CalVet representative will guide you through the process. You have a friend in the lending business!",
     "Id": 501,
     "Question": "Is it easy to apply for a CalVet pre-approval?",
     "SortOrder": 12,
-    "Updated": "2025-10-30T20:43:02.602068"
+    "Updated": "2026-11-18T22:55:43.6612941"
   },
   {
     "AgencyServiceId": 73,
@@ -1585,12 +1585,12 @@
   },
   {
     "AgencyServiceId": 73,
-    "Answer": "Physical Address: 1220 N Street, Sacramento, CA 95814 <br />Phone number: 916-999-3000 <br />Mailing Address: 1220 N Street, Sacramento, CA 95814 ",
+    "Answer": "Physical Address: 1220 N Street, Sacramento, CA 95814<br>Phone number: 916-999-3000 <br>Mailing Address: 1220 N Street, Sacramento, CA 95814",
     "Featured": true,
     "Id": 261,
     "Question": "How do I contact the Division of Fairs & Expositions?",
     "SortOrder": 3,
-    "Updated": "2024-10-31T22:09:49.511249"
+    "Updated": "2026-11-18T22:57:42.5388478"
   },
   {
     "AgencyServiceId": 73,
@@ -1666,12 +1666,12 @@
   },
   {
     "AgencyServiceId": 1120,
-    "Answer": "You are not alone. Nationwide, 51.5 million adults struggle with a <a href=\"https://findtreatment.gov/what-to-expect/mental-health\">mental illness</a>, and 19.7 million people struggle with a substance use <a href=\"https://findtreatment.gov/what-to-expect/addiction\">disorder</a>.<br><br>If you think you are having an emergency for an unexpected medical condition, including a psychiatric emergency medical condition, call 911 or go to the nearest emergency room for help. If you or someone you know is in crisis, please call 911 or 988.<br><br>DHCS also partners with national nonprofit Shatterproof and Blue Shield of California to help combat the substance use crisis, keep Californians safe, and provide recovery resources to those in need. These resources include Shatterproof <a href=\"https://treatmentatlas.org/\">Treatment Atlas</a>, an addiction treatment locator, assessment, and standards platform that will connect individuals to appropriate evidence-based addiction treatment.<br><br>Additionally, <a href=\"https://startyourrecovery.org/treatment/rehab-centers/california\">StartYourRecovery.org</a> provides helpful information for people who are dealing with substance use issues — and their family members, friends, and co-workers, too. Their goal is to offer people who are dealing with substance use issues a single source of reputable, objective information about signs, symptoms, conditions, treatment options, and resources — presented in a user-friendly format and in easy-to-understand language.",
+    "Answer": "<p>You are not alone. Nationwide, 51.5 million adults struggle with a <a href=\"https://findtreatment.gov/what-to-expect/mental-health\">mental illness</a>, and 19.7 million people struggle with a substance use <a href=\"https://findtreatment.gov/what-to-expect/addiction\">disorder</a>.</p><p>If you think you are having an emergency for an unexpected medical condition, including a psychiatric emergency medical condition, call 911 or go to the nearest emergency room for help. If you or someone you know is in crisis, please call 911 or 988.</p><p>DHCS also partners with national nonprofit Shatterproof and Blue Shield of California to help combat the substance use crisis, keep Californians safe, and provide recovery resources to those in need. These resources include Shatterproof <a href=\"https://treatmentatlas.org/\">Treatment Atlas</a>, an addiction treatment locator, assessment, and standards platform that will connect individuals to appropriate evidence-based addiction treatment.</p><p>Additionally, <a href=\"https://startyourrecovery.org/treatment/rehab-centers/california\">StartYourRecovery.org</a> provides helpful information for people who are dealing with substance use issues — and their family members, friends, and co-workers, too. Their goal is to offer people who are dealing with substance use issues a single source of reputable, objective information about signs, symptoms, conditions, treatment options, and resources — presented in a user-friendly format and in easy-to-understand language.</p>",
     "Featured": true,
     "Id": 420,
     "Question": "Where can I get help with my, or my loved one’s, misuse of alcohol or other substances?",
     "SortOrder": 3,
-    "Updated": "2026-11-03T22:50:43.3479778"
+    "Updated": "2026-11-18T22:58:46.1353401"
   },
   {
     "AgencyServiceId": 1121,
@@ -1684,11 +1684,11 @@
   },
   {
     "AgencyServiceId": 1124,
-    "Answer": "You can search for renewal and license information by entering in a \"From\" Date, a \"To\" Date, or both. If just the \"From\" date is entered, the application will search for all records occurring on or after that date. If just the \"To\" Record is entered, the application will search for all records occurring on or before that date.<br />",
+    "Answer": "You can search for renewal and license information by entering in a \"From\" Date, a \"To\" Date, or both. If just the \"From\" date is entered, the application will search for all records occurring on or after that date. If just the \"To\" Record is entered, the application will search for all records occurring on or before that date.",
     "Id": 276,
     "Question": "How do I search based on dates?",
     "SortOrder": 1,
-    "Updated": "2018-03-16T11:58:20.2756539"
+    "Updated": "2026-11-18T22:59:09.0593292"
   },
   {
     "AgencyServiceId": 1124,
@@ -1700,35 +1700,35 @@
   },
   {
     "AgencyServiceId": 1125,
-    "Answer": "Renewal may not occur more than six months prior to the existing license expiration date.<br />",
+    "Answer": "Renewal may not occur more than six months prior to the existing license expiration date.",
     "Id": 278,
     "Question": "When can I renew my license?",
     "SortOrder": 1,
-    "Updated": "2018-03-16T11:31:44.6004877"
+    "Updated": "2026-11-18T22:59:27.9474157"
   },
   {
     "AgencyServiceId": 1125,
-    "Answer": "The existing license must be current and in good standing.<br />",
+    "Answer": "The existing license must be current and in good standing.",
     "Id": 279,
     "Question": "Am I eligible to renew my license?",
     "SortOrder": 2,
-    "Updated": "2018-03-16T11:31:27.1627098"
+    "Updated": "2026-11-18T22:59:46.2606047"
   },
   {
     "AgencyServiceId": 1125,
-    "Answer": "Fees are not refundable. By statute, all fees submitted are deemed earned upon receipt.<br />",
+    "Answer": "Fees are not refundable. By statute, all fees submitted are deemed earned upon receipt.",
     "Id": 280,
     "Question": "Are the renewal fees refundable?",
     "SortOrder": 3,
-    "Updated": "2018-03-16T11:30:59.0837885"
+    "Updated": "2026-11-18T23:00:02.5545216"
   },
   {
     "AgencyServiceId": 1125,
-    "Answer": "You may pay for the renewal using Visa or MasterCard.<br />",
+    "Answer": "You may pay for the renewal using Visa or MasterCard.",
     "Id": 281,
     "Question": "How can I pay for License Renewal Fees? ",
     "SortOrder": 4,
-    "Updated": "2018-03-16T11:30:15.5204483"
+    "Updated": "2026-11-18T23:00:20.3801677"
   },
   {
     "AgencyServiceId": 1127,
@@ -1800,11 +1800,11 @@
   },
   {
     "AgencyServiceId": 1129,
-    "Answer": "Californians enrolled in a DMHC-regulated health plan are eligible to file a complaint or IMR with the DMHC. Most people who live in California are enrolled in a health plan regulated by the DMHC. Because of this, the DMHC Help Center is a good place to start if you have a problem with your health plan. If you are in a health plan not regulated by the DMHC, the DMHC Help Center will refer you to the right regulator.<br>",
+    "Answer": "Californians enrolled in a DMHC-regulated health plan are eligible to file a complaint or IMR with the DMHC. Most people who live in California are enrolled in a health plan regulated by the DMHC. Because of this, the DMHC Help Center is a good place to start if you have a problem with your health plan. If you are in a health plan not regulated by the DMHC, the DMHC Help Center will refer you to the right regulator.",
     "Id": 298,
     "Question": "5. Who can apply for an IMR with the DMHC?",
     "SortOrder": 5,
-    "Updated": "2026-09-14T21:17:35.7112866"
+    "Updated": "2026-11-18T23:00:39.4593683"
   },
   {
     "AgencyServiceId": 1129,
@@ -1919,12 +1919,12 @@
   },
   {
     "AgencyServiceId": 1141,
-    "Answer": "<p>If your single-family house:</p><ul><li>Was built before 1979,<br></li><li>Is on a raised foundation, and<br></li><li>You've completed an earthquake retrofit, and a <a href=\"https://www.crmp.org/resources/find-a-contractor\">licensed contractor</a> or <a href=\"https://www.crmp.org/resources/find-a-contractor/\">structural engineer</a> has signed the <a href=\"https://www.earthquakeauthority.com/sites/default/files/document/cea-earthquake-insurance-dwelling-retrofit-form.pdf\">Dwelling Retrofit Verification Form (PDF)</a>, stating the retrofit is in accordance with required standards.</li></ul><p>If your mobilehome:</p><ul><li>Has been reinforced by an earthquake-resistant bracing system certified by the California Department of Housing and Community Development (HCD).</li></ul>",
+    "Answer": "<p>If your single-family house:</p><ul><li>Was built before 1979,</li><li>Is on a raised foundation, and</li><li>You've completed an earthquake retrofit, and a <a href=\"https://www.crmp.org/resources/find-a-contractor\">licensed contractor</a> or <a href=\"https://www.crmp.org/resources/find-a-contractor/\">structural engineer</a> has signed the <a href=\"https://www.earthquakeauthority.com/sites/default/files/document/cea-earthquake-insurance-dwelling-retrofit-form.pdf\">Dwelling Retrofit Verification Form (PDF)</a>, stating the retrofit is in accordance with required standards.</li></ul><p>If your mobilehome:</p><ul><li>Has been reinforced by an earthquake-resistant bracing system certified by the California Department of Housing and Community Development (HCD).</li></ul>",
     "Featured": true,
     "Id": 333,
     "Question": "Am I eligible for a retrofit discount? ",
     "SortOrder": 4,
-    "Updated": "2026-11-04T22:36:38.5293727"
+    "Updated": "2026-11-18T23:01:39.0466778"
   },
   {
     "AgencyServiceId": 1142,
@@ -1964,11 +1964,11 @@
   },
   {
     "AgencyServiceId": 1142,
-    "Answer": "The <a href=\"https://oag.ca.gov/prop65\">California Attorney General's Office</a> enforces Proposition 65. Any district attorney or city attorney (for cities whose population exceeds 750,000) may also enforce Proposition 65. In addition, any individual acting in the public interest may enforce Proposition 65 by filing a lawsuit against a business alleged to be in violation of this law.<br /><br />Lawsuits have been filed by the Attorney General&rsquo;s Office, district attorneys, consumer advocacy groups, and private citizens and law firms.",
+    "Answer": "<p>The <a href=\"https://oag.ca.gov/prop65\">California Attorney General's Office</a> enforces Proposition 65. Any district attorney or city attorney (for cities whose population exceeds 750,000) may also enforce Proposition 65. In addition, any individual acting in the public interest may enforce Proposition 65 by filing a lawsuit against a business alleged to be in violation of this law.</p><p>Lawsuits have been filed by the Attorney General’s Office, district attorneys, consumer advocacy groups, and private citizens and law firms.</p>",
     "Id": 428,
     "Question": "Who enforces Proposition 65?",
     "SortOrder": 5,
-    "Updated": "2025-10-30T21:52:45.1245638"
+    "Updated": "2026-11-18T23:02:24.2683811"
   },
   {
     "AgencyServiceId": 1143,
@@ -1990,12 +1990,12 @@
   },
   {
     "AgencyServiceId": 1143,
-    "Answer": "California has two-thirds of our nation's earthquake risk. <a href=\"https://www.earthquakeauthority.com/prepare-your-house-earthquake-risk/structural-risks\">Structures</a> that lack adequate <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/earthquake-insurance-policy-premium-discounts#FoundationTypes\">sill plate bolting</a> and <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/earthquake-insurance-policy-premium-discounts#FoundationTypes\">cripple-wall bracing</a> are more susceptible to earthquake damage.<br><br>The frames of older houses are often not bolted to their foundations, and their <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/earthquake-insurance-policy-premium-discounts#FoundationTypes\">cripple walls</a> may lack bracing. <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/earthquake-insurance-policy-premium-discounts#FoundationTypes\">Houses without adequate bolting and bracing</a> can slide or topple off their foundation during an earthquake, requiring potentially very expensive repairs. But this serious damage can be prevented with a proper seismic retrofit.",
+    "Answer": "<p>California has two-thirds of our nation's earthquake risk. <a href=\"https://www.earthquakeauthority.com/prepare-your-house-earthquake-risk/structural-risks\">Structures</a> that lack adequate <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/earthquake-insurance-policy-premium-discounts#FoundationTypes\">sill plate bolting</a> and <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/earthquake-insurance-policy-premium-discounts#FoundationTypes\">cripple-wall bracing</a> are more susceptible to earthquake damage.</p><p>The frames of older houses are often not bolted to their foundations, and their <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/earthquake-insurance-policy-premium-discounts#FoundationTypes\">cripple walls</a> may lack bracing. <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/earthquake-insurance-policy-premium-discounts#FoundationTypes\">Houses without adequate bolting and bracing</a> can slide or topple off their foundation during an earthquake, requiring potentially very expensive repairs. But this serious damage can be prevented with a proper seismic retrofit.</p>",
     "Featured": true,
     "Id": 331,
     "Question": "Why should I retrofit my house?",
     "SortOrder": 3,
-    "Updated": "2026-11-02T20:18:40.8869744"
+    "Updated": "2026-11-18T23:03:23.1522508"
   },
   {
     "AgencyServiceId": 1143,
@@ -2061,38 +2061,38 @@
   },
   {
     "AgencyServiceId": 1147,
-    "Answer": "California&rsquo;s Unclaimed Property Law requires corporations, businesses, associations, financial institutions, and insurance companies (referred to as &ldquo;Holders&rdquo;) to annually report and deliver property to the State Controller&rsquo;s Office after there has been no activity on the account or contact with the owner for a period of time specified in the law&mdash;generally three (3) years. Often, contact is lost when the owner forgets that the account exists, or moves and does not leave a forwarding address, or the forwarding order expires. In some cases, the owner dies and the heirs have no knowledge of the property.<br />",
+    "Answer": "California’s Unclaimed Property Law requires corporations, businesses, associations, financial institutions, and insurance companies (referred to as “Holders”) to annually report and deliver property to the State Controller’s Office after there has been no activity on the account or contact with the owner for a period of time specified in the law—generally three (3) years. Often, contact is lost when the owner forgets that the account exists, or moves and does not leave a forwarding address, or the forwarding order expires. In some cases, the owner dies and the heirs have no knowledge of the property.",
     "Featured": true,
     "Id": 340,
     "Question": "How Does The State Get Unclaimed Property?",
     "SortOrder": 2,
-    "Updated": "2025-10-30T20:50:59.2221935"
+    "Updated": "2026-11-18T23:03:44.1718565"
   },
   {
     "AgencyServiceId": 1147,
-    "Answer": "The Unclaimed Property Law was passed to protect consumers. It prevents businesses with unclaimed property from keeping your money and using it as business income. The law provides California citizens a single source, the State Controller&rsquo;s Office, to check for unclaimed property that may be reported by businesses from around the nation and enables the State to return property, or the net proceeds from any legally required sale of the property, to its rightful owner or their heirs.<br />",
+    "Answer": "The Unclaimed Property Law was passed to protect consumers. It prevents businesses with unclaimed property from keeping your money and using it as business income. The law provides California citizens a single source, the State Controller’s Office, to check for unclaimed property that may be reported by businesses from around the nation and enables the State to return property, or the net proceeds from any legally required sale of the property, to its rightful owner or their heirs.",
     "Featured": true,
     "Id": 341,
     "Question": "Why Does California Have An Unclaimed Property Law? ",
     "SortOrder": 3,
-    "Updated": "2025-10-30T20:50:48.9252996"
+    "Updated": "2026-11-18T23:04:04.2852968"
   },
   {
     "AgencyServiceId": 1170,
-    "Answer": "Yes. On March 5, 2020, Insurance Commissioner Ricardo Lara released a COVID-19 Screening and Testing Bulletin1 directing health insurers to waive cost sharing amounts for certain COVID19 related screening and testing. Since that date, two federal laws were passed, which require coverage for COVID-19 related diagnostic testing and screening, without patient cost sharing, including deductibles, coinsurance, and copays. Section 6001 of the federal Families First Coronavirus Response Act (FFCRA) (PL 116-127) &sect; 6001, as amended by &sect; 3201 of the federal Coronavirus Aid, Relief, and Economic Security Act (CARES Act) (PL 116-136),2 applies to a &ldquo;group health plan,&rdquo; including insured3 and selfinsured group health plans, private employment-based group health plans (ERISA plans), nonfederal governmental plans, and church plans.4 It also applies to &ldquo;individual health insurance<br />",
+    "Answer": "Yes. On March 5, 2020, Insurance Commissioner Ricardo Lara released a COVID-19 Screening and Testing Bulletin1 directing health insurers to waive cost sharing amounts for certain COVID19 related screening and testing. Since that date, two federal laws were passed, which require coverage for COVID-19 related diagnostic testing and screening, without patient cost sharing, including deductibles, coinsurance, and copays. Section 6001 of the federal Families First Coronavirus Response Act (FFCRA) (PL 116-127) § 6001, as amended by § 3201 of the federal Coronavirus Aid, Relief, and Economic Security Act (CARES Act) (PL 116-136),2 applies to a “group health plan,” including insured3 and selfinsured group health plans, private employment-based group health plans (ERISA plans), nonfederal governmental plans, and church plans.4 It also applies to “individual health insurance",
     "Id": 342,
     "Question": "As a consumer, does my health insurer have to waive cost sharing for COVID-19 testing and related diagnostic items and services?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T22:09:09.6407914"
+    "Updated": "2026-11-18T23:07:03.6509736"
   },
   {
     "AgencyServiceId": 1170,
-    "Answer": "No. Health insurers have a legal obligation to promptly pay claims. Insurance Code &sect;&sect; 10123.13 and 10123.147 require insurers to pay claims as soon as possible but no later than 30 working days after receipt of a complete claim, unless the insurer notifies the provider in writing that the claim has been denied or is being contested. Insurers must pay interest on a completed claim if the claim has not been reimbursed, contested or denied within the 30 working-day deadline.11 Failure to comply with the claims handling deadlines in state law may also be considered an unfair claims settlement practice under Insurance Code &sect; 790.03(h). Providers should contact the Department&rsquo;s Provider Complaint Center if a health insurer is not paying claims in compliance with these deadlines.<br />",
+    "Answer": "No. Health insurers have a legal obligation to promptly pay claims. Insurance Code §§ 10123.13 and 10123.147 require insurers to pay claims as soon as possible but no later than 30 working days after receipt of a complete claim, unless the insurer notifies the provider in writing that the claim has been denied or is being contested. Insurers must pay interest on a completed claim if the claim has not been reimbursed, contested or denied within the 30 working-day deadline.11 Failure to comply with the claims handling deadlines in state law may also be considered an unfair claims settlement practice under Insurance Code § 790.03(h). Providers should contact the Department’s Provider Complaint Center if a health insurer is not paying claims in compliance with these deadlines.",
     "Featured": true,
     "Id": 343,
     "Question": "I’m a provider and I’m having a problem with insurers reimbursing, denying or contesting the claim I submitted in a timely manner. Can they do that?",
     "SortOrder": 2,
-    "Updated": "2025-10-30T22:14:07.1398973"
+    "Updated": "2026-11-18T23:07:25.7279384"
   },
   {
     "AgencyServiceId": 1170,
@@ -2104,12 +2104,12 @@
   },
   {
     "AgencyServiceId": 1171,
-    "Answer": "<p>To be eligible for the California&rsquo;s Low Cost Auto Insurance Program, or CLCA, consumers must:</p><ul><li>Have a valid California driver&rsquo;s license</li><li>Own a vehicle valued at $25,000 or less</li><li>Meet income eligibility guidelines</li><li>Be at least 16 years of age</li><li>Have a Good Driving Record<br /></li></ul>",
+    "Answer": "<p>To be eligible for the California’s Low Cost Auto Insurance Program, or CLCA, consumers must:</p><ul><li>Have a valid California driver’s license</li><li>Own a vehicle valued at $25,000 or less</li><li>Meet income eligibility guidelines</li><li>Be at least 16 years of age</li><li>Have a Good Driving Record</li></ul>",
     "Featured": true,
     "Id": 345,
     "Question": "What are the eligibility requirements?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T20:44:03.6961775"
+    "Updated": "2026-11-18T23:08:00.851703"
   },
   {
     "AgencyServiceId": 1171,
@@ -2401,11 +2401,11 @@
   },
   {
     "AgencyServiceId": 1223,
-    "Answer": "<p>There are a few ways for individuals or organizations to prepare for an emergency such as earthquake:<br></p><ul><li>Download the MyShake App and enable location services to receive earthquake warnings.</li><li>Have a plan in place in advance so you can act quickly if you receive a MyShake, Android or WEA earthquake warning. </li><li>Visit ca.gov for information and other resources to help prepare for earthquakes in California</li><li>Follow Cal OES on social media</li></ul>",
+    "Answer": "<p>There are a few ways for individuals or organizations to prepare for an emergency such as earthquake:</p><ul><li>Download the MyShake App and enable location services to receive earthquake warnings.</li><li>Have a plan in place in advance so you can act quickly if you receive a MyShake, Android or WEA earthquake warning. </li><li>Visit ca.gov for information and other resources to help prepare for earthquakes in California</li><li>Follow Cal OES on social media</li></ul>",
     "Id": 393,
     "Question": "How can I receive more information about earthquake warnings and related resources? ",
     "SortOrder": 3,
-    "Updated": "2026-11-18T20:30:33.8350291"
+    "Updated": "2026-11-18T23:08:36.5999542"
   },
   {
     "AgencyServiceId": 1223,
@@ -2475,12 +2475,12 @@
   },
   {
     "AgencyServiceId": 1230,
-    "Answer": "<p>The Conservancy&rsquo;s Directed Grant Program seeks to support multi-benefit projects that advance a number of goals, including but not limited to:</p><ul><li>Conserving land</li><li>Protecting resources</li><li>Reducing flood and fire risk</li><li>Improving water quality<br /></li><li>Protecting and enhancing wildlife habitats<br /></li><li>Completing the San Diego River Trail<br /></li><li>Providing public access for the enjoyment of the San Diego River Park and open space, trails, campgrounds and park facilities<br /></li><li>Removing invasive plant species from the watershed<br /></li><li>Increasing native habitat and promoting the re-establishment of native species<br /></li><li>Promoting cultural and tribal preservation, and historical interpretation of the San Diego River and its people<br /></li><li>Protecting the natural and scenic beauty of the San Diego River watershed<br /></li></ul>",
+    "Answer": "<p>The Conservancy’s Directed Grant Program seeks to support multi-benefit projects that advance a number of goals, including but not limited to:</p><ul><li>Conserving land</li><li>Protecting resources</li><li>Reducing flood and fire risk</li><li>Improving water quality</li><li>Protecting and enhancing wildlife habitats</li><li>Completing the San Diego River Trail</li><li>Providing public access for the enjoyment of the San Diego River Park and open space, trails, campgrounds and park facilities</li><li>Removing invasive plant species from the watershed</li><li>Increasing native habitat and promoting the re-establishment of native species</li><li>Promoting cultural and tribal preservation, and historical interpretation of the San Diego River and its people</li><li>Protecting the natural and scenic beauty of the San Diego River watershed</li></ul>",
     "Featured": true,
     "Id": 403,
     "Question": "What type of projects are eligible for the Directed Grant Program?",
     "SortOrder": 3,
-    "Updated": "2025-10-30T20:49:10.8068702"
+    "Updated": "2026-11-18T23:09:24.5903113"
   },
   {
     "AgencyServiceId": 1230,
@@ -2686,12 +2686,12 @@
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "For steps on how to apply for admission, visit <a href=\"https://www.calvet.ca.gov/VetHomes/Pages/apply.aspx\">Applying for a CalVet Veterans Home</a>.<br />",
+    "Answer": "For steps on how to apply for admission, visit <a href=\"https://www.calvet.ca.gov/VetHomes/Pages/apply.aspx\">Applying for a CalVet Veterans Home</a>.",
     "Featured": true,
     "Id": 446,
     "Question": "How do I apply for admission to a Veterans Home of California?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T21:21:36.4895269"
+    "Updated": "2026-11-18T23:10:24.3905247"
   },
   {
     "AgencyServiceId": 1273,
@@ -2730,43 +2730,43 @@
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "Yes. We urge all potential residents to visit our campuses first.<br />",
+    "Answer": "Yes. We urge all potential residents to visit our campuses first.",
     "Id": 451,
     "Question": "May I visit a Veterans Home of California before applying for admission?",
     "SortOrder": 6,
-    "Updated": "2025-10-30T21:14:54.5295325"
+    "Updated": "2026-11-18T23:10:53.5712744"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "No veteran will be denied admission due to a lack of income. For those veterans who have income, state law requires that they pay a percentage of their income as resident fees. Resident fees help reduce the amount of state tax dollars needed to operate Veterans Homes, thus allowing the California Department of Veterans Affairs to care for a greater number of veterans.<br />",
+    "Answer": "No veteran will be denied admission due to a lack of income. For those veterans who have income, state law requires that they pay a percentage of their income as resident fees. Resident fees help reduce the amount of state tax dollars needed to operate Veterans Homes, thus allowing the California Department of Veterans Affairs to care for a greater number of veterans.",
     "Id": 452,
     "Question": "How much will it cost me to become a resident?",
     "SortOrder": 7,
-    "Updated": "2025-10-30T21:14:42.5573554"
+    "Updated": "2026-11-18T23:11:13.3700336"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "The Veterans Homes can accommodate many care needs. You can contact the Veterans Home's admissions office for general information, but you must complete <a href=\"https://www.calvet.ca.gov/VetHomes/Pages/apply.aspx\">the application process</a> for a formal determination of whether the necessary services are available.<br />",
+    "Answer": "The Veterans Homes can accommodate many care needs. You can contact the Veterans Home's admissions office for general information, but you must complete <a href=\"https://www.calvet.ca.gov/VetHomes/Pages/apply.aspx\">the application process</a> for a formal determination of whether the necessary services are available.",
     "Id": 453,
     "Question": "Will I be admitted if I have medical problems that require special care?",
     "SortOrder": 8,
-    "Updated": "2025-10-30T21:14:28.9525238"
+    "Updated": "2026-11-18T23:12:04.0210465"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "You must file a written appeal with the Home&rsquo;s administrator, stating the reasons you feel you should be admitted to the Home. If this appeal is denied and you wish to escalate your appeal, you can initiate your second appeal by contacting the California Veterans Board, P.O. Box 942895, Sacramento, CA 94295-0001. The Board will provide you with an appeal form if you did not receive one from the Home.<br />",
+    "Answer": "You must file a written appeal with the Home’s administrator, stating the reasons you feel you should be admitted to the Home. If this appeal is denied and you wish to escalate your appeal, you can initiate your second appeal by contacting the California Veterans Board, P.O. Box 942895, Sacramento, CA 94295-0001. The Board will provide you with an appeal form if you did not receive one from the Home.",
     "Id": 454,
     "Question": "If I am denied admission to a Veterans Home of California, what are my rights?",
     "SortOrder": 9,
-    "Updated": "2025-10-30T21:13:48.6828712"
+    "Updated": "2026-11-18T23:12:26.0264242"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "Please visit the Department of Aging&rsquo;s <a href=\"https://www.aging.ca.gov/Find_Licensed_Services/\">Find Licensed Services</a> webpage to learn more.<br />",
+    "Answer": "Please visit the Department of Aging’s <a href=\"https://www.aging.ca.gov/Find_Licensed_Services/\">Find Licensed Services</a> webpage to learn more.",
     "Id": 455,
     "Question": "I want to learn more about long-term care options and other resources. Where can I look?",
     "SortOrder": 10,
-    "Updated": "2025-10-30T21:13:25.44514"
+    "Updated": "2026-11-18T23:12:46.2409757"
   },
   {
     "AgencyServiceId": 1273,
@@ -2778,11 +2778,11 @@
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "<p>Each room has limited storage space. Additional storage space may be available. Check with the specific home for further details.<br /></p><ul><li>Note: All personal equipment must meet health, safety, and fire codes.</li></ul>",
+    "Answer": "<p>Each room has limited storage space. Additional storage space may be available. Check with the specific home for further details.</p><ul><li>Note: All personal equipment must meet health, safety, and fire codes.</li></ul>",
     "Id": 457,
     "Question": "How many personal belongings can I bring with me?",
     "SortOrder": 12,
-    "Updated": "2025-10-30T21:12:09.6826926"
+    "Updated": "2026-11-18T23:16:32.2225588"
   },
   {
     "AgencyServiceId": 1273,
