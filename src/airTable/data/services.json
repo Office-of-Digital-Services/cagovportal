@@ -300,7 +300,7 @@
     "ContactPhone": "916-552-9000",
     "ContactPhoneDigits": "9165529000",
     "ContactPhoneDisplay": "916-552-9000",
-    "ContactUrl": "http://brea.ca.gov/html/contact.html",
+    "ContactUrl": "https://brea.ca.gov/html/contact.html",
     "Description": "Search our listing that includes information on current licensees. It also includes prior licensees that have resigned, been revoked, or had the right to renew their license revoked. This information is typically updated on a bi-weekly basis.",
     "FriendlyName": "Bureau of Real Estate Appraisers",
     "ImageUrl": "service-1124-Search-for-an-appraisers.jpg",
@@ -311,7 +311,7 @@
     "ServiceType": "By Mail|Online Service",
     "ServiceUrl": "https://www2.brea.ca.gov/breasearch/faces/party/search.xhtml",
     "SortOrder": 1,
-    "Updated": "2018-03-16T08:48:24"
+    "Updated": "2026-11-18T23:10:15.7390768"
   },
   {
     "AgencyId": 237,
