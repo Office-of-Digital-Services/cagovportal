@@ -6,7 +6,7 @@
     <meta name="Author" content="State of California" />
     <meta name="Description" content="{{ description }}" />
     <meta name="Keywords" content="California, government, {{ keywords }}" />
-    {%- if markdownUrl %}
+    {%- if markdownUrl and fullBuild %}
     <link
       rel="alternate"
       type="text/markdown"

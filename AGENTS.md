@@ -116,6 +116,10 @@
 - `pages/llms.txt.njk` generates `/llms.txt` with links to department and service
   Markdown pages from `state_entity`. Keep these links aligned with their
   Markdown permalinks; the generator is excluded from HTML page collections.
+- Agent content is generated only in Eleventy's `build` run mode. The config
+  ignores `pages/**/*.md.njk` and `pages/llms.txt.njk` in serve/watch modes;
+  `fullBuild` also gates alternate links in the base layout. Skipping
+  generation does not remove files left in `_site` by a previous full build.
 
 - Follow nearby naming and module conventions; build scripts use both `.mjs`
   and `.cjs`, so preserve the appropriate module format.

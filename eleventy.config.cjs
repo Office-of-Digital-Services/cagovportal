@@ -23,6 +23,13 @@ const metatitlepostfix = " | CA.gov";
  */
 
 module.exports = function (/** @type {EleventyConfig} **/ eleventyConfig) {
+  const fullBuild = process.env.ELEVENTY_RUN_MODE === "build";
+  eleventyConfig.addGlobalData("fullBuild", fullBuild);
+  if (!fullBuild) {
+    eleventyConfig.ignores.add("pages/**/*.md.njk");
+    eleventyConfig.ignores.add("pages/llms.txt.njk");
+  }
+
   // Copy `src/css/` to `_site/css`, `src/images/` to `_site/images`
   // Copy all static files that should appear in the website root
   // Copy state tempate code files from NPM
