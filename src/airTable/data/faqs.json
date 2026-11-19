@@ -65,11 +65,11 @@
   },
   {
     "AgencyServiceId": 8,
-    "Answer": "There are 47 agencies throughout California delivering professional child support services in order to enhance the well-being of children and self-sufficiency of families. <a href=\"https://childsupport.ca.gov/find-my-local-agency/\">Find the nearest agency</a>].",
+    "Answer": "There are 47 agencies throughout California delivering professional child support services in order to enhance the well-being of children and self-sufficiency of families. <a href=\"https://childsupport.ca.gov/find-my-local-agency/\">Find the nearest agency</a>.",
     "Id": 53,
     "Question": "Where can I find a child support agency near me?",
     "SortOrder": 1,
-    "Updated": "2026-11-18T19:04:41.5616936"
+    "Updated": "2026-11-19T00:08:16.523774"
   },
   {
     "AgencyServiceId": 8,
