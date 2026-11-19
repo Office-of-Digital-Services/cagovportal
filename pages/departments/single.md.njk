@@ -1,0 +1,81 @@
+---
+layout: false
+eleventyExcludeFromCollections: true
+pagination:
+  data: state_entity.agencies
+  size: 1
+  alias: item
+permalink: "departments/{{ item.AgencyId }}/index.md"
+---
+{%- set siteUrl %}{% domain %}{% endset -%}
+{%- set canonicalUrl = siteUrl + "/departments/" + item.AgencyId + "/" -%}
+{%- set departmentServices = state_entity.services | pluck("AgencyId", item.AgencyId) -%}
+{%- set featuredQuestions = [] -%}
+{%- for service in departmentServices -%}
+  {%- for qa in service.QA | pluck("Featured", true) -%}
+    {%- set _ = featuredQuestions.push(qa) -%}
+  {%- endfor -%}
+{%- endfor -%}
+# {{ item.AgencyFullName | safe }}
+
+Source: [{{ canonicalUrl | safe }}](<{{ canonicalUrl | safe }}>)
+
+Last updated: {{ item.Updated | formatDate }}
+
+## Contact
+
+{% if item.ContactEmail -%}
+- Email: [{{ item.ContactEmail | safe }}](<mailto:{{ item.ContactEmail | safe }}>)
+{% endif -%}
+{% if item.ContactPhone -%}
+- Phone: [{{ item.ContactPhoneDisplay | safe }}](<tel:{{ item.ContactPhoneDigits | safe }}>)
+{% endif -%}
+{% if item.WebsiteURL -%}
+- [Department website](<{{ item.WebsiteURL | safe }}>)
+{% endif -%}
+{% if item.ContactURL -%}
+- [More contact info](<{{ item.ContactURL | safe }}>)
+{% endif -%}
+{% if item.Facebook -%}
+- [Facebook](<{{ item.Facebook | safe }}>)
+{% endif -%}
+{% if item.TwitterAccount -%}
+- [X (Twitter)](<{{ item.TwitterAccount | safe }}>)
+{% endif -%}
+{% if item.YouTube -%}
+- [YouTube](<{{ item.YouTube | safe }}>)
+{% endif -%}
+{% if item.GooglePlayStoreUrl or item.AppleAppStoreUrl %}
+## Android and iOS apps
+
+{% if item.GooglePlayStoreUrl -%}
+- [Get it on Google Play](<{{ item.GooglePlayStoreUrl | safe }}>)
+{% endif -%}
+{% if item.AppleAppStoreUrl -%}
+- [Get it on the App Store](<{{ item.AppleAppStoreUrl | safe }}>)
+{% endif -%}
+{% endif %}
+## Description
+
+{{ item.Description | safe }}
+{% if departmentServices.length %}
+## Services
+{% for service in departmentServices %}
+### [{{ service.ServiceName | safe }}](<{{ siteUrl | safe }}/departments/{{ item.AgencyId }}/services/{{ service.ServiceId }}/>)
+
+{{ service.Description | safe }}
+
+{%- if service.ServiceUrl %}  
+[Launch service](<{{ service.ServiceUrl | safe }}>)
+{% endif %}
+Last updated: {{ service.Updated | formatDate }}
+{% endfor %}
+{%- endif %}
+{%- if featuredQuestions.length %}
+## Frequently Asked Questions
+{% for qa in featuredQuestions %}
+### {{ qa.Question | safe }}
+
+{{ qa.Answer | toMarkdown(canonicalUrl) | trim | safe }}
+{%- endfor %}
+{%- endif -%}

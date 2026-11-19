@@ -35,6 +35,9 @@ images instead. See
 
 Validate saved Airtable data without fetching: `npm run validate:airtable`.
 
+Full builds generate `/llms.txt` and department/service Markdown pages.
+`npm start` skips these outputs and their HTML discovery links.
+
 ### Airtable token setup
 
 To refresh data locally, use an Airtable account with access to the

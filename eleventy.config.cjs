@@ -11,6 +11,7 @@ const path = require("node:path");
 const PurgeCSS = require("@fullhuman/postcss-purgecss");
 const babel = require("@babel/core");
 const transformImports = require("babel-plugin-transform-imports");
+const toMarkdown = require("./src/filters/to_markdown.cjs");
 
 // canonical domain
 const domain = "https://www.ca.gov";
@@ -22,6 +23,13 @@ const metatitlepostfix = " | CA.gov";
  */
 
 module.exports = function (/** @type {EleventyConfig} **/ eleventyConfig) {
+  const fullBuild = process.env.ELEVENTY_RUN_MODE === "build";
+  eleventyConfig.addGlobalData("fullBuild", fullBuild);
+  if (!fullBuild) {
+    eleventyConfig.ignores.add("pages/**/*.md.njk");
+    eleventyConfig.ignores.add("pages/llms.txt.njk");
+  }
+
   // Copy `src/css/` to `_site/css`, `src/images/` to `_site/images`
   // Copy all static files that should appear in the website root
   // Copy state tempate code files from NPM
@@ -58,6 +66,7 @@ module.exports = function (/** @type {EleventyConfig} **/ eleventyConfig) {
     }
   );
   eleventyConfig.addShortcode("domain", () => domain);
+  eleventyConfig.addFilter("toMarkdown", toMarkdown);
 
   // {%- for tag in topics | pluck("featured", true) | sortBy("featureOrder") -%}
   eleventyConfig.addFilter(
