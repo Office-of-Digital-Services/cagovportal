@@ -9,19 +9,19 @@
   },
   {
     "AgencyServiceId": 6,
-    "Answer": "STAR stations must meet specified performance standards established by BAR. Some STAR stations are licensed to perform only tests, while others are licensed to perform both tests and repairs. BAR directs a portion of the vehicle fleet to STAR-certified stations for inspection and certification. These are known as \"directed vehicles.\" Additionally, vehicles that fail inspection at very high emissions levels must also receive certification from a STAR-certified station. These vehicles are identified as \"gross polluters.\" ",
+    "Answer": "STAR stations must meet specified performance standards established by BAR. Some STAR stations are licensed to perform only tests, while others are licensed to perform both tests and repairs. BAR directs a portion of the vehicle fleet to STAR-certified stations for inspection and certification. These are known as \"directed vehicles.\" Additionally, vehicles that fail inspection at very high emissions levels must also receive certification from a STAR-certified station. These vehicles are identified as \"gross polluters.\"",
     "Id": 41,
     "Question": "STAR Stations",
     "SortOrder": 2,
-    "Updated": "2017-05-22T14:44:42.547"
+    "Updated": "2026-11-18T23:48:44.1808008"
   },
   {
     "AgencyServiceId": 6,
-    "Answer": "The Bureau of Automotive Repair (BAR) licenses or contracts with several different types of Smog Check facilities. The various stations are designed to provide consumers with multiple options to meet their needs. The station is required to post a sign on the services it performs. ",
+    "Answer": "The Bureau of Automotive Repair (BAR) licenses or contracts with several different types of Smog Check facilities. The various stations are designed to provide consumers with multiple options to meet their needs. The station is required to post a sign on the services it performs.",
     "Id": 42,
     "Question": "Smog Check Station Types and Services",
     "SortOrder": 3,
-    "Updated": "2017-05-22T14:44:42.67"
+    "Updated": "2026-11-18T23:49:18.8271366"
   },
   {
     "AgencyServiceId": 6,
@@ -41,11 +41,11 @@
   },
   {
     "AgencyServiceId": 7,
-    "Answer": "If you're not sure of a person's name or a business name, partial names can be used to locate licensees. For example, if you think the last name of a person is Smith, enter Smith in the name box and then click on Find. All the Smiths will be displayed. You can also enter other criteria to help narrow down a search for a person or business. For example, if you want all the Smiths in Los Angeles, enter Smith in the Name box and Los Angeles in the City box. Then, click on Find. All the Smiths located in Los Angeles will be displayed. ",
+    "Answer": "If you're not sure of a person's name or a business name, partial names can be used to locate licensees. For example, if you think the last name of a person is Smith, enter Smith in the name box and then click on Find. All the Smiths will be displayed. You can also enter other criteria to help narrow down a search for a person or business. For example, if you want all the Smiths in Los Angeles, enter Smith in the Name box and Los Angeles in the City box. Then, click on Find. All the Smiths located in Los Angeles will be displayed.",
     "Id": 49,
     "Question": "What if I'm not sure of a person's name or business name?",
     "SortOrder": 2,
-    "Updated": "2017-05-22T14:47:45.22"
+    "Updated": "2026-11-18T23:49:47.0109786"
   },
   {
     "AgencyServiceId": 7,
@@ -57,19 +57,19 @@
   },
   {
     "AgencyServiceId": 7,
-    "Answer": "<ul><li>Ask family, friends, and co-workers which repair shops they like and why.</li><li>Verify that the shop you are considering is registered with BAR, and check to see if there has been any disciplinary action taken against it. You can verify a license online at, verify a license, or call (800) 952-5210.</li><li>Try out a repair shop with a minor maintenance job, such as an oil change. If you're happy with the service you receive, you may have found a shop that's right for you.<br /></li></ul>",
+    "Answer": "<ul><li>Ask family, friends, and co-workers which repair shops they like and why.</li><li>Verify that the shop you are considering is registered with BAR, and check to see if there has been any disciplinary action taken against it. You can verify a license online at, verify a license, or call (800) 952-5210.</li><li>Try out a repair shop with a minor maintenance job, such as an oil change. If you're happy with the service you receive, you may have found a shop that's right for you.</li></ul>",
     "Id": 51,
     "Question": "What are some tips regarding finding an automotive repair vendor?",
     "SortOrder": 4,
-    "Updated": "2025-10-30T22:38:22.0992242"
+    "Updated": "2026-11-18T22:41:14.6695509"
   },
   {
     "AgencyServiceId": 8,
-    "Answer": "<span style=\"font-size:12.0pt;font-family:'Century Gothic',sans-serif;\">There are 47 agencies throughout California delivering professional child support services in order to enhance the well-being of children and self-sufficiency of families. <a href=\"https://childsupport.ca.gov/find-my-local-agency/\">Find the nearest agency</a>.</span>",
+    "Answer": "There are 47 agencies throughout California delivering professional child support services in order to enhance the well-being of children and self-sufficiency of families. <a href=\"https://childsupport.ca.gov/find-my-local-agency/\">Find the nearest agency</a>.",
     "Id": 53,
     "Question": "Where can I find a child support agency near me?",
     "SortOrder": 1,
-    "Updated": "2024-11-21T18:17:59.8041875"
+    "Updated": "2026-11-19T00:08:16.523774"
   },
   {
     "AgencyServiceId": 8,
@@ -83,9 +83,9 @@
     "AgencyServiceId": 8,
     "Answer": "You can find brochures about the program and available services in our <a href=\"https://childsupport.ca.gov/forms/\">Forms and Publications</a>.",
     "Id": 55,
-    "Question": "How can I find out more information about the child support program? ",
+    "Question": "How can I find out more information about the child support program?",
     "SortOrder": 3,
-    "Updated": "2026-11-03T18:50:14.59878"
+    "Updated": "2026-11-18T23:50:04.1469087"
   },
   {
     "AgencyServiceId": 8,
@@ -97,11 +97,11 @@
   },
   {
     "AgencyServiceId": 9,
-    "Answer": "<p><span style=\"font-family:'Century Gothic', sans-serif;font-size:16px;\">There are 47 agencies throughout California delivering professional child support services in order to enhance the well-being of children and self-sufficiency of families. <a href=\"https://childsupport.ca.gov/find-my-local-agency/\">Find the nearest agency</a>.&nbsp;&nbsp;</span></p><p>&nbsp;</p><p><span style=\"font-size:12.0pt;font-family:'Century Gothic',sans-serif;\">&nbsp;</span></p>",
+    "Answer": "There are 47 agencies throughout California delivering professional child support services in order to enhance the well-being of children and self-sufficiency of families. <a href=\"https://childsupport.ca.gov/find-my-local-agency/\">Find the nearest agency</a>.",
     "Id": 57,
     "Question": "Where can I find a child support agency near me?",
     "SortOrder": 1,
-    "Updated": "2024-11-21T18:13:10.9787728"
+    "Updated": "2026-11-18T19:08:30.6942021"
   },
   {
     "AgencyServiceId": 9,
@@ -138,21 +138,21 @@
   },
   {
     "AgencyServiceId": 10,
-    "Answer": "The Application for Registration as a Home Improvement Salesperson (HIS) is for a person who is employed by a licensed contractor to solicit, sell, negotiate, or execute home improvement contracts. An HIS registration is a stand-alone registration that is valid for a two-year period. Before an HIS registrant can work for a licensed contractor, the contractor must first notify CSLB of their employment of the registered HIS. When an HIS no longer works for a licensed contractor, the contractor is required to notify CSLB of the cessation of HIS employment. ",
+    "Answer": "The Application for Registration as a Home Improvement Salesperson (HIS) is for a person who is employed by a licensed contractor to solicit, sell, negotiate, or execute home improvement contracts. An HIS registration is a stand-alone registration that is valid for a two-year period. Before an HIS registrant can work for a licensed contractor, the contractor must first notify CSLB of their employment of the registered HIS. When an HIS no longer works for a licensed contractor, the contractor is required to notify CSLB of the cessation of HIS employment.",
     "Featured": true,
     "Id": 62,
     "Question": "Application for Registration as a Home Improvement Salesperson",
     "SortOrder": 2,
-    "Updated": "2017-05-22T15:09:58.9370519"
+    "Updated": "2026-11-18T23:50:32.2457625"
   },
   {
     "AgencyServiceId": 10,
     "Answer": "Our database is unavailable Sundays at 8PM through Monday at 6AM due to scheduled maintenance.",
     "Featured": true,
     "Id": 64,
-    "Question": "Can I check my application at any time?  ",
+    "Question": "Can I check my application at any time?",
     "SortOrder": 3,
-    "Updated": "2017-05-22T14:47:59.25"
+    "Updated": "2026-11-18T23:50:50.8320208"
   },
   {
     "AgencyServiceId": 10,
@@ -265,11 +265,11 @@
   },
   {
     "AgencyServiceId": 15,
-    "Answer": "You must contact the court specified on the Notice to Appear citation or the law enforcement agency specified on the Notice to Correct Violation form to obtain information about your ticket, including information relating to fines and bail. Please refer to the warnings and follow the instructions provided on your ticket. Direct your inquiries to the specific court indicated on the front of your ticket. ",
+    "Answer": "You must contact the court specified on the Notice to Appear citation or the law enforcement agency specified on the Notice to Correct Violation form to obtain information about your ticket, including information relating to fines and bail. Please refer to the warnings and follow the instructions provided on your ticket. Direct your inquiries to the specific court indicated on the front of your ticket.",
     "Id": 84,
     "Question": "Where do I go if I have questions about a traffic citation?",
     "SortOrder": 1,
-    "Updated": "2017-05-22T15:07:29.303"
+    "Updated": "2026-11-18T23:51:14.2114522"
   },
   {
     "AgencyServiceId": 15,
@@ -323,9 +323,9 @@
     "AgencyServiceId": 16,
     "Answer": "If you do not meet the residency requirements in your county, you can file for legal separation, then file an amended petition for divorce in the county in which you live once their residency requirements are met.",
     "Id": 91,
-    "Question": "What if I do not meet the residency requirements in my county?  ",
+    "Question": "What if I do not meet the residency requirements in my county?",
     "SortOrder": 4,
-    "Updated": "2017-05-22T15:07:29.8"
+    "Updated": "2026-11-18T23:51:30.2752022"
   },
   {
     "AgencyServiceId": 17,
@@ -338,12 +338,12 @@
   },
   {
     "AgencyServiceId": 17,
-    "Answer": "<p><strong>Public School or County Offices of Education/Districts Updates</strong></p><p>All corrections must be routed through the LEA CDS coordinator. Below are links to resources for LEA CDS coordinators for submitting corrections.<br><br></p><ul><li><a href=\"https://www3.cde.ca.gov/opuscds/\">OPUS-CDS Web Application</a><br>Application used by authorized LEA CDS coordinators to notify the CDE of updates to the Public School Directory. A user name and password is required to access this application.</li><li><a href=\"https://www.cde.ca.gov/ds/si/ds/opuscds.asp\">OPUS-CDS Application and Resources</a><br>Access the OPUS-CDS Web application, as well as useful information for using this application.<br></li></ul><p><strong>Private School or Nonpublic, Nonsectarian School Updates</strong></p><ul><li>For private school information and instructions on submitting updates, please visit the <a href=\"https://www.cde.ca.gov/sp/ps/affidavit.asp\">Private School Affidavit Web page</a>. For general inquiries, please send an e-mail to <a>privateschools@cde.ca.gov</a>.</li><li>For questions regarding Nonpublic, Nonsectarian Schools, please send an e-mail to <a>NPSA@cde.ca.gov</a>. Information regarding Nonpublic, Nonsectarian Schools can be found on the <a href=\"https://www.cde.ca.gov/sp/se/\">Data Collection and Reporting</a> web page.&nbsp;<br></li></ul>",
+    "Answer": "<p><strong>Public School or County Offices of Education/Districts Updates</strong></p><p>All corrections must be routed through the LEA CDS coordinator. Below are links to resources for LEA CDS coordinators for submitting corrections.</p><ul><li><a href=\"https://www3.cde.ca.gov/opuscds/\">OPUS-CDS Web Application</a><br>Application used by authorized LEA CDS coordinators to notify the CDE of updates to the Public School Directory. A user name and password is required to access this application.</li><li><a href=\"https://www.cde.ca.gov/ds/si/ds/opuscds.asp\">OPUS-CDS Application and Resources</a><br>Access the OPUS-CDS Web application, as well as useful information for using this application.</li></ul><p><strong>Private School or Nonpublic, Nonsectarian School Updates</strong></p><ul><li>For private school information and instructions on submitting updates, please visit the <a href=\"https://www.cde.ca.gov/sp/ps/affidavit.asp\">Private School Affidavit Web page</a>. For general inquiries, please send an e-mail to <a>privateschools@cde.ca.gov</a>.</li><li>For questions regarding Nonpublic, Nonsectarian Schools, please send an e-mail to <a>NPSA@cde.ca.gov</a>. Information regarding Nonpublic, Nonsectarian Schools can be found on the <a href=\"https://www.cde.ca.gov/sp/se/\">Data Collection and Reporting</a> web page.</li></ul>",
     "Featured": true,
     "Id": 14,
     "Question": "How do I report any errors that I find?",
     "SortOrder": 2,
-    "Updated": "2026-11-02T20:27:14.4167731"
+    "Updated": "2026-11-18T23:18:59.3508167"
   },
   {
     "AgencyServiceId": 17,
@@ -356,12 +356,12 @@
   },
   {
     "AgencyServiceId": 17,
-    "Answer": "Effective July 1, 2013, the California School Directory will no longer provide information for postsecondary districts or schools that are a part of the&nbsp;<a href=\"https://www.cccco.edu/Students/Find-a-College/\">California Community College</a>,&nbsp;<a href=\"https://www.calstate.edu/\">California State University</a>&nbsp;, or&nbsp;<a href=\"https://www.universityofcalifornia.edu/\">University of California</a>&nbsp;systems.",
+    "Answer": "Effective July 1, 2013, the California School Directory will no longer provide information for postsecondary districts or schools that are a part of the <a href=\"https://www.cccco.edu/Students/Find-a-College/\">California Community College</a>, <a href=\"https://www.calstate.edu/\">California State University</a>, or <a href=\"https://www.universityofcalifornia.edu/\">University of California</a> systems.",
     "Featured": true,
     "Id": 16,
     "Question": "You used to list college information. What happened?",
     "SortOrder": 4,
-    "Updated": "2026-11-02T20:25:25.2886868"
+    "Updated": "2026-11-18T20:09:06.1957585"
   },
   {
     "AgencyServiceId": 18,
@@ -373,19 +373,19 @@
   },
   {
     "AgencyServiceId": 18,
-    "Answer": "Workers who suffer a loss of wages when they are unable to work due to a non-work-related illness or injury, pregnancy, or childbirth, may be eligible for DI benefits.&nbsp;",
+    "Answer": "Workers who suffer a loss of wages when they are unable to work due to a non-work-related illness or injury, pregnancy, or childbirth, may be eligible for DI benefits.",
     "Id": 93,
     "Question": "Who is eligible for DI?",
     "SortOrder": 2,
-    "Updated": "2019-01-09T02:32:48.8178203"
+    "Updated": "2026-11-18T20:09:35.0596332"
   },
   {
     "AgencyServiceId": 18,
-    "Answer": "Yes, if both employers deducted the State Disability Insurance (SDI) contribution from your paycheck. To ensure that we have correct information regarding both jobs, you need to tell the EDD about them on your application form. You do this by listing the name, address, telephone number, and last day you worked for each employer. ",
+    "Answer": "Yes, if both employers deducted the State Disability Insurance (SDI) contribution from your paycheck. To ensure that we have correct information regarding both jobs, you need to tell the EDD about them on your application form. You do this by listing the name, address, telephone number, and last day you worked for each employer.",
     "Id": 94,
     "Question": "I work two jobs. Will my DI benefits reflect both salaries?",
     "SortOrder": 3,
-    "Updated": "2017-05-22T15:07:29.99"
+    "Updated": "2026-11-18T23:51:51.7316168"
   },
   {
     "AgencyServiceId": 18,
@@ -464,12 +464,12 @@
   },
   {
     "AgencyServiceId": 20,
-    "Answer": "<p>A Standard Base Period includes wages from a 12-month period of time consisting of the first four of the last five completed calendar quarters.</p><p>If your claim begins in:</p><ul><li>January-February-March:&nbsp;Your Standard Base Period is the prior 12 months, ending the last day of&nbsp;September.</li><li>April-May-June&lt;/strong&gt;:&nbsp;Your Standard Base Period is the prior 12 months,&nbsp;ending the last day of December.</li><li>July-August-September:&nbsp;Your Standard Base Period is the prior 12 months,&nbsp;ending the last day of&nbsp;March.</li><li>October-November-December:&nbsp;Your Standard Base Period is the prior 12 months, ending the last day of June.</li></ul>",
+    "Answer": "<p>A Standard Base Period includes wages from a 12-month period of time consisting of the first four of the last five completed calendar quarters.</p><p>If your claim begins in:</p><ul><li>January-February-March: Your Standard Base Period is the prior 12 months, ending the last day of September.</li><li>April-May-June: Your Standard Base Period is the prior 12 months, ending the last day of December.</li><li>July-August-September: Your Standard Base Period is the prior 12 months, ending the last day of March.</li><li>October-November-December: Your Standard Base Period is the prior 12 months, ending the last day of June.</li></ul>",
     "Featured": true,
     "Id": 105,
     "Question": "What is the Standard Base Period?",
     "SortOrder": 4,
-    "Updated": "2024-06-19T22:08:56.6109388"
+    "Updated": "2026-11-18T20:10:41.1282895"
   },
   {
     "AgencyServiceId": 22,
@@ -505,39 +505,39 @@
   },
   {
     "AgencyServiceId": 24,
-    "Answer": "Visit the <a href=\"https://cdtfa.ca.gov/taxes-and-fees/sales-use-tax-rates.htm\">California City &amp; County Sales &amp; Use Tax Rates</a>&nbsp;page. ",
+    "Answer": "Visit the <a href=\"https://cdtfa.ca.gov/taxes-and-fees/sales-use-tax-rates.htm\">California City &amp; County Sales &amp; Use Tax Rates</a> page.",
     "Featured": true,
     "Id": 114,
     "Question": "Where can I find more information regarding looking up tax rates?",
     "SortOrder": 1,
-    "Updated": "2025-11-03T17:43:59.3864709"
+    "Updated": "2026-11-18T20:11:55.111243"
   },
   {
     "AgencyServiceId": 24,
-    "Answer": "<p>The statewide tax rate is 7.25%. In most areas of California, local jurisdictions have added district taxes that increase the tax owed by a seller. Those district tax rates range from 0.10% to 1.00%. Some areas may have more than one district tax in effect. Sellers are required to report and pay the applicable district taxes for their taxable sales and purchases.<br></p><p>If you need help identifying the correct rate, ⁠<a href=\"https://maps.cdtfa.ca.gov/\">you&nbsp;may look up the rate by address</a>, contact our Customer Service Center at 1-800-400-7115 (TTY: 711), or call your local&nbsp;<a href=\"https://cdtfa.ca.gov/office-locations.htm\">⁠CDTFA office</a>&nbsp;for assistance.<br></p>",
+    "Answer": "<p>The statewide tax rate is 7.25%. In most areas of California, local jurisdictions have added district taxes that increase the tax owed by a seller. Those district tax rates range from 0.10% to 1.00%. Some areas may have more than one district tax in effect. Sellers are required to report and pay the applicable district taxes for their taxable sales and purchases.</p><p>If you need help identifying the correct rate, <a href=\"https://maps.cdtfa.ca.gov/\">you may look up the rate by address</a>, contact our Customer Service Center at 1-800-400-7115 (TTY: 711), or call your local <a href=\"https://cdtfa.ca.gov/office-locations.htm\">CDTFA office</a> for assistance.</p>",
     "Featured": true,
     "Id": 115,
-    "Question": "How do Tax Districts affect the tax rate?  ",
+    "Question": "How do Tax Districts affect the tax rate?",
     "SortOrder": 2,
-    "Updated": "2026-11-04T22:31:51.2330202"
+    "Updated": "2026-11-18T23:52:07.0617087"
   },
   {
     "AgencyServiceId": 24,
-    "Answer": "Visit the&nbsp;<a href=\"https://cdtfa.ca.gov/taxes-and-fees/know-your-rate.htm\">Know Your Sales and Use Tax Rate</a> page. ",
+    "Answer": "Visit the <a href=\"https://cdtfa.ca.gov/taxes-and-fees/know-your-rate.htm\">Know Your Sales and Use Tax Rate</a> page.",
     "Featured": true,
     "Id": 117,
-    "Question": "As a retailer, how will I know what tax rates to charge?  ",
+    "Question": "As a retailer, how will I know what tax rates to charge?",
     "SortOrder": 3,
-    "Updated": "2026-11-04T22:34:16.6320826"
+    "Updated": "2026-11-18T23:52:20.6768222"
   },
   {
     "AgencyServiceId": 24,
-    "Answer": "Visit the&nbsp;<a href=\"https://cdtfa.ca.gov/taxes-and-fees/sut-rates-description.htm\">Detailed Description of the Sales &amp; Use Tax Rate</a> page. ",
+    "Answer": "Visit the <a href=\"https://cdtfa.ca.gov/taxes-and-fees/sut-rates-description.htm\">Detailed Description of the Sales &amp; Use Tax Rate</a> page.",
     "Featured": true,
     "Id": 119,
-    "Question": "What are my tax dollars being used for?  ",
+    "Question": "What are my tax dollars being used for?",
     "SortOrder": 4,
-    "Updated": "2026-11-04T22:35:13.943192"
+    "Updated": "2026-11-18T23:52:33.6045044"
   },
   {
     "AgencyServiceId": 25,
@@ -568,12 +568,12 @@
   },
   {
     "AgencyServiceId": 25,
-    "Answer": "Visit the <a href=\"https://cdtfa.ca.gov/services/resources.htm\">Online Services Resources</a> page. ",
+    "Answer": "Visit the <a href=\"https://cdtfa.ca.gov/services/resources.htm\">Online Services Resources</a> page.",
     "Featured": true,
     "Id": 126,
     "Question": "Where can I find more FAQs regarding how to register for a Business Permit, License, or Account?",
     "SortOrder": 4,
-    "Updated": "2026-11-04T17:15:45.2872095"
+    "Updated": "2026-11-18T23:52:53.702599"
   },
   {
     "AgencyServiceId": 26,
@@ -595,30 +595,30 @@
   },
   {
     "AgencyServiceId": 26,
-    "Answer": "<p><a href=\"https://cdtfa.ca.gov/services/registration.htm\">Register online</a> for a seller's permit, use tax account, or apply for other tax and fee programs. It is convenient to apply anytime, day or night, seven days a week. Many applicants will be able to obtain their permit immediately after they submit their application.</p><p>&nbsp;</p>",
+    "Answer": "<a href=\"https://cdtfa.ca.gov/services/registration.htm\">Register online</a> for a seller's permit, use tax account, or apply for other tax and fee programs. It is convenient to apply anytime, day or night, seven days a week. Many applicants will be able to obtain their permit immediately after they submit their application.",
     "Featured": true,
     "Id": 130,
     "Question": "How do I register online if I don't want to do so in person?",
     "SortOrder": 3,
-    "Updated": "2026-11-04T22:32:34.6130522"
+    "Updated": "2026-11-18T19:32:54.1211171"
   },
   {
     "AgencyServiceId": 26,
-    "Answer": "Visit the <a href=\"https://cdtfa.ca.gov/taxes-and-fees/faqseller.htm\">Obtaining a Seller's Permit</a>&nbsp;page. ",
+    "Answer": "Visit the <a href=\"https://cdtfa.ca.gov/taxes-and-fees/faqseller.htm\">Obtaining a Seller's Permit</a> page.",
     "Featured": true,
     "Id": 132,
     "Question": "Where can I find more FAQs regarding seller's permits?",
     "SortOrder": 4,
-    "Updated": "2026-11-04T22:33:17.1496144"
+    "Updated": "2026-11-18T20:14:34.5305702"
   },
   {
     "AgencyServiceId": 27,
-    "Answer": "In employment cases, you must submit an intake form to CRD within three years of the date you were last harmed. In most other cases, you must do this within one year of the date you were last harmed.&nbsp;",
+    "Answer": "In employment cases, you must submit an intake form to CRD within three years of the date you were last harmed. In most other cases, you must do this within one year of the date you were last harmed.",
     "Featured": true,
     "Id": 134,
     "Question": "What are the time limits for filing a discrimination complaint?",
     "SortOrder": 1,
-    "Updated": "2026-05-29T16:27:51.0007571"
+    "Updated": "2026-11-18T20:15:04.0123887"
   },
   {
     "AgencyServiceId": 27,
@@ -642,18 +642,18 @@
     "AgencyServiceId": 27,
     "Answer": "Go to CRD's website for <a href=\"https://calcivilrights.ca.gov/complaintprocess/#faq\">more information on the complaint process</a>.",
     "Id": 513,
-    "Question": "Where can I find more information regarding discrimination complaints? ",
+    "Question": "Where can I find more information regarding discrimination complaints?",
     "SortOrder": 5,
-    "Updated": "2026-11-02T17:55:13.7556809"
+    "Updated": "2026-11-18T23:53:07.6599079"
   },
   {
     "AgencyServiceId": 28,
     "Answer": "In most states, hunters cannot hunt legally unless they have had some type of formal education in the proper handling of firearms. Today, California requires hunter education training for all persons who have not formerly held a California hunting license; who do not have a hunter education certificate of completion; or who do not have a current, valid, hunting license from another state or province.",
     "Featured": true,
     "Id": 138,
-    "Question": "Who needs hunter education? ",
+    "Question": "Who needs hunter education?",
     "SortOrder": 1,
-    "Updated": "2017-05-22T16:09:08.693"
+    "Updated": "2026-11-18T23:53:22.0639944"
   },
   {
     "AgencyServiceId": 28,
@@ -687,9 +687,9 @@
     "Answer": "Fishing licenses may be purchased <a href=\"https://wildlife.ca.gov/Licensing/Online-Sales\">ONLINE</a> or at any <a href=\"https://www.ca.wildlifelicense.com/internetsales/OutletSearch/FindOutlet\">license agent</a> or <a href=\"https://wildlife.ca.gov/Organization/LRB\">CDFW license sales office</a>.",
     "Featured": true,
     "Id": 142,
-    "Question": "Where can I purchase a sport fishing license? ",
+    "Question": "Where can I purchase a sport fishing license?",
     "SortOrder": 1,
-    "Updated": "2026-11-04T17:26:45.1013398"
+    "Updated": "2026-11-18T23:53:35.0457799"
   },
   {
     "AgencyServiceId": 29,
@@ -705,9 +705,9 @@
     "Answer": "Any person who is 16 years of age or older must possess a valid sport fishing license when taking any fish, shell fish, reptile, or amphibian in California according to Fish and Game Code Section 7145. Fish and Game Code Section 86 defines take as: hunt, pursue, catch, capture, or kill, or attempt to hunt, pursue, catch, capture or kill. Fish and Game Codes can be found at <a href=\"https://www.leginfo.ca.gov/\">www.leginfo.ca.gov</a>.",
     "Featured": true,
     "Id": 144,
-    "Question": "Who needs a sport fishing license? ",
+    "Question": "Who needs a sport fishing license?",
     "SortOrder": 3,
-    "Updated": "2026-11-04T17:23:49.4272904"
+    "Updated": "2026-11-18T23:53:51.162903"
   },
   {
     "AgencyServiceId": 29,
@@ -729,35 +729,35 @@
   },
   {
     "AgencyServiceId": 31,
-    "Answer": "<p>You can get a campfire permit from any <a href=\"https://www.fire.ca.gov/resources/cal-fire-contacts/\">CAL FIRE</a> facility, the US Forest Service, the <a href=\"https://www.blm.gov/office/california-state-office\">Bureau of Land Management</a> or online at <a href=\"https://www.readyforwildfire.org/forest-health/\">www.PreventWildfireCA.org</a>. There is no fee for the permit, but you must go to one of these facilities to pick up and fill out the permit.</p>",
+    "Answer": "You can get a campfire permit from any <a href=\"https://www.fire.ca.gov/resources/cal-fire-contacts/\">CAL FIRE</a> facility, the US Forest Service, the <a href=\"https://www.blm.gov/office/california-state-office\">Bureau of Land Management</a> or online at <a href=\"https://www.readyforwildfire.org/forest-health/\">www.PreventWildfireCA.org</a>. There is no fee for the permit, but you must go to one of these facilities to pick up and fill out the permit.",
     "Id": 146,
-    "Question": "Where can I get a campfire permit? Is there a fee? ",
+    "Question": "Where can I get a campfire permit? Is there a fee?",
     "SortOrder": 1,
-    "Updated": "2026-10-29T20:25:10.1984201"
+    "Updated": "2026-11-18T23:54:06.7857753"
   },
   {
     "AgencyServiceId": 31,
-    "Answer": "<p>CAL FIRE has closed the Magalia Reforestation Center in Butte County as of June 30, 2011 due to ongoing state budget reductions. This closure has suspended for the foreseeable future CAL FIRE's bare root seedling production. You can purchase tree seedlings from the <a href=\"https://shop.arborday.org/nursery\" target=\"_blank\">Arbor Day Foundation</a> or by contacting your local nursery. </p>",
+    "Answer": "CAL FIRE has closed the Magalia Reforestation Center in Butte County as of June 30, 2011 due to ongoing state budget reductions. This closure has suspended for the foreseeable future CAL FIRE's bare root seedling production. You can purchase tree seedlings from the <a href=\"https://shop.arborday.org/nursery\">Arbor Day Foundation</a> or by contacting your local nursery.",
     "Id": 147,
-    "Question": "Where can I get tree seedlings? ",
+    "Question": "Where can I get tree seedlings?",
     "SortOrder": 2,
-    "Updated": "2025-11-03T17:47:28.6407916"
+    "Updated": "2026-11-18T23:54:20.3114257"
   },
   {
     "AgencyServiceId": 31,
-    "Answer": "California Department of Forestry and Fire Protection<br />P.O. Box 944246, Sacramento, California 94244-2460",
+    "Answer": "California Department of Forestry and Fire Protection<br>P.O. Box 944246<br>Sacramento, CA 94244-2460",
     "Id": 148,
     "Question": "What is CAL FIRE's mailing address?",
     "SortOrder": 3,
-    "Updated": "2017-05-22T16:09:09.333"
+    "Updated": "2026-11-18T23:32:36.6108155"
   },
   {
     "AgencyServiceId": 31,
-    "Answer": "Visit <a href=\"https://www.fire.ca.gov/about\">About</a> to learn about our values and organization, and strategic plans. You'll also find resources.<br />",
+    "Answer": "Visit <a href=\"https://www.fire.ca.gov/about\">About</a> to learn about our values and organization, and strategic plans. You'll also find resources.",
     "Id": 149,
     "Question": "Where can I find more information about Cal Fire?",
     "SortOrder": 4,
-    "Updated": "2025-10-30T22:40:58.8161944"
+    "Updated": "2026-11-18T23:31:29.2145185"
   },
   {
     "AgencyServiceId": 36,
@@ -770,30 +770,30 @@
   },
   {
     "AgencyServiceId": 36,
-    "Answer": "Please see the <a href=\"https://www.dhcs.ca.gov/providers-partners/directories-for-substance-use-disorder-services/\">Directories for Substance Use Disorder Services webpage</a>.&nbsp;<br>",
+    "Answer": "Please see the <a href=\"https://www.dhcs.ca.gov/providers-partners/directories-for-substance-use-disorder-services/\">Directories for Substance Use Disorder Services webpage</a>.",
     "Featured": true,
     "Id": 164,
-    "Question": "How do I find licensed mental health or substance use disorder treatment facilities? ",
+    "Question": "How do I find licensed mental health or substance use disorder treatment facilities?",
     "SortOrder": 2,
-    "Updated": "2026-11-02T20:02:02.0249346"
+    "Updated": "2026-11-18T23:55:35.678116"
   },
   {
     "AgencyServiceId": 36,
-    "Answer": "<p>All county mental health departments have 24/7 hotlines for residents seeking assistance in a crisis and to access local mental health programs. You can find your county's information at</p><p><a href=\"https://www.dhcs.ca.gov/individuals/county-mental-health-plan-information/\">County Mental Health Crisis Numbers</a>. </p><p>Any resident can call 24/7 or walk into a county mental health office during business hours and speak with a crisis worker.</p>",
+    "Answer": "<p>All county mental health departments have 24/7 hotlines for residents seeking assistance in a crisis and to access local mental health programs. You can find your county's information at</p><p><a href=\"https://www.dhcs.ca.gov/individuals/county-mental-health-plan-information/\">County Mental Health Crisis Numbers</a>.</p><p>Any resident can call 24/7 or walk into a county mental health office during business hours and speak with a crisis worker.</p>",
     "Featured": true,
     "Id": 165,
     "Question": "How can I access crisis services?",
     "SortOrder": 3,
-    "Updated": "2026-11-04T17:21:11.2021229"
+    "Updated": "2026-11-18T19:35:21.5497234"
   },
   {
     "AgencyServiceId": 36,
-    "Answer": "Please <a>call</a>, <a>text</a>, or <a href=\"https://chat.988lifeline.org/\">chat</a> the <a href=\"https://988lifeline.org/\">988 lifeline</a> if you or someone you know needs immediate crisis services. Additionally, Medi-Cal covers mobile crisis services, which provide de-escalation and referrals, as appropriate, to Medi-Cal members experiencing a mental health or substance use crisis.<br>",
+    "Answer": "Please <a>call</a>, <a>text</a>, or <a href=\"https://chat.988lifeline.org/\">chat</a> the <a href=\"https://988lifeline.org/\">988 lifeline</a> if you or someone you know needs immediate crisis services. Additionally, Medi-Cal covers mobile crisis services, which provide de-escalation and referrals, as appropriate, to Medi-Cal members experiencing a mental health or substance use crisis.",
     "Featured": true,
     "Id": 405,
     "Question": "What is 988?",
     "SortOrder": 4,
-    "Updated": "2026-11-02T20:05:24.9206196"
+    "Updated": "2026-11-18T22:43:33.3840227"
   },
   {
     "AgencyServiceId": 37,
@@ -805,27 +805,27 @@
   },
   {
     "AgencyServiceId": 37,
-    "Answer": "<p><a href=\"https://www.dhcs.ca.gov/medi-cal/\">Learn more</a>&nbsp;Starting January 1, 2026, Medi-Cal will freeze new enrollments for certain adults who are undocumented and do not have a satisfactory immigration status for federal full-scope Medi-Cal. This group will no longer be able to newly enroll in full-scope Medi-Cal, even if they qualified before under state-funded programs.</p>",
+    "Answer": "<a href=\"https://www.dhcs.ca.gov/medi-cal/\">Learn more</a> Starting January 1, 2026, Medi-Cal will freeze new enrollments for certain adults who are undocumented and do not have a satisfactory immigration status for federal full-scope Medi-Cal. This group will no longer be able to newly enroll in full-scope Medi-Cal, even if they qualified before under state-funded programs.",
     "Id": 168,
     "Question": "Who is eligible for Medi-Cal?",
     "SortOrder": 2,
-    "Updated": "2026-11-10T18:05:52.55152"
+    "Updated": "2026-11-18T19:36:12.3999901"
   },
   {
     "AgencyServiceId": 37,
     "Answer": "<p>Effective July 1, 2022, all monthly premiums were reduced to $0. In general, individuals in Medi-Cal will get the same health benefits available through Covered California at a lower or no cost.</p><p>For individuals with higher incomes enrolled in Share of Cost Medi-Cal (less than 1 percent of members), the Medi-Cal member must incur certain health care costs before Medi-Cal will pay for medically necessary goods and services.</p>",
     "Id": 169,
-    "Question": "How much does Medi-Cal cost? ",
+    "Question": "How much does Medi-Cal cost?",
     "SortOrder": 3,
-    "Updated": "2025-10-30T22:22:36.4598333"
+    "Updated": "2026-11-18T23:55:48.6305399"
   },
   {
     "AgencyServiceId": 37,
-    "Answer": "<p>DHCS contracts with 23 Medi-Cal managed care plans to provide medically necessary health care services. Your health plan options will vary depending on the county where you live. Every county's Medi-Cal health plans provide the same high-quality care at the same low or no cost. The directory of health plans available through Medi-Cal managed care is available online at <a href=\"https://www.dhcs.ca.gov/individuals/medi-cal-managed-care-health-plan-directory/\">Medi-Cal Managed Care: Health Plan Directory</a>.​</p>",
+    "Answer": "DHCS contracts with 23 Medi-Cal managed care plans to provide medically necessary health care services. Your health plan options will vary depending on the county where you live. Every county's Medi-Cal health plans provide the same high-quality care at the same low or no cost. The directory of health plans available through Medi-Cal managed care is available online at <a href=\"https://www.dhcs.ca.gov/individuals/medi-cal-managed-care-health-plan-directory/\">Medi-Cal Managed Care: Health Plan Directory</a>.",
     "Id": 170,
     "Question": "What health plans are available through Medi-Cal?",
     "SortOrder": 4,
-    "Updated": "2026-11-10T18:05:03.8871162"
+    "Updated": "2026-11-18T19:37:31.7724935"
   },
   {
     "AgencyServiceId": 38,
@@ -864,12 +864,12 @@
   },
   {
     "AgencyServiceId": 38,
-    "Answer": "<ul style=\"box-sizing:border-box;margin-top:0px;margin-bottom:11px;color:#212529;font-family:'Source Sans Pro', sans-serif;font-size:17.28px;background-color:#ffffff;\"><li style=\"box-sizing:border-box;\"><a href=\"https://www.chp.ca.gov/traffic\" title=\"CHP Traffic Incident Information Page\" target=\"_blank\">CHP Traffic Incident Information Page</a></li></ul><p>&nbsp;</p>",
+    "Answer": "<ul><li><a href=\"https://www.chp.ca.gov/traffic\">CHP Traffic Incident Information Page</a></li></ul>",
     "Featured": true,
     "Id": 429,
     "Question": "How do I get more information on a current incident?",
     "SortOrder": 5,
-    "Updated": "2024-12-04T08:08:41.6441499"
+    "Updated": "2026-11-18T19:38:54.2495845"
   },
   {
     "AgencyServiceId": 39,
@@ -911,9 +911,9 @@
     "AgencyServiceId": 40,
     "Answer": "<p>You will be able to find statistical information on California such as:</p><ul><li>adult and juvenile probation</li><li>arrests</li><li>citizen's complaints against peace officers</li><li>crimes crimes against the elderly</li><li>death in custody</li><li>domestic violence</li><li>hate crimes</li><li>homicide</li><li>law enforcement officers killed or assaulted</li><li>law enforcement personnel </li></ul>",
     "Id": 175,
-    "Question": "What kinds of information can I find stats on? ",
+    "Question": "What kinds of information can I find stats on?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T22:04:08.1060731"
+    "Updated": "2026-11-18T23:56:04.8720044"
   },
   {
     "AgencyServiceId": 40,
@@ -935,9 +935,9 @@
     "AgencyServiceId": 40,
     "Answer": "A variety of Criminal Justice Statistics Center publications are available for order via the <a href=\"https://oag.ca.gov/cjsc/spereq\">Criminal Justice Statistics Center</a>",
     "Id": 178,
-    "Question": "Can I order copies of documents?  ",
+    "Question": "Can I order copies of documents?",
     "SortOrder": 4,
-    "Updated": "2017-05-22T16:09:11.463"
+    "Updated": "2026-11-18T23:56:18.7061311"
   },
   {
     "AgencyServiceId": 41,
@@ -953,27 +953,27 @@
     "Answer": "Please use the LegInfo website located at: <a href=\"https://leginfo.ca.gov/\">https://leginfo.ca.gov</a> to access the bill's PDF version with page and line numbers. It is our objective to make PDF versions for these bills available in a future release.",
     "Featured": true,
     "Id": 180,
-    "Question": "Where do I find PDF versions of bills from prior sessions? ",
+    "Question": "Where do I find PDF versions of bills from prior sessions?",
     "SortOrder": 2,
-    "Updated": "2026-11-04T22:43:02.0557605"
+    "Updated": "2026-11-18T23:56:34.5877154"
   },
   {
     "AgencyServiceId": 41,
-    "Answer": "On January 1st of each year, the California Law database is updated with all new laws that became effective on January 1st of that calendar year. The California Law database is also updated as bills are passed and become effective during the legislative session. ",
+    "Answer": "On January 1st of each year, the California Law database is updated with all new laws that became effective on January 1st of that calendar year. The California Law database is also updated as bills are passed and become effective during the legislative session.",
     "Featured": true,
     "Id": 181,
-    "Question": "How can I tell how current a version of the code is? ",
+    "Question": "How can I tell how current a version of the code is?",
     "SortOrder": 3,
-    "Updated": "2017-05-22T16:09:11.65"
+    "Updated": "2026-11-18T23:57:09.210235"
   },
   {
     "AgencyServiceId": 41,
     "Answer": "To view amended versions of a bill, use the drop-down box labeled, \"Version:\" located to the right of the bill's subject. Select the desired bill version and click \"Go.\"",
     "Featured": true,
     "Id": 182,
-    "Question": "How do I view amended versions of a bill? ",
+    "Question": "How do I view amended versions of a bill?",
     "SortOrder": 4,
-    "Updated": "2017-05-22T16:09:11.71"
+    "Updated": "2026-11-18T23:57:22.7246867"
   },
   {
     "AgencyServiceId": 42,
@@ -1022,75 +1022,75 @@
   },
   {
     "AgencyServiceId": 48,
-    "Answer": "<p>Visit the <a href=\"https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/updating-information-on-your-driver-license-or-identification-dl-id-card/#acc-changing-your-gender-identity\">Driver’s License or ID Card Updates</a> page.</p>",
+    "Answer": "Visit the <a href=\"https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/updating-information-on-your-driver-license-or-identification-dl-id-card/#acc-changing-your-gender-identity\">Driver’s License or ID Card Updates</a> page.",
     "Featured": true,
     "Id": 210,
     "Question": "Where can I find more information regarding changing my address, name, or gender on a DL/ID card?",
     "SortOrder": 4,
-    "Updated": "2026-08-02T22:25:52.4637875"
+    "Updated": "2026-11-18T19:39:54.9549659"
   },
   {
     "AgencyServiceId": 49,
-    "Answer": "Visit the <a href=\"https://www.parks.ca.gov/?page_id=937\">Full FAQ</a> ",
+    "Answer": "Visit the <a href=\"https://www.parks.ca.gov/?page_id=937\">Full FAQ</a>",
     "Featured": true,
     "Id": 211,
     "Question": "Where can I find more FAQs regarding State Parks?",
     "SortOrder": 1,
-    "Updated": "2024-11-05T21:30:08.7388479"
+    "Updated": "2026-11-18T23:58:14.8649891"
   },
   {
     "AgencyServiceId": 49,
-    "Answer": "<p>Visit <a href=\"https://www.reservecalifornia.com\" target=\"_blank\">ReserveCalifornia</a>, our new system is easy to use - similar to booking hotels, airline tickets and other comparable services.</p> ",
+    "Answer": "Visit <a href=\"https://www.reservecalifornia.com/\">ReserveCalifornia</a>, our new system is easy to use - similar to booking hotels, airline tickets and other comparable services.",
     "Featured": true,
     "Id": 212,
     "Question": "How can I make a reservation at a State Park?",
     "SortOrder": 2,
-    "Updated": "2018-03-16T12:25:41.8112742"
+    "Updated": "2026-11-18T23:59:05.7850447"
   },
   {
     "AgencyServiceId": 49,
-    "Answer": "<p>No matter what your destination is or whether you have a reserved or a first-come, first-served site, it's always a good idea to call ahead and check on park conditions.</p><strong>For Reservations&nbsp;- Plan ahead</strong> <p>You can make reservations up to&nbsp;six months in advance through <a href=\"https://www.reservecalifornia.com/\" target=\"_blank\">ReserveCalifornia</a>.</p><strong>Determine where you want to camp and be flexible</strong> <p>Have alternate parks in mind in case your first choice is booked.<br /><br />To help you, get your copy of the California State Parks Camping Reservation Guide by calling (916) 653-6995 or writing to: <br /></p><strong>Consider less busy days</strong> <p>Sometimes reservations are easier to make if you can camp mid-week.</p><strong>Consider less popular camps</strong> <p>Southern coastal campgrounds can be full year-round. You could have better luck getting reservations at State Parks north of Santa Cruz or inland.&nbsp; Look for sites which are more remote and away from major metropolitan areas.</p><strong>Remember the holiday crush</strong> <p>The closer you try to make reservations to a holiday (Memorial Day weekend, Fourth of July, or Labor Day weekend), the further north and inland you may need to go.</p><strong>Consider cancellations</strong> <p>Check the Reserve America website or call the 800-444-7275 phone number. While no waiting lists are maintained, cancellations are rare but they can occur.</p><strong>Consider visiting the park for a day</strong> <p>If the campgrounds you want to visit are booked, consider a day visit to the park for a picnic, hike or other outdoor recreation.</p><strong>Consider April, May, September, and October</strong> <p>The \"shoulder season\" (April, May, September, and October) is a good time to enjoy California State Parks.&nbsp; The weather during these months is usually good.</p>",
+    "Answer": "<p>No matter what your destination is or whether you have a reserved or a first-come, first-served site, it's always a good idea to call ahead and check on park conditions.</p><strong>For Reservations - Plan ahead</strong><p>You can make reservations up to six months in advance through <a href=\"https://www.reservecalifornia.com/\">ReserveCalifornia</a>.</p><strong>Determine where you want to camp and be flexible</strong><p>Have alternate parks in mind in case your first choice is booked.</p><p>To help you, get your copy of the California State Parks Camping Reservation Guide by calling (916) 653-6995 or writing to:</p><strong>Consider less busy days</strong><p>Sometimes reservations are easier to make if you can camp mid-week.</p><strong>Consider less popular camps</strong><p>Southern coastal campgrounds can be full year-round. You could have better luck getting reservations at State Parks north of Santa Cruz or inland.&nbsp; Look for sites which are more remote and away from major metropolitan areas.</p><strong>Remember the holiday crush</strong><p>The closer you try to make reservations to a holiday (Memorial Day weekend, Fourth of July, or Labor Day weekend), the further north and inland you may need to go.</p><strong>Consider cancellations</strong><p>Check the Reserve America website or call the 800-444-7275 phone number. While no waiting lists are maintained, cancellations are rare but they can occur.</p><strong>Consider visiting the park for a day</strong><p>If the campgrounds you want to visit are booked, consider a day visit to the park for a picnic, hike or other outdoor recreation.</p><strong>Consider April, May, September, and October</strong><p>The \"shoulder season\" (April, May, September, and October) is a good time to enjoy California State Parks. The weather during these months is usually good.</p>",
     "Featured": true,
     "Id": 213,
     "Question": "What are some helpful camping tips for year-round camping enjoyment?",
     "SortOrder": 3,
-    "Updated": "2018-03-16T12:48:14.2831962"
+    "Updated": "2026-11-18T20:17:40.5637428"
   },
   {
     "AgencyServiceId": 49,
-    "Answer": "<p><strong>General Questions</strong><br />For general inquiries, please send\r\n    email to:\r\n    <a href=\"mailto:info@parks.ca.gov\">info@parks.ca.gov</a>\r\n </p><p><strong>Comments, Suggestions or Complaints</strong><br />To send us\r\n    comments, suggestions or complaints, please send email to:\r\n    <a href=\"mailto:info@parks.ca.gov\">info@parks.ca.gov</a>\r\n </p><p><strong>Technical Inquiries</strong><br />For technical inquiries regarding\r\n    the website, please send email to the\r\n    <a href=\"mailto:webmaster@parks.ca.gov\">webmaster</a></p><p><strong>Inaccurate Content</strong><br />If you discover any information on our pages which you believe to be\r\n    inaccurate or outdated, please send email to the\r\n    <a href=\"mailto:webmaster@parks.ca.gov\">webmaster</a>\r\n </p><p><strong>Accessibility</strong><br />For inquiries related to accessibility\r\n    for people with disabilities, please send email to\r\n    <a href=\"mailto:access@parks.ca.gov\">access@parks.ca.gov</a>\r\n or phone 916-445-8949. TTY relay service, 711.</p><p><a href=\"https://www.parks.ca.gov/?page_id=24248\">District Office Contacts</a>\r\n </p>",
+    "Answer": "<p><strong>General Questions</strong><br>For general inquiries, please send email to: <a>info@parks.ca.gov</a></p><p><strong>Comments, Suggestions or Complaints</strong><br>To send us comments, suggestions or complaints, please send email to: <a>info@parks.ca.gov</a></p><p><strong>Technical Inquiries</strong><br>For technical inquiries regarding the website, please send email to: webmaster@parks.ca.gov.</p><p><strong>Inaccurate Content</strong><br>If you discover any information on our pages which you believe to be inaccurate or outdated, please send email to webmaster@parks.ca.gov.</p><p><strong>Accessibility</strong><br>For inquiries related to accessibility for people with disabilities, please send email to <a>access@parks.ca.gov</a> or phone 916-445-8949. TTY relay service, 711.</p><p><a href=\"https://www.parks.ca.gov/?page_id=24248\">District Office Contacts</a></p>",
     "Featured": true,
     "Id": 214,
     "Question": "How do I submit a comment, suggestion or complaint?",
     "SortOrder": 4,
-    "Updated": "2025-11-03T21:27:14.6399018"
+    "Updated": "2026-11-18T22:47:06.6394347"
   },
   {
     "AgencyServiceId": 50,
-    "Answer": "If the reservation sites are full, look for first-come, first-served campgrounds, and try to arrive on a Wednesday or Thursday to maximize your chance to get a campsite.&nbsp;Please call the specific park for details.&nbsp; They include:<br /><a href=\"https://www.parks.ca.gov/?page_id=604\">Emma Wood State Beach</a><br /><a href=\"https://www.parks.ca.gov/?page_id=553\">Indian Grinding Rock State Historic Park</a>",
+    "Answer": "<p>If the reservation sites are full, look for first-come, first-served campgrounds, and try to arrive on a Wednesday or Thursday to maximize your chance to get a campsite. Please call the specific park for details. They include:</p><ul><li><a href=\"https://www.parks.ca.gov/?page_id=604\">Emma Wood State Beach</a></li><li><a href=\"https://www.parks.ca.gov/?page_id=553\">Indian Grinding Rock State Historic Park</a></li></ul>",
     "Featured": true,
     "Id": 216,
-    "Question": "What about non-reservation sites? ",
+    "Question": "What about non-reservation sites?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T18:25:23.5155405"
+    "Updated": "2026-11-18T23:59:25.0334227"
   },
   {
     "AgencyServiceId": 50,
-    "Answer": "Visit the <a href=\"https://www.parks.ca.gov/?page_id=937\">Full FAQ</a> ",
+    "Answer": "Visit the <a href=\"https://www.parks.ca.gov/?page_id=937\">Full FAQ</a>",
     "Featured": true,
     "Id": 217,
     "Question": "Where can I find more FAQs regarding Camping Reservations?",
     "SortOrder": 2,
-    "Updated": "2025-10-30T22:13:54.8586321"
+    "Updated": "2026-11-18T23:59:58.0807666"
   },
   {
     "AgencyServiceId": 50,
-    "Answer": "Visit&nbsp;<a href=\"https://www.reservecalifornia.com/\" target=\"_blank\">ReserveCalifornia</a>, our new system is easy to use - similar to booking hotels, airline tickets and other comparable services.",
+    "Answer": "Visit <a href=\"https://www.reservecalifornia.com/\">ReserveCalifornia</a>, our new system is easy to use - similar to booking hotels, airline tickets and other comparable services.",
     "Featured": true,
     "Id": 218,
     "Question": "How do I reserve a campsite?",
     "SortOrder": 3,
-    "Updated": "2018-03-16T12:38:57.187986"
+    "Updated": "2026-11-18T20:20:54.9576918"
   },
   {
     "AgencyServiceId": 51,
@@ -1180,9 +1180,9 @@
     "Answer": "California Refund Value (CRV) is the amount paid by consumers at the checkout stand and paid back to consumers when they recycle eligible aluminum, plastic, glass and bi-metal beverage containers at certified recycling centers. The minimum refund value established for each type of eligible beverage container is 5 cents for each container under 24 ounces and 10 cents for each container 24 ounces or greater.",
     "Featured": true,
     "Id": 231,
-    "Question": "What is California Refund Value? ",
+    "Question": "What is California Refund Value?",
     "SortOrder": 1,
-    "Updated": "2018-10-25T16:38:02.561455"
+    "Updated": "2026-11-19T00:00:17.9428442"
   },
   {
     "AgencyServiceId": 54,
@@ -1279,9 +1279,9 @@
     "Answer": "Information on some exclusions can be found at <a href=\"https://www.sos.ca.gov/business-programs/business-entities/information-requests/#fri\">The Secretary of State's Information Requests page</a>",
     "Featured": true,
     "Id": 242,
-    "Question": "Are some types of business information not available?  ",
+    "Question": "Are some types of business information not available?",
     "SortOrder": 4,
-    "Updated": "2025-11-03T18:58:37.8956438"
+    "Updated": "2026-11-19T00:00:42.4194423"
   },
   {
     "AgencyServiceId": 57,
@@ -1380,11 +1380,11 @@
   },
   {
     "AgencyServiceId": 60,
-    "Answer": "An interview is required before certifying your household to get CalFresh benefits. The interview can occur in the county office or by telephone (in most counties). The interview may be held with the head of household, spouse, the authorized representative or any other responsible household family member. An interview is required annually.&nbsp;",
+    "Answer": "An interview is required before certifying your household to get CalFresh benefits. The interview can occur in the county office or by telephone (in most counties). The interview may be held with the head of household, spouse, the authorized representative or any other responsible household family member. An interview is required annually.",
     "Id": 22,
-    "Question": "Is an interview required?  ",
+    "Question": "Is an interview required?",
     "SortOrder": 2,
-    "Updated": "2017-05-19T09:12:35.681558"
+    "Updated": "2026-11-18T20:21:22.7022423"
   },
   {
     "AgencyServiceId": 60,
@@ -1396,11 +1396,11 @@
   },
   {
     "AgencyServiceId": 60,
-    "Answer": "<ul><li>Proof of identity (driver's license, etc.), alien status.<br /></li><li>Social Security Numbers for all household members.<br /></li><li>If employed, proof of income (wage stubs, earning statements, etc.) for the past 30 days.<br /></li><li>Bank statements for checking accounts, savings accounts, certificates of deposit, credit union accounts, retirement accounts, stocks, bonds, dividends, etc.</li><li>Proof of shelter costs (rent or mortgage payment, lot rent, household, real estate, taxes, utility bills &ndash; heat, electricity, water/sewage/garbage, telephone, etc.)</li></ul>",
+    "Answer": "<ul><li>Proof of identity (driver's license, etc.), alien status.</li><li>Social Security Numbers for all household members.</li><li>If employed, proof of income (wage stubs, earning statements, etc.) for the past 30 days.</li><li>Bank statements for checking accounts, savings accounts, certificates of deposit, credit union accounts, retirement accounts, stocks, bonds, dividends, etc.</li><li>Proof of shelter costs (rent or mortgage payment, lot rent, household, real estate, taxes, utility bills – heat, electricity, water/sewage/garbage, telephone, etc.)</li></ul>",
     "Id": 25,
     "Question": "What documents do I need to bring?",
     "SortOrder": 4,
-    "Updated": "2017-05-19T09:27:30.3143815"
+    "Updated": "2026-11-18T22:47:56.6118085"
   },
   {
     "AgencyServiceId": 61,
@@ -1430,12 +1430,12 @@
   },
   {
     "AgencyServiceId": 62,
-    "Answer": "Select \"view\" to see additional information about the facility.&nbsp;",
+    "Answer": "Select \"view\" to see additional information about the facility.",
     "Featured": true,
     "Id": 36,
     "Question": "How do I see more detail about a facility?",
     "SortOrder": 3,
-    "Updated": "2017-05-19T09:50:45.23736"
+    "Updated": "2026-11-18T20:21:46.287293"
   },
   {
     "AgencyServiceId": 63,
@@ -1457,113 +1457,113 @@
   },
   {
     "AgencyServiceId": 63,
-    "Answer": "<p>Use these <a href=\"https://www.csac.ca.gov/pod/financial-aid-checklist\">checklists</a> to help you plan and pay for college.</p>",
+    "Answer": "Use these <a href=\"https://www.csac.ca.gov/pod/financial-aid-checklist\">checklists</a> to help you plan and pay for college.",
     "Featured": true,
     "Id": 253,
     "Question": "Is a financial aid planning checklist available?",
     "SortOrder": 3,
-    "Updated": "2018-05-02T13:19:12.4885779"
+    "Updated": "2026-11-18T19:45:52.7073108"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. CalVet can combine your federal loan benefit with benefits offered by the state to create home financing that is of superb value for our veterans.<br />",
+    "Answer": "Yes. CalVet can combine your federal loan benefit with benefits offered by the state to create home financing that is of superb value for our veterans.",
     "Featured": true,
     "Id": 490,
     "Question": "I want to use my VA loan benefit. Should I consider CalVet Home Loans?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T20:39:51.4859465"
+    "Updated": "2026-11-18T22:48:31.9185646"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. CalVet often uses the federal VA guarantee to offer veterans up to 100% financing with no monthly private mortgage insurance payments.<br />",
+    "Answer": "Yes. CalVet often uses the federal VA guarantee to offer veterans up to 100% financing with no monthly private mortgage insurance payments.",
     "Featured": true,
     "Id": 491,
     "Question": "Can I use my benefit of 100% financing?",
     "SortOrder": 2,
-    "Updated": "2025-10-30T20:40:05.6161844"
+    "Updated": "2026-11-18T23:33:16.6771178"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. All veterans who served on active duty can apply; at any age in any state of enlistment. You only need to be purchasing or refinancing a home in California.<br />",
+    "Answer": "Yes. All veterans who served on active duty can apply; at any age in any state of enlistment. You only need to be purchasing or refinancing a home in California.",
     "Featured": true,
     "Id": 492,
     "Question": "I was in the service over 25 years ago. Can I apply for a CalVet loan?",
     "SortOrder": 3,
-    "Updated": "2025-10-30T20:39:28.0761682"
+    "Updated": "2026-11-18T22:52:01.7830048"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. We have credit standards, but we do not have a minimum credit score requirement. We manually underwrite all our home loans to maximize flexibility and improve your homeownership opportunities.<br />",
+    "Answer": "Yes. We have credit standards, but we do not have a minimum credit score requirement. We manually underwrite all our home loans to maximize flexibility and improve your homeownership opportunities.",
     "Featured": true,
     "Id": 493,
     "Question": "My credit score is too low for my bank to help. Can CalVet work with me?",
     "SortOrder": 4,
-    "Updated": "2025-10-30T20:40:16.0451737"
+    "Updated": "2026-11-18T22:52:23.4260684"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. We underwrite all of our home loans; thus, we can help you obtain a CalVet loan after a short sale, foreclosure, or bankruptcy.<br />",
+    "Answer": "Yes. We underwrite all of our home loans; thus, we can help you obtain a CalVet loan after a short sale, foreclosure, or bankruptcy.",
     "Id": 494,
     "Question": "If I had a short sale, foreclosure, or bankruptcy in the past, can I get a CalVet loan?",
     "SortOrder": 5,
-    "Updated": "2025-10-30T20:40:28.3733437"
+    "Updated": "2026-11-18T22:52:39.2132019"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "<p>Yes. We fund loans for most property types, including:<br /></p><ul><li>Single-family.</li><li>Planned unit developments.</li><li>VA-approved condominiums.</li><li>Manufactured homes installed on land.</li><li>Mobile homes in mobile home parks.</li><li>Working farms.<br /></li></ul>",
+    "Answer": "<p>Yes. We fund loans for most property types, including:</p><ul><li>Single-family.</li><li>Planned unit developments.</li><li>VA-approved condominiums.</li><li>Manufactured homes installed on land.</li><li>Mobile homes in mobile home parks.</li><li>Working farms.</li></ul>",
     "Id": 495,
     "Question": "Can I purchase a manufactured home on land?",
     "SortOrder": 6,
-    "Updated": "2025-10-30T20:41:05.8625553"
+    "Updated": "2026-11-18T22:53:18.1365682"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. We do not sell the servicing, and you stay with us for the life of your loan.<br />",
+    "Answer": "Yes. We do not sell the servicing, and you stay with us for the life of your loan.",
     "Id": 496,
     "Question": "I don’t want my loan to be sold to another bank. Can I stay with CalVet for loan servicing?",
     "SortOrder": 7,
-    "Updated": "2025-10-30T20:41:21.8822926"
+    "Updated": "2026-11-18T22:53:50.3526252"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. You can use our program again and again. If you had a CalVet home loan in the past and paid in full, you can apply for another loan.<br />",
+    "Answer": "Yes. You can use our program again and again. If you had a CalVet home loan in the past and paid in full, you can apply for another loan.",
     "Id": 497,
     "Question": "I used the CalVet program once before. Can I use it again?",
     "SortOrder": 8,
-    "Updated": "2025-10-30T20:41:53.7418181"
+    "Updated": "2026-11-18T22:54:09.7509145"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. Example: If you have a federal VA-guaranteed loan and are turning your property into a rental, we may help you get a CalVet or VA loan for a new owner-occupied property.<br />",
+    "Answer": "Yes. Example: If you have a federal VA-guaranteed loan and are turning your property into a rental, we may help you get a CalVet or VA loan for a new owner-occupied property.",
     "Id": 498,
     "Question": "If I only have a partial federal VA guarantee left, can I get 100% financing?",
     "SortOrder": 9,
-    "Updated": "2025-10-30T20:42:04.8971786"
+    "Updated": "2026-11-18T23:33:32.838298"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. We offer outstanding fire and hazard insurance coverage and disaster coverage, including earthquake and flood protection. We will not cancel your policy after a natural disaster.<br />",
+    "Answer": "Yes. We offer outstanding fire and hazard insurance coverage and disaster coverage, including earthquake and flood protection. We will not cancel your policy after a natural disaster.",
     "Id": 499,
     "Question": "Does CalVet have an excellent property insurance program for most of its loans?",
     "SortOrder": 10,
-    "Updated": "2025-10-30T20:42:14.964393"
+    "Updated": "2026-11-18T22:54:59.2033051"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. We offer construction loans and other specialty loans, such as rehabilitation purchase loans and home improvement loans.<br />",
+    "Answer": "Yes. We offer construction loans and other specialty loans, such as rehabilitation purchase loans and home improvement loans.",
     "Featured": true,
     "Id": 500,
     "Question": "What if I want to build a home? Can CalVet help?",
     "SortOrder": 11,
-    "Updated": "2025-10-30T20:42:25.3984222"
+    "Updated": "2026-11-18T22:55:20.3763566"
   },
   {
     "AgencyServiceId": 64,
-    "Answer": "Yes. <a href=\"https://calvet.zipforhome.com/\">Apply now</a> to start the streamlined pre-approval process for a home loan. After you apply online, a CalVet representative will guide you through the process. You have a friend in the lending business!<br />",
+    "Answer": "Yes. <a href=\"https://calvet.zipforhome.com/\">Apply now</a> to start the streamlined pre-approval process for a home loan. After you apply online, a CalVet representative will guide you through the process. You have a friend in the lending business!",
     "Id": 501,
     "Question": "Is it easy to apply for a CalVet pre-approval?",
     "SortOrder": 12,
-    "Updated": "2025-10-30T20:43:02.602068"
+    "Updated": "2026-11-18T22:55:43.6612941"
   },
   {
     "AgencyServiceId": 73,
@@ -1585,12 +1585,12 @@
   },
   {
     "AgencyServiceId": 73,
-    "Answer": "Physical Address: 1220 N Street, Sacramento, CA 95814 <br />Phone number: 916-999-3000 <br />Mailing Address: 1220 N Street, Sacramento, CA 95814 ",
+    "Answer": "Physical Address: 1220 N Street, Sacramento, CA 95814<br>Phone number: 916-999-3000 <br>Mailing Address: 1220 N Street, Sacramento, CA 95814",
     "Featured": true,
     "Id": 261,
     "Question": "How do I contact the Division of Fairs & Expositions?",
     "SortOrder": 3,
-    "Updated": "2024-10-31T22:09:49.511249"
+    "Updated": "2026-11-18T22:57:42.5388478"
   },
   {
     "AgencyServiceId": 73,
@@ -1621,12 +1621,12 @@
   },
   {
     "AgencyServiceId": 74,
-    "Answer": "The best way to get a quick estimate of the price you would pay is to use the&nbsp;<a href=\"https://apply.coveredca.com/lw-shopandcompare/\">Shop and Compare Tool</a>. The price is based on your estimated income for the coverage year, your ZIP code, your household size and your age. If you are a low- or moderate-income Californian, you may get help buying insurance from Covered California through monthly subsidies that lower your premium costs so that you pay less for top-quality, brand-name insurance. Learn more about&nbsp;<a href=\"https://www.coveredca.com/costs\">who qualifies for a subsidy</a>.",
+    "Answer": "The best way to get a quick estimate of the price you would pay is to use the <a href=\"https://apply.coveredca.com/lw-shopandcompare/\">Shop and Compare Tool</a>. The price is based on your estimated income for the coverage year, your ZIP code, your household size and your age. If you are a low- or moderate-income Californian, you may get help buying insurance from Covered California through monthly subsidies that lower your premium costs so that you pay less for top-quality, brand-name insurance. Learn more about <a href=\"https://www.coveredca.com/costs\">who qualifies for a subsidy</a>.",
     "Featured": true,
     "Id": 265,
     "Question": "How much does it cost to buy insurance through Covered California?",
     "SortOrder": 3,
-    "Updated": "2026-11-03T22:42:18.6906174"
+    "Updated": "2026-11-18T20:22:23.8916312"
   },
   {
     "AgencyServiceId": 74,
@@ -1639,21 +1639,21 @@
   },
   {
     "AgencyServiceId": 79,
-    "Answer": "<p>Eligibility requirements are listed on the CDSS website at the following link:</p><p><a href=\"https://www.cdss.ca.gov/benefits-services/more-services/immigration-services/immigration-services-contractors\" target=\"_blank\" title=\"click here to go to the page\">Naturalization Eligibility</a></p>",
+    "Answer": "<p>Eligibility requirements are listed on the CDSS website at the following link:</p><p><a href=\"https://www.cdss.ca.gov/benefits-services/more-services/immigration-services/immigration-services-contractors\">Naturalization Eligibility</a></p>",
     "Featured": true,
     "Id": 272,
     "Question": "Where can I find eligibility requirements for naturalization?",
     "SortOrder": 1,
-    "Updated": "2025-11-03T18:43:13.8431157"
+    "Updated": "2026-11-18T19:46:35.1699365"
   },
   {
     "AgencyServiceId": 1120,
     "Answer": "DHCS leads the effort to reduce alcoholism and drug addiction in California by developing, administering, and supporting prevention, treatment, and recovery programs. We endeavor to help Californians understand that alcoholism and drug addiction are chronic conditions that can be successfully prevented and treated.",
     "Featured": true,
     "Id": 418,
-    "Question": "What is being done to address substance use in California?  ",
+    "Question": "What is being done to address substance use in California?",
     "SortOrder": 1,
-    "Updated": "2026-11-03T22:46:01.6198115"
+    "Updated": "2026-11-19T00:00:57.287709"
   },
   {
     "AgencyServiceId": 1120,
@@ -1666,29 +1666,29 @@
   },
   {
     "AgencyServiceId": 1120,
-    "Answer": "You are not alone. Nationwide, 51.5 million adults struggle with a <a href=\"https://findtreatment.gov/what-to-expect/mental-health\">mental illness</a>, and 19.7 million people struggle with a substance use <a href=\"https://findtreatment.gov/what-to-expect/addiction\">disorder</a>.<br><br>If you think you are having an emergency for an unexpected medical condition, including a psychiatric emergency medical condition, call 911 or go to the nearest emergency room for help. If you or someone you know is in crisis, please call 911 or 988.<br><br>DHCS also partners with national nonprofit Shatterproof and Blue Shield of California to help combat the substance use crisis, keep Californians safe, and provide recovery resources to those in need. These resources include Shatterproof <a href=\"https://treatmentatlas.org/\">Treatment Atlas</a>, an addiction treatment locator, assessment, and standards platform that will connect individuals to appropriate evidence-based addiction treatment.<br><br>Additionally, <a href=\"https://startyourrecovery.org/treatment/rehab-centers/california\">StartYourRecovery.org</a> provides helpful information for people who are dealing with substance use issues — and their family members, friends, and co-workers, too. Their goal is to offer people who are dealing with substance use issues a single source of reputable, objective information about signs, symptoms, conditions, treatment options, and resources — presented in a user-friendly format and in easy-to-understand language.",
+    "Answer": "<p>You are not alone. Nationwide, 51.5 million adults struggle with a <a href=\"https://findtreatment.gov/what-to-expect/mental-health\">mental illness</a>, and 19.7 million people struggle with a substance use <a href=\"https://findtreatment.gov/what-to-expect/addiction\">disorder</a>.</p><p>If you think you are having an emergency for an unexpected medical condition, including a psychiatric emergency medical condition, call 911 or go to the nearest emergency room for help. If you or someone you know is in crisis, please call 911 or 988.</p><p>DHCS also partners with national nonprofit Shatterproof and Blue Shield of California to help combat the substance use crisis, keep Californians safe, and provide recovery resources to those in need. These resources include Shatterproof <a href=\"https://treatmentatlas.org/\">Treatment Atlas</a>, an addiction treatment locator, assessment, and standards platform that will connect individuals to appropriate evidence-based addiction treatment.</p><p>Additionally, <a href=\"https://startyourrecovery.org/treatment/rehab-centers/california\">StartYourRecovery.org</a> provides helpful information for people who are dealing with substance use issues — and their family members, friends, and co-workers, too. Their goal is to offer people who are dealing with substance use issues a single source of reputable, objective information about signs, symptoms, conditions, treatment options, and resources — presented in a user-friendly format and in easy-to-understand language.</p>",
     "Featured": true,
     "Id": 420,
     "Question": "Where can I get help with my, or my loved one’s, misuse of alcohol or other substances?",
     "SortOrder": 3,
-    "Updated": "2026-11-03T22:50:43.3479778"
+    "Updated": "2026-11-18T22:58:46.1353401"
   },
   {
     "AgencyServiceId": 1121,
-    "Answer": "View the <a href=\"https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/assembly-bill-ab-60-driver-licenses/\">AB 60 application process&nbsp;</a>",
+    "Answer": "View the <a href=\"https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/assembly-bill-ab-60-driver-licenses/\">AB 60 application process</a>",
     "Featured": true,
     "Id": 550,
     "Question": "How do I apply for an AB 60 driver's license?",
     "SortOrder": 1,
-    "Updated": "2026-08-02T22:09:37.1469255"
+    "Updated": "2026-11-18T20:23:01.5328113"
   },
   {
     "AgencyServiceId": 1124,
-    "Answer": "You can search for renewal and license information by entering in a \"From\" Date, a \"To\" Date, or both. If just the \"From\" date is entered, the application will search for all records occurring on or after that date. If just the \"To\" Record is entered, the application will search for all records occurring on or before that date.<br />",
+    "Answer": "You can search for renewal and license information by entering in a \"From\" Date, a \"To\" Date, or both. If just the \"From\" date is entered, the application will search for all records occurring on or after that date. If just the \"To\" Record is entered, the application will search for all records occurring on or before that date.",
     "Id": 276,
     "Question": "How do I search based on dates?",
     "SortOrder": 1,
-    "Updated": "2018-03-16T11:58:20.2756539"
+    "Updated": "2026-11-18T22:59:09.0593292"
   },
   {
     "AgencyServiceId": 1124,
@@ -1700,35 +1700,35 @@
   },
   {
     "AgencyServiceId": 1125,
-    "Answer": "Renewal may not occur more than six months prior to the existing license expiration date.<br />",
+    "Answer": "Renewal may not occur more than six months prior to the existing license expiration date.",
     "Id": 278,
     "Question": "When can I renew my license?",
     "SortOrder": 1,
-    "Updated": "2018-03-16T11:31:44.6004877"
+    "Updated": "2026-11-18T22:59:27.9474157"
   },
   {
     "AgencyServiceId": 1125,
-    "Answer": "The existing license must be current and in good standing.<br />",
+    "Answer": "The existing license must be current and in good standing.",
     "Id": 279,
     "Question": "Am I eligible to renew my license?",
     "SortOrder": 2,
-    "Updated": "2018-03-16T11:31:27.1627098"
+    "Updated": "2026-11-18T22:59:46.2606047"
   },
   {
     "AgencyServiceId": 1125,
-    "Answer": "Fees are not refundable. By statute, all fees submitted are deemed earned upon receipt.<br />",
+    "Answer": "Fees are not refundable. By statute, all fees submitted are deemed earned upon receipt.",
     "Id": 280,
     "Question": "Are the renewal fees refundable?",
     "SortOrder": 3,
-    "Updated": "2018-03-16T11:30:59.0837885"
+    "Updated": "2026-11-18T23:00:02.5545216"
   },
   {
     "AgencyServiceId": 1125,
-    "Answer": "You may pay for the renewal using Visa or MasterCard.<br />",
+    "Answer": "You may pay for the renewal using Visa or MasterCard.",
     "Id": 281,
-    "Question": "How can I pay for License Renewal Fees? ",
+    "Question": "How can I pay for License Renewal Fees?",
     "SortOrder": 4,
-    "Updated": "2018-03-16T11:30:15.5204483"
+    "Updated": "2026-11-19T00:01:11.0714384"
   },
   {
     "AgencyServiceId": 1127,
@@ -1764,12 +1764,12 @@
   },
   {
     "AgencyServiceId": 1129,
-    "Answer": "<p>If your health plan denies, changes or delays your request for medical services, denies payment for emergency treatment or refuses to cover experimental or investigational treatment for a serious medical condition, you can apply for an Independent Medical Review (IMR).</p><p>During an IMR, independent doctors and medical providers, who do not work for your health plan, will examine your case to see if your health plan appropriately denied services or if you should receive the requested service or treatment. These doctors may discover that your health plan was wrong to deny you care. If the IMR is decided in your favor, your plan must authorize and provide the service(s) or treatment(s) you requested. IMR’s are free to enrollees.<br></p>",
+    "Answer": "<p>If your health plan denies, changes or delays your request for medical services, denies payment for emergency treatment or refuses to cover experimental or investigational treatment for a serious medical condition, you can apply for an Independent Medical Review (IMR).</p><p>During an IMR, independent doctors and medical providers, who do not work for your health plan, will examine your case to see if your health plan appropriately denied services or if you should receive the requested service or treatment. These doctors may discover that your health plan was wrong to deny you care. If the IMR is decided in your favor, your plan must authorize and provide the service(s) or treatment(s) you requested. IMR’s are free to enrollees.</p>",
     "Featured": true,
     "Id": 294,
     "Question": "1. What is an Independent Medical Review (IMR)?",
     "SortOrder": 1,
-    "Updated": "2026-09-14T21:16:03.5087681"
+    "Updated": "2026-11-18T19:50:39.443003"
   },
   {
     "AgencyServiceId": 1129,
@@ -1791,68 +1791,68 @@
   },
   {
     "AgencyServiceId": 1129,
-    "Answer": "The Consumer Complaint process assists consumers in resolving issues with their health plans. These issues can consist of billing problems, cancellation of coverage, claim and copay disputes, delays in getting an appointment, referral or authorization for care, access to translation services, finding an in-network doctor, hospital, or specialist, complaints about a doctor or plan and continuity of care.&nbsp;",
+    "Answer": "The Consumer Complaint process assists consumers in resolving issues with their health plans. These issues can consist of billing problems, cancellation of coverage, claim and copay disputes, delays in getting an appointment, referral or authorization for care, access to translation services, finding an in-network doctor, hospital, or specialist, complaints about a doctor or plan and continuity of care.",
     "Featured": true,
     "Id": 297,
     "Question": "4. What is a Consumer Complaint?",
     "SortOrder": 4,
-    "Updated": "2025-01-14T17:55:22.5660756"
+    "Updated": "2026-11-18T20:23:30.5496474"
   },
   {
     "AgencyServiceId": 1129,
-    "Answer": "Californians enrolled in a DMHC-regulated health plan are eligible to file a complaint or IMR with the DMHC. Most people who live in California are enrolled in a health plan regulated by the DMHC. Because of this, the DMHC Help Center is a good place to start if you have a problem with your health plan. If you are in a health plan not regulated by the DMHC, the DMHC Help Center will refer you to the right regulator.<br>",
+    "Answer": "Californians enrolled in a DMHC-regulated health plan are eligible to file a complaint or IMR with the DMHC. Most people who live in California are enrolled in a health plan regulated by the DMHC. Because of this, the DMHC Help Center is a good place to start if you have a problem with your health plan. If you are in a health plan not regulated by the DMHC, the DMHC Help Center will refer you to the right regulator.",
     "Id": 298,
     "Question": "5. Who can apply for an IMR with the DMHC?",
     "SortOrder": 5,
-    "Updated": "2026-09-14T21:17:35.7112866"
+    "Updated": "2026-11-18T23:00:39.4593683"
   },
   {
     "AgencyServiceId": 1129,
-    "Answer": "<p>If your health plan covers prescription drugs but says that the drug you asked for is not medically necessary or is experimental or investigational, you may qualify for an IMR.</p>",
+    "Answer": "If your health plan covers prescription drugs but says that the drug you asked for is not medically necessary or is experimental or investigational, you may qualify for an IMR.",
     "Id": 299,
     "Question": "6. Can I get an IMR if my plan will not pay for the medicine I think I need?",
     "SortOrder": 6,
-    "Updated": "2026-09-14T21:18:37.5703295"
+    "Updated": "2026-11-18T19:51:02.1540053"
   },
   {
     "AgencyServiceId": 1129,
-    "Answer": "If your health problem is urgent an IMR is usually decided within 7 days after the request qualifies for an IMR and the required documentation has been received. This is called an expedited IMR. A health problem is urgent if it is a serious and immediate threat to your health.&nbsp;<br /><br />If your health problem is not urgent, an IMR is usually decided within 30 days after all required documentation is received.",
+    "Answer": "<p>If your health problem is urgent an IMR is usually decided within 7 days after the request qualifies for an IMR and the required documentation has been received. This is called an expedited IMR. A health problem is urgent if it is a serious and immediate threat to your health.</p><p>If your health problem is not urgent, an IMR is usually decided within 30 days after all required documentation is received.</p>",
     "Id": 300,
     "Question": "7. How long does an IMR take?",
     "SortOrder": 7,
-    "Updated": "2025-01-14T17:57:16.4991843"
+    "Updated": "2026-11-18T20:23:56.2245973"
   },
   {
     "AgencyServiceId": 1129,
-    "Answer": "<p>The DMHC Help Center will send you a letter informing you that your problem does not qualify for an IMR. If this happens, the Help Center will review your case through its Consumer Complaint process and send you a written decision within 30 days. You do not need to send in another form.</p>",
+    "Answer": "The DMHC Help Center will send you a letter informing you that your problem does not qualify for an IMR. If this happens, the Help Center will review your case through its Consumer Complaint process and send you a written decision within 30 days. You do not need to send in another form.",
     "Id": 302,
     "Question": "8. What happens if my problem does not qualify for an IMR?",
     "SortOrder": 8,
-    "Updated": "2026-09-14T21:19:11.062005"
+    "Updated": "2026-11-18T19:51:18.0231472"
   },
   {
     "AgencyServiceId": 1129,
-    "Answer": "Yes. Your name, medical records, and all other personal medical information are kept private and confidential under California law. IMR decisions are public, but all personal information is removed including the names and all identifying information of patients, doctors, or facilities.<span style=\"color:#505050;text-transform:none;text-indent:0px;letter-spacing:normal;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-style:normal;font-weight:400;word-spacing:0px;float:none;display:inline !important;white-space:normal;orphans:2;widows:2;background-color:#ffffff;font-variant-ligatures:normal;font-variant-caps:normal;-webkit-text-stroke-width:0px;text-decoration-style:initial;text-decoration-color:initial;\"></span>",
+    "Answer": "Yes. Your name, medical records, and all other personal medical information are kept private and confidential under California law. IMR decisions are public, but all personal information is removed including the names and all identifying information of patients, doctors, or facilities.",
     "Id": 305,
     "Question": "9. Will my medical condition and treatment stay private?",
     "SortOrder": 9,
-    "Updated": "2025-01-14T17:59:40.2195882"
+    "Updated": "2026-11-18T19:06:02.1933927"
   },
   {
     "AgencyServiceId": 1129,
-    "Answer": "Yes. You must complete and sign the DMHC Authorized Assistant Form. The DMHC cannot speak to anyone about your Independent Medical Review or Consumer Complaint unless we have your authorization to do so. Completion and submission of the DMHC Authorized Assistant Form tells the DMHC that it has your permission to speak with the person you have designated as your authorized assistant or representative.<span style=\"color:#505050;text-transform:none;text-indent:0px;letter-spacing:normal;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-style:normal;font-weight:400;word-spacing:0px;float:none;display:inline !important;white-space:normal;orphans:2;widows:2;background-color:#ffffff;font-variant-ligatures:normal;font-variant-caps:normal;-webkit-text-stroke-width:0px;text-decoration-style:initial;text-decoration-color:initial;\"></span>",
+    "Answer": "Yes. You must complete and sign the DMHC Authorized Assistant Form. The DMHC cannot speak to anyone about your Independent Medical Review or Consumer Complaint unless we have your authorization to do so. Completion and submission of the DMHC Authorized Assistant Form tells the DMHC that it has your permission to speak with the person you have designated as your authorized assistant or representative.",
     "Id": 308,
-    "Question": " 10. Can another person help me submit an Independent Medical Review or Consumer Complaint?",
+    "Question": "10. Can another person help me submit an Independent Medical Review or Consumer Complaint?",
     "SortOrder": 10,
-    "Updated": "2025-01-14T21:51:57.4267041"
+    "Updated": "2026-11-18T19:14:15.263623"
   },
   {
     "AgencyServiceId": 1129,
     "Answer": "The DMHC contracts with the <a href=\"https://healthconsumer.org/\">Health Consumer Alliance</a>, a group of local, community-based organizations that will give you free help with filing a complaint/grievance with your health plan. If you need more local, one-on-one assistance, please contact the Health Consumer Alliance’s Consumer Assistance Program at 1-888-804-3536.",
     "Id": 309,
-    "Question": " 11. What if I need assistance in filing a complaint/grievance with my health plan?",
+    "Question": "11. What if I need assistance in filing a complaint/grievance with my health plan?",
     "SortOrder": 11,
-    "Updated": "2026-09-14T21:20:43.092246"
+    "Updated": "2026-11-18T19:21:55.6466716"
   },
   {
     "AgencyServiceId": 1136,
@@ -1874,21 +1874,21 @@
   },
   {
     "AgencyServiceId": 1136,
-    "Answer": "The not-for-profit CEA is one of the world&rsquo;s largest providers of residential earthquake insurance. Our rates are based on science, not profit, enabling us to use the <a href=\"https://www.earthquakeauthority.com/about-cea/research-outreach/our-research\">best science available to determine competitive earthquake insurance rates</a>.&nbsp; CEA is actuarially sound and could pay all covered claims if the 1906 San Francisco, 1989 Loma Prieta, or 1994 Northridge earthquake reoccurred today.",
+    "Answer": "The not-for-profit CEA is one of the world’s largest providers of residential earthquake insurance. Our rates are based on science, not profit, enabling us to use the <a href=\"https://www.earthquakeauthority.com/about-cea/research-outreach/our-research\">best science available to determine competitive earthquake insurance rates</a>. CEA is actuarially sound and could pay all covered claims if the 1906 San Francisco, 1989 Loma Prieta, or 1994 Northridge earthquake reoccurred today.",
     "Featured": true,
     "Id": 324,
     "Question": "Why choose CEA earthquake insurance?",
     "SortOrder": 3,
-    "Updated": "2025-10-31T18:38:14.4564963"
+    "Updated": "2026-11-18T20:24:38.3557515"
   },
   {
     "AgencyServiceId": 1136,
-    "Answer": "You can buy a CEA earthquake insurance policy through one of CEA&rsquo;s <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/participating-residential-insurers-earthquake\">participating residential insurance companies</a>. CEA does not offer stand-alone policies.",
+    "Answer": "You can buy a CEA earthquake insurance policy through one of CEA’s <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/participating-residential-insurers-earthquake\">participating residential insurance companies</a>. CEA does not offer stand-alone policies.",
     "Featured": true,
     "Id": 325,
-    "Question": "Where can I buy a CEA earthquake insurance policy? ",
+    "Question": "Where can I buy a CEA earthquake insurance policy?",
     "SortOrder": 4,
-    "Updated": "2025-10-31T18:39:41.503603"
+    "Updated": "2026-11-19T00:01:24.4230006"
   },
   {
     "AgencyServiceId": 1141,
@@ -1919,30 +1919,30 @@
   },
   {
     "AgencyServiceId": 1141,
-    "Answer": "<p>If your single-family house:</p><ul><li>Was built before 1979,<br></li><li>Is on a raised foundation, and<br></li><li>You've completed an earthquake retrofit, and a <a href=\"https://www.crmp.org/resources/find-a-contractor\">licensed contractor</a> or <a href=\"https://www.crmp.org/resources/find-a-contractor/\">structural engineer</a> has signed the <a href=\"https://www.earthquakeauthority.com/sites/default/files/document/cea-earthquake-insurance-dwelling-retrofit-form.pdf\">Dwelling Retrofit Verification Form (PDF)</a>, stating the retrofit is in accordance with required standards.</li></ul><p>If your mobilehome:</p><ul><li>Has been reinforced by an earthquake-resistant bracing system certified by the California Department of Housing and Community Development (HCD).</li></ul>",
+    "Answer": "<p>If your single-family house:</p><ul><li>Was built before 1979,</li><li>Is on a raised foundation, and</li><li>You've completed an earthquake retrofit, and a <a href=\"https://www.crmp.org/resources/find-a-contractor\">licensed contractor</a> or <a href=\"https://www.crmp.org/resources/find-a-contractor/\">structural engineer</a> has signed the <a href=\"https://www.earthquakeauthority.com/sites/default/files/document/cea-earthquake-insurance-dwelling-retrofit-form.pdf\">Dwelling Retrofit Verification Form (PDF)</a>, stating the retrofit is in accordance with required standards.</li></ul><p>If your mobilehome:</p><ul><li>Has been reinforced by an earthquake-resistant bracing system certified by the California Department of Housing and Community Development (HCD).</li></ul>",
     "Featured": true,
     "Id": 333,
-    "Question": "Am I eligible for a retrofit discount? ",
+    "Question": "Am I eligible for a retrofit discount?",
     "SortOrder": 4,
-    "Updated": "2026-11-04T22:36:38.5293727"
+    "Updated": "2026-11-19T00:01:36.6650967"
   },
   {
     "AgencyServiceId": 1142,
-    "Answer": "<p>Proposition 65 requires businesses to provide warnings to Californians about significant exposures to chemicals that cause cancer, birth defects or other<br />reproductive harm.&nbsp; Exposure to these chemicals may take place when products are acquired or used. Exposure may also occur in homes, workplaces, or other environments in California. By requiring that this information be provided, Proposition 65 enables Californians to make informed decisions about their exposures to these chemicals.</p><p>Proposition 65 also prohibits California businesses from knowingly discharging significant amounts of listed chemicals into sources of drinking water.</p><p>Proposition 65 requires California to publish a list of chemicals known to cause cancer, birth defects or other reproductive harm. This list was first published in 1987, and must be updated at least once a year. It now includes over 900 chemicals.</p><p>Proposition 65 became law in November 1986, when California voters approved it by a 63-37 percent margin.&nbsp; The official name of Proposition 65 is the <a href=\"https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=HSC&amp;division=20.&amp;title=&amp;part=&amp;chapter=6.6.&amp;article\">Safe Drinking Water and Toxic Enforcement Act of 1986</a>.</p>",
+    "Answer": "<p>Proposition 65 requires businesses to provide warnings to Californians about significant exposures to chemicals that cause cancer, birth defects or other reproductive harm. Exposure to these chemicals may take place when products are acquired or used. Exposure may also occur in homes, workplaces, or other environments in California. By requiring that this information be provided, Proposition 65 enables Californians to make informed decisions about their exposures to these chemicals.</p><p>Proposition 65 also prohibits California businesses from knowingly discharging significant amounts of listed chemicals into sources of drinking water.</p><p>Proposition 65 requires California to publish a list of chemicals known to cause cancer, birth defects or other reproductive harm. This list was first published in 1987, and must be updated at least once a year. It now includes over 900 chemicals.</p><p>Proposition 65 became law in November 1986, when California voters approved it by a 63-37 percent margin. The official name of Proposition 65 is the <a href=\"https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=HSC&amp;division=20.&amp;title=&amp;part=&amp;chapter=6.6.&amp;article\">Safe Drinking Water and Toxic Enforcement Act of 1986</a>.</p>",
     "Featured": true,
     "Id": 318,
     "Question": "What is Proposition 65?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T21:49:09.952996"
+    "Updated": "2026-11-18T19:53:01.8359947"
   },
   {
     "AgencyServiceId": 1142,
-    "Answer": "The list contains a wide range of naturally occurring and synthetic chemicals that include additives or ingredients in pesticides, common household products, food, drugs, dyes, or solvents. Listed chemicals may also be used in manufacturing and construction, or they may be byproducts of chemical processes, such as motor vehicle exhaust.&nbsp;<br><br><a href=\"https://oehha.ca.gov/proposition-65/how-chemicals-are-added-proposition-65-list\">Learn how chemicals are added to the Proposition 65 list.</a>",
+    "Answer": "<p>The list contains a wide range of naturally occurring and synthetic chemicals that include additives or ingredients in pesticides, common household products, food, drugs, dyes, or solvents. Listed chemicals may also be used in manufacturing and construction, or they may be byproducts of chemical processes, such as motor vehicle exhaust.<a href=\"https://oehha.ca.gov/proposition-65/how-chemicals-are-added-proposition-65-list\"></a></p><p><a href=\"https://oehha.ca.gov/proposition-65/how-chemicals-are-added-proposition-65-list\">Learn how chemicals are added to the Proposition 65 list.</a></p>",
     "Featured": true,
     "Id": 319,
     "Question": "What types of chemicals are on the Proposition 65 list?",
     "SortOrder": 2,
-    "Updated": "2026-11-02T20:24:01.3004148"
+    "Updated": "2026-11-18T20:25:13.9850607"
   },
   {
     "AgencyServiceId": 1142,
@@ -1964,11 +1964,11 @@
   },
   {
     "AgencyServiceId": 1142,
-    "Answer": "The <a href=\"https://oag.ca.gov/prop65\">California Attorney General's Office</a> enforces Proposition 65. Any district attorney or city attorney (for cities whose population exceeds 750,000) may also enforce Proposition 65. In addition, any individual acting in the public interest may enforce Proposition 65 by filing a lawsuit against a business alleged to be in violation of this law.<br /><br />Lawsuits have been filed by the Attorney General&rsquo;s Office, district attorneys, consumer advocacy groups, and private citizens and law firms.",
+    "Answer": "<p>The <a href=\"https://oag.ca.gov/prop65\">California Attorney General's Office</a> enforces Proposition 65. Any district attorney or city attorney (for cities whose population exceeds 750,000) may also enforce Proposition 65. In addition, any individual acting in the public interest may enforce Proposition 65 by filing a lawsuit against a business alleged to be in violation of this law.</p><p>Lawsuits have been filed by the Attorney General’s Office, district attorneys, consumer advocacy groups, and private citizens and law firms.</p>",
     "Id": 428,
     "Question": "Who enforces Proposition 65?",
     "SortOrder": 5,
-    "Updated": "2025-10-30T21:52:45.1245638"
+    "Updated": "2026-11-18T23:02:24.2683811"
   },
   {
     "AgencyServiceId": 1143,
@@ -1990,21 +1990,21 @@
   },
   {
     "AgencyServiceId": 1143,
-    "Answer": "California has two-thirds of our nation's earthquake risk. <a href=\"https://www.earthquakeauthority.com/prepare-your-house-earthquake-risk/structural-risks\">Structures</a> that lack adequate <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/earthquake-insurance-policy-premium-discounts#FoundationTypes\">sill plate bolting</a> and <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/earthquake-insurance-policy-premium-discounts#FoundationTypes\">cripple-wall bracing</a> are more susceptible to earthquake damage.<br><br>The frames of older houses are often not bolted to their foundations, and their <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/earthquake-insurance-policy-premium-discounts#FoundationTypes\">cripple walls</a> may lack bracing. <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/earthquake-insurance-policy-premium-discounts#FoundationTypes\">Houses without adequate bolting and bracing</a> can slide or topple off their foundation during an earthquake, requiring potentially very expensive repairs. But this serious damage can be prevented with a proper seismic retrofit.",
+    "Answer": "<p>California has two-thirds of our nation's earthquake risk. <a href=\"https://www.earthquakeauthority.com/prepare-your-house-earthquake-risk/structural-risks\">Structures</a> that lack adequate <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/earthquake-insurance-policy-premium-discounts#FoundationTypes\">sill plate bolting</a> and <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/earthquake-insurance-policy-premium-discounts#FoundationTypes\">cripple-wall bracing</a> are more susceptible to earthquake damage.</p><p>The frames of older houses are often not bolted to their foundations, and their <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/earthquake-insurance-policy-premium-discounts#FoundationTypes\">cripple walls</a> may lack bracing. <a href=\"https://www.earthquakeauthority.com/california-earthquake-insurance-policies/earthquake-insurance-policy-premium-discounts#FoundationTypes\">Houses without adequate bolting and bracing</a> can slide or topple off their foundation during an earthquake, requiring potentially very expensive repairs. But this serious damage can be prevented with a proper seismic retrofit.</p>",
     "Featured": true,
     "Id": 331,
     "Question": "Why should I retrofit my house?",
     "SortOrder": 3,
-    "Updated": "2026-11-02T20:18:40.8869744"
+    "Updated": "2026-11-18T23:03:23.1522508"
   },
   {
     "AgencyServiceId": 1143,
-    "Answer": "There are thousands of known faults in California, and scientists continue to discover new ones. Since earthquakes can happen anywhere in California, damage to your home and personal property is always possible. Check to <a href=\"https://www.earthquakeauthority.com/prepare-your-house-earthquake-risk/preparedness-resources\">see earthquake risk near you</a> and take <a href=\"https://www.earthquakeauthority.com/california-earthquake-risk/seven-steps-to-earthquake-safety\">steps to get prepared</a>!<p></p>",
+    "Answer": "There are thousands of known faults in California, and scientists continue to discover new ones. Since earthquakes can happen anywhere in California, damage to your home and personal property is always possible. Check to <a href=\"https://www.earthquakeauthority.com/prepare-your-house-earthquake-risk/preparedness-resources\">see earthquake risk near you</a> and take <a href=\"https://www.earthquakeauthority.com/california-earthquake-risk/seven-steps-to-earthquake-safety\">steps to get prepared</a>!",
     "Featured": true,
     "Id": 332,
     "Question": "Is my home at risk from an earthquake?",
     "SortOrder": 4,
-    "Updated": "2026-11-02T20:15:15.4973719"
+    "Updated": "2026-11-18T19:54:15.2443159"
   },
   {
     "AgencyServiceId": 1144,
@@ -2044,55 +2044,55 @@
   },
   {
     "AgencyServiceId": 1146,
-    "Answer": "<p>The Appellant may file the Notice of Appeal with the Panel in one of two ways:</p><p>&nbsp;</p><ul><li>By delivery or mail to the CCAP office located at 801 Capitol Mall, Suite 601, Sacramento, CA 95814</li><li>By email to appeals@ccap.ca.gov</li></ul><p>Additionally, Appellant must serve a copy of the Notice of Appeal to all parties to the matter. The parties may agree in writing to have the Notice served via email. Appellant should submit the Proof of Service to the Panel at the same time as the Notice of Appeal.</p><div class=\"OutlineElement Ltr SCXW237960222 BCX0\" style=\"margin:0px;padding:0px;user-select:text;-webkit-user-drag:none;-webkit-tap-highlight-color:transparent;overflow:visible;cursor:text;clear:both;position:relative;direction:ltr;font-family:'Segoe UI', 'Segoe UI Web', Arial, Verdana, sans-serif;background-color:#ffffff;\"><p class=\"Paragraph SCXW237960222 BCX0\" paraid=\"1276964602\" paraeid=\"{4f586c25-0e43-4215-8410-e2e4b0781bec}{181}\" style=\"margin-bottom:0px;padding:0px;user-select:text;-webkit-user-drag:none;-webkit-tap-highlight-color:transparent;overflow-wrap:break-word;vertical-align:baseline;background-color:transparent;color:windowtext;\"><span data-contrast=\"auto\" class=\"TextRun SCXW237960222 BCX0\" xml:lang=\"EN-US\" lang=\"EN-US\" style=\"margin:0px;padding:0px;user-select:text;-webkit-user-drag:none;-webkit-tap-highlight-color:transparent;font-variant-ligatures:none !important;font-size:11pt;font-family:Calibri, Calibri_MSFontService, sans-serif;font-kerning:none;line-height:19.425px;\"><span class=\"NormalTextRun SCXW237960222 BCX0\" style=\"margin:0px;padding:0px;user-select:text;-webkit-user-drag:none;-webkit-tap-highlight-color:transparent;background-color:inherit;\"></span></span><span class=\"EOP SCXW237960222 BCX0\" data-ccp-props=\"{\" 201341983\":0,\"335559739\":160,\"335559740\":259}\"=\"\" style=\"margin:0px;padding:0px;user-select:text;-webkit-user-drag:none;-webkit-tap-highlight-color:transparent;font-size:11pt;line-height:19.425px;font-family:Calibri, Calibri_MSFontService, sans-serif;\"></span></p></div>",
+    "Answer": "<p>The Appellant may file the Notice of Appeal with the Panel in one of two ways:</p><ul><li>By delivery or mail to the CCAP office located at 801 Capitol Mall, Suite 601, Sacramento, CA 95814</li><li>By email to appeals@ccap.ca.gov</li></ul><p>Additionally, Appellant must serve a copy of the Notice of Appeal to all parties to the matter. The parties may agree in writing to have the Notice served via email. Appellant should submit the Proof of Service to the Panel at the same time as the Notice of Appeal.</p>",
     "Id": 338,
-    "Question": "Where and how should the Notice of Appeal be filed? ",
+    "Question": "Where and how should the Notice of Appeal be filed?",
     "SortOrder": 1,
-    "Updated": "2019-05-30T17:33:32.6128146"
+    "Updated": "2026-11-18T19:12:53.3577087"
   },
   {
     "AgencyServiceId": 1147,
-    "Answer": "<p>Unclaimed property is generally defined as any financial asset that has been left inactive by the owner for a period of time specified in the law, generally three (3) years. The California Unclaimed Property Law does not include real estate. Unused gift certificates are also generally excluded from unclaimed property and are not send to the State as unclaimed property. The most common types of Unclaimed Property are:&nbsp;</p><ul><li>Bank accounts and safe deposit box contents</li><li>Stocks, mutual funds, bonds, and dividends</li><li>Uncashed cashier&rsquo;s checks and money orders</li><li>Certificates of deposit</li><li>Matured or terminated insurance policies</li><li>Estates</li><li>Mineral interests and royalty payments</li><li>Trust funds and escrow accounts</li></ul><p style=\"box-sizing:inherit;margin-bottom:1.25rem;padding:0px;font-family:Arial, Helvetica, san-serif;font-size:16px;line-height:1.6;text-rendering:optimizelegibility;background-color:#ffffff;\"><br /></p>",
+    "Answer": "<p>Unclaimed property is generally defined as any financial asset that has been left inactive by the owner for a period of time specified in the law, generally three (3) years. The California Unclaimed Property Law does not include real estate. Unused gift certificates are also generally excluded from unclaimed property and are not send to the State as unclaimed property. The most common types of Unclaimed Property are:</p><ul><li>Bank accounts and safe deposit box contents</li><li>Stocks, mutual funds, bonds, and dividends</li><li>Uncashed cashier’s checks and money orders</li><li>Certificates of deposit</li><li>Matured or terminated insurance policies</li><li>Estates</li><li>Mineral interests and royalty payments</li><li>Trust funds and escrow accounts</li></ul>",
     "Featured": true,
     "Id": 339,
     "Question": "What is Unclaimed Property?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T22:16:07.5789402"
+    "Updated": "2026-11-18T19:56:28.1308589"
   },
   {
     "AgencyServiceId": 1147,
-    "Answer": "California&rsquo;s Unclaimed Property Law requires corporations, businesses, associations, financial institutions, and insurance companies (referred to as &ldquo;Holders&rdquo;) to annually report and deliver property to the State Controller&rsquo;s Office after there has been no activity on the account or contact with the owner for a period of time specified in the law&mdash;generally three (3) years. Often, contact is lost when the owner forgets that the account exists, or moves and does not leave a forwarding address, or the forwarding order expires. In some cases, the owner dies and the heirs have no knowledge of the property.<br />",
+    "Answer": "California’s Unclaimed Property Law requires corporations, businesses, associations, financial institutions, and insurance companies (referred to as “Holders”) to annually report and deliver property to the State Controller’s Office after there has been no activity on the account or contact with the owner for a period of time specified in the law—generally three (3) years. Often, contact is lost when the owner forgets that the account exists, or moves and does not leave a forwarding address, or the forwarding order expires. In some cases, the owner dies and the heirs have no knowledge of the property.",
     "Featured": true,
     "Id": 340,
     "Question": "How Does The State Get Unclaimed Property?",
     "SortOrder": 2,
-    "Updated": "2025-10-30T20:50:59.2221935"
+    "Updated": "2026-11-18T23:03:44.1718565"
   },
   {
     "AgencyServiceId": 1147,
-    "Answer": "The Unclaimed Property Law was passed to protect consumers. It prevents businesses with unclaimed property from keeping your money and using it as business income. The law provides California citizens a single source, the State Controller&rsquo;s Office, to check for unclaimed property that may be reported by businesses from around the nation and enables the State to return property, or the net proceeds from any legally required sale of the property, to its rightful owner or their heirs.<br />",
+    "Answer": "The Unclaimed Property Law was passed to protect consumers. It prevents businesses with unclaimed property from keeping your money and using it as business income. The law provides California citizens a single source, the State Controller’s Office, to check for unclaimed property that may be reported by businesses from around the nation and enables the State to return property, or the net proceeds from any legally required sale of the property, to its rightful owner or their heirs.",
     "Featured": true,
     "Id": 341,
-    "Question": "Why Does California Have An Unclaimed Property Law? ",
+    "Question": "Why Does California Have An Unclaimed Property Law?",
     "SortOrder": 3,
-    "Updated": "2025-10-30T20:50:48.9252996"
+    "Updated": "2026-11-18T23:47:32.0589965"
   },
   {
     "AgencyServiceId": 1170,
-    "Answer": "Yes. On March 5, 2020, Insurance Commissioner Ricardo Lara released a COVID-19 Screening and Testing Bulletin1 directing health insurers to waive cost sharing amounts for certain COVID19 related screening and testing. Since that date, two federal laws were passed, which require coverage for COVID-19 related diagnostic testing and screening, without patient cost sharing, including deductibles, coinsurance, and copays. Section 6001 of the federal Families First Coronavirus Response Act (FFCRA) (PL 116-127) &sect; 6001, as amended by &sect; 3201 of the federal Coronavirus Aid, Relief, and Economic Security Act (CARES Act) (PL 116-136),2 applies to a &ldquo;group health plan,&rdquo; including insured3 and selfinsured group health plans, private employment-based group health plans (ERISA plans), nonfederal governmental plans, and church plans.4 It also applies to &ldquo;individual health insurance<br />",
+    "Answer": "Yes. On March 5, 2020, Insurance Commissioner Ricardo Lara released a COVID-19 Screening and Testing Bulletin1 directing health insurers to waive cost sharing amounts for certain COVID19 related screening and testing. Since that date, two federal laws were passed, which require coverage for COVID-19 related diagnostic testing and screening, without patient cost sharing, including deductibles, coinsurance, and copays. Section 6001 of the federal Families First Coronavirus Response Act (FFCRA) (PL 116-127) § 6001, as amended by § 3201 of the federal Coronavirus Aid, Relief, and Economic Security Act (CARES Act) (PL 116-136),2 applies to a “group health plan,” including insured3 and selfinsured group health plans, private employment-based group health plans (ERISA plans), nonfederal governmental plans, and church plans.4 It also applies to “individual health insurance",
     "Id": 342,
     "Question": "As a consumer, does my health insurer have to waive cost sharing for COVID-19 testing and related diagnostic items and services?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T22:09:09.6407914"
+    "Updated": "2026-11-18T23:07:03.6509736"
   },
   {
     "AgencyServiceId": 1170,
-    "Answer": "No. Health insurers have a legal obligation to promptly pay claims. Insurance Code &sect;&sect; 10123.13 and 10123.147 require insurers to pay claims as soon as possible but no later than 30 working days after receipt of a complete claim, unless the insurer notifies the provider in writing that the claim has been denied or is being contested. Insurers must pay interest on a completed claim if the claim has not been reimbursed, contested or denied within the 30 working-day deadline.11 Failure to comply with the claims handling deadlines in state law may also be considered an unfair claims settlement practice under Insurance Code &sect; 790.03(h). Providers should contact the Department&rsquo;s Provider Complaint Center if a health insurer is not paying claims in compliance with these deadlines.<br />",
+    "Answer": "No. Health insurers have a legal obligation to promptly pay claims. Insurance Code §§ 10123.13 and 10123.147 require insurers to pay claims as soon as possible but no later than 30 working days after receipt of a complete claim, unless the insurer notifies the provider in writing that the claim has been denied or is being contested. Insurers must pay interest on a completed claim if the claim has not been reimbursed, contested or denied within the 30 working-day deadline.11 Failure to comply with the claims handling deadlines in state law may also be considered an unfair claims settlement practice under Insurance Code § 790.03(h). Providers should contact the Department’s Provider Complaint Center if a health insurer is not paying claims in compliance with these deadlines.",
     "Featured": true,
     "Id": 343,
     "Question": "I’m a provider and I’m having a problem with insurers reimbursing, denying or contesting the claim I submitted in a timely manner. Can they do that?",
     "SortOrder": 2,
-    "Updated": "2025-10-30T22:14:07.1398973"
+    "Updated": "2026-11-18T23:07:25.7279384"
   },
   {
     "AgencyServiceId": 1170,
@@ -2104,20 +2104,20 @@
   },
   {
     "AgencyServiceId": 1171,
-    "Answer": "<p>To be eligible for the California&rsquo;s Low Cost Auto Insurance Program, or CLCA, consumers must:</p><ul><li>Have a valid California driver&rsquo;s license</li><li>Own a vehicle valued at $25,000 or less</li><li>Meet income eligibility guidelines</li><li>Be at least 16 years of age</li><li>Have a Good Driving Record<br /></li></ul>",
+    "Answer": "<p>To be eligible for the California’s Low Cost Auto Insurance Program, or CLCA, consumers must:</p><ul><li>Have a valid California driver’s license</li><li>Own a vehicle valued at $25,000 or less</li><li>Meet income eligibility guidelines</li><li>Be at least 16 years of age</li><li>Have a Good Driving Record</li></ul>",
     "Featured": true,
     "Id": 345,
     "Question": "What are the eligibility requirements?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T20:44:03.6961775"
+    "Updated": "2026-11-18T23:08:00.851703"
   },
   {
     "AgencyServiceId": 1171,
-    "Answer": "<p>Income eligibility requirements per household effective 2020 are:</p><ul><li>1 person - $32,200.00</li><li>2 people - $43,550.00</li><li>3 people - $54,900.00</li><li>4 people - $66,250.00</li></ul><p>&nbsp;A &ldquo;household&rdquo; is defined as all persons listed on a federal or state income tax form.<br /></p>",
+    "Answer": "<p>Income eligibility requirements per household effective 2020 are:</p><ul><li>1 person - $32,200.00</li><li>2 people - $43,550.00</li><li>3 people - $54,900.00</li><li>4 people - $66,250.00</li></ul><p>A “household” is defined as all persons listed on a federal or state income tax form.</p>",
     "Id": 346,
     "Question": "What are the income requirements?",
     "SortOrder": 2,
-    "Updated": "2025-10-30T20:44:33.3359379"
+    "Updated": "2026-11-18T19:57:19.0413039"
   },
   {
     "AgencyServiceId": 1171,
@@ -2156,43 +2156,43 @@
   },
   {
     "AgencyServiceId": 1195,
-    "Answer": "With an account, you are able to apply to state jobs electronically, set up alerts for new job opportunities, store your resume, and track your application status. <a href=\"https://calcareers.ca.gov/CalHRPublic/Login.aspx\">Learn more about benefits.&nbsp;</a>",
+    "Answer": "With an account, you are able to apply to state jobs electronically, set up alerts for new job opportunities, store your resume, and track your application status. <a href=\"https://calcareers.ca.gov/CalHRPublic/Login.aspx\">Learn more about benefits.</a>",
     "Id": 353,
     "Question": "What are the benefits of creating a CalCareer account?",
     "SortOrder": 1,
-    "Updated": "2024-10-29T17:14:14.7034513"
+    "Updated": "2026-11-18T20:25:45.8932456"
   },
   {
     "AgencyServiceId": 1195,
-    "Answer": "A CalCareer account includes all State of California jobs. A CalJOBS account includes jobs from local employers including State of California jobs.&nbsp;",
+    "Answer": "A CalCareer account includes all State of California jobs. A CalJOBS account includes jobs from local employers including State of California jobs.",
     "Id": 354,
     "Question": "What is the difference between having a CalJOBS and CalCareers account?",
     "SortOrder": 2,
-    "Updated": "2024-10-29T17:16:12.2299039"
+    "Updated": "2026-11-18T20:26:06.6216229"
   },
   {
     "AgencyServiceId": 1196,
-    "Answer": "If you have a \"pending payment\" status, you may need to update your application to determine eligibility. Review <a href=\"https://edd.ca.gov/en/unemployment/eligibility/\">eligibility requirements.</a> ",
+    "Answer": "If you have a \"pending payment\" status, you may need to update your application to determine eligibility. Review <a href=\"https://edd.ca.gov/en/unemployment/eligibility/\">eligibility requirements.</a>",
     "Id": 355,
     "Question": "What does the status \"pending payment\" mean?",
     "SortOrder": 1,
-    "Updated": "2024-10-29T18:13:06.1263363"
+    "Updated": "2026-11-19T00:02:38.6809999"
   },
   {
     "AgencyServiceId": 1196,
-    "Answer": "Use your <a href=\"https://myedd.edd.ca.gov/s/login/?language=en_US&amp;ec=302&amp;startURL=%2Fs%2F\">UI online account</a> to provide additional documentation to verify your identity.&nbsp;",
+    "Answer": "Use your <a href=\"https://myedd.edd.ca.gov/s/login/?language=en_US&amp;ec=302&amp;startURL=%2Fs%2F\">UI online account</a> to provide additional documentation to verify your identity.",
     "Id": 356,
-    "Question": "How do I respond to an identity verification request? ",
+    "Question": "How do I respond to an identity verification request?",
     "SortOrder": 2,
-    "Updated": "2024-10-29T18:14:58.7045936"
+    "Updated": "2026-11-18T20:26:42.0495652"
   },
   {
     "AgencyServiceId": 1196,
-    "Answer": "If there is an issue with your claim, EDD will contact you either by email or mail to complete an eligibility questionnaire.&nbsp;",
+    "Answer": "If there is an issue with your claim, EDD will contact you either by email or mail to complete an eligibility questionnaire.",
     "Id": 357,
     "Question": "What if I received notice for eligibility issues?",
     "SortOrder": 3,
-    "Updated": "2024-10-29T18:16:26.9268288"
+    "Updated": "2026-11-18T20:27:02.6877299"
   },
   {
     "AgencyServiceId": 1196,
@@ -2204,11 +2204,11 @@
   },
   {
     "AgencyServiceId": 1199,
-    "Answer": "You can send an email to the program's primary contact email: <a href=\"mailto:hdim@arb.ca.gov\">hdim@arb.ca.gov</a>",
+    "Answer": "You can send an email to the program's primary contact email: <a>hdim@arb.ca.gov</a>",
     "Id": 362,
-    "Question": "Who can I email about the Clean Truck Check program? ",
+    "Question": "Who can I email about the Clean Truck Check program?",
     "SortOrder": 1,
-    "Updated": "2024-10-29T22:08:36.8646111"
+    "Updated": "2026-11-19T00:02:54.9038362"
   },
   {
     "AgencyServiceId": 1199,
@@ -2228,19 +2228,19 @@
   },
   {
     "AgencyServiceId": 1199,
-    "Answer": "Yes, all non-gasoline heavy-duty vehicles with a GVWR over 14,000 lbs. that operate in CA must be compliant with Clean Truck Check. Out of state vehicles have the same compliance requirements as California registered vehicles.&nbsp;",
+    "Answer": "Yes, all non-gasoline heavy-duty vehicles with a GVWR over 14,000 lbs. that operate in CA must be compliant with Clean Truck Check. Out of state vehicles have the same compliance requirements as California registered vehicles.",
     "Id": 365,
     "Question": "Do I still need to report if my vehicle isn't registered in CA?",
     "SortOrder": 5,
-    "Updated": "2024-10-29T22:12:36.6854571"
+    "Updated": "2026-11-18T20:27:24.4386664"
   },
   {
     "AgencyServiceId": 1203,
-    "Answer": "You can register for a Customer Connect account online or by 24-7 toll-free automated phone system (866-901-3212).&nbsp;",
+    "Answer": "You can register for a Customer Connect account online or by 24-7 toll-free automated phone system (866-901-3212).",
     "Id": 370,
     "Question": "How do I register for an account?",
     "SortOrder": 1,
-    "Updated": "2024-10-29T23:06:11.7797654"
+    "Updated": "2026-11-18T20:28:13.7307688"
   },
   {
     "AgencyServiceId": 1203,
@@ -2254,9 +2254,9 @@
     "AgencyServiceId": 1204,
     "Answer": "Visit the <a href=\"https://www.ftb.ca.gov/myftb/help/index.html\">full FAQs</a>",
     "Id": 373,
-    "Question": "How can I learn more about MyFTB account? ",
+    "Question": "How can I learn more about MyFTB account?",
     "SortOrder": 1,
-    "Updated": "2024-10-29T23:15:08.6330338"
+    "Updated": "2026-11-19T00:03:10.7184743"
   },
   {
     "AgencyServiceId": 1204,
@@ -2268,19 +2268,19 @@
   },
   {
     "AgencyServiceId": 1205,
-    "Answer": "<p>The e-Manifest System was established by the United States Environmental Protection Agency (U.S. EPA) and is the national system for tracking hazardous waste shipments electronically. Visit the <a href=\"https://www.epa.gov/e-manifest\">U.S. EPA&rsquo;s e-Manifest webpage</a> for information on user registration, webinars, stakeholder fact sheets, FAQs and more.</p>",
+    "Answer": "The e-Manifest System was established by the United States Environmental Protection Agency (U.S. EPA) and is the national system for tracking hazardous waste shipments electronically. Visit the <a href=\"https://www.epa.gov/e-manifest\">U.S. EPA’s e-Manifest webpage</a> for information on user registration, webinars, stakeholder fact sheets, FAQs and more.",
     "Id": 374,
-    "Question": "How is the United State's Environment Protection Agency Electronic Manifest system related? ",
+    "Question": "How is the United State's Environment Protection Agency Electronic Manifest system related?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T21:43:18.1761531"
+    "Updated": "2026-11-19T00:03:24.4815951"
   },
   {
     "AgencyServiceId": 1205,
     "Answer": "See <a href=\"https://dtsc.ca.gov/hazardous-waste-manifest-information/\">additional resources</a>",
     "Id": 375,
-    "Question": "How can I learn more about managing hazardous waste? ",
+    "Question": "How can I learn more about managing hazardous waste?",
     "SortOrder": 2,
-    "Updated": "2025-10-30T21:43:42.3498491"
+    "Updated": "2026-11-19T00:03:36.7107435"
   },
   {
     "AgencyServiceId": 1209,
@@ -2302,12 +2302,12 @@
   },
   {
     "AgencyServiceId": 1209,
-    "Answer": "Please see the Smile, California website,&nbsp;<a href=\"https://smilecalifornia.org/common-questions/\">https://smilecalifornia.org/common-questions/</a>.&nbsp;",
+    "Answer": "Please see the Smile, California website, <a href=\"https://smilecalifornia.org/common-questions/\">https://smilecalifornia.org/common-questions/</a>.",
     "Featured": true,
     "Id": 424,
     "Question": "Are there more FAQs about Medi-Cal Dental?",
     "SortOrder": 3,
-    "Updated": "2024-11-21T21:19:11.215401"
+    "Updated": "2026-11-18T20:28:54.2547061"
   },
   {
     "AgencyServiceId": 1211,
@@ -2327,11 +2327,11 @@
   },
   {
     "AgencyServiceId": 1213,
-    "Answer": "All examinations and assessments that are given by CalHR and other State departments are listed on the CalCareers website. Examinations and assessments are administered within specific testing end dates and not all exams or assessments are always available. Please check back, as the site is updated on a continuous basis.&nbsp;",
+    "Answer": "All examinations and assessments that are given by CalHR and other State departments are listed on the CalCareers website. Examinations and assessments are administered within specific testing end dates and not all exams or assessments are always available. Please check back, as the site is updated on a continuous basis.",
     "Id": 379,
-    "Question": "I am looking for a specific exam and can't find it. What should I do? ",
+    "Question": "I am looking for a specific exam and can't find it. What should I do?",
     "SortOrder": 1,
-    "Updated": "2024-11-01T19:02:57.7309469"
+    "Updated": "2026-11-19T00:03:49.3288439"
   },
   {
     "AgencyServiceId": 1213,
@@ -2345,26 +2345,26 @@
     "AgencyServiceId": 1213,
     "Answer": "Review <a href=\"https://calcareers.ca.gov/CalHRPublic/GeneralInfo/TypingCertification.aspx\">Typing Certification Tests requirements</a>",
     "Id": 381,
-    "Question": "How do I take a typing test? ",
+    "Question": "How do I take a typing test?",
     "SortOrder": 3,
-    "Updated": "2024-11-01T19:05:57.5544361"
+    "Updated": "2026-11-19T00:04:01.3362235"
   },
   {
     "AgencyServiceId": 1213,
     "Answer": "Visit the <a href=\"https://calcareers.ca.gov/CalHRPublic/GeneralInfo/FAQS.aspx\">full FAQs</a>.",
     "Id": 382,
-    "Question": "How can I learn more about taking an exam? ",
+    "Question": "How can I learn more about taking an exam?",
     "SortOrder": 4,
-    "Updated": "2024-11-01T19:06:18.5257563"
+    "Updated": "2026-11-19T00:04:12.9535664"
   },
   {
     "AgencyServiceId": 1217,
-    "Answer": "View the FAQ and get help from the Title Transfer Assistant on the&nbsp;<a href=\"https://www.dmv.ca.gov/portal/vehicle-registration/titles/title-transfers-and-changes/\">Title Transfer</a> page.",
+    "Answer": "View the FAQ and get help from the Title Transfer Assistant on the <a href=\"https://www.dmv.ca.gov/portal/vehicle-registration/titles/title-transfers-and-changes/\">Title Transfer</a> page.",
     "Featured": true,
     "Id": 502,
-    "Question": "I have questions about title and transfer requirements. ",
+    "Question": "I have questions about title and transfer requirements.",
     "SortOrder": 1,
-    "Updated": "2026-08-02T22:26:59.6705719"
+    "Updated": "2026-11-19T00:04:31.4735049"
   },
   {
     "AgencyServiceId": 1219,
@@ -2376,12 +2376,12 @@
   },
   {
     "AgencyServiceId": 1219,
-    "Answer": "<p>The mDL can be used for identity verification at TSA, select retail, select websites, and select travel experiences. See <a href=\"https://www.dmv.ca.gov/portal/california-mdl/\">where to use the mDL</a>.</p>",
+    "Answer": "The mDL can be used for identity verification at TSA, select retail, select websites, and select travel experiences. See <a href=\"https://www.dmv.ca.gov/portal/california-mdl/\">where to use the mDL</a>.",
     "Featured": true,
     "Id": 387,
     "Question": "Where can I use the California mDL?",
     "SortOrder": 2,
-    "Updated": "2026-08-02T22:23:11.9264914"
+    "Updated": "2026-11-18T19:59:08.8449212"
   },
   {
     "AgencyServiceId": 1223,
@@ -2395,17 +2395,17 @@
     "AgencyServiceId": 1223,
     "Answer": "Different warnings can allow for individuals time to appropriately react and ensure safety for themselves.",
     "Id": 392,
-    "Question": "What are the benefits of earthquake warnings? ",
+    "Question": "What are the benefits of earthquake warnings?",
     "SortOrder": 2,
-    "Updated": "2024-11-01T22:27:25.5533479"
+    "Updated": "2026-11-19T00:04:46.3162284"
   },
   {
     "AgencyServiceId": 1223,
-    "Answer": "<p>There are a few ways for individuals or organizations to prepare for&nbsp; an emergency such as earthquake:<br /></p><ul><li>Download the MyShake App and enable location services to receive earthquake warnings.</li><li>Have a plan in place in advance so you can act quickly if you receive a MyShake, Android or WEA earthquake warning. </li><li>Visit ca.gov for information and other resources to help prepare for earthquakes in California</li><li>Follow Cal OES on social media</li></ul>",
+    "Answer": "<p>There are a few ways for individuals or organizations to prepare for an emergency such as earthquake:</p><ul><li>Download the MyShake App and enable location services to receive earthquake warnings.</li><li>Have a plan in place in advance so you can act quickly if you receive a MyShake, Android or WEA earthquake warning. </li><li>Visit ca.gov for information and other resources to help prepare for earthquakes in California</li><li>Follow Cal OES on social media</li></ul>",
     "Id": 393,
-    "Question": "How can I receive more information about earthquake warnings and related resources? ",
+    "Question": "How can I receive more information about earthquake warnings and related resources?",
     "SortOrder": 3,
-    "Updated": "2024-11-01T22:28:49.6916778"
+    "Updated": "2026-11-19T00:04:58.5827424"
   },
   {
     "AgencyServiceId": 1223,
@@ -2425,11 +2425,11 @@
   },
   {
     "AgencyServiceId": 1227,
-    "Answer": "Yes there are multiple options to file taxes online for free and for a fee. ",
+    "Answer": "Yes there are multiple options to file taxes online for free and for a fee.",
     "Id": 396,
     "Question": "Are there free online filing services?",
     "SortOrder": 1,
-    "Updated": "2024-11-02T00:02:06.4512911"
+    "Updated": "2026-11-19T00:05:22.4296168"
   },
   {
     "AgencyServiceId": 1227,
@@ -2441,11 +2441,11 @@
   },
   {
     "AgencyServiceId": 1227,
-    "Answer": "If you have limited income and/or are over the age of 60, you can get <a href=\"https://www.ftb.ca.gov/help/free-tax-help/index.html\">free tax help</a>. ",
+    "Answer": "If you have limited income and/or are over the age of 60, you can get <a href=\"https://www.ftb.ca.gov/help/free-tax-help/index.html\">free tax help</a>.",
     "Id": 398,
     "Question": "Can I get help to e-file?",
     "SortOrder": 3,
-    "Updated": "2024-11-02T00:03:55.109643"
+    "Updated": "2026-11-19T00:05:43.0034089"
   },
   {
     "AgencyServiceId": 1227,
@@ -2457,12 +2457,12 @@
   },
   {
     "AgencyServiceId": 1230,
-    "Answer": "Concept proposals are accepted on a rolling basis. ",
+    "Answer": "Concept proposals are accepted on a rolling basis.",
     "Featured": true,
     "Id": 401,
     "Question": "When are Concept Proposals due?",
     "SortOrder": 1,
-    "Updated": "2024-11-05T18:52:38.8915078"
+    "Updated": "2026-11-19T00:06:07.0204887"
   },
   {
     "AgencyServiceId": 1230,
@@ -2475,81 +2475,81 @@
   },
   {
     "AgencyServiceId": 1230,
-    "Answer": "<p>The Conservancy&rsquo;s Directed Grant Program seeks to support multi-benefit projects that advance a number of goals, including but not limited to:</p><ul><li>Conserving land</li><li>Protecting resources</li><li>Reducing flood and fire risk</li><li>Improving water quality<br /></li><li>Protecting and enhancing wildlife habitats<br /></li><li>Completing the San Diego River Trail<br /></li><li>Providing public access for the enjoyment of the San Diego River Park and open space, trails, campgrounds and park facilities<br /></li><li>Removing invasive plant species from the watershed<br /></li><li>Increasing native habitat and promoting the re-establishment of native species<br /></li><li>Promoting cultural and tribal preservation, and historical interpretation of the San Diego River and its people<br /></li><li>Protecting the natural and scenic beauty of the San Diego River watershed<br /></li></ul>",
+    "Answer": "<p>The Conservancy’s Directed Grant Program seeks to support multi-benefit projects that advance a number of goals, including but not limited to:</p><ul><li>Conserving land</li><li>Protecting resources</li><li>Reducing flood and fire risk</li><li>Improving water quality</li><li>Protecting and enhancing wildlife habitats</li><li>Completing the San Diego River Trail</li><li>Providing public access for the enjoyment of the San Diego River Park and open space, trails, campgrounds and park facilities</li><li>Removing invasive plant species from the watershed</li><li>Increasing native habitat and promoting the re-establishment of native species</li><li>Promoting cultural and tribal preservation, and historical interpretation of the San Diego River and its people</li><li>Protecting the natural and scenic beauty of the San Diego River watershed</li></ul>",
     "Featured": true,
     "Id": 403,
     "Question": "What type of projects are eligible for the Directed Grant Program?",
     "SortOrder": 3,
-    "Updated": "2025-10-30T20:49:10.8068702"
+    "Updated": "2026-11-18T23:09:24.5903113"
   },
   {
     "AgencyServiceId": 1230,
     "Answer": "Eligible entities are public agencies, including any city, county, city and county, special district, joint powers authority, state agency, public college, public university; (2) a non-profit organization that qualifies under Section 501(c)(3) of the United States Internal Revenue Code; or (3) a Native American Tribe that is either federally recognized or is a California Native American Tribe on the Native American Heritage Commission contact list and located within traditional Kumeyaay territory and culturally affiliated with the County of San Diego.",
     "Featured": true,
     "Id": 404,
-    "Question": "Who is considered an eligible entity for the Directed Grant Program? ",
+    "Question": "Who is considered an eligible entity for the Directed Grant Program?",
     "SortOrder": 4,
-    "Updated": "2024-11-05T18:53:33.6183795"
+    "Updated": "2026-11-19T00:06:25.3230995"
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p data-list=\"0\" data-level=\"1\" style=\"text-indent:-.25in;\">&nbsp; &nbsp; &nbsp; &nbsp;<a href=\"https://www.youtube.com/watch?v=li3fCyBXTuQ\"><span style=\"font-family:'Segoe UI',sans-serif;\">Statewide Multi-Payer Fee Schedule for School-Linked Behavioral Health Services</span></a><span style=\"font-family:'Segoe UI',sans-serif;color:windowtext;\">: Children and youth may have their school&rsquo;s mental health services covered by their insurance providers.&nbsp;</span></p>",
+    "Answer": "Children and youth may have their school’s mental health services covered by their insurance providers.",
     "Featured": true,
     "Id": 411,
     "Question": "What are Statewide Multi-Payer Fee Schedule for School-Linked Behavioral Health Services?",
     "SortOrder": 1,
-    "Updated": "2024-11-21T20:59:06.5587544"
+    "Updated": "2026-11-18T18:26:12.8391737"
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p><a href=\"https://elevateyouthca.org/\"><span style=\"font-family:'Segoe UI',sans-serif;color:#0563C1;\">Elevate Youth California</span></a><span style=\"font-family:'Segoe UI',sans-serif;\"> is a prevention program funded by Proposition 64. It serves low-income youth ages 12 to 26 in Tribal, LGBTQIA+, and communities of color across the state. The program provides necessary peer-to-peer support, mentoring, substance use prevention education, and youth civic engagement activities in communities disproportionally affected by the war on drugs.&nbsp;</span></p>",
+    "Answer": "<a href=\"https://elevateyouthca.org/\">Elevate Youth California</a> is a prevention program funded by Proposition 64. It serves low-income youth ages 12 to 26 in Tribal, LGBTQIA+, and communities of color across the state. The program provides necessary peer-to-peer support, mentoring, substance use prevention education, and youth civic engagement activities in communities disproportionally affected by the war on drugs.",
     "Featured": true,
     "Id": 412,
     "Question": "What is Elevate Youth California?",
     "SortOrder": 2,
-    "Updated": "2024-11-21T20:59:12.1699615"
+    "Updated": "2026-11-18T19:59:48.3082688"
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p><a href=\"https://californiaopioidresponse.org/matproject/youth-opioid-response/\">California Youth Opioid Response</a> aims to increase access to care through the expansion of Medication Assisted Treatment services and opioid and stimulant use prevention for youth and families.</p>",
+    "Answer": "<a href=\"https://californiaopioidresponse.org/matproject/youth-opioid-response/\">California Youth Opioid Response</a> aims to increase access to care through the expansion of Medication Assisted Treatment services and opioid and stimulant use prevention for youth and families.",
     "Featured": true,
     "Id": 413,
     "Question": "What is the California Youth Opioid Response?",
     "SortOrder": 3,
-    "Updated": "2026-11-10T17:34:24.6268514"
+    "Updated": "2026-11-18T20:00:23.2500654"
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p style=\"line-height:107%;background:white;\"><a href=\"https://californiaopioidresponse.org/matproject/song-for-charlie-fentanyl-awareness-and-drug-education-program/\"><span style=\"line-height:107%;font-family:'Segoe UI',sans-serif;color:#0563C1;\">Song for Charlie: Fentanyl Awareness and Drug Education Program</span></a><span style=\"text-decoration:underline;\"><span style=\"line-height:107%;font-family:'Segoe UI',sans-serif;\">:</span></span><span style=\"line-height:107%;font-family:'Segoe UI',sans-serif;\"> This online learning hub equips California families with factual, current, actionable information and tools that may help parents keep California&rsquo;s youth safe from harm and facilitate open conversations about mental health, substances, and the heightened risks associated with self-medication caused by the emergence of synthetic drugs like fentanyl in the street drug supply.</span></p>",
+    "Answer": "<a href=\"https://californiaopioidresponse.org/matproject/song-for-charlie-fentanyl-awareness-and-drug-education-program/education-program\">Song for Charlie: Fentanyl Awareness and Drug Education Program</a>: This online learning hub equips California families with factual, current, actionable information and tools that may help parents keep California’s youth safe from harm and facilitate open conversations about mental health, substances, and the heightened risks associated with self-medication caused by the emergence of synthetic drugs like fentanyl in the street drug supply.",
     "Featured": true,
     "Id": 414,
     "Question": "What is the Song for Charlie: Fentanyl Awareness and Drug Education Program?",
     "SortOrder": 4,
-    "Updated": "2024-11-21T20:59:25.869648"
+    "Updated": "2026-11-18T18:24:09.8349642"
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p style=\"line-height:107%;background:white;\"><a href=\"https://californiaopioidresponse.org/matproject/young-people-in-recovery/\"><span style=\"line-height:107%;font-family:'Segoe UI',sans-serif;color:#0563C1;\">Young People in Recovery</span></a><span style=\"line-height:107%;font-family:'Segoe UI',sans-serif;\"> launches chapters and life-skills curriculum programs for youth in recovery from opioid use and substance use disorders.</span></p>",
+    "Answer": "<a href=\"https://californiaopioidresponse.org/matproject/young-people-in-recovery/\">Young People in Recovery</a> launches chapters and life-skills curriculum programs for youth in recovery from opioid use and substance use disorders.",
     "Id": 415,
     "Question": "What is Young People in Recovery?",
     "SortOrder": 5,
-    "Updated": "2024-11-21T20:58:09.1934621"
+    "Updated": "2026-11-18T19:25:14.5181886"
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p style=\"line-height:107%;background:white;\"><a href=\"https://californiaopioidresponse.org/matproject/youth-opioid-education-and-awareness-and-fentanyl-education-and-awareness-campaign/\"><span style=\"line-height:107%;font-family:'Segoe UI',sans-serif;color:#0563C1;\">Youth Opioid Education and Awareness and Fentanyl Education and Awareness Campaign</span></a><span style=\"line-height:107%;font-family:'Segoe UI',sans-serif;\"> aims to prevent substance use and raise awareness of fentanyl contamination among youth and young adults, prevent overdose and overdose death among young adults using a harm reduction lens, and raise awareness among families and communities, empowering them to respond to the overdose epidemic with life-saving solutions and strategies.</span></p>",
+    "Answer": "<a href=\"https://californiaopioidresponse.org/matproject/youth-opioid-education-and-awareness-and-fentanyl-education-and-awareness-campaign/\">Youth Opioid Education and Awareness and Fentanyl Education and Awareness Campaign</a> aims to prevent substance use and raise awareness of fentanyl contamination among youth and young adults, prevent overdose and overdose death among young adults using a harm reduction lens, and raise awareness among families and communities, empowering them to respond to the overdose epidemic with life-saving solutions and strategies.",
     "Id": 416,
     "Question": "What is the Youth Opioid Education and Awareness and Fentanyl Education and Awareness Campaign?",
     "SortOrder": 6,
-    "Updated": "2024-11-21T20:58:34.0674585"
+    "Updated": "2026-11-18T19:25:45.8046136"
   },
   {
     "AgencyServiceId": 1235,
-    "Answer": "<p><a href=\"https://californiaopioidresponse.org/matproject/youth-peer-mentor-program/\">Youth Peer Mentor Program</a> trains justice-involved youth to provide recovery support to peers with substance use challenges.</p>",
+    "Answer": "<a href=\"https://californiaopioidresponse.org/matproject/youth-peer-mentor-program/\">Youth Peer Mentor Program</a> trains justice-involved youth to provide recovery support to peers with substance use challenges.",
     "Id": 417,
     "Question": "What is the Youth Peer Mentor Program?",
     "SortOrder": 7,
-    "Updated": "2026-11-10T17:29:34.2497862"
+    "Updated": "2026-11-18T19:26:16.8005643"
   },
   {
     "AgencyServiceId": 1236,
@@ -2571,11 +2571,11 @@
   },
   {
     "AgencyServiceId": 1250,
-    "Answer": "Yes, please go to:&nbsp;<a href=\"https://dtsc.ca.gov/hazardous-waste-id-number-verification-questionnaire/\">https://dtsc.ca.gov/hazardous-waste-id-number-verification-questionnaire/</a>&nbsp;for a full page of FAQs.",
+    "Answer": "Yes, please go to: <a href=\"https://dtsc.ca.gov/hazardous-waste-id-number-verification-questionnaire/\">https://dtsc.ca.gov/hazardous-waste-id-number-verification-questionnaire/</a> for a full page of FAQs.",
     "Id": 427,
     "Question": "Are there FAQs regarding eVQ?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T19:58:51.237807"
+    "Updated": "2026-11-18T20:31:08.7094199"
   },
   {
     "AgencyServiceId": 1269,
@@ -2620,12 +2620,12 @@
   },
   {
     "AgencyServiceId": 1272,
-    "Answer": "<span style=\"font-size:14.5pt;line-height:107%;font-family:'Segoe UI',sans-serif;color:#212529;\">You can watch the <a href=\"https://www.youtube.com/embed/D3S6UGSbpvM?autoplay=1&amp;showinfo=0&amp;controls=1&amp;rel=0\" target=\"_blank\">How to Scan Check-A-Ticket for Android video here</a> or the <a href=\"https://www.youtube.com/embed/GquANwiXwBQ?autoplay=1&amp;showinfo=0&amp;controls=1&amp;rel=0\" target=\"_blank\">How to Scan Check-A-Ticket for iOS video here</a>. Tap on \"Check-A-Ticket\" in the menu and hold your device so that you can see your ticket on the screen. Then keep your camera over the barcode. The scanner will automatically recognize if it is an eligible Check-A-Ticket barcode and confirm your entry.</span>",
+    "Answer": "You can watch the <a href=\"https://www.youtube.com/watch?v=D3S6UGSbpvM\">How to Scan Check-A-Ticket for Android video here</a> or the <a href=\"https://www.youtube.com/watch?v=GquANwiXwBQ\">How to Scan Check-A-Ticket for iOS video here</a>. Tap on \"Check-A-Ticket\" in the menu and hold your device so that you can see your ticket on the screen. Then keep your camera over the barcode. The scanner will automatically recognize if it is an eligible Check-A-Ticket barcode and confirm your entry.",
     "Featured": true,
     "Id": 438,
     "Question": "How do I scan for Check-a-Ticket?",
     "SortOrder": 5,
-    "Updated": "2024-12-31T19:13:48.9176959"
+    "Updated": "2026-11-18T20:31:54.2775737"
   },
   {
     "AgencyServiceId": 1272,
@@ -2637,12 +2637,12 @@
   },
   {
     "AgencyServiceId": 1272,
-    "Answer": "<span style=\"font-size:14.5pt;line-height:107%;font-family:'Segoe UI',sans-serif;color:#212529;\">You can watch the <a href=\"https://www.youtube.com/embed/Q9Jg0x9tifI?autoplay=1&amp;showinfo=0&amp;controls=1&amp;rel=0\" target=\"_blank\">How to Scan for 2nd Chance Android video here</a> or the <a href=\"https://www.youtube.com/embed/qPKT8hTyoC8?autoplay=1&amp;showinfo=0&amp;controls=1&amp;rel=0\" target=\"_blank\">How to Scan for 2nd Chance iOS video here</a>. Tap on \"Enter 2nd Chance\" in the menu and hold your device so that you can see your ticket on the screen. Then keep your camera over the barcode. The scanner will automatically recognize if it is an eligible 2nd Chance barcode and confirm your entry. Not all Draw games are eligible for 2nd Chance. Currently any SuperLotto Plus ticket, and Fantasy 5 tickets over $5, have codes that can be entered into 2nd Chance.</span>",
+    "Answer": "You can watch the <a href=\"https://www.youtube.com/watch?v=Q9Jg0x9tifI\">How to Scan for 2nd Chance Android video here</a> or the <a href=\"https://www.youtube.com/watch?v=qPKT8hTyoC8\">How to Scan for 2nd Chance iOS video here</a>. Tap on \"Enter 2nd Chance\" in the menu and hold your device so that you can see your ticket on the screen. Then keep your camera over the barcode. The scanner will automatically recognize if it is an eligible 2nd Chance barcode and confirm your entry. Not all Draw games are eligible for 2nd Chance. Currently any SuperLotto Plus ticket, and Fantasy 5 tickets over $5, have codes that can be entered into 2nd Chance.",
     "Featured": true,
     "Id": 440,
     "Question": "How do I scan to enter my 2nd Chance barcode?",
     "SortOrder": 7,
-    "Updated": "2024-12-31T19:13:58.9334141"
+    "Updated": "2026-11-18T20:32:25.8049508"
   },
   {
     "AgencyServiceId": 1272,
@@ -2686,12 +2686,12 @@
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "For steps on how to apply for admission, visit <a href=\"https://www.calvet.ca.gov/VetHomes/Pages/apply.aspx\">Applying for a CalVet Veterans Home</a>.<br />",
+    "Answer": "For steps on how to apply for admission, visit <a href=\"https://www.calvet.ca.gov/VetHomes/Pages/apply.aspx\">Applying for a CalVet Veterans Home</a>.",
     "Featured": true,
     "Id": 446,
     "Question": "How do I apply for admission to a Veterans Home of California?",
     "SortOrder": 1,
-    "Updated": "2025-10-30T21:21:36.4895269"
+    "Updated": "2026-11-18T23:10:24.3905247"
   },
   {
     "AgencyServiceId": 1273,
@@ -2730,43 +2730,43 @@
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "Yes. We urge all potential residents to visit our campuses first.<br />",
+    "Answer": "Yes. We urge all potential residents to visit our campuses first.",
     "Id": 451,
     "Question": "May I visit a Veterans Home of California before applying for admission?",
     "SortOrder": 6,
-    "Updated": "2025-10-30T21:14:54.5295325"
+    "Updated": "2026-11-18T23:10:53.5712744"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "No veteran will be denied admission due to a lack of income. For those veterans who have income, state law requires that they pay a percentage of their income as resident fees. Resident fees help reduce the amount of state tax dollars needed to operate Veterans Homes, thus allowing the California Department of Veterans Affairs to care for a greater number of veterans.<br />",
+    "Answer": "No veteran will be denied admission due to a lack of income. For those veterans who have income, state law requires that they pay a percentage of their income as resident fees. Resident fees help reduce the amount of state tax dollars needed to operate Veterans Homes, thus allowing the California Department of Veterans Affairs to care for a greater number of veterans.",
     "Id": 452,
     "Question": "How much will it cost me to become a resident?",
     "SortOrder": 7,
-    "Updated": "2025-10-30T21:14:42.5573554"
+    "Updated": "2026-11-18T23:11:13.3700336"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "The Veterans Homes can accommodate many care needs. You can contact the Veterans Home's admissions office for general information, but you must complete <a href=\"https://www.calvet.ca.gov/VetHomes/Pages/apply.aspx\">the application process</a> for a formal determination of whether the necessary services are available.<br />",
+    "Answer": "The Veterans Homes can accommodate many care needs. You can contact the Veterans Home's admissions office for general information, but you must complete <a href=\"https://www.calvet.ca.gov/VetHomes/Pages/apply.aspx\">the application process</a> for a formal determination of whether the necessary services are available.",
     "Id": 453,
     "Question": "Will I be admitted if I have medical problems that require special care?",
     "SortOrder": 8,
-    "Updated": "2025-10-30T21:14:28.9525238"
+    "Updated": "2026-11-18T23:12:04.0210465"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "You must file a written appeal with the Home&rsquo;s administrator, stating the reasons you feel you should be admitted to the Home. If this appeal is denied and you wish to escalate your appeal, you can initiate your second appeal by contacting the California Veterans Board, P.O. Box 942895, Sacramento, CA 94295-0001. The Board will provide you with an appeal form if you did not receive one from the Home.<br />",
+    "Answer": "You must file a written appeal with the Home’s administrator, stating the reasons you feel you should be admitted to the Home. If this appeal is denied and you wish to escalate your appeal, you can initiate your second appeal by contacting the California Veterans Board, P.O. Box 942895, Sacramento, CA 94295-0001. The Board will provide you with an appeal form if you did not receive one from the Home.",
     "Id": 454,
     "Question": "If I am denied admission to a Veterans Home of California, what are my rights?",
     "SortOrder": 9,
-    "Updated": "2025-10-30T21:13:48.6828712"
+    "Updated": "2026-11-18T23:12:26.0264242"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "Please visit the Department of Aging&rsquo;s <a href=\"https://www.aging.ca.gov/Find_Licensed_Services/\">Find Licensed Services</a> webpage to learn more.<br />",
+    "Answer": "Please visit the Department of Aging’s <a href=\"https://www.aging.ca.gov/Find_Licensed_Services/\">Find Licensed Services</a> webpage to learn more.",
     "Id": 455,
     "Question": "I want to learn more about long-term care options and other resources. Where can I look?",
     "SortOrder": 10,
-    "Updated": "2025-10-30T21:13:25.44514"
+    "Updated": "2026-11-18T23:12:46.2409757"
   },
   {
     "AgencyServiceId": 1273,
@@ -2778,59 +2778,59 @@
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "<p>Each room has limited storage space. Additional storage space may be available. Check with the specific home for further details.<br /></p><ul><li>Note: All personal equipment must meet health, safety, and fire codes.</li></ul>",
+    "Answer": "<p>Each room has limited storage space. Additional storage space may be available. Check with the specific home for further details.</p><ul><li>Note: All personal equipment must meet health, safety, and fire codes.</li></ul>",
     "Id": 457,
     "Question": "How many personal belongings can I bring with me?",
     "SortOrder": 12,
-    "Updated": "2025-10-30T21:12:09.6826926"
+    "Updated": "2026-11-18T23:16:32.2225588"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "Yes. Washing machines and dryers are available at all locations.<br />",
+    "Answer": "Yes. Washing machines and dryers are available at all locations.",
     "Id": 458,
     "Question": "Do Veterans Homes of California have laundry facilities?",
     "SortOrder": 13,
-    "Updated": "2025-10-30T21:11:36.5443787"
+    "Updated": "2026-11-18T23:33:53.0552649"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "No pets are allowed at the Veterans Home. Service animals are allowed, however. If you have questions, contact the Veterans Home's admissions office for information.<br />",
+    "Answer": "No pets are allowed at the Veterans Home. Service animals are allowed, however. If you have questions, contact the Veterans Home's admissions office for information.",
     "Id": 459,
     "Question": "I have a pet dog and a cat. May I bring them with me?",
     "SortOrder": 14,
-    "Updated": "2025-10-30T21:11:24.5819882"
+    "Updated": "2026-11-18T23:34:09.756923"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "Yes. We encourage visits by your friends and relatives. Home staff will be glad to assist you in arranging these visits.<br />",
+    "Answer": "Yes. We encourage visits by your friends and relatives. Home staff will be glad to assist you in arranging these visits.",
     "Id": 460,
     "Question": "May I have visitors at a Veterans Home of California?",
     "SortOrder": 15,
-    "Updated": "2025-10-30T21:11:10.70584"
+    "Updated": "2026-11-18T23:34:25.933967"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "If you keep your HMO, you may be required to access all services through your HMO, except for urgent and emergency care. If the Home is not within your HMO&rsquo;s service area, you must unenroll from your HMO.<br />",
+    "Answer": "If you keep your HMO, you may be required to access all services through your HMO, except for urgent and emergency care. If the Home is not within your HMO’s service area, you must unenroll from your HMO.",
     "Id": 461,
     "Question": "I have medical coverage through a Health Maintenance Organization (HMO). Should I keep this coverage?",
     "SortOrder": 16,
-    "Updated": "2025-10-30T21:10:56.675576"
+    "Updated": "2026-11-18T23:34:42.8412852"
   },
   {
     "AgencyServiceId": 1273,
-    "Answer": "A very limited number of private rooms are available &ndash; based on seniority &ndash; at most Home locations. All rooms are private at the Redding and Fresno Homes.<br />",
+    "Answer": "A very limited number of private rooms are available – based on seniority – at most Home locations. All rooms are private at the Redding and Fresno Homes.",
     "Id": 462,
     "Question": "Will I have a private room?",
     "SortOrder": 17,
-    "Updated": "2025-10-30T21:10:43.4875644"
+    "Updated": "2026-11-18T23:35:21.1540303"
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "<p><strong>Username Requirements</strong></p>Length: 6-20 characters<br>Allowed characters: Letters, numbers, and the following special characters: -_&amp;%$#!*+=<br>Spaces are not allowed<br>Cannot contain profanity or inappropriate words<br>Cannot be your email address<br><br><p><strong>Password Requirements</strong></p>Cannot be easily guessed (like 'Password1')<br>Cannot match any of your last 5 passwords<br>Must contain the following:<br>12-50 characters<br>Capital letter (A-Z)<br>Lowercase letter (a-z)<br>Number (0-9)<br>Any of the following symbols: -_&amp;%$#@!*+=<br>",
+    "Answer": "<p><strong>Username Requirements</strong></p><ul><li>Length: 6-20 characters</li><li>Allowed characters: Letters, numbers, and the following special characters: -_&amp;%$#!*+=</li><li>Spaces are not allowed</li><li>Cannot contain profanity or inappropriate words</li><li>Cannot be your email address</li></ul><p><strong>Password Requirements</strong></p><ul><li>Cannot be easily guessed (like 'Password1')</li><li>Cannot match any of your last 5 passwords</li></ul><p>Must contain the following</p><ul><li>12-50 characters</li><li>Capital letter (A-Z)</li><li>Lowercase letter (a-z)</li><li>Number (0-9)</li><li>Any of the following symbols: -_&amp;%$#@!*+=</li></ul>",
     "Id": 521,
     "Question": "What are the username and password requirements for sign in?",
     "SortOrder": 1,
-    "Updated": "2026-07-17T15:39:50.5896738"
+    "Updated": "2026-11-18T23:23:09.1461118"
   },
   {
     "AgencyServiceId": 1274,
@@ -2851,37 +2851,37 @@
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "View instructions for collecting your 2nd Chance prize on the <a href=\"https://www.calottery.com/en/claim-a-prize\">Claim A Prize page</a>. After you sign in to your account, you’ll see your prize and a link to a <a href=\"https://static.www.calottery.com/-/media/project/calottery/pws/pdfs/csl-1358-2nd-chance-claim.pdf?rev=9ca6e508180847759b657a20855ee14b&amp;hash=4D29D626CBE7CACAAFDA83AAC5495A1A\">2nd Chance Winner Claim Form (PDF)</a>. You’ll be asked to download, complete, and mail the claim form within 180 days of the drawing to:<br><br>California Lottery<br>Attn: 2nd Chance Promotion<br>700 North 10th Street&nbsp; MS: 2-2<br>Sacramento, CA 95811-0336",
+    "Answer": "<p>View instructions for collecting your 2nd Chance prize on the <a href=\"https://www.calottery.com/en/claim-a-prize\">Claim A Prize page</a>. After you sign in to your account, you’ll see your prize and a link to a <a href=\"https://static.www.calottery.com/-/media/project/calottery/pws/pdfs/csl-1358-2nd-chance-claim.pdf?rev=9ca6e508180847759b657a20855ee14b&amp;hash=4D29D626CBE7CACAAFDA83AAC5495A1A\">2nd Chance Winner Claim Form (PDF)</a>. You’ll be asked to download, complete, and mail the claim form within 180 days of the drawing to:</p><p>California Lottery<br>Attn: 2nd Chance Promotion<br>700 North 10th Street MS: 2-2<br>Sacramento, CA 95811-0336</p>",
     "Featured": true,
     "Id": 524,
     "Question": "How do I collect my 2nd Chance prize?",
     "SortOrder": 4,
-    "Updated": "2026-07-17T15:45:17.1655703"
+    "Updated": "2026-11-18T20:33:19.0377053"
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "Just sign in to your account and <a href=\"https://www.calottery.com/en/my-account/my-profile/edit\">go to the Edit My Profile page</a>. After you update your information, select the “Save Changes” button.<br><br>If you update your email address, the California Lottery will send you a verification email. If you don’t see it in your inbox, check your junk/spam folder. Add California Lottery to your safe senders list so this doesn’t happen in the future.",
+    "Answer": "<p>Just sign in to your account and <a href=\"https://www.calottery.com/en/my-account/my-profile/edit\">go to the Edit My Profile page</a>. After you update your information, select the “Save Changes” button.</p><p>If you update your email address, the California Lottery will send you a verification email. If you don’t see it in your inbox, check your junk/spam folder. Add California Lottery to your safe senders list so this doesn’t happen in the future.</p>",
     "Id": 525,
     "Question": "How do I update my email address or other personal information?",
     "SortOrder": 5,
-    "Updated": "2026-07-17T15:46:40.5803587"
+    "Updated": "2026-11-18T23:24:19.5601356"
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "<a href=\"https://www.calottery.com/en/sign-in\">Sign in to your account</a> or <a href=\"https://www.calottery.com/en/registration\">register for a 2nd Chance account</a>. There are two ways to submit the 2nd Chance code on your SuperLotto Plus, non-winning Scratchers, or $5 or more Fantasy 5 ticket.<br><br>(1) When you are signed into your account, you can enter your 2nd Chance codes manually. Refer to the images in the How To Enter section of this page, which show where you'll find your 2nd Chance codes.<br><br>(2) For a fast and easy way to play, you can also submit your ticket using the <a href=\"https://www.calottery.com/en/mobile-app\">California Lottery Official Mobile App</a> by scanning the barcode on the front of your ticket.",
+    "Answer": "<p><a href=\"https://www.calottery.com/en/sign-in\">Sign in to your account</a> or <a href=\"https://www.calottery.com/en/registration\">register for a 2nd Chance account</a>. There are two ways to submit the 2nd Chance code on your SuperLotto Plus, non-winning Scratchers, or $5 or more Fantasy 5 ticket.</p><ol><li>When you are signed into your account, you can enter your 2nd Chance codes manually. Refer to the images in the How To Enter section of this page, which show where you'll find your 2nd Chance codes.</li><li>For a fast and easy way to play, you can also submit your ticket using the <a href=\"https://www.calottery.com/en/mobile-app\">California Lottery Official Mobile App</a> by scanning the barcode on the front of your ticket.</li></ol>",
     "Featured": true,
     "Id": 526,
     "Question": "How do I enter a 2nd Chance code?",
     "SortOrder": 6,
-    "Updated": "2026-07-17T15:48:31.8011181"
+    "Updated": "2026-11-18T23:25:12.2438735"
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "Every SuperLotto Plus ticket has a 2nd Chance code that grants 1 entry into the weekly SuperLotto Plus 2nd Chance drawing for each $1 spent. There are 5 prizes, and the more money you play, the more entries you get. For example, if you play $5 on a single ticket, your 2nd Chance code will be good for 5 draw entries.<br><br>Every $5 Fantasy 5 ticket has a 2nd Chance code for 1 entry into the weekly Fantasy 5 – 2nd Chance drawing. There are 15 prizes, and the more money you play, the more entries you get. For example, if you play $15 on a single ticket, your 2nd Chance code will award 3 draw entries.",
+    "Answer": "<p>Every SuperLotto Plus ticket has a 2nd Chance code that grants 1 entry into the weekly SuperLotto Plus 2nd Chance drawing for each $1 spent. There are 5 prizes, and the more money you play, the more entries you get. For example, if you play $5 on a single ticket, your 2nd Chance code will be good for 5 draw entries.</p><p>Every $5 Fantasy 5 ticket has a 2nd Chance code for 1 entry into the weekly Fantasy 5 – 2nd Chance drawing. There are 15 prizes, and the more money you play, the more entries you get. For example, if you play $15 on a single ticket, your 2nd Chance code will award 3 draw entries.</p>",
     "Id": 527,
     "Question": "How does 2nd Chance work for SuperLotto Plus and Fantasy 5?",
     "SortOrder": 7,
-    "Updated": "2026-07-17T15:49:35.9621373"
+    "Updated": "2026-11-18T23:25:48.2732954"
   },
   {
     "AgencyServiceId": 1274,
@@ -2917,11 +2917,11 @@
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "<p>To ensure the integrity of your account, the California Lottery uses age/identity verification technology to validate your account details, such as your name, address, and birthdate. To participate in registered player benefits like 2nd Chance and be eligible to win promotional or 2nd Chance prizes, players must provide the following information:</p><ul><li>Full legal name (first and last name)</li><li>Valid California street address (including apartment, unit, or suite number, if applicable)</li><li>Date of birth (to ensure you’re 18 or older and can legally play the California Lottery)</li></ul>If the personal information you entered in your My Profile page is correct, but you are unable to submit 2nd Chance codes, you may need to pursue manual verification. You can find details on the Manual Account Verification page.<br><br>It is the California Lottery’s policy to limit the collection of personal information and protect the personal information we collect and maintain.",
+    "Answer": "<p>To ensure the integrity of your account, the California Lottery uses age/identity verification technology to validate your account details, such as your name, address, and birthdate. To participate in registered player benefits like 2nd Chance and be eligible to win promotional or 2nd Chance prizes, players must provide the following information:</p><ul><li>Full legal name (first and last name)</li><li>Valid California street address (including apartment, unit, or suite number, if applicable)</li><li>Date of birth (to ensure you’re 18 or older and can legally play the California Lottery)</li></ul><p>If the personal information you entered in your My Profile page is correct, but you are unable to submit 2nd Chance codes, you may need to pursue manual verification. You can find details on the Manual Account Verification page.</p><p>It is the California Lottery’s policy to limit the collection of personal information and protect the personal information we collect and maintain.</p>",
     "Id": 532,
     "Question": "What is a verified account?",
     "SortOrder": 12,
-    "Updated": "2026-07-17T15:55:51.1099415"
+    "Updated": "2026-11-18T23:26:30.6870172"
   },
   {
     "AgencyServiceId": 1274,
@@ -2941,11 +2941,11 @@
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "The email address associated with your 2nd Chance account may not have been verified. <a href=\"https://www.calottery.com/en/sign-in\">Sign in to your account</a> and go to your My Profile page to confirm the email address you used when you registered, then check your inbox for an account-activation email. If you can’t find it, check your junk/spam folder.<br><br>If the email was delivered more than 24 hours before you click the button to confirm your email address, you will need to sign in to your account and click the link to request a new verification email.<br><br>If you need help, call California Lottery Customer Service at 1-800-LOTTERY (1-800-568-8379) Monday to Friday between 8:00 a.m. and 5:00 p.m., send an email to <a>customerservice@calottery.com</a>, or <a href=\"https://www.calottery.com/en/contact-us\">submit questions via the Contact Us form</a>.",
+    "Answer": "<p>The email address associated with your 2nd Chance account may not have been verified. <a href=\"https://www.calottery.com/en/sign-in\">Sign in to your account</a> and go to your My Profile page to confirm the email address you used when you registered, then check your inbox for an account-activation email. If you can’t find it, check your junk/spam folder.</p><p>If the email was delivered more than 24 hours before you click the button to confirm your email address, you will need to sign in to your account and click the link to request a new verification email.</p><p>If you need help, call California Lottery Customer Service at 1-800-LOTTERY (1-800-568-8379) Monday to Friday between 8:00 a.m. and 5:00 p.m., send an email to <a>customerservice@calottery.com</a>, or <a href=\"https://www.calottery.com/en/contact-us\">submit questions via the Contact Us form</a>.</p>",
     "Id": 535,
     "Question": "What if I'm not receiving emails from the California Lottery?",
     "SortOrder": 15,
-    "Updated": "2026-07-17T15:59:55.5811413"
+    "Updated": "2026-11-18T23:27:05.1150218"
   },
   {
     "AgencyServiceId": 1274,
@@ -3006,19 +3006,19 @@
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "<p>You have two options: Suspend your account, or delete your account.</p><ul><li>Suspend - Your account will be suspended, but your profile information will be retained – so you can reactivate your account whenever you wish.</li><li>Delete - All your information will be removed from our database. Your active 2nd Chance draw submissions will also be deleted. You will need to create a new account if you’d like to participate in 2nd Chance again.&nbsp;</li></ul><a href=\"https://www.calottery.com/en/sign-in\">Sign in</a>, go to the My Profile page, select the \"Edit My Profile\" button, then select the link for “Suspend/Delete My Account.\" Follow the options for suspending or deleting your account.<br><br>Note that if you delete your account while you have active 2nd Chance entries, your entries will be deleted along with all your other account information.",
+    "Answer": "<p>You have two options: Suspend your account, or delete your account.</p><ul><li>Suspend - Your account will be suspended, but your profile information will be retained – so you can reactivate your account whenever you wish.</li><li>Delete - All your information will be removed from our database. Your active 2nd Chance draw submissions will also be deleted. You will need to create a new account if you’d like to participate in 2nd Chance again.</li></ul><p><a href=\"https://www.calottery.com/en/sign-in\">Sign in</a>, go to the My Profile page, select the \"Edit My Profile\" button, then select the link for “Suspend/Delete My Account.\" Follow the options for suspending or deleting your account.</p><p>Note that if you delete your account while you have active 2nd Chance entries, your entries will be deleted along with all your other account information.</p>",
     "Id": 543,
     "Question": "How can I suspend or delete my 2nd Chance account?",
     "SortOrder": 23,
-    "Updated": "2026-07-17T16:08:58.4936932"
+    "Updated": "2026-11-18T20:34:19.881039"
   },
   {
     "AgencyServiceId": 1274,
-    "Answer": "If you suspended your 2nd Chance account and would like to reactivate it, simply <a href=\"https://www.calottery.com/en/sign-in\">go to the Sign In page</a> and enter the username and password associated with your 2nd Chance account, then follow the prompts.<br><br>Note that if you deleted your account, all of your account information was deleted. You will need to create a new 2nd Chance account.",
+    "Answer": "<p>If you suspended your 2nd Chance account and would like to reactivate it, simply <a href=\"https://www.calottery.com/en/sign-in\">go to the Sign In page</a> and enter the username and password associated with your 2nd Chance account, then follow the prompts.</p><p>Note that if you deleted your account, all of your account information was deleted. You will need to create a new 2nd Chance account.</p>",
     "Id": 544,
     "Question": "How can I reactivate my 2nd Chance account?",
     "SortOrder": 24,
-    "Updated": "2026-07-17T16:09:59.8001524"
+    "Updated": "2026-11-18T23:27:28.5558316"
   },
   {
     "AgencyServiceId": 1274,
@@ -3038,47 +3038,47 @@
   },
   {
     "AgencyServiceId": 1281,
-    "Answer": "<p>California became the first state to allow medicinal cannabis use when voters passed the Compassionate Use Act in 1996. Today, cannabis is legal in California for both medicinal and adult (recreational) use.</p><p>The cannabis industry is strictly regulated to make sure:</p><ul><li>Businesses operate safely</li><li>Products are contaminant-free and labeled to inform purchasers</li><li>Cannabis is kept away from children</li></ul><p>Statutes, regulations and ordinances are all types of laws that work together to set rules for businesses and consumers.&nbsp;</p><p>Learn more about <a href=\"https://www.cannabis.ca.gov/cannabis-laws/laws-and-regulations/\">California cannabis laws</a>.</p>",
+    "Answer": "<p>California became the first state to allow medicinal cannabis use when voters passed the Compassionate Use Act in 1996. Today, cannabis is legal in California for both medicinal and adult (recreational) use.</p><p>The cannabis industry is strictly regulated to make sure:</p><ul><li>Businesses operate safely</li><li>Products are contaminant-free and labeled to inform purchasers</li><li>Cannabis is kept away from children</li></ul><p>Statutes, regulations and ordinances are all types of laws that work together to set rules for businesses and consumers.</p><p>Learn more about <a href=\"https://www.cannabis.ca.gov/cannabis-laws/laws-and-regulations/\">California cannabis laws</a>.</p>",
     "Featured": true,
     "Id": 503,
     "Question": "What are California cannabis laws?",
     "SortOrder": 1,
-    "Updated": "2026-10-29T20:27:08.1467453"
+    "Updated": "2026-11-18T20:02:14.6282014"
   },
   {
     "AgencyServiceId": 1281,
-    "Answer": "<p>&nbsp;</p><p>The DCC issues licenses based on the type of cannabis activity that your business will perform. If you will do more than one activity, you may need more than one license.<br>You must have a valid DCC license before performing any commercial cannabis activity, including:</p><ul><li>Growing cannabis (cultivation)</li><li>Transporting cannabis (distribution)</li><li>Making cannabis products (manufacturing)</li><li>Testing cannabis or cannabis products (testing laboratory)</li><li>Selling cannabis (retail)</li><li>Holding an event where cannabis will be sold (event organizers)</li></ul><p>Learn more about <a href=\"https://www.cannabis.ca.gov/applicants/license-types/\">license types</a>.<br></p>",
+    "Answer": "<p>The DCC issues licenses based on the type of cannabis activity that your business will perform. If you will do more than one activity, you may need more than one license.</p><p>You must have a valid DCC license before performing any commercial cannabis activity, including:</p><ul><li>Growing cannabis (cultivation)</li><li>Transporting cannabis (distribution)</li><li>Making cannabis products (manufacturing)</li><li>Testing cannabis or cannabis products (testing laboratory)</li><li>Selling cannabis (retail)</li><li>Holding an event where cannabis will be sold (event organizers)</li></ul><p>Learn more about <a href=\"https://www.cannabis.ca.gov/applicants/license-types/\">license types</a>.</p>",
     "Featured": true,
     "Id": 504,
     "Question": "What are the types of licenses?",
     "SortOrder": 2,
-    "Updated": "2026-10-29T20:27:44.3226741"
+    "Updated": "2026-11-18T20:03:48.2522696"
   },
   {
     "AgencyServiceId": 1281,
-    "Answer": "<p><a href=\"https://www.cannabis.ca.gov/applicants/how-to-apply/\">How to apply for a license</a></p>",
+    "Answer": "<a href=\"https://www.cannabis.ca.gov/applicants/how-to-apply/\">How to apply for a license</a>",
     "Featured": true,
     "Id": 505,
     "Question": "How do I apply for a license?",
     "SortOrder": 3,
-    "Updated": "2026-10-30T20:44:07.0523324"
+    "Updated": "2026-11-18T20:05:10.066018"
   },
   {
     "AgencyServiceId": 1281,
-    "Answer": "<p>The California Department of Public Health (CDPH) manages the state-authorized Medical Marijuana Identification Card Program (MMICP). The MMICP web-based registry allows law enforcement and the public to verify the validity of a qualified patient or primary caregiver&rsquo;s MMICP as authorization to possess, grow, transport, and/or use medical marijuana within California.</p><p>Visit <a href=\"https://www.cdph.ca.gov/Programs/CHSI/Pages/MMICP.aspx\" title=\"CDPH state-authorized Medical Marijuana Identification Card program page\" target=\"_blank\">program homepage</a>.<br /></p>",
+    "Answer": "<p>The California Department of Public Health (CDPH) manages the state-authorized Medical Marijuana Identification Card Program (MMICP). The MMICP web-based registry allows law enforcement and the public to verify the validity of a qualified patient or primary caregiver’s MMICP as authorization to possess, grow, transport, and/or use medical marijuana within California.</p><p>Visit <a href=\"https://www.cdph.ca.gov/Programs/CHSI/Pages/MMICP.aspx\">program homepage</a>.</p>",
     "Featured": true,
     "Id": 506,
     "Question": "Who should I reach out to for state-authorized Medical Marijuana Identification Card?",
     "SortOrder": 4,
-    "Updated": "2025-05-07T17:52:23.2221838"
+    "Updated": "2026-11-18T20:05:55.3913232"
   },
   {
     "AgencyServiceId": 1285,
-    "Answer": "Please visit the California welcome center finder&nbsp;webpage.",
+    "Answer": "Please visit the California welcome center finder webpage.",
     "Id": 517,
     "Question": "Where is the nearest visitor center?",
     "SortOrder": 1,
-    "Updated": "2026-07-02T19:56:32.5941058"
+    "Updated": "2026-11-18T20:34:45.1242532"
   },
   {
     "AgencyServiceId": 1286,
