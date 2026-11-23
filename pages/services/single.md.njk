@@ -1,0 +1,64 @@
+---
+layout: false
+eleventyExcludeFromCollections: true
+pagination:
+  data: state_entity.services
+  size: 1
+  alias: item
+permalink: "departments/{{ item.AgencyId }}/services/{{ item.ServiceId }}/index.md"
+---
+{%- set siteUrl %}{% domain %}{% endset -%}
+{%- set canonicalUrl = siteUrl + "/departments/" + item.AgencyId + "/services/" + item.ServiceId + "/" -%}
+# {{ item.ServiceName | safe }}
+
+Source: [{{ canonicalUrl | safe }}](<{{ canonicalUrl | safe }}>)
+
+Department: [{{ item.FriendlyName | safe }}](<{{ siteUrl | safe }}/departments/{{ item.AgencyId }}/>)
+
+Last updated: {{ item.Updated | formatDate }}
+
+## Description
+
+{{ item.Description | safe }}
+
+{% if item.ServiceUrl -%}
+- [Launch service](<{{ item.ServiceUrl | safe }}>)
+{% endif -%}
+{% if item.structuredData.provider.url -%}
+- [Department website](<{{ item.structuredData.provider.url | safe }}>)
+{% endif -%}
+{% if item.ContactUrl -%}
+- [Contact](<{{ item.ContactUrl | safe }}>)
+{% endif -%}
+{% if item.ContactPhoneDigits -%}
+- Phone: [{{ item.ContactPhoneDisplay | safe }}](<tel:{{ item.ContactPhoneDigits | safe }}>)
+{% endif -%}
+{% if item.QA.length %}
+## Frequently Asked Questions
+{% for qa in item.QA %}
+### {{ qa.Question | safe }}
+
+{{ qa.Answer | toMarkdown(canonicalUrl) | trim | safe }}
+{% endfor -%}
+{% endif %}
+{%- set relatedServices = state_entity.services | pluck("AgencyId", item.AgencyId) | pluck("ServiceId", item.ServiceId, "not") | sortBy("ServiceName") -%}
+{% if relatedServices.length %}
+## Related services
+
+{% for related in relatedServices -%}
+- [{{ related.ServiceName | safe }}](<{{ siteUrl | safe }}/departments/{{ related.AgencyId }}/services/{{ related.ServiceId }}/>)
+{% endfor %}
+{% endif %}
+{%- set serviceTopics = topics | sortBy("featureOrder") | pluck("name", item.AgencyTags.split("|"), "match") -%}
+{% if serviceTopics.length -%}
+## Topics
+
+{% for topic in serviceTopics -%}
+- [{{ topic.name | trim | safe }}](<{{ siteUrl | safe }}/topics/{{ topic.slug | safe }}/>)
+{% endfor -%}
+{% endif -%}
+{% if item.Keywords | trim %}
+## Keywords
+
+{{ item.Keywords | safe -}}
+{% endif -%}

@@ -1,4 +1,5 @@
 //@ts-check
+/// <reference path="./globals.d.ts" />
 
 /* global base, input */
 // `base` is the global provided by the Airtable scripting environment.

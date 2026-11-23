@@ -3,12 +3,13 @@
   "version": "6.6.0",
   "description": "www.ca.gov",
   "engines": {
-    "node": ">=20.9.0"
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
   },
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
-    "prebuild": "node src/scripts/update_service_finder_data.mjs",
+    "prebuild": "node src/scripts/prebuild.mjs",
     "build": "npx @11ty/eleventy",
+    "validate:airtable": "node src/scripts/validate_airtable_data.cjs",
     "update_webp": "node src/scripts/update_webp.cjs"
   },
   "repository": {
@@ -19,21 +20,21 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@airtable/blocks": "^1.19.0",
     "eslint": "8.56.0",
     "eslint-plugin-jsdoc": "^48.2.0",
     "prettier": "^3.8.0",
     "sharp": "^0.35.3",
-    "stylelint": "^16.2.1",
-    "stylelint-config-standard": "^35.0.0",
+    "stylelint": "^18.0.0",
+    "stylelint-config-standard": "^41.0.0",
     "stylelint-use-nesting": "^5.1.1"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy": "^3.1.8",
     "@11ty/eleventy-fetch": "^5.1.1",
     "@babel/core": "^7.28.6",
     "@cagovweb/state-template": "^6.6.0",
     "@fullhuman/postcss-purgecss": "^5.0.0",
+    "ajv": "^8.17.1",
     "babel-plugin-transform-imports": "^2.0.0",
     "csv-parse": "^7.0.3",
     "dotenv": "^17.4.2",
@@ -43,6 +44,7 @@
     "postcss-media-minmax": "^5.0.0",
     "postcss-nested": "^7.0.2",
     "terser": "^5.45.0",
+    "turndown": "^7.2.5",
     "xml2js": "^0.6.2"
   }
 }

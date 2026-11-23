@@ -1,0 +1,18 @@
+[
+  {
+    "CategoryId": 1,
+    "Name": "Personal and family life"
+  },
+  {
+    "CategoryId": 2,
+    "Name": "Health and safety"
+  },
+  {
+    "CategoryId": 3,
+    "Name": "Work and finances"
+  },
+  {
+    "CategoryId": 4,
+    "Name": "Our state"
+  }
+]
